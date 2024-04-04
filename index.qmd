@@ -1,7 +1,11 @@
 ---
-title: "Blog"
+listing:
+    contents: posts
+    sort: "date desc"
+    type: grid
+    grid-columns: 1
+    fields: [title, author, date, description]
+    max-description-length: 350
+    date-format: long
+    categories: true
 ---
-
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
