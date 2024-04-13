@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -258,7 +258,7 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="infinite-chains">1.2.5. Infinite chains</h4>
 <p>We’re now going to switch gears and focus on infinite causal/explanatory chains.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> Each element in the chain is explained by its predecessor — this is an internal explanation — but the question arises whether some external explanation is needed for the chain.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
 <p>I’ve found that my intuitions change depending on whether the chain extends infinitely into the past. Let’s start with a chain that extends finitely into the past. Consider a particle <span class="math inline">\(p_0\)</span> that comes into existence at time <span class="math inline">\(t = 1\)</span> for no reason. Maybe we take issue with this. Now consider a particle <span class="math inline">\(p_0\)</span> that exists at time <span class="math inline">\(t = 1\)</span> and was created in the following way: for every integer <span class="math inline">\(n \ge 0\)</span>, particle <span class="math inline">\(p_{n + 1}\)</span> decayed into particle <span class="math inline">\(p_{n}\)</span> at <span class="math inline">\(t = 2^{-n}\)</span>. Thus, there are an infinite number of causes within a finite time interval. Although the existence of each particle is explained by its parent, it will seem to many that the result is the same: the particle came into existence uncaused. Therefore, Pruss says, if we demand a cause for one particle, we should demand a cause for an infinite series of particles.</p>
-<p>He then argues that our same intuitions should apply if the infinite number of causes are not squeezed into a finite time interval but are instead spread out over an infinite past. In other words, each cause in the interval (0, 1] is mapped to a negative time while preserving the ordering: <span class="math inline">\(1 \rightarrow 1\)</span>, <span class="math inline">\(\frac{1}{2} \rightarrow 0\)</span>, <span class="math inline">\(\frac{1}{4} \rightarrow -1\)</span>, <span class="math inline">\(\frac{1}{8} \rightarrow -2\)</span>, <span class="math inline">\(\dots\)</span>. It appears that nothing has changed, so we should either accept or reject the possibility of both scenarios.</p>
+<p>He then argues that our same intuitions should apply if the infinite number of causes are not squeezed into a finite time interval but are instead spread out over an infinite past. In other words, each cause in the interval (0, 1] is mapped to a negative time while preserving the ordering: <span class="math inline">\(1 \rightarrow 1\)</span>, <span class="math inline">\(1/2 \rightarrow 0\)</span>, <span class="math inline">\(1/4 \rightarrow -1\)</span>, <span class="math inline">\(1/8 \rightarrow -2\)</span>, <span class="math inline">\(\dots\)</span>. It appears that nothing has changed, so we should either accept or reject the possibility of both scenarios.</p>
 <p>However, it is difficult to imagine what an external cause — a reason why the particles are not different particles, or shoes, or books, or why they exist at all — would look like since there is no first time. (The same can be said of the (0, 1] scenario if we assume that time began so that there is no time <span class="math inline">\(t \le 0\)</span>.) We must abandon the idea that this external cause explains only the first member of the chain (since there is no first member) and that the cause is temporally prior to its effect (since there is no first time). Pruss writes:</p>
 <blockquote class="blockquote">
 <p>Kant’s example of a metal ball continually causing a depression in a soft material shows that simultaneous causation is conceivable. And apart from full or partial reductions of the notion of causation to something like Humean regularity and temporal precedence, I do not think there is much reason to suppose that the cause of a temporal effect must even be in time. <span class="citation" data-cites="Craig2009">&nbsp;[<a href="#ref-Craig2009" role="doc-biblioref">3</a>]</span></p>
@@ -594,24 +594,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -646,11 +628,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
