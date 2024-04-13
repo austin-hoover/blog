@@ -32,10 +32,6 @@ pre, code {
 }
 
 
-p {
-    text-align: justify;
-}
-
 .math.display .MathJax  {
 }
 
@@ -48,19 +44,18 @@ p {
     }
     .card-text {
         font-size: 0.95em !important;
-        text-align: justify !important;
     }
     .listing-categories {
-        font-size: 13px !important;
+        font-size: 0.95em !important;
     }
     .card-text-small {
         .listing-author {
             text-transform: capitalize;
-            font-size: 0.95em !important;
+            font-size: 1.05em !important;
         }
         .listing-date {
             text-transform: capitalize;
-            font-size: 0.95em !important;
+            font-size: 1.05em !important;
         }
     }
 }
@@ -68,7 +63,7 @@ p {
 .quarto-title {
     .quarto-categories {
         .quarto-category {
-            font-size: 9px !important;
+            font-size: 1.0em !important;
             border-radius: 0.0px !important;
         }
     }

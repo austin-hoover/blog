@@ -5,14 +5,12 @@ author: "Austin Hoover"
 categories: [particle accelerators, high-dimensional data, visualization]
 bibliography: references.bib
 csl: american-physics-society.csl
-abstract-title: "Abstract"
-abstract: "This post covers some of my work on high-dimensional phase space measurements during my postdoc at ORNL. This has been a fun project combining high-dimensional visualization with the physics of intense beams."
 ---
 
 
-## 1. Predicting intense beam dynamics
+## 1. Predicting halo formation
 
-Linear accelerators (linacs) generate powerful pulsed hadron beams for various applications. Increasing the beam power/intensity by orders of magnitude would positively impact elementary particle physics, nuclear physics, condensed matter physics, material science, biology, nuclear engineering, and other fields. Unfortunately, significantly increasing the beam intensity is not possible due to *beam loss* which occurs when particles hit the walls of the accelerator during their journey. The total lost beam power must be kept below 1 watt (W) per meter to avoid dangerous radiation levels. For a 1 MW beam, this limit corresponds to a fractional loss of $10^{-6}$. 
+Linear accelerators (linacs) generate powerful pulsed hadron beams for various applications. Increasing the beam power/intensity by orders of magnitude would benefit particle physics, nuclear physics, condensed matter physics, material science, biology, nuclear engineering, and other fields. Unfortunately, significantly increasing the beam intensity is not possible due to *beam loss* which occurs when particles hit the walls of the accelerator during their journey. The total lost beam power must be kept below 1 watt (W) per meter to avoid dangerous radiation levels. For a 1 MW beam, this limit corresponds to a fractional loss of $10^{-6}$. 
 
 Simulations struggle to predict the number and location of lost particles. The dynamics in the accelerator are complex, but the situation is perhaps unsurprising for other reasons:
 
@@ -86,15 +84,13 @@ The "slice matrix" plot in Fig. 8 is one way to visualize the effect of slicing 
 
 Such figures render slowly and are limited to four-dimensional data. Complete slicing flexibility is available in an interactive widget shown in Fig. 9. This function takes one or more images or point clouds of any dimensionality as inputs. I use it extensively in my data analysis. It is available in the [psdist](https://github.com/austin-hoover/psdist) package.
 
-![Fig. 9. Interactive slicing widget from `psdist`.](./figures/slicing.mov){width=600px fig-align=center}
+![Fig. 9. Interactive slicing widget from `psdist`.](./figures/slicing.mov){width=500px fig-align=center}
 
 There are other ways to slice and project the data. For example, we could extend the concept of a radial histogram. A radial histogram takes a distribution $f(x_1, \dots, x_n)$ to a one-dimensional profile $f(r_n)$, where $r_n = \sqrt{x_1^2 + \dots + x_n^2}$, by integrating the density on spheres of radius $r_n$.^[One could just as well define ellipsoids instead of spheres by computing the covariance matrix $\mathbf{\Sigma} = \mathbf{x}\mathbf{x}^T$ and setting $r = \mathbf{x}^T \mathbf{\Sigma}^{-1} \mathbf{x}$.] Instead of defining the spheres in the $n$-dimensional space, suppose we defined them in a subspace like the $x_2$-$\dots$-$x_n$ plane and observed the $x_1$ distribution on each sphere. In other words, compute $f(x_1, r(x_2, \dots, x_n))$. The resulting projection is more difficult to interpret but preserves high-dimensional correlations in the data.
 
-We could also define shells as the density contours of the distribution in the subpace --- $f(x_2, \dots, x_n)$ in the above example. We could label these "contour shell slices". Fig. 10 illustrates this concept.
+We could also define shells as the density contours of the distribution in the subpace --- $f(x_2, \dots, x_n)$ in the above example. We could label these "contour shell slices". Fig. 10 illustrates this concept. I applied this idea to our measured distribution to view a specific feature in a compact figure. In Fig. 11, I defined density contours in the four-dimensional transverse phase space by thresholding the projection $f(x, x', y, y')$ between two density levels. I then computed the energy distribution within each shell (possible thanks to `numpy`).
 
 ![Fig. 10. Concept of non-planar or "shell" slices.](./figures/nonplanar.png){width=580px fig-align=center}
-
-I applied this idea to our measured distribution to view a specific feature in a compact figure. In Fig. 11, I defined density contours in the four-dimensional transverse phase space by thresholding the projection $f(x, x', y, y')$ between two density levels. I then computed the energy distribution within each shell (possible thanks to `numpy`).
 
 ![Fig. 11. Energy ($w$) distribution within four-dimensional contour shell slices in the transverse phase space. Each slice is defined by the projected density $f(x, x', y, y')$.](./figures/shell_slice.png){width=500px fig-align=center}
 

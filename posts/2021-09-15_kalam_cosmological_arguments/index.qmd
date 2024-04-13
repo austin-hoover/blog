@@ -12,13 +12,9 @@ csl: american-physics-society.csl
 
 ## 1. Introduction
 
-These are my notes on chapter 3 of Oppy’s *Arguing About Gods*. This chapter is about cosmological arguments. These arguments conclude that there is a cause or explanation of the existence of the universe. 
+These are my notes on chapter 3 of Oppy’s *Arguing About Gods*. This chapter is about cosmological arguments, which conclude that there is a cause or explanation of the existence of the universe. The first step in a cosmological argument is to assert a Causal Principle (CP) — that all things of a certain kind require a cause — or a Principle of Sufficient Reason (PSR) — that all things of a certain kind require an explanation. The next step is to show that the universe fits within the scope of the chosen CP or PSR. A bonus step is to identify the cause or explanation of the universe as God.
 
-The first step in a cosmological argument is to assert a Causal Principle (CP) — that all things of a certain kind require a cause — or a Principle of Sufficient Reason (PSR) — that all things of a certain kind require an explanation. The next step is to show that the universe fits within the scope of the chosen CP or PSR. A bonus step is to identify the cause or explanation of the universe as God.
-
-These arguments raise difficult questions about time, causation, infinity, physics, etc., and it’s not realistic to have a firm grasp on all these topics without further study. My goal here is to create a sort of roadmap, identifying the main points of contention.
-
-Pruss notes four main hurdles for cosmological arguments:
+These arguments raise difficult questions about time, causation, infinity, physics, etc., and it’s not realistic to have a firm grasp on all these topics without further study. My goal here is to create a sort of roadmap, identifying the main points of contention. Pruss notes four main hurdles for cosmological arguments:
 
 * *The Glendower Problem*: How wide should the scope of the CP or PSR be? 
 * *The Regress Problem*: Which types of infinite regresses are possible? 
