@@ -1,9 +1,5 @@
 cap-location: bottom  # figure caption {bottom, margin}
 citation: false
-comments:
-    utterances:
-        repo: austin-hoover/austin-hoover.github.io/blog
-    # hypothesis: true
 execute:
     echo: true
     enabled: false
