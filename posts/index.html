@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2024-03-23">
 
-<title>Accelerated Inquiry - High Brightness Workshop 2023</title>
+<title>Accelerated Inquiry</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +23,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +70,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Accelerated Inquiry</span>
     </a>
   </div>
@@ -92,15 +150,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about/index.html"> 
+    <a class="nav-link" href="../about/index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../archive.html"> 
+    <a class="nav-link active" href="../posts/index.html" aria-current="page"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../notes/index.html"> 
+    <a class="nav-link" href="../notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
@@ -119,88 +177,300 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">High Brightness Workshop 2023</h1>
-  </div>
 
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Austin Hoover </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 23, 2024</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
 
 
-</header>
 
 
-<p>I spoke at the Workshop on High-Brightness and High-Intensity Hadron Beams (HB) at CERN a few months ago. The workshop drew around 200 attendees from the United States, United Kingdom, South Korea, China, Japan, Germany, Italy, France, and Switzerland. All slides are available <a href="https://indico.cern.ch/event/1138716/timetable/#20231009.detailed">online</a>. Here are some notes and highlights:</p>
-<section id="operations-and-commissioning" class="level2">
-<h2 class="anchored" data-anchor-id="operations-and-commissioning">Operations and commissioning</h2>
-<ul>
-<li><p>The SNS has reached 1.7 MW beam power and should reach 2.8 MW this summer.</p></li>
-<li><p>FRIB has commissioned their accelerator and started generating <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.132.072501">data</a>. They have a fascinating research program studying rare isotopes near the nuclear drip line.</p></li>
-<li><p>The European Spallation Source (ESS) has started commissioning its linac. Mamad Eshraqi talked about the practical challenges of building a brand new complex in Lund, Sweden, including environmental and radiational licenses and the impact on the community. I hadn’t considered those issues before. It’s interesting to see this process unfolding since I wasn’t around for the SNS commissioning 20 years ago.</p></li>
-<li><p>China is rapidly developing several large-scale accelerator facilities. In addition to the recently commissioned China Spallation Source (CNS), they will soon introduce the Heavy Ion Accelerator Facility (HIAF), which will study nuclear physics phenomena like FRIB. HIAF will deal with all sorts of collective effects, and their GPU-accelerated end-to-end simulations are a powerful tool for modeling them. The China Initiative Accelerator Driven System (CiADS) is under construction on the same campus. CiADS will compete with <a href="https://myrrha.be/about-myrrha">MYRRHA</a> to demonstrate the first accelerator-driven system, using a high-power linear accelerator to drive a subcritical nuclear reactor. I don’t know if the US will ever engage in similar efforts.</p></li>
-<li><p>After operating for many years, the JPARC, Fermilab, ISIS, and LHC rings are being upgraded to higher energy/intensity. Most of these talks followed a similar pattern, reporting that small changes to the injection scheme, optics, etc., reduced losses.</p></li>
-</ul>
-</section>
-<section id="beam-dynamics-in-rings" class="level2">
-<h2 class="anchored" data-anchor-id="beam-dynamics-in-rings">Beam dynamics in rings</h2>
-<ul>
-<li><p>Adrian Oeftiger (GSI) gave a fantastic talk on the space charge limit in the FAIR synchrotron. He compared three space charge models: a <em>fixed frozen</em> model that assumes the same Gaussian distribution on each turn, an <em>adaptive frozen</em> model that scales a Gaussian to the second-order moments on each turn, and a self-consistent <em>particle-in-cell</em> model. Despite its lack of self-consistency, the fixed frozen model predicts the loss-free regions of tune space over hundreds of thousands of turns. The beams’ nonuniform charge distribution washes out low-order coherent instabilities through Landau damping, rendering the particle-in-cell approach unnecessary. Adrian’s simulations also showed that pulsed electron lenses—small electron beam currents that partially cancel the beam’s space charge force—could increase the beam intensity by almost 100%. What is the space charge limit in a machine like the SNS, which operates with many fewer turns and a noon-gaussian charge density.</p></li>
-<li><p>Cristhian Gonzalez-Ortiz (MSU) has done excellent work on resonance diagram measurements and correction schemes using sextupoles in the Fermilab booster ring.</p></li>
-<li><p>Nick Evans (ORNL) presented our work on self-consistent injection painting (eigenpainting) to generate bright, spinning hadron beams.</p></li>
-<li><p>Timeofey Gorlov (ORNL) discussed the laser-assisted charge exchange (LACE) research at ORNL. We currently strip electrons from injected H- particles using thin carbon foils. LACE aims to replace the foils with lasers, enabling much higher beam power. After years of reducing the laser power requirements, LACE is ready for operational tests.</p></li>
-<li><p>The beam dyanmics are very complex in RHIC and the planned EIC.</p></li>
-<li><p>I need to study Chao’s book on collective effects.</p></li>
-</ul>
-</section>
-<section id="beam-dynamics-in-linacs" class="level2">
-<h2 class="anchored" data-anchor-id="beam-dynamics-in-linacs">Beam dynamics in linacs</h2>
-<ul>
-<li><p>There was debate about 90-degree phase advance limits. Two different talks suggested that linacs could operate above this limit. For example, adding angular momentum to the beam appears to enhance stability.</p></li>
-<li><p>Dong-O Jeon et al.&nbsp;tried to clarify the relationship between “parametric instabilities” and “particle resonances.” The field seems so small that people will continue to invent their own language. Perhaps we should adopt the language in Ingo Hofmann’s book “Space Charge Physics for Particle Accelerators.”</p></li>
-<li><p>Chen Xiao and Lars Groening found a way to compute matched/periodic envelopes with space charge in linear coupled focusing systems. I studied this problem for a beam with zero four-dimensional emittance, but Chen handled a more general case. It was puzzling that he did not find unique solutions while I did. I’m excited to continue studying coupled beam dynamics with space charge.</p></li>
-<li><p>I presented our work on the impact of high-dimensional phase space correlations on linac beam dynamics.</p></li>
-</ul>
-</section>
-<section id="codes" class="level2">
-<h2 class="anchored" data-anchor-id="codes">Codes</h2>
-<ul>
-<li><p>CERN has developed Xsuite, an integrated beam dynamics simulation code based on a collection of CERN codes like MAD and SixTrackLib. The code can handle almost all effects in rings. It is open-source, well-documented, and GPU-accelerated.</p></li>
-<li><p>LBNL has developed ImpactX in addition to their WarpX code. ImpactX is similar to PyORBIT, an s-based code used primarily for linacs. The code is well-documented and GPU-accelerated. I liked their figure illustrating the ultimate goal of simulating the entire accelerator chain. Such simulations will require modeling vastly different spatial and temporal scales by connecting the results of different simulation codes.</p></li>
-<li><p>I’m currently focused on PyORBIT development because it contains many SNS-specific features and will eventually connect to the SNS control room as an online model. Still, I’m excited about these open-source beam dynamics codes.</p></li>
-</ul>
-</section>
-<section id="other-things" class="level2">
-<h2 class="anchored" data-anchor-id="other-things">Other things</h2>
-<ul>
-<li><p>I enjoyed the conference, but the packed schedule left little time to explore Geneva. I would rather have fewer talks and more poster sessions.</p></li>
-<li><p>Some speakers covered their slides in tiny text and figures. These speakers rarely addressed anything on the slides. This is a problem at all conferences, but it was especially bad here.</p></li>
-<li><p>I appreciated the chance to interact with the small but highly international accelerator community.</p></li>
-</ul>
-
-
-</section>
-
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="arguments,theism" data-listing-date-sort="1623470400000" data-listing-file-modified-sort="1688048896441" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2985">
+<div class="thumbnail">
+<p><a href="../posts/2021-06-12_arguing_about_gods/index.html" class="no-external"></a></p><a href="../posts/2021-06-12_arguing_about_gods/index.html" class="no-external">
+<p><img src="../posts/2021-06-12_arguing_about_gods/arguing.jpg" class="thumbnail-image"></p>
+</a><p><a href="../posts/2021-06-12_arguing_about_gods/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2021-06-12_arguing_about_gods/index.html" class="no-external">Arguing about gods</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2021-06-12_arguing_about_gods/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2021-06-12_arguing_about_gods/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/2021-06-12_arguing_about_gods/index.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2021-06-12_arguing_about_gods/index.html" class="no-external">
+<div class="listing-date">
+Jun 12, 2021
+</div>
+<div class="listing-author">
+Austin Hoover
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="teleological arguments,biological design,Darwin" data-listing-date-sort="1688875200000" data-listing-file-modified-sort="1688916432691" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="683">
+<div class="thumbnail">
+<p><a href="../posts/2023-07-09_biological_design_arguments/index.html" class="no-external"></a></p><a href="../posts/2023-07-09_biological_design_arguments/index.html" class="no-external">
+<!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/2023-07-09_biological_design_arguments/index.html -->
+</a><p><a href="../posts/2023-07-09_biological_design_arguments/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2023-07-09_biological_design_arguments/index.html" class="no-external">Biological design arguments</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2023-07-09_biological_design_arguments/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2023-07-09_biological_design_arguments/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/2023-07-09_biological_design_arguments/index.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2023-07-09_biological_design_arguments/index.html" class="no-external">
+<div class="listing-date">
+Jul 9, 2023
+</div>
+<div class="listing-author">
+Austin Hoover
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="teleological arguments,fine-tuning,multiverse" data-listing-date-sort="1688961600000" data-listing-file-modified-sort="1712203999176" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3428">
+<div class="thumbnail">
+<p><a href="../posts/2023-07-10_fine_tuning/index.html" class="no-external"></a></p><a href="../posts/2023-07-10_fine_tuning/index.html" class="no-external">
+<!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/2023-07-10_fine_tuning/index.html -->
+</a><p><a href="../posts/2023-07-10_fine_tuning/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2023-07-10_fine_tuning/index.html" class="no-external">Fine-tuning arguments</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2023-07-10_fine_tuning/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2023-07-10_fine_tuning/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/2023-07-10_fine_tuning/index.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2023-07-10_fine_tuning/index.html" class="no-external">
+<div class="listing-date">
+Jul 10, 2023
+</div>
+<div class="listing-author">
+Austin Hoover
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="particle accelerators,conferences" data-listing-date-sort="1711166400000" data-listing-file-modified-sort="1711937056862" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="911">
+<div class="thumbnail">
+<p><a href="../posts/2024-03-23_hb/index.html" class="no-external"></a></p><a href="../posts/2024-03-23_hb/index.html" class="no-external">
+<!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/2024-03-23_hb/index.html -->
+</a><p><a href="../posts/2024-03-23_hb/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2024-03-23_hb/index.html" class="no-external">High Brightness Workshop 2023</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2024-03-23_hb/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2024-03-23_hb/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/2024-03-23_hb/index.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2024-03-23_hb/index.html" class="no-external">
+<div class="listing-date">
+Mar 23, 2024
+</div>
+<div class="listing-author">
+Austin Hoover
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="particle accelerators,high-dimensional data,visualization" data-listing-date-sort="1685246400000" data-listing-file-modified-sort="1714340817372" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2183">
+<div class="thumbnail">
+<p><a href="../posts/2023-05-28_btf/index.html" class="no-external"></a></p><a href="../posts/2023-05-28_btf/index.html" class="no-external">
+<!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/2023-05-28_btf/index.html -->
+</a><p><a href="../posts/2023-05-28_btf/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2023-05-28_btf/index.html" class="no-external">High-dimensional phase space measurements</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2023-05-28_btf/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2023-05-28_btf/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/2023-05-28_btf/index.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2023-05-28_btf/index.html" class="no-external">
+<div class="listing-date">
+May 28, 2023
+</div>
+<div class="listing-author">
+Austin Hoover
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="cosmological arguments,Kalam,infinity" data-listing-date-sort="1631678400000" data-listing-file-modified-sort="1714340817370" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3490">
+<div class="thumbnail">
+<p><a href="../posts/2021-09-15_kalam_cosmological_arguments/index.html" class="no-external"></a></p><a href="../posts/2021-09-15_kalam_cosmological_arguments/index.html" class="no-external">
+<p><img src="../posts/2021-09-15_kalam_cosmological_arguments/hubble_deep_field.jpg" class="thumbnail-image"></p>
+</a><p><a href="../posts/2021-09-15_kalam_cosmological_arguments/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2021-09-15_kalam_cosmological_arguments/index.html" class="no-external">Kalam cosmological arguments</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2021-09-15_kalam_cosmological_arguments/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2021-09-15_kalam_cosmological_arguments/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/2021-09-15_kalam_cosmological_arguments/index.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2021-09-15_kalam_cosmological_arguments/index.html" class="no-external">
+<div class="listing-date">
+Sep 15, 2021
+</div>
+<div class="listing-author">
+Austin Hoover
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="cosmological arguments,Leibniz,infinity" data-listing-date-sort="1647921600000" data-listing-file-modified-sort="1714340817371" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3471">
+<div class="thumbnail">
+<p><a href="../posts/2022-03-22_leibnizian_cosmological_arguments/index.html" class="no-external"></a></p><a href="../posts/2022-03-22_leibnizian_cosmological_arguments/index.html" class="no-external">
+<!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/2022-03-22_leibnizian_cosmological_arguments/index.html -->
+</a><p><a href="../posts/2022-03-22_leibnizian_cosmological_arguments/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2022-03-22_leibnizian_cosmological_arguments/index.html" class="no-external">Leibnizian cosmological arguments</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2022-03-22_leibnizian_cosmological_arguments/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2022-03-22_leibnizian_cosmological_arguments/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/2022-03-22_leibnizian_cosmological_arguments/index.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2022-03-22_leibnizian_cosmological_arguments/index.html" class="no-external">
+<div class="listing-date">
+Mar 22, 2022
+</div>
+<div class="listing-author">
+Austin Hoover
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="Anselm,ontological arguments" data-listing-date-sort="1625457600000" data-listing-file-modified-sort="1688049261664" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1286">
+<div class="thumbnail">
+<p><a href="../posts/2021-07-05_ontological_arguments/index.html" class="no-external"></a></p><a href="../posts/2021-07-05_ontological_arguments/index.html" class="no-external">
+<p><img src="../posts/2021-07-05_ontological_arguments/island2.png" class="thumbnail-image"></p>
+</a><p><a href="../posts/2021-07-05_ontological_arguments/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2021-07-05_ontological_arguments/index.html" class="no-external">Ontological arguments</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2021-07-05_ontological_arguments/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2021-07-05_ontological_arguments/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/2021-07-05_ontological_arguments/index.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2021-07-05_ontological_arguments/index.html" class="no-external">
+<div class="listing-date">
+Jul 5, 2021
+</div>
+<div class="listing-author">
+Austin Hoover
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="particle accelerators,conferences,muon collider" data-listing-date-sort="1711252800000" data-listing-file-modified-sort="1712202952386" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="818">
+<div class="thumbnail">
+<p><a href="../posts/2024-04-01_muon/index.html" class="no-external"></a></p><a href="../posts/2024-04-01_muon/index.html" class="no-external">
+<!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/2024-04-01_muon/index.html -->
+</a><p><a href="../posts/2024-04-01_muon/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2024-04-01_muon/index.html" class="no-external">Princeton Muon Collider Workshop</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2024-04-01_muon/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2024-04-01_muon/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/2024-04-01_muon/index.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2024-04-01_muon/index.html" class="no-external">
+<div class="listing-date">
+Mar 24, 2024
+</div>
+<div class="listing-author">
+Austin Hoover
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="space charge,resonance,instability" data-listing-date-sort="1625112000000" data-listing-file-modified-sort="1688149241166" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
+<div class="thumbnail">
+<p><a href="../posts/2021-07-01_space_charge_instabilities/index.html" class="no-external"></a></p><a href="../posts/2021-07-01_space_charge_instabilities/index.html" class="no-external">
+<p><img src="../posts/2021-07-01_space_charge_instabilities/instability_viridis.png" class="thumbnail-image"></p>
+</a><p><a href="../posts/2021-07-01_space_charge_instabilities/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2021-07-01_space_charge_instabilities/index.html" class="no-external">Space charge resonances and instabilities</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2021-07-01_space_charge_instabilities/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2021-07-01_space_charge_instabilities/index.html" class="no-external"><!-- desc(5A0113B34292)[max=175]:posts/2021-07-01_space_charge_instabilities/index.html --></a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2021-07-01_space_charge_instabilities/index.html" class="no-external">
+<div class="listing-date">
+Jul 1, 2021
+</div>
+<div class="listing-author">
+Austin Hoover
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -426,7 +696,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
