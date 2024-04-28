@@ -7,7 +7,7 @@ website:
     right:
       - href: ./about/index.qmd
         text: "About"
-      - href: ./index.qmd
+      - href: ./archive.qmd
         text: "Posts"
       - href: ./notes/index.qmd
         text: "Notes"
@@ -21,7 +21,7 @@ format:
     toc-depth: 5
     toc-location: right
     grid:
-        body-width: 775px    
+        body-width: 700px    
     mainfont: Georgia
     fontsize: 15.25px
     html-math-method: mathjax
