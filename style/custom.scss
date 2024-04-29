@@ -12,13 +12,13 @@ $h4-font-size: 1.05em;
 $h5-font-size: 1.00em;
 $h6-font-size: 1.00em;
 $figure-caption-font-size: 15.5px !important;
-$body-text-align: justify;
+// $body-text-align: justify;
 
 /*-- scss:rules --*/
 
-p, li {
-    hyphens: auto !important;
-}
+// p, li {
+//     hyphens: auto !important;
+// }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500 !important;
