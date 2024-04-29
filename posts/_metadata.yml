@@ -1,5 +1,8 @@
 cap-location: bottom  # figure caption {bottom, margin}
 citation: false
+comments:
+    utterances:
+        repo: austin-hoover/blog
 execute:
     echo: true
     enabled: false

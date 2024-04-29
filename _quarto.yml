@@ -25,6 +25,3 @@ format:
     mainfont: Georgia
     fontsize: 15.25px
     html-math-method: mathjax
-    comments:
-        utterances:
-            repo: austin-hoover/blog

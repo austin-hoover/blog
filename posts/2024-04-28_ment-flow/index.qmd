@@ -1,5 +1,5 @@
 ---
-title: "MENT-Flow: maximum entropy tomography using normalizing flows"
+title: "MENT-Flow: maximum entropy tomography using normalizing flows, and some more words to make the title longer"
 date: 2024-04-28
 author: Austin Hoover
 categories:
