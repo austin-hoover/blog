@@ -21,7 +21,7 @@ format:
     toc-depth: 5
     toc-location: right
     grid:
-        body-width: 700px    
+        body-width: 750px    
     mainfont: Georgia
     fontsize: 15.25px
     html-math-method: mathjax
