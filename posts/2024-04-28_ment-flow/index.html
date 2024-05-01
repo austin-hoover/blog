@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -150,7 +179,27 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Hi there</p>
+<p>We can derive the form of the maximum-entropy distribution from a new functional. Here’s some more text to fill out the line.</p>
+<p><span class="math display">\[
+\Psi [
+    \rho(\mathbf{x}),
+    \rho_*(\mathbf{x}),
+    \{ g_k(\mathbf{u}_{k_\parallel}) \}
+]
+=
+H[\rho(\mathbf{x}), \rho_*(\mathbf{x})]
++
+\sum_{k}^{} {
+\int
+    \lambda_{k}(\mathbf{u}_{k_\parallel})
+    \left(
+        g_k(\mathbf{u}_{k_\parallel}) -
+        \int \rho \left( \mathcal{M}_k^{-1}(\mathbf{u}_k) \right)
+        d\mathbf{u}_{k_\perp}
+    \right)
+    d\mathbf{u}_{k_\parallel}
+}
+\]</span></p>
 
 
 

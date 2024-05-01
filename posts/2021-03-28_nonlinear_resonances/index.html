@@ -77,6 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -216,7 +219,7 @@ window.Quarto = {
 <p>Most of us are familiar with the experience of pushing someone else on a playground swing. We intuitively know that we should sync our pushes with the swing oscillation frequency. This strategy employs the idea of a <em>resonance</em>, which is an increase of the oscillation amplitude of a system for certain driving frequencies. In this post we first review the mathematics of this simple example, then extend the machinery to the nonlinear dynamics in a particle accelerator. My goal here is to write down the main results which are relevant to accelerators in order to improve my own understanding of the topic.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="homer.gif" class="img-fluid figure-img" width="300"></p>
+<p><a href="homer.gif" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Fig. 1. Homer pushes Lisa on a swing."><img src="homer.gif" class="img-fluid figure-img" width="300" alt="Fig. 1. Homer pushes Lisa on a swing."></a></p>
 <figcaption>Fig. 1. Homer pushes Lisa on a swing.</figcaption>
 </figure>
 </div>
@@ -263,7 +266,7 @@ A^2 = \frac{f_0^2}{(\omega - \omega_0)^2 + b\omega^2}.
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="_output_drive_oscillator.png" class="img-fluid figure-img" width="500"></p>
+<p><a href="_output_drive_oscillator.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Fig. 3. Driven, damped harmonic oscillator amplitude as a function of frequency. Three different values of the damping parameter b are shown."><img src="_output_drive_oscillator.png" class="img-fluid figure-img" width="500" alt="Fig. 3. Driven, damped harmonic oscillator amplitude as a function of frequency. Three different values of the damping parameter b are shown."></a></p>
 <figcaption>Fig. 3. Driven, damped harmonic oscillator amplitude as a function of frequency. Three different values of the damping parameter <span class="math inline">\(b\)</span> are shown.</figcaption>
 </figure>
 </div>
@@ -293,14 +296,14 @@ B_y - iB_x = \sum_{n=1}^{\infty}\left({b_n - ia_n}\right)\left(\frac{x + iy}{r_0
 <p>where <span class="math inline">\(r_0\)</span> is a constant. The <span class="math inline">\(b_n\)</span> and <span class="math inline">\(a_n\)</span> terms are called the multipole coefficients and skew multipole coefficients, respectively. The <span class="math inline">\(n^{th}\)</span> term in the expansion is the field produced by <span class="math inline">\(2n\)</span> symmetrically arranged magnetic poles.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="multipoles.png" class="img-fluid figure-img" width="550"></p>
+<p><a href="multipoles.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Fig. 4. Multipole expansion of the magnetic field up to fourth order."><img src="multipoles.png" class="img-fluid figure-img" width="550" alt="Fig. 4. Multipole expansion of the magnetic field up to fourth order."></a></p>
 <figcaption>Fig. 4. Multipole expansion of the magnetic field up to fourth order.</figcaption>
 </figure>
 </div>
 <p>We can see that terms with <span class="math inline">\(n &gt; 2\)</span> introduce nonlinear powers of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on the right side of Eq. (6), while terms with <span class="math inline">\(n \le 2\)</span> introduce linear or constant terms. One may ask why we are considering a general magnetic field when in reality we use only dipoles and quadrupoles. The answer is two-fold. First, the best we can do in a real magnet is to make the <span class="math inline">\(n &gt; 2\)</span> terms as small as possible; they aren’t zero and we need to know how they affect the motion. Second, sextupoles (and sometimes even octopoles) can be introduced intentionally. Their primary use is to correct for the fact that not all beam particles have the same momentum.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="sextupole_magnet.jpg" class="img-fluid figure-img" width="400"></p>
+<p><a href="sextupole_magnet.jpg" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="Fig. 5. An example of a sextupole electromagnet. (Source: CERN.)"><img src="sextupole_magnet.jpg" class="img-fluid figure-img" width="400" alt="Fig. 5. An example of a sextupole electromagnet. (Source: CERN.)"></a></p>
 <figcaption>Fig. 5. An example of a sextupole electromagnet. (Source: CERN.)</figcaption>
 </figure>
 </div>
@@ -405,7 +408,7 @@ M_x \nu_x + M_y \nu_y = N,
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="_output_resonance_diagram.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><a href="_output_resonance_diagram.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="Fig. 6. Resonance tune diagram up to fifth order (left) and tenth order (right)."><img src="_output_resonance_diagram.png" class="img-fluid figure-img" style="width:100.0%" alt="Fig. 6. Resonance tune diagram up to fifth order (left) and tenth order (right)."></a></p>
 <figcaption>Fig. 6. Resonance tune diagram up to fifth order (left) and tenth order (right).</figcaption>
 </figure>
 </div>
@@ -639,7 +642,7 @@ M_x \nu_x + M_y \nu_y = N,
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+<p><a href="index_files/figure-html/cell-11-output-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="Fig. 7. Period-by-period phase space trajectory in a linear lattice as a function of the tune."><img src="index_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img" alt="Fig. 7. Period-by-period phase space trajectory in a linear lattice as a function of the tune."></a></p>
 <figcaption>Fig. 7. Period-by-period phase space trajectory in a linear lattice as a function of the tune.</figcaption>
 </figure>
 </div>
@@ -656,7 +659,7 @@ M_x \nu_x + M_y \nu_y = N,
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+<p><a href="index_files/figure-html/cell-12-output-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="FIg. 8. Period-by-period phase space trajectory in a linear lattice + sextupole as a function of the tune."><img src="index_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img" alt="FIg. 8. Period-by-period phase space trajectory in a linear lattice + sextupole as a function of the tune."></a></p>
 <figcaption>FIg. 8. Period-by-period phase space trajectory in a linear lattice + sextupole as a function of the tune.</figcaption>
 </figure>
 </div>
@@ -674,7 +677,7 @@ M_x \nu_x + M_y \nu_y = N,
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="./_output_third_order.gif" class="img-fluid figure-img" style="width:78.0%"></p>
+<p><a href="./_output_third_order.gif" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="FIg. 9. Phase space trajectories near the third-integer tune."><img src="./_output_third_order.gif" class="img-fluid figure-img" style="width:78.0%" alt="FIg. 9. Phase space trajectories near the third-integer tune."></a></p>
 <figcaption>FIg. 9. Phase space trajectories near the third-integer tune.</figcaption>
 </figure>
 </div>
@@ -693,7 +696,7 @@ M_x \nu_x + M_y \nu_y = N,
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></p>
+<p><a href="index_files/figure-html/cell-15-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="index_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -707,7 +710,7 @@ M_x \nu_x + M_y \nu_y = N,
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="./_output_integer.gif" class="img-fluid figure-img" style="width:78.0%"></p>
+<p><a href="./_output_integer.gif" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10" title="FIg. 10. Phase space trajectories near the integer tune."><img src="./_output_integer.gif" class="img-fluid figure-img" style="width:78.0%" alt="FIg. 10. Phase space trajectories near the integer tune."></a></p>
 <figcaption>FIg. 10. Phase space trajectories near the integer tune.</figcaption>
 </figure>
 </div>
@@ -730,7 +733,7 @@ M_x \nu_x + M_y \nu_y = N,
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-18-output-1.png" class="img-fluid figure-img"></p>
+<p><a href="index_files/figure-html/cell-18-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="index_files/figure-html/cell-18-output-1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -759,6 +762,17 @@ M_x \nu_x + M_y \nu_y = N,
 </ul>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Fig. 1. Homer pushes Lisa on a swing.</span>
+<span class="glightbox-desc lightbox-desc-2">Fig. 3. Driven, damped harmonic oscillator amplitude as a function of frequency. Three different values of the damping parameter <span class="math inline">\(b\)</span> are shown.</span>
+<span class="glightbox-desc lightbox-desc-3">Fig. 4. Multipole expansion of the magnetic field up to fourth order.</span>
+<span class="glightbox-desc lightbox-desc-4">Fig. 5. An example of a sextupole electromagnet. (Source: CERN.)</span>
+<span class="glightbox-desc lightbox-desc-5">Fig. 6. Resonance tune diagram up to fifth order (left) and tenth order (right).</span>
+<span class="glightbox-desc lightbox-desc-6">Fig. 7. Period-by-period phase space trajectory in a linear lattice as a function of the tune.</span>
+<span class="glightbox-desc lightbox-desc-7">FIg. 8. Period-by-period phase space trajectory in a linear lattice + sextupole as a function of the tune.</span>
+<span class="glightbox-desc lightbox-desc-8">FIg. 9. Phase space trajectories near the third-integer tune.</span>
+<span class="glightbox-desc lightbox-desc-10">FIg. 10. Phase space trajectories near the integer tune.</span>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1296,6 +1310,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
