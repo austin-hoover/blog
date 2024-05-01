@@ -8,6 +8,7 @@ execute:
     enabled: false
     cache: true
     freeze: true
+lightbox: true
 sidebar: false
 title-block-categories: false
 toc: false

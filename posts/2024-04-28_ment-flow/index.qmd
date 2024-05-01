@@ -10,4 +10,25 @@ csl: ./american-physics-society.csl
 draft: true
 ---
 
-Hi there
+We can derive the form of the maximum-entropy distribution from a new functional. Here's some more text to fill out the line.
+
+$$
+\Psi [ 
+    \rho(\mathbf{x}), 
+    \rho_*(\mathbf{x}), 
+    \{ g_k(\mathbf{u}_{k_\parallel}) \}
+]
+=
+H[\rho(\mathbf{x}), \rho_*(\mathbf{x})]
++ 
+\sum_{k}^{} {
+\int
+    \lambda_{k}(\mathbf{u}_{k_\parallel})
+    \left(
+        g_k(\mathbf{u}_{k_\parallel}) - 
+        \int \rho \left( \mathcal{M}_k^{-1}(\mathbf{u}_k) \right) 
+        d\mathbf{u}_{k_\perp}
+    \right)
+    d\mathbf{u}_{k_\parallel}
+}
+$$
