@@ -1,0 +1,39 @@
+---
+title: "Why maximize entropy?"
+date: 2024-05-16
+author: Austin Hoover
+categories:
+  - entropy
+  - statistical mechanics
+  - inverse problems
+---
+
+I've been thinking a lot about entropy in the past year. I've been motivated by problems in phase space tomography, where the goal is to reconstruct a two-, four- or six-dimensional phase space distribution from its one- or two-dimensional projections. Such problems have no unique solution. We can imagine the data carving out a feasible set in the space of distributions, where all distributions in the feasible set reproduce the data.
+
+We could adopt [various strategies](https://tomopy.readthedocs.io/en/stable/api/tomopy.recon.algorithm.html) to select a single distribution from the feasible set. Some strategies generate low-quality reconstructions when there are few projections. For example, Filtered Backprojection (FBP) typically generates streaking artifacts. Minerbo's MENT algorithm [@Minerbo_1979] does better. In addition to reproducing the measured projections, MENT maximizes the distribution's entropy. 
+
+Why maximize entropy? In Minerbo's original paper, he states:
+
+> From the standpoint of information theory this approach is conceptually attractive: It yields the image with the lowest information content consistent with the available data. Thus with this approach one avoids introducing extraneous information or artificial structure. The problem of reconstructing a source from a finite number of views is known to be indeterminate. A maximum entropy method thus seems attractive for this problem, especially when the available projection data are incomplete or degraded by noise errors. [@Minerbo_1979]
+
+Clear enough. Mottershead says similar things but mentions *multiplicity* in the same breath:
+
+> In this case the inversion is not unique, and we need a mechanism for constructing an estimate of the distribution that *incorporates everything we know, and nothing else*. The maximum entropy principle offers a natural way for doing this. It argues that, of all the possible distributions that satisfy the observed constraints, the *most reasonable* one to choose is that one that nature can produce in the *greatest number of ways*, namely, the distribution having maximum entropy. [@Mottershead_1985]
+
+An idea expressed in conversation with others is that we seek the maximum-entropy distribution because charged particle beams are often near equilibrium and, therefore, in a maximum-entropy state. And such a state, from Boltzmann's derivation, has the highest multiplicity. This distribution would be the most likely if chosen at random. So is the maximum-entropy distribution the most reasonable, the most likely, or both?
+
+Like most physics students, I was introduced to entropy in statistical mechanics, where we defined entropy as the logarithm of multiplicity. I was also aware of Shannon's information theory entropy but hadn't thought much about the relationship between the two. I recently came across work by Steven Gull and John Skilling from the University of Cambridge. They claimed that entropy maximization can be derived without reference to information theory or physics. I was confused at this point.
+
+I now subscribe to the idea that entropy maximization is the only logically consistent strategy for inferring probability distributions from incomplete data. I recommend the following papers to trace the development of this idea.
+
+1. Kardar, Mehran. "Statistical physics of particles." Cambridge University Press, 2007.
+2. Jaynes, Edwin T. "Information theory and statistical mechanics." Physical Review 106.4 (1957): 620.
+3. Rosenkrantz, Roger D., ed. "ET Jaynes: papers on probability, statistics and statistical physics." Vol. 158. Springer Science & Business Media, 2012.
+4. Shore, John, and Rodney Johnson. "Axiomatic derivation of the principle of maximum entropy and the principle of minimum cross-entropy." IEEE Transactions on information theory 26.1 (1980): 26-37.
+5. Jaynes, Edwin Thompson. "Monkeys, kangaroos and N." Maximum-Entropy and Bayesian Methods in Applied Statistics 26 (1986).
+6. Pressé, Steve, et al. "Principles of maximum entropy and maximum caliber in statistical physics." Reviews of Modern Physics 85.3 (2013): 1115.
+7. Pressé, Steve, et al. "Nonadditive entropies yield probability distributions with biases not warranted by the data." Physical review letters 111.18 (2013): 180604.
+8. Pressé, Steve, et al. "Reply to C. Tsallis’“Conceptual inadequacy of the Shore and Johnson axioms for wide classes of complex systems”." Entropy 17.7 (2015): 5043-5046.
+9. Jizba, Petr, and Jan Korbel. "Maximum entropy principle in statistical inference: Case for non-Shannonian entropies." Physical review letters 122.12 (2019): 120601.
+10. Pachter, Jonathan Asher, Ying-Jen Yang, and Ken A. Dill. "Entropy, irreversibility and inference at the foundations of statistical physics." Nature Reviews Physics (2024): 1-12.
+
