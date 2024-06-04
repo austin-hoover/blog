@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2024-04-01">
+<meta name="dcterms.date" content="2024-06-01">
 
-<title>Accelerated Inquiry - Princeton Muon Collider Workshop</title>
+<title>Accelerated Inquiry - Maximum-entropy phase space tomography using normalizing flows</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +22,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -63,9 +43,6 @@ div.csl-indent {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -94,6 +71,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -144,7 +150,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Princeton Muon Collider Workshop</h1>
+<h1 class="title">Maximum-entropy phase space tomography using normalizing flows</h1>
   </div>
 
 
@@ -161,7 +167,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 1, 2024</p>
+      <p class="date">June 1, 2024</p>
     </div>
   </div>
   
@@ -173,29 +179,84 @@ div.csl-indent {
 </header>
 
 
-<p>The Large Hadron Collider (LHC) will soon double its luminosity, but progress in high-energy physics (HEP) will eventually require a new laboratory <span class="citation" data-cites="Shiltsev_2021">&nbsp;[<a href="#ref-Shiltsev_2021" role="doc-biblioref">1</a>]</span>. There are a few options. The <a href="https://fcc.web.cern.ch/overview">Future Circular Collider (FCC)</a> would collide ~100 TeV protons in a 100 km ring, using the LHC (7 TeV, 25 km) as a booster ring. The plan would be to start colliding leptons (FCC-ee) in the 2040s and switch to protons (FCC-hh) in the 2070s. The accelerator would be a relatively straightforward extension of the LHC, although there would be some new challenges, especially the required 16 T (!) bending magnets.</p>
-<p>An alternative approach is to collide leptons. Hadron collisions distribute energy among quarks and gluons, and it can be difficult to extract signals from the debris. Leptons don’t seem to have any internal structure; their collisions are clean and efficient, enabling precision measurements of certain reactions. Such collisions would be especially useful for studying the Higgs boson. Unfortunately, synchrotron radiation limits lepton energy in circular accelerators. Linear accelerators eliminate this problem but need to by very long to probe BSM physics. The proposed <a href="https://linearcollider.org">International Linear Collider (ILC)</a> would collide electrons with positrons at ~1 TeV in a ~50 km linac. The ILC has undergone a comprehensive design study and is ready to launch. Japan has shown interest, and although there are no official plans, the ILC could start running as soon as 2035.</p>
-<p>A muon collider (MuC) would be a hybrid approach. A MuC would collide muons and antimuons at ~10 TeV in a ~10 km ring (approximately the size of the LHC). Since muons are much heavier than electrons, they can be accelerated to 10 TeV in a compact ring. And since they are leptons, their collisions are more useful than hadrons at the same energy. A MuC is likely the only hope for a collider beyond LHC energy within my lifetime; if all goes well, it could start running in 2045. But there’s a problem: muons decay almost instantly. And another problem: muon beams are hot—they occupy a large volume in position-momentum space. And other problems too, such as neutrino radiation (!). These problems require novel solutions. Thus, the muon collider might be both the fastest and most challenging path to the energy frontier.</p>
-<p>The US Muon Accelerator Program (MAP) developed a preliminary MuC design some years ago, and the <a href="https://muoncollider.web.cern.ch">International Muon Collider Collaboration (IMCC)</a> has started where MAP left off. The preliminary design is shown below <span class="citation" data-cites="Accettura_2023">&nbsp;[<a href="#ref-Accettura_2023" role="doc-biblioref">2</a>]</span>:</p>
-<p><a href="./files/fig_muc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./files/fig_muc.png" class="img-fluid"></a></p>
-<p>The front end generates the muon and antimuon beams by colliding a proton beam with a metal target, the middle section cools the beams, reducing their phase space volume by six orders of magnitude (!), and the final section accelerates and collides the beams at dedicated interaction points. There is a push to deliver a collider design in the next few years, reflecting growing support from the <a href="https://www.slac.stanford.edu/econf/C210711/">HEP community</a>.</p>
-<p>I recently gave a talk at a workshop on muon colliders at Princeton University. The workshop discussed how the US could address the key technological challenges in the next five years. All presentations are available <a href="https://agenda.hep.wisc.edu/event/2140/timetable/#20240222">online</a>. I discussed how the SNS could test the extreme proton bunch compression needed to generate the initial muon beam. It was a unique workshop because of the mix of accelerator and particle physicists. While most of the talks focused on accelerator physics, around a third focused on detectors or HEP theory. A major topic was the beam-induced background (BIB) due to muon decay. I didn’t understand these talks well, but they motivated me to resume my particle physics self-education. (I probably would have gone into HEP if I’d attended a different grad school.)</p>
-<p>It was interesting to hear the particle physicists’ perspectives. Some expressed a desire for more accelerator-particle physics collaboration, especially among graduate students. I’m not sure how a Ph.D.&nbsp;student could have time to learn both accelerator physics and the complicated data analysis required for experimental particle physics. But I like this idea, and I’m sure many projects would benefit from multiple perspectives and skill sets.</p>
-<p>I also liked hearing about the state of HEP. One experimentalist expressed his opinion that particle physicists undersell their work. He drew a comparison to condensed matter physics, where experiments reveal exciting and unpredicted phenomena despite agreeing with the underlying theory of quantum mechanics. He argued that similar findings are commonplace at the LHC — many new processes do not contradict the Standard Model (SM) but are, nonetheless, unexpected and exciting. I suppose material science discoveries will always get more attention because they can lead to new technologies, while particle physics is more out there. In other words, who cares if tetraquarks exist? But from a fundamental scientific viewpoint, these discoveries are equally exciting.</p>
-<p>I was happy to attend this workshop and look forward to exploring SNS contributions to MuC design. It’s exciting to think about projects twenty (or even fifty) years away.</p>
-<p>A few up-to-date talks on future colliders: <a href="https://indico.cern.ch/event/1260648/attachments/2610683/4510782/IMCC_Schulte_CERN_2023.pdf">IMCC</a>, <a href="https://indico.cern.ch/event/1260648/attachments/2610683/4510781/FrankZimmermann-230314_Future-Colliders-FCC.pdf">FCC</a>, <a href="https://indico.cern.ch/event/1260648/attachments/2610683/4511473/linear-colliders.pdf">ILC</a>.</p>
+<p>This post discusses the preprint <em>High-dimensional phase space tomography using normalizing flows</em> [<a href="">arxiv</a>]. Phase space tomography is a technique to reconstruction a position-momentum distribution from low-dimensional projections. Entropy maximization is a mathematically rigorous way to incorporate prior information in the reconstruction, providing strong regularization when measurements are sparse. Entropy maximization is difficult to implement when the phase space is high-dimensional. In this paper, we explored the use of generative models, specifically <em>normalizing flows</em>, for maximum-entropy phase space tomograpy.</p>
+<section id="indirectly-measuring-position-momentum-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="indirectly-measuring-position-momentum-distributions">Indirectly measuring position-momentum distributions</h2>
+<p>To model the behavior of a charged particle beam, we need to know how its particles are distributed in position-momentum space, or <em>phase space</em>. There are six phase space variables: three position coordinates (<span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(z\)</span>) and three momentum coordinates (<span class="math inline">\(x'\)</span>, <span class="math inline">\(y'\)</span>, <span class="math inline">\(z'\)</span>), which we wrap into a single vector <span class="math inline">\(\mathbf{x} = [x, x', y, y', z, z']^T\)</span>. Since we can’t measure individual particles, we describe the beam using a probability density function <span class="math inline">\(\rho(\mathbf{x})\)</span>, where <span class="math display">\[\begin{equation}\label{eq:norm}\tag{1}
+    \int \rho(\mathbf{x}) d\mathbf{x} = 1.
+\end{equation}\]</span></p>
+<p>Measuring the phase space distribution is a major focus in accelerator physics. In a <a href="../2023-05-28_btf">previous post</a>, I described our efforts to measure the distribution directly. Here, I’ll describe efforts to reconstruct the distribution from partial information. I’ll assume we can only measure projections of the distribution onto position space. For example, we can measure the 1D distribution <span class="math inline">\(\rho(x)\)</span> by sweeping a conducting wire across the beam and measuring the secondary electrons emitted from the wire at each position. Note that the 1D distribution <span class="math inline">\(\rho(x)\)</span> is really an integral over the hidden momentum coordinates: <span class="math display">\[\begin{equation}\tag{1}
+    \rho(x) = \int \rho(x, x') dx'.
+\end{equation}\]</span> If we could rotate the phase space distribution, we would obtain 1D projections along different angles in phase space. This is the same problem faced in medical CT, where the detector rotates instead of the distribution. Thus, if we could rotate the phase space distribution, we could apply standard CT algorithms to reconstruct the phase space distribution.</p>
+<p>Imagine the beam was placed in a harmonic potential well. A beautiful insight from classical mechanics is that, while particles perform sinusoidal oscillations in position space, they trace a circle in phase space! Thus, measuring <span class="math inline">\(\rho(x)\)</span> at different times would be equivalent to measuring the projection of <span class="math inline">\(\rho(x, x')\)</span> along different angles in phase space. The electromagnetic focusing fields in an accelerator <em>do not</em> create a simple harmonic potential. But after some approximations, we can often decouple the motion in the three planes and write <span class="math display">\[\begin{equation}
+    \begin{bmatrix}
+      x(t) \\ x'(t)
+    \end{bmatrix}
+    =
+    \mathbf{M}
+    \begin{bmatrix}
+      x(0) \\ x'(0)
+    \end{bmatrix},
+\end{equation}\]</span> where <span class="math inline">\(\mathbf{M}\)</span> is a linear transfer matrix. We can account for the shearing and scaling so that our measurements still amount to projections along different angles in phase space. We can measure the beam at different times by placing wirescanners at different positions along the accelerator lattice. Or we could meaure the beam at one position and vary the upstream optics; both methods update the transfer matrix. Thus, by measuring the spatial density at different locations along the accelerator lattice, or under different focusing optics, we can use any CT algorithm to reconstruct the phase space distribution at any point upstream of the measurements.</p>
+<p>The problem becomes <em>much</em> more difficult when we consider 6D phase space tomograpy from arbitrary nonlinear phase space transformations. We have to search the space of 6D distribution functions. In 2D, we can course-grain the distribution and search the space of images, but this does not scale well to 6D. A <span class="math inline">\(50 \times 50 \times 50 \times 50 \times 50 \times 50\)</span> grid already has 15 billion cells! The storage requirements for many conventional tomography algorithms are even worse because they have to store a matrix connecting the distribution to its projections. For this reason, even 4D tomography rules out the use of most conventional algorithms.</p>
+</section>
+<section id="entropy-maximization-for-inverse-problems" class="level2">
+<h2 class="anchored" data-anchor-id="entropy-maximization-for-inverse-problems">Entropy maximization for inverse problems</h2>
+<p>Another issue is that accelerators restrict the number and quality of measured projections. In medical CT, reconstructions proceed from hundreds of measurements at optimally chosen projection angles. In accelerators, we may be limited to tens of measurements, even as few as three or four in some cases. Furthermore, the measurements may not be optimal. In medical CT, we know that we should space the projection angles evenly over 180 degrees. This is usually not possible in 2D phase space tomography, and in 4D or 6D tomography, we don’t even know how to determine the best transformations.</p>
+<p>All this to say: phase space tomography can be severely ill-posed. There can be many distributions consistent with the same data. This problem is already important in 2D, but becomes exponentially worse in 4D and 6D. How should we proceed if we must select a single distribution from the feasible set? Our strategy will be to maximize a functional <span class="math inline">\(H[\rho(\mathbf{x})]\)</span>, subject to the measurement constraints. There might not be a general functional that applies in all situations, but if there is such a functional, it should give correct results in simple cases. It turns out that we only need to require four things: 1. The maximum of <span class="math inline">\(H\)</span> should be unique. 2. The maximum of <span class="math inline">\(H\)</span> should not depend on the choice of coordinates. 3. We should be able to update <span class="math inline">\(\rho(\mathbf{x})\)</span> in domain <span class="math inline">\(D\)</span> without affecting <span class="math inline">\(\rho(\mathbf{x})\)</span> in regions outside <span class="math inline">\(D\)</span>. 4. If we have information the […]</p>
+<p>We end up with the relative entropy: <span class="math display">\[\begin{equation}
+    H[\rho(\mathbf{x}, \rho_*(\mathbf{x})] =
+    -\int \rho(\mathbf{x}) \log\left(\frac{\rho(\mathbf{x})}{\rho_*(\mathbf{x})}\right)
+\end{equation}\]</span> Here, $_<em>() is a </em>prior* enoding our knowledge before seeing any data. The relative entropy has a maximum at zero, when <span class="math inline">\(\rho(\mathbf{x}) = \rho_*(\mathbf{x})\)</span>, so if there is no data, entropy maximization (ME) returns the prior. ME tells us what <em>not</em> to do: it tells us not to change our minds unless <em>forced</em> by the data.</p>
+<p>ME is an extremely general principle of inference, not confined to tomograpy or statistical physics or any specific problem. It sits on a firm mathematical foundation. The only arguments <em>against</em> ME are the following: 1. If we have enough data, all algorithms give the same answer. 2. It’s too hard to maximize the entropy. I’ve argued above that particle accelerator measurements often do not tightly constrain the phase space distribution. That leaves the second consideration. Indeed, maximizing the entropy is challenging, as the entropy is a highly nonlinear function of the probability density.</p>
+</section>
+<section id="maximum-entropy-algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="maximum-entropy-algorithms">Maximum-entropy algorithms</h2>
+<p>MENT is an algorithm</p>
+<section id="ment" class="level3">
+<h3 class="anchored" data-anchor-id="ment">MENT</h3>
+<p>Let’s define our problem. Let <span class="math inline">\(\mathbf{x} \in \mathbb{R}^n\)</span> be the phase space coordinates. On each measurement, we transform the phsae space coordinates via a symplectic map <span class="math inline">\(\mathcal{M}_k: \mathcal{R}^n \rightarrow \mathcal{R}^n\)</span>: <span class="math display">\[\begin{equation}
+    \mathbf{u}_k = \mathcal{M}_k(\mathbf{x}).
+\end{equation}\]</span> Then we project the transformed coordiantes onto a lower dimensional plane <span class="math inline">\(\mathbf{u}_{k_\parallel} \in \mathbb{R}^m\)</span>. <span class="math display">\[\begin{equation}
+    g(\mathbf{u}_{k_\parallel}) = \int{\rho \left( \mathcal{M}_k^{-1}(\mathbf{u}_k )\right) d\mathbf{u}_{k_\perp}}
+\end{equation}\]</span></p>
+<p>We can derive the form of the maximum-entropy distribution from a new functional. Here’s some more text to fill out the line.</p>
+<p><span class="math display">\[\begin{equation}
+    \Psi [
+        \rho(\mathbf{x}),
+        \rho_*(\mathbf{x}),
+        \{ g_k(\mathbf{u}_{k_\parallel}) \}
+    ]
+    =
+    H[\rho(\mathbf{x}), \rho_*(\mathbf{x})]
+    +
+    \sum_{k}^{} {
+    \int
+        \lambda_{k}(\mathbf{u}_{k_\parallel})
+        \left(
+            g_k(\mathbf{u}_{k_\parallel}) -
+            \int \rho \left( \mathcal{M}_k^{-1}(\mathbf{u}_k) \right)
+            d\mathbf{u}_{k_\perp}
+        \right)
+        d\mathbf{u}_{k_\parallel}
+    }
+\end{equation}\]</span></p>
+</section>
+<section id="ment-flow" class="level3">
+<h3 class="anchored" data-anchor-id="ment-flow">MENT-Flow</h3>
+<p>Roussel et al.&nbsp;proposed a clever solution called *Generative Phase Space Reconstruction (GPSR).</p>
+</section>
+</section>
+<section id="numerical-experiments" class="level2">
+<h2 class="anchored" data-anchor-id="numerical-experiments">Numerical experiments</h2>
+</section>
+<section id="experimental-4d-reconstruction-of-an-intense-proton-beam-from-1d-measurements" class="level2">
+<h2 class="anchored" data-anchor-id="experimental-4d-reconstruction-of-an-intense-proton-beam-from-1d-measurements">Experimental 4D reconstruction of an intense proton beam from 1D measurements</h2>
 
 
+</section>
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-Shiltsev_2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">V. Shiltsev and F. Zimmermann, <em>Modern and Future Colliders</em>, Reviews of Modern Physics <strong>93</strong>, 015006 (2021).</div>
-</div>
-<div id="ref-Accettura_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">C. Accettura et al., <em>Towards a Muon Collider</em>, The European Physical Journal C <strong>83</strong>, 864 (2023).</div>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -730,31 +791,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 
