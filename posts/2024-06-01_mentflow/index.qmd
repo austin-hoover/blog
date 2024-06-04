@@ -10,25 +10,23 @@ csl: ./american-physics-society.csl
 draft: true
 ---
 
-This post discusses the paper *High-dimensional phase space tomography using normalizing flows*; preprint on [arxiv](). Phase space tomography is a technique to reconstruction a position-momentum distribution from low-dimensional projections. Entropy maximization is a mathematically rigorous technique to incorporate prior information in the reconstruction, providing strong regularization when measurements are sparse. But entropy maximization is difficult to implement when the phase space is high-dimensional. In this paper, we explored the use of generative models, specifically *normalizing flows*, for maximum-entropy phase space tomograpy.
+This post discusses the preprint *High-dimensional phase space tomography using normalizing flows* [[arxiv]()]. Phase space tomography is a technique to reconstruction a position-momentum distribution from low-dimensional projections. Entropy maximization is a mathematically rigorous way to incorporate prior information in the reconstruction, providing strong regularization when measurements are sparse. Entropy maximization is difficult to implement when the phase space is high-dimensional. In this paper, we explored the use of generative models, specifically *normalizing flows*, for maximum-entropy phase space tomograpy.
 
 
 ## Indirectly measuring position-momentum distributions
 
-A charged particle beam is a classical system; as such, its state is completely described by the position and momentum of each particle in the beam. If we had perfect knowledge of this state and all external forces acting on the system, we could propagate each particle forward or backward in time by integrating the classical equations of motion. We're usually confident in our ability to integrate these equations, but much less confident in our knowledge of the particle coordinates and external forces.
-
-The position ($x, y, z$) and momentum ($x'$, $y'$, $z'$) coordinates form a six-dimensional *phase space*. We're not interested in the phase space coordinates of individual particles (we can't measure those); rather, we're interested in the phase space *distribution*, or *density*. Specifically, we're interested in the probability density function $\rho(\mathbf{x})$, where $\mathbf{x} = [x, x', y, y', z, z']^T$ is the phase space coordinate vector and 
+To model the behavior of a charged particle beam, we need to know how its particles are distributed in position-momentum space, or *phase space*. There are six phase space variables: three position coordinates ($x$, $y$, $z$) and three momentum coordinates ($x'$, $y'$, $z'$), which we wrap into a single vector $\mathbf{x} = [x, x', y, y', z, z']^T$. Since we can't measure individual particles, we describe the beam using a probability density function $\rho(\mathbf{x})$, where 
 \begin{equation}\label{eq:norm}\tag{1}
     \int \rho(\mathbf{x}) d\mathbf{x} = 1.
 \end{equation}
 
-Measuring the phase space distribution is a major focus in accelerator physics. In a [previous post](../2023-05-28_btf), I described our efforts to measure the distribution directly. Here, we assume we can only measure *projections* of the distribution onto position space. For example, one can measure the 1D distribution $\rho(x)$ by sweeping a conducting wire across the beam and measuring the secondary electrons emitted from the wire at each position. Note that the 1D distribution $\rho(x)$ is really an integral over the hidden momentum coordinates:
+Measuring the phase space distribution is a major focus in accelerator physics. In a [previous post](../2023-05-28_btf), I described our efforts to measure the distribution directly. Here, I'll describe efforts to reconstruct the distribution from partial information. I'll assume we can only measure projections of the distribution onto position space. For example, we can measure the 1D distribution $\rho(x)$ by sweeping a conducting wire across the beam and measuring the secondary electrons emitted from the wire at each position. Note that the 1D distribution $\rho(x)$ is really an integral over the hidden momentum coordinates:
 \begin{equation}\tag{1}
     \rho(x) = \int \rho(x, x') dx'.
 \end{equation}
 If we could rotate the phase space distribution, we would obtain 1D projections along different angles in phase space. This is the same problem faced in medical CT, where the detector rotates instead of the distribution. Thus, if we could rotate the phase space distribution, we could apply standard CT algorithms to reconstruct the phase space distribution.
 
-Imagine the beam was placed in a harmonic potential well. A beautiful insight from classical mechanics is that, while particles perform sinusoidal oscillations in position space, they trace a circle in phase space! Thus, measuring $\rho(x)$ at different times would be equivalent to measuring the projection of $\rho(x, x')$ along different angles in phase space. The electromagnetic focusing fields in an accelerator *do not* create a simple harmonic potential. But after some approximations, we can often decouple the motion in the three planes and assume that
+Imagine the beam was placed in a harmonic potential well. A beautiful insight from classical mechanics is that, while particles perform sinusoidal oscillations in position space, they trace a circle in phase space! Thus, measuring $\rho(x)$ at different times would be equivalent to measuring the projection of $\rho(x, x')$ along different angles in phase space. The electromagnetic focusing fields in an accelerator *do not* create a simple harmonic potential. But after some approximations, we can often decouple the motion in the three planes and write
 \begin{equation}
     \begin{bmatrix}
       x(t) \\ x'(t)
@@ -44,11 +42,34 @@ where $\mathbf{M}$ is a linear transfer matrix. We can account for the shearing 
 The problem becomes *much* more difficult when we consider 6D phase space tomograpy from arbitrary nonlinear phase space transformations. We have to search the space of 6D distribution functions. In 2D, we can course-grain the distribution and search the space of images, but this does not scale well to 6D. A $50 \times 50 \times 50 \times 50 \times 50 \times 50$ grid already has 15 billion cells! The storage requirements for many conventional tomography algorithms are even worse because they have to store a matrix connecting the distribution to its projections. For this reason, even 4D tomography rules out the use of most conventional algorithms.
 
 
-## Maximum-entropy tomography
+## Entropy maximization for inverse problems
 
-Let's table that discussion for now. Another issue is that accelerators restrict the number and quality of measured projections. In medical CT, reconstructions proceed from hundreds of measurements at optimally chosen projection angles. In accelerators, we may be limited to tens of measurements, even as few as three or four in some cases. Furthermore, the measurements may not be optimal. In medical CT, we know that we should space the projection angles evenly over 180 degrees. This is usually not possible in 2D phase space tomography due to accelerator constraints, and in 4D or 6D tomography, we don't even know how to determine the best transformations. 
+Another issue is that accelerators restrict the number and quality of measured projections. In medical CT, reconstructions proceed from hundreds of measurements at optimally chosen projection angles. In accelerators, we may be limited to tens of measurements, even as few as three or four in some cases. Furthermore, the measurements may not be optimal. In medical CT, we know that we should space the projection angles evenly over 180 degrees. This is usually not possible in 2D phase space tomography, and in 4D or 6D tomography, we don't even know how to determine the best transformations. 
 
-All this to say: phase space tomography can be severely ill-posed. There can be many distributions consistent with the same data. This problem is already important in 2D, but becomes exponentially worse in 4D and 6D. How should we proceed if we must select a single distribution from the feasible set?
+All this to say: phase space tomography can be severely ill-posed. There can be many distributions consistent with the same data. This problem is already important in 2D, but becomes exponentially worse in 4D and 6D. How should we proceed if we must select a single distribution from the feasible set? Our strategy will be to maximize a functional $H[\rho(\mathbf{x})]$, subject to the measurement constraints. There might not be a general functional that applies in all situations, but if there is such a functional, it should give correct results in simple cases. It turns out that we only need to require four things:
+1. The maximum of $H$ should be unique.
+2. The maximum of $H$ should not depend on the choice of coordinates.
+3. We should be able to update $\rho(\mathbf{x})$ in domain $D$ without affecting $\rho(\mathbf{x})$ in regions outside $D$.
+4. If we have information the [...]
+
+We end up with the relative entropy:
+\begin{equation}
+    H[\rho(\mathbf{x}, \rho_*(\mathbf{x})] = 
+    -\int \rho(\mathbf{x}) \log\left(\frac{\rho(\mathbf{x})}{\rho_*(\mathbf{x})}\right)
+\end{equation}
+Here, $\rho_*(\mathbf{x}) is a *prior* enoding our knowledge before seeing any data. The relative entropy has a maximum at zero, when $\rho(\mathbf{x}) = \rho_*(\mathbf{x})$, so if there is no data, entropy maximization (ME) returns the prior. ME tells us what *not* to do: it tells us not to change our minds unless *forced* by the data.
+
+ME is an extremely general principle of inference, not confined to tomograpy or statistical physics or any specific problem. It sits on a firm mathematical foundation. The only arguments *against* ME are the following:
+1. If we have enough data, all algorithms give the same answer.
+2. It's too hard to maximize the entropy.
+I've argued above that particle accelerator measurements often do not tightly constrain the phase space distribution. That leaves the second consideration. Indeed, maximizing the entropy is challenging, as the entropy is a highly nonlinear function of the probability density.
+
+
+## Maximum-entropy algorithms
+
+MENT is an algorithm 
+
+### MENT
 
 Let's define our problem. Let $\mathbf{x} \in \mathbb{R}^n$ be the phase space coordinates. On each measurement, we transform the phsae space coordinates via a symplectic map $\mathcal{M}_k: \mathcal{R}^n \rightarrow \mathcal{R}^n$:
 \begin{equation}
@@ -83,13 +104,14 @@ We can derive the form of the maximum-entropy distribution from a new functional
 \end{equation}
 
 
-
-## Problems in high-dimensional tomography
-
+### MENT-Flow
 
 Roussel et al. proposed a clever solution called *Generative Phase Space Reconstruction (GPSR). 
 
 
 
+## Numerical experiments
 
+
+## Experimental 4D reconstruction of an intense proton beam from 1D measurements 
 
