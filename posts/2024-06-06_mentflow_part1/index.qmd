@@ -1,6 +1,6 @@
 ---
 title: "Maximum-entropy phase space tomography using normalizing flows (part 1)"
-date: 2024-06-01
+date: 2024-06-06
 author: Austin Hoover
 categories:
   - entropy
@@ -91,7 +91,7 @@ Here, $\rho_*(\mathbf{x})$ is a *prior* enoding our knowledge before seeing any 
 ME is a general principle, not confined to tomography, statistical physics, or any specific problem. It sits on a firm mathematical foundation. The only arguments *against* ME are the following:
 
 1. We have plenty of data; all algorithms give the same answer.
-2. It's too hard to maximize entropy.
+2. It's too difficult to maximize entropy.
 
 I've argued above that particle accelerator measurements do not always tightly constrain the phase space distribution. That leaves the second consideration. Indeed, maximizing entropy is challenging, as the entropy is a highly nonlinear function of the probability density.
 
@@ -162,7 +162,9 @@ $$
 \end{aligned}
 $$ {#eq-ment-solution}
 
-@eq-ment-solution parameterizes the maximum entropy distribution. We can substitute @eq-ment-solution into @eq-projections to generate a set of highly nonlinear coupled integral equations and solve for the Lagrange functions. If successful, we would find an *exact* solution. No constrained optimization needed! MENT is an algorithm to optimize the Lagrange functions directly. I won't describe the algorithm here. For now, I note that it's unclear whether MENT can be efficiently implemented in 6D phase space. Thus, we wanted to know if another algorithm could find approximate maximum-entropy solutions in 6D phase space, even if we have to sacrifice some of MENT's nice properties.
+@eq-ment-solution parameterizes the maximum entropy distribution. We can substitute @eq-ment-solution into @eq-projections to generate a set of highly nonlinear coupled integral equations and solve for the Lagrange functions. If successful, we would find an *exact* solution. No constrained optimization needed! 
+
+MENT is an algorithm to optimize the Lagrange functions directly. I won't describe the algorithm here. For now, I note that it's unclear whether MENT can be efficiently implemented in 6D phase space. Thus, we wanted to know if another algorithm could find approximate maximum-entropy solutions in 6D phase space, even if we have to sacrifice some of MENT's nice properties.
 
 
 ### MENT-Flow
@@ -196,7 +198,7 @@ $$
 \end{bmatrix}
 $$ {#eq-jacobian}
 
-If we could compute @eq-jacobian, we can easily estimate the expected value of any function $Q(\mathbf{x})$ under $\rho(\mathbf{x})$: 
+If we could compute @eq-jacobian, we could easily estimate the expected value of any function $Q(\mathbf{x})$ under $\rho(\mathbf{x})$: 
 
 $$
 \begin{aligned}
@@ -219,9 +221,7 @@ $$
 \end{aligned}
 $$ {#eq-entropy-est}
 
-So, we can use normalizing flows to estimate the relative entropy. We can also maximize the entropy because the estimate in @eq-entropy-est is differentiable. 
-
-To incorporate constraints, we use the GPSR framework described above. Combining these two ingredients gives us an approximate maximum entropy phase space tomography algorithm. Well, not quite yet. First, we still need to solve a constrained optimization problem. We ended up using a rather simple penalty method which minimizes the following loss function:
+So, we can use normalizing flows to estimate the relative entropy. We can also maximize the entropy because the estimate in @eq-entropy-est is differentiable. To incorporate constraints, we use the GPSR framework described above. Combining these two ingredients gives us an approximate maximum entropy phase space tomography algorithm. We ended up using a rather simple penalty method for the constrained optimization. The penalty method minimizes the following loss function:
 
 $$
 L[ 
@@ -241,6 +241,8 @@ L[
 $$ {#eq-loss}
 
 We minimize this loss function for a fixed penalty parameter $\mu$, starting from $\mu = 0$ (returning the prior). Then we increase $mu$ and rerun the optimization, starting from the last solution.
+
+![GPSR with a normalizing flow generator. The flow uses a smooth, invertible transformation to unnormalize the $n$-dimensional Gaussian base distribution, producing a phase space distribution $\rho(\mathbf{x})$. The phase space coordinates are propagated through a series of symplectic transformatiosn $\mathbf{u}_k = \mathcal{M}_k(\mathbf{x})$, projected onto the $m$-dimensional measurement axes $\mathbf{u}_{k_\parallel}$, and binned to compare to the measurements. Each step is differentiable, enabling gradient-based optimization of the flow parameters.](figures/fig_diagram.png){#fig-diagram fig-align=center width=80%}
 
 
 ## Next steps
