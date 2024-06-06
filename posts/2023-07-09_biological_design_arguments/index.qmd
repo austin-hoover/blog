@@ -6,6 +6,9 @@ categories: [teleological arguments, biological design, Darwin]
 bibliography: references.bib
 csl: ./american-physics-society.csl
 draft: false
+format:
+  html:
+    toc: false
 ---
 
 

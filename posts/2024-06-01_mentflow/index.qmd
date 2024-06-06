@@ -1,5 +1,5 @@
 ---
-title: "Maximum-entropy phase space tomography using normalizing flows"
+title: "Maximum-entropy phase space tomography using normalizing flows (part 1)"
 date: 2024-06-01
 author: Austin Hoover
 categories:
@@ -10,108 +10,245 @@ csl: ./american-physics-society.csl
 draft: true
 ---
 
-This post discusses the preprint *High-dimensional phase space tomography using normalizing flows* [[arxiv]()]. Phase space tomography is a technique to reconstruction a position-momentum distribution from low-dimensional projections. Entropy maximization is a mathematically rigorous way to incorporate prior information in the reconstruction, providing strong regularization when measurements are sparse. Entropy maximization is difficult to implement when the phase space is high-dimensional. In this paper, we explored the use of generative models, specifically *normalizing flows*, for maximum-entropy phase space tomograpy.
+Phase space tomography is a technique to reconstruct a position-momentum distribution from its projections. Entropy maximization is a mathematically rigorous way to incorporate prior information in the reconstruction, providing strong regularization when measurements are sparse. Entropy maximization is challenging when the phase space is high-dimensional. In a preprint titled *High-dimensional phase space tomography using normalizing flows* [[arxiv](https://arxiv.org/abs/2406.00236)], we explored the use of generative models, specifically *normalizing flows*, for maximum-entropy phase space tomography. 
+
+This post provides some background on the method in the paper. In the next post, I'll describe some numerical experiments we used to test the method and an experimental reconstruction of a 4D phase space distribution of an intense beam in the SNS.
 
 
 ## Indirectly measuring position-momentum distributions
 
 To model the behavior of a charged particle beam, we need to know how its particles are distributed in position-momentum space, or *phase space*. There are six phase space variables: three position coordinates ($x$, $y$, $z$) and three momentum coordinates ($x'$, $y'$, $z'$), which we wrap into a single vector $\mathbf{x} = [x, x', y, y', z, z']^T$. Since we can't measure individual particles, we describe the beam using a probability density function $\rho(\mathbf{x})$, where 
-\begin{equation}\label{eq:norm}\tag{1}
-    \int \rho(\mathbf{x}) d\mathbf{x} = 1.
-\end{equation}
 
-Measuring the phase space distribution is a major focus in accelerator physics. In a [previous post](../2023-05-28_btf), I described our efforts to measure the distribution directly. Here, I'll describe efforts to reconstruct the distribution from partial information. I'll assume we can only measure projections of the distribution onto position space. For example, we can measure the 1D distribution $\rho(x)$ by sweeping a conducting wire across the beam and measuring the secondary electrons emitted from the wire at each position. Note that the 1D distribution $\rho(x)$ is really an integral over the hidden momentum coordinates:
-\begin{equation}\tag{1}
-    \rho(x) = \int \rho(x, x') dx'.
-\end{equation}
-If we could rotate the phase space distribution, we would obtain 1D projections along different angles in phase space. This is the same problem faced in medical CT, where the detector rotates instead of the distribution. Thus, if we could rotate the phase space distribution, we could apply standard CT algorithms to reconstruct the phase space distribution.
+$$
+\int \rho(\mathbf{x}) d\mathbf{x} = 1.
+$$ {#eq-rho-norm}
 
-Imagine the beam was placed in a harmonic potential well. A beautiful insight from classical mechanics is that, while particles perform sinusoidal oscillations in position space, they trace a circle in phase space! Thus, measuring $\rho(x)$ at different times would be equivalent to measuring the projection of $\rho(x, x')$ along different angles in phase space. The electromagnetic focusing fields in an accelerator *do not* create a simple harmonic potential. But after some approximations, we can often decouple the motion in the three planes and write
-\begin{equation}
-    \begin{bmatrix}
-      x(t) \\ x'(t)
-    \end{bmatrix}
-    =
-    \mathbf{M}
-    \begin{bmatrix}
-      x(0) \\ x'(0)
-    \end{bmatrix},
-\end{equation}
-where $\mathbf{M}$ is a linear transfer matrix. We can account for the shearing and scaling so that our measurements still amount to projections along different angles in phase space. We can measure the beam at different times by placing wirescanners at different positions along the accelerator lattice. Or we could meaure the beam at one position and vary the upstream optics; both methods update the transfer matrix. Thus, by measuring the spatial density at different locations along the accelerator lattice, or under different focusing optics, we can use any CT algorithm to reconstruct the phase space distribution at any point upstream of the measurements.
+Measuring the phase space distribution is a major focus in accelerator physics. In a [previous post](../2023-05-28_btf), I described our efforts to measure the distribution directly. Here, I'll describe efforts to reconstruct the distribution from partial information. I'll assume we can only measure projections of the distribution onto position space. For example, we can measure the 1D distribution $\rho(x)$ by sweeping a conducting wire across the beam and measuring the secondary electrons emitted at each position. 
 
-The problem becomes *much* more difficult when we consider 6D phase space tomograpy from arbitrary nonlinear phase space transformations. We have to search the space of 6D distribution functions. In 2D, we can course-grain the distribution and search the space of images, but this does not scale well to 6D. A $50 \times 50 \times 50 \times 50 \times 50 \times 50$ grid already has 15 billion cells! The storage requirements for many conventional tomography algorithms are even worse because they have to store a matrix connecting the distribution to its projections. For this reason, even 4D tomography rules out the use of most conventional algorithms.
+The 1D distribution $\rho(x)$ is really an integral over the hidden momentum coordinates:
+
+$$
+\rho(x) = \int \rho(x, x') dx'.
+$$ {#eq-integral}
+
+If we could rotate the phase space coordinates, we would obtain 1D projections along different angles in the 2D phase space. This is the same problem faced in medical CT, where the detector rotates instead of the object of interest. Thus, if we could rotate the phase space coordinates, we could apply standard CT algorithms to reconstruct the 2D phase space distribution from 1D measurements. 
+
+Imagine the beam was placed in a harmonic potential well. A beautiful insight from classical mechanics is that while particles in a harmonic potential perform sinusoidal oscillations in position space, they trace circles in phase space. In other words, they rotate. Thus, measuring $\rho(x)$ at different times would be equivalent to measuring the projection of $\rho(x, x')$ along different angles in phase space. The electromagnetic focusing fields in an accelerator *do not* create a simple harmonic potential. But after some approximations, we can often decouple the motion in the three planes and write
+
+$$
+\begin{bmatrix}
+  x(t) \\ x'(t)
+\end{bmatrix}
+=
+\mathbf{M}
+\begin{bmatrix}
+  x(0) \\ x'(0)
+\end{bmatrix},
+$$ {#eq-linear}
+
+where $\mathbf{M}$ is a symplectic matrix. And we can factor $\mathbf{M}$ into three components:
+
+$$
+\mathbf{M} = 
+\begin{bmatrix}
+    \sqrt{\beta (t)} & 0 \\
+    -\frac{\alpha (t)}{\sqrt{\beta (t)}} & \frac{1}{\sqrt{\beta (t)}}
+\end{bmatrix}
+\begin{bmatrix}
+    \cos{(\phi t)} & \sin{(\phi t)} \\ -\sin{(\phi t)} & \cos{(\phi t)}
+\end{bmatrix}
+\begin{bmatrix}
+    \sqrt{\beta (0)} & 0 \\
+    -\frac{\alpha (0)}{\sqrt{\beta (0)}} & \frac{1}{\sqrt{\beta (0)}}
+\end{bmatrix}
+$$ {#eq-factored-matrix}
+
+The first and last matrices apply a scaling and shearing transformation, while the middle matrix applies a rotation in phase space. (See [this post](../2021-01-21_parametric_oscillators).) The rotation is the only part relevant to tomography, and we can account for the shearing and scaling so that our measurements still correspond to projections along different angles in phase space. We could measure the beam at different times by placing wire scanners at different positions along the accelerator lattice. Or we could measure the beam at one position and vary the upstream optics; both methods vary the transfer matrix, which is all that matters. Thus, by measuring the spatial density at different locations along the accelerator lattice or under different focusing optics, we can use any CT algorithm to reconstruct the phase space distribution at any point upstream of the measurements.
+
+The problem becomes *much* more difficult when considering 6D phase space tomography from arbitrary phase space transformations. One difficulty is that we have to search the space of 6D distribution functions. In 2D, we can course-grain the distribution and search the space of images, but this does not scale well to 6D. A $50 \times 50 \times 50 \times 50 \times 50 \times 50$ grid already has $15 \times 10^9$ cells! The storage requirements for many conventional tomography algorithms are even worse because they have to store a matrix connecting the distribution to its projections. For this reason, even 4D tomography rules out the use of most conventional algorithms.
 
 
 ## Entropy maximization for inverse problems
 
-Another issue is that accelerators restrict the number and quality of measured projections. In medical CT, reconstructions proceed from hundreds of measurements at optimally chosen projection angles. In accelerators, we may be limited to tens of measurements, even as few as three or four in some cases. Furthermore, the measurements may not be optimal. In medical CT, we know that we should space the projection angles evenly over 180 degrees. This is usually not possible in 2D phase space tomography, and in 4D or 6D tomography, we don't even know how to determine the best transformations. 
+Another difficulty is that we can't just take any measurement we wish. In medical CT, reconstructions proceed from hundreds of measurements at optimally chosen projection angles, but in accelerators, we could be limited to tens of measurements, even as few as three or four in some cases. Furthermore, the measurements may be suboptimal. In medical CT, we know that we should space the projection angles evenly over 180 degrees and can easily do this by rotating our X-ray detector. Accelerator constraints disallow many optics settings, so we can't alsways access the full 180 degree range with equally spaced angles. And in 6D tomography, it's not entirely clear how to determine the optimal set of transformations. All this to say, reconstructions sometimes proceed without much data, resulting in an ill-posed inverse problem. There could be various distributions consistent with the same measurements. This problem is already important in 2D and could be exponentially worse in 4D or 6D. How should we proceed if we must select a *single* distribution from the feasible set? 
 
-All this to say: phase space tomography can be severely ill-posed. There can be many distributions consistent with the same data. This problem is already important in 2D, but becomes exponentially worse in 4D and 6D. How should we proceed if we must select a single distribution from the feasible set? Our strategy will be to maximize a functional $H[\rho(\mathbf{x})]$, subject to the measurement constraints. There might not be a general functional that applies in all situations, but if there is such a functional, it should give correct results in simple cases. It turns out that we only need to require four things:
-1. The maximum of $H$ should be unique.
-2. The maximum of $H$ should not depend on the choice of coordinates.
-3. We should be able to update $\rho(\mathbf{x})$ in domain $D$ without affecting $\rho(\mathbf{x})$ in regions outside $D$.
-4. If we have information the [...]
+It seems that all we can do is rank each feasible distribution and select the distribution with the highest ranking. Equivalently, we can maximize a functional $H[\rho(\mathbf{x})]$, subject to the measurement constraints. At this point, we've assumed nothing about $H$. There might not be a universal functional that applies in all situations, but if there is such a functional, it should give correct results in simple cases. It turns out that a universal $H$ is pinned down by four requirements [@Presse_2013]:
+
+1. *Uniqueness*: The maximum of $H$ should be unique.
+2. *Invariance*: The maximum of $H$ should not depend on the choice of coordinates.
+3. *Subset independence*: Updating the distribution in one domain should not require updating the distribution in a separate domain.
+4. *System independence*: If we only know the marginal distributions $\rho(\mathbf{y})$ and $\rho(\mathbf{z})$ and have no prior assumption of dependence between $\mathbf{y}$ and $\mathbf{z}$, then the reconstruction should not contain any such dependence: $\rho(\mathbf{y}, \mathbf{z}) = \rho(\mathbf{y})\rho(\mathbf{z})$.
 
 We end up with the relative entropy:
-\begin{equation}
-    H[\rho(\mathbf{x}, \rho_*(\mathbf{x})] = 
-    -\int \rho(\mathbf{x}) \log\left(\frac{\rho(\mathbf{x})}{\rho_*(\mathbf{x})}\right)
-\end{equation}
-Here, $\rho_*(\mathbf{x}) is a *prior* enoding our knowledge before seeing any data. The relative entropy has a maximum at zero, when $\rho(\mathbf{x}) = \rho_*(\mathbf{x})$, so if there is no data, entropy maximization (ME) returns the prior. ME tells us what *not* to do: it tells us not to change our minds unless *forced* by the data.
 
-ME is an extremely general principle of inference, not confined to tomograpy or statistical physics or any specific problem. It sits on a firm mathematical foundation. The only arguments *against* ME are the following:
-1. If we have enough data, all algorithms give the same answer.
-2. It's too hard to maximize the entropy.
-I've argued above that particle accelerator measurements often do not tightly constrain the phase space distribution. That leaves the second consideration. Indeed, maximizing the entropy is challenging, as the entropy is a highly nonlinear function of the probability density.
+$$
+H[\rho(\mathbf{x}), \rho_*(\mathbf{x})] = 
+-\int \rho(\mathbf{x}) \log\left(\frac{\rho(\mathbf{x})}{\rho_*(\mathbf{x})}\right) d\mathbf{x}
+$$ {#eq-entropy}
+
+Here, $\rho_*(\mathbf{x})$ is a *prior* enoding our knowledge before seeing any data. The relative entropy has a maximum at zero when $\rho(\mathbf{x}) = \rho_*(\mathbf{x})$, so if there is no data, entropy maximization (ME) returns the prior. ME tells us what *not* to do: it tells us not to change our minds unless *forced* by the data, on pain of logical inconsistency.
+
+ME is a general principle, not confined to tomography, statistical physics, or any specific problem. It sits on a firm mathematical foundation. The only arguments *against* ME are the following:
+
+1. We have plenty of data; all algorithms give the same answer.
+2. It's too hard to maximize entropy.
+
+I've argued above that particle accelerator measurements do not always tightly constrain the phase space distribution. That leaves the second consideration. Indeed, maximizing entropy is challenging, as the entropy is a highly nonlinear function of the probability density.
 
 
 ## Maximum-entropy algorithms
 
-MENT is an algorithm 
+I'll now describe three approaches to our constrained optimization problem. Let's begin by writing the measurement constraints in their most general form. Let $\mathbf{x} \in \mathbb{R}^n$ represent the phase space coordinates of a particle in the beam. On each measurement, particles travel through the accelerator to a measurement device. This transformation is symplectic, so we represent the $k$th transport by a symplectic map $\mathcal{M}_k: \mathcal{R}^n \rightarrow \mathcal{R}^n$. Denote the transformed coordinates as
+
+$$
+\mathbf{u}_k = \mathcal{M}_k(\mathbf{x}).
+$$ {#eq-forward}
+
+Once we have the transformed coordinates, we measure the particle density on a lower dimensional plane, or *projection axis*, $\mathbf{u}_{k_\parallel} \in \mathbb{R}^m$. To compute the projection in the particle picture, we keep these $m$ dimensions and discard the rest. Or if we work with the phase space density, we can write the projection as an integral over an orthogonal *integration axis* $\mathbf{u}_{k_\perp} \in \mathbb{R}^{n - m}$ (the unmeasured dimensions). In the following equation, $g(\mathbf{u}_{k_\parallel})$ is the measured projected density.
+
+$$
+\begin{aligned}
+    g(\mathbf{u}_{k_\parallel}) &- \int{\rho \left( \mathbf{x}(\mathbf{u}_k) \right) d\mathbf{u}_{k_\perp}} = 0\\
+    g(\mathbf{u}_{k_\parallel}) &- \int{\rho \left( \mathcal{M}_k^{-1}(\mathbf{u}_k )\right) d\mathbf{u}_{k_\perp}} = 0
+\end{aligned}
+$$ {#eq-projections}
+
+Our task is to maximize the entropy in @eq-entropy, subject to the constraints in @eq-projections.
+
 
 ### MENT
 
-Let's define our problem. Let $\mathbf{x} \in \mathbb{R}^n$ be the phase space coordinates. On each measurement, we transform the phsae space coordinates via a symplectic map $\mathcal{M}_k: \mathcal{R}^n \rightarrow \mathcal{R}^n$:
-\begin{equation}
-    \mathbf{u}_k = \mathcal{M}_k(\mathbf{x}).
-\end{equation}
-Then we project the transformed coordiantes onto a lower dimensional plane $\mathbf{u}_{k_\parallel} \in \mathbb{R}^m$.
-\begin{equation}
-    g(\mathbf{u}_{k_\parallel}) = \int{\rho \left( \mathcal{M}_k^{-1}(\mathbf{u}_k )\right) d\mathbf{u}_{k_\perp}}
-\end{equation}
+Although the problem seems hopeless at first, we can make some progress using the method of Lagrange multipliers [Lagrange multipliers](https://en.wikipedia.org/wiki/Lagrange_multiplier). We'll introduce a new function:
 
-We can derive the form of the maximum-entropy distribution from a new functional. Here's some more text to fill out the line.
+$$
+\Psi
+=
+H[\rho(\mathbf{x}), \rho_*(\mathbf{x})]
++ 
+\sum_{k}^{} {
+\int
+    \lambda_{k}(\mathbf{u}_{k_\parallel})
+    \left(
+        g_k(\mathbf{u}_{k_\parallel}) - 
+        \int \rho \left( \mathcal{M}_k^{-1}(\mathbf{u}_k) \right) 
+        d\mathbf{u}_{k_\perp}
+    \right)
+    d\mathbf{u}_{k_\parallel}
+}
+$$ {#eq-functional}
 
-\begin{equation}
-    \Psi [ 
-        \rho(\mathbf{x}), 
-        \rho_*(\mathbf{x}), 
-        \{ g_k(\mathbf{u}_{k_\parallel}) \}
-    ]
-    =
-    H[\rho(\mathbf{x}), \rho_*(\mathbf{x})]
-    + 
-    \sum_{k}^{} {
-    \int
-        \lambda_{k}(\mathbf{u}_{k_\parallel})
-        \left(
-            g_k(\mathbf{u}_{k_\parallel}) - 
-            \int \rho \left( \mathcal{M}_k^{-1}(\mathbf{u}_k) \right) 
-            d\mathbf{u}_{k_\perp}
-        \right)
-        d\mathbf{u}_{k_\parallel}
-    }
-\end{equation}
+We've assigned a Lagrange multiplier to every point along each measurement axis. Since the measurements are continuous, the sum over Lagrange multipliers becomes an integral over Lagrange functions. The sum over $k$ is just adding up all the measurements. To find the constrained maximum of $H$, we need to find the stationary point of $\Psi$ with respect to the distribution $\rho(\mathbf{x})$ and the Lagrange functions $\lambda_k(\mathbf{u}_{k_\parallel})$.
+
+$$
+\frac{\delta \Psi}{\delta \rho} = 0, \frac{\delta \Psi}{\delta \lambda_k} = 0
+$$
+
+I usually just treat functional derivatives as regular derivatives, and things tend to work out. For example, the derivative of the entropy is
+
+$$
+\frac{\delta}{\delta \rho(\mathbf{x})} H[\rho(\mathbf{x}), \rho_*(\mathbf{x})] 
+= 
+-1 - \log\frac{\rho(\mathbf{x})}{\rho_*(\mathbf{x})}
+$$ {#eq-deriv-entropy}
+
+We can do a similar thing for the constraint equations. (Setting the derivative with respect to the Lagrange functions to zero returns the constraint equations). We end up with
+
+$$
+\begin{aligned}
+    \rho(\mathbf{x}) 
+    &= 
+    \rho_*(\mathbf{x}) 
+    \prod_{k} \exp{ \left( \lambda_k(\mathbf{u}_{k_\parallel} (\mathbf{x})) \right) } 
+\end{aligned}
+$$ {#eq-ment-solution}
+
+@eq-ment-solution parameterizes the maximum entropy distribution. We can substitute @eq-ment-solution into @eq-projections to generate a set of highly nonlinear coupled integral equations and solve for the Lagrange functions. If successful, we would find an *exact* solution. No constrained optimization needed! MENT is an algorithm to optimize the Lagrange functions directly. I won't describe the algorithm here. For now, I note that it's unclear whether MENT can be efficiently implemented in 6D phase space. Thus, we wanted to know if another algorithm could find approximate maximum-entropy solutions in 6D phase space, even if we have to sacrifice some of MENT's nice properties.
 
 
 ### MENT-Flow
 
-Roussel et al. proposed a clever solution called *Generative Phase Space Reconstruction (GPSR). 
+We can leverage generative models to extend maximum entropy tomography to 6D phase space. Generative models represent a distribution $\rho(\mathbf{x})$ via transformed samples:
+
+$$
+\mathbf{x} = \mathcal{F}(\mathbf{z}),
+$$
+
+where $\mathbf{z}$ is a random variable from a *base distribution* $\rho_0(\mathbf{z})$ and $\mathcal{F}: \mathbb{R}^{n'} \rightarrow \mathbb{R}^n$ is any transformation. We'll call $\mathbf{z}$ the normalized coordinates. If the base distribution is easy to sample from, generating iid samples from the true distribution is trivial: sample $\mathbf{z}$ and unnnormalize. A neural network can represent almost any transformation with a finite number of parameters, so we can model almost any distribution by letting a neural network represent $\mathcal{F}$.
+
+Based on this approach, Roussel et al. [@Roussel_2023] proposed a clever tomography algorithm called *Generative Phase Space Reconstruction (GPSR). Generative models are typically trained on data samples, but they don't have to be.GPSR trains a generative model on projected densities. It samples particles from the base distribution, unnormalizes the coordinates through a neural network transformation, propagates the particles to each measurement device, and computes the projected density on the measurement planes. Then it compares the simulated projection to the measured projections, updating the network parameters until they match.
+
+The trick is implementing the beam dynamics simulation $\mathcal{M}_k$. This simulation must be differentiable to backpropagate the loss through the network. Many accelerator components can be modeled in differentiable libraries such as pytorch. A second trick is in implementing the projected density estimation. Although histogram binning isn't differentiable, kernel density estimation (KDE) is. And KDE is efficient enough for 1D and 2D data. Armed with a differentiable loss function, GPSR should be able to fit almost any $n$-dimensional distribution to 1D or 2D measurements.
+
+We used a variant of GPSR to maximize the distribution's entropy in addition to fitting the projection data. We followed Loaiza-Ganem, Gao, and Cunningham [@Loaiza_2016], who worked on entropy maximization for a different problem with moment constraints rather than tomographic constraints. They proposed to use *normalizing flows* to maximize the entropy. A normalizing flow is a special type of generative model. Instead of just any unnormalizing transformation $\mathcal{F}$, we use a *diffeomorphism* --- a smooth, invertible transformation. Think of a sheet of fabric that can stretch and compress but cannot tear. If we use such a transformation, we can track the change in probability density from the base distribution:
+
+$$
+\log\rho(\mathbf{x}) = \log\rho_0(\mathbf{z}) - \left| \det \frac{d\mathbf{x}}{d\mathbf{z}} \right|
+$$
+
+The last term, called the *Jacobian matrix* accounts for volume change and ensures the probabilty density remains normalized.^[For a symplectic transformation, the Jacobian determinant is zero (the phase space density behaves as incompressible fluid).] For $\mathbf{x} = [x_1, \dots, x_n]^T$ and $\mathbf{z} = [z_1, \dots, z_n]^T$
+
+$$
+\frac{d\mathbf{x}}{d\mathbf{z}} = 
+\begin{bmatrix}
+    \frac{dx_1}{dz_1} & \dots & \frac{dx_1}{dz_n} \\
+    \vdots & \ddots & \vdots \\
+    \frac{dx_n}{dz_1} & \dots & \frac{dx_n}{dz_n} \\
+\end{bmatrix}
+$$ {#eq-jacobian}
+
+If we could compute @eq-jacobian, we can easily estimate the expected value of any function $Q(\mathbf{x})$ under $\rho(\mathbf{x})$: 
+
+$$
+\begin{aligned}
+\mathbb{E}_{\rho(\mathbf{x})} \left[ Q(\mathbf{x}) \right]
+= \int Q(\mathbf{x}) \rho(\mathbf{x}) d\mathbf{x}
+\approx \frac{1}{N} \sum_{i=1}^{N} Q(\mathbf{x}_i)
+\end{aligned}
+$$ {#eq-expected-value}
+
+Here, $\left\{ \mathbf{x}_i \right\}$ are samples drawn from $\rho(\mathbf{x})$. Crucially, the entropy is an expected value!
+
+$$
+\begin{aligned}
+-H[\rho(\mathbf{x}), \rho_*(\mathbf{x})] 
+&= \int \rho(\mathbf{x}) \log\left(\frac{\rho(\mathbf{x})}{\rho_*(\mathbf{x})}\right) d\mathbf{x} \\
+-H[\rho(\mathbf{x}), \rho_*(\mathbf{x})] 
+&= \mathbb{E}_{\rho(\mathbf{x})} \left[ \log\rho(\mathbf{x}) - \log\rho_*(\mathbf{x}) \right] \\
+-H[\rho(\mathbf{x}), \rho_*(\mathbf{x})] 
+&\approx \frac{1}{N} \sum_{i=1}^{N} \left( \log\rho(\mathbf{x}_i) - \log\rho_*(\mathbf{x}_i) \right)
+\end{aligned}
+$$ {#eq-entropy-est}
+
+So, we can use normalizing flows to estimate the relative entropy. We can also maximize the entropy because the estimate in @eq-entropy-est is differentiable. 
+
+To incorporate constraints, we use the GPSR framework described above. Combining these two ingredients gives us an approximate maximum entropy phase space tomography algorithm. Well, not quite yet. First, we still need to solve a constrained optimization problem. We ended up using a rather simple penalty method which minimizes the following loss function:
+
+$$
+L[ 
+    \rho (\mathbf{x}), 
+    \rho_*(\mathbf{x}), 
+    \{ {g}_k(\mathbf{u}_{k_\parallel}) \}
+] 
+= 
+- H[\rho(\mathbf{x}), \rho_*(\mathbf{x})]
++
+\mu \sum_{k} {
+    D[
+        {g}_k(\mathbf{u}_{k_\parallel}), 
+        \tilde{g}_k(\mathbf{u}_{k_\parallel})
+    ]
+}
+$$ {#eq-loss}
+
+We minimize this loss function for a fixed penalty parameter $\mu$, starting from $\mu = 0$ (returning the prior). Then we increase $mu$ and rerun the optimization, starting from the last solution.
 
 
+## Next steps
 
-## Numerical experiments
+The text above sets up the maximum-entropy phase space tomography problem and suggests an approximate but scalable reconstruction model based on existing work. The primary questions we wanted to answer in this study were:
 
+1. Is the flow-based entropy estimate in @eq-entropy-est sufficient? How can we judge its accuracy?
+2. Are normalizing flows fast and flexible enough to model complex 6D phase space distributions to projection data? It's not obvious. Flow-based models are typically quite large and slow to train, and we require large batch sizes for GPSR.
 
-## Experimental 4D reconstruction of an intense proton beam from 1D measurements 
+In the next post, I'll describe the model architecture and the numerical experiments we used to answer these questions. I'll also describe an experiment we performed at the SNS to reconstruct the 4D phase space distribution of an intense ion beam from 1D profile measurements using MENT-Flow.  
 

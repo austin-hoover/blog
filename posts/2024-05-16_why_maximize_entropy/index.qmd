@@ -6,6 +6,9 @@ categories:
   - entropy
   - statistical mechanics
   - tomography
+format:
+  html:
+    toc: false
 ---
 
 I've been thinking a lot about entropy in the past year. I've been motivated by problems in phase space tomography, where the goal is to reconstruct a two-, four- or six-dimensional phase space distribution from its one- or two-dimensional projections. Such problems have no unique solution. We can imagine the data carving out a feasible set in the space of distributions, where all distributions in the feasible set reproduce the data.

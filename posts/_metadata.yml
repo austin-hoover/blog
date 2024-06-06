@@ -11,5 +11,5 @@ execute:
 lightbox: true
 sidebar: false
 title-block-categories: false
-toc: false
+toc: true
 toc-depth: 5

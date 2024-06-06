@@ -8,6 +8,9 @@ categories:
   - muon collider
 bibliography: references.bib
 csl: ./american-physics-society.csl
+format:
+  html:
+    toc: false
 ---
 
 The Large Hadron Collider (LHC) will soon double its luminosity, but progress in high-energy physics (HEP) will eventually require a new laboratory [@Shiltsev_2021]. There are a few options. The [Future Circular Collider (FCC)](https://fcc.web.cern.ch/overview) would collide ~100 TeV protons in a 100 km ring, using the LHC (7 TeV, 25 km) as a booster ring. The plan would be to start colliding leptons (FCC-ee) in the 2040s and switch to protons (FCC-hh) in the 2070s. The accelerator would be a relatively straightforward extension of the LHC, although there would be some new challenges, especially the required 16 T (!) bending magnets. 
