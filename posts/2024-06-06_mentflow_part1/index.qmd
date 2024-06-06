@@ -7,7 +7,6 @@ categories:
   - tomography
 bibliography: references.bib
 csl: ./american-physics-society.csl
-draft: true
 ---
 
 Phase space tomography is a technique to reconstruct a position-momentum distribution from its projections. Entropy maximization is a mathematically rigorous way to incorporate prior information in the reconstruction, providing strong regularization when measurements are sparse. Entropy maximization is challenging when the phase space is high-dimensional. In a preprint titled *High-dimensional phase space tomography using normalizing flows* [[arxiv](https://arxiv.org/abs/2406.00236)], we explored the use of generative models, specifically *normalizing flows*, for maximum-entropy phase space tomography. 
