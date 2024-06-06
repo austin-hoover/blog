@@ -126,7 +126,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -167,7 +167,32 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-quick-tour-of-the-sns" id="toc-a-quick-tour-of-the-sns" class="nav-link active" data-scroll-target="#a-quick-tour-of-the-sns">A quick tour of the SNS</a>
+  <ul>
+  <li><a href="#ion-source-front-end-and-linac" id="toc-ion-source-front-end-and-linac" class="nav-link" data-scroll-target="#ion-source-front-end-and-linac">Ion source, front end, and linac</a></li>
+  <li><a href="#hebt-injection-region-and-accumulator-ring" id="toc-hebt-injection-region-and-accumulator-ring" class="nav-link" data-scroll-target="#hebt-injection-region-and-accumulator-ring">HEBT, injection region, and accumulator ring</a></li>
+  <li><a href="#rtbt-and-target" id="toc-rtbt-and-target" class="nav-link" data-scroll-target="#rtbt-and-target">RTBT and target</a></li>
+  </ul></li>
+  <li><a href="#injection" id="toc-injection" class="nav-link" data-scroll-target="#injection">Injection</a>
+  <ul>
+  <li><a href="#h--charge-exchange" id="toc-h--charge-exchange" class="nav-link" data-scroll-target="#h--charge-exchange">H<span class="math inline">\(^-\)</span> charge exchange</a></li>
+  <li><a href="#dealing-with-extra-particles" id="toc-dealing-with-extra-particles" class="nav-link" data-scroll-target="#dealing-with-extra-particles">Dealing with extra particles</a></li>
+  <li><a href="#is-liouvilles-theorem-violated" id="toc-is-liouvilles-theorem-violated" class="nav-link" data-scroll-target="#is-liouvilles-theorem-violated">Is Liouville’s theorem violated?</a></li>
+  <li><a href="#the-future-lasers" id="toc-the-future-lasers" class="nav-link" data-scroll-target="#the-future-lasers">The future: lasers</a></li>
+  </ul></li>
+  <li><a href="#phase-space-painting" id="toc-phase-space-painting" class="nav-link" data-scroll-target="#phase-space-painting">Phase space painting</a>
+  <ul>
+  <li><a href="#time-dependent-kicker-magnets" id="toc-time-dependent-kicker-magnets" class="nav-link" data-scroll-target="#time-dependent-kicker-magnets">Time-dependent kicker magnets</a></li>
+  <li><a href="#production-painting" id="toc-production-painting" class="nav-link" data-scroll-target="#production-painting">Production painting</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -890,7 +915,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

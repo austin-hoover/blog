@@ -160,7 +160,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -201,7 +201,28 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#self-consistent-beam-distributions" id="toc-self-consistent-beam-distributions" class="nav-link active" data-scroll-target="#self-consistent-beam-distributions">1. Self-consistent beam distributions</a>
+  <ul>
+  <li><a href="#space-charge" id="toc-space-charge" class="nav-link" data-scroll-target="#space-charge">1.1. Space charge</a></li>
+  <li><a href="#vlasov-equilibria" id="toc-vlasov-equilibria" class="nav-link" data-scroll-target="#vlasov-equilibria">1.2. Vlasov equilibria</a></li>
+  <li><a href="#kv-distribution" id="toc-kv-distribution" class="nav-link" data-scroll-target="#kv-distribution">1.2. KV distribution</a></li>
+  <li><a href="#danilov-distribution" id="toc-danilov-distribution" class="nav-link" data-scroll-target="#danilov-distribution">1.4. Danilov distribution</a></li>
+  </ul></li>
+  <li><a href="#finding-the-matched-solution" id="toc-finding-the-matched-solution" class="nav-link" data-scroll-target="#finding-the-matched-solution">2. Finding the matched solution</a>
+  <ul>
+  <li><a href="#the-problem" id="toc-the-problem" class="nav-link" data-scroll-target="#the-problem">2.1. The problem</a></li>
+  <li><a href="#the-solution" id="toc-the-solution" class="nav-link" data-scroll-target="#the-solution">2.2. The solution</a></li>
+  </ul></li>
+  <li><a href="#simple-applications" id="toc-simple-applications" class="nav-link" data-scroll-target="#simple-applications">3. Simple applications</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">4. Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -1392,7 +1413,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

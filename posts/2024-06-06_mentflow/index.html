@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2024-06-01">
+<meta name="dcterms.date" content="2024-06-06">
 
 <title>Accelerated Inquiry - Maximum-entropy phase space tomography using normalizing flows (part 1)</title>
 <style>
@@ -63,6 +63,9 @@ div.csl-indent {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -202,7 +205,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 1, 2024</p>
+      <p class="date">June 6, 2024</p>
     </div>
   </div>
   
@@ -276,7 +279,7 @@ H[\rho(\mathbf{x}), \rho_*(\mathbf{x})] =
 <p>ME is a general principle, not confined to tomography, statistical physics, or any specific problem. It sits on a firm mathematical foundation. The only arguments <em>against</em> ME are the following:</p>
 <ol type="1">
 <li>We have plenty of data; all algorithms give the same answer.</li>
-<li>It’s too hard to maximize entropy.</li>
+<li>It’s too difficult to maximize entropy.</li>
 </ol>
 <p>I’ve argued above that particle accelerator measurements do not always tightly constrain the phase space distribution. That leaves the second consideration. Indeed, maximizing entropy is challenging, as the entropy is a highly nonlinear function of the probability density.</p>
 </section>
@@ -332,7 +335,8 @@ H[\rho(\mathbf{x}), \rho_*(\mathbf{x})]
     \prod_{k} \exp{ \left( \lambda_k(\mathbf{u}_{k_\parallel} (\mathbf{x})) \right) }
 \end{aligned}
 \tag{10}\]</span></span></p>
-<p><a href="#eq-ment-solution" class="quarto-xref">Equation&nbsp;10</a> parameterizes the maximum entropy distribution. We can substitute <a href="#eq-ment-solution" class="quarto-xref">Equation&nbsp;10</a> into <a href="#eq-projections" class="quarto-xref">Equation&nbsp;7</a> to generate a set of highly nonlinear coupled integral equations and solve for the Lagrange functions. If successful, we would find an <em>exact</em> solution. No constrained optimization needed! MENT is an algorithm to optimize the Lagrange functions directly. I won’t describe the algorithm here. For now, I note that it’s unclear whether MENT can be efficiently implemented in 6D phase space. Thus, we wanted to know if another algorithm could find approximate maximum-entropy solutions in 6D phase space, even if we have to sacrifice some of MENT’s nice properties.</p>
+<p><a href="#eq-ment-solution" class="quarto-xref">Equation&nbsp;10</a> parameterizes the maximum entropy distribution. We can substitute <a href="#eq-ment-solution" class="quarto-xref">Equation&nbsp;10</a> into <a href="#eq-projections" class="quarto-xref">Equation&nbsp;7</a> to generate a set of highly nonlinear coupled integral equations and solve for the Lagrange functions. If successful, we would find an <em>exact</em> solution. No constrained optimization needed!</p>
+<p>MENT is an algorithm to optimize the Lagrange functions directly. I won’t describe the algorithm here. For now, I note that it’s unclear whether MENT can be efficiently implemented in 6D phase space. Thus, we wanted to know if another algorithm could find approximate maximum-entropy solutions in 6D phase space, even if we have to sacrifice some of MENT’s nice properties.</p>
 </section>
 <section id="ment-flow" class="level3">
 <h3 class="anchored" data-anchor-id="ment-flow">MENT-Flow</h3>
@@ -356,7 +360,7 @@ H[\rho(\mathbf{x}), \rho_*(\mathbf{x})]
     \frac{dx_n}{dz_1} &amp; \dots &amp; \frac{dx_n}{dz_n} \\
 \end{bmatrix}
 \tag{11}\]</span></span></p>
-<p>If we could compute <a href="#eq-jacobian" class="quarto-xref">Equation&nbsp;11</a>, we can easily estimate the expected value of any function <span class="math inline">\(Q(\mathbf{x})\)</span> under <span class="math inline">\(\rho(\mathbf{x})\)</span>:</p>
+<p>If we could compute <a href="#eq-jacobian" class="quarto-xref">Equation&nbsp;11</a>, we could easily estimate the expected value of any function <span class="math inline">\(Q(\mathbf{x})\)</span> under <span class="math inline">\(\rho(\mathbf{x})\)</span>:</p>
 <p><span id="eq-expected-value"><span class="math display">\[
 \begin{aligned}
 \mathbb{E}_{\rho(\mathbf{x})} \left[ Q(\mathbf{x}) \right]
@@ -375,8 +379,18 @@ H[\rho(\mathbf{x}), \rho_*(\mathbf{x})]
 &amp;\approx \frac{1}{N} \sum_{i=1}^{N} \left( \log\rho(\mathbf{x}_i) - \log\rho_*(\mathbf{x}_i) \right)
 \end{aligned}
 \tag{13}\]</span></span></p>
-<p>So, we can use normalizing flows to estimate the relative entropy. We can also maximize the entropy because the estimate in <a href="#eq-entropy-est" class="quarto-xref">Equation&nbsp;13</a> is differentiable.</p>
-<p>To incorporate constraints, we use the GPSR framework described above. Combining these two ingredients gives us an approximate maximum entropy phase space tomography algorithm. Well, not quite yet. First, we still need to solve a constrained optimization problem. We ended up using a rather simple penalty method which minimizes the following loss function:</p>
+<p>So, we can use normalizing flows to estimate the relative entropy. We can also maximize the entropy because the estimate in <a href="#eq-entropy-est" class="quarto-xref">Equation&nbsp;13</a> is differentiable. To incorporate constraints, we use the GPSR framework described above. Combining these two ingredients gives us an approximate maximum entropy phase space tomography algorithm.</p>
+<div id="fig-diagram" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_diagram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="figures/fig_diagram.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: GPSR with a normalizing flow generator. The flow unnormalizes the <span class="math inline">\(n\)</span>-dimensional Gaussian base distribution to give <span class="math inline">\(\rho(\mathbf{x})\)</span>. The phase space coordinates are then propagated through each symplectic transformation <span class="math inline">\(\mathbf{u}_k = \mathcal{M}_k(\mathbf{x})\)</span>, projected onto the <span class="math inline">\(m\)</span>-dimensional measurement axis <span class="math inline">\(\mathbf{u}_{k_\parallel}\)</span>, and binned to compare to the measurement. Each step is differentiable, enabling gradient-based optimization of the flow parameters.
+</figcaption>
+</figure>
+</div>
+<p>We ended up using a rather simple penalty method for the constrained optimization. The penalty method minimizes the following loss function:</p>
 <p><span id="eq-loss"><span class="math display">\[
 L[
     \rho (\mathbf{x}),
@@ -406,6 +420,9 @@ L[
 <p>In the next post, I’ll describe the model architecture and the numerical experiments we used to answer these questions. I’ll also describe an experiment we performed at the SNS to reconstruct the 4D phase space distribution of an intense ion beam from 1D profile measurements using MENT-Flow.</p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: GPSR with a normalizing flow generator. The flow unnormalizes the <span class="math inline">\(n\)</span>-dimensional Gaussian base distribution to give <span class="math inline">\(\rho(\mathbf{x})\)</span>. The phase space coordinates are then propagated through each symplectic transformation <span class="math inline">\(\mathbf{u}_k = \mathcal{M}_k(\mathbf{x})\)</span>, projected onto the <span class="math inline">\(m\)</span>-dimensional measurement axis <span class="math inline">\(\mathbf{u}_{k_\parallel}\)</span>, and binned to compare to the measurement. Each step is differentiable, enabling gradient-based optimization of the flow parameters.</span>
+</div>
 
 </section>
 
@@ -960,6 +977,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

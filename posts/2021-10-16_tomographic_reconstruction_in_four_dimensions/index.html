@@ -140,7 +140,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -181,7 +181,33 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#d-reconstruction" id="toc-d-reconstruction" class="nav-link" data-scroll-target="#d-reconstruction">2D reconstruction</a>
+  <ul>
+  <li><a href="#filtered-back-projection-fpb" id="toc-filtered-back-projection-fpb" class="nav-link" data-scroll-target="#filtered-back-projection-fpb">Filtered Back-Projection (FPB)</a></li>
+  <li><a href="#algebraic-reconstruction-art" id="toc-algebraic-reconstruction-art" class="nav-link" data-scroll-target="#algebraic-reconstruction-art">Algebraic Reconstruction (ART)</a></li>
+  <li><a href="#ment" id="toc-ment" class="nav-link" data-scroll-target="#ment">MENT</a></li>
+  <li><a href="#grid-based-methods" id="toc-grid-based-methods" class="nav-link" data-scroll-target="#grid-based-methods">Grid-based methods</a></li>
+  </ul></li>
+  <li><a href="#d-reconstruction-1" id="toc-d-reconstruction-1" class="nav-link" data-scroll-target="#d-reconstruction-1">4D reconstruction</a>
+  <ul>
+  <li><a href="#description-of-hocks-method" id="toc-description-of-hocks-method" class="nav-link" data-scroll-target="#description-of-hocks-method">Description of Hock’s method</a></li>
+  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy">Accuracy</a></li>
+  </ul></li>
+  <li><a href="#feasibility" id="toc-feasibility" class="nav-link" data-scroll-target="#feasibility">Feasibility</a>
+  <ul>
+  <li><a href="#imaging-system" id="toc-imaging-system" class="nav-link" data-scroll-target="#imaging-system">Imaging system</a></li>
+  <li><a href="#optics-control" id="toc-optics-control" class="nav-link" data-scroll-target="#optics-control">Optics control</a></li>
+  <li><a href="#outlook" id="toc-outlook" class="nav-link" data-scroll-target="#outlook">Outlook</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -1179,7 +1205,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

@@ -163,7 +163,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -204,7 +204,32 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-brief-history-of-stylometry" id="toc-a-brief-history-of-stylometry" class="nav-link active" data-scroll-target="#a-brief-history-of-stylometry">1. A brief history of stylometry</a></li>
+  <li><a href="#support-vector-machine-svm" id="toc-support-vector-machine-svm" class="nav-link" data-scroll-target="#support-vector-machine-svm">2. Support Vector Machine (SVM)</a>
+  <ul>
+  <li><a href="#maximum-margin-hyperplane" id="toc-maximum-margin-hyperplane" class="nav-link" data-scroll-target="#maximum-margin-hyperplane">2.1. Maximum margin hyperplane</a></li>
+  <li><a href="#kernel-trick" id="toc-kernel-trick" class="nav-link" data-scroll-target="#kernel-trick">2.2. Kernel trick</a></li>
+  <li><a href="#multi-class-svm" id="toc-multi-class-svm" class="nav-link" data-scroll-target="#multi-class-svm">2.3. Multi-class SVM</a></li>
+  </ul></li>
+  <li><a href="#n-grams-and-feature-selection-methods" id="toc-n-grams-and-feature-selection-methods" class="nav-link" data-scroll-target="#n-grams-and-feature-selection-methods">3. N-grams and feature selection methods</a>
+  <ul>
+  <li><a href="#data-set-description" id="toc-data-set-description" class="nav-link" data-scroll-target="#data-set-description">3.1. Data set description</a></li>
+  <li><a href="#n-grams" id="toc-n-grams" class="nav-link" data-scroll-target="#n-grams">3.2. N-grams</a></li>
+  <li><a href="#feature-selection" id="toc-feature-selection" class="nav-link" data-scroll-target="#feature-selection">3.3. Feature selection</a>
+  <ul>
+  <li><a href="#information-gain" id="toc-information-gain" class="nav-link" data-scroll-target="#information-gain">3.3.1. Information gain</a></li>
+  <li><a href="#localmaxs-algorithm" id="toc-localmaxs-algorithm" class="nav-link" data-scroll-target="#localmaxs-algorithm">3.3.2. LocalMaxs algorithm</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">4. Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -1705,7 +1730,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
