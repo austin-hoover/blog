@@ -9,6 +9,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2024-06-06_mentflow_part1/index.html",
       "/posts/2024-05-16_why_maximize_entropy/index.html",
       "/posts/2024-04-01_muon/index.html",
       "/posts/2024-03-23_hb/index.html",
@@ -34,6 +35,7 @@
   {
     "listing": "/archive.html",
     "items": [
+      "/posts/2024-06-06_mentflow_part1/index.html",
       "/posts/2024-05-16_why_maximize_entropy/index.html",
       "/posts/2024-04-01_muon/index.html",
       "/posts/2024-03-23_hb/index.html",
