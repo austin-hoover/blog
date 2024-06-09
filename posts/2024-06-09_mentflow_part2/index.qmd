@@ -1,0 +1,212 @@
+---
+title: "Maximum-entropy phase space tomography using normalizing flows (part 2)"
+date: 2024-06-09
+author: Austin Hoover
+categories:
+  - entropy
+  - tomography
+bibliography: references.bib
+csl: ./american-physics-society.csl
+---
+
+The [last post](../2024-06-06_mentflow_part1) introduced an approximate maximum-entropy tomography solver using Generative Phase Space Tomography (GPSR) and normalizing flows. Although the method is straightforward, it wasn't clear how well it would work. Sometimes we measure the beam and analyze the data offline; such experiments aim to examine the phase space structure, which tells us about the upstream beam dynamics. In these cases, slow reconstruction methods work just fine. But in other cases, it would be nice to reconstruct the beam quickly, perhaps in minutes. Then we could update our plan during the experiment ---we typically get one or two experiments per month---or use the measurement to make predictions and update the accelerator in response.
+
+We also weren't sure how well the entropic regularization would work. How close could we get to the exact constrained maximum-entropy solution? Loaiza-Ganem, Gao, and Cunningham [@Loaiza_2016] saw positive results on one of the few analytically known maximum entropy distributions in two dimensions. Their focus was on statistical moment constraints, but we felt this needed to be examined in more detail for projection-constrained optimization and the specific case of six-dimensional data.
+
+We performed a few numerical experiments to answer these questions. The experiments should be reproducible by following the instructions [here](https://zenodo.org/records/11406452).
+
+
+## Which flow?
+
+Normalizing flow transformations are [diffeomorphisms](https://math.stackexchange.com/questions/301364/what-is-a-diffeomorphism)---smooth, invertible transformations that preserve the topological features of the base distribution. If the base density is nonzero everywhere, the transformed distribution is also nonzero everywhere; therefore, flows can't perfectly represent disconnected modes. Stimper, Scholkopf, and Hernandez-Lobato illustrate this in @fig-modes.
+
+![Normalizing flows cannot perfectly map a unimodal distribution to a bimodal distribution. Source: [@Stimper_2022_resample].](figures/stimper_fig01.png){#fig-modes fig-align=center width=75%}
+
+Flows can still push the density arbitrarily close to zero, so they can represent many multimodal distributions in practice. The problem is that building complicated, invertible transformations is expensive—fully connected neural networks are *not* invertible. Two approaches have emerged to build powerful flow transformations. 
+
+
+### Discrete flows
+
+A *discrete flow* is a series of discrete maps, just like computational models that represent an accelerator lattice as a series of symplectic transfer maps. For a map composed of $T$ layers
+
+$$
+\mathcal{F} = \mathcal{F}_T \circ \mathcal{F}_{T-1} \circ \dots \circ \mathcal{F}_{2} \circ \mathcal{F}_1,
+$$ {#eq-layers}
+
+the coordinates transform as
+
+$$
+\mathbf{z}_t = \mathcal{F}_{t} (\mathbf{z}_{t - 1}),
+$$ {#eq-layers-coords}
+
+and the Jacobian determinant as
+
+$$
+\left| \det J_{\mathcal{F}}(\mathbf{z}_0) \right| =
+\prod_{t=1}^T {
+    \left| \det J_{\mathcal{F}_t}(\mathbf{z}_{t - 1}) \right|.
+}
+$$ {#eq-layers-jac}
+
+The Lil'Log blog has nice explanations of some discrete flow models [@Weng_2018_flow]. While propagating particles through the flow layers is easy enough, we may need many such layers to approximate complicated distributions. Thus, discrete flow models can have a huge number of parameters.
+
+
+### Continuous flows
+
+A *continuous flow* defines a velocity field $\mathbf{v}(\mathbf{z}(t), t)$. We can propagate particles through the flow by integrating an ordinary differential equation (ODE):
+
+$$
+\frac{d\mathbf{z}}{dt} = \mathbf{v}(\mathbf{z}(t), t).
+$$ {#eq-cnf}
+
+And we can compute the change in density from the associated probability flow:
+
+$$
+\frac{d}{dt} \log\rho(\mathbf{z}(t)) = -\nabla \cdot \mathbf{v}(\mathbf{z}(t), t)
+$$ {#eq-cnf-density}
+
+Grathwohl et al. [@Grathwohl_2018_ffjord] described a way to backpropagate derivatives through @eq-cnf and approximately solve @eq-cnf-density. The neural network representing the velocity field $\mathbf{v}(\mathbf{z}(t), t)$ does not need to be invertible. Thus, continuous flows are much more flexible than discrete flows of a similar model size. You can also do cool things with continuous flows like finding optimal transport maps between distributions [@Onken_2021_ot].
+
+::: {#fig-ffjord layout-ncol=2}
+![](figures/grathwohl_fig01.png){#fig-ffjord-a fig-align=left height=350px}
+
+![](figures/grathwohl_fig02.png){#fig-ffjord-b fig-align=right height=350px}
+
+Two figures from the paper that introduced continuous normalizing flows, *FFJORD: Free-form continuous dynamics for scalable reversible generative models* [@Grathwohl_2018_ffjord]. (a) Continuous transformation of 1D distribution. (b) Continuous flow (FFJORD) vs. similar size discrete flow (GLOW).
+:::
+
+However, continuous flows can also be expensive to evaluate because they require solving an ODE. One example I cited was Green, Ting, and Kamdar \cite{Green_2023}, who used FFJORD to estimate the density of stars in 6D phase space. Their training took up to a few days on a GPU! In my experiments with continuous flows, I've seen good 6D density estimation in less time, but this still illustrates the potential computational cost. (When trained on data samples, it's now much more efficient to use a technique called *flow matching*, [@Lipman_2023_flow]. Cambridge MLG has a great [blog post](https://mlg.eng.cam.ac.uk/blog/2024/01/20/flow-matching.html) on flow matching.
+
+
+### Neural Spline Flow
+
+Continuous flows took quite a while to train on my single GPU (MPS on Apple M1 Max). On the other hand, several discrete flows could not model complicated 2D distributions without extremely large neural networks. The Neural Spline Flow (NSF) model [@Durkan_2019_nsf] was more powerful and efficient than anything else I tried. 
+
+We used an autoregressive flow, where the transformation in each layer is given by
+
+$$
+z_i \rightarrow \tau (z_i; c_i(z_1, \dots, z_{i -1})),
+$$ {#eq-autoregressive}
+
+where $\mathbf{z} = [z_1, \dots , z_n]^T$. Autoregressive transformations have two components: a *transformer* and the *conditioner*. The transformer, $\tau$, is an invertible function. The transformation of the $i$th dimension is *conditioned* on the conditioner $c_i(z_1, \dots, z_{i -1})$; in other words, its parameters depend on $c_i$. The conditioner for the $i$th dimension is a function only of the dimensions $j < i$. So, if our dimensions were $[x, y, z]$, the first conditioner would be a function of $x$, the second conditioner would be a function of $x$ and $y$, and the third conditioner would be a function of $x$ $y$, and $z$.
+
+![Illustration of the autoregressive flow transformation. In this example, $\mathbf{h}_i = c_i(\mathbf{z}_{<i}) = c_i(z_1, \dots, z_{i -1})$. Source: [@Papamakarios_2021].](figures/papamakarios_fig03.png){#fig-autoregressive}
+
+The reason for this architecture is twofold. First, the transformation is invertible for *any* conditioner $c_i$. Second, because the transformation along dimension $i$ depends only on dimensions $j < i$, the transformation's Jacobian is triangular, and the determinant of a triangular Jacobian is efficient to compute. The disadvantage of the autoregressive flow is that it's $n$ times slower in one direction. In @fig-autoregressive, sampling is $n$ times slower than density evaluation. We need to sample quickly, so we simply reverse the architecture for fast sampling and slow density evaluation. (Actually, our model does not need to be invertible! All we need to do is compute the transformation's Jacobian determinant. I've had some problems computing the Jacobian using autodifferentiation, but if we got that working, we could use fully connected neural networks for maximum-entropy tomography.)
+
+We still need to implement the transformer and conditioner. For the conditioner, we use a masked neural network. The idea is to block some connections between the neurons in a neural network to ensure $c_i(\mathbf{z}) = c_i(\mathbf{z}_{<i})$. Easy enough! For the transformer, we need an invertible 1D function $\tau$. NSF introduces a transformer based on splines, i.e., piecewise-defined functions. The conditioner provides $K$ different spline *knots* $\{ x^{(k)} , y^{(k)} \}$; as shown in @fig-splines, the function must pass through these knots. The conditioner also provides the derivatives at the knots. 
+
+![Monotonic rational-quadratic splines used in the autoregressive transformer function. Source: [@Durkan_2019_nsf].](figures/durkan_fig01.png){#fig-splines fig-align=center width=60%}
+
+We then write a rather complicated function of these inputs (knot locations and derivatives) that ends up being a quadratic function of the input variable ($x$) divided by another quadratic function of the input variable. This function has an analytic derivative and, therefore, an analytic Jacobian determinant. And the function can be inverted quickly by finding the roots of a quadratic equation.
+
+
+## 2D reconstructions from 1D projections
+
+Our first numerical experiments were 2D reconstructions from linear projections, meaning 1D projections after a linear transformation. The goal was to compare to the MENT algorithm. We're still working on MENT, and it deserves its own post; the key point for our purposes is that if MENT converges, it generates an *exact constrained maximum-entropy solution*. Thus, MENT is almost like an analytic solution and is an extremely valuable benchmark. 2D examples can also help evaluate the flow's representational power, as anything beyond 3D is difficult to visualize. We adapted toy distributions from machine learning benchmarks as the ground-truth in these examples. We assumed we could vary the projection angles evenly between 0 and 180 degrees, providing the information-maximizing set of measurements.
+
+@fig-rec2d-two-spirals, @fig-rec2d-rings, and @fig-rec2d-swissroll compare three reconstruction models: MENT, MENT-Flow, and an unregularized neural network (NN). Each column corresponds to the same training data: a fixed number of projections at evenly spaced projection angles. The faint gray lines indicate the projection angles, and the projections are plotted on the bottom section of the figure. We also overlay the simulated projections from each of the three reconstructions (they overlap). 
+
+![Reconstruction of 2D "two spirals" distribution.](figures/fig_rec_2d_two-spirals.png){#fig-rec2d-two-spirals group="my-gallery"}
+
+![Reconstruction of 2D "rings" distribution.](figures/fig_rec_2d_rings.png){#fig-rec2d-rings group="my-gallery"}
+
+![Reconstruction of 2D "swissroll" distribution.](figures/fig_rec_2d_swissroll.png){#fig-rec2d-swissroll group="my-gallery"}
+
+The model works! MENT-Flow doesn't quite make it to the MENT solution, i.e., its entropy is a bit lower, but the differences aren't too noticeable unless you zoom in.
+
+Notice that all the distributions in a given column generate the same projections. The neural network finds some interesting solutions. Take a look at the fourth column of @fig-rec2d-rings. In the last row, we have a tilted square-ish shape in which almost all particles are shoved to the corners of the square. In the other rows, the MENT solution returns a uniform-density inner ring surrounded by eight evenly spaced clusters on the edge of a low-density sphere. At first, it looks like there is no way these distributions could generate the same projections, but they do! The 1D projections are identical: left-right symmetric with two higher-density inner modes and two lower-density outer modes. It's easy to see how the MENT solution generates these projections. Surprisingly, in the NN solution, the clusters at the corners of the tilted square are arranged such that the 1D projections always have four modes, with the two inner modes of higher density. 
+
+The important point is that the measurements do not discriminate between these solutions; only our prior---a Gaussian distribution in this case---makes a difference. The MENT solutions are closer to the prior. Consider the cases on the far left, where we provide only two measurements. These measurements are the marginal distributions $\rho(x)$ and $\rho(x'$). There is no dependence between $x$ and $x'$ in the prior distribution: $\rho_*(x, x') = \rho(x)\rho(x')$. The measurements provide no information about the relationship between $x$ and $x'$. Therefore, the MENT posterior distribution does not contain any dependence between $x$ and $x'$: $\rho(x, x') = \rho(x)\rho(x')$. A similar principle applies in the remaining cases: MENT does not update the prior unless forced to by the data.
+
+When evaluating these results, it's important to keep in mind that one cannot do better than MENT with a fixed set of data unless one is lucky. MENT only enforces logically consistent inference. That's it! If the reconstruction is poor, it implies we need more constraints or a better prior distribution. It's also worth noting that MENT is entirely flexible. We could obtain *any* posterior by varying the prior. The idea that MENT is somehow inflexible or overly restrictive comes, I think, from an assumption that the prior must be uniform (perhaps because MENT was first formulated using absolute entropy, not relative entropy).
+
+As I mentioned, MENT-Flow solutions are approximate because we use a penalty method for the constrained optimization. We minimize $L = -H + \mu D$, where $H$ is the entropy and $D$ is the data mismatch. We start with $\mu = 0$, then gradually increase $\mu$ until $D$ is small enough. There is a risk of overfitting if $\mu$ becomes too large too quickly. I don't have an automatic stopping criterion. I find it best to check the simulated vs. measured projections by eye because we usually know approximately how tight our fit should be based on the measurement quality (and how much we trust our beam physics simulation). It makes sense to monitor the reconstructed distribution at the same time. It's usually obvious when the NSF flow is overfitting because of unnatural-looking high-frequency terms.
+
+![A typical training run. The plot shows the negative entropy in black, and the data fit in grey. Both quantities should be as small as possible. The distribution moves from the unconstrained to the constrained point of maximum entropy as the penalty parameter increases at each epoch. The jumps in the loss curves correspond to jumps in the penalty parameter.](figures/fig_loss.png){#fig-loss fig-align=center width=50%}
+
+
+## 6D reconstructions from 1D projections
+
+@fig-rec2d-two-spirals, @fig-rec2d-rings, and @fig-rec2d-swissroll show that MENT-Flow works as intended in 2D. What about 6D? We don't have an efficient 6D version of MENT---if we did, we would use it---but the entropy calculation does not depend on dimension. As a comparison, we continued to train a neural network to find solutions farther from the prior. (This turns out to be a very useful tool in real experiments.) The perhaps bigger question is whether the flow would fit 6D distributions efficiently. The 2D experiments took a few minutes to run on a single GPU (of course, many hyperparameters affect the runtime). 
+
+Designing the 6D numerical experiments was daunting. 6D tomography is brand new. A group from SLAC recently proposed a promising measurement beamline consisting of a single quadrupole, dipole, and vertical deflecting RF cavity [https://arxiv.org/abs/2404.10853], but that idea wasn't proposed until later. Rather than design a beamline, we decided to consider a more abstract problem.
+
+Unlike 2D tomography, there isn't a clear way to manipulate the beam to maximize the information encoded in the measurement set. In 2D tomography, we know we should rotate the distribution around 180 degrees, typically with equally spaced angles. Things are way less clear in high dimensions. To start, we needed to select the dimension of the measurements: 1D or 2D. We selected 1D projections because it is easier to generalize the notion of "projection angle" to high dimensions when the projections are 1D. Note that a 1D projection is defined by a point on the unit sphere, or a unit vector $\mathbf{v}$. This is the projection axis. The integration axis is an ($n - 1$)-dimensional plane orthogonal to $\mathbf{v}$. Although there is no well-defined "projection angle," there is a well-defined angle *between projections*: $\cos\theta = \mathbf{v}_I \cdot \mathbf{v}_j$. It seems like we want to maximize the average angle between vectors. In other words, we want to distribute unit vectors as uniformly as possible on the unit sphere. We can easily generate random samples from a uniform distribution on the sphere by sampling from an $n$-dimensional Gaussian distribution and dividing each point by its radius. So that's what we decided to do. The reconstruction should converge to the true distribution in the limit of many projections.
+
+![Illustration of random 1D projection axes sampled from the the unit sphere in 6D phase space.](figures/random_projections.png){#fig-unitsphere width=20% fig-align=left}
+
+
+### GMM
+
+Our first experiments used a 6D Gaussian mixture distribution as the ground truth. The distribution is the superposition of seven Gaussian distributions with randomly chosen means and variances. We examined reconstructions from 25 random projections; see @fig-rec6d-gmm-25. (Click on the figures to enlarge!)
+
+::: {#fig-rec6d-gmm-25 layout-ncol=2 layout-nrow=2}
+
+![Data (Flow)](figures/fig_rec_nd_1d_flow_gaussian_mixture_25-proj_sim.png){#fig-rec6d-gmm-25-a}
+
+![Data (NN)](figures/fig_rec_nd_1d_nn_gaussian_mixture_25-proj_sim.png){#fig-rec6d-gmm-25-b}
+
+![Reconstruction (Flow)](figures/fig_rec_nd_1d_flow_gaussian_mixture_25-proj_corner.png){#fig-rec6d-gmm-25-c}
+
+![Reconstruction (NN)](figures/fig_rec_nd_1d_nn_gaussian_mixture_25-proj_corner.png){#fig-rec6d-gmm-25-d}
+
+Reconstruction of 6D GMM distribution from 25 random 1D projections. Red = true, blue = reconstructed.
+:::
+
+The true and simulated 1D measurement measurements overlap in both models. Yet the 6D distributions are again quite different. To compare subplots, look along the diagonal, moving from lower left to upper right. The entropy penalty pulls the reconstruction much closer to the uniform prior; there are more high-frequency terms in the NN reconstruction. Also notice that the distribution's modes are better resolved in the MENT-Flow reconstruction. In particular, observe the $x$-$y'$ projection in both plots. (There should be five modes visible.)
+
+Using 100 projections provides much tighter constraints, and the models are much closer together. But they are still not the same! See #fig-rec6d-gmm-100. This example shows that MENT-Flow can fit complex 6D distributions to large measurement sets in reasonable time (around 10-15 minutes for my training hyperparameters). 
+
+::: {#fig-rec6d-gmm-100 layout-ncol=2 layout-nrow=2}
+
+![Data (Flow)](figures/fig_rec_nd_1d_flow_gaussian_mixture_100-proj_sim.png){#fig-rec6d-gmm-100-a}
+
+![Data (NN)](figures/fig_rec_nd_1d_nn_gaussian_mixture_100-proj_sim.png){#fig-rec6d-gmm-100-b}
+
+![Reconstruction (Flow)](figures/fig_rec_nd_1d_flow_gaussian_mixture_100-proj_corner.png){#fig-rec6d-gmm-100-c}
+
+![Reconstruction (NN)](figures/fig_rec_nd_1d_nn_gaussian_mixture_100-proj_corner.png){#fig-rec6d-gmm-100-d}
+
+Reconstruction of 6D GMM distribution from 100 random 1D projections. Red = true, blue = reconstructed.
+:::
+
+
+### Rings
+
+We were also interested in testing MENT-Flow on hollow distributions. In our [direct 5D/6D phase space measurements](../2024-05-28_btf) at the SNS, we've observed hollow structures in 3D and 5D distributions that are not visible from low-dimensional projections. Contrast with #fig-rec6d-gmm-25 and #fig-rec6d-gmm-100, where we can see most of the modes from 2D views. It's best to illustrate with a simple example. Consider the "rings" distribution from @fig-rec2d-rings. It's straightforward to generalize the distribution to $n$ dimensions, so we did this and ran the same 6D reconstruction as just described. A 25-projection reconstruction is shown in @fig-rec6d-rings-25.
+
+::: {#fig-rec6d-rings-25 layout-ncol=2 layout-nrow=2}
+
+![Data (Flow)](figures/fig_rec_nd_1d_flow_rings_25-proj_sim.png){#fig-rec6d-rings-25-a}
+
+![Data (NN)](figures/fig_rec_nd_1d_nn_rings_25-proj_sim.png){#fig-rec6d-rings-25-b}
+
+![Reconstruction (Flow)](figures/fig_rec_nd_1d_flow_rings_25-proj_slice.png){#fig-rec6d-rings-25-c}
+
+![Reconstruction (NN)](figures/fig_rec_nd_1d_nn_rings_25-proj_slice.png){#fig-rec6d-rings-25-d}
+
+Reconstruction of 6D "rings" distribution from 25 random 1D projections. Red = true, blue = reconstructed. (c-d) 2D distribution within a shrinking 4D sphere in the unplotted coordinates.
+:::
+
+The 1D projections are *boring*; they don't even hint at the structure in the 6D space! To make each figure in the bottom row, we select particles within a shrinking 4D ball in the transverse ($x$-$x'$-$y$-$y'$) plane, then plot the longitudinal ($z$-$z'$) distribution of the selected particles. This is a *spherical slice*. On the far left, we see the full projection $\rho(z, z')$. On the far right, we see the two rings inside the 4D transverse core. MENT-Flow produces a slightly modified version of the Gaussian prior. A higher-density core surrounded by a low-density cloud has emerged, but the data do not provide tight constraints on the distribution. Still, the (approximate) maximum-entropy distribution is preferred to the NN solution, which ejects all particles from the core.
+
+These points are even clearer in @fig-rec6d-rings-100, where we use 100 projections as training data. There still isn't enough data to resolve two rings, but the MENT-Flow reconstruction shows a clear high-density spherical core surrounded by a low-density particle cloud. I was quite surprised that the neural network split the core! One would think 100 1D projections would be enough to constrain the 6D distribution, but this is false! 
+
+::: {#fig-rec6d-rings-100 layout-ncol=2 layout-nrow=2}
+
+![Data (Flow)](figures/fig_rec_nd_1d_flow_rings_100-proj_sim.png){#fig-rec6d-rings-100-a}
+
+![Data (NN)](figures/fig_rec_nd_1d_nn_rings_100-proj_sim.png){#fig-rec6d-rings-100-b}
+
+![Reconstruction (Flow)](figures/fig_rec_nd_1d_flow_rings_100-proj_slice.png){#fig-rec6d-rings-100-c}
+
+![Reconstruction (NN)](figures/fig_rec_nd_1d_nn_rings_100-proj_slice.png){#fig-rec6d-rings-100-d}
+
+Reconstruction of 6D "rings" distribution from 100 random 1D projections. Red = true, blue = reconstructed.
+:::
+
+
+## Conclusion
+
+Numerical experiments show that MENT-Flow works and could be useful in 4D/6D phase space tomography when measurements are sparse. There are several interesting research problems to pursue, some related to MENT, some to MENT-Flow, some to GPSR, and some to phase space tomography in general. In the next post, I'll describe how we used MENT-Flow to reconstruct the 4D phase space density of an intense proton beam from 1D measurements in the SNS.

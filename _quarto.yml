@@ -15,8 +15,8 @@ website:
 format:
   html:
     theme:
-        light: [default, ./style/custom_light.scss]
         dark: [default, ./style/custom_dark.scss]
+        light: [default, ./style/custom_light.scss]
     toc: false
     toc-depth: 5
     toc-location: right

@@ -6,6 +6,8 @@ categories:
   - entropy
   - statistical mechanics
   - tomography
+bibliography: references.bib
+csl: ./american-physics-society.csl
 format:
   html:
     toc: false
