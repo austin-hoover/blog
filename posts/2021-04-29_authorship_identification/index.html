@@ -79,7 +79,7 @@ div.csl-indent {
 }</style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -127,6 +127,18 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DLC4C8LZFB"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -328,7 +340,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 \frac{1}{2}|\mathbf{w}|^2 +  C\sum_{i=1}^{N}{\max\left[0, 1 - {t_i y(\mathbf{x}_i)}\right]}.
 \tag{3}\]</span></span></p>
 <p>where <span class="math inline">\(t_i\)</span> is the true class of point <span class="math inline">\(i\)</span> (<span class="math inline">\(\pm 1\)</span>) and <span class="math inline">\(C\)</span> is a positive constant. Correctly classified points don’t contribute anything to the sum since <span class="math inline">\(t_i y(\mathbf{x}_i)\)</span> will be greater than or equal to one. Let’s try this on non-linearly separable data sampled from two Gaussian distributions in 2D space. The Python package <a href="https://scikit-learn.org/stable/modules/svm.html">scikit-learn</a> has a user-friendly interface for the SVM implementation in <a href="https://www.csie.ntu.edu.tw/~cjlin/liblinear/">LIBLINEAR</a> which we use here.</p>
-<div id="cell-21" class="cell" data-tags="[]">
+<div id="cell-21" class="cell" data-tags="[]" data-execution_count="3">
 <details class="code-fold">
 <summary>Imports</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> collections</span>
@@ -338,39 +350,39 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.io <span class="im">as</span> pio</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> proplot <span class="im">as</span> pplt</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sklearn.metrics</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotly <span class="im">import</span> graph_objects <span class="im">as</span> go</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotly <span class="im">import</span> graph_objects <span class="im">as</span> go</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.io <span class="im">as</span> pio</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> proplot <span class="im">as</span> pplt</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sklearn.metrics</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> svm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="cell-23" class="cell" data-tags="[]">
+<div id="cell-23" class="cell" data-tags="[]" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> padded_ranges(X, pad<span class="op">=</span><span class="fl">0.5</span>):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    xmin, ymin <span class="op">=</span> np.<span class="bu">min</span>(X, axis<span class="op">=</span><span class="dv">0</span>) <span class="op">-</span> pad</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    xmax, ymax <span class="op">=</span> np.<span class="bu">max</span>(X, axis<span class="op">=</span><span class="dv">0</span>) <span class="op">+</span> pad</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (xmin, xmax), (ymin, ymax)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_dec_boundary(clf, ax<span class="op">=</span><span class="va">None</span>, xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">100.0</span>, <span class="fl">100.0</span>), i<span class="op">=</span><span class="dv">0</span>, <span class="op">**</span>kws):</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">"c"</span>, <span class="st">"black"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">'c'</span>, <span class="st">'black'</span>)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    w0 <span class="op">=</span> clf.intercept_ <span class="cf">if</span> <span class="bu">type</span>(clf.intercept_) <span class="kw">is</span> <span class="bu">float</span> <span class="cf">else</span> clf.intercept_[i]</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    (w1, w2) <span class="op">=</span> clf.coef_[i]</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    line_x <span class="op">=</span> np.array(xlim)</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    line_y <span class="op">=</span> <span class="op">-</span>(w1 <span class="op">/</span> w2) <span class="op">*</span> line_x <span class="op">-</span> (w0 <span class="op">/</span> w2)</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    ax.plot(line_x, line_y, <span class="op">**</span>kws)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_dec_regions(clf, xlim<span class="op">=</span><span class="va">None</span>, ylim<span class="op">=</span><span class="va">None</span>, ax<span class="op">=</span><span class="va">None</span>, nsteps<span class="op">=</span><span class="dv">500</span>, <span class="op">**</span>kws):</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">"alpha"</span>, <span class="fl">0.05</span>)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">"zorder"</span>, <span class="dv">0</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">'alpha'</span>, <span class="fl">0.05</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">'zorder'</span>, <span class="dv">0</span>)</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    xx, yy <span class="op">=</span> np.meshgrid(</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        np.linspace(xlim[<span class="dv">0</span>], xlim[<span class="dv">1</span>], nsteps),</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        np.linspace(xlim[<span class="dv">0</span>], xlim[<span class="dv">1</span>], nsteps), </span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        np.linspace(ylim[<span class="dv">0</span>], ylim[<span class="dv">1</span>], nsteps),</span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    Z <span class="op">=</span> np.c_[xx.ravel(), yy.ravel()]</span>
@@ -382,27 +394,25 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate two Gaussian distributions</span></span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">0</span>)</span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.vstack(</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    [</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>        np.random.normal(size<span class="op">=</span>(n, <span class="dv">2</span>), loc<span class="op">=</span>[<span class="fl">0.0</span>, <span class="fl">0.0</span>], scale<span class="op">=</span><span class="fl">2.0</span>),</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>        np.random.normal(size<span class="op">=</span>(n, <span class="dv">2</span>), loc<span class="op">=</span>[<span class="fl">5.0</span>, <span class="fl">5.0</span>], scale<span class="op">=</span><span class="fl">2.5</span>),</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> n <span class="op">*</span> [<span class="dv">1</span>] <span class="op">+</span> n <span class="op">*</span> [<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Find SVM decision boundary</span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> svm.LinearSVC(C<span class="op">=</span><span class="dv">1</span>, dual<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>clf.fit(X, y)</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(xspineloc<span class="op">=</span><span class="st">"neither"</span>, yspineloc<span class="op">=</span><span class="st">"neither"</span>)</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>ax.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], s<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.35</span>, c<span class="op">=</span>y, cmap<span class="op">=</span><span class="st">"PiYG_r"</span>)</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>xlim, ylim <span class="op">=</span> padded_ranges(X, pad<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>plot_dec_boundary(clf, ax<span class="op">=</span>ax)</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>plot_dec_regions(clf, xlim, ylim, ax<span class="op">=</span>ax, cmap<span class="op">=</span><span class="st">"PiYG_r"</span>)</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlim<span class="op">=</span>xlim, ylim<span class="op">=</span>ylim)</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">"Decision</span><span class="ch">\n</span><span class="st">boundary"</span>, xy<span class="op">=</span>(<span class="fl">0.55</span>, <span class="fl">0.02</span>), xycoords<span class="op">=</span><span class="st">"axes fraction"</span>)</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.vstack([</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    np.random.normal(size<span class="op">=</span>(n, <span class="dv">2</span>), loc<span class="op">=</span>[<span class="fl">0.0</span>, <span class="fl">0.0</span>], scale<span class="op">=</span><span class="fl">2.0</span>),</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    np.random.normal(size<span class="op">=</span>(n, <span class="dv">2</span>), loc<span class="op">=</span>[<span class="fl">5.0</span>, <span class="fl">5.0</span>], scale<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> n <span class="op">*</span> [<span class="dv">1</span>] <span class="op">+</span> n <span class="op">*</span> [<span class="op">-</span><span class="dv">1</span>] </span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Find SVM decision boundary </span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> svm.LinearSVC(C<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>clf.fit(X, y)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(xspineloc<span class="op">=</span><span class="st">'neither'</span>, yspineloc<span class="op">=</span><span class="st">'neither'</span>)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>ax.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], s<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.35</span>, c<span class="op">=</span>y, cmap<span class="op">=</span><span class="st">'PiYG_r'</span>)    </span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>xlim, ylim <span class="op">=</span> padded_ranges(X, pad<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>plot_dec_boundary(clf, ax<span class="op">=</span>ax)</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>plot_dec_regions(clf, xlim, ylim, ax<span class="op">=</span>ax, cmap<span class="op">=</span><span class="st">'PiYG_r'</span>)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlim<span class="op">=</span>xlim, ylim<span class="op">=</span>ylim)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">'Decision</span><span class="ch">\n</span><span class="st">boundary'</span>, xy<span class="op">=</span>(<span class="fl">0.55</span>, <span class="fl">0.02</span>), xycoords<span class="op">=</span><span class="st">'axes fraction'</span>)</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -416,27 +426,25 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 <section id="kernel-trick" class="level3">
 <h3 class="anchored" data-anchor-id="kernel-trick">2.2. Kernel trick</h3>
 <p>In some cases the linear model is going to be bad; a frequently used example is “target” dataset.</p>
-<div id="cell-29" class="cell" data-tags="[]">
+<div id="cell-29" class="cell" data-tags="[]" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">400</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>r1 <span class="op">=</span> np.sqrt(np.random.uniform(<span class="fl">0.0</span>, <span class="fl">0.2</span>, size<span class="op">=</span>(n,)))</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>r2 <span class="op">=</span> np.sqrt(np.random.uniform(<span class="fl">0.5</span>, <span class="fl">1.0</span>, size<span class="op">=</span>(n,)))</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>t1 <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span> np.pi, size<span class="op">=</span>(n,))</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>t2 <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span> np.pi, size<span class="op">=</span>(n,))</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.vstack(</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    [</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        np.vstack([r1 <span class="op">*</span> np.cos(t1), r1 <span class="op">*</span> np.sin(t1)]).T,</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        np.vstack([r2 <span class="op">*</span> np.cos(t2), r2 <span class="op">*</span> np.sin(t2)]).T,</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> n <span class="op">*</span> [<span class="dv">1</span>] <span class="op">+</span> n <span class="op">*</span> [<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>xlim, ylim <span class="op">=</span> padded_ranges(X, pad<span class="op">=</span><span class="fl">0.1</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(xspineloc<span class="op">=</span><span class="st">"neither"</span>, yspineloc<span class="op">=</span><span class="st">"neither"</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>ax.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], s<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.35</span>, c<span class="op">=</span>y, cmap<span class="op">=</span><span class="st">"PiYG_r"</span>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlim<span class="op">=</span>xlim, ylim<span class="op">=</span>ylim)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>t1 <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, size<span class="op">=</span>(n,))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>t2 <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, size<span class="op">=</span>(n,))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.vstack([</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    np.vstack([r1 <span class="op">*</span> np.cos(t1), r1 <span class="op">*</span> np.sin(t1)]).T,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    np.vstack([r2 <span class="op">*</span> np.cos(t2), r2 <span class="op">*</span> np.sin(t2)]).T,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> n <span class="op">*</span> [<span class="dv">1</span>] <span class="op">+</span> n <span class="op">*</span> [<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>xlim, ylim <span class="op">=</span> padded_ranges(X, pad<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(xspineloc<span class="op">=</span><span class="st">'neither'</span>, yspineloc<span class="op">=</span><span class="st">'neither'</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>ax.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], s<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.35</span>, c<span class="op">=</span>y, cmap<span class="op">=</span><span class="st">'PiYG_r'</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlim<span class="op">=</span>xlim, ylim<span class="op">=</span>ylim)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -449,7 +457,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 <p><span id="eq-4"><span class="math display">\[
 (x_1, x_2) \rightarrow (x_1^2, x_2^2, \sqrt{2} x_1 x_2)
 \tag{4}\]</span></span></p>
-<div id="cell-33" class="cell" data-tags="[]">
+<div id="cell-33" class="cell" data-tags="[]" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x1, x2 <span class="op">=</span> X.T</span>
@@ -458,28 +466,29 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> x2<span class="op">**</span><span class="dv">2</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> go.Figure(</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>go.Scatter3d(</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span>u,</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span>v,</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        z<span class="op">=</span>w,</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        mode<span class="op">=</span><span class="st">"markers"</span>,</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        marker<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>y, size<span class="op">=</span><span class="dv">3</span>, opacity<span class="op">=</span><span class="fl">0.5</span>),</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>fig.update_scenes(xaxis_visible<span class="op">=</span><span class="va">False</span>, yaxis_visible<span class="op">=</span><span class="va">False</span>, zaxis_visible<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span>u, y<span class="op">=</span>v, z<span class="op">=</span>w, mode<span class="op">=</span><span class="st">'markers'</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        marker<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span>y, size<span class="op">=</span><span class="dv">3</span>, opacity<span class="op">=</span><span class="fl">0.5</span>),</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>fig.update_scenes(xaxis_visible<span class="op">=</span><span class="va">False</span>, yaxis_visible<span class="op">=</span><span class="va">False</span>, zaxis_visible<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-display">
+<iframe scrolling="no" width="100%" height="545px" src="iframe_figures/figure_8.html" frameborder="0" allowfullscreen=""></iframe>
+<p>Fig. 8. Data after applying the nonlinear transformation in <a href="#eq-4" class="quarto-xref">Equation&nbsp;4</a>. This is an interactive plot.</p>
+</div>
 </div>
 <p>It’s clear from rotating this plot that the transformed data can be split with a 2D plane. This need not be the transformation used by the SVM — in fact, many transformations can be used — but it demonstrates the idea. The linear boundary in the transformed space can then be transformed into a nonlinear boundary in the original space. One way to plot this boundary is to predict a grid of points, then make a contour plot (the boundary is shown in grey).</p>
 <div id="cell-35" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> svm.SVC(kernel<span class="op">=</span><span class="st">"rbf"</span>)</span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> svm.SVC(kernel<span class="op">=</span><span class="st">'rbf'</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>clf.fit(X, y)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(xspineloc<span class="op">=</span><span class="st">"neither"</span>, yspineloc<span class="op">=</span><span class="st">"neither"</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>ax.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], s<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.35</span>, c<span class="op">=</span>y, cmap<span class="op">=</span><span class="st">"PiYG_r"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(xspineloc<span class="op">=</span><span class="st">'neither'</span>, yspineloc<span class="op">=</span><span class="st">'neither'</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>ax.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], s<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.35</span>, c<span class="op">=</span>y, cmap<span class="op">=</span><span class="st">'PiYG_r'</span>)</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlim<span class="op">=</span>xlim, ylim<span class="op">=</span>ylim)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>plot_dec_regions(clf, xlim<span class="op">=</span>xlim, ylim<span class="op">=</span>ylim, ax<span class="op">=</span>ax, cmap<span class="op">=</span><span class="st">"PiYG_r"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>plot_dec_regions(clf, xlim<span class="op">=</span>xlim, ylim<span class="op">=</span>ylim, ax<span class="op">=</span>ax, cmap<span class="op">=</span><span class="st">'PiYG_r'</span>)</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -500,33 +509,31 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create three Gaussian distributions</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">0</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.vstack(</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    [</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        np.random.normal(size<span class="op">=</span>(n, <span class="dv">2</span>), loc<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">0</span>], scale<span class="op">=</span><span class="fl">2.0</span>),</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        np.random.normal(size<span class="op">=</span>(n, <span class="dv">2</span>), loc<span class="op">=</span>[<span class="dv">5</span>, <span class="dv">5</span>], scale<span class="op">=</span><span class="fl">2.5</span>),</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        np.random.normal(size<span class="op">=</span>(n, <span class="dv">2</span>), loc<span class="op">=</span>[<span class="op">-</span><span class="dv">6</span>, <span class="dv">6</span>], scale<span class="op">=</span><span class="fl">2.5</span>),</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> n <span class="op">*</span> [<span class="dv">1</span>] <span class="op">+</span> n <span class="op">*</span> [<span class="dv">0</span>] <span class="op">+</span> n <span class="op">*</span> [<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Find SVM decision boundary</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> svm.LinearSVC(C<span class="op">=</span><span class="dv">1</span>, multi_class<span class="op">=</span><span class="st">"ovr"</span>, max_iter<span class="op">=</span><span class="dv">10000</span>, dual<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>clf.fit(X, y)</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the data</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>cmap <span class="op">=</span> pplt.Colormap((<span class="st">"pink9"</span>, <span class="st">"steel"</span>, <span class="st">"darkgreen"</span>))</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(xspineloc<span class="op">=</span><span class="st">"neither"</span>, yspineloc<span class="op">=</span><span class="st">"neither"</span>)</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>ax.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], s<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.35</span>, c<span class="op">=</span>y, cmap<span class="op">=</span>cmap)</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot decision boundary</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>xlim, ylim <span class="op">=</span> padded_ranges(X)</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    ls <span class="op">=</span> [<span class="st">"-"</span>, <span class="st">"--"</span>, <span class="st">"dotted"</span>][i]</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    plot_dec_boundary(clf, ax<span class="op">=</span>ax, i<span class="op">=</span>i, ls<span class="op">=</span>ls, label<span class="op">=</span><span class="ss">f"class </span><span class="sc">{</span>i <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss"> boundary"</span>)</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlim<span class="op">=</span>xlim, ylim<span class="op">=</span>ylim)</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>ax.legend(ncols<span class="op">=</span><span class="dv">1</span>, loc<span class="op">=</span>(<span class="fl">1.1</span>, <span class="fl">0.6</span>))</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>plot_dec_regions(clf, xlim, ylim, ax<span class="op">=</span>ax, cmap<span class="op">=</span>cmap)</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.vstack([</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    np.random.normal(size<span class="op">=</span>(n, <span class="dv">2</span>), loc<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">0</span>], scale<span class="op">=</span><span class="fl">2.0</span>),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    np.random.normal(size<span class="op">=</span>(n, <span class="dv">2</span>), loc<span class="op">=</span>[<span class="dv">5</span>, <span class="dv">5</span>], scale<span class="op">=</span><span class="fl">2.5</span>),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    np.random.normal(size<span class="op">=</span>(n, <span class="dv">2</span>), loc<span class="op">=</span>[<span class="op">-</span><span class="dv">6</span>, <span class="dv">6</span>], scale<span class="op">=</span><span class="fl">2.5</span>),</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> n <span class="op">*</span> [<span class="dv">1</span>] <span class="op">+</span> n <span class="op">*</span> [<span class="dv">0</span>] <span class="op">+</span> n <span class="op">*</span> [<span class="op">-</span><span class="dv">1</span>] </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Find SVM decision boundary </span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> svm.LinearSVC(C<span class="op">=</span><span class="dv">1</span>, multi_class<span class="op">=</span><span class="st">'ovr'</span>, max_iter<span class="op">=</span><span class="dv">10000</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>clf.fit(X, y)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the data</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>cmap<span class="op">=</span>pplt.Colormap((<span class="st">'pink9'</span>, <span class="st">'steel'</span>, <span class="st">'darkgreen'</span>))</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(xspineloc<span class="op">=</span><span class="st">'neither'</span>, yspineloc<span class="op">=</span><span class="st">'neither'</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>ax.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>], s<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.35</span>, c<span class="op">=</span>y, cmap<span class="op">=</span>cmap)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot decision boundary</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>xlim, ylim <span class="op">=</span> padded_ranges(X)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    ls <span class="op">=</span> [<span class="st">'-'</span>, <span class="st">'--'</span>, <span class="st">'dotted'</span>][i]</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    plot_dec_boundary(clf, ax<span class="op">=</span>ax, i<span class="op">=</span>i, ls<span class="op">=</span>ls, label<span class="op">=</span><span class="ss">f'class </span><span class="sc">{</span>i <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss"> boundary'</span>)</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlim<span class="op">=</span>xlim, ylim<span class="op">=</span>ylim)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>ax.legend(ncols<span class="op">=</span><span class="dv">1</span>, loc<span class="op">=</span>(<span class="fl">1.1</span>, <span class="fl">0.6</span>))</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>plot_dec_regions(clf, xlim, ylim, ax<span class="op">=</span>ax, cmap<span class="op">=</span>cmap)</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -551,35 +558,123 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </figure>
 </div>
 <p>There are plenty of functions available to load the data and to extract features from it, but I’ll do everything manually just for fun. To load the data, let’s first create two lists of strings, <code>texts_train</code> and <code>texts_test</code>, corresponding to the 2500 training and testing documents. The class id and author name for each document are also stored.</p>
-<div id="cell-51" class="cell">
+<div id="cell-51" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_files(outer_path):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    texts, class_ids, class_names <span class="op">=</span> [], [], []</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> class_id, folder_name <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">sorted</span>(os.listdir(outer_path))):</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> folder_name.startswith(<span class="st">"."</span>):</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        folder_path <span class="op">=</span> os.path.join(outer_path, folder_name)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> file_name <span class="kw">in</span> os.listdir(folder_path):</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>            class_ids.append(class_id)</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>            class_names.append(folder_name)</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>            <span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(os.path.join(folder_path, file_name), <span class="st">"r"</span>)</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>            text <span class="op">=</span> <span class="bu">file</span>.read().replace(<span class="st">" "</span>, <span class="st">"_"</span>)</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>            texts.append(text)</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>            <span class="bu">file</span>.close()</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (texts, class_ids, class_names)</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>texts_train, y_train, authors_train <span class="op">=</span> load_files(<span class="st">"reuters_data/train"</span>)</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>texts_test, y_test, authors_test <span class="op">=</span> load_files(<span class="st">"reuters_data/test"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> class_id, folder <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">sorted</span>(os.listdir(outer_path))):</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        folder_path <span class="op">=</span> os.path.join(outer_path, folder)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> filename <span class="kw">in</span> os.listdir(folder_path):</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>            class_ids.append(class_id)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>            class_names.append(folder)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>            <span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(os.path.join(folder_path, filename), <span class="st">'r'</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>            text <span class="op">=</span> <span class="bu">file</span>.read().replace(<span class="st">' '</span>, <span class="st">'_'</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>            texts.append(text)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">file</span>.close()</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> texts, class_ids, class_names</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>texts_train, y_train, authors_train <span class="op">=</span> load_files(<span class="st">'reuters_data/train'</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>texts_test, y_test, authors_test <span class="op">=</span> load_files(<span class="st">'reuters_data/test'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-52" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Author Name</th>
+<th data-quarto-table-cell-role="th">Author ID</th>
+<th data-quarto-table-cell-role="th">Training Text</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>AaronPressman</td>
+<td>0</td>
+<td>A_group_of_leading_trademark_specialists_plans...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>AaronPressman</td>
+<td>0</td>
+<td>Prospects_for_comprehensive_reform_of_U.S._ban...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>AaronPressman</td>
+<td>0</td>
+<td>An_influential_economic_research_group_is_prep...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>AaronPressman</td>
+<td>0</td>
+<td>The_Federal_Communications_Commission_proposed...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>AaronPressman</td>
+<td>0</td>
+<td>An_international_task_force_charged_with_resol...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2495</td>
+<td>WilliamKazer</td>
+<td>49</td>
+<td>China_could_list_more_railway_companies_and_is...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2496</td>
+<td>WilliamKazer</td>
+<td>49</td>
+<td>The_choice_of_Singapore_for_the_listing_of_Chi...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2497</td>
+<td>WilliamKazer</td>
+<td>49</td>
+<td>China_ushered_in_1997,_a_year_it_has_hailed_as...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2498</td>
+<td>WilliamKazer</td>
+<td>49</td>
+<td>China_on_Tuesday_announced_a_ban_on_poultry_an...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2499</td>
+<td>WilliamKazer</td>
+<td>49</td>
+<td>China's_leaders_have_agreed_on_a_need_to_stimu...</td>
+</tr>
+</tbody>
+</table>
+
+<p>2500 rows × 3 columns</p>
+</div>
+</div>
+</div>
 </div>
 <p>The following histogram shows the distribution of document lengths in the training set; it’s expected that the short average document length will greatly increases the difficulty of the classification task relative to longer works such as books.</p>
-<div id="cell-54" class="cell">
+<div id="cell-55" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>word_counts <span class="op">=</span> [<span class="bu">len</span>(text) <span class="cf">for</span> text <span class="kw">in</span> texts_train]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="fl">1.5</span>))</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>ax.hist(word_counts, bins<span class="op">=</span><span class="st">"auto"</span>, color<span class="op">=</span><span class="st">"black"</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="st">"Document length (characters)"</span>, ylabel<span class="op">=</span><span class="st">"Num. docs"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>ax.hist(word_counts, bins<span class="op">=</span><span class="st">'auto'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="st">'Document length (characters)'</span>, ylabel<span class="op">=</span><span class="st">'Num. docs'</span>)</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -593,7 +688,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 <section id="n-grams" class="level3">
 <h3 class="anchored" data-anchor-id="n-grams">3.2. N-grams</h3>
 <p>An obvious feature candidate is word frequency; a less obvious one is <em>n-gram</em> frequency. A character n-gram is a string of length n.&nbsp;For example, the 3-grams contained in <em>red_bike!</em> are <em>red</em>, <em>ed_</em>, <em>d_b</em>, *_bi<em>, </em>bik<em>, </em>ike<em>, </em>ke!*. These shorter strings may be useful because they capture different aspects of style such as the use of punctuation or certain prefixes/suffixes. They also remove any ambiguities in word extraction and work for all languages. To use these features in the SVM classifier, we need to create a feature matrix <span class="math inline">\(X\)</span> where <span class="math inline">\(X_{ij}\)</span> is the frequency of the jth n-gram in the ith document. Thus, each document is represented as a vector in <span class="math inline">\(k\)</span> dimensional space, where <span class="math inline">\(k\)</span> is the number of unique n-grams selected from the training documents. We’ll also normalize each vector so that all points are mapped onto the surface of the <span class="math inline">\(k\)</span>-dimensional unit sphere while preserving the angles between the vectors; this should help the SVM performance a bit.</p>
-<div id="cell-59" class="cell">
+<div id="cell-60" class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_ngrams(text, n):</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [text[i <span class="op">-</span> n : i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n, <span class="bu">len</span>(text) <span class="op">+</span> <span class="dv">1</span>)]</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -609,66 +704,59 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 <span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    n_items <span class="op">=</span> <span class="bu">len</span>(dictionary)</span>
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> max_items <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> max_items <span class="op">&gt;</span> n_items:</span>
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        max_items <span class="op">=</span> n_items</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    sorted_key_val_list <span class="op">=</span> <span class="bu">sorted</span>(</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>        dictionary.items(), key<span class="op">=</span><span class="kw">lambda</span> item: item[<span class="dv">1</span>], reverse<span class="op">=</span>reverse</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {k: v <span class="cf">for</span> k, v <span class="kw">in</span> sorted_key_val_list[:max_items]}</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    sorted_key_val_list <span class="op">=</span> <span class="bu">sorted</span>(dictionary.items(), key<span class="op">=</span><span class="kw">lambda</span> item: item[<span class="dv">1</span>], </span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>                                 reverse<span class="op">=</span>reverse)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {k: v <span class="cf">for</span> k, v <span class="kw">in</span> sorted_key_val_list[:max_items]}</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> NgramExtractor:</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, ngram_range<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">5</span>)):</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.vocab <span class="op">=</span> {}</span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.set_ngram_range(ngram_range)</span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> set_ngram_range(<span class="va">self</span>, ngram_range):</span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.min_n, <span class="va">self</span>.max_n <span class="op">=</span> ngram_range</span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> build_vocab(<span class="va">self</span>, texts, max_features<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.vocab, index <span class="op">=</span> {}, <span class="dv">0</span></span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.min_n, <span class="va">self</span>.max_n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>            ngrams <span class="op">=</span> []</span>
-<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> text <span class="kw">in</span> texts:</span>
-<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>                ngrams.extend(get_ngrams(text, n))</span>
-<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>            counts <span class="op">=</span> sort_by_val(collections.Counter(ngrams), max_features)</span>
-<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> ngram, count <span class="kw">in</span> counts.items():</span>
-<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.vocab[ngram] <span class="op">=</span> (index, count)</span>
-<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>                index <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> create_feature_matrix(<span class="va">self</span>, texts, norm_rows<span class="op">=</span><span class="va">True</span>):</span>
-<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>        X <span class="op">=</span> np.zeros((<span class="bu">len</span>(texts), <span class="bu">len</span>(<span class="va">self</span>.vocab)))</span>
-<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> text_index, text <span class="kw">in</span> <span class="bu">enumerate</span>(texts):</span>
-<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>            ngrams <span class="op">=</span> get_ngrams_in_range(text, <span class="va">self</span>.min_n, <span class="va">self</span>.max_n)</span>
-<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> ngram, count <span class="kw">in</span> collections.Counter(ngrams).items():</span>
-<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> ngram <span class="kw">in</span> <span class="va">self</span>.vocab:</span>
-<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>                    term_index <span class="op">=</span> <span class="va">self</span>.vocab[ngram][<span class="dv">0</span>]</span>
-<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>                    X[text_index, term_index] <span class="op">=</span> count</span>
-<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> norm_rows:</span>
-<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>            X <span class="op">=</span> np.apply_along_axis(<span class="kw">lambda</span> row: row <span class="op">/</span> np.linalg.norm(row), <span class="dv">1</span>, X)</span>
-<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> X</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> NgramExtractor:</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, ngram_range<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">5</span>)):</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.vocab <span class="op">=</span> {}</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.set_ngram_range(ngram_range)</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> set_ngram_range(<span class="va">self</span>, ngram_range):</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.min_n, <span class="va">self</span>.max_n <span class="op">=</span> ngram_range</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> build_vocab(<span class="va">self</span>, texts, max_features<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.vocab, index <span class="op">=</span> {}, <span class="dv">0</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.min_n, <span class="va">self</span>.max_n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>            ngrams <span class="op">=</span> []</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> text <span class="kw">in</span> texts:</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>                ngrams.extend(get_ngrams(text, n))</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>            counts <span class="op">=</span> sort_by_val(collections.Counter(ngrams), max_features)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> ngram, count <span class="kw">in</span> counts.items():</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.vocab[ngram] <span class="op">=</span> (index, count)</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>                index <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> create_feature_matrix(<span class="va">self</span>, texts, norm_rows<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>        X <span class="op">=</span> np.zeros((<span class="bu">len</span>(texts), <span class="bu">len</span>(<span class="va">self</span>.vocab)))</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> text_index, text <span class="kw">in</span> <span class="bu">enumerate</span>(texts):</span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>            ngrams <span class="op">=</span> get_ngrams_in_range(text, <span class="va">self</span>.min_n, <span class="va">self</span>.max_n)</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> ngram, count <span class="kw">in</span> collections.Counter(ngrams).items():</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> ngram <span class="kw">in</span> <span class="va">self</span>.vocab:</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>                    term_index <span class="op">=</span> <span class="va">self</span>.vocab[ngram][<span class="dv">0</span>]</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>                    X[text_index, term_index] <span class="op">=</span> count</span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> norm_rows:</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>            X <span class="op">=</span> np.apply_along_axis(<span class="kw">lambda</span> row: row <span class="op">/</span> np.linalg.norm(row), <span class="dv">1</span>, X)</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> X</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now we need to decide which value(s) of n to use as features. Let’s look at the distribution of n-grams in the training documents.</p>
-<div id="cell-61" class="cell">
+<div id="cell-62" class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>extractor <span class="op">=</span> NgramExtractor(ngram_range<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">15</span>))</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>extractor.build_vocab(texts_train)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>len_counts <span class="op">=</span> collections.Counter([<span class="bu">len</span>(ngram) <span class="cf">for</span> ngram <span class="kw">in</span> extractor.vocab])</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">3</span>))</span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>len_counts.items())</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>ax.barh(x, y, color<span class="op">=</span><span class="st">"k"</span>, alpha<span class="op">=</span><span class="fl">1.0</span>, width<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    xscale<span class="op">=</span><span class="st">"log"</span>,</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    xformatter<span class="op">=</span><span class="st">"log"</span>,</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    ylabel<span class="op">=</span><span class="st">"n"</span>,</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    xlabel<span class="op">=</span><span class="st">"n-gram count"</span>,</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    yticks<span class="op">=</span>x,</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    ytickminor<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>ax.grid(axis<span class="op">=</span><span class="st">"x"</span>)</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>ax.barh(x, y, color<span class="op">=</span><span class="st">'k'</span>, alpha<span class="op">=</span><span class="fl">1.0</span>, width<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xscale<span class="op">=</span><span class="st">'log'</span>, xformatter<span class="op">=</span><span class="st">'log'</span>, ylabel<span class="op">=</span><span class="st">'n'</span>, xlabel<span class="op">=</span><span class="st">'n-gram count'</span>,</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>          yticks<span class="op">=</span>x, ytickminor<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>ax.grid(axis<span class="op">=</span><span class="st">'x'</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-62" class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fig.save(<span class="st">"./_output_n_gram_count.png"</span>, dpi<span class="op">=</span><span class="dv">250</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-63" class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fig.save(<span class="st">'./_output_n_gram_count.png'</span>, dpi<span class="op">=</span><span class="dv">250</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -678,7 +766,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </div>
 <p>The total number of n-grams with 1 <span class="math inline">\(\le\)</span>n <span class="math inline">\(\le\)</span> 15 is about 31 million; training a classifier on data with this number of dimensions is probably infeasible, and even more so on a larger data set. Previous studies have had success with fixing the value of n to be either 3, 4, or 5, so the authors chose to restrict their attention to these values. Their new idea was to use all n-grams in the range 3 <span class="math inline">\(\le\)</span>n <span class="math inline">\(\le\)</span> 5. This leaves a few hundred thousand features.</p>
 <p>The next section will discuss statistical methods to prune the features; for now, though, we’ll implement the simple method of keeping the <span class="math inline">\(k\)</span> most frequent across all the training documents. As long as this doesn’t affect the accuracy too much, we reap the benefits of a reduction in computational time and the ability to fix the feature space dimensionality for the comparison of different feature types. To see why many low-frequency terms may be unimportant, suppose one of the authors wrote a single article about sharks in the training set. The term “shark” would have a small global frequency and be very useful in the training set since no other writers write about sharks, but it’s probably a good idea to discard it since it is unlikely to appear in the testing set. We must be careful, however, because some low-frequency terms could be important. These are probably terms that an author uses rarely but consistently over time. Maybe they like to use “incredible” as an adjective; the global frequency of “incred” would be much less than, say, “that_”, but it’s valuable because its frequency distribution will likely be the same in future writing. A quick test on our data set shows that <span class="math inline">\(k\)</span> = 15,000 is a good number. Let’s try this out on the 15,000 most frequent 3-grams.</p>
-<div id="cell-65" class="cell">
+<div id="cell-66" class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ngram_range <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>max_features <span class="op">=</span> <span class="dv">15000</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>norm_rows <span class="op">=</span> <span class="va">True</span></span>
@@ -690,18 +778,18 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </div>
 <p>Here are some of the values in <code>X_train</code>. The columns have been sorted by descending frequency from left to right.</p>
 <p>We can now feed this array to the SVM and make predictions on the testing data. I’ll keep the <span class="math inline">\(C\)</span> parameter fixed at <span class="math inline">\(C = 1\)</span> in all cases since this is what is done in the paper (I tried a few different values of <span class="math inline">\(C\)</span> and there wasn’t a large effect on the accuracy). Here is the confusion matrix obtained after training and testing:</p>
-<div id="cell-69" class="cell">
+<div id="cell-70" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> svm.LinearSVC(C<span class="op">=</span><span class="dv">1</span>, dual<span class="op">=</span><span class="va">True</span>)</span>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>clf <span class="op">=</span> svm.LinearSVC(C<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>clf.fit(X_train, y_train)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> clf.predict(X_test)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>accuracy <span class="op">=</span> sklearn.metrics.accuracy_score(y_test, y_pred)</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>cmat <span class="op">=</span> sklearn.metrics.confusion_matrix(y_test, y_pred)</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots()</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>ax.imshow(cmat, cmap<span class="op">=</span><span class="st">"mono"</span>, colorbar<span class="op">=</span><span class="va">True</span>, colorbar_kw<span class="op">=</span><span class="bu">dict</span>(width<span class="op">=</span><span class="st">"1em"</span>, label<span class="op">=</span><span class="st">"Count"</span>))</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(title_kw<span class="op">=</span><span class="bu">dict</span>(fontsize<span class="op">=</span><span class="st">"medium"</span>), ylabel<span class="op">=</span><span class="st">"True class"</span>, xlabel<span class="op">=</span><span class="st">"Predicted class"</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>ax.imshow(cmat, cmap<span class="op">=</span><span class="st">'mono'</span>, colorbar<span class="op">=</span><span class="va">True</span>, colorbar_kw<span class="op">=</span><span class="bu">dict</span>(width<span class="op">=</span><span class="st">'1em'</span>, label<span class="op">=</span><span class="st">'Count'</span>))</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(title_kw<span class="op">=</span><span class="bu">dict</span>(fontsize<span class="op">=</span><span class="st">'medium'</span>), ylabel<span class="op">=</span><span class="st">'True class'</span>, xlabel<span class="op">=</span><span class="st">'Predicted class'</span>)</span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -724,12 +812,12 @@ p(\bar{t}) \sum_{i=1}^{m}p(c_i | \bar{t}) \log p(c_i | \bar{t}) -
 \sum_{i=1}^{m}p(c_i) \log p(c_i).
 \tag{5}\]</span></span></p>
 <p>The probability of choosing term <span class="math inline">\(t\)</span> out of all terms in the corpus is given by <span class="math inline">\(p(t)\)</span>, and <span class="math inline">\(p(t) + p(\bar{t}) = 1\)</span>. Similarly, <span class="math inline">\(p(c_i)\)</span> is the probability that a randomly chosen document belongs to class <span class="math inline">\(c_i\)</span>, and <span class="math inline">\(p(c_i) + p(\bar{c_i}) = 1\)</span>. The probability that a document belongs to <span class="math inline">\(c_i\)</span> given that it contains <span class="math inline">\(t\)</span> is <span class="math inline">\(p(c_i | t)\)</span>, or <span class="math inline">\(p(c_i | \bar{t})\)</span> if it doesn’t contain <span class="math inline">\(t\)</span>. The strategy is then to keep the terms with the highest information gain scores.</p>
-<div id="cell-76" class="cell">
+<div id="cell-77" class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> InfoGainSelector:</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.idx <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fit(<span class="va">self</span>, X, y):</span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Compute probability distributions.</span></span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>        n_docs, n_terms <span class="op">=</span> X.shape</span>
@@ -742,22 +830,21 @@ p(\bar{t}) \sum_{i=1}^{m}p(c_i | \bar{t}) \log p(c_i | \bar{t}) -
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>        P_c <span class="op">=</span> np.<span class="bu">sum</span>(P_c_and_t, axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>        P_c_given_t <span class="op">=</span> P_c_and_t <span class="op">/</span> P_t</span>
 <span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>        P_c_given_tbar <span class="op">=</span> <span class="fl">1.0</span> <span class="op">-</span> (<span class="fl">1.0</span> <span class="op">-</span> P_c_and_t) <span class="op">/</span> (<span class="fl">1.0</span> <span class="op">-</span> P_t)</span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Compute information gain for each feature.</span></span>
 <span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> XlogX(X):</span>
 <span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> X <span class="op">*</span> np.log2(X, out<span class="op">=</span>np.zeros_like(X), where<span class="op">=</span>(X <span class="op">&gt;</span> <span class="dv">0</span>))</span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>        scores <span class="op">=</span> np.zeros(n_terms)</span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>        scores <span class="op">+=</span> np.<span class="bu">sum</span>(P_t <span class="op">*</span> XlogX(P_c_given_t), axis<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>        scores <span class="op">+=</span> np.<span class="bu">sum</span>((<span class="dv">1</span> <span class="op">-</span> P_t) <span class="op">*</span> XlogX(P_c_given_tbar), axis<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>        scores <span class="op">-=</span> np.<span class="bu">sum</span>(XlogX(P_c))</span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.idx <span class="op">=</span> np.argsort(scores)</span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> select(<span class="va">self</span>, X, k<span class="op">=-</span><span class="dv">1</span>):</span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> X[:, <span class="va">self</span>.idx[:k]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>        scores <span class="op">=</span> np.zeros(n_terms)</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>        scores <span class="op">+=</span> np.<span class="bu">sum</span>(P_t <span class="op">*</span> XlogX(P_c_given_t), axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>        scores <span class="op">+=</span> np.<span class="bu">sum</span>((<span class="dv">1</span> <span class="op">-</span> P_t) <span class="op">*</span> XlogX(P_c_given_tbar), axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>        scores <span class="op">-=</span> np.<span class="bu">sum</span>(XlogX(P_c))</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.idx <span class="op">=</span> np.argsort(scores)</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> select(<span class="va">self</span>, X, k<span class="op">=-</span><span class="dv">1</span>):  </span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> X[:, <span class="va">self</span>.idx[:k]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We’ll now compare 4 sets of 15,000 features: 3-grams, 4-grams, 5-grams, and equal parts 3/4/5-grams, each time using IG to select the best <span class="math inline">\(k\)</span> features and plotting the accuracy vs.&nbsp;<span class="math inline">\(k\)</span>. I’ll start from <span class="math inline">\(k\)</span> = 1 to 200.</p>
-<div id="cell-78" class="cell">
+<div id="cell-79" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>extractor <span class="op">=</span> NgramExtractor()</span>
@@ -786,7 +873,7 @@ p(\bar{t}) \sum_{i=1}^{m}p(c_i | \bar{t}) \log p(c_i | \bar{t}) -
 <span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_accs(accuracies, kmin<span class="op">=</span><span class="dv">0</span>, kmax<span class="op">=</span><span class="dv">1</span>, kstep<span class="op">=</span><span class="dv">1</span>):</span>
 <span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> pplt.subplots()</span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    ax.<span class="bu">format</span>(cycle<span class="op">=</span><span class="st">"538"</span>)</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    ax.<span class="bu">format</span>(cycle<span class="op">=</span><span class="st">'538'</span>)</span>
 <span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    labels <span class="op">=</span> [<span class="st">"n = 3"</span>, <span class="st">"n = 4"</span>, <span class="st">"n = 5"</span>, <span class="st">"n = (3, 4, 5)"</span>]</span>
 <span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    ks <span class="op">=</span> np.arange(kmin, kmax <span class="op">+</span> kstep, kstep)</span>
 <span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
@@ -796,7 +883,7 @@ p(\bar{t}) \sum_{i=1}^{m}p(c_i | \bar{t}) \log p(c_i | \bar{t}) -
 <span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>    ax.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="st">"Number of features selected (k)"</span>, ylabel<span class="op">=</span><span class="st">"Accuracy"</span>)</span>
 <span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    pad <span class="op">=</span> <span class="fl">0.05</span> <span class="op">*</span> (kmax <span class="op">+</span> kmin <span class="op">+</span> kstep)</span>
 <span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>    ax.<span class="bu">format</span>(xlim<span class="op">=</span>(kmin <span class="op">-</span> pad, kmax <span class="op">+</span> pad))</span>
-<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>    ax.legend(ncols<span class="op">=</span><span class="dv">1</span>, loc<span class="op">=</span><span class="st">"lower right"</span>)</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>    ax.legend(ncols<span class="op">=</span><span class="dv">1</span>, loc<span class="op">=</span><span class="st">'lower right'</span>)</span>
 <span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig, ax</span>
 <span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a></span>
@@ -815,7 +902,7 @@ p(\bar{t}) \sum_{i=1}^{m}p(c_i | \bar{t}) \log p(c_i | \bar{t}) -
 </div>
 <p>The accuracy at <span class="math inline">\(k\)</span> = 1 is 0.04, so using the feature with the highest IG score is actually twice as effective as random guessing! By the end of the plot 3-grams and variable length n-grams have taken a clear leaad, with 5-grams in last place. The performance gap between the different n-grams also appears to be growing with <span class="math inline">\(k\)</span>.</p>
 <p>The next region we’ll look at is <span class="math inline">\(200 \le k \le 2000\)</span>.</p>
-<div id="cell-83" class="cell">
+<div id="cell-84" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>kmin, kmax, kstep <span class="op">=</span> (<span class="dv">200</span>, <span class="dv">2000</span>, <span class="dv">200</span>)</span>
@@ -831,7 +918,7 @@ p(\bar{t}) \sum_{i=1}^{m}p(c_i | \bar{t}) \log p(c_i | \bar{t}) -
 </figure>
 </div>
 <p>Now the gap is decreasing as we approach an upper performance limit at higher <span class="math inline">\(k\)</span>, especially for 3-grams. We’ll now look at the region which is plotted in the paper: <span class="math inline">\(2,000 \le k \le 10,000\)</span>.</p>
-<div id="cell-87" class="cell">
+<div id="cell-88" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>kmin, kmax, kstep <span class="op">=</span> (<span class="dv">2000</span>, <span class="dv">10000</span>, <span class="dv">1000</span>)</span>
@@ -858,24 +945,22 @@ p(\bar{t}) \sum_{i=1}^{m}p(c_i | \bar{t}) \log p(c_i | \bar{t}) -
 <section id="localmaxs-algorithm" class="level4">
 <h4 class="anchored" data-anchor-id="localmaxs-algorithm">3.3.2. LocalMaxs algorithm</h4>
 <p>Let’s look at the top IG scoring n-grams from from the variable-length feature set.</p>
-<div id="cell-95" class="cell">
+<div id="cell-96" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>extractor.set_ngram_range((<span class="dv">3</span>, <span class="dv">5</span>))</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>extractor.build_vocab(texts_train, max_features<span class="op">=</span><span class="dv">5000</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>X_train <span class="op">=</span> extractor.create_feature_matrix(texts_train)</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>X_test <span class="op">=</span> extractor.create_feature_matrix(texts_test)</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>selector.fit(X_train, np.array(y_train))</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>selector.fit(X_train, y_train)</span>
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_term(i):</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> key, (idx, count) <span class="kw">in</span> extractor.vocab.items():</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> idx <span class="op">==</span> i:</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> key</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> rank, i <span class="kw">in</span> <span class="bu">enumerate</span>(selector.idx[:<span class="dv">10</span>], start<span class="op">=</span><span class="dv">1</span>):</span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="sc">{:02}</span><span class="st">. </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(rank, get_term(i)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_term(i):</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> key, (idx, count) <span class="kw">in</span> extractor.vocab.items():</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> idx <span class="op">==</span> i:</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> key</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> rank, i <span class="kw">in</span> <span class="bu">enumerate</span>(selector.idx[:<span class="dv">10</span>], start<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'</span><span class="sc">{:02}</span><span class="st">. </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(rank, get_term(i)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Notice all the variants of <em>the</em> which were included. IG has no way of knowing that these are basically the same. This motivates the definition of something called “glue”. Consider the word bigram <em>Amelia Earhart</em>. These two words are very likely to be found next to each other and could probably be treated as a single multi-word unit; it is as if there is glue holding the two words together. The amount of glue is probably higher than that between, say, <em>window</em> and <em>Earhart</em>. A technique has been developed to quantify this glue and extend its calculation to word n-grams instead of just word bi-grams<span class="citation" data-cites="Silva2009">&nbsp;[<a href="#ref-Silva2009" role="doc-biblioref">9</a>]</span>. The same idea can then be applied to character n-grams.</p>
@@ -896,7 +981,7 @@ SCP((c_1 \dots c_{n-1})c_n) = \frac{p(c_1 \dots c_n)^2}{p(c_1 \dots c_{n-1})p(c_
 FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1} p(c_1 \dots c_i)p(c_{i+1} \dots c_n)}.
 \tag{9}\]</span></span></p>
 <p>In summary, LocalMaxs loops through every n-gram in the vocabulary, computes the glue as <span class="math inline">\(g(C) = FairSCP(C)\)</span>, and keeps the n-gram if Eq. (6) is satisfied. It differs from IG selection in that the features are not ranked, so the number of selected features is completely determined by the text. The method is implemented below.</p>
-<div id="cell-97" class="cell">
+<div id="cell-98" class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> antecedents(ngram):</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [ngram[:<span class="op">-</span><span class="dv">1</span>], ngram[<span class="dv">1</span>:]]</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -912,12 +997,12 @@ FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1}
 <span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> LocalMaxsExtractor(NgramExtractor):</span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, ngram_range<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">5</span>)):</span>
 <span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(ngram_range)</span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.counts_list <span class="op">=</span> []  <span class="co"># ith element is dictionary of unique (i+1)-gram counts</span></span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.sum_counts_list <span class="op">=</span> []  <span class="co"># ith element is the sum of `counts_list[i].values()`</span></span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.counts_list <span class="op">=</span> [] <span class="co"># ith element is dictionary of unique (i+1)-gram counts </span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.sum_counts_list <span class="op">=</span> [] <span class="co"># ith element is the sum of `counts_list[i].values()`</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> build_vocab(<span class="va">self</span>, texts, max_features<span class="op">=</span><span class="va">None</span>):</span>
 <span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Count all n-grams with n &lt;= self.max_n</span></span>
 <span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.counts_list, <span class="va">self</span>.sum_counts_list <span class="op">=</span> [], []</span>
@@ -931,14 +1016,14 @@ FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1}
 <span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.sum_counts_list.append(<span class="bu">sum</span>(counts.values()))</span>
 <span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="va">self</span>.min_n <span class="op">&lt;=</span> n <span class="op">&lt;=</span> <span class="va">self</span>.max_n:</span>
 <span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>                candidate_ngrams.update(sort_by_val(counts, max_features))</span>
-<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.available_characters <span class="op">=</span> <span class="va">self</span>.counts_list[<span class="dv">0</span>].keys()</span>
-<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Select candidate n-grams whose glue is at local maximum</span></span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.available_characters <span class="op">=</span> <span class="va">self</span>.counts_list[<span class="dv">0</span>].keys()    </span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Select candidate n-grams whose glue is at local maximum </span></span>
 <span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.vocab, index <span class="op">=</span> {}, <span class="dv">0</span></span>
 <span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ngram, count <span class="kw">in</span> candidate_ngrams.items():</span>
 <span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="va">self</span>.is_local_max(ngram):</span>
 <span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.vocab[ngram] <span class="op">=</span> (index, count)</span>
 <span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>                index <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>                    </span>
 <span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> is_local_max(<span class="va">self</span>, ngram):</span>
 <span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>        glue, n <span class="op">=</span> <span class="va">self</span>.glue(ngram), <span class="bu">len</span>(ngram)</span>
 <span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> n <span class="op">&lt;</span> <span class="va">self</span>.max_n:</span>
@@ -948,9 +1033,9 @@ FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1}
 <span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> n <span class="op">&gt;</span> <span class="va">self</span>.min_n:</span>
 <span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> ant <span class="kw">in</span> antecedents(ngram):</span>
 <span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="va">self</span>.glue(ant) <span class="op">&gt;</span> glue:</span>
-<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">return</span> <span class="va">False</span> </span>
 <span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a>                    </span>
 <span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> glue(<span class="va">self</span>, ngram):</span>
 <span id="cb19-56"><a href="#cb19-56" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> <span class="bu">len</span>(ngram)</span>
 <span id="cb19-57"><a href="#cb19-57" aria-hidden="true" tabindex="-1"></a>        P <span class="op">=</span> <span class="va">self</span>.counts_list[n <span class="op">-</span> <span class="dv">1</span>].get(ngram, <span class="dv">0</span>) <span class="op">/</span> <span class="va">self</span>.sum_counts_list[n <span class="op">-</span> <span class="dv">1</span>]</span>
@@ -960,30 +1045,24 @@ FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1}
 <span id="cb19-61"><a href="#cb19-61" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> disp_point <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n):</span>
 <span id="cb19-62"><a href="#cb19-62" aria-hidden="true" tabindex="-1"></a>            ngram_l, ngram_r <span class="op">=</span> ngram[:disp_point], ngram[disp_point:]</span>
 <span id="cb19-63"><a href="#cb19-63" aria-hidden="true" tabindex="-1"></a>            n_l, n_r <span class="op">=</span> disp_point, n <span class="op">-</span> disp_point</span>
-<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a>            P_l <span class="op">=</span> (</span>
-<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.counts_list[n_l <span class="op">-</span> <span class="dv">1</span>].get(ngram_l, <span class="dv">0</span>)</span>
-<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a>                <span class="op">/</span> <span class="va">self</span>.sum_counts_list[n_l <span class="op">-</span> <span class="dv">1</span>]</span>
-<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a>            )</span>
-<span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a>            P_r <span class="op">=</span> (</span>
-<span id="cb19-69"><a href="#cb19-69" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.counts_list[n_r <span class="op">-</span> <span class="dv">1</span>].get(ngram_r, <span class="dv">0</span>)</span>
-<span id="cb19-70"><a href="#cb19-70" aria-hidden="true" tabindex="-1"></a>                <span class="op">/</span> <span class="va">self</span>.sum_counts_list[n_r <span class="op">-</span> <span class="dv">1</span>]</span>
-<span id="cb19-71"><a href="#cb19-71" aria-hidden="true" tabindex="-1"></a>            )</span>
-<span id="cb19-72"><a href="#cb19-72" aria-hidden="true" tabindex="-1"></a>            Avp <span class="op">+=</span> P_l <span class="op">*</span> P_r</span>
-<span id="cb19-73"><a href="#cb19-73" aria-hidden="true" tabindex="-1"></a>        Avp <span class="op">=</span> Avp <span class="op">/</span> (n <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb19-74"><a href="#cb19-74" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> P<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> Avp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a>            P_l <span class="op">=</span> <span class="va">self</span>.counts_list[n_l <span class="op">-</span> <span class="dv">1</span>].get(ngram_l, <span class="dv">0</span>) <span class="op">/</span> <span class="va">self</span>.sum_counts_list[n_l <span class="op">-</span> <span class="dv">1</span>]</span>
+<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a>            P_r <span class="op">=</span> <span class="va">self</span>.counts_list[n_r <span class="op">-</span> <span class="dv">1</span>].get(ngram_r, <span class="dv">0</span>) <span class="op">/</span> <span class="va">self</span>.sum_counts_list[n_r <span class="op">-</span> <span class="dv">1</span>]</span>
+<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a>            Avp <span class="op">+=</span> P_l <span class="op">*</span> P_r</span>
+<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a>        Avp <span class="op">=</span> Avp <span class="op">/</span> (n <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> P<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> Avp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The first thing we should do is check the the glue of the derivative n-grams <em>the</em>, *_the*, etc.</p>
-<div id="cell-99" class="cell">
+<div id="cell-100" class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>extractor <span class="op">=</span> LocalMaxsExtractor(ngram_range<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">5</span>))</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>extractor.build_vocab(texts_train)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ngram <span class="kw">in</span> [<span class="st">"the"</span>, <span class="st">"_the"</span>, <span class="st">"the_"</span>, <span class="st">"_the_"</span>]:</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ngram <span class="kw">in</span> [<span class="st">'the'</span>, <span class="st">'_the'</span>, <span class="st">'the_'</span>, <span class="st">'_the_'</span>]:</span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    glue <span class="op">=</span> extractor.glue(ngram)</span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    selected <span class="op">=</span> extractor.is_local_max(ngram)</span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    freq <span class="op">=</span> extractor.counts_list[<span class="bu">len</span>(ngram) <span class="op">-</span> <span class="dv">1</span>][ngram]</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="sc">{:&lt;5}</span><span class="st">: glue = </span><span class="sc">{:.4f}</span><span class="st">, selected = </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(ngram, glue, selected))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'</span><span class="sc">{:&lt;5}</span><span class="st">: glue = </span><span class="sc">{:.4f}</span><span class="st">, selected = </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(ngram, glue, selected))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>It seems to be working correctly. Now we’d like to compare the performance to IG. There’s no way to directly compare since LocalMaxs doesn’t rank features; however, it’s possible to vary the size of the initial set of features from which LocalMaxs makes its selections. Below, this initial size is varied from 3,000 to 24,000 using equal parts 3/4/5 grams as features.</p>
-<div id="cell-101" class="cell">
+<div id="cell-102" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>lm_extractor <span class="op">=</span> LocalMaxsExtractor(ngram_range<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">5</span>))</span>
@@ -998,7 +1077,7 @@ FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1}
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    y_pred <span class="op">=</span> clf.predict(X_test_red)</span>
 <span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    lm_accuracies.append(sklearn.metrics.accuracy_score(y_test, y_pred))</span>
 <span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    lm_vocabs.append(lm_extractor.vocab)</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>n_keep <span class="op">=</span> [<span class="bu">len</span>(vocab) <span class="cf">for</span> vocab <span class="kw">in</span> lm_vocabs]</span>
 <span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>ig_extractor <span class="op">=</span> NgramExtractor(ngram_range<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">5</span>))</span>
 <span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>ig_extractor.build_vocab(texts_train, max_features<span class="op">=</span><span class="dv">5000</span>)</span>
@@ -1015,12 +1094,12 @@ FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1}
 <span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>    y_pred <span class="op">=</span> clf.predict(X_test_red)</span>
 <span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>    ig_accuracies.append(sklearn.metrics.accuracy_score(y_test, y_pred))</span>
 <span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>    ig_vocabs.append(extractor.vocab)</span>
-<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">3</span>))</span>
-<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>kws <span class="op">=</span> <span class="bu">dict</span>(marker<span class="op">=</span><span class="st">"."</span>, ms<span class="op">=</span><span class="dv">10</span>, lw<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>ax.plot(n_keep, lm_accuracies, label<span class="op">=</span><span class="st">"n = (3, 4, 5) — LocalMaxs"</span>, <span class="op">**</span>kws)</span>
-<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>ax.plot(n_keep, ig_accuracies, label<span class="op">=</span><span class="st">"n = (3, 4, 5) — IG"</span>, <span class="op">**</span>kws)</span>
-<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="st">"Number of features selected"</span>, ylabel<span class="op">=</span><span class="st">"Accuracy"</span>)</span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>kws <span class="op">=</span> <span class="bu">dict</span>(marker<span class="op">=</span><span class="st">'.'</span>, ms<span class="op">=</span><span class="dv">10</span>, lw<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>ax.plot(n_keep, lm_accuracies, label<span class="op">=</span><span class="st">'n = (3, 4, 5) — LocalMaxs'</span>, <span class="op">**</span>kws)</span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>ax.plot(n_keep, ig_accuracies, label<span class="op">=</span><span class="st">'n = (3, 4, 5) — IG'</span>, <span class="op">**</span>kws)</span>
+<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="st">'Number of features selected'</span>, ylabel<span class="op">=</span><span class="st">'Accuracy'</span>)</span>
 <span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a>ax.legend(ncols<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xmin<span class="op">=</span><span class="dv">900</span>, xmax<span class="op">=</span><span class="dv">2800</span>)</span>
 <span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1033,7 +1112,7 @@ FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1}
 </figure>
 </div>
 <p>As you can see, LocalMaxs achieves a higher accuracy with the same number of features. The neat thing is that the vocabularies are totally different; for example, at the last data point, only about 15% of the n-grams are found in both sets! Let’s count the number of related n-grams in the two sets, where x is related to y if x is an antecedent or successor of y.</p>
-<div id="cell-105" class="cell">
+<div id="cell-106" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_related(ngrams):</span>
@@ -1045,17 +1124,16 @@ FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1}
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>                <span class="cf">break</span></span>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> count</span>
 <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>lm_ngrams <span class="op">=</span> <span class="bu">list</span>(lm_vocabs[<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>vocab_size <span class="op">=</span> <span class="bu">len</span>(lm_ngrams)</span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>ig_vocab <span class="op">=</span> <span class="bu">list</span>(ig_extractor.vocab)</span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>ig_ngrams <span class="op">=</span> [ig_vocab[i] <span class="cf">for</span> i <span class="kw">in</span> ig_selector.idx[:vocab_size]]</span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>shared <span class="op">=</span> <span class="bu">len</span>([ig_ngram <span class="cf">for</span> ig_ngram <span class="kw">in</span> ig_ngrams <span class="cf">if</span> ig_ngram <span class="kw">in</span> lm_ngrams])</span>
-<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Vocab size: </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(vocab_size))</span>
-<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"n-grams selected by both IG and LM: </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(shared))</span>
-<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"IG related n-grams: </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(count_related(ig_ngrams)))</span>
-<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"LM related n-grams: </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(count_related(lm_ngrams)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>lm_ngrams <span class="op">=</span> <span class="bu">list</span>(lm_vocabs[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>vocab_size <span class="op">=</span> <span class="bu">len</span>(lm_ngrams)</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>ig_vocab <span class="op">=</span> <span class="bu">list</span>(ig_extractor.vocab)</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>ig_ngrams <span class="op">=</span> [ig_vocab[i] <span class="cf">for</span> i <span class="kw">in</span> ig_selector.idx[:vocab_size]]</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>shared <span class="op">=</span> <span class="bu">len</span>([ig_ngram <span class="cf">for</span> ig_ngram <span class="kw">in</span> ig_ngrams <span class="cf">if</span> ig_ngram <span class="kw">in</span> lm_ngrams])</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Vocab size: </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(vocab_size))</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'n-grams selected by both IG and LM: </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(shared))</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'IG related n-grams: </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(count_related(ig_ngrams)))</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'LM related n-grams: </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(count_related(lm_ngrams)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>As mentioned earlier, IG selects many related terms such as <em>the</em> and <em>the_</em>. The LocalMaxs vocabulary is much “richer”, as the authors put it. Here is the corresponding figure from the paper (ignore the white squares):</p>
@@ -1661,7 +1739,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
