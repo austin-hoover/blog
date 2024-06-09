@@ -468,7 +468,7 @@ Figure&nbsp;10: Reconstruction of 6D GMM distribution from 25 random 1D projecti
 </figcaption>
 </figure>
 </div>
-<p>The true and simulated 1D measurement measurements overlap in both models. Yet the 6D distributions are again quite different. To compare subplots, look along the diagonal, moving from lower left to upper right. The entropy penalty pulls the reconstruction much closer to the uniform prior; there are more high-frequency terms in the NN reconstruction. Also notice that the distribution’s modes are better resolved in the MENT-Flow reconstruction. In particular, observe the <span class="math inline">\(x\)</span>-<span class="math inline">\(y'\)</span> projection in both plots. (There should be five modes visible.)</p>
+<p>The true and simulated 1D measurement measurements overlap in both models. Yet the 6D distributions are again quite different. To compare subplots, look along the diagonal, moving from lower left to upper right. The entropy penalty pulls the reconstruction much closer to the uniform prior; there are more high-frequency terms in the NN reconstruction. Also notice that the distribution’s modes are better resolved in the MENT-Flow reconstruction. In particular, observe the <span class="math inline">\(x'\)</span>-<span class="math inline">\(y\)</span> projection in both plots. (There should be five modes visible.)</p>
 <p>Using 100 projections provides much tighter constraints, and the models are much closer together. But they are still not the same! See #fig-rec6d-gmm-100. This example shows that MENT-Flow can fit complex 6D distributions to large measurement sets in reasonable time (around 10-15 minutes for my training hyperparameters).</p>
 <div id="fig-rec6d-gmm-100" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1257,7 +1257,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
