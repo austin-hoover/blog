@@ -174,7 +174,7 @@ Reconstruction of 6D GMM distribution from 100 random 1D projections. Red = true
 
 ### Rings
 
-We were also interested in testing MENT-Flow on hollow distributions. In our [direct 5D/6D phase space measurements](../2024-05-28_btf) at the SNS, we've observed hollow structures in 3D and 5D distributions that are not visible from low-dimensional projections. Contrast with #fig-rec6d-gmm-25 and #fig-rec6d-gmm-100, where we can see most of the modes from 2D views. It's best to illustrate with a simple example. Consider the "rings" distribution from @fig-rec2d-rings. It's straightforward to generalize the distribution to $n$ dimensions, so we did this and ran the same 6D reconstruction as just described. A 25-projection reconstruction is shown in @fig-rec6d-rings-25.
+We were also interested in testing MENT-Flow on hollow distributions. In our [direct 5D/6D phase space measurements](../2023-05-28_btf) at the SNS, we've observed hollow structures in 3D and 5D distributions that are not visible from low-dimensional projections. Contrast with @fig-rec6d-gmm-25 and @fig-rec6d-gmm-100, where we can see most of the modes from 2D views. It's best to illustrate with a simple example. Consider the "rings" distribution from @fig-rec2d-rings. It's straightforward to generalize the distribution to $n$ dimensions, so we did this and ran the same 6D reconstruction as just described. A 25-projection reconstruction is shown in @fig-rec6d-rings-25.
 
 ::: {#fig-rec6d-rings-25 layout-ncol=2 layout-nrow=2}
 
