@@ -154,7 +154,7 @@ Our first experiments used a 6D Gaussian mixture distribution as the ground trut
 Reconstruction of 6D GMM distribution from 25 random 1D projections. Red = true, blue = reconstructed.
 :::
 
-The true and simulated 1D measurement measurements overlap in both models. Yet the 6D distributions are again quite different. To compare subplots, look along the diagonal, moving from lower left to upper right. The entropy penalty pulls the reconstruction much closer to the uniform prior; there are more high-frequency terms in the NN reconstruction. Also notice that the distribution's modes are better resolved in the MENT-Flow reconstruction. In particular, observe the $x$-$y'$ projection in both plots. (There should be five modes visible.)
+The true and simulated 1D measurement measurements overlap in both models. Yet the 6D distributions are again quite different. To compare subplots, look along the diagonal, moving from lower left to upper right. The entropy penalty pulls the reconstruction much closer to the uniform prior; there are more high-frequency terms in the NN reconstruction. Also notice that the distribution's modes are better resolved in the MENT-Flow reconstruction. In particular, observe the $x'$-$y$ projection in both plots. (There should be five modes visible.)
 
 Using 100 projections provides much tighter constraints, and the models are much closer together. But they are still not the same! See #fig-rec6d-gmm-100. This example shows that MENT-Flow can fit complex 6D distributions to large measurement sets in reasonable time (around 10-15 minutes for my training hyperparameters). 
 
