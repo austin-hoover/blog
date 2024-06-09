@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -38,11 +58,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -151,14 +171,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>I’ve been thinking a lot about entropy in the past year. I’ve been motivated by problems in phase space tomography, where the goal is to reconstruct a two-, four- or six-dimensional phase space distribution from its one- or two-dimensional projections. Such problems have no unique solution. We can imagine the data carving out a feasible set in the space of distributions, where all distributions in the feasible set reproduce the data.</p>
-<p>We could adopt <a href="https://tomopy.readthedocs.io/en/stable/api/tomopy.recon.algorithm.html">various strategies</a> to select a single distribution from the feasible set. Some strategies generate low-quality reconstructions when there are few projections. For example, Filtered Backprojection (FBP) typically generates streaking artifacts. Minerbo’s MENT algorithm <span class="citation" data-cites="Minerbo_1979">[@Minerbo_1979]</span> does better. In addition to reproducing the measured projections, MENT maximizes the distribution’s entropy.</p>
+<p>We could adopt <a href="https://tomopy.readthedocs.io/en/stable/api/tomopy.recon.algorithm.html">various strategies</a> to select a single distribution from the feasible set. Some strategies generate low-quality reconstructions when there are few projections. For example, Filtered Backprojection (FBP) typically generates streaking artifacts. Minerbo’s MENT algorithm <span class="citation" data-cites="Minerbo_1979">&nbsp;[<a href="#ref-Minerbo_1979" role="doc-biblioref">1</a>]</span> does better. In addition to reproducing the measured projections, MENT maximizes the distribution’s entropy.</p>
 <p>Why maximize entropy? In Minerbo’s original paper, he states:</p>
 <blockquote class="blockquote">
-<p>From the standpoint of information theory this approach is conceptually attractive: It yields the image with the lowest information content consistent with the available data. Thus with this approach one avoids introducing extraneous information or artificial structure. The problem of reconstructing a source from a finite number of views is known to be indeterminate. A maximum entropy method thus seems attractive for this problem, especially when the available projection data are incomplete or degraded by noise errors. <span class="citation" data-cites="Minerbo_1979">[@Minerbo_1979]</span></p>
+<p>From the standpoint of information theory this approach is conceptually attractive: It yields the image with the lowest information content consistent with the available data. Thus with this approach one avoids introducing extraneous information or artificial structure. The problem of reconstructing a source from a finite number of views is known to be indeterminate. A maximum entropy method thus seems attractive for this problem, especially when the available projection data are incomplete or degraded by noise errors. <span class="citation" data-cites="Minerbo_1979">&nbsp;[<a href="#ref-Minerbo_1979" role="doc-biblioref">1</a>]</span></p>
 </blockquote>
 <p>Clear enough. Mottershead says similar things but mentions <em>multiplicity</em> in the same breath:</p>
 <blockquote class="blockquote">
-<p>In this case the inversion is not unique, and we need a mechanism for constructing an estimate of the distribution that <em>incorporates everything we know, and nothing else</em>. The maximum entropy principle offers a natural way for doing this. It argues that, of all the possible distributions that satisfy the observed constraints, the <em>most reasonable</em> one to choose is that one that nature can produce in the <em>greatest number of ways</em>, namely, the distribution having maximum entropy. <span class="citation" data-cites="Mottershead_1985">[@Mottershead_1985]</span></p>
+<p>In this case the inversion is not unique, and we need a mechanism for constructing an estimate of the distribution that <em>incorporates everything we know, and nothing else</em>. The maximum entropy principle offers a natural way for doing this. It argues that, of all the possible distributions that satisfy the observed constraints, the <em>most reasonable</em> one to choose is that one that nature can produce in the <em>greatest number of ways</em>, namely, the distribution having maximum entropy. <span class="citation" data-cites="Mottershead_1985">&nbsp;[<a href="#ref-Mottershead_1985" role="doc-biblioref">2</a>]</span></p>
 </blockquote>
 <p>An idea expressed in conversation with others is that we seek the maximum-entropy distribution because charged particle beams are often near equilibrium and, therefore, in a maximum-entropy state. And such a state, from Boltzmann’s derivation, has the highest multiplicity. This distribution would be the most likely if chosen at random. So is the maximum-entropy distribution the most reasonable, the most likely, or both?</p>
 <p>Like most physics students, I was introduced to entropy in statistical mechanics, where we defined entropy as the logarithm of multiplicity. I was also aware of Shannon’s information theory entropy but hadn’t thought much about the relationship between the two. I recently came across work by Steven Gull and John Skilling from the University of Cambridge. They claimed that entropy maximization can be derived without reference to information theory or physics. I was confused at this point.</p>
@@ -178,7 +198,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-Minerbo_1979" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">G. Minerbo, <em>MENT: A Maximum Entropy Algorithm for Reconstructing a Source from Projection Data</em>, Computer Graphics and Image Processing <strong>10</strong>, 48 (1979).</div>
+</div>
+<div id="ref-Mottershead_1985" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">C. Mottershead, <em>Maximum Entropy Beam Diagnostic Tomography</em>, IEEE Transactions on Nuclear Science <strong>32</strong>, 1970 (1985).</div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -315,7 +343,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = false;
+  const darkModeDefault = true;
   let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
