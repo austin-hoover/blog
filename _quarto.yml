@@ -11,7 +11,7 @@ website:
         text: "Posts"
       - href: ./notes/index.qmd
         text: "Notes"
-
+  google-analytics: "G-DLC4C8LZFB"
 format:
   html:
     theme:
