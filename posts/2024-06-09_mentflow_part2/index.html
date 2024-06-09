@@ -597,7 +597,7 @@ Figure&nbsp;12: Reconstruction of 6D “rings” distribution from 25 random 1D 
 </figure>
 </div>
 <p>The 1D projections are <em>boring</em>; they don’t even hint at the structure in the 6D space! To make each figure in the bottom row, we select particles within a shrinking 4D ball in the transverse (<span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span>-<span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>) plane, then plot the longitudinal (<span class="math inline">\(z\)</span>-<span class="math inline">\(z'\)</span>) distribution of the selected particles. This is a <em>spherical slice</em>. On the far left, we see the full projection <span class="math inline">\(\rho(z, z')\)</span>. On the far right, we see the two rings inside the 4D transverse core. MENT-Flow produces a slightly modified version of the Gaussian prior. A higher-density core surrounded by a low-density cloud has emerged, but the data do not provide tight constraints on the distribution. Still, the (approximate) maximum-entropy distribution is preferred to the NN solution, which ejects all particles from the core.</p>
-<p>These points are even clearer in <a href="#fig-rec6d-rings-100" class="quarto-xref">Figure&nbsp;13</a>, where we use 100 projections as training data. There still isn’t enough data to resolve two rings, but the MENT-Flow reconstruction shows a clear high-density spherical core surrounded by a low-density particle cloud. I was quite surprised that the neural network split the core! One would think 100 1D projections would be enough to constrain the 6D distribution, but this is false!</p>
+<p>These points are even clearer in <a href="#fig-rec6d-rings-100" class="quarto-xref">Figure&nbsp;13</a>, where we use 100 projections as training data. There still isn’t enough data to resolve two rings, but the MENT-Flow reconstruction shows a clear high-density spherical core surrounded by a low-density particle cloud. I was quite surprised that the neural network split the core! One would think 100 1D projections would be enough to constrain the 6D distribution, but this is false. (These results depend on the random seed used to define the projection axes, but similar patterns are common.)</p>
 <div id="fig-rec6d-rings-100" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rec6d-rings-100-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1257,7 +1257,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
