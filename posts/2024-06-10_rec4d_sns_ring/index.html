@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2021-01-21">
+<meta name="dcterms.date" content="2024-06-10">
 
-<title>Accelerated Inquiry - Parametric oscillators</title>
+<title>Accelerated Inquiry - Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -156,23 +156,13 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#particle-accelerators-as-parametric-oscillators" id="toc-particle-accelerators-as-parametric-oscillators" class="nav-link active" data-scroll-target="#particle-accelerators-as-parametric-oscillators">Particle accelerators as parametric oscillators</a></li>
-  <li><a href="#solving-hills-equation" id="toc-solving-hills-equation" class="nav-link" data-scroll-target="#solving-hills-equation">Solving Hill’s equation</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Parametric oscillators</h1>
+<h1 class="title">Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring</h1>
   </div>
 
 
@@ -189,7 +179,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 21, 2021</p>
+      <p class="date">June 10, 2024</p>
     </div>
   </div>
   
@@ -201,149 +191,121 @@ window.Quarto = {
 </header>
 
 
-<p>This post presents the solution to a general problem: the motion of a particle in one dimension in the presence of time-dependent, linear, periodic forces. This amounts to solving the following equation of motion:</p>
-<p><span id="eq-Hill"><span class="math display">\[
-\frac{d^2x}{dt^2} + k(t)x = 0,
-\tag{1}\]</span></span></p>
-<p>where <span class="math inline">\(k(t + T) = k(t)\)</span> for some <span class="math inline">\(T\)</span>. This is a <a href="https://en.wikipedia.org/wiki/Parametric_oscillator">parametric oscillator</a>, a harmonic oscillator whose physical properties are not static. For example, the oscillations of a pendulum (in the small angle approximation) on the surface of a planet whose gravitational pull varies periodically would be described by the above equation. The solution to this equation was derived by <a href="https://en.wikipedia.org/wiki/George_William_Hill">George William Hill</a> in 1886 to study lunar motion, and for this reason, it is known as Hill’s equation. It also finds application in areas such as condensed matter physics, quantum optics, and accelerator physics. After setting up the physical problem, we will examine the solutions and discuss their relevance to the last application, accelerator physics.</p>
-<section id="particle-accelerators-as-parametric-oscillators" class="level2">
-<h2 class="anchored" data-anchor-id="particle-accelerators-as-parametric-oscillators">Particle accelerators as parametric oscillators</h2>
-<p><a href="https://en.wikipedia.org/wiki/Particle_accelerator">Particle accelerators</a> are machines that produce groups of charged particles (<em>beams</em>), increase their kinetic energy, and guide them to a target. These machines are invaluable to modern scientific research. The most famous examples are <em>colliders</em>, such as the <a href="https://home.cern/science/accelerators/large-hadron-collider">LHC</a>, in which two beams are smashed together to generate fundamental particles.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="lhc.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Fig. 1. A detector at an interaction point in the LHC."><img src="lhc.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Fig. 1. A detector at an interaction point in the LHC."></a></p>
-<figcaption>Fig. 1. A detector at an interaction point in the LHC.</figcaption>
+<p>In the <a href="../2024-06-09_mentflow_part2">previous post</a>, I discussed numerical experiments to test an approximate high-dimensional maximum-entropy phase space tomography algorithm by modifying the Generative Phase Space Reconstruction (GPSR) approach. I recently applied this approach to reconstruct the 4D phase space distribution of a high-power proton beam in the SNS ring.</p>
+<section id="eigenpainting" class="level2">
+<h2 class="anchored" data-anchor-id="eigenpainting">Eigenpainting</h2>
+<p>The SNS accelerates H- ions to 1 GeV, strips the electrons, and injects the remaining protons into a ring. After 1000 injected turns, the accumulated pulse contains over <span class="math inline">\(10^{14}\)</span> protons—over 1 MW of beam power when operating at the full 60 Hz repetition rate. Some more info on the injection scheme is <a href="../2021-05-27_painting_a_particle_beam">here</a>. Injecting all particles in a tiny region would lead to an enormous charge pileup and emittance growth. Thus, we slowly move the circulating beam away from the injected beam during injection to fill the phase space more uniformly.</p>
+<p>The SNS starts with a large offset between the injected and circulating beams. At one position in the accelerator, the turn-by-turn particle coordinates jump around an ellipse in 2D phase space (<span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span>, <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>); thus, the 2D phase space distributions <span class="math inline">\(\rho(x, x')\)</span> and <span class="math inline">\(\rho(y, y')\)</span> begin as donuts. Nonlinear and collective effects cause filamentation, filling in the donuts. We end up with a somewhat uniform density rectangular distribution in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane. <a href="#fig-sns-prod-sim" class="quarto-xref">Figure&nbsp;1</a> plots a typical simulated beam using this “production” setup.</p>
+<div id="fig-sns-prod-sim" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sns-prod-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/sns_prod_sim.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="figures/sns_prod_sim.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sns-prod-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Simulated beam distribution in the SNS ring.
+</figcaption>
 </figure>
 </div>
-<p>A lesser known fact is that the fields of condensed matter physics, material science, chemistry, and biology also benefit tremendously from accelerators; this is due to the effectiveness of scattering experiments in which the deflection of a beam after colliding with a target is used to learn information about the target. The scattered beam is composed of neutrons in <em>spallation neutron sources</em> such as <a href="https://neutrons.ornl.gov/sns">SNS</a>, electrons in <em>electron scattering facilities</em> such as <a href="https://science.osti.gov/np/Facilities/User-Facilities/CEBAF">CEBAF</a>, or photons in <em>synchrotron light sources</em> such as <a href="https://www.aps.anl.gov">APS</a>. In addition to scientific research, accelerators find use in <a href="http://www.accelerators-for-society.org/health/index.php?id=7">medicine</a>, particularly for cancer treatment, and also in various <a href="http://www.accelerators-for-society.org/industry/index.php?id=8">industrial applications</a>.</p>
-<p>There are generally a few beam properties that are very important to experimentalists; in colliders, it is the energy and luminosity, in spallation sources, it is the intensity, and in light sources, it is the brightness. There is thus a constant need to push these parameters to new regions. For example, below is the famous Livingston plot which shows the energy achieved by various machines over the past century.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="livingston.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Fig. 2. Accelerator energy over time. The vertical axis is not the center of mass energy (CME) — it is the beam energy needed to produce the CME by collision with a resting proton. (source: Rasmus Ischebeck)."><img src="livingston.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="Fig. 2. Accelerator energy over time. The vertical axis is not the center of mass energy (CME) — it is the beam energy needed to produce the CME by collision with a resting proton. (source: Rasmus Ischebeck)."></a></p>
-<figcaption>Fig. 2. Accelerator energy over time. The vertical axis is not the center of mass energy (CME) — it is the beam energy needed to produce the CME by collision with a resting proton. (source: Rasmus Ischebeck).</figcaption>
+<p>When we move the circulating beam away from the injected beam, we effectively change the phase space coordinates of the injected particles. In the scheme above, we use time-varying dipole magnets to adjust the position <span class="math inline">\(x\)</span> (or <span class="math inline">\(y\)</span>). We could also use the same magnets to change the momentum <span class="math inline">\(x'\)</span> (or <span class="math inline">\(y'\)</span>) by introducing an angle between the injected and circulating beams. By varying the dipole magnet currents as a function of time, we move the injection point through the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> phase space. <em>Phase space painting</em> thus seems like an appropriate name.</p>
+<p>We could extend phase space painting to four phase space dimensions by introducing correlations between the horizontal and vertical dipole strengths. We then trace a line through the 4D phase space <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span>-<span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>: <span class="math inline">\(\mathbf{x}(t)\)</span>, where <span class="math inline">\(t\)</span> represents either the time or the turn number. 4D phase space painting might enable more precise control of the beam distribution, but no one has tried it.</p>
+<div id="fig-sns-inj-zoom" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sns-inj-zoom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/sns_inj_zoom.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="figures/sns_inj_zoom.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sns-inj-zoom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The SNS injection region uses eight injection kickers (time-varying dipole magnets), to control the 4D phase space coordinates of the injected beam.
+</figcaption>
 </figure>
 </div>
-<p>There are many physics issues associated with the optimization of these beam parameters. Accelerator physics is a field of applied physics that studies these issues. The task of the accelerator physicist is to understand, control, and measure the journey of the beam from its creation to its final destination. The difficulty of this task has grown over time; the improvement in accelerator performance has brought with it a staggering increase in size and complexity. The construction and operation of modern accelerators generally require years of planning, thousands of scientists and engineers, and hundreds of millions or even billions of dollars. Despite this complexity, the underlying physics principles are quite simple, and the single particle motion in one of these machines can be understood analytically if a few approximations are made. In the end, we will arrive at Hill’s equation.</p>
-<p>There are three basic tasks an accelerator has to accomplish. First, it must increase the beam energy (acceleration). Second, it must guide the beam along a predetermined path (steering). Third, it must ensure the beam particles remain close together (focusing). It is helpful to use a coordinate system in which the s axis points along the design trajectory, and the x and y axes defined in the plane transverse to s. In this way, the motion is broken up into transverse and longitudinal dynamics.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="coordinate_system.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Fig. 3. Curvilinear coordinate system used to describe particle motion along a reference trajectory."><img src="coordinate_system.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="Fig. 3. Curvilinear coordinate system used to describe particle motion along a reference trajectory."></a></p>
-<figcaption>Fig. 3. Curvilinear coordinate system used to describe particle motion along a reference trajectory.</figcaption>
-</figure>
-</div>
-<p>How are these tasks accomplished? Well, particles are charged, and the force on a point charge in an electromagnetic field is given by</p>
-<p><span id="eq-Lorenz"><span class="math display">\[
-\mathbf{F} = q\left({\mathbf{E} + \mathbf{v} \times \mathbf{B}}\right),
-\tag{2}\]</span></span></p>
-<p>where <span class="math inline">\(q\)</span> is the particle charge, <span class="math inline">\(\mathbf{v}\)</span> is the particle velocity, <span class="math inline">\(\mathbf{E}\)</span> is the electric field, and <span class="math inline">\(\mathbf{B}\)</span> is the magnetic field. An accelerator consists of a series of elements, each with their own <span class="math inline">\(\mathbf{E}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>; the collection of these elements is called a <em>lattice</em>. We need to determine which electric and magnetic fields to use.</p>
-<p>The first task, acceleration, is not the focus of this post. The remaining tasks, steering and focusing, concern the motion in the transverse plane. <span class="math inline">\(\mathbf{B}\)</span> fields, not <span class="math inline">\(\mathbf{E}\)</span> fields, are used since their effect grows with increased particle velocity. Any transverse magnetic field <span class="math inline">\(\mathbf{B} = (B_x, B_y)^T\)</span> can be written using a multipole expansion</p>
-<p><span id="eq-multipole"><span class="math display">\[
-B_y - iB_x = \sum_{n=1}^{\infty}\left({b_n - ia_n}\right)\left(\frac{x + iy}{r_0}\right)^{n-1}.
-\tag{3}\]</span></span></p>
-<p>We then have the normal multiple coefficients <span class="math inline">\(\{b_n\}\)</span>, and the skew multipole coefficients <span class="math inline">\(\{a_n\}\)</span>. The field lines corresponding to the first few terms are shown below.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="multipoles.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Fig. 4. Multipole expansion of the magnetic field."><img src="multipoles.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Fig. 4. Multipole expansion of the magnetic field."></a></p>
-<figcaption>Fig. 4. Multipole expansion of the magnetic field.</figcaption>
-</figure>
-</div>
-<p>The dipole field <span class="math inline">\(\mathbf{B} \propto \hat{y}\)</span> is perfect for steering, producing the force <span class="math inline">\(\mathbf{F} \propto -\hat{x}\)</span> for a particle moving into the page. The quadrupole field <span class="math inline">\(\mathbf{B} \propto y\hat{x} + x\hat{y}\)</span> produces the force <span class="math inline">\(\mathbf{F}_{quad} \propto -x\hat{x} + y\hat{y}\)</span>, which is focusing in the horizontal direction, but <em>defocusing</em> in the vertical direction; however, net focusing can still be achieved by alternating the direction of the quadrupoles. This is analogous to a beam of light passing through a series of converging and diverging lenses. If the spacing and curvature of the lenses are correctly chosen, net focusing can be achieved.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="thinlens.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="Fig. 5. Single-particle motion in the thin-lense approximation."><img src="thinlens.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Fig. 5. Single-particle motion in the thin-lense approximation."></a></p>
-<figcaption>Fig. 5. Single-particle motion in the thin-lense approximation.</figcaption>
-</figure>
-</div>
-<p>The forces which result from these fields are <em>linear</em>, meaning they are proportional the <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> but not <span class="math inline">\(x^2\)</span>, <span class="math inline">\(y^3\)</span>, etc., and they are <em>uncoupled</em>, meaning the dynamics in the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> dimensions are independent. Now, we may ask, can we produce a perfect dipole or quadrupole field? The answer is no. In reality, there will always be higher order multipoles present in the field, but people work very hard to ensure these are much smaller than the desired multipole. This <a href="https://www.youtube.com/watch?v=qTEFZEIWUdo">video</a> shows a bit of the construction process for these magnets.</p>
-<p>For small oscillations, the equations of motion reduce to</p>
-<p><span id="eq-motion-general"><span class="math display">\[
-\begin{aligned}
-    x'' \approx -\frac{q}{mc \beta_s \gamma_s} B_y(x, y, s), \\
-    y'' \approx +\frac{q}{mc \beta_s \gamma_s} B_x(x, y, s),
-\end{aligned}
-\tag{4}\]</span></span></p>
-<p>where <span class="math inline">\(x' = dx/ds\)</span>, <span class="math inline">\(m\)</span> is the particle mass, <span class="math inline">\(c\)</span> is the speed of light in a vacuum, <span class="math inline">\(\beta_s\)</span> is the particle speed divided by <span class="math inline">\(c\)</span>, and <span class="math inline">\(\gamma_s = (1 - \beta_s^2)^{-1/2}\)</span>. (For simplicity, the curved coordinate system has not been taken into account). We will ignore nonlinear terms since they greatly complicate the dynamics. We will also ignore coupling between the planes. With these approximations, we arrive at the equation of motion for a single particle in the transverse plane:</p>
-<p><span id="eq-motion-linear"><span class="math display">\[
-x'' + k(s)x = 0.
-\tag{5}\]</span></span></p>
-<p>This is Hill’s equation (<a href="#eq-Hill" class="quarto-xref">Equation&nbsp;1</a>).</p>
-</section>
-<section id="solving-hills-equation" class="level2">
-<h2 class="anchored" data-anchor-id="solving-hills-equation">Solving Hill’s equation</h2>
-<p>The general solution to Hill’s equation is given by</p>
-<p><span id="eq-Hill-solution"><span class="math display">\[
-x(s) = \sqrt{2J}\,w(s) \cos\left({\mu(s) + \delta}\right).
-\tag{6}\]</span></span></p>
-<p>This introduces an amplitude <span class="math inline">\(w(s) = w(s + L)\)</span> which we call the envelope function, as well as a phase <span class="math inline">\(\mu\)</span>, both of which depend on <span class="math inline">\(s\)</span>. The constants <span class="math inline">\(J\)</span> and <span class="math inline">\(\delta\)</span> are determined by the initial conditions. Let’s plot this trajectory in a FODO (focus-off-defocus-off) lattice, which consists of evenly spaced focusing and defocusing quadrupoles. Here is the focusing strength within the lattice (<em>QF</em> is the focusing quadrupole and <em>QD</em> is the defocusing quadrupole):</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fodo_lattice.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="Fig. 6. FODO lattice."><img src="fodo_lattice.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Fig. 6. FODO lattice."></a></p>
-<figcaption>Fig. 6. FODO lattice.</figcaption>
-</figure>
-</div>
-<p>For now we can think of the lattice as repeating itself forever in the <span class="math inline">\(s\)</span> direction. Each black line below is represents the trajectory for a different initial position and slope; although the individual trajectories look rather complicated, the envelope function has a very simple form.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="envelope.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="Fig. 7. Envelope function and particle trajectories."><img src="envelope.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Fig. 7. Envelope function and particle trajectories."></a></p>
-<figcaption>Fig. 7. Envelope function and particle trajectories.</figcaption>
-</figure>
-</div>
-<p>The particle motion becomes much easier to interpret if we observe it in position-momentum space, aka <em>phase space</em>. The following animation shows the evolution of the particle phase space coordinates at a single position in the lattice. The position shown is <span class="math inline">\(s = nL/4\)</span>, where <span class="math inline">\(n\)</span> is the period number, which corresponds to the midpoint between the focusing and defocusing quadrupoles.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="tbt.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="Fig. 8. Phase space coordinates after every focusing period."><img src="tbt.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" alt="Fig. 8. Phase space coordinates after every focusing period."></a></p>
-<figcaption>Fig. 8. Phase space coordinates after every focusing period.</figcaption>
-</figure>
-</div>
-<p>The particle jumps around an ellipse in phase space. The shape and orientation of the ellipse will change if we look at a different position in the lattice, but its area will be the same. So, the motion is determined by the dimensions and oriention of this ellipse throughout the lattice, as well as the location of the particle on the ellipse boundary. This motivates the definition of the so-called <em>Twiss parameters</em>, which were first introduced by Courant and Snyder in 1958:</p>
-<p><span id="eq-Twiss"><span class="math display">\[
-\beta = w^2, \quad \alpha = -\frac{1}{2}\beta', \quad \gamma = \frac{1 + \alpha^2}{\beta}.
-\tag{7}\]</span></span></p>
-<p>The dimensions of the phase space ellipse are nicely described by these parameters:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="cs_ellipse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Fig. 9. Courant-Snyder ellipse."><img src="cs_ellipse.png" class="img-fluid figure-img" style="width:50.0%" alt="Fig. 9. Courant-Snyder ellipse."></a></p>
-<figcaption>Fig. 9. Courant-Snyder ellipse.</figcaption>
-</figure>
-</div>
-<p>The maximum extent of the ellipse is determined by <span class="math inline">\(\beta\)</span> in the <span class="math inline">\(x\)</span> direction and <span class="math inline">\(\gamma\)</span> in the <span class="math inline">\(y\)</span> direction. <span class="math inline">\(\alpha\)</span> is proportional to the slope of the <span class="math inline">\(\beta\)</span> function, and so determines the tilt angle of the ellipse. The position of a particle on the ellipse is given by the phase <span class="math inline">\(\mu\)</span>. Finally, the invariant of the motion corresponding to the ellipse area is proportional to <span class="math inline">\(2J = \beta {x'}^2 + 2\alpha xx' + \gamma x^2\)</span> for any <span class="math inline">\(x\)</span> and <span class="math inline">\(x'\)</span>. The <span class="math inline">\(\beta\)</span> functions and phase advances in both dimensions are extremely important to measure and control in a real machine.</p>
-<p>A helpful tool to pair with the parameterization we just introduced is the <em>transfer matrix</em>, a matrix which connects the phase space coordinates at two different positions:</p>
-<p><span id="eq-i"><span class="math display">\[
-\begin{bmatrix} x \\ x' \end{bmatrix}_{s + L}
-= \mathbf{M}\begin{bmatrix} x \\ x' \end{bmatrix}_{s}
-\tag{8}\]</span></span></p>
-<p>The transfer matrix can be written as <span class="math inline">\(\mathbf{M} = \mathbf{V}\mathbf{P}\mathbf{V}^{-1}\)</span>, where</p>
-<p><span class="math display">\[\mathbf{V} = \frac{1}{\sqrt{\beta}} \begin{bmatrix} \beta &amp; 0 \\ -\alpha &amp; 1 \end{bmatrix}\]</span> and <span class="math display">\[
-\mathbf{P} = \begin{bmatrix}
-  \cos\mu &amp; \sin\mu \\ -\sin\mu &amp; \cos\mu
-\end{bmatrix}
+<p>Some time ago, Slava Danilov (ORNL) proposed a 4D phase space painting technique, which we now call <em>eigenpainting</em>. The idea is to create coupling in the ring using solenoid or skew quadrupole magnets, then to inject particles along an eigenvector of the <span class="math inline">\(4 \times 4\)</span> ring transfer matrix <span class="math inline">\(\mathbf{M}\)</span>.</p>
+<p><span class="math display">\[
+\mathbf{M} \mathbf{v}_k = e^{-2 \pi \nu_k} \mathbf{v}_k,
 \]</span></p>
-<p>The effect of <span class="math inline">\(\mathbf{V}^{-1}\)</span> is to deform the phase space ellipse into a circle while preserving its area. <span class="math inline">\(\mathbf{P}\)</span> is then just a rotation in phase space, and <span class="math inline">\(\mathbf{V}\)</span> then transforms back into a tilted ellipse. This is illustrated below. <span class="math inline">\(\mathbf{V}\)</span> can be thought of as a time-dependent transformation which removes the variance in the focusing strength, turning the parametric oscillator into a simple harmonic oscillator. It is often called the <em>Floquet transformation</em>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="norm_coords.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="Fig. 10. Effect of the Floquet transformation on the Courant-Snyder ellipse."><img src="norm_coords.png" class="img-fluid figure-img" style="width:100.0%" alt="Fig. 10. Effect of the Floquet transformation on the Courant-Snyder ellipse."></a></p>
-<figcaption>Fig. 10. Effect of the Floquet transformation on the Courant-Snyder ellipse.</figcaption>
+<p>where <span class="math inline">\(\mathbf{v}_k\)</span> are the eigenvectors, <span class="math inline">\(\nu_k\)</span> are the tunes, and <span class="math inline">\(k = 1, 2\)</span>. In general, particle motion is a linear combination of the eigenvectors:</p>
+<p><span class="math display">\[
+\mathbf{x} = \Re \left\{ \sum_k \sqrt{2 J_k} \mathbf{v}_k e^{\mathbf{i \psi_k}} \right\},
+\]</span></p>
+<p>where <span class="math inline">\(J_k\)</span> are amplitudes, <span class="math inline">\(\psi_k\)</span> are phases, and <span class="math inline">\(\Re\)</span> selects the non-imaginary component. In eigenpainting, we inject particles into the ring with <span class="math inline">\(J_1 \gg J_2\)</span>. If we continuously injected particles in this way at a fixed amplitude, the particles would eventually uniformly populate an invariant closed surface in the 4D phase space. If we scaled the injection amplitude, we would fill another surface enclosing the first. It would be like adding a layer of paint to “The Rock” at the University of Michigan.</p>
+<div id="fig-rock" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/umich_rock.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="figures/umich_rock.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Students have been adding layers of paint to the “The Rock” at the University of Michigan for many years.
+</figcaption>
+</figure>
+</div>
+<p>Each eigenvector <a href="../2021-01-25_coupled_parametric_oscillators">traces an ellipse</a> when projected onto any 2D subspace, so we could generate a uniform charge density within an ellipse in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane by scaling the injection amplitude as the square root of time.</p>
+<p><span class="math display">\[
+\mathbf{x}(t) = \Re \left\{ \sqrt{2 J_k} \mathbf{v}_k e^{\mathbf{i \psi_k}}  \right\} \sqrt{t}.
+\]</span></p>
+<p>We would also generate a vortex velocity field, illustrated in <a href="#fig-painting-illustration" class="quarto-xref">Figure&nbsp;4</a>. The distribution would live on a 2D surface in the 4D phase space, and the 4D phase space volume, or <em>emittance</em>, would be <em>zero</em>.</p>
+<div id="fig-painting-illustration" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-painting-illustration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/painting_illustration.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4"><img src="figures/painting_illustration.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:40.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-painting-illustration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Eigenpainting illustration.
+</figcaption>
+</figure>
+</div>
+<p>Things become much more complicated when particles interact through the Coloumb force. These so-called <em>space charge</em> interactions generally invalidate the assumption of linear dynamics. But, surprisingly, eigenpainting works even with space charge. The distribution described above is an equilibrium solution to the Vlasov-Poisson equations, which describe the self-consistent evolution of a phase space distribution under applied focusing forces and intense space charge fields. Equilibrium distributions maintain their functional form over time, even under intense space charge forces. This is not at all trivial. Our distribution, which we call the <em>Danilov distribution</em>, generates space charge forces that are <em>linear</em> in the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> displacements, and the linearity of the space charge force is maintined for all time. It means we can still describe the particle motion using a transfer matrix as long as this transfer matrix includes the self-consistent space charge forces from the beam. Thus, eigenpainting works at any beam intensity.</p>
+<p>A Danilov-like distribution could have significant benefits for accelerator performance. Linear space charge forces result in the same tune shift (change in oscillation frequency) for every beam particle. Space-charge-driven tune spread is a significant intensity limitation in high-intensity rings. Paricle-core resonances driven by nonlinear space charge may also be reduced. Several authors have additionally shown that angular momentum can blur particle-core resonances and enhance beam stability. Thus, perhaps eigenpainting could bypass space charge limitations and produce higher-intensity hadron beams.</p>
+<p>In addition to reduced space charge effects, the beam’s angular momentum could benefit high-energy hadron colliders. High-energy hadron colliders, such as the LHC, begin with an H- linac and injection into a low-energy ring. Generating a beam with low 4D emittance in these early stages makes it possible to flatten the beam at later stages to boost the collision luminosity. The 4D emittance is typically lower-bounded by space charge effects at low energy, but with eigenpainting, one could generate a small 4D emittance beam of arbitrary intensity.</p>
+<div id="fig-flat-beam" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flat-beam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/flat_beam.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5"><img src="figures/flat_beam.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flat-beam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Eigenpainting could be used to generate flat beams for high-energy hadron colliders.
+</figcaption>
 </figure>
 </div>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>We’ve presented the solution to Hill’s equation, which describes a parameteric oscillator. The equation pops up in multiple areas, but we focused on its application in accelerator physics, in which Hill’s equation describes the transverse motion of a single particle in an accelerator with perfectly linear magnetic fields.</p>
-<p>The solution is best understood geometrically: particles move around the surface of an ellipse in phase space, the area of which is an invariant of the motion. The dimensions and orientation of the ellipse are determined by <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, and the location of the particle on the ellipse boundary is determined by <span class="math inline">\(\mu\)</span>. These parameters can be used to construct a time-dependent transformation (<span class="math inline">\(\mathbf{V}\)</span>) which turns the parametric oscillator into a simple harmonic oscillator.</p>
-<p>The next post will examine how this treatment can be extended to include coupling between the horizontal and vertical dimensions.</p>
+<section id="sns-experiments" class="level2">
+<h2 class="anchored" data-anchor-id="sns-experiments">SNS experiments</h2>
+<p>We’ve been working on testing the eigenpainting method in the SNS ring. These experiments have been very frustrating, typically taking 6-8 hours to set up the ring and leaving little time for experiments. And we only get a maximum of one experiment per month. However, we do have some initial results that look promising. I won’t describe the details of the experiment here. Essentially, we set up the ring and programmed the injection kickers to perform the painting method as best we could under various constraints that don’t show up in simulations. Then we injected the beam.</p>
+<p>I’ve been focusing on how to measure the beam during injection. We’re looking to measure strong linear correlations between planes, indicating a small four-dimensional emittance, and to measure the uniformity of the charge density in the transverse plane. Our diagnostics are limited. We can’t measure the beam in the ring, but we can extract the beam on a specific turn and send it to the target. The Ring-Target Beam Transport (RTBT) line, shown in <a href="#fig-rtbt" class="quarto-xref">Figure&nbsp;6</a>, contains several wirescanners. Each wirescanner has a horizontal, diagonal, and vertical wire, generating vertical, horizontal, and diagonal profiles. The wirescanners run in parallel, so a single measurement generates twelve profiles. Since the wirescanners are at different locations along the beamline, each profile corresponds to a different projection axis in the 4D phase space at some point upstream of the wirescanners.</p>
+<div id="fig-rtbt" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rtbt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/rtbt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6"><img src="figures/rtbt.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rtbt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Left: the accumulator ring and ring-target-beam-transport (RTBT) sections of the Spallation Neutron Source (SNS) accelerator. Right: <span class="math inline">\(\beta\)</span> functions phase advances, and focusing element and wirescanner positions at the end of the beamline. The red box outlines the wirescanner region.
+</figcaption>
+</figure>
+</div>
+<p>In <a href="https://arxiv.org/pdf/2204.08303">this paper</a>, I found that these twelve profiles do not determine the 4D covariance matrix. There are constraints on the beam size and minimal control over the phase advances, but we found a slightly better set of optics for the 4D reconstruction. Although one set of measurements can generate a noisy estimate of the 4D covariance matrix, it’s better to take two or three. Unfortunately, this takes time: each measurement takes nearly five minutes! The wirescanners actually measure many different beam pulses as they slowly step through the beam and back to their starting points. If we collect three sets of optics, we’re looking at fifteen minutes per measurement. That severely limits the number of measurements we can take in our limited beam study periods. In our latest experiment, after finally getting the machine set up properly, we were able to take three good sets of wire scans, generating 36 one-dimensional profiles.</p>
+<p>Although we aimed to measure the emittance, I realized we could apply MENT-Flow to the same data to estimate the 4D phase space density. <a href="../2021-10-16_tomographic_reconstruction_in_four_dimensions">During my PhD</a>, I tried to do this using the image of the beam on the target, but the image ended up being too noisy, so I gave up. The wirescanner measurements are more reliable, but it’s unclear if the 1D projections in the RTBT provide enough information to constrain the 4D distribution. That’s the perfect time to use entropy maximization! (Actually, MaxEnt is always the right choice, but it’s most important when data is scarce.)</p>
+<p>We assumed the accelerator lattice could be described by linear focusing elements and, hence, linear transfer matrices connecting the reconstruction to the diagnostics, so it was straightforward to implement a differentiable accelerator model. I then ran MENT-Flow using a Gaussian prior based on the measured covariance matrix. Here’s the reconstruction result:</p>
+<div id="fig-rec" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/rec.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7"><img src="figures/rec.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Experimental MENT-Flow reconstruction of a proton beam from 1D measurements in the SNS RTBT. True/simulated profiles are plotted in red/black on the top right. The 1D and 2D projections of the reconstructed distribution are plotted on the left.
+</figcaption>
+</figure>
+</div>
+<p>The fits aren’t perfect. After extensive testing with known ground-truth distributions, I’m confident that MENT-Flow should be able to fit the distribution to this measurement set and that the result should be close to the true distribution. However, there could be errors in our beam dynamics model or measurements. It’s unclear how to determine the problem.</p>
+<p>The fits aren’t perfect, but they’re still pretty good! There are only a few bad apples. The overall good fit, combined with the entropic regularization, makes me confident that the primary features in the distribution are real. We observed two things. First, there are clear cross-plane dependencies in the reconstructed distribution. The correlations are not nearly as strong as we intended, but their presence tells us we’re moving in the right direction. Second, the beam density is not purely Gaussian; the data have pulled the reconstruction toward something more uniform. A uniform beam density is also a goal of the eigenpainting method. Although the beam density is not as uniform as we’d like it to be, it’s again encouraging that we’re moving in the right direction.</p>
+<p>I’m using simulations to understand how space charge and other effects degrade the beam quality during injection, blurring these correlations by the time we measure the beam. From my studies thus far, I think it’s very likely that strong space charge effects—amplified by the low 0.8 GeV beam energy and small beam size—significantly impacted the beam dynamics. 4D phase space tomography gives us a more powerful comparison to simulations and visually striking communication of our results.</p>
 
 
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Fig. 1. A detector at an interaction point in the LHC.</span>
-<span class="glightbox-desc lightbox-desc-2">Fig. 2. Accelerator energy over time. The vertical axis is not the center of mass energy (CME) — it is the beam energy needed to produce the CME by collision with a resting proton. (source: Rasmus Ischebeck).</span>
-<span class="glightbox-desc lightbox-desc-3">Fig. 3. Curvilinear coordinate system used to describe particle motion along a reference trajectory.</span>
-<span class="glightbox-desc lightbox-desc-4">Fig. 4. Multipole expansion of the magnetic field.</span>
-<span class="glightbox-desc lightbox-desc-5">Fig. 5. Single-particle motion in the thin-lense approximation.</span>
-<span class="glightbox-desc lightbox-desc-6">Fig. 6. FODO lattice.</span>
-<span class="glightbox-desc lightbox-desc-7">Fig. 7. Envelope function and particle trajectories.</span>
-<span class="glightbox-desc lightbox-desc-8">Fig. 8. Phase space coordinates after every focusing period.</span>
-<span class="glightbox-desc lightbox-desc-9">Fig. 9. Courant-Snyder ellipse.</span>
-<span class="glightbox-desc lightbox-desc-10">Fig. 10. Effect of the Floquet transformation on the Courant-Snyder ellipse.</span>
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Simulated beam distribution in the SNS ring.</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: The SNS injection region uses eight injection kickers (time-varying dipole magnets), to control the 4D phase space coordinates of the injected beam.</span>
+<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;3: Students have been adding layers of paint to the “The Rock” at the University of Michigan for many years.</span>
+<span class="glightbox-desc lightbox-desc-4">Figure&nbsp;4: Eigenpainting illustration.</span>
+<span class="glightbox-desc lightbox-desc-5">Figure&nbsp;5: Eigenpainting could be used to generate flat beams for high-energy hadron colliders.</span>
+<span class="glightbox-desc lightbox-desc-6">Figure&nbsp;6: Left: the accumulator ring and ring-target-beam-transport (RTBT) sections of the Spallation Neutron Source (SNS) accelerator. Right: <span class="math inline">\(\beta\)</span> functions phase advances, and focusing element and wirescanner positions at the end of the beamline. The red box outlines the wirescanner region.</span>
+<span class="glightbox-desc lightbox-desc-7">Figure&nbsp;7: Experimental MENT-Flow reconstruction of a proton beam from 1D measurements in the SNS RTBT. True/simulated profiles are plotted in red/black on the top right. The 1D and 2D projections of the reconstructed distribution are plotted on the left.</span>
 </div>
 </section>
 
@@ -882,7 +844,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
