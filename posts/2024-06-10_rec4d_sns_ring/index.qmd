@@ -8,9 +8,6 @@ categories:
   - sns
 bibliography: references.bib
 csl: ./american-physics-society.csl
-format:
-  html:
-    toc: false
 ---
 
 In the [previous post](../2024-06-09_mentflow_part2), I discussed numerical experiments to test an approximate high-dimensional maximum-entropy phase space tomography algorithm by modifying the Generative Phase Space Reconstruction (GPSR) approach. I recently applied this approach to reconstruct the 4D phase space distribution of a high-power proton beam in the SNS ring. 
