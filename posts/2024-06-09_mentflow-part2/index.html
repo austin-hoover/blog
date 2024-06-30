@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.550">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Austin Hoover">
+<meta name="dcterms.date" content="2024-06-09">
+
+<title>Accelerated Inquiry - Maximum-entropy phase space tomography using normalizing flows (part 2)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DLC4C8LZFB"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Accelerated Inquiry</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../archive.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notes/index.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#which-flow" id="toc-which-flow" class="nav-link active" data-scroll-target="#which-flow">Which flow?</a>
+  <ul>
+  <li><a href="#discrete-flows" id="toc-discrete-flows" class="nav-link" data-scroll-target="#discrete-flows">Discrete flows</a></li>
+  <li><a href="#continuous-flows" id="toc-continuous-flows" class="nav-link" data-scroll-target="#continuous-flows">Continuous flows</a></li>
+  <li><a href="#neural-spline-flow" id="toc-neural-spline-flow" class="nav-link" data-scroll-target="#neural-spline-flow">Neural Spline Flow</a></li>
+  </ul></li>
+  <li><a href="#d-reconstructions-from-1d-projections" id="toc-d-reconstructions-from-1d-projections" class="nav-link" data-scroll-target="#d-reconstructions-from-1d-projections">2D reconstructions from 1D projections</a></li>
+  <li><a href="#d-reconstructions-from-1d-projections-1" id="toc-d-reconstructions-from-1d-projections-1" class="nav-link" data-scroll-target="#d-reconstructions-from-1d-projections-1">6D reconstructions from 1D projections</a>
+  <ul>
+  <li><a href="#gmm" id="toc-gmm" class="nav-link" data-scroll-target="#gmm">GMM</a></li>
+  <li><a href="#rings" id="toc-rings" class="nav-link" data-scroll-target="#rings">Rings</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Maximum-entropy phase space tomography using normalizing flows (part 2)</h1>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Austin Hoover </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 9, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The <a href="../2024-06-06_mentflow_part1">last post</a> introduced an approximate maximum-entropy tomography solver using Generative Phase Space Tomography (GPSR) and normalizing flows. Although the method is straightforward, it wasn’t clear how well it would work. Sometimes we measure the beam and analyze the data offline; such experiments aim to examine the phase space structure, which tells us about the upstream beam dynamics. In these cases, slow reconstruction methods work just fine. But in other cases, it would be nice to reconstruct the beam quickly, perhaps in minutes. Then we could update our plan during the experiment —we typically get one or two experiments per month—or use the measurement to make predictions and update the accelerator in response.</p>
+<p>We also weren’t sure how well the entropic regularization would work. How close could we get to the exact constrained maximum-entropy solution? Loaiza-Ganem, Gao, and Cunningham <span class="citation" data-cites="Loaiza_2016">&nbsp;[<a href="#ref-Loaiza_2016" role="doc-biblioref">1</a>]</span> saw positive results on one of the few analytically known maximum entropy distributions in two dimensions. Their focus was on statistical moment constraints, but we felt this needed to be examined in more detail for projection-constrained optimization and the specific case of six-dimensional data.</p>
+<p>We performed a few numerical experiments to answer these questions. The experiments should be reproducible by following the instructions <a href="https://zenodo.org/records/11406452">here</a>.</p>
+<section id="which-flow" class="level2">
+<h2 class="anchored" data-anchor-id="which-flow">Which flow?</h2>
+<p>Normalizing flow transformations are <a href="https://math.stackexchange.com/questions/301364/what-is-a-diffeomorphism">diffeomorphisms</a>—smooth, invertible transformations that preserve the topological features of the base distribution. If the base density is nonzero everywhere, the transformed distribution is also nonzero everywhere; therefore, flows can’t perfectly represent disconnected modes. Stimper, Scholkopf, and Hernandez-Lobato illustrate this in <a href="#fig-modes" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<div id="fig-modes" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-modes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/stimper_fig01.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="figures/stimper_fig01.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Normalizing flows cannot perfectly map a unimodal distribution to a bimodal distribution. Source: <span class="citation" data-cites="Stimper_2022_resample">&nbsp;[<a href="#ref-Stimper_2022_resample" role="doc-biblioref">2</a>]</span>.
+</figcaption>
+</figure>
+</div>
+<p>Flows can still push the density arbitrarily close to zero, so they can represent many multimodal distributions in practice. The problem is that building complicated, invertible transformations is expensive—fully connected neural networks are <em>not</em> invertible. Two approaches have emerged to build powerful flow transformations.</p>
+<section id="discrete-flows" class="level3">
+<h3 class="anchored" data-anchor-id="discrete-flows">Discrete flows</h3>
+<p>A <em>discrete flow</em> is a series of discrete maps, just like computational models that represent an accelerator lattice as a series of symplectic transfer maps. For a map composed of <span class="math inline">\(T\)</span> layers</p>
+<p><span id="eq-layers"><span class="math display">\[
+\mathcal{F} = \mathcal{F}_T \circ \mathcal{F}_{T-1} \circ \dots \circ \mathcal{F}_{2} \circ \mathcal{F}_1,
+\tag{1}\]</span></span></p>
+<p>the coordinates transform as</p>
+<p><span id="eq-layers-coords"><span class="math display">\[
+\mathbf{z}_t = \mathcal{F}_{t} (\mathbf{z}_{t - 1}),
+\tag{2}\]</span></span></p>
+<p>and the Jacobian determinant as</p>
+<p><span id="eq-layers-jac"><span class="math display">\[
+\left| \det J_{\mathcal{F}}(\mathbf{z}_0) \right| =
+\prod_{t=1}^T {
+    \left| \det J_{\mathcal{F}_t}(\mathbf{z}_{t - 1}) \right|.
+}
+\tag{3}\]</span></span></p>
+<p>The Lil’Log blog has nice explanations of some discrete flow models <span class="citation" data-cites="Weng_2018_flow">&nbsp;[<a href="#ref-Weng_2018_flow" role="doc-biblioref">3</a>]</span>. While propagating particles through the flow layers is easy enough, we may need many such layers to approximate complicated distributions. Thus, discrete flow models can have a huge number of parameters.</p>
+</section>
+<section id="continuous-flows" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-flows">Continuous flows</h3>
+<p>A <em>continuous flow</em> defines a velocity field <span class="math inline">\(\mathbf{v}(\mathbf{z}(t), t)\)</span>. We can propagate particles through the flow by integrating an ordinary differential equation (ODE):</p>
+<p><span id="eq-cnf"><span class="math display">\[
+\frac{d\mathbf{z}}{dt} = \mathbf{v}(\mathbf{z}(t), t).
+\tag{4}\]</span></span></p>
+<p>And we can compute the change in density from the associated probability flow:</p>
+<p><span id="eq-cnf-density"><span class="math display">\[
+\frac{d}{dt} \log\rho(\mathbf{z}(t)) = -\nabla \cdot \mathbf{v}(\mathbf{z}(t), t)
+\tag{5}\]</span></span></p>
+<p>Grathwohl et al. <span class="citation" data-cites="Grathwohl_2018_ffjord">&nbsp;[<a href="#ref-Grathwohl_2018_ffjord" role="doc-biblioref">4</a>]</span> described a way to backpropagate derivatives through <a href="#eq-cnf" class="quarto-xref">Equation&nbsp;4</a> and approximately solve <a href="#eq-cnf-density" class="quarto-xref">Equation&nbsp;5</a>. The neural network representing the velocity field <span class="math inline">\(\mathbf{v}(\mathbf{z}(t), t)\)</span> does not need to be invertible. Thus, continuous flows are much more flexible than discrete flows of a similar model size. You can also do cool things with continuous flows like finding optimal transport maps between distributions <span class="citation" data-cites="Onken_2021_ot">&nbsp;[<a href="#ref-Onken_2021_ot" role="doc-biblioref">5</a>]</span>.</p>
+<div id="fig-ffjord" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ffjord-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ffjord" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-ffjord-a" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-ffjord-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/grathwohl_fig01.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="fig-ffjord"><img src="figures/grathwohl_fig01.png" id="fig-ffjord-a" class="quarto-figure quarto-figure-left anchored figure-img" data-ref-parent="fig-ffjord" height="350"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ffjord-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ffjord" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-ffjord-b" class="quarto-figure quarto-figure-right quarto-float anchored" data-fig-align="right">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-ffjord-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/grathwohl_fig02.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="fig-ffjord"><img src="figures/grathwohl_fig02.png" id="fig-ffjord-b" class="quarto-figure quarto-figure-right anchored figure-img" data-ref-parent="fig-ffjord" height="350"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ffjord-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ffjord-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Two figures from the paper that introduced continuous normalizing flows, <em>FFJORD: Free-form continuous dynamics for scalable reversible generative models</em> <span class="citation" data-cites="Grathwohl_2018_ffjord">&nbsp;[<a href="#ref-Grathwohl_2018_ffjord" role="doc-biblioref">4</a>]</span>. (a) Continuous transformation of 1D distribution. (b) Continuous flow (FFJORD) vs.&nbsp;similar size discrete flow (GLOW).
+</figcaption>
+</figure>
+</div>
+<p>However, continuous flows can also be expensive to evaluate because they require solving an ODE. One example I cited was Green, Ting, and Kamdar , who used FFJORD to estimate the density of stars in 6D phase space. Their training took up to a few days on a GPU! In my experiments with continuous flows, I’ve seen good 6D density estimation in less time, but this still illustrates the potential computational cost. (When trained on data samples, it’s now much more efficient to use a technique called <em>flow matching</em>, <span class="citation" data-cites="Lipman_2023_flow">&nbsp;[<a href="#ref-Lipman_2023_flow" role="doc-biblioref">6</a>]</span>. Cambridge MLG has a great <a href="https://mlg.eng.cam.ac.uk/blog/2024/01/20/flow-matching.html">blog post</a> on flow matching.</p>
+</section>
+<section id="neural-spline-flow" class="level3">
+<h3 class="anchored" data-anchor-id="neural-spline-flow">Neural Spline Flow</h3>
+<p>Continuous flows took quite a while to train on my single GPU (MPS on Apple M1 Max). On the other hand, several discrete flows could not model complicated 2D distributions without extremely large neural networks. The Neural Spline Flow (NSF) model <span class="citation" data-cites="Durkan_2019_nsf">&nbsp;[<a href="#ref-Durkan_2019_nsf" role="doc-biblioref">7</a>]</span> was more powerful and efficient than anything else I tried.</p>
+<p>We used an autoregressive flow, where the transformation in each layer is given by</p>
+<p><span id="eq-autoregressive"><span class="math display">\[
+z_i \rightarrow \tau (z_i; c_i(z_1, \dots, z_{i -1})),
+\tag{6}\]</span></span></p>
+<p>where <span class="math inline">\(\mathbf{z} = [z_1, \dots , z_n]^T\)</span>. Autoregressive transformations have two components: a <em>transformer</em> and the <em>conditioner</em>. The transformer, <span class="math inline">\(\tau\)</span>, is an invertible function. The transformation of the <span class="math inline">\(i\)</span>th dimension is <em>conditioned</em> on the conditioner <span class="math inline">\(c_i(z_1, \dots, z_{i -1})\)</span>; in other words, its parameters depend on <span class="math inline">\(c_i\)</span>. The conditioner for the <span class="math inline">\(i\)</span>th dimension is a function only of the dimensions <span class="math inline">\(j &lt; i\)</span>. So, if our dimensions were <span class="math inline">\([x, y, z]\)</span>, the first conditioner would be a function of <span class="math inline">\(x\)</span>, the second conditioner would be a function of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, and the third conditioner would be a function of <span class="math inline">\(x\)</span> <span class="math inline">\(y\)</span>, and <span class="math inline">\(z\)</span>.</p>
+<div id="fig-autoregressive" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-autoregressive-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/papamakarios_fig03.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4"><img src="figures/papamakarios_fig03.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-autoregressive-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Illustration of the autoregressive flow transformation. In this example, <span class="math inline">\(\mathbf{h}_i = c_i(\mathbf{z}_{&lt;i}) = c_i(z_1, \dots, z_{i -1})\)</span>. Source: <span class="citation" data-cites="Papamakarios_2021">&nbsp;[<a href="#ref-Papamakarios_2021" role="doc-biblioref">8</a>]</span>.
+</figcaption>
+</figure>
+</div>
+<p>The reason for this architecture is twofold. First, the transformation is invertible for <em>any</em> conditioner <span class="math inline">\(c_i\)</span>. Second, because the transformation along dimension <span class="math inline">\(i\)</span> depends only on dimensions <span class="math inline">\(j &lt; i\)</span>, the transformation’s Jacobian is triangular, and the determinant of a triangular Jacobian is efficient to compute. The disadvantage of the autoregressive flow is that it’s <span class="math inline">\(n\)</span> times slower in one direction. In <a href="#fig-autoregressive" class="quarto-xref">Figure&nbsp;3</a>, sampling is <span class="math inline">\(n\)</span> times slower than density evaluation. We need to sample quickly, so we simply reverse the architecture for fast sampling and slow density evaluation. (Actually, our model does not need to be invertible! All we need to do is compute the transformation’s Jacobian determinant. I’ve had some problems computing the Jacobian using autodifferentiation, but if we got that working, we could use fully connected neural networks for maximum-entropy tomography.)</p>
+<p>We still need to implement the transformer and conditioner. For the conditioner, we use a masked neural network. The idea is to block some connections between the neurons in a neural network to ensure <span class="math inline">\(c_i(\mathbf{z}) = c_i(\mathbf{z}_{&lt;i})\)</span>. Easy enough! For the transformer, we need an invertible 1D function <span class="math inline">\(\tau\)</span>. NSF introduces a transformer based on splines, i.e., piecewise-defined functions. The conditioner provides <span class="math inline">\(K\)</span> different spline <em>knots</em> <span class="math inline">\(\{ x^{(k)} , y^{(k)} \}\)</span>; as shown in <a href="#fig-splines" class="quarto-xref">Figure&nbsp;4</a>, the function must pass through these knots. The conditioner also provides the derivatives at the knots.</p>
+<div id="fig-splines" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-splines-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/durkan_fig01.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5"><img src="figures/durkan_fig01.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-splines-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Monotonic rational-quadratic splines used in the autoregressive transformer function. Source: <span class="citation" data-cites="Durkan_2019_nsf">&nbsp;[<a href="#ref-Durkan_2019_nsf" role="doc-biblioref">7</a>]</span>.
+</figcaption>
+</figure>
+</div>
+<p>We then write a rather complicated function of these inputs (knot locations and derivatives) that ends up being a quadratic function of the input variable (<span class="math inline">\(x\)</span>) divided by another quadratic function of the input variable. This function has an analytic derivative and, therefore, an analytic Jacobian determinant. And the function can be inverted quickly by finding the roots of a quadratic equation.</p>
+</section>
+</section>
+<section id="d-reconstructions-from-1d-projections" class="level2">
+<h2 class="anchored" data-anchor-id="d-reconstructions-from-1d-projections">2D reconstructions from 1D projections</h2>
+<p>Our first numerical experiments were 2D reconstructions from linear projections, meaning 1D projections after a linear transformation. The goal was to compare to the MENT algorithm. We’re still working on MENT, and it deserves its own post; the key point for our purposes is that if MENT converges, it generates an <em>exact constrained maximum-entropy solution</em>. Thus, MENT is almost like an analytic solution and is an extremely valuable benchmark. 2D examples can also help evaluate the flow’s representational power, as anything beyond 3D is difficult to visualize. We adapted toy distributions from machine learning benchmarks as the ground-truth in these examples. We assumed we could vary the projection angles evenly between 0 and 180 degrees, providing the information-maximizing set of measurements.</p>
+<p><a href="#fig-rec2d-two-spirals" class="quarto-xref">Figure&nbsp;5</a>, <a href="#fig-rec2d-rings" class="quarto-xref">Figure&nbsp;6</a>, and <a href="#fig-rec2d-swissroll" class="quarto-xref">Figure&nbsp;7</a> compare three reconstruction models: MENT, MENT-Flow, and an unregularized neural network (NN). Each column corresponds to the same training data: a fixed number of projections at evenly spaced projection angles. The faint gray lines indicate the projection angles, and the projections are plotted on the bottom section of the figure. We also overlay the simulated projections from each of the three reconstructions (they overlap).</p>
+<div id="fig-rec2d-two-spirals" class="quarto-figure quarto-figure-center quarto-float anchored" data-group="my-gallery">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rec2d-two-spirals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_2d_two-spirals.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="my-gallery"><img src="figures/fig_rec_2d_two-spirals.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rec2d-two-spirals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Reconstruction of 2D “two spirals” distribution.
+</figcaption>
+</figure>
+</div>
+<div id="fig-rec2d-rings" class="quarto-figure quarto-figure-center quarto-float anchored" data-group="my-gallery">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rec2d-rings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_2d_rings.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="my-gallery"><img src="figures/fig_rec_2d_rings.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rec2d-rings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Reconstruction of 2D “rings” distribution.
+</figcaption>
+</figure>
+</div>
+<div id="fig-rec2d-swissroll" class="quarto-figure quarto-figure-center quarto-float anchored" data-group="my-gallery">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rec2d-swissroll-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_2d_swissroll.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="my-gallery"><img src="figures/fig_rec_2d_swissroll.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rec2d-swissroll-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Reconstruction of 2D “swissroll” distribution.
+</figcaption>
+</figure>
+</div>
+<p>The model works! MENT-Flow doesn’t quite make it to the MENT solution, i.e., its entropy is a bit lower, but the differences aren’t too noticeable unless you zoom in.</p>
+<p>Notice that all the distributions in a given column generate the same projections. The neural network finds some interesting solutions. Take a look at the fourth column of <a href="#fig-rec2d-rings" class="quarto-xref">Figure&nbsp;6</a>. In the last row, we have a tilted square-ish shape in which almost all particles are shoved to the corners of the square. In the other rows, the MENT solution returns a uniform-density inner ring surrounded by eight evenly spaced clusters on the edge of a low-density sphere. At first, it looks like there is no way these distributions could generate the same projections, but they do! The 1D projections are identical: left-right symmetric with two higher-density inner modes and two lower-density outer modes. It’s easy to see how the MENT solution generates these projections. Surprisingly, in the NN solution, the clusters at the corners of the tilted square are arranged such that the 1D projections always have four modes, with the two inner modes of higher density.</p>
+<p>The important point is that the measurements do not discriminate between these solutions; only our prior—a Gaussian distribution in this case—makes a difference. The MENT solutions are closer to the prior. Consider the cases on the far left, where we provide only two measurements. These measurements are the marginal distributions <span class="math inline">\(\rho(x)\)</span> and <span class="math inline">\(\rho(x'\)</span>). There is no dependence between <span class="math inline">\(x\)</span> and <span class="math inline">\(x'\)</span> in the prior distribution: <span class="math inline">\(\rho_*(x, x') = \rho(x)\rho(x')\)</span>. The measurements provide no information about the relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(x'\)</span>. Therefore, the MENT posterior distribution does not contain any dependence between <span class="math inline">\(x\)</span> and <span class="math inline">\(x'\)</span>: <span class="math inline">\(\rho(x, x') = \rho(x)\rho(x')\)</span>. A similar principle applies in the remaining cases: MENT does not update the prior unless forced to by the data.</p>
+<p>When evaluating these results, it’s important to keep in mind that one cannot do better than MENT with a fixed set of data unless one is lucky. MENT only enforces logically consistent inference. That’s it! If the reconstruction is poor, it implies we need more constraints or a better prior distribution. It’s also worth noting that MENT is entirely flexible. We could obtain <em>any</em> posterior by varying the prior. The idea that MENT is somehow inflexible or overly restrictive comes, I think, from an assumption that the prior must be uniform (perhaps because MENT was first formulated using absolute entropy, not relative entropy).</p>
+<p>As I mentioned, MENT-Flow solutions are approximate because we use a penalty method for the constrained optimization. We minimize <span class="math inline">\(L = -H + \mu D\)</span>, where <span class="math inline">\(H\)</span> is the entropy and <span class="math inline">\(D\)</span> is the data mismatch. We start with <span class="math inline">\(\mu = 0\)</span>, then gradually increase <span class="math inline">\(\mu\)</span> until <span class="math inline">\(D\)</span> is small enough. There is a risk of overfitting if <span class="math inline">\(\mu\)</span> becomes too large too quickly. I don’t have an automatic stopping criterion. I find it best to check the simulated vs.&nbsp;measured projections by eye because we usually know approximately how tight our fit should be based on the measurement quality (and how much we trust our beam physics simulation). It makes sense to monitor the reconstructed distribution at the same time. It’s usually obvious when the NSF flow is overfitting because of unnatural-looking high-frequency terms.</p>
+<div id="fig-loss" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-loss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_loss.png" class="lightbox" data-glightbox="description: .lightbox-desc-9" data-gallery="quarto-lightbox-gallery-9"><img src="figures/fig_loss.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-loss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: A typical training run. The plot shows the negative entropy in black, and the data fit in grey. Both quantities should be as small as possible. The distribution moves from the unconstrained to the constrained point of maximum entropy as the penalty parameter increases at each epoch. The jumps in the loss curves correspond to jumps in the penalty parameter.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="d-reconstructions-from-1d-projections-1" class="level2">
+<h2 class="anchored" data-anchor-id="d-reconstructions-from-1d-projections-1">6D reconstructions from 1D projections</h2>
+<p><a href="#fig-rec2d-two-spirals" class="quarto-xref">Figure&nbsp;5</a>, <a href="#fig-rec2d-rings" class="quarto-xref">Figure&nbsp;6</a>, and <a href="#fig-rec2d-swissroll" class="quarto-xref">Figure&nbsp;7</a> show that MENT-Flow works as intended in 2D. What about 6D? We don’t have an efficient 6D version of MENT—if we did, we would use it—but the entropy calculation does not depend on dimension. As a comparison, we continued to train a neural network to find solutions farther from the prior. (This turns out to be a very useful tool in real experiments.) The perhaps bigger question is whether the flow would fit 6D distributions efficiently. The 2D experiments took a few minutes to run on a single GPU (of course, many hyperparameters affect the runtime).</p>
+<p>Designing the 6D numerical experiments was daunting. 6D tomography is brand new. A group from SLAC recently proposed a promising measurement beamline consisting of a single quadrupole, dipole, and vertical deflecting RF cavity [https://arxiv.org/abs/2404.10853], but that idea wasn’t proposed until later. Rather than design a beamline, we decided to consider a more abstract problem.</p>
+<p>Unlike 2D tomography, there isn’t a clear way to manipulate the beam to maximize the information encoded in the measurement set. In 2D tomography, we know we should rotate the distribution around 180 degrees, typically with equally spaced angles. Things are way less clear in high dimensions. To start, we needed to select the dimension of the measurements: 1D or 2D. We selected 1D projections because it is easier to generalize the notion of “projection angle” to high dimensions when the projections are 1D. Note that a 1D projection is defined by a point on the unit sphere, or a unit vector <span class="math inline">\(\mathbf{v}\)</span>. This is the projection axis. The integration axis is an (<span class="math inline">\(n - 1\)</span>)-dimensional plane orthogonal to <span class="math inline">\(\mathbf{v}\)</span>. Although there is no well-defined “projection angle,” there is a well-defined angle <em>between projections</em>: <span class="math inline">\(\cos\theta = \mathbf{v}_I \cdot \mathbf{v}_j\)</span>. It seems like we want to maximize the average angle between vectors. In other words, we want to distribute unit vectors as uniformly as possible on the unit sphere. We can easily generate random samples from a uniform distribution on the sphere by sampling from an <span class="math inline">\(n\)</span>-dimensional Gaussian distribution and dividing each point by its radius. So that’s what we decided to do. The reconstruction should converge to the true distribution in the limit of many projections.</p>
+<div id="fig-unitsphere" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-unitsphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/random_projections.png" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10"><img src="figures/random_projections.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:20.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-unitsphere-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Illustration of random 1D projection axes sampled from the the unit sphere in 6D phase space.
+</figcaption>
+</figure>
+</div>
+<section id="gmm" class="level3">
+<h3 class="anchored" data-anchor-id="gmm">GMM</h3>
+<p>Our first experiments used a 6D Gaussian mixture distribution as the ground truth. The distribution is the superposition of seven Gaussian distributions with randomly chosen means and variances. We examined reconstructions from 25 random projections; see <a href="#fig-rec6d-gmm-25" class="quarto-xref">Figure&nbsp;10</a>. (Click on the figures to enlarge!)</p>
+<div id="fig-rec6d-gmm-25" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rec6d-gmm-25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-gmm-25" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-gmm-25-a" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-gmm-25-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_flow_gaussian_mixture_25-proj_sim.png" class="lightbox" data-glightbox="description: .lightbox-desc-11" data-gallery="fig-rec6d-gmm-25"><img src="figures/fig_rec_nd_1d_flow_gaussian_mixture_25-proj_sim.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-gmm-25"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-gmm-25-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Data (Flow)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-gmm-25" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-gmm-25-b" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-gmm-25-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_nn_gaussian_mixture_25-proj_sim.png" class="lightbox" data-glightbox="description: .lightbox-desc-12" data-gallery="fig-rec6d-gmm-25"><img src="figures/fig_rec_nd_1d_nn_gaussian_mixture_25-proj_sim.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-gmm-25"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-gmm-25-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Data (NN)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-gmm-25" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-gmm-25-c" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-gmm-25-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_flow_gaussian_mixture_25-proj_corner.png" class="lightbox" data-glightbox="description: .lightbox-desc-13" data-gallery="fig-rec6d-gmm-25"><img src="figures/fig_rec_nd_1d_flow_gaussian_mixture_25-proj_corner.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-gmm-25"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-gmm-25-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Reconstruction (Flow)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-gmm-25" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-gmm-25-d" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-gmm-25-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_nn_gaussian_mixture_25-proj_corner.png" class="lightbox" data-glightbox="description: .lightbox-desc-14" data-gallery="fig-rec6d-gmm-25"><img src="figures/fig_rec_nd_1d_nn_gaussian_mixture_25-proj_corner.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-gmm-25"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-gmm-25-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Reconstruction (NN)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rec6d-gmm-25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Reconstruction of 6D GMM distribution from 25 random 1D projections. Red = true, blue = reconstructed.
+</figcaption>
+</figure>
+</div>
+<p>The true and simulated 1D measurement measurements overlap in both models. Yet the 6D distributions are again quite different. To compare subplots, look along the diagonal, moving from lower left to upper right. The entropy penalty pulls the reconstruction much closer to the uniform prior; there are more high-frequency terms in the NN reconstruction. Also notice that the distribution’s modes are better resolved in the MENT-Flow reconstruction. In particular, observe the <span class="math inline">\(x'\)</span>-<span class="math inline">\(y\)</span> projection in both plots. (There should be five modes visible.)</p>
+<p>Using 100 projections provides much tighter constraints, and the models are much closer together. But they are still not the same! See <a href="#fig-rec6d-gmm-100" class="quarto-xref">Figure&nbsp;11</a>. This example shows that MENT-Flow can fit complex 6D distributions to large measurement sets in reasonable time (around 10-15 minutes for my training hyperparameters).</p>
+<div id="fig-rec6d-gmm-100" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rec6d-gmm-100-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-gmm-100" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-gmm-100-a" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-gmm-100-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_flow_gaussian_mixture_100-proj_sim.png" class="lightbox" data-glightbox="description: .lightbox-desc-15" data-gallery="fig-rec6d-gmm-100"><img src="figures/fig_rec_nd_1d_flow_gaussian_mixture_100-proj_sim.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-gmm-100"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-gmm-100-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Data (Flow)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-gmm-100" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-gmm-100-b" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-gmm-100-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_nn_gaussian_mixture_100-proj_sim.png" class="lightbox" data-glightbox="description: .lightbox-desc-16" data-gallery="fig-rec6d-gmm-100"><img src="figures/fig_rec_nd_1d_nn_gaussian_mixture_100-proj_sim.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-gmm-100"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-gmm-100-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Data (NN)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-gmm-100" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-gmm-100-c" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-gmm-100-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_flow_gaussian_mixture_100-proj_corner.png" class="lightbox" data-glightbox="description: .lightbox-desc-17" data-gallery="fig-rec6d-gmm-100"><img src="figures/fig_rec_nd_1d_flow_gaussian_mixture_100-proj_corner.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-gmm-100"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-gmm-100-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Reconstruction (Flow)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-gmm-100" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-gmm-100-d" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-gmm-100-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_nn_gaussian_mixture_100-proj_corner.png" class="lightbox" data-glightbox="description: .lightbox-desc-18" data-gallery="fig-rec6d-gmm-100"><img src="figures/fig_rec_nd_1d_nn_gaussian_mixture_100-proj_corner.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-gmm-100"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-gmm-100-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Reconstruction (NN)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rec6d-gmm-100-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Reconstruction of 6D GMM distribution from 100 random 1D projections. Red = true, blue = reconstructed.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="rings" class="level3">
+<h3 class="anchored" data-anchor-id="rings">Rings</h3>
+<p>We were also interested in testing MENT-Flow on hollow distributions. In our <a href="../2023-05-28_btf">direct 5D/6D phase space measurements</a> at the SNS, we’ve observed hollow structures in 3D and 5D distributions that are not visible from low-dimensional projections. Contrast with <a href="#fig-rec6d-gmm-25" class="quarto-xref">Figure&nbsp;10</a> and <a href="#fig-rec6d-gmm-100" class="quarto-xref">Figure&nbsp;11</a>, where we can see most of the modes from 2D views. It’s best to illustrate with a simple example. Consider the “rings” distribution from <a href="#fig-rec2d-rings" class="quarto-xref">Figure&nbsp;6</a>. It’s straightforward to generalize the distribution to <span class="math inline">\(n\)</span> dimensions, so we did this and ran the same 6D reconstruction as just described. A 25-projection reconstruction is shown in <a href="#fig-rec6d-rings-25" class="quarto-xref">Figure&nbsp;12</a>.</p>
+<div id="fig-rec6d-rings-25" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rec6d-rings-25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-rings-25" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-rings-25-a" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-rings-25-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_flow_rings_25-proj_sim.png" class="lightbox" data-glightbox="description: .lightbox-desc-19" data-gallery="fig-rec6d-rings-25"><img src="figures/fig_rec_nd_1d_flow_rings_25-proj_sim.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-rings-25"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-rings-25-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Data (Flow)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-rings-25" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-rings-25-b" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-rings-25-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_nn_rings_25-proj_sim.png" class="lightbox" data-glightbox="description: .lightbox-desc-20" data-gallery="fig-rec6d-rings-25"><img src="figures/fig_rec_nd_1d_nn_rings_25-proj_sim.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-rings-25"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-rings-25-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Data (NN)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-rings-25" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-rings-25-c" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-rings-25-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_flow_rings_25-proj_slice.png" class="lightbox" data-glightbox="description: .lightbox-desc-21" data-gallery="fig-rec6d-rings-25"><img src="figures/fig_rec_nd_1d_flow_rings_25-proj_slice.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-rings-25"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-rings-25-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Reconstruction (Flow)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-rings-25" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-rings-25-d" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-rings-25-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_nn_rings_25-proj_slice.png" class="lightbox" data-glightbox="description: .lightbox-desc-22" data-gallery="fig-rec6d-rings-25"><img src="figures/fig_rec_nd_1d_nn_rings_25-proj_slice.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-rings-25"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-rings-25-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Reconstruction (NN)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rec6d-rings-25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Reconstruction of 6D “rings” distribution from 25 random 1D projections. Red = true, blue = reconstructed. (c-d) 2D distribution within a shrinking 4D sphere in the unplotted coordinates.
+</figcaption>
+</figure>
+</div>
+<p>The 1D projections are <em>boring</em>; they don’t even hint at the structure in the 6D space! To make each figure in the bottom row, we select particles within a shrinking 4D ball in the transverse (<span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span>-<span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>) plane, then plot the longitudinal (<span class="math inline">\(z\)</span>-<span class="math inline">\(z'\)</span>) distribution of the selected particles. This is a <em>spherical slice</em>. On the far left, we see the full projection <span class="math inline">\(\rho(z, z')\)</span>. On the far right, we see the two rings inside the 4D transverse core. MENT-Flow produces a slightly modified version of the Gaussian prior. A higher-density core surrounded by a low-density cloud has emerged, but the data do not provide tight constraints on the distribution. Still, the (approximate) maximum-entropy distribution is preferred to the NN solution, which ejects all particles from the core.</p>
+<p>These points are even clearer in <a href="#fig-rec6d-rings-100" class="quarto-xref">Figure&nbsp;13</a>, where we use 100 projections as training data. There still isn’t enough data to resolve two rings, but the MENT-Flow reconstruction shows a clear high-density spherical core surrounded by a low-density particle cloud. I was quite surprised that the neural network split the core! One would think 100 1D projections would be enough to constrain the 6D distribution, but this is false. (These results depend on the random seed used to define the projection axes, but similar patterns are common.)</p>
+<div id="fig-rec6d-rings-100" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rec6d-rings-100-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-rings-100" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-rings-100-a" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-rings-100-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_flow_rings_100-proj_sim.png" class="lightbox" data-glightbox="description: .lightbox-desc-23" data-gallery="fig-rec6d-rings-100"><img src="figures/fig_rec_nd_1d_flow_rings_100-proj_sim.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-rings-100"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-rings-100-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Data (Flow)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-rings-100" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-rings-100-b" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-rings-100-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_nn_rings_100-proj_sim.png" class="lightbox" data-glightbox="description: .lightbox-desc-24" data-gallery="fig-rec6d-rings-100"><img src="figures/fig_rec_nd_1d_nn_rings_100-proj_sim.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-rings-100"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-rings-100-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Data (NN)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-rings-100" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-rings-100-c" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-rings-100-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_flow_rings_100-proj_slice.png" class="lightbox" data-glightbox="description: .lightbox-desc-25" data-gallery="fig-rec6d-rings-100"><img src="figures/fig_rec_nd_1d_flow_rings_100-proj_slice.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-rings-100"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-rings-100-c-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Reconstruction (Flow)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-rec6d-rings-100" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-rec6d-rings-100-d" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-rec6d-rings-100-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/fig_rec_nd_1d_nn_rings_100-proj_slice.png" class="lightbox" data-glightbox="description: .lightbox-desc-26" data-gallery="fig-rec6d-rings-100"><img src="figures/fig_rec_nd_1d_nn_rings_100-proj_slice.png" class="img-fluid figure-img" data-ref-parent="fig-rec6d-rings-100"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-rec6d-rings-100-d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Reconstruction (NN)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rec6d-rings-100-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Reconstruction of 6D “rings” distribution from 100 random 1D projections. Red = true, blue = reconstructed.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Numerical experiments show that MENT-Flow works and could be useful in 4D/6D phase space tomography when measurements are sparse. There are several interesting research problems to pursue, some related to MENT, some to MENT-Flow, some to GPSR, and some to phase space tomography in general. In the next post, I’ll describe how we used MENT-Flow to reconstruct the 4D phase space density of an intense proton beam from 1D measurements in the SNS.</p>
+
+
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Normalizing flows cannot perfectly map a unimodal distribution to a bimodal distribution. Source: <span class="citation" data-cites="Stimper_2022_resample">&nbsp;[<a href="#ref-Stimper_2022_resample" role="doc-biblioref">2</a>]</span>.</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2&nbsp;(a): </span>
+<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;2&nbsp;(b): </span>
+<span class="glightbox-desc lightbox-desc-4">Figure&nbsp;3: Illustration of the autoregressive flow transformation. In this example, <span class="math inline">\(\mathbf{h}_i = c_i(\mathbf{z}_{&lt;i}) = c_i(z_1, \dots, z_{i -1})\)</span>. Source: <span class="citation" data-cites="Papamakarios_2021">&nbsp;[<a href="#ref-Papamakarios_2021" role="doc-biblioref">8</a>]</span>.</span>
+<span class="glightbox-desc lightbox-desc-5">Figure&nbsp;4: Monotonic rational-quadratic splines used in the autoregressive transformer function. Source: <span class="citation" data-cites="Durkan_2019_nsf">&nbsp;[<a href="#ref-Durkan_2019_nsf" role="doc-biblioref">7</a>]</span>.</span>
+<span class="glightbox-desc lightbox-desc-6">Figure&nbsp;5: Reconstruction of 2D “two spirals” distribution.</span>
+<span class="glightbox-desc lightbox-desc-7">Figure&nbsp;6: Reconstruction of 2D “rings” distribution.</span>
+<span class="glightbox-desc lightbox-desc-8">Figure&nbsp;7: Reconstruction of 2D “swissroll” distribution.</span>
+<span class="glightbox-desc lightbox-desc-9">Figure&nbsp;8: A typical training run. The plot shows the negative entropy in black, and the data fit in grey. Both quantities should be as small as possible. The distribution moves from the unconstrained to the constrained point of maximum entropy as the penalty parameter increases at each epoch. The jumps in the loss curves correspond to jumps in the penalty parameter.</span>
+<span class="glightbox-desc lightbox-desc-10">Figure&nbsp;9: Illustration of random 1D projection axes sampled from the the unit sphere in 6D phase space.</span>
+<span class="glightbox-desc lightbox-desc-11">Figure&nbsp;10&nbsp;(a): Data (Flow)</span>
+<span class="glightbox-desc lightbox-desc-12">Figure&nbsp;10&nbsp;(b): Data (NN)</span>
+<span class="glightbox-desc lightbox-desc-13">Figure&nbsp;10&nbsp;(c): Reconstruction (Flow)</span>
+<span class="glightbox-desc lightbox-desc-14">Figure&nbsp;10&nbsp;(d): Reconstruction (NN)</span>
+<span class="glightbox-desc lightbox-desc-15">Figure&nbsp;11&nbsp;(a): Data (Flow)</span>
+<span class="glightbox-desc lightbox-desc-16">Figure&nbsp;11&nbsp;(b): Data (NN)</span>
+<span class="glightbox-desc lightbox-desc-17">Figure&nbsp;11&nbsp;(c): Reconstruction (Flow)</span>
+<span class="glightbox-desc lightbox-desc-18">Figure&nbsp;11&nbsp;(d): Reconstruction (NN)</span>
+<span class="glightbox-desc lightbox-desc-19">Figure&nbsp;12&nbsp;(a): Data (Flow)</span>
+<span class="glightbox-desc lightbox-desc-20">Figure&nbsp;12&nbsp;(b): Data (NN)</span>
+<span class="glightbox-desc lightbox-desc-21">Figure&nbsp;12&nbsp;(c): Reconstruction (Flow)</span>
+<span class="glightbox-desc lightbox-desc-22">Figure&nbsp;12&nbsp;(d): Reconstruction (NN)</span>
+<span class="glightbox-desc lightbox-desc-23">Figure&nbsp;13&nbsp;(a): Data (Flow)</span>
+<span class="glightbox-desc lightbox-desc-24">Figure&nbsp;13&nbsp;(b): Data (NN)</span>
+<span class="glightbox-desc lightbox-desc-25">Figure&nbsp;13&nbsp;(c): Reconstruction (Flow)</span>
+<span class="glightbox-desc lightbox-desc-26">Figure&nbsp;13&nbsp;(d): Reconstruction (NN)</span>
+</div>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-Loaiza_2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">G. Loaiza-Ganem, Y. Gao, and J. P. Cunningham, <em>Maximum Entropy Flow Networks</em>, in <em>International Conference on Learning Representations</em> (2016).</div>
+</div>
+<div id="ref-Stimper_2022_resample" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">V. Stimper, B. Schölkopf, and J. M. HernÃ¡ndez-Lobato, <em><a href="">Resampling Base Distributions of Normalizing Flows</a></em>, <strong>151</strong>, 4915 (2022).</div>
+</div>
+<div id="ref-Weng_2018_flow" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">L. Weng, <em><a href="https://lilianweng.github.io/posts/2018-10-13-flow-models/">Flow-Based Deep Generative Models</a></em>, Lilianweng.github.io (2018).</div>
+</div>
+<div id="ref-Grathwohl_2018_ffjord" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">W. Grathwohl, R. T. Chen, J. Bettencourt, I. Sutskever, and D. Duvenaud, <em>Ffjord: Free-Form Continuous Dynamics for Scalable Reversible Generative Models</em>, arXiv Preprint arXiv:1810.01367 (2018).</div>
+</div>
+<div id="ref-Onken_2021_ot" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">D. Onken, S. W. Fung, X. Li, and L. Ruthotto, <em>Ot-Flow: Fast and Accurate Continuous Normalizing Flows via Optimal Transport</em>, in <em>Proceedings of the AAAI Conference on Artificial Intelligence</em>, Vol. 35 (2021), pp. 9223–9232.</div>
+</div>
+<div id="ref-Lipman_2023_flow" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">Y. Lipman, R. T. Q. Chen, H. Ben-Hamu, M. Nickel, and M. Le, <em><a href="https://openreview.net/forum?id=PqvMRDCJT9t">Flow Matching for Generative Modeling</a></em>, in <em>The Eleventh International Conference on Learning Representations</em> (2023).</div>
+</div>
+<div id="ref-Durkan_2019_nsf" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">C. Durkan, A. Bekasov, I. Murray, and G. Papamakarios, <em>Neural Spline Flows</em>, Advances in Neural Information Processing Systems <strong>32</strong>, (2019).</div>
+</div>
+<div id="ref-Papamakarios_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">G. Papamakarios, E. Nalisnick, D. J. Rezende, S. Mohamed, and B. Lakshminarayanan, <em>Normalizing Flows for Probabilistic Modeling and Inference</em>, The Journal of Machine Learning Research <strong>22</strong>, 2617 (2021).</div>
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>
