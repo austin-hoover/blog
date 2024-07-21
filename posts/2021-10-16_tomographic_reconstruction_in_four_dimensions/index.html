@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,14 +72,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -107,15 +104,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DLC4C8LZFB"></script>
-
-<script type="text/javascript">
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
-</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -149,7 +137,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -190,33 +178,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#d-reconstruction" id="toc-d-reconstruction" class="nav-link" data-scroll-target="#d-reconstruction">2D reconstruction</a>
-  <ul>
-  <li><a href="#filtered-back-projection-fpb" id="toc-filtered-back-projection-fpb" class="nav-link" data-scroll-target="#filtered-back-projection-fpb">Filtered Back-Projection (FPB)</a></li>
-  <li><a href="#algebraic-reconstruction-art" id="toc-algebraic-reconstruction-art" class="nav-link" data-scroll-target="#algebraic-reconstruction-art">Algebraic Reconstruction (ART)</a></li>
-  <li><a href="#ment" id="toc-ment" class="nav-link" data-scroll-target="#ment">MENT</a></li>
-  <li><a href="#grid-based-methods" id="toc-grid-based-methods" class="nav-link" data-scroll-target="#grid-based-methods">Grid-based methods</a></li>
-  </ul></li>
-  <li><a href="#d-reconstruction-1" id="toc-d-reconstruction-1" class="nav-link" data-scroll-target="#d-reconstruction-1">4D reconstruction</a>
-  <ul>
-  <li><a href="#description-of-hocks-method" id="toc-description-of-hocks-method" class="nav-link" data-scroll-target="#description-of-hocks-method">Description of Hock’s method</a></li>
-  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy">Accuracy</a></li>
-  </ul></li>
-  <li><a href="#feasibility" id="toc-feasibility" class="nav-link" data-scroll-target="#feasibility">Feasibility</a>
-  <ul>
-  <li><a href="#imaging-system" id="toc-imaging-system" class="nav-link" data-scroll-target="#imaging-system">Imaging system</a></li>
-  <li><a href="#optics-control" id="toc-optics-control" class="nav-link" data-scroll-target="#optics-control">Optics control</a></li>
-  <li><a href="#outlook" id="toc-outlook" class="nav-link" data-scroll-target="#outlook">Outlook</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -298,7 +260,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_output_dist2d.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="_output_dist2d.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+<p><img src="_output_dist2d.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>We now simulate the measurements. Assume we have the ability to rotate the distribution without any shearing or scaling. We then rotate the distribution by different angles and project it onto the <span class="math inline">\(x\)</span> axis. It will turn out that measurement time limits the number of projections we can use; for now, we’ll limit ourselves to 15 projections.</p>
@@ -324,7 +286,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_output_sinogram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="_output_sinogram.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+<p><img src="_output_sinogram.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>We’ll also need some helper functions.</p>
@@ -391,19 +353,19 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_output_FBP.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="_output_FBP.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
+<p><img src="_output_FBP.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>FBP generally requires a high number of projections to avoid these streaking artifacts. Let’s see what happens when the number of projections is varied. In each case, we distribute the angles evenly over 180 degrees.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_output_vary_n_angles.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="_output_vary_n_angles.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+<p><img src="_output_vary_n_angles.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>We were also careful to choose an angular range close to 180 degrees to maximize the information carried by the projections.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_output_vary_angular_range.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="_output_vary_angular_range.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+<p><img src="_output_vary_angular_range.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>The angular range in an accelerator is determined by the amount of control we have over the optics between the reconstruction location and the measurement location. It’s possible to run into problems here; for example, varying a magnet too far from its design value could make the beam unacceptably large at a downstream location. Magnets also have limited strengths, and sometimes they can’t be controlled independently. Additionally, achieving a specific projection angle is not always straightforward; usually an optimizer is used to find the correct settings, and this takes time. I’ll come back to these points later.</p>
@@ -424,7 +386,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_output_SART.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="_output_SART.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
+<p><img src="_output_SART.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>The SART algorithm looks like it does better with fewer projections. SART is known to produce a good answer in only one iteration. Running it again with the original reconstruction as an initial estimate can sharpen image but may increase noise. In this case, it looks like running SART again leads to a better reconstruction without increasing noise.</p>
@@ -437,7 +399,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_output_SART2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="_output_SART2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
+<p><img src="_output_SART2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 <p>ART easily generalizes to 4D, but it could become expensive since <span class="math inline">\(P\)</span> would have <span class="math inline">\(K N^2 \times N^4\)</span> elements. This has been carried out by Wolski (2020) with <span class="math inline">\(N = 69\)</span>. I’ll leave investigation of 4D ART for a future post.</p>
@@ -487,7 +449,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_output_corner.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="_output_corner.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></a></p>
+<p><img src="_output_corner.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 <p>We can estimate the distribution by binning the particles on a 4D grid.</p>
@@ -523,7 +485,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_output_target_phase_scan.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="_output_target_phase_scan.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></a></p>
+<p><img src="_output_target_phase_scan.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>The above animation shows a few steps in the scan; since the transfer matrices are rotation matrices, only the cross-plane correlation changes.</p>
@@ -591,7 +553,7 @@ sum(Z_true) * bin_volume = 0.9999999999999879</code></pre>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_output_compare_1d.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="_output_compare_1d.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></a></p>
+<p><img src="_output_compare_1d.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></p>
 </figure>
 </div>
 <div id="a490aa65-1fb1-46b4-8b6a-28756da177f3" class="cell" data-execution_count="33">
@@ -625,7 +587,7 @@ sum(Z_true) * bin_volume = 0.9999999999999879</code></pre>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="_output_compare_2d.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="_output_compare_2d.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%"></a></p>
+<p><img src="_output_compare_2d.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%"></p>
 </figure>
 </div>
 <p>In the second plot, the error is given in number of particles. It looks like the method worked well to reconstruct this distribution. [Edit 2023-02-13: This is not a sufficient comparison in 4D: one needs to look at slices, and use more complex distribution.]</p>
@@ -638,13 +600,13 @@ sum(Z_true) * bin_volume = 0.9999999999999879</code></pre>
 <p>The SNS target is a steel vessel containing liquid mercury. At the beginning of this post, I mentioned that the SNS has a target imaging system. Here is a diagram showing how the target imaging system works…</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="target_image_system.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="target_image_system.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a></p>
+<p><img src="target_image_system.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
 <p>… and an example of an image.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="target_image.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="target_image.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></a></p>
+<p><img src="target_image.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
 <p>To reduce noise, the image was averaged over five beam pulses and a Gaussian blur was applied with <span class="math inline">\(\sigma = 3\)</span>. There are four fiducial markers that are visible as dark spots on the corner of the beam. The black ellipse represents a measurement from wire-scanners upstream of the target. Collecting this image is easy.</p>
@@ -659,13 +621,13 @@ sum(Z_true) * bin_volume = 0.9999999999999879</code></pre>
 <p>I plugged all this into an optimizer and asked to vary the phase advances in a 180 degree range. After fideling with the starting and ending phases, I was able to more-or-less do this. I used 15 phase advances in <span class="math inline">\(x\)</span> and 15 phase advances in <span class="math inline">\(y\)</span>, just like in this post. Each optimization took around 16 seconds, so the script took around an hour to run. Below are the computed phase advances at each step as well as the strengths of the seven magnet power supplies.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="target_phase_scan1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="target_phase_scan1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></a></p>
+<p><img src="target_phase_scan1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 <p>There are a few steps near the end of the scan in which the phase advances aren’t exactly correct, but they are close. I can always decrease the phase coverage slighly, or maybe these steps just need a slightly different initial guess. Here are the beta functions for all steps in one plot. The plot ends at the target.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="target_phase_scan2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="target_phase_scan2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></a></p>
+<p><img src="target_phase_scan2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 <p>The bottom plot is just the integral of the inverse of the top plot. The beta functions remain within their limits.</p>
@@ -816,7 +778,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = true;
+  const darkModeDefault = false;
   let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
@@ -903,6 +865,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -937,7 +917,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1214,31 +1198,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 
