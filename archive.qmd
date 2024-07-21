@@ -6,4 +6,5 @@ listing:
     fields: [title, date]
     date-format: YYYY‑MM‑DD
     table-hover: true
+    categories: true
 ---
