@@ -369,3 +369,21 @@
   categories:
     - history
     - world war ii
+
+- title: "Bayesian Data Analysis"
+  author: A. Gelman, J. Carlin, H. Stern, D. Rubin
+  date: 2024-07-21
+  categories:
+    - mathematics
+    - probability
+    - statistics
+
+- title: "Data Analysis: A Bayesian Tutorial"
+  author: D. Sivia, J. Skilling
+  date: 2024-07-21
+  categories:
+    - mathematics
+    - probability
+    - statistics
+
+

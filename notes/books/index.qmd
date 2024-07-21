@@ -5,7 +5,7 @@ listing:
     contents:
         - "*.qmd"
         - "books.yml"
-    fields: [title, author, date]
+    fields: [title, author]
     field-display-names:
         title: "Title"
         author: "Author"
@@ -22,3 +22,4 @@ listing:
     max-items: 99999999
     page-size: 99999999
 ---
+
