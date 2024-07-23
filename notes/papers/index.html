@@ -80,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author"],
+      searchColumns: ["listing-title","listing-author","listing-year","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -183,7 +183,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="algorithms">algorithms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cats">cats <span class="quarto-category-count">(1)</span></div><div class="category" data-category="computer science">computer science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dogs">dogs <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(17)</span></div><div class="category" data-category="aritifical intelligence">aritifical intelligence <span class="quarto-category-count">(1)</span></div><div class="category" data-category="compatibilism">compatibilism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="consciousness">consciousness <span class="quarto-category-count">(5)</span></div><div class="category" data-category="epistemology">epistemology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="free will">free will <span class="quarto-category-count">(4)</span></div><div class="category" data-category="grounding">grounding <span class="quarto-category-count">(1)</span></div><div class="category" data-category="infinity">infinity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="materialism">materialism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="mathematics">mathematics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="metaphysics">metaphysics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="mind">mind <span class="quarto-category-count">(9)</span></div><div class="category" data-category="philosophy">philosophy <span class="quarto-category-count">(17)</span></div><div class="category" data-category="problem of evil">problem of evil <span class="quarto-category-count">(2)</span></div><div class="category" data-category="qualia">qualia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="theism">theism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="time travel">time travel <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -217,12 +217,6 @@ window.Quarto = {
      <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
          <option value="listing-title-sort" data-direction="asc">
           Title
         </option>
@@ -245,32 +239,143 @@ window.Quarto = {
 <th>
 <a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
 </th>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-categories="cats,dogs" data-listing-file-modified-sort="1712116239403" data-listing-reading-time-sort="1" data-listing-word-count-sort="5" data-listing-title-sort="Some paper title" data-listing-filename-sort="lastname_keyword.qmd">
+<tr data-index="0" data-categories="philosophy,free will,time travel" data-listing-title-sort="Dependence and the Freedom to Do Otherwise">
 <td>
-<a href="../../notes/papers/lastname_keyword.html" class="title listing-title">Some paper title</a>
+<span class="listing-title">Dependence and the Freedom to Do Otherwise</span>
 </td>
 <td>
-<span class="listing-author">Firstname Lastname</span>
-</td>
-<td>
-<span class="listing-date">&nbsp;</span>
+<span class="listing-author">Taylor Cyr</span>
 </td>
 </tr>
-<tr data-index="1" data-categories="computer science,algorithms" data-listing-title-sort="Another paper title">
+<tr data-index="1" data-categories="philosophy,free will,problem of evil" data-listing-title-sort="A Counterexample to Plantinga's Free Will Defense">
 <td>
-<span class="listing-title">Another paper title</span>
+<span class="listing-title">A Counterexample to Plantinga’s Free Will Defense</span>
 </td>
 <td>
-<span class="listing-author">Adam Smith</span>
+<span class="listing-author">Alexander Pruss</span>
+</td>
+</tr>
+<tr data-index="2" data-categories="philosophy,free will,problem of evil" data-listing-title-sort="Ability, Foreknowledge, and Explanatory Dependence">
+<td>
+<span class="listing-title">Ability, Foreknowledge, and Explanatory Dependence</span>
 </td>
 <td>
-<span class="listing-date">&nbsp;</span>
+<span class="listing-author">Philip Swensen</span>
+</td>
+</tr>
+<tr data-index="3" data-categories="philosophy,free will,compatibilism" data-listing-title-sort="A challenge for Frankfurt-style compatibilists">
+<td>
+<span class="listing-title">A challenge for Frankfurt-style compatibilists</span>
+</td>
+<td>
+<span class="listing-author">Philip Swensen</span>
+</td>
+</tr>
+<tr data-index="4" data-categories="philosophy,mathematics" data-listing-title-sort="The Unreasonable Effectiveness of Mathematics in the Natural Sciences">
+<td>
+<span class="listing-title">The Unreasonable Effectiveness of Mathematics in the Natural Sciences</span>
+</td>
+<td>
+<span class="listing-author">Eugene Wigner</span>
+</td>
+</tr>
+<tr data-index="5" data-categories="philosophy,metaphysics,grounding" data-listing-title-sort="On What Grounds What">
+<td>
+<span class="listing-title">On What Grounds What</span>
+</td>
+<td>
+<span class="listing-author">Jonathan Schaffer</span>
+</td>
+</tr>
+<tr data-index="6" data-categories="philosophy,epistemology,materialism" data-listing-title-sort="Epistemological Objections to Materialism">
+<td>
+<span class="listing-title">Epistemological Objections to Materialism</span>
+</td>
+<td>
+<span class="listing-author">Robert Koons</span>
+</td>
+</tr>
+<tr data-index="7" data-categories="philosophy,mind,qualia" data-listing-title-sort="Should a Materialist Believe in Qualia?">
+<td>
+<span class="listing-title">Should a Materialist Believe in Qualia?</span>
+</td>
+<td>
+<span class="listing-author">David Lewis</span>
+</td>
+</tr>
+<tr data-index="8" data-categories="philosophy,metaphysics,mind" data-listing-title-sort="Naturalistic Dualism and the Problem of the Physical Correlate">
+<td>
+<span class="listing-title">Naturalistic Dualism and the Problem of the Physical Correlate</span>
+</td>
+<td>
+<span class="listing-author">Jonathan Schaffer</span>
+</td>
+</tr>
+<tr data-index="9" data-categories="philosophy,mind,consciousness" data-listing-title-sort="Introspection in Group Minds, Disunities of Consciousness, and Indiscrete Persons">
+<td>
+<span class="listing-title">Introspection in Group Minds, Disunities of Consciousness, and Indiscrete Persons</span>
+</td>
+<td>
+<span class="listing-author">Eric Schwitzgebel</span>
+</td>
+</tr>
+<tr data-index="10" data-categories="philosophy,mind,consciousness" data-listing-title-sort="If Materialism Is True, the United States Is Probably Conscious">
+<td>
+<span class="listing-title">If Materialism Is True, the United States Is Probably Conscious</span>
+</td>
+<td>
+<span class="listing-author">Eric Schwitzgebel</span>
+</td>
+</tr>
+<tr data-index="11" data-categories="philosophy,mind,theism" data-listing-title-sort="Psychophysical Harmony: A New Argument for Theism">
+<td>
+<span class="listing-title">Psychophysical Harmony: A New Argument for Theism</span>
+</td>
+<td>
+<span class="listing-author">Brian Cutter</span>
+</td>
+</tr>
+<tr data-index="12" data-categories="philosophy,mind" data-listing-title-sort="The Mind-Body Problem and the Color-Body Problem">
+<td>
+<span class="listing-title">The Mind-Body Problem and the Color-Body Problem</span>
+</td>
+<td>
+<span class="listing-author">Brian Cutter</span>
+</td>
+</tr>
+<tr data-index="13" data-categories="philosophy,mind,consciousness,aritifical intelligence" data-listing-title-sort="The AI ensoulment hypothesis">
+<td>
+<span class="listing-title">The AI ensoulment hypothesis</span>
+</td>
+<td>
+<span class="listing-author">Brian Cutter</span>
+</td>
+</tr>
+<tr data-index="14" data-categories="philosophy,mind,consciousness" data-listing-title-sort="Facing Up to the Problem of Consciousness">
+<td>
+<span class="listing-title">Facing Up to the Problem of Consciousness</span>
+</td>
+<td>
+<span class="listing-author">David Chalmers</span>
+</td>
+</tr>
+<tr data-index="15" data-categories="philosophy,mind,consciousness" data-listing-title-sort="The Harder Problem of Consciousness">
+<td>
+<span class="listing-title">The Harder Problem of Consciousness</span>
+</td>
+<td>
+<span class="listing-author">Ned Block</span>
+</td>
+</tr>
+<tr data-index="16" data-categories="philosophy,infinity" data-listing-title-sort="Universal Library">
+<td>
+<span class="listing-title">Universal Library</span>
+</td>
+<td>
+<span class="listing-author">W. Quine</span>
 </td>
 </tr>
 </tbody>
