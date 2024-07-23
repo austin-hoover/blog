@@ -10,7 +10,8 @@ listing:
         author: "Author"
         date: "Date"
     sort: 
-        - date
+        - author
+        - title
     type: table
     categories: true
     max-items: 99999999
