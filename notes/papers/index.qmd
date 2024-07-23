@@ -4,7 +4,7 @@ listing:
     contents:
         - "*.qmd"
         - "papers.yml"
-    fields: [title, author, date]
+    fields: [title, author]
     field-display-names:
         title: "Title"
         author: "Author"

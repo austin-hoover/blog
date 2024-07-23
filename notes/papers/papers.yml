@@ -1,5 +1,137 @@
-- title: Another paper title
-  author: Adam Smith
+- title: "Dependence and the Freedom to Do Otherwise"
+  author: Taylor Cyr
+  year: 2023
   categories:
-    - computer science
-    - algorithms
+    - philosophy
+    - free will
+    - time travel
+
+- title: "A Counterexample to Plantinga's Free Will Defense"
+  author: Alexander Pruss
+  year: 2012
+  categories:
+    - philosophy
+    - free will
+    - problem of evil
+
+- title: "Ability, Foreknowledge, and Explanatory Dependence"
+  author: Philip Swensen
+  year: 2016
+  categories:
+    - philosophy
+    - free will
+    - problem of evil
+
+- title: "A challenge for Frankfurt-style compatibilists"
+  author: Philip Swensen
+  year: 2014
+  categories:
+    - philosophy
+    - free will
+    - compatibilism
+
+- title: "The Unreasonable Effectiveness of Mathematics in the Natural Sciences"
+  author: Eugene Wigner
+  year: 1960
+  categories:
+    - philosophy
+    - mathematics
+
+- title: "On What Grounds What"
+  author: Jonathan Schaffer
+  year: 2009
+  categories:
+    - philosophy
+    - metaphysics
+    - grounding
+
+- title: "Epistemological Objections to Materialism"
+  author: Robert Koons
+  year: 2010
+  categories:
+    - philosophy
+    - epistemology
+    - materialism
+
+- title: "Should a Materialist Believe in Qualia?"
+  author: David Lewis
+  year: 1995
+  categories:
+    - philosophy
+    - mind
+    - qualia
+
+- title: "Naturalistic Dualism and the Problem of the Physical Correlate"
+  author: Jonathan Schaffer
+  year: 2020
+  categories:
+    - philosophy
+    - metaphysics
+    - mind
+
+- title: "Introspection in Group Minds, Disunities of Consciousness, and Indiscrete Persons"
+  author: Eric Schwitzgebel
+  year: 2023
+  categories:
+    - philosophy
+    - mind
+    - consciousness
+
+- title: "If Materialism Is True, the United States Is Probably Conscious"
+  author: Eric Schwitzgebel
+  year: 2014
+  categories:
+    - philosophy
+    - mind
+    - consciousness
+
+- title: "Psychophysical Harmony: A New Argument for Theism"
+  author: Brian Cutter
+  year: 2022
+  categories:
+    - philosophy
+    - mind
+    - theism
+
+- title: "The Mind-Body Problem and the Color-Body Problem"
+  author: Brian Cutter
+  year: 2023
+  categories:
+    - philosophy
+    - mind
+
+- title: "The AI ensoulment hypothesis"
+  author: Brian Cutter
+  year: 2024
+  categories:
+    - philosophy
+    - mind
+    - consciousness
+    - aritifical intelligence
+
+
+- title: "Facing Up to the Problem of Consciousness"
+  author: David Chalmers
+  year: 1995
+  categories: 
+    - philosophy
+    - mind
+    - consciousness
+
+- title: "The Harder Problem of Consciousness"
+  author: Ned Block
+  year: 2002
+  categories: 
+    - philosophy
+    - mind
+    - consciousness
+
+- title: "Universal Library"
+  author: W. Quine
+  year: 1987
+  categories: 
+    - philosophy
+    - infinity
+    
+
+    
