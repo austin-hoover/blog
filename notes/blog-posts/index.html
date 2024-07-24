@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Accelerated Inquiry - Papers</title>
+<title>Accelerated Inquiry - Articles and blog posts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DLC4C8LZFB"></script>
 
 <script type="text/javascript">
@@ -109,39 +78,10 @@ gtag('js', new Date());
 gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -182,14 +122,13 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(26)</span></div><div class="category" data-category="aritifical intelligence">aritifical intelligence <span class="quarto-category-count">(1)</span></div><div class="category" data-category="artificial intelligence">artificial intelligence <span class="quarto-category-count">(1)</span></div><div class="category" data-category="causation">causation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="compatibilism">compatibilism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="consciousness">consciousness <span class="quarto-category-count">(5)</span></div><div class="category" data-category="emergence">emergence <span class="quarto-category-count">(1)</span></div><div class="category" data-category="evolutionary debunking arguments">evolutionary debunking arguments <span class="quarto-category-count">(1)</span></div><div class="category" data-category="free will">free will <span class="quarto-category-count">(4)</span></div><div class="category" data-category="funny">funny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="grounding">grounding <span class="quarto-category-count">(1)</span></div><div class="category" data-category="infinity">infinity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="laws">laws <span class="quarto-category-count">(4)</span></div><div class="category" data-category="mathematics">mathematics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="measurement problem">measurement problem <span class="quarto-category-count">(1)</span></div><div class="category" data-category="metaphysics">metaphysics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="mind">mind <span class="quarto-category-count">(9)</span></div><div class="category" data-category="morality">morality <span class="quarto-category-count">(1)</span></div><div class="category" data-category="naturalism">naturalism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="past hypothesis">past hypothesis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="probability">probability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="problem of evil">problem of evil <span class="quarto-category-count">(2)</span></div><div class="category" data-category="qualia">qualia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="quantum mechanics">quantum mechanics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="science">science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="statistical mechanics">statistical mechanics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="theism">theism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="time travel">time travel <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Papers</h1>
+<h1 class="title">Articles and blog posts</h1>
 </div>
 
 
@@ -206,256 +145,13 @@ window.Quarto = {
 </header>
 
 
+<ul>
+<li><a href="https://edwardfeser.blogspot.com/2024/06/multiverses-and-falsifiability.html">Multiverses and falsifiability</a></li>
+</ul>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="mathematics,probability" data-listing-title-sort="Fifteen Arguments Against Hypothetical Frequentism">
-<td>
-<a href="https://joelvelasco.net/teaching/3865/hajek%20-%20fifteen%20arguments%20against%20hypothetical%20frequentism.pdf" class="title listing-title">Fifteen Arguments Against Hypothetical Frequentism</a>
-</td>
-<td>
-<span class="listing-author">Alan Hájek</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="free will,problem of evil" data-listing-title-sort="A Counterexample to Plantinga's Free Will Defense">
-<td>
-<a href="https://place.asburyseminary.edu/cgi/viewcontent.cgi?article=2174&amp;context=faithandphilosophy" class="title listing-title">A Counterexample to Plantinga’s Free Will Defense</a>
-</td>
-<td>
-<span class="listing-author">Alexander Pruss</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="mind,theism" data-listing-title-sort="Psychophysical Harmony: A New Argument for Theism">
-<td>
-<a href="https://philpapers.org/archive/CUTPHA.pdf" class="title listing-title">Psychophysical Harmony: A New Argument for Theism</a>
-</td>
-<td>
-<span class="listing-author">Brian Cutter</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="mind,consciousness,aritifical intelligence" data-listing-title-sort="The AI ensoulment hypothesis">
-<td>
-<a href="https://drive.google.com/file/d/1XnHm8x3h8M6H4kXyKVvR86HHJBzcFgAB/view" class="title listing-title">The AI ensoulment hypothesis</a>
-</td>
-<td>
-<span class="listing-author">Brian Cutter</span>
-</td>
-</tr>
-<tr data-index="4" data-categories="mind" data-listing-title-sort="The Mind-Body Problem and the Color-Body Problem">
-<td>
-<a href="https://drive.google.com/file/d/1I7Ee2p78c-kf57ApUiC-fFWbF111bddO/view" class="title listing-title">The Mind-Body Problem and the Color-Body Problem</a>
-</td>
-<td>
-<span class="listing-author">Brian Cutter</span>
-</td>
-</tr>
-<tr data-index="5" data-categories="mind,consciousness" data-listing-title-sort="Facing Up to the Problem of Consciousness">
-<td>
-<a href="https://consc.net/papers/facing.pdf" class="title listing-title">Facing Up to the Problem of Consciousness</a>
-</td>
-<td>
-<span class="listing-author">David Chalmers</span>
-</td>
-</tr>
-<tr data-index="6" data-categories="mind,qualia" data-listing-title-sort="Should a Materialist Believe in Qualia?">
-<td>
-<a href="https://web.archive.org/web/20190430050827id_/https://place.asburyseminary.edu/cgi/viewcontent.cgi?article=1548&amp;context=faithandphilosophy" class="title listing-title">Should a Materialist Believe in Qualia?</a>
-</td>
-<td>
-<span class="listing-author">David Lewis</span>
-</td>
-</tr>
-<tr data-index="7" data-categories="laws,past hypothesis,statistical mechanics" data-listing-title-sort="The Past Hypothesis and the Nature of Physical Laws">
-<td>
-<a href="https://www.eddykemingchen.net/uploads/4/6/1/3/46137503/ph_and_nature_of_physical_laws.pdf" class="title listing-title">The Past Hypothesis and the Nature of Physical Laws</a>
-</td>
-<td>
-<span class="listing-author">Eddy Chen</span>
-</td>
-</tr>
-<tr data-index="8" data-categories="laws" data-listing-title-sort="The Simplicity of Physical Laws">
-<td>
-<a href="https://arxiv.org/pdf/2210.08143" class="title listing-title">The Simplicity of Physical Laws</a>
-</td>
-<td>
-<span class="listing-author">Eddy Chen</span>
-</td>
-</tr>
-<tr data-index="9" data-categories="quantum mechanics,measurement problem" data-listing-title-sort="Do We Have Any Viable Solution to the Measurement Problem?">
-<td>
-<a href="https://arxiv.org/pdf/2301.06192" class="title listing-title">Do We Have Any Viable Solution to the Measurement Problem?</a>
-</td>
-<td>
-<span class="listing-author">Emily Adlam</span>
-</td>
-</tr>
-<tr data-index="10" data-categories="causation,laws" data-listing-title-sort="https://www.mdpi.com/1099-4300/20/1/41">
-<td>
-<a href="https://www.mdpi.com/1099-4300/20/1/41" class="title listing-title">https://www.mdpi.com/1099-4300/20/1/41</a>
-</td>
-<td>
-<span class="listing-author">Emily Adlam</span>
-</td>
-</tr>
-<tr data-index="11" data-categories="mind,consciousness" data-listing-title-sort="If Materialism Is True, the United States Is Probably Conscious">
-<td>
-<a href="http://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/USAconscious-140721.pdf" class="title listing-title">If Materialism Is True, the United States Is Probably Conscious</a>
-</td>
-<td>
-<span class="listing-author">Eric Schwitzgebel</span>
-</td>
-</tr>
-<tr data-index="12" data-categories="mind,consciousness" data-listing-title-sort="Introspection in Group Minds, Disunities of Consciousness, and Indiscrete Persons">
-<td>
-<a href="http://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/GroupMindsIntrospection-230629.pdf" class="title listing-title">Introspection in Group Minds, Disunities of Consciousness, and Indiscrete Persons</a>
-</td>
-<td>
-<span class="listing-author">Eric Schwitzgebel</span>
-</td>
-</tr>
-<tr data-index="13" data-categories="mathematics" data-listing-title-sort="The Unreasonable Effectiveness of Mathematics in the Natural Sciences">
-<td>
-<a href="https://www.maths.ed.ac.uk/~v1ranick/papers/wigner.pdf" class="title listing-title">The Unreasonable Effectiveness of Mathematics in the Natural Sciences</a>
-</td>
-<td>
-<span class="listing-author">Eugene Wigner</span>
-</td>
-</tr>
-<tr data-index="14" data-categories="laws,past hypothesis,statistical mechanics" data-listing-title-sort="The Past Hypothesis: Note even false">
-<td>
-<a href="https://www.sciencedirect.com/science/article/abs/pii/S135521980600027X?via%3Dihub" class="title listing-title">The Past Hypothesis: Note even false</a>
-</td>
-<td>
-<span class="listing-author">John Earman</span>
-</td>
-</tr>
-<tr data-index="15" data-categories="metaphysics,mind" data-listing-title-sort="Naturalistic Dualism and the Problem of the Physical Correlate">
-<td>
-<a href="http://www.jonathanschaffer.org/dualismcorrelate.pdf" class="title listing-title">Naturalistic Dualism and the Problem of the Physical Correlate</a>
-</td>
-<td>
-<span class="listing-author">Jonathan Schaffer</span>
-</td>
-</tr>
-<tr data-index="16" data-categories="metaphysics,grounding" data-listing-title-sort="On What Grounds What">
-<td>
-<a href="http://www.jonathanschaffer.org/grounds.pdf" class="title listing-title">On What Grounds What</a>
-</td>
-<td>
-<span class="listing-author">Jonathan Schaffer</span>
-</td>
-</tr>
-<tr data-index="17" data-categories="mind,consciousness" data-listing-title-sort="The Harder Problem of Consciousness">
-<td>
-<a href="https://www.jstor.org/stable/pdf/3655621.pdf?refreqid=fastly-default%3A7391a9ca2bcaf99e7f9e38338fc31f8f&amp;ab_segments=&amp;origin=&amp;initiator=&amp;acceptTC=1" class="title listing-title">The Harder Problem of Consciousness</a>
-</td>
-<td>
-<span class="listing-author">Ned Block</span>
-</td>
-</tr>
-<tr data-index="18" data-categories="artificial intelligence" data-listing-title-sort="The False Promise of ChatGPT">
-<td>
-<a href="https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html" class="title listing-title">The False Promise of ChatGPT</a>
-</td>
-<td>
-<span class="listing-author">Noam Chomsky</span>
-</td>
-</tr>
-<tr data-index="19" data-categories="free will,compatibilism" data-listing-title-sort="A challenge for Frankfurt-style compatibilists">
-<td>
-<a href="https://philpapers.org/archive/SWEACF.pdf" class="title listing-title">A challenge for Frankfurt-style compatibilists</a>
-</td>
-<td>
-<span class="listing-author">Philip Swensen</span>
-</td>
-</tr>
-<tr data-index="20" data-categories="free will,problem of evil" data-listing-title-sort="Ability, Foreknowledge, and Explanatory Dependence">
-<td>
-<a href="https://philpapers.org/archive/SWEAFA.pdf" class="title listing-title">Ability, Foreknowledge, and Explanatory Dependence</a>
-</td>
-<td>
-<span class="listing-author">Philip Swensen</span>
-</td>
-</tr>
-<tr data-index="21" data-categories="emergence" data-listing-title-sort="The reductionist blindspot">
-<td>
-<a href="http://philsci-archive.pitt.edu/4037/1/The_reductionist_blind_spot-08-05-01-2300.pdf" class="title listing-title">The reductionist blindspot</a>
-</td>
-<td>
-<span class="listing-author">Russ Abbott</span>
-</td>
-</tr>
-<tr data-index="22" data-categories="science,funny" data-listing-title-sort="Book Review: 'A New Kind of Science'">
-<td>
-<a href="https://arxiv.org/abs/quant-ph/0206089" class="title listing-title">Book Review: ‘A New Kind of Science’</a>
-</td>
-<td>
-<span class="listing-author">Scott Aaronson</span>
-</td>
-</tr>
-<tr data-index="23" data-categories="free will,time travel" data-listing-title-sort="Dependence and the Freedom to Do Otherwise">
-<td>
-<a href="https://philpapers.org/archive/CYRDAT.pdf" class="title listing-title">Dependence and the Freedom to Do Otherwise</a>
-</td>
-<td>
-<span class="listing-author">Taylor Cyr</span>
-</td>
-</tr>
-<tr data-index="24" data-categories="naturalism,morality,evolutionary debunking arguments" data-listing-title-sort="Only All Naturalists Should Worry About Only One Evolutionary Debunking Argument">
-<td>
-<a href="https://philpapers.org/archive/BOGOAN.pdf" class="title listing-title">Only All Naturalists Should Worry About Only One Evolutionary Debunking Argument</a>
-</td>
-<td>
-<span class="listing-author">Thomas Bogardus</span>
-</td>
-</tr>
-<tr data-index="25" data-categories="infinity" data-listing-title-sort="Universal Library">
-<td>
-<a href="https://urbigenous.net/library/universal_library.html" class="title listing-title">Universal Library</a>
-</td>
-<td>
-<span class="listing-author">W. Quine</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
