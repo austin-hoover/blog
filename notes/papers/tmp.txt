@@ -1,10 +1,3 @@
-Gil_repeating-histories.pdf
-Hajek_arguments-against-frequentism.pdf
-Jura_graded-causality.pdf
-Kipping_bayesian-simulation-argument.pdf
-Kipping_contact-inequality.pdf
-Koberinski_cosmological-constant.pdf
-Lewis_emergent-multiverse-review.pdf
 Linford_boundary-of-the-cosmos.pdf
 Loew_boltzmann-immortality.pdf
 Maudlin_what-bell-did.pdf

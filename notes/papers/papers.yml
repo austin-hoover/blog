@@ -179,9 +179,38 @@
     - mathematics
     - probability
 
+- title: "A Bayesian approach to the simulation argument"
+  path: "https://arxiv.org/pdf/2008.12254"
+  author: David Kipping
+  categories:
+    - probability
+    - simulation argument
 
+- title: "Contact inequality: first contact will likely be with an older civilization"
+  path: "https://arxiv.org/pdf/2010.12358"
+  author: David Kipping
+  categories:
+    - probability
+    - extraterrestrial
 
+- title: "Contemporary Philosophical Perspectives on the Cosmological Constant"
+  path: "https://arxiv.org/pdf/2212.04335"
+  author: A. Koberinski, B. Falck‡, C. Smeenk
+  categories:
+    - cosmology
+
+- title: "The Emergent Multiverse: Quantum Theory according to the Everett Interpretation"
+  path: "https://ndpr.nd.edu/reviews/the-emergent-multiverse-quantum-theory-according-to-the-everett-interpretation/"
+  author: Peter Lewis
+  categories:
+    - quantum mechanics
+
+- title: "On the Boundary of the Cosmos"
+  path: "https://arxiv.org/pdf/2308.13113"
+  author: Daniel Linford
+  categories:
+    - cosmology
+    - time
     
-  
 
     
