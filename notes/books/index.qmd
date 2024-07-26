@@ -13,8 +13,6 @@ listing:
         categories: "Categories"
     sort: 
         - title
-        - author
-        - date
     type: table
     date-format: YYYY‑MM‑DD
     table-hover: false

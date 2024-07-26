@@ -10,7 +10,6 @@ listing:
         author: "Author"
         date: "Date"
     sort: 
-        - author
         - title
     type: table
     categories: true
