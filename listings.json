@@ -1,35 +1,16 @@
 [
   {
-    "listing": "/notes/books/index.html",
-    "items": []
+    "listing": "/notes/index.html",
+    "items": [
+      "/notes/books/index.html",
+      "/notes/films.html",
+      "/notes/links.html",
+      "/notes/papers/index.html"
+    ]
   },
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/2024-06-10_rec4d-sns-ring/index.html",
-      "/posts/2024-06-09_mentflow-part2/index.html",
-      "/posts/2024-06-06_mentflow-part1/index.html",
-      "/posts/2024-05-16_why-maximize-entropy/index.html",
-      "/posts/2024-04-01_muon/index.html",
-      "/posts/2024-03-23_hb/index.html",
-      "/posts/2023-07-10_fine-tuning/index.html",
-      "/posts/2023-07-09_biological-design-arguments/index.html",
-      "/posts/2023-05-28_btf/index.html",
-      "/posts/2022-03-22_leibnizian-cosmological-arguments/index.html",
-      "/posts/2022-02-11_injection-figures/index.html",
-      "/posts/2021-10-16_tomographic-reconstruction-in-four-dimensions/index.html",
-      "/posts/2021-09-15_kalam-cosmological-arguments/index.html",
-      "/posts/2021-07-05_ontological-arguments/index.html",
-      "/posts/2021-07-01_space-charge-instabilities/index.html",
-      "/posts/2021-06-12_arguing-about-gods/index.html",
-      "/posts/2021-05-27_painting-a-particle-beam/index.html",
-      "/posts/2021-05-13_matched-envelope/index.html",
-      "/posts/2021-04-29_authorship-identification/index.html",
-      "/posts/2021-03-28_nonlinear-resonances/index.html",
-      "/posts/2021-02-22_pic/index.html",
-      "/posts/2021-01-25_coupled-parametric-oscillators/index.html",
-      "/posts/2021-01-21_parametric-oscillators/index.html"
-    ]
+    "listing": "/notes/papers/index.html",
+    "items": []
   },
   {
     "listing": "/archive.html",
@@ -60,15 +41,35 @@
     ]
   },
   {
-    "listing": "/notes/papers/index.html",
-    "items": []
+    "listing": "/index.html",
+    "items": [
+      "/posts/2024-06-10_rec4d-sns-ring/index.html",
+      "/posts/2024-06-09_mentflow-part2/index.html",
+      "/posts/2024-06-06_mentflow-part1/index.html",
+      "/posts/2024-05-16_why-maximize-entropy/index.html",
+      "/posts/2024-04-01_muon/index.html",
+      "/posts/2024-03-23_hb/index.html",
+      "/posts/2023-07-10_fine-tuning/index.html",
+      "/posts/2023-07-09_biological-design-arguments/index.html",
+      "/posts/2023-05-28_btf/index.html",
+      "/posts/2022-03-22_leibnizian-cosmological-arguments/index.html",
+      "/posts/2022-02-11_injection-figures/index.html",
+      "/posts/2021-10-16_tomographic-reconstruction-in-four-dimensions/index.html",
+      "/posts/2021-09-15_kalam-cosmological-arguments/index.html",
+      "/posts/2021-07-05_ontological-arguments/index.html",
+      "/posts/2021-07-01_space-charge-instabilities/index.html",
+      "/posts/2021-06-12_arguing-about-gods/index.html",
+      "/posts/2021-05-27_painting-a-particle-beam/index.html",
+      "/posts/2021-05-13_matched-envelope/index.html",
+      "/posts/2021-04-29_authorship-identification/index.html",
+      "/posts/2021-03-28_nonlinear-resonances/index.html",
+      "/posts/2021-02-22_pic/index.html",
+      "/posts/2021-01-25_coupled-parametric-oscillators/index.html",
+      "/posts/2021-01-21_parametric-oscillators/index.html"
+    ]
   },
   {
-    "listing": "/notes/index.html",
-    "items": [
-      "/notes/books/index.html",
-      "/notes/links/index.html",
-      "/notes/papers/index.html"
-    ]
+    "listing": "/notes/books/index.html",
+    "items": []
   }
 ]
