@@ -1,6 +1,0 @@
----
-title: Articles and blog posts
----
-
-* [Multiverses and falsifiability](https://edwardfeser.blogspot.com/2024/06/multiverses-and-falsifiability.html)
-

@@ -110,7 +110,7 @@
     - infinity
 
 - title: "Book Review: 'A New Kind of Science'"
-  path: "https://arxiv.org/abs/quant-ph/0206089"
+  path: "https://arxiv.org/pdf/quant-ph/0206089"
   author: Scott Aaronson
   categories:
     - science
@@ -129,11 +129,12 @@
     - quantum mechanics
     - measurement problem
 
-- title: "https://www.mdpi.com/1099-4300/20/1/41"
+- title: "Spooky Action at a Temporal Distance"
   path: "https://www.mdpi.com/1099-4300/20/1/41"
   author: Emily Adlam
   categories:
     - causation
+    - explanation
     - laws
 
 - title: "Only All Naturalists Should Worry About Only One Evolutionary Debunking Argument"
@@ -149,7 +150,7 @@
   author: Eddy Chen
   categories:
     - laws
-    - past hypothesis
+    - explanation
     - statistical mechanics
 
 - title: "The Simplicity of Physical Laws"
@@ -157,6 +158,7 @@
   author: Eddy Chen
   categories:
     - laws
+    - explanation
 
 - title: "The False Promise of ChatGPT"
   path: "https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html"
@@ -164,12 +166,12 @@
   categories:
     - artificial intelligence
 
-- title: "The Past Hypothesis: Note even false"
+- title: "The Past Hypothesis: Not even false"
   path: "https://www.sciencedirect.com/science/article/abs/pii/S135521980600027X?via%3Dihub"
   author: John Earman
   categories:
     - laws
-    - past hypothesis
+    - explanation
     - statistical mechanics
 
 - title: "Fifteen Arguments Against Hypothetical Frequentism"
@@ -204,6 +206,7 @@
   author: Peter Lewis
   categories:
     - quantum mechanics
+    - multiverse
 
 - title: "On the Boundary of the Cosmos"
   path: "https://arxiv.org/pdf/2308.13113"
@@ -219,4 +222,297 @@
     - boltzmann brains
     - statistical mechanics
 
+- title: "What Bell did"
+  path: "https://iopscience.iop.org/article/10.1088/1751-8113/47/42/424010/pdf"
+  author: Tim Maudlin
+  categories:
+    - quantum mechanics
+
+- title: "Causation as Folk Science"
+  path: "https://sites.pitt.edu/~jdnorton/papers/003004.pdf"
+  author: John Norton
+  categories:
+    - causation
+    - explanation
+
+- title: "The Fundamentality of Fields"
+  path: "https://arxiv.org/pdf/2202.09425"
+  author: Charles T. Sebens
+  categories:
+    - quantum mechanics
+    - fields
+
+- title: "Naturalness and Emergence" 
+  path: "https://philsci-archive.pitt.edu/15757/1/naturalness_emergence.pdf"
+  author: David Wallace
+  categories:
+    - emergence
+
+- title: "The Nature of the Past Hypothesis"
+  path: "https://sites.pitt.edu/~dmw121/papers/wallace-tenerife.pdf"
+  author: David Wallace
+  categories:
+    - laws
+    - explanation
+    - statistical mechanics
+
+- title: "Worlds in the Everett interpretation"
+  path: "https://arxiv.org/pdf/quant-ph/0103092"
+  author: David Wallace
+  categories:
+    - quantum mechanics
+    - multiverse
+
+- title: "New Omnivorism: a Novel Approach to Food and Animal Ethics"
+  path: "https://doi.org/10.1007/s41055-022-00098-z"
+  author: Josh Milburn, Christopher Bobier
+  categories:
+    - ethics
+    - veganism
+
+- title: "I Was Once a Fetus: That Is Why Abortion Is Wrong"
+  path: "http://ndl.ethernet.edu.et/bitstream/123456789/8345/1/304.pdf#page=32"
+  author: Alexander Pruss
+  categories:
+    - ethics
+    - abortion
+
+- title: "A Defense of Abortion"
+  path: "https://jdphilosophy.com/Thomson-DefenseAbortion-1971.pdf"
+  author: Judith Thomson
+  categories:
+    - ethics
+    - abortion
+
+- title: "Revisiting the argument from fetal potential"
+  path: "https://link.springer.com/article/10.1186/1747-5341-2-7"
+  author: Bertha Manninen
+  categories:
+    - ethics
+    - abortion
+
+- title: "Repetition and Value in an Infinite Universe"
+  path: "http://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/Infinitude-230502.pdf"
+  author: Eric Schwitzgebel
+  categories:
+    - infinity
+
+- title: "Losing energy in classical, relativistic and quantum mechanics"
+  path: "https://philsci-archive.pitt.edu/2639/1/AJPZeno.pdf"
+  author: David Atkinson
+  categories:
+    - classical mechanics
+    - paradox
+
+- title: "Yablo’s Paradox and Beginningless Time"
+  path: "https://intapi.sciendo.com/pdf/10.2478/disp-2009-0002"
+  author: Laureano Luna
+  categories:
+    - infinity
+    - paradox
+
+- title: "Zeno's Paradoxes: A Timely Solution"
+  path: "https://philsci-archive.pitt.edu/1197/1/Zeno_s_Paradoxes_-_A_Timely_Solution.pdf"
+  author: Peter Lynds
+  categories:
+    - infinity
+    - paradox
+
+- title: "How not to build an infinite lottery machine"
+  path: "https://www.sciencedirect.com/science/article/abs/pii/S003936811830325X?via%3Dihub"
+  author: John Norton
+  categories:
+    - infinity
+    - probability
+    
+- title: "The Tristram Shandy Paradox"
+  path: "https://philarchive.org/archive/OPPTTS-2"
+  author: Graham Oppy
+  categories:
+    - paradox
+
+- title: "Benardete Paradoxes, Causal Finitism, and the Unsatisfiable Pair Diagnosis"
+  path: "https://philarchive.org/archive/SCHBPC"
+  author: Joseph Schmid, Alex Malpass
+  categories:
+    - paradox
+    - infinity
+    
+- title: "The Form of the Benardete Dichotomy"
+  path: "https://philpapers.org/archive/SHATFO.pdf"
+  author: Nicholas Shackel
+  categories:
+    - paradox
+    - infinity
+
+- title: "The Infinity from Nothing paradox and the Immovable Object meets the Irresistible Force"
+  path: "https://link.springer.com/article/10.1007/s13194-017-0192-2"
+  author: Nicholas Shackel
+  categories:
+    - paradox
+    - infinity
+
+- title: "Divine Creative Freedom"
+  path: "http://alexanderpruss.com/papers/DivineCreativeFreedom.pdf"
+  author: Alexander Pruss
+  categories:
+    - theism
+    - divine attributes
+
+
+- title: "Review of 'Arguing about Gods'"
+  path: "https://ndpr.nd.edu/reviews/arguing-about-gods/"
+  author: Alexander Pruss
+  categories:
+    - theism
+
+- title: "Oppy on Thomistic cosmological arguments"
+  path: "https://www.cambridge.org/core/journals/religious-studies/article/abs/oppy-on-thomistic-cosmological-arguments/4F4FE32691906CF3303F33197F119FCB"
+  author: Edward Feser
+  categories:
+    - cosmological arguments
+    
+- title: "The Grim Reaper Kalam Argument: From Temporal and Causal Finitism to God"
+  path: "https://robkoons.net/uploads/1/3/5/2/135276253/grim_reaper_kalam_argument.pdf"
+  author: Robert C. Koons
+  categories:
+    - cosmological arguments
+    - causal finitism
+
+- title: "Skepticism and the principle of sufficient reason"
+  path: "https://link.springer.com/article/10.1007/s11098-020-01482-3"
+  author: Robert Koons, Alexander Pruss
+  categories:
+    - skepticism
+    - principle of sufficient reason
+
+- title: "The Problem of Creation Ex Nihilo: A New Argument Against Classical Theism"
+  path: "sourceurl"
+  author: Felipe Leon
+  categories:
+    - theism
+
+- title: "Craig on the actual infinite"
+  path: "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/815E2D63C50326202AC6AC837AF09AA9/S0034412502005978a.pdf/craig_on_the_actual_infinite.pdf"
+  author: Wes Morriston
+  categories:
+    - infinity
+    - paradox
+
+- title: "Cosmological Arguments"
+  path: "https://philpapers.org/archive/OPPCA.pdf"
+  author: Graham Oppy
+  categories:
+    - cosmological arguments
+
+- title: "Review of 'Necessary Existence'"
+  path: "https://philpapers.org/archive/OPPARP.pdf"
+  author: Graham Oppy
+  categories:
+    - metaphysics
+
+- title: "Leibnizian Cosmological Arguments"
+  path: "http://alexanderpruss.com/papers/LCA.html"
+  author: Alexander R. Pruss
+  categories:
+    - cosmological arguments
+
+- title: "Why is There Anything?"
+  path: "https://philpapers.org/rec/RASWIT-2"
+  author: Joshua Rasmussen, Christopher Gregory Weaver
+  categories:
+    - metaphysics
+    - cosmological arguments
+
+- title: "Should atheists wish there were no gratuitous evils?"
+  path: "https://www.pdcnet.org/collection/fshow?id=faithphil_2021_0038_0004_0460_0483&pdfname=faithphil_2021_0038_0004_0054_0077.pdf&file_type=pdf"
+  author: Guy Kahane
+  categories:
+    - evil
+
+- title: "Was evolution worth it?"
+  path: "https://link.springer.com/article/10.1007/s11098-022-01893-4"
+  author: Guy Kahane
+  categories:
+    - evil
+
+- title: "The Multiverse Theodicy Meets Population Ethics"
+  path: "https://journals.publishing.umich.edu/ergo/article/5193/galley/3155/view/"
+  author: Han Li, Bradford Saad
+  categories:
+    - evil
+    - multiverse
+
+- title: "Skeptical Theism"
+  path: "https://compass.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1747-9991.2010.00306.x?casa_token=XxzIWLVHr-wAAAAA:XGBTYfOu3k4zzGtCLEMqHKklsr2Zn-rOQr5NU4sFIGcoArpMNhANAh1uVr270Ss87nrNIAe6_u75DaZs"
+  author: Justin McBrayer
+  categories:
+    - evil
+    
+- title: "Scepticism about the argument from divine hiddenness"
+  path: "https://philpapers.org/archive/MCBSAT-2.pdf"
+  author: Justin McBayer, Philip Swenson
+  categories:
+    - hiddenness
+
+- title: "A Priori (Atheism)"
+  path: "https://philarchive.org/rec/LEOAPA-2"
+  author: Filipe Leon
+  categories:
+    - theism
+    - abstract objects
+
+- title: "Heaven and the Problem of Eternal Separation"
+  path: ""
+  author: Eric Yang
+  categories:
+    - heaven
+    - evil
+
+- title: "The Fine-Tuning of the Universe for Intelligent Life"
+  path: "https://arxiv.org/pdf/1112.4647"
+  author: Luke A. Barnes
+  categories:
+    - fine-tuning
+
+- title: "If naturalism is true, then scientific explanation is impossible"
+  path: "https://philpapers.org/archive/BOGINI.pdf"
+  author: Tomas Bogardus
+  categories:
+    - explanation
+    - naturalism
+
+- title: "In What Sense Is the Early Universe Fine-Tuned?"
+  path: "https://arxiv.org/pdf/1406.3057"
+  author: Sean M. Carroll
+  categories:
+    - fine-tuning
+
+- title: "The problem of nomological harmony"
+  path: "https://philpapers.org/archive/CUTTPO-9.pdf"
+  author: Brian Cutter and Bradford Saad
+  categories:
+    - laws
+    - explanation
+
+- title: "The Fine-Tuning Argument and the Requirement of Total Evidence"
+  path: "https://philpapers.org/archive/EPSTFA.pdf"
+  author: Peter Fisher Epstein
+  categories:
+    - fine-tuning
+
+- title: "Reconsidering the Inverse Gambler’s Fallacy Charge Against the Fine-Tuning Argument for the Multiverse"
+  path: "https://philsci-archive.pitt.edu/16785/1/Friederich2019_Article_ReconsideringTheInverseGambler.pdf"
+  author: Simon Friederich
+  categories:
+    - fine-tuning
+    
+- title: "The Nomological Argument for the Existence of God"
+  path: "https://philarchive.org/archive/HILTNA-2"
+  author: Tyler Hildebrand, Thomas Metcalf
+  categories:
+    - laws
+    - theism
+    - fine-tuning
+    - explanation
     
