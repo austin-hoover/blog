@@ -1,0 +1,15 @@
+---
+title: "Inaugural US Muon Collider Collaboration meeting"
+date: 2024-08-12
+author: Austin Hoover
+categories:
+  - accelerators
+  - muon collider
+toc: false
+---
+
+The [US Muon Collider Collaboration (IMCC)](https://www.muoncollider.us) held their first meeting at Fermilab last week. I couldn't attend, but I heard it was an inspiring conference. Looks like it was around 80% particle physics, 20% accelerator physics. All the presentation slides are online [here](https://indico.fnal.gov/event/64493/timetable/?view=standard).
+
+
+
+
