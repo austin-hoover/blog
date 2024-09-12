@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-categories","listing-categoriess"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -183,7 +183,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(58)</span></div><div class="category" data-category="Russia">Russia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="abortion">abortion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="accelerator physics">accelerator physics <span class="quarto-category-count">(7)</span></div><div class="category" data-category="algorithms">algorithms <span class="quarto-category-count">(2)</span></div><div class="category" data-category="apartheid">apartheid <span class="quarto-category-count">(1)</span></div><div class="category" data-category="astrophysics">astrophysics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="christianity">christianity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="classical mechanics">classical mechanics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="computer science">computer science <span class="quarto-category-count">(2)</span></div><div class="category" data-category="electromagnetism">electromagnetism <span class="quarto-category-count">(3)</span></div><div class="category" data-category="epistemology">epistemology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ethics">ethics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="fiction">fiction <span class="quarto-category-count">(4)</span></div><div class="category" data-category="historical fiction">historical fiction <span class="quarto-category-count">(2)</span></div><div class="category" data-category="history">history <span class="quarto-category-count">(2)</span></div><div class="category" data-category="infinity">infinity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="machine learning">machine learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="mathematics">mathematics <span class="quarto-category-count">(4)</span></div><div class="category" data-category="metaphysics">metaphysics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="particle physics">particle physics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="philosophy">philosophy <span class="quarto-category-count">(12)</span></div><div class="category" data-category="physics">physics <span class="quarto-category-count">(23)</span></div><div class="category" data-category="probability">probability <span class="quarto-category-count">(2)</span></div><div class="category" data-category="quantum mechanics">quantum mechanics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="quantum optics">quantum optics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="religion">religion <span class="quarto-category-count">(5)</span></div><div class="category" data-category="science">science <span class="quarto-category-count">(4)</span></div><div class="category" data-category="science fiction">science fiction <span class="quarto-category-count">(3)</span></div><div class="category" data-category="sociology">sociology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="space charge">space charge <span class="quarto-category-count">(1)</span></div><div class="category" data-category="statistical mechanics">statistical mechanics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="thermodynamics">thermodynamics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="visualization">visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="world war ii">world war ii <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(59)</span></div><div class="category" data-category="Russia">Russia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="abortion">abortion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="accelerator physics">accelerator physics <span class="quarto-category-count">(7)</span></div><div class="category" data-category="algorithms">algorithms <span class="quarto-category-count">(2)</span></div><div class="category" data-category="apartheid">apartheid <span class="quarto-category-count">(1)</span></div><div class="category" data-category="astrophysics">astrophysics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="christianity">christianity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="classical mechanics">classical mechanics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="computer science">computer science <span class="quarto-category-count">(2)</span></div><div class="category" data-category="electromagnetism">electromagnetism <span class="quarto-category-count">(3)</span></div><div class="category" data-category="epistemology">epistemology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ethics">ethics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="fiction">fiction <span class="quarto-category-count">(4)</span></div><div class="category" data-category="historical fiction">historical fiction <span class="quarto-category-count">(2)</span></div><div class="category" data-category="history">history <span class="quarto-category-count">(2)</span></div><div class="category" data-category="infinity">infinity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="machine learning">machine learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="mathematics">mathematics <span class="quarto-category-count">(4)</span></div><div class="category" data-category="metaphysics">metaphysics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="particle physics">particle physics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="philosophy">philosophy <span class="quarto-category-count">(12)</span></div><div class="category" data-category="physics">physics <span class="quarto-category-count">(23)</span></div><div class="category" data-category="probability">probability <span class="quarto-category-count">(2)</span></div><div class="category" data-category="quantum mechanics">quantum mechanics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="quantum optics">quantum optics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="religion">religion <span class="quarto-category-count">(5)</span></div><div class="category" data-category="science">science <span class="quarto-category-count">(4)</span></div><div class="category" data-category="science fiction">science fiction <span class="quarto-category-count">(3)</span></div><div class="category" data-category="sociology">sociology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="space charge">space charge <span class="quarto-category-count">(1)</span></div><div class="category" data-category="statistical mechanics">statistical mechanics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="thermodynamics">thermodynamics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="visualization">visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="world war ii">world war ii <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -570,7 +570,15 @@ window.Quarto = {
 <span class="listing-author">Tim Maudlin</span>
 </td>
 </tr>
-<tr data-index="41" data-categories="physics,quantum mechanics" data-listing-title-sort="Quantum Mechanics: Concepts and Applications">
+<tr data-index="41" data-listing-title-sort="Probability Theory: The Logic of Science">
+<td>
+<span class="listing-title">Probability Theory: The Logic of Science</span>
+</td>
+<td>
+<span class="listing-author">E. T. Jaynes</span>
+</td>
+</tr>
+<tr data-index="42" data-categories="physics,quantum mechanics" data-listing-title-sort="Quantum Mechanics: Concepts and Applications">
 <td>
 <span class="listing-title">Quantum Mechanics: Concepts and Applications</span>
 </td>
@@ -578,7 +586,7 @@ window.Quarto = {
 <span class="listing-author">N. Zettili</span>
 </td>
 </tr>
-<tr data-index="42" data-categories="physics,accelerator physics" data-listing-title-sort="RF Linear Accelerators">
+<tr data-index="43" data-categories="physics,accelerator physics" data-listing-title-sort="RF Linear Accelerators">
 <td>
 <span class="listing-title">RF Linear Accelerators</span>
 </td>
@@ -586,7 +594,7 @@ window.Quarto = {
 <span class="listing-author">T. Wangler</span>
 </td>
 </tr>
-<tr data-index="43" data-categories="physics,accelerator physics,space charge" data-listing-title-sort="Space Charge Physics for Particle Accelerators">
+<tr data-index="44" data-categories="physics,accelerator physics,space charge" data-listing-title-sort="Space Charge Physics for Particle Accelerators">
 <td>
 <span class="listing-title">Space Charge Physics for Particle Accelerators</span>
 </td>
@@ -594,7 +602,7 @@ window.Quarto = {
 <span class="listing-author">I. Hofmann</span>
 </td>
 </tr>
-<tr data-index="44" data-categories="history,world war ii" data-listing-title-sort="Stalin: Paradoxes of Power, 1878-1928">
+<tr data-index="45" data-categories="history,world war ii" data-listing-title-sort="Stalin: Paradoxes of Power, 1878-1928">
 <td>
 <span class="listing-title">Stalin: Paradoxes of Power, 1878-1928</span>
 </td>
@@ -602,7 +610,7 @@ window.Quarto = {
 <span class="listing-author">Stephen Kotkin</span>
 </td>
 </tr>
-<tr data-index="45" data-categories="physics,statistical mechanics" data-listing-title-sort="Statistical Physics of Particles">
+<tr data-index="46" data-categories="physics,statistical mechanics" data-listing-title-sort="Statistical Physics of Particles">
 <td>
 <span class="listing-title">Statistical Physics of Particles</span>
 </td>
@@ -610,7 +618,7 @@ window.Quarto = {
 <span class="listing-author">M. Kardar</span>
 </td>
 </tr>
-<tr data-index="46" data-categories="science fiction" data-listing-title-sort="Stories of Your Life and Others">
+<tr data-index="47" data-categories="science fiction" data-listing-title-sort="Stories of Your Life and Others">
 <td>
 <span class="listing-title">Stories of Your Life and Others</span>
 </td>
@@ -618,7 +626,7 @@ window.Quarto = {
 <span class="listing-author">Ted Chiang</span>
 </td>
 </tr>
-<tr data-index="47" data-categories="philosophy,religion" data-listing-title-sort="Taking Pascal's Wager">
+<tr data-index="48" data-categories="philosophy,religion" data-listing-title-sort="Taking Pascal's Wager">
 <td>
 <span class="listing-title">Taking Pascal’s Wager</span>
 </td>
@@ -626,7 +634,7 @@ window.Quarto = {
 <span class="listing-author">Michael Rota</span>
 </td>
 </tr>
-<tr data-index="48" data-categories="fiction" data-listing-title-sort="The Alchemist">
+<tr data-index="49" data-categories="fiction" data-listing-title-sort="The Alchemist">
 <td>
 <span class="listing-title">The Alchemist</span>
 </td>
@@ -634,7 +642,7 @@ window.Quarto = {
 <span class="listing-author">Paulo Coelho</span>
 </td>
 </tr>
-<tr data-index="49" data-categories="ethics" data-listing-title-sort="The Character Gap">
+<tr data-index="50" data-categories="ethics" data-listing-title-sort="The Character Gap">
 <td>
 <span class="listing-title">The Character Gap</span>
 </td>
@@ -642,7 +650,7 @@ window.Quarto = {
 <span class="listing-author">Christian Miller</span>
 </td>
 </tr>
-<tr data-index="50" data-categories="sociology" data-listing-title-sort="The Disappearance of Childhood">
+<tr data-index="51" data-categories="sociology" data-listing-title-sort="The Disappearance of Childhood">
 <td>
 <span class="listing-title">The Disappearance of Childhood</span>
 </td>
@@ -650,7 +658,7 @@ window.Quarto = {
 <span class="listing-author">Niel Postman</span>
 </td>
 </tr>
-<tr data-index="51" data-categories="philosophy,science" data-listing-title-sort="The Emergent Multiverse">
+<tr data-index="52" data-categories="philosophy,science" data-listing-title-sort="The Emergent Multiverse">
 <td>
 <span class="listing-title">The Emergent Multiverse</span>
 </td>
@@ -658,7 +666,7 @@ window.Quarto = {
 <span class="listing-author">David Wallace</span>
 </td>
 </tr>
-<tr data-index="52" data-categories="ethics,abortion" data-listing-title-sort="The Ethics of Abortion">
+<tr data-index="53" data-categories="ethics,abortion" data-listing-title-sort="The Ethics of Abortion">
 <td>
 <span class="listing-title">The Ethics of Abortion</span>
 </td>
@@ -666,7 +674,7 @@ window.Quarto = {
 <span class="listing-author">Christopher Kaczor</span>
 </td>
 </tr>
-<tr data-index="53" data-categories="fiction" data-listing-title-sort="The Road">
+<tr data-index="54" data-categories="fiction" data-listing-title-sort="The Road">
 <td>
 <span class="listing-title">The Road</span>
 </td>
@@ -674,7 +682,7 @@ window.Quarto = {
 <span class="listing-author">Cormac McCarthy</span>
 </td>
 </tr>
-<tr data-index="54" data-categories="physics,accelerator physics" data-listing-title-sort="Theory and Design of Charged Particle Beams">
+<tr data-index="55" data-categories="physics,accelerator physics" data-listing-title-sort="Theory and Design of Charged Particle Beams">
 <td>
 <span class="listing-title">Theory and Design of Charged Particle Beams</span>
 </td>
@@ -682,7 +690,7 @@ window.Quarto = {
 <span class="listing-author">M. Reiser</span>
 </td>
 </tr>
-<tr data-index="55" data-categories="philosophy,science" data-listing-title-sort="Time and Chance">
+<tr data-index="56" data-categories="philosophy,science" data-listing-title-sort="Time and Chance">
 <td>
 <span class="listing-title">Time and Chance</span>
 </td>
@@ -690,7 +698,7 @@ window.Quarto = {
 <span class="listing-author">David Albert</span>
 </td>
 </tr>
-<tr data-index="56" data-categories="sociology" data-listing-title-sort="Wealth, Poverty, and Politics">
+<tr data-index="57" data-categories="sociology" data-listing-title-sort="Wealth, Poverty, and Politics">
 <td>
 <span class="listing-title">Wealth, Poverty, and Politics</span>
 </td>
@@ -698,7 +706,7 @@ window.Quarto = {
 <span class="listing-author">Thomas Sowell</span>
 </td>
 </tr>
-<tr data-index="57" data-categories="physics,history" data-listing-title-sort="What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics">
+<tr data-index="58" data-categories="physics,history" data-listing-title-sort="What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics">
 <td>
 <span class="listing-title">What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics</span>
 </td>
