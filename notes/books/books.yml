@@ -304,7 +304,7 @@
   categories:
     - science fiction
 
-- title: The Character Gap
+- title: "The Character Gap"
   author: Christian Miller
   categories:
     - ethics
@@ -337,7 +337,25 @@
 
 - title: "Probability Theory: The Logic of Science"
   author: E. T. Jaynes
-  categoriess:
+  categories:
     - mathematics
     - probability
     - statistics
+
+- title: "Entropic Physics"
+  author: Ariel Caticha
+  categories:
+    - mathematics
+    - probability
+    - statistics
+
+- title: "Deep Learning: Foundations and Concepts"
+  author: C. Bishop, H. Bishop
+  categories:
+    - machine learning
+
+- title: "The Sense of Style"
+  author: S. Pinker
+  categories:
+    - writing
+
