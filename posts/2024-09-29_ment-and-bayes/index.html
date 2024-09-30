@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2024-04-01">
+<meta name="dcterms.date" content="2024-09-29">
 
-<title>Accelerated Inquiry - Princeton Muon Collider Workshop</title>
+<title>Accelerated Inquiry - Maximum Entropy and Bayesian Inference</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,9 +63,6 @@ div.csl-indent {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,6 +100,35 @@ gtag('js', new Date());
 gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -153,7 +179,7 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Princeton Muon Collider Workshop</h1>
+<h1 class="title">Maximum Entropy and Bayesian Inference</h1>
   </div>
 
 
@@ -170,7 +196,7 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 1, 2024</p>
+      <p class="date">September 29, 2024</p>
     </div>
   </div>
   
@@ -182,27 +208,67 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 </header>
 
 
-<p>The Large Hadron Collider (LHC) will soon double its luminosity, but progress in high-energy physics (HEP) will eventually require a new laboratory <span class="citation" data-cites="Shiltsev_2021">&nbsp;[<a href="#ref-Shiltsev_2021" role="doc-biblioref">1</a>]</span>. There are a few options. The <a href="https://fcc.web.cern.ch/overview">Future Circular Collider (FCC)</a> would collide ~100 TeV protons in a 100 km ring, using the LHC (7 TeV, 25 km) as a booster ring. The plan would be to start colliding leptons (FCC-ee) in the 2040s and switch to protons (FCC-hh) in the 2070s. The accelerator would be a relatively straightforward extension of the LHC, although there would be some new challenges, especially the required 16 T (!) bending magnets.</p>
-<p>An alternative approach is to collide leptons. Hadron collisions distribute energy among quarks and gluons, and it can be difficult to extract signals from the debris. Leptons don’t seem to have any internal structure; their collisions are clean and efficient, enabling precision measurements of certain reactions. Such collisions would be especially useful for studying the Higgs boson. Unfortunately, synchrotron radiation limits lepton energy in circular accelerators. Linear accelerators eliminate this problem but need to by very long to probe BSM physics. The proposed <a href="https://linearcollider.org">International Linear Collider (ILC)</a> would collide electrons with positrons at ~1 TeV in a ~50 km linac. The ILC has undergone a comprehensive design study and is ready to launch. Japan has shown interest, and although there are no official plans, the ILC could start running as soon as 2035.</p>
-<p>A muon collider (MuC) would be a hybrid approach. A MuC would collide muons and antimuons at ~10 TeV in a ~10 km ring (approximately the size of the LHC). Since muons are much heavier than electrons, they can be accelerated to 10 TeV in a compact ring. And since they are leptons, their collisions are more useful than hadrons at the same energy. A MuC is likely the only hope for a collider beyond LHC energy within my lifetime; if all goes well, it could start running in 2045. But there’s a problem: muons decay almost instantly. And another problem: muon beams are hot—they occupy a large volume in position-momentum space. And other problems too, such as neutrino radiation (!). These problems require novel solutions. Thus, the muon collider might be both the fastest and most challenging path to the energy frontier.</p>
-<p>The US Muon Accelerator Program (MAP) developed a preliminary MuC design some years ago, and the <a href="https://muoncollider.web.cern.ch">International Muon Collider Collaboration (IMCC)</a> has started where MAP left off. The preliminary design is shown below <span class="citation" data-cites="Accettura_2023">&nbsp;[<a href="#ref-Accettura_2023" role="doc-biblioref">2</a>]</span>:</p>
-<p><a href="./files/fig_muc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./files/fig_muc.png" class="img-fluid"></a></p>
-<p>The front end generates the muon and antimuon beams by colliding a proton beam with a metal target, the middle section cools the beams, reducing their phase space volume by six orders of magnitude (!), and the final section accelerates and collides the beams at dedicated interaction points. There is a push to deliver a collider design in the next few years, reflecting growing support from the <a href="https://www.slac.stanford.edu/econf/C210711/">HEP community</a>.</p>
-<p>I recently gave a talk at a workshop on muon colliders at Princeton University. The workshop discussed how the US could address the key technological challenges in the next five years. All presentations are available <a href="https://agenda.hep.wisc.edu/event/2140/timetable/#20240222">online</a>. I discussed how the SNS could test the extreme proton bunch compression needed to generate the initial muon beam. It was a unique workshop because of the mix of accelerator and particle physicists. While most of the talks focused on accelerator physics, around a third focused on detectors or HEP theory. A major topic was the beam-induced background (BIB) due to muon decay. I didn’t understand these talks well, but they motivated me to resume my particle physics self-education. (I probably would have gone into HEP if I’d attended a different grad school.)</p>
-<p>It was interesting to hear the particle physicists’ perspectives. Some expressed a desire for more accelerator-particle physics collaboration, especially among graduate students. I’m not sure how a Ph.D.&nbsp;student could have time to learn both accelerator physics and the complicated data analysis required for experimental particle physics. But I like this idea, and I’m sure many projects would benefit from multiple perspectives and skill sets.</p>
-<p>I also liked hearing about the state of HEP. One experimentalist expressed his opinion that particle physicists undersell their work. He drew a comparison to condensed matter physics, where experiments reveal exciting and unpredicted phenomena despite agreeing with the underlying theory of quantum mechanics. He argued that similar findings are commonplace at the LHC — many new processes do not contradict the Standard Model (SM) but are, nonetheless, unexpected and exciting. I suppose material science discoveries will always get more attention because they can lead to new technologies, while particle physics is more out there. In other words, who cares if tetraquarks exist? But from a fundamental scientific viewpoint, these discoveries are equally exciting.</p>
-<p>I was happy to attend this workshop and look forward to exploring SNS contributions to MuC design. It’s exciting to think about projects twenty (or even fifty) years away.</p>
-<p>A few up-to-date talks on future colliders: <a href="https://indico.cern.ch/event/1260648/attachments/2610683/4510782/IMCC_Schulte_CERN_2023.pdf">IMCC</a>, <a href="https://indico.cern.ch/event/1260648/attachments/2610683/4510781/FrankZimmermann-230314_Future-Colliders-FCC.pdf">FCC</a>, <a href="https://indico.cern.ch/event/1260648/attachments/2610683/4511473/linear-colliders.pdf">ILC</a>.</p>
+<p>Caticha <span class="citation" data-cites="Caticha_2021">&nbsp;[<a href="#ref-Caticha_2021" role="doc-biblioref">1</a>]</span> argues that the principle of maximum relative entropy (ME) is a universal principle of inference from which Bayesian inference and conventional MaxEnt can be derived. Here’s the idea (paraphrased from <span class="citation" data-cites="Caticha_2021">&nbsp;[<a href="#ref-Caticha_2021" role="doc-biblioref">1</a>]</span>).</p>
+<p>Let <span class="math inline">\(q(x)\)</span> represent a probability distribution over <span class="math inline">\(x\)</span>. We wish to update <span class="math inline">\(q(x)\)</span> to a new distribution <span class="math inline">\(p(x)\)</span> in light of new information. This is equivalent to ranking all candidate distributions according to a functional <span class="math inline">\(S[p(x), q(x)]\)</span>, which we call the <em>entropy</em>, and selecting the highest ranked distribution. To determine the entropy functional, we use the following general principle:</p>
+<p><strong>Principle of Minimal Updating</strong>: <em>Beliefs should be updated only to the minimal extent required by new information.</em></p>
+<p>So, if no information is provided, <span class="math inline">\(p(x) = q(x)\)</span>. We then introduce a few specific requirements:</p>
+<ol type="1">
+<li><strong>Subset independence</strong>: Probabilities conditioned on one domain should not be affected by information about a different, non-overlapping domain. This is a locality assumption. It means the contribution to the entropy from an infinitesimal region <span class="math inline">\(x + dx\)</span> depends only on the distribution at <span class="math inline">\(x\)</span>. Consequently, the entropy must take the form:</li>
+</ol>
+<p><span id="eq-entropy-subset"><span class="math display">\[
+S[p(x), q(x)] = \int F(p(x), q(x)) dx,
+\tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(F(p(x), q(x))\)</span> is an undetermined function.</p>
+<ol start="2" type="1">
+<li><strong>System Independence</strong>: If we initially assume two variables are independent, and if we receive information about each variable separately, then we should not change our initial assumption. In other words, if we know <span class="math inline">\(p(v)\)</span> and <span class="math inline">\(p(w)\)</span> but don’t have any prior knowledge of the relationship between <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span>, the posterior should take the form <span class="math inline">\(p(v, w) = p(v)p(w)\)</span>. Enforcing this axiom determines the entropy functional:</li>
+</ol>
+<p><span id="eq-entropy"><span class="math display">\[
+S[p(x), q(x)] = -\int{p(x) \log\left( \frac{p(x)}{q(x)} \right) dx}.
+\tag{2}\]</span></span></p>
+<p>ME maximizes the entropy in <a href="#eq-entropy" class="quarto-xref">Equation&nbsp;2</a> subject to constraints. The constraints are typically written as integrals over the distribution; for example, the moments of the distribution can be written in this way:</p>
+<p><span class="math display">\[
+\langle x^n \rangle = \int x^n p(x) dx.
+\]</span></p>
+<p>This sounds like Bayesian updating if we call <span class="math inline">\(q(x)\)</span> a <em>prior</em> and <span class="math inline">\(p(x)\)</span> a <em>posterior</em>. Bayesian updating applies when we know a many-to-one map from <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span>, where <span class="math inline">\(y\)</span> is a measurable variable. Additionally, we introduce the <em>likelihood</em> <span class="math inline">\(p(y|x)\)</span>, which is the probability of the data <span class="math inline">\(y\)</span> given the unknown variables <span class="math inline">\(x\)</span>. Then Bayes rule gives:</p>
+<p><span id="eq-bayes-theorem"><span class="math display">\[
+p(x | y) = \frac{ p(y | x) p(x) } {p(y)},
+\tag{3}\]</span></span></p>
+<p>We typically call <span class="math inline">\(p(x | y)\)</span> the posterior. (Note that <span class="math inline">\(p(x | y)\)</span> becomes the prior if used in a subsequent calculation, in which case the conditionalization on <span class="math inline">\(y\)</span> would disappear.)</p>
+<p>Let’s see if we can connect Bayesian inference (BI) to ME. We start without any data. All we have is our prior <span class="math inline">\(q(x)\)</span> and a specified likelihood <span class="math inline">\(q(y | x)\)</span>. The likelihood is part of our model, just like the prior, so we have an initial joint distribution over <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>:</p>
+<p><span id="eq-dummy"><span class="math display">\[
+q(x, y) = q(x) q(y | x).
+\tag{4}\]</span></span></p>
+<p>We then perform a measurement, finding that the variable <span class="math inline">\(y\)</span> takes the value <span class="math inline">\(y'\)</span>. Our task is to update <span class="math inline">\(q(x, y)\)</span> to a new distribution <span class="math inline">\(p(x, y)\)</span> in light of this new information. We know that</p>
+<p><span id="eq-bayes-constraints"><span class="math display">\[
+p(y) = \int p(x, y) dx = \delta(y - y'),
+\tag{5}\]</span></span></p>
+<p>where <span class="math inline">\(\delta\)</span> is the Dirac delta function. <a href="#eq-bayes-constraints" class="quarto-xref">Equation&nbsp;5</a> represents an infinite number of constraints on the joint distribution <span class="math inline">\(p(x, y\)</span>)—one constraint for each value of <span class="math inline">\(y\)</span>. The constraints do not completely determine the joint distribution, which must be of the form</p>
+<p><span id="eq-dummy"><span class="math display">\[
+p(x, y) = p(y) p(x | y) = \delta(y - y') p(x | y').
+\tag{6}\]</span></span></p>
+<p>The last term, <span class="math inline">\(p(x | y')\)</span>, is not yet determined. We now use the ME method to update <span class="math inline">\(q(x, y)\)</span> to <span class="math inline">\(p(x, y)\)</span>, maximizing the entropy</p>
+<p><span id="eq-joint-entropy"><span class="math display">\[
+S[p(x, y), q(x, y)] = -\int{ p(x, y) \log{ \left( \frac{p(x, y)}{q(x, y)} \right)} dxdy},
+\tag{7}\]</span></span></p>
+<p>subject to the constraints in <a href="#eq-bayes-constraints" class="quarto-xref">Equation&nbsp;5</a>. This calculation leads to</p>
+<p><span id="eq-dummy"><span class="math display">\[
+p(x, y) = \delta(y - y') q(x | y).
+\tag{8}\]</span></span></p>
+<p>Therefore,</p>
+<p><span id="eq-dummy"><span class="math display">\[
+\begin{align}
+p(x) &amp;= \int p(x, y) dy = \int \delta(y - y') q(x, y) dy \\
+p(x) &amp;= q(x | y') = \frac{ q(y' | x) q(x) } {q(y')}
+\end{align}
+\tag{9}\]</span></span></p>
+<p>Done!</p>
 
 
 
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-Shiltsev_2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">V. Shiltsev and F. Zimmermann, <em>Modern and Future Colliders</em>, Reviews of Modern Physics <strong>93</strong>, 015006 (2021).</div>
-</div>
-<div id="ref-Accettura_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">C. Accettura et al., <em>Towards a Muon Collider</em>, The European Physical Journal C <strong>83</strong>, 864 (2023).</div>
+<div id="ref-Caticha_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">A. Caticha, <em>Entropy, Information, and the Updating of Probabilities</em>, Entropy <strong>23</strong>, 895 (2021).</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -761,31 +827,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 
