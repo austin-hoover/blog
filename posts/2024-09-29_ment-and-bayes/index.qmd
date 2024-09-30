@@ -1,0 +1,88 @@
+---
+title: "Maximum Entropy and Bayesian Inference"
+date: 2024-09-29
+author: Austin Hoover
+categories:
+  - entropy
+  - bayesian
+bibliography: references.bib
+csl: ./american-physics-society.csl
+toc: false
+---
+
+Caticha [@Caticha_2021] argues that the principle of maximum relative entropy (ME) is a universal principle of inference from which Bayesian inference and conventional MaxEnt can be derived. Here's the idea (paraphrased from [@Caticha_2021]).
+
+Let $q(x)$ represent a probability distribution over $x$. We wish to update $q(x)$ to a new distribution $p(x)$ in light of new information. This is equivalent to ranking all candidate distributions according to a functional $S[p(x), q(x)]$, which we call the *entropy*, and selecting the highest ranked distribution. To determine the entropy functional, we use the following general principle:
+
+**Principle of Minimal Updating**: *Beliefs should be updated only to the minimal extent required by new information.*
+
+So, if no information is provided, $p(x) = q(x)$. We then introduce a few specific requirements:
+
+1. **Subset independence**: Probabilities conditioned on one domain should not be affected by information about a different, non-overlapping domain. This is a locality assumption. It means the contribution to the entropy from an infinitesimal region $x + dx$ depends only on the distribution at $x$. Consequently, the entropy must take the form:
+
+$$
+S[p(x), q(x)] = \int F(p(x), q(x)) dx,
+$$ {#eq-entropy-subset}
+
+where $F(p(x), q(x))$ is an undetermined function.
+
+2. **System Independence**: If we initially assume two variables are independent, and if we receive information about each variable separately, then we should not change our initial assumption. In other words, if we know $p(v)$ and $p(w)$ but don't have any prior knowledge of the relationship between $u$ and $v$, the posterior should take the form $p(v, w) = p(v)p(w)$. Enforcing this axiom determines the entropy functional:
+
+$$
+S[p(x), q(x)] = -\int{p(x) \log\left( \frac{p(x)}{q(x)} \right) dx}.
+$$ {#eq-entropy}
+
+ME maximizes the entropy in @eq-entropy subject to constraints. The constraints are typically written as integrals over the distribution; for example, the moments of the distribution can be written in this way:
+
+$$
+\langle x^n \rangle = \int x^n p(x) dx.
+$$
+
+This sounds like Bayesian updating if we call $q(x)$ a *prior* and $p(x)$ a *posterior*. Bayesian updating applies when we know a many-to-one map from $x$ to $y$, where $y$ is a measurable variable. Additionally, we introduce the *likelihood* $p(y|x)$, which is the probability of the data $y$ given the unknown variables $x$. Then Bayes rule gives:
+
+$$
+p(x | y) = \frac{ p(y | x) p(x) } {p(y)},
+$$ {#eq-bayes-theorem}
+
+We typically call $p(x | y)$ the posterior. (Note that $p(x | y)$ becomes the prior if used in a subsequent calculation, in which case the conditionalization on $y$ would disappear.)
+
+Let's see if we can connect Bayesian inference (BI) to ME. We start without any data. All we have is our prior $q(x)$ and a specified likelihood $q(y | x)$. The likelihood is part of our model, just like the prior, so we have an initial joint distribution over $x$ and $y$:
+
+$$
+q(x, y) = q(x) q(y | x).
+$$ {#eq-dummy}
+
+We then perform a measurement, finding that the variable $y$ takes the value $y'$. Our task is to update $q(x, y)$ to a new distribution $p(x, y)$ in light of this new information. We know that
+
+$$
+p(y) = \int p(x, y) dx = \delta(y - y'),
+$$ {#eq-bayes-constraints}
+
+where $\delta$ is the Dirac delta function. @eq-bayes-constraints represents an infinite number of constraints on the joint distribution $p(x, y$)---one constraint for each value of $y$. The constraints do not completely determine the joint distribution, which must be of the form
+
+$$
+p(x, y) = p(y) p(x | y) = \delta(y - y') p(x | y').
+$$ {#eq-dummy}
+
+The last term, $p(x | y')$, is not yet determined. We now use the ME method to update $q(x, y)$ to $p(x, y)$, maximizing the entropy
+
+$$
+S[p(x, y), q(x, y)] = -\int{ p(x, y) \log{ \left( \frac{p(x, y)}{q(x, y)} \right)} dxdy},
+$$ {#eq-joint-entropy}
+
+subject to the constraints in @eq-bayes-constraints. This calculation leads to
+
+$$
+p(x, y) = \delta(y - y') q(x | y).
+$$ {#eq-dummy}
+
+Therefore,
+
+$$
+\begin{align}
+p(x) &= \int p(x, y) dy = \int \delta(y - y') q(x, y) dy \\
+p(x) &= q(x | y') = \frac{ q(y' | x) q(x) } {q(y')}
+\end{align} 
+$$ {#eq-dummy}
+
+Done!
