@@ -12,4 +12,14 @@ toc: false
 draft: true
 ---
 
-[Summarize https://accelconf.web.cern.ch/hb2023/papers/tuc1c2.pdf.]
+CERN hosted the "68th ICFA Advanced Beam Dynamics Workshop on High-Intensity and High-Brightness Hadron Beams" (HB conference), almost one year ago. At one point I intended to write a summary of my contribution, but I never got around to it. Here it is:
+
+I gave a talk about our work at the SNS Beam Test Facility (BTF). The BTF experimental program is following the footsteps at the Low Energy Demonstration Accelerator (LEDA), a project at Los Alamos National Lab around 20 years ago. LEDA was a proton source followed by 50 quadrupole magnets aranged in an alternating focus-defocus pattern (FODO). A particle in the FODO channel sees a quasi-periodic focusing force in the transverse plane, but also see a defocusing force from the other particles in the beam. The motion in such a system is difficult to treat analytically. We can gain some insight by considering a simple model in which a single particle responds to the field of the oscillating beam core, but does not affect the core. This model is kind of like a harmonic oscillator with a periodic driving force, where the natural frequency is given by the accelerator lattice and the driving frequency is given by the oscillating beam core. Certain frequencies lead to resonant particle oscillations, and a small fraction of initial phase space coordinates will end up far from the beam, forming a low-density "halo".
+
+Particle-core models explain one mechanism behind halo formation, although the real situation is more complicated. The important point is that the particle trajectories have a complicated dependence on the initial particle distribution in six-dimensional phase space. 
+
+
+![](figures/fig_leda.png)
+
+Halo is troublesome in real accelerators. We'd like to be able to predict when and where it will form using computer simulations, but this is troubling in 
+
