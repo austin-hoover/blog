@@ -1,0 +1,14 @@
+---
+title: "It's only ten meters"
+date: 2024-10-07
+author: Austin Hoover
+bibliography: references.bib
+csl: ./american-physics-society.csl
+draft: true
+---
+
+We've made slow but steady progress over the past year at the SNS Beam Test Facility (BTF), a replica of the first few meters of the SNS linac. Our goal at the BTF is to model halo formation in a quadrupole focusing channel, following the [LEDA] experiment. No one has done this because (i) halo is not easy to measure, (ii) the initial six-dimensional phase space distribution is not easy to measure, and (iii) beamline uncertainties are difficult to pin down. 
+
+We want to predict the two-dimensional phase space distributions $\{ \rho(x, x'), \rho(y, y') \}$, where $x, y$ are the transverse positions and $x', y'$ are the momentum. We're interested in the halo surrounding the distribution's core, and this requires the logarithm of the density $\log\rho(x, x')$ down to six orders of magnitude below the peak density. 
+
+We ultimately want to make these predictions in the SNS linac. That might not be possible; the SNS lianc is over 400 meters long and contains many thousands of components. For now, we're interesting in making predictions over approximately ten meters, without any acceleration. This hasn't been easy.

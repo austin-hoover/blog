@@ -1,0 +1,15 @@
+---
+title: "N-dimensional MENT via particle sampling"
+date: 2024-10-07
+author: Austin Hoover
+categories:
+  - entropy
+  - tomography
+  - mcmc
+bibliography: references.bib
+csl: ./american-physics-society.csl
+toc: false
+draft: true
+---
+
+[Summarize https://arxiv.org/pdf/2409.17915.]

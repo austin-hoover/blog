@@ -1,0 +1,15 @@
+---
+title: "The impact of high-dimensional phase space correlations on the beam dynamics in a linear accelerator"
+date: 2024-10-07
+author: Austin Hoover
+categories:
+  - entropy
+  - tomography
+  - mcmc
+bibliography: references.bib
+csl: ./american-physics-society.csl
+toc: false
+draft: true
+---
+
+[Summarize https://accelconf.web.cern.ch/hb2023/papers/tuc1c2.pdf.]
