@@ -1,0 +1,14 @@
+---
+title: "Weird patterns in log-scale projections of intense beams in linacs"
+date: 2024-10-15
+author: Austin Hoover
+categories:
+  - particle accelerators
+  - sns
+  - halo
+bibliography: references.bib
+csl: ./american-physics-society.csl
+lightbox: true
+toc: true
+draft: true
+---
