@@ -1,0 +1,9 @@
+---
+title: "Notes on *The Sense of Style*"
+date: 2024-10-17
+author: Austin Hoover
+toc: false
+draft: true
+---
+
+
