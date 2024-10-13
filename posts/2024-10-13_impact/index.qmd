@@ -10,7 +10,7 @@ bibliography: references.bib
 csl: ./american-physics-society.csl
 lightbox: true
 toc: true
-draft: false
+draft: true
 ---
 
 Almost one year ago, CERN hosted the "68th ICFA Advanced Beam Dynamics Workshop on High-Intensity and High-Brightness Hadron Beams", also known as "HB". I gave a talk on our work at the SNS Beam Test Facility (BTF). I intended to share that work on this blog, but never got around to it. Better late than never:
