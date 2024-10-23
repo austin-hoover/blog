@@ -1,5 +1,5 @@
 ---
-title: "Weird patterns in log-scale projections of intense beams in linacs"
+title: "Weird patterns in log-scale projections of intense beams in hadron linacss"
 date: 2024-10-15
 author: Austin Hoover
 categories:
