@@ -1,0 +1,105 @@
+---
+title: "N-dimensional MENT via particle sampling"
+date: 2024-10-07
+author: Austin Hoover
+categories:
+  - entropy
+  - tomography
+  - mcmc
+bibliography: references.bib
+csl: ./american-physics-society.csl
+toc: false
+draft: false
+---
+
+MENT is an algorithm to reconstruct a distribution from its projections. While the algorithm was originally developed for 2D distributions and linear projections (defined in a moment), it's now clear that it generalizes to ND distributions and nonlinear projections. In practice, though, the algorithm has been limited to 4D distributions and a small number of measurements.^[Extension to N = 4 actually happened a long time ago at Los Alamos @Minerbo_1981. Chun Wong revived this approach and applied it to a special set of projections obtained from laser wires @Wong_2022.]
+
+In this [preprint](https://arxiv.org/pdf/2409.17915), I suggest a new implementation of the same algorithm. The idea is pretty simple. 
+
+
+## Background
+
+MENT updates a prior distribution $q(x)$ to a posterior $p(x)$ by maximizing the relative entropy 
+
+$$
+S[p(x), q(x)] = \int{p(x) \log{ \left( \frac{p(x)}{q(x)} \right) } dx}.
+$$ {#eq-entropy}
+
+subject to a set of constraints:
+
+$$
+\begin{equation}
+\begin{aligned}
+    G_1[p(x)] &= 0, \\
+    G_2[p(x)] &= 0, \\
+    \vdots \\
+    G_K[p(x)] &= 0. \\    
+\end{aligned}
+\end{equation}
+$$ {#eq-G}
+
+The resulting posterior is as close to the prior as possible while satisfying the constraints; it represents the most conservative estimate from the data. The constraints are projections of the N-dimensional distribution $p(x)$ onto a set of M-dimensional planes. The density at one point on one of the planes is the integral of $p(x)$ over a surface in the N-dimensional space. If the integration surface is a plane, I'll call the projection *linear*; if the surface is curved, I'll it a *nonlinear*.
+
+We can handle the general, nonlinear case in the following way. First, we define the transformed coordinates
+
+$$
+u_k(x) = \mathcal{M}_k(x),
+$$ {#eq-transform}
+
+where $k$ is the measurement index. In a dynamical system, $\mathcal{M}_i$ evolves the distribution forward in time.^[The evolution must not depend on $p(x)$.] Next, we linearly project the transformed distribution onto the axis $u_{k_\parallel} \in \mathbb{R}^M$. The integration surface is the plane $u_{k_\perp} \in \mathbb{R}^{N - M}$, which is perpendicular to $u_{k_\parallel}$.
+
+With this notation in hand, and letting $g(u_{k_\parallel})$ represent the measured projection, we can write the constraints as
+
+$$
+G_k[p(x)] = g(u_{k_\parallel}) - \int p(x(u_k)) du_{k_\perp} = 0.
+$$ {#eq-constraints}
+
+The method of Lagrange multipliers leads to the following form of the posterior:
+
+$$
+p(x) = \prod_{k} h_k(u_{k_\parallel}(x)),
+$$ {#eq-posterior}
+
+where $h_k(u_{k_\parallel}) > 0$ are unknown positive functions defined on the measurement axes. This equation says that the density at one point is found by *multiplying* these functions together. We evaluate the $k$th function by mapping the particle forward ($x \rightarrow u_k$), projecting it onto the measurement axis ($u_k \rightarrow u_{k_\parallel}$), and evaluating $h_k(u_{k_\parallel})$.
+
+@eq-posterior is deceptively simple. To find the component functions $h_k$, we need to substitute @eq-posterior into @eq-constraints. This gives:
+
+$$
+\begin{equation}
+\begin{aligned}
+    g_k(u_{k_\parallel}) 
+    &= 
+    \int p( x(u_k) ) du_{k_\perp} \\
+    &= 
+    \int \left\{ 
+        \prod_{j \ne k} h_j( u_{j_\parallel}( x(u_k) ) ) 
+    \right\} 
+    du_{k_\perp} \\
+\end{aligned}
+\end{equation} 
+$$ {#eq-system}
+
+There are a lot of parentheses... to evaluate the density at $u_k$, we need to first invert the transformation ($u_k \rightarrow x$); then we need to evaluate the $h_k$ functions at each the corresponding points $u_j$ in the inner loop. This is the long way of saying we need to map one coordinate system ($u_k$) to another ($u_j$). Let's drop the $x$ from @eq-system.
+
+$$
+\begin{equation}
+\begin{aligned}
+    g_k(u_{k_\parallel}) 
+    &= 
+    \int \left\{ 
+        \prod_{j \ne k} h_j( u_{j_\parallel}( u_k ) ) 
+    \right\} 
+    du_{k_\perp} \\
+\end{aligned}
+\end{equation} 
+$$ {#eq-system2}
+
+In practice, our measurements will not be continous; they will record the projected density at a set of points on each axis $u_{k_\parallel}$. In this case, we can also define the component functions $h_k(u_{k_\parallel})$ at these points.^[We can interpolate to evalute the functions other points.]. Let's wrap up the component functions at all these evaluation points into a vector $\theta$. 
+
+We've turned the original constrained optimization into an unconstrained optimization over $\theta$. This is an *enormous* simplification. $\theta$ defines an $N$-dimensional distribution $p_\theta(x)$ through @eq-posterior; if the distribution satisfies the constraints in @eq-constraints; we're *done*; we've found the constrainted maximum-entropy distribution. 
+
+
+## Nonlinear Gauss-Seidel iterations
+
+MENT introduces a "nonlinear Gauss-Seidel method" to solve @eq-system2.
+
