@@ -42,4 +42,4 @@ It worked! And just for fun, here's the same test for N=12:
 ![](images/fig_corner.png)
 
 
-See the preprint for more details.
+See the preprint for more details. Also the MENT code is [here](https://github.com/austin-hoover/ment).
