@@ -1,6 +1,6 @@
 ---
 title: "N-dimensional MENT via particle sampling"
-date: 2024-10-07
+date: 2024-10-30
 author: Austin Hoover
 categories:
   - entropy
@@ -12,94 +12,34 @@ toc: false
 draft: false
 ---
 
-MENT is an algorithm to reconstruct a distribution from its projections. While the algorithm was originally developed for 2D distributions and linear projections (defined in a moment), it's now clear that it generalizes to ND distributions and nonlinear projections. In practice, though, the algorithm has been limited to 4D distributions and a small number of measurements.^[Extension to N = 4 actually happened a long time ago at Los Alamos @Minerbo_1981. Chun Wong revived this approach and applied it to a special set of projections obtained from laser wires @Wong_2022.]
+This [preprint](https://arxiv.org/pdf/2409.17915) suggests a new implementation of MENT. MENT is an algorithm to reconstruct a distribution from its projections. It's a beautiful approach to the reconstruction problem based on the principle of maximum relative entropy (ME) --- a very general principle grounded in probability theory. The algorithm itself turns out to be extremely robust and works for almost all problems I've encountered. What's really nice is that it solves a constrained optimization problem *exactly*, without any regularization parameter. 
 
-In this [preprint](https://arxiv.org/pdf/2409.17915), I suggest a new implementation of the same algorithm. The idea is pretty simple. 
+MENT was originally developed for 2D reconstructions (i.e. "tomography"), but its author Gerald Minerbo (LANL) was aware that it could work in higher dimensions. In his original paper, Minerbo used MENT to reconstruct a 3D distribution from 2D projections @Minerbo_1979. A few years later, he used MENT to reconstruct a 4D distribution from 1D projections @Minerbo_1981. This was in 1981! It seems like people forgot about this paper. The next paper on 4D tomography wasn't until the 2000s @Hock_2013. Wong @Wong_2022 recently revived Minerbo's work and applied 4D MENT to experimental data at the SNS. 
 
+It's not clear if MENT can scale to 6D (or higher). There's a key step in the algorithm that involves projecting an N-dimensional probability density function (pdf) $\rho(x)$ onto an M-dimensional plane. For each point on the M-dimensional plane, we have to compute an integral over (N-M)-dimensional space. This can get expensive. My idea is to estimate the projection by sampling particles from $\rho(x)$ and binning those particles on the projection axis. This is sort of like Monte Carlo integration. The tough part is sampling the particles, which is not necessarily easier than the numerical integration.
 
-## Background
+I tried two sampling methods. I call the first method *grid sampling* (GS). When N <= 4, it's possible to evaluate $\rho(x)$ on a grid, forming an N-dimensional image or discrete probability distribution. It's super fast to sample particles from the image using `numpy.random.choice`. Then, for each bin, we sample a point from a uniform distribution within the bin. Grid sampling isn't absolutely necessary in 4D problems, but it's convenient. There are basically two parameters: the grid resolution and a smoothing parameter to hide the checkerboard pattern from the discretized pdf. It's easy to choose the grid resolution: make it as high as possible. I find $32^4$ bins are enough for most distributions, but my computer has no problem storing $50^4$ or more bins.
 
-MENT updates a prior distribution $q(x)$ to a posterior $p(x)$ by maximizing the relative entropy 
+I tested this approach by fitting a 4D distribution to 1D projections in a highly nonlinear system. The system is essentially a 2D harmonic oscillator with a nonlinear force applied after each oscillation period. The following plots show the 1D projections in the top rows. There isn't enough data here to constrain the 4D density, so the reconstruction is inaccurate. But that's not the point of this example: the only point was to fit the data.
 
-$$
-S[p(x), q(x)] = \int{p(x) \log{ \left( \frac{p(x)}{q(x)} \right) } dx}.
-$$ {#eq-entropy}
+![](images/fig_ring_4d_x.png){width=60% fig-align=center}
 
-subject to a set of constraints:
-
-$$
-\begin{equation}
-\begin{aligned}
-    G_1[p(x)] &= 0, \\
-    G_2[p(x)] &= 0, \\
-    \vdots \\
-    G_K[p(x)] &= 0. \\    
-\end{aligned}
-\end{equation}
-$$ {#eq-G}
-
-The resulting posterior is as close to the prior as possible while satisfying the constraints; it represents the most conservative estimate from the data. The constraints are projections of the N-dimensional distribution $p(x)$ onto a set of M-dimensional planes. The density at one point on one of the planes is the integral of $p(x)$ over a surface in the N-dimensional space. If the integration surface is a plane, I'll call the projection *linear*; if the surface is curved, I'll it a *nonlinear*.
-
-We can handle the general, nonlinear case in the following way. First, we define the transformed coordinates
-
-$$
-u_k(x) = \mathcal{M}_k(x),
-$$ {#eq-transform}
-
-where $k$ is the measurement index. In a dynamical system, $\mathcal{M}_i$ evolves the distribution forward in time.^[The evolution must not depend on $p(x)$.] Next, we linearly project the transformed distribution onto the axis $u_{k_\parallel} \in \mathbb{R}^M$. The integration surface is the plane $u_{k_\perp} \in \mathbb{R}^{N - M}$, which is perpendicular to $u_{k_\parallel}$.
-
-With this notation in hand, and letting $g(u_{k_\parallel})$ represent the measured projection, we can write the constraints as
-
-$$
-G_k[p(x)] = g(u_{k_\parallel}) - \int p(x(u_k)) du_{k_\perp} = 0.
-$$ {#eq-constraints}
-
-The method of Lagrange multipliers leads to the following form of the posterior:
-
-$$
-p(x) = \prod_{k} h_k(u_{k_\parallel}(x)),
-$$ {#eq-posterior}
-
-where $h_k(u_{k_\parallel}) > 0$ are unknown positive functions defined on the measurement axes. This equation says that the density at one point is found by *multiplying* these functions together. We evaluate the $k$th function by mapping the particle forward ($x \rightarrow u_k$), projecting it onto the measurement axis ($u_k \rightarrow u_{k_\parallel}$), and evaluating $h_k(u_{k_\parallel})$.
-
-@eq-posterior is deceptively simple. To find the component functions $h_k$, we need to substitute @eq-posterior into @eq-constraints. This gives:
-
-$$
-\begin{equation}
-\begin{aligned}
-    g_k(u_{k_\parallel}) 
-    &= 
-    \int p( x(u_k) ) du_{k_\perp} \\
-    &= 
-    \int \left\{ 
-        \prod_{j \ne k} h_j( u_{j_\parallel}( x(u_k) ) ) 
-    \right\} 
-    du_{k_\perp} \\
-\end{aligned}
-\end{equation} 
-$$ {#eq-system}
-
-There are a lot of parentheses... to evaluate the density at $u_k$, we need to first invert the transformation ($u_k \rightarrow x$); then we need to evaluate the $h_k$ functions at each the corresponding points $u_j$ in the inner loop. This is the long way of saying we need to map one coordinate system ($u_k$) to another ($u_j$). Let's drop the $x$ from @eq-system.
-
-$$
-\begin{equation}
-\begin{aligned}
-    g_k(u_{k_\parallel}) 
-    &= 
-    \int \left\{ 
-        \prod_{j \ne k} h_j( u_{j_\parallel}( u_k ) ) 
-    \right\} 
-    du_{k_\perp} \\
-\end{aligned}
-\end{equation} 
-$$ {#eq-system2}
-
-In practice, our measurements will not be continous; they will record the projected density at a set of points on each axis $u_{k_\parallel}$. In this case, we can also define the component functions $h_k(u_{k_\parallel})$ at these points.^[We can interpolate to evalute the functions other points.]. Let's wrap up the component functions at all these evaluation points into a vector $\theta$. 
-
-We've turned the original constrained optimization into an unconstrained optimization over $\theta$. This is an *enormous* simplification. $\theta$ defines an $N$-dimensional distribution $p_\theta(x)$ through @eq-posterior; if the distribution satisfies the constraints in @eq-constraints; we're *done*; we've found the constrainted maximum-entropy distribution. 
+![](images/fig_ring_4d_y.png){width=60% fig-align=center}
 
 
-## Nonlinear Gauss-Seidel iterations
+Grid sampling doesn't work in higher dimensions because of memory constraints, but there are other algorithms to sample from high-dimensional distributions. One is called the Metropolis-Hastings (MH) algorithm, which is a variant of Markov Chain Monte Carlo (MCMC). MH requires access to the unnormalized probability density, but nothing else. It's surprisingly simple. 
 
-MENT introduces a "nonlinear Gauss-Seidel method" to solve @eq-system2.
+The only problem with MCMC is that it's slow. MCMC is often used for Bayesian inference, where the goal is to compute an expectation value under the distribution. Expectation values can usually be estimated from a few hundred or a few thousand samples, but computing projections requires many more samples---possibly millions if we want to capture low-density regions. 
 
+I sped up the sampler by running a bunch of chains in parallel. I read a few papers that warned against this, but I don’t quite understand why. I took the following attitude: If I run a chain for T steps and I think it’s converged to the target distribution, and then I run another chain for T steps with a different starting point, then combining both chains should give a chain of length 2T which has also converged to the target distribution. If that’s true, I should be able to run the chains in parallel. In my experiments, I ran hundreds of parallel chains for thousands of steps to sample around a million points in a few seconds. That gave reliable values for the projected density in MENT.
+
+For an initial test, I defined a 6D Gaussian mixture distributions, which is bunch of Gaussian blobs with random positions and sizes. This could be a challenging case for MCMC because the distribution is multimodal. For the training data, I selected the 2D marginal projections: for an N-dimensional distribution, there are N(N – 1)/2 projections. Here’s the result for N=6:  
+
+![](images/fig_6d_gmm_projections.png)
+
+It worked! And just for fun, here's the same test for N=12:
+
+![](images/fig_corner.png)
+
+
+See the preprint for more details.
