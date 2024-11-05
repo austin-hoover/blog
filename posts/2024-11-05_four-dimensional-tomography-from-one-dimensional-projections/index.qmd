@@ -4,8 +4,7 @@ date: 2024-11-05
 author: Austin Hoover
 categories:
   - tomography
-bibliography: references.bib
-csl: ./american-physics-society.csl
+  - sns
 toc: false
 draft: true
 ---
