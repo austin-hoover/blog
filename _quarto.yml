@@ -7,7 +7,7 @@ website:
     right:
       - href: ./about/index.qmd
         text: "About"
-      - href: ./archive.qmd
+      - href: ./index.qmd
         text: "Posts"
       - href: ./notes/index.qmd
         text: "Notes"
@@ -15,13 +15,13 @@ website:
 format:
   html:
     theme:
-        dark: [default, ./style/custom_dark.scss]
         light: [default, ./style/custom_light.scss]
+        dark:  [default, ./style/custom_dark.scss]
     toc: false
     toc-depth: 5
     toc-location: right
     grid:
-        body-width: 730px    
+        body-width: 700px    
     mainfont: Georgia
-    fontsize: 15.00px
+    fontsize: 15.25px
     html-math-method: mathjax

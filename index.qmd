@@ -2,10 +2,9 @@
 listing:
     contents: posts
     sort: "date desc"
-    type: grid
-    grid-columns: 1
-    fields: [title, author, date, description]
-    max-description-length: 350
-    date-format: long
+    type: table
+    fields: [title, date]
+    date-format: YYYY‑MM‑DD
+    table-hover: true
     categories: true
 ---
