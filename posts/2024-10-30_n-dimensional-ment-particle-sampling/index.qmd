@@ -12,7 +12,7 @@ toc: false
 draft: false
 ---
 
-This [preprint](https://arxiv.org/pdf/2409.17915) suggests a new implementation of MENT. MENT is an algorithm to reconstruct a distribution from its projections. It's a beautiful approach to the reconstruction problem based on the principle of maximum relative entropy (ME) --- a very general principle grounded in probability theory. The algorithm itself turns out to be extremely robust and works for almost all problems I've encountered. What's really nice is that it solves a constrained optimization problem *exactly*, without any regularization parameter. 
+This [preprint](https://arxiv.org/pdf/2409.17915) suggests a new implementation of MENT. MENT is an algorithm to reconstruct a distribution from its projections. It's a beautiful approach to the reconstruction problem based on the principle of maximum relative entropy (ME) --- a very general principle grounded in probability theory. The algorithm turns out to be extremely robust and works for almost all problems I've encountered. What's really nice is that it solves a constrained optimization problem *exactly*, without any regularization parameter. 
 
 MENT was originally developed for 2D reconstructions (i.e. "tomography"), but its author Gerald Minerbo (LANL) was aware that it could work in higher dimensions. In his original paper, Minerbo used MENT to reconstruct a 3D distribution from 2D projections @Minerbo_1979. A few years later, he used MENT to reconstruct a 4D distribution from 1D projections @Minerbo_1981. This was in 1981! It seems like people forgot about this paper. The next paper on 4D tomography wasn't until the 2000s @Hock_2013. Wong @Wong_2022 recently revived Minerbo's work and applied 4D MENT to experimental data at the SNS. 
 
