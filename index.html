@@ -38,11 +38,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,10 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      page: 18,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      valueNames: ['listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -164,7 +163,7 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./archive.html"> 
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
@@ -195,631 +194,298 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="tomography,sns" data-listing-date-sort="1730782800000" data-listing-file-modified-sort="1730859269871" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1146">
-<a href="./posts/2024-11-05_four-dimensional-tomography-from-one-dimensional-projections/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Four-dimensional phase space tomography from one-dimensional measurements of a hadron beam
-</h5>
-<div class="card-text listing-description">
-An older post explained how I used MENT-Flow to reconstruct the four-dimensional phase space density of a beam in the SNS ring. I’ve since improved the reconstruction. First, I found a bug that was setting the beam energy to 1 GeV instead of the correct value of 0.8 GeV. Second, I switched from MENT-Flow to MENT. After making these changes, I…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-November 5, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="entropy,tomography,mcmc" data-listing-date-sort="1730260800000" data-listing-file-modified-sort="1730771213932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="790">
-<a href="./posts/2024-10-30_n-dimensional-ment-particle-sampling/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-N-dimensional MENT via particle sampling
-</h5>
-<div class="card-text listing-description">
-This preprint suggests a new implementation of MENT. MENT is an algorithm to reconstruct a distribution from its projections. It’s a beautiful approach to the reconstruction problem based on the principle of maximum relative entropy (ME) — a very general principle grounded in probability theory. The algorithm itself turns out to be extremely…<em></em>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-October 30, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="particle accelerators,sns,halo" data-listing-date-sort="1728792000000" data-listing-file-modified-sort="1728839171446" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2433">
-<a href="./posts/2024-10-13_impact/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-The impact of phase space correlations on the beam dynamics in linear accelerators
-</h5>
-<div class="card-text listing-description">
-Almost one year ago, CERN hosted the “68th ICFA Advanced Beam Dynamics Workshop on High-Intensity and High-Brightness Hadron Beams”, also known as “HB”. I gave a talk on our work at the SNS Beam Test Facility (BTF). I intended to share that work on this blog, but never got around to it. Better late than never:
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-October 13, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="entropy,bayesian" data-listing-date-sort="1727582400000" data-listing-file-modified-sort="1728157190073" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="638">
-<a href="./posts/2024-09-29_ment-and-bayes/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Maximum Entropy and Bayesian Inference
-</h5>
-<div class="card-text listing-description">
-Caticha <span class="citation" data-cites="Caticha_2021">&nbsp;[1]</span> argues that the principle of maximum relative entropy (ME) is a universal principle of inference from which Bayesian inference and conventional MaxEnt can be derived. Here’s the idea (paraphrased from <span class="citation" data-cites="Caticha_2021">&nbsp;[1]</span>).
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-September 29, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="accelerators,muon collider" data-listing-date-sort="1723435200000" data-listing-file-modified-sort="1723514718610" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
-<a href="./posts/2024-08-12_usmcc/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Inaugural US Muon Collider Collaboration meeting
-</h5>
-<div class="card-text listing-description">
-The US Muon Collider Collaboration (IMCC) held their first meeting at Fermilab last week. I couldn’t attend, but I heard it was an inspiring conference. Looks like it was around 80% particle physics, 20% accelerator physics. All the presentation slides are online here.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-August 12, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="entropy,tomography,sns" data-listing-date-sort="1717992000000" data-listing-file-modified-sort="1720404477300" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1869">
-<a href="./posts/2024-06-10_rec4d-sns-ring/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring
-</h5>
-<div class="card-text listing-description">
-In the previous post, I discussed numerical experiments to test an approximate high-dimensional maximum-entropy phase space tomography algorithm by modifying the Generative Phase Space Reconstruction (GPSR) approach. I recently applied this approach to reconstruct the 4D phase space distribution of a high-power proton beam in the SNS ring.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-June 10, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="entropy,tomography" data-listing-date-sort="1717905600000" data-listing-file-modified-sort="1720404477273" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3011">
-<a href="./posts/2024-06-09_mentflow-part2/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Maximum-entropy phase space tomography using normalizing flows (part 2)
-</h5>
-<div class="card-text listing-description">
-The last post introduced an approximate maximum-entropy tomography solver using Generative Phase Space Tomography (GPSR) and normalizing flows. Although the method is straightforward, it wasn’t clear how well it would work. Sometimes we measure the beam and analyze the data offline; such experiments aim to examine the phase space structure, which…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-June 9, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="entropy,tomography" data-listing-date-sort="1717646400000" data-listing-file-modified-sort="1720404477045" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2658">
-<a href="./posts/2024-06-06_mentflow-part1/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Maximum-entropy phase space tomography using normalizing flows (part 1)
-</h5>
-<div class="card-text listing-description">
-Phase space tomography is a technique to reconstruct a position-momentum distribution from its projections. Entropy maximization is a mathematically rigorous way to incorporate prior information in the reconstruction, providing strong regularization when measurements are sparse. Entropy maximization is challenging when the phase space is…<em></em><em></em>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-June 6, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="entropy,statistical mechanics,tomography" data-listing-date-sort="1715832000000" data-listing-file-modified-sort="1720404477035" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="669">
-<a href="./posts/2024-05-16_why-maximize-entropy/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Why maximize entropy?
-</h5>
-<div class="card-text listing-description">
-I’ve been thinking a lot about entropy in the past year. I’ve been motivated by problems in phase space tomography, where the goal is to reconstruct a two-, four- or six-dimensional phase space distribution from its one- or two-dimensional projections. Such problems have no unique solution. We can imagine the data carving out a feasible set in…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-May 16, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="particle accelerators,conferences,muon collider" data-listing-date-sort="1711944000000" data-listing-file-modified-sort="1717551783096" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="818">
-<a href="./posts/2024-04-01_muon/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Princeton Muon Collider Workshop
-</h5>
-<div class="card-text listing-description">
-The Large Hadron Collider (LHC) will soon double its luminosity, but progress in high-energy physics (HEP) will eventually require a new laboratory <span class="citation" data-cites="Shiltsev_2021">&nbsp;[1]</span>. There are a few options. The Future Circular Collider (FCC) would collide ~100 TeV protons in a 100 km ring, using the LHC (7 TeV, 25 km) as a booster ring. The plan would be to start colliding…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-April 1, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="particle accelerators,conferences" data-listing-date-sort="1711166400000" data-listing-file-modified-sort="1717551543138" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="911">
-<a href="./posts/2024-03-23_hb/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-High Brightness Workshop 2023
-</h5>
-<div class="card-text listing-description">
-I spoke at the Workshop on High-Brightness and High-Intensity Hadron Beams (HB) at CERN a few months ago. The workshop drew around 200 attendees from the United States, United Kingdom, South Korea, China, Japan, Germany, Italy, France, and Switzerland. All slides are available online. Here are some notes and highlights:
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-March 23, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="teleological arguments,fine-tuning,multiverse" data-listing-date-sort="1688961600000" data-listing-file-modified-sort="1720404477034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3428">
-<a href="./posts/2023-07-10_fine-tuning/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Fine-tuning arguments
-</h5>
-<div class="card-text listing-description">
-The universe would be fine-tuned for life if the set of possible life-permitting universes were much smaller than the set of possible universes. An immediate difficulty here is how to define the set of possible universes. The universe is characterized by states, laws, and constants. We can consider a <em>state</em> to be a snapshot of the universe at a…<span class="math inline"></span><span class="math inline"></span><em></em>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-July 10, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="12" data-categories="teleological arguments,biological design,Darwin" data-listing-date-sort="1688875200000" data-listing-file-modified-sort="1720404477032" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="683">
-<a href="./posts/2023-07-09_biological-design-arguments/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Biological design arguments
-</h5>
-<div class="card-text listing-description">
-Paley famously expressed a version of the biological design argument:
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-July 9, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="13" data-categories="particle accelerators,high-dimensional data,visualization" data-listing-date-sort="1685246400000" data-listing-file-modified-sort="1714340817372" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2183">
-<a href="./posts/2023-05-28_btf/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-High-dimensional phase space measurements
-</h5>
-<div class="card-text listing-description">
-Linear accelerators (linacs) generate powerful pulsed hadron beams for various applications. Increasing the beam power/intensity by orders of magnitude would benefit particle physics, nuclear physics, condensed matter physics, material science, biology, nuclear engineering, and other fields. Unfortunately, significantly increasing the beam…<em></em><span class="math inline"></span>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-May 28, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="14" data-categories="cosmological arguments,Leibniz,infinity" data-listing-date-sort="1647921600000" data-listing-file-modified-sort="1720404477029" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3471">
-<a href="./posts/2022-03-22_leibnizian-cosmological-arguments/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Leibnizian cosmological arguments
-</h5>
-<div class="card-text listing-description">
-Leibnizian cosmological arguments conclude that there is a necessary being (something that must exist) which explains the existence of contingent beings (things that do not have to exist). Such arguments address the question “Why does anything exist?” and generally utilize a principle of sufficient reason (PSR): <em>every contingent fact has an…</em><em></em><em></em>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-March 22, 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="15" data-categories="visualization" data-listing-date-sort="1644555600000" data-listing-file-modified-sort="1720404476999" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1195">
-<a href="./posts/2022-02-11_injection-figures/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Some figures to illustrate beam injection and accumulation
-</h5>
-<div class="card-text listing-description">
-One method to create high-intensity hadron beams is charge-exchange injection: negatively charged particles are repeatedly accelerated in a linear accelerator (linac) and injected into a circular accelerator (ring), accumulating charge in the ring over time. I created a simple animation to visualize this process.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-February 11, 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="16" data-categories="tomography,particle accelerators" data-listing-date-sort="1634356800000" data-listing-file-modified-sort="1720404476927" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2619">
-<a href="./posts/2021-10-16_tomographic-reconstruction-in-four-dimensions/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Tomographic reconstruction in four dimensions
-</h5>
-<div class="card-text listing-description">
-A beam of particles in an accelerator is characterized by its distribution in phase space — the space of positions <span class="math inline">\(\{x, y, z\}\)</span> and momenta <span class="math inline">\(\{x', y', z'\}\)</span>. I’m currently working on a project in which we’d like to measure the four-dimensional (4D) phase space distribution <span class="math inline">\(f(x, x', y, y')\)</span> of a fully-accumulated beam in the Spallation…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-October 16, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="17" data-categories="cosmological arguments,Kalam,infinity" data-listing-date-sort="1631678400000" data-listing-file-modified-sort="1720404476838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3490">
-<a href="./posts/2021-09-15_kalam-cosmological-arguments/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Kalam cosmological arguments
-</h5>
-<div class="card-text listing-description">
-These are my notes on chapter 3 of Oppy’s <em>Arguing About Gods</em>. This chapter is about cosmological arguments, which conclude that there is a cause or explanation of the existence of the universe. The first step in a cosmological argument is to assert a Causal Principle (CP) — that all things of a certain kind require a cause — or a Principle of…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-September 15, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="18" data-categories="Anselm,ontological arguments" data-listing-date-sort="1625457600000" data-listing-file-modified-sort="1720404476830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1286">
-<a href="./posts/2021-07-05_ontological-arguments/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Ontological arguments
-</h5>
-<div class="card-text listing-description">
-These are my notes on Chapter 2 of Oppy’s <em>Arguing About Gods</em>. This chapter is about ontological arguments — arguments that seek to demonstrate the existence of God by appealing to reason alone. The first and most famous ontological argument for the existence of God was presented by Anselm in 1078 in his work, <em>Proslogion</em> (translated: <em>Discourse on…</em>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-July 5, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="19" data-categories="space charge,resonance,instability" data-listing-date-sort="1625112000000" data-listing-file-modified-sort="1720404476824" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
-<a href="./posts/2021-07-01_space-charge-instabilities/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Space charge resonances and instabilities
-</h5>
-<div class="card-text listing-description">
-This post has not been converted to Quarto format yet. It is at my old blog:
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-July 1, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="20" data-categories="arguments,theism" data-listing-date-sort="1623470400000" data-listing-file-modified-sort="1720404476819" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2985">
-<a href="./posts/2021-06-12_arguing-about-gods/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Arguing about gods
-</h5>
-<div class="card-text listing-description">
-I’m reading the book <em>Arguing About Gods</em> by Graham Oppy, one of the most prominent philosophers of religion <span class="citation" data-cites="Oppy2006-gods">&nbsp;[1]</span>. Oppy’s main thesis is that there are no successful arguments for the existence of orthodoxly conceived monotheistic gods, where “orthodoxly conceived monotheistic god” refers to an omnipotent, omniscient, omnibenevolent creator of the…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-June 12, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="21" data-categories="particle accelerators,painting" data-listing-date-sort="1622088000000" data-listing-file-modified-sort="1720404476700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2546">
-<a href="./posts/2021-05-27_painting-a-particle-beam/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Painting a particle beam
-</h5>
-<div class="card-text listing-description">
-There is a great scene in the otherwise disappointing movie <em>Iron Man 2</em> in which Tony Stark builds a particle accelerator in his house.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-May 27, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="22" data-categories="particle accelerators,space charge,Vlasov" data-listing-date-sort="1620878400000" data-listing-file-modified-sort="1720404476618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2904">
-<a href="./posts/2021-05-13_matched-envelope/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Computing matched envelopes
-</h5>
-<div class="card-text listing-description">
-My first peer-reviewed paper was published in Physical Review Accelerators and Beams (PRAB) at the end of April<span class="citation" data-cites="Hoover2021">&nbsp;[1]</span>. I thought I would summarize the results of the paper here.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-May 13, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="23" data-categories="stylometry,natural language processing,support vector machine" data-listing-date-sort="1619668800000" data-listing-file-modified-sort="1720404476513" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3947">
-<a href="./posts/2021-04-29_authorship-identification/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Authorship identification
-</h5>
-<div class="card-text listing-description">
-In this post, I’ll summarize a paper by John Houvardas and Efstathios Stamatatos titled <em>N-Gram Feature Selection for Authorship Identification</em><span class="citation" data-cites="Houvardas2006">&nbsp;[1]</span>. The topic of the paper is <em>authorship identification</em>, that is, to identify the author of an unlabeled document given a list of possible authors and some sample of each author’s writing. I’ll first…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-April 29, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="24" data-categories="classical mechanics,nonlinear,resonance,particle accelerators" data-listing-date-sort="1616904000000" data-listing-file-modified-sort="1720404476336" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2472">
-<a href="./posts/2021-03-28_nonlinear-resonances/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Nonlinear resonances
-</h5>
-<div class="card-text listing-description">
-Most of us are familiar with the experience of pushing someone else on a playground swing. We intuitively know that we should sync our pushes with the swing oscillation frequency. This strategy employs the idea of a <em>resonance</em>, which is an increase of the oscillation amplitude of a system for certain driving frequencies. In this post we first…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-March 28, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="25" data-categories="electrodynamics,space charge,particle accelerators" data-listing-date-sort="1613970000000" data-listing-file-modified-sort="1711268562683" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2493">
-<a href="./posts/2021-02-22_pic/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Particle-in-cell simulation
-</h5>
-<div class="card-text listing-description">
-Many beam physics simulation codes exist. A key component of these simulations is the inclusion of the electromagnetic interactions between particles in the beam, also known as <em>space charge</em> forces. One way to compute space charge forces is the particle-in-cell (PIC) method. This post implements a basic version of the PIC method in Python.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-February 22, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="26" data-categories="classical mechanics,particle accelerators,coupling" data-listing-date-sort="1611550800000" data-listing-file-modified-sort="1720404476205" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1615">
-<a href="./posts/2021-01-25_coupled-parametric-oscillators/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Coupled parametric oscillators
-</h5>
-<div class="card-text listing-description">
-A previous post examined the analytic solutions to the equation of motion describing a parametric oscillator — an oscillator whose physical properties are time-dependent. This problem was motivated by describing the transverse oscillations of a charged particle in an accelerator. In this post, the treatment will be extended to a <em>coupled</em> parametric…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-January 25, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="27" data-categories="classical mechanics,particle accelerators" data-listing-date-sort="1611205200000" data-listing-file-modified-sort="1720404476127" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1872">
-<a href="./posts/2021-01-21_parametric-oscillators/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Parametric oscillators
-</h5>
-<div class="card-text listing-description">
-This post presents the solution to a general problem: the motion of a particle in one dimension in the presence of time-dependent, linear, periodic forces. This amounts to solving the following equation of motion:
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Austin Hoover
-</div>
-<div class="listing-date">
-January 21, 2021
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table table-hover">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="tomography,sns" data-listing-date-sort="1730782800000" data-listing-file-modified-sort="1730859269871" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1146" data-listing-title-sort="Four-dimensional phase space tomography from one-dimensional measurements of a hadron beam" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2024-11-05_four-dimensional-tomography-from-one-dimensional-projections/index.html" class="title listing-title">Four-dimensional phase space tomography from one-dimensional measurements of a hadron beam</a>
+</td>
+<td>
+<span class="listing-date">2024‑11‑05</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="entropy,tomography,mcmc" data-listing-date-sort="1730260800000" data-listing-file-modified-sort="1730771213932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="790" data-listing-title-sort="N-dimensional MENT via particle sampling" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2024-10-30_n-dimensional-ment-particle-sampling/index.html" class="title listing-title">N-dimensional MENT via particle sampling</a>
+</td>
+<td>
+<span class="listing-date">2024‑10‑30</span>
+</td>
+</tr>
+<tr data-index="2" data-categories="particle accelerators,sns,halo" data-listing-date-sort="1728792000000" data-listing-file-modified-sort="1728839171446" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2433" data-listing-title-sort="The impact of phase space correlations on the beam dynamics in linear accelerators" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2024-10-13_impact/index.html" class="title listing-title">The impact of phase space correlations on the beam dynamics in linear accelerators</a>
+</td>
+<td>
+<span class="listing-date">2024‑10‑13</span>
+</td>
+</tr>
+<tr data-index="3" data-categories="entropy,bayesian" data-listing-date-sort="1727582400000" data-listing-file-modified-sort="1728157190073" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="638" data-listing-title-sort="Maximum Entropy and Bayesian Inference" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2024-09-29_ment-and-bayes/index.html" class="title listing-title">Maximum Entropy and Bayesian Inference</a>
+</td>
+<td>
+<span class="listing-date">2024‑09‑29</span>
+</td>
+</tr>
+<tr data-index="4" data-categories="accelerators,muon collider" data-listing-date-sort="1723435200000" data-listing-file-modified-sort="1723514718610" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="43" data-listing-title-sort="Inaugural US Muon Collider Collaboration meeting" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2024-08-12_usmcc/index.html" class="title listing-title">Inaugural US Muon Collider Collaboration meeting</a>
+</td>
+<td>
+<span class="listing-date">2024‑08‑12</span>
+</td>
+</tr>
+<tr data-index="5" data-categories="entropy,tomography,sns" data-listing-date-sort="1717992000000" data-listing-file-modified-sort="1720404477300" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1869" data-listing-title-sort="Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2024-06-10_rec4d-sns-ring/index.html" class="title listing-title">Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring</a>
+</td>
+<td>
+<span class="listing-date">2024‑06‑10</span>
+</td>
+</tr>
+<tr data-index="6" data-categories="entropy,tomography" data-listing-date-sort="1717905600000" data-listing-file-modified-sort="1720404477273" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3011" data-listing-title-sort="Maximum-entropy phase space tomography using normalizing flows (part 2)" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2024-06-09_mentflow-part2/index.html" class="title listing-title">Maximum-entropy phase space tomography using normalizing flows (part 2)</a>
+</td>
+<td>
+<span class="listing-date">2024‑06‑09</span>
+</td>
+</tr>
+<tr data-index="7" data-categories="entropy,tomography" data-listing-date-sort="1717646400000" data-listing-file-modified-sort="1730946173442" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2658" data-listing-title-sort="Maximum-entropy phase space tomography using normalizing flows (part 1)" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2024-06-06_mentflow-part1/index.html" class="title listing-title">Maximum-entropy phase space tomography using normalizing flows (part 1)</a>
+</td>
+<td>
+<span class="listing-date">2024‑06‑06</span>
+</td>
+</tr>
+<tr data-index="8" data-categories="entropy,statistical mechanics,tomography" data-listing-date-sort="1715832000000" data-listing-file-modified-sort="1720404477035" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="669" data-listing-title-sort="Why maximize entropy?" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2024-05-16_why-maximize-entropy/index.html" class="title listing-title">Why maximize entropy?</a>
+</td>
+<td>
+<span class="listing-date">2024‑05‑16</span>
+</td>
+</tr>
+<tr data-index="9" data-categories="particle accelerators,conferences,muon collider" data-listing-date-sort="1711944000000" data-listing-file-modified-sort="1717551783096" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="818" data-listing-title-sort="Princeton Muon Collider Workshop" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2024-04-01_muon/index.html" class="title listing-title">Princeton Muon Collider Workshop</a>
+</td>
+<td>
+<span class="listing-date">2024‑04‑01</span>
+</td>
+</tr>
+<tr data-index="10" data-categories="particle accelerators,conferences" data-listing-date-sort="1711166400000" data-listing-file-modified-sort="1717551543138" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="911" data-listing-title-sort="High Brightness Workshop 2023" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2024-03-23_hb/index.html" class="title listing-title">High Brightness Workshop 2023</a>
+</td>
+<td>
+<span class="listing-date">2024‑03‑23</span>
+</td>
+</tr>
+<tr data-index="11" data-categories="teleological arguments,fine-tuning,multiverse" data-listing-date-sort="1688961600000" data-listing-file-modified-sort="1720404477034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3428" data-listing-title-sort="Fine-tuning arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2023-07-10_fine-tuning/index.html" class="title listing-title">Fine-tuning arguments</a>
+</td>
+<td>
+<span class="listing-date">2023‑07‑10</span>
+</td>
+</tr>
+<tr data-index="12" data-categories="teleological arguments,biological design,Darwin" data-listing-date-sort="1688875200000" data-listing-file-modified-sort="1720404477032" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="683" data-listing-title-sort="Biological design arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2023-07-09_biological-design-arguments/index.html" class="title listing-title">Biological design arguments</a>
+</td>
+<td>
+<span class="listing-date">2023‑07‑09</span>
+</td>
+</tr>
+<tr data-index="13" data-categories="particle accelerators,high-dimensional data,visualization" data-listing-date-sort="1685246400000" data-listing-file-modified-sort="1714340817372" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2183" data-listing-title-sort="High-dimensional phase space measurements" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2023-05-28_btf/index.html" class="title listing-title">High-dimensional phase space measurements</a>
+</td>
+<td>
+<span class="listing-date">2023‑05‑28</span>
+</td>
+</tr>
+<tr data-index="14" data-categories="cosmological arguments,Leibniz,infinity" data-listing-date-sort="1647921600000" data-listing-file-modified-sort="1720404477029" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3471" data-listing-title-sort="Leibnizian cosmological arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2022-03-22_leibnizian-cosmological-arguments/index.html" class="title listing-title">Leibnizian cosmological arguments</a>
+</td>
+<td>
+<span class="listing-date">2022‑03‑22</span>
+</td>
+</tr>
+<tr data-index="15" data-categories="visualization" data-listing-date-sort="1644555600000" data-listing-file-modified-sort="1720404476999" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1195" data-listing-title-sort="Some figures to illustrate beam injection and accumulation" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2022-02-11_injection-figures/index.html" class="title listing-title">Some figures to illustrate beam injection and accumulation</a>
+</td>
+<td>
+<span class="listing-date">2022‑02‑11</span>
+</td>
+</tr>
+<tr data-index="16" data-categories="tomography,particle accelerators" data-listing-date-sort="1634356800000" data-listing-file-modified-sort="1720404476927" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2619" data-listing-title-sort="Tomographic reconstruction in four dimensions" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-10-16_tomographic-reconstruction-in-four-dimensions/index.html" class="title listing-title">Tomographic reconstruction in four dimensions</a>
+</td>
+<td>
+<span class="listing-date">2021‑10‑16</span>
+</td>
+</tr>
+<tr data-index="17" data-categories="cosmological arguments,Kalam,infinity" data-listing-date-sort="1631678400000" data-listing-file-modified-sort="1720404476838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3490" data-listing-title-sort="Kalam cosmological arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-09-15_kalam-cosmological-arguments/index.html" class="title listing-title">Kalam cosmological arguments</a>
+</td>
+<td>
+<span class="listing-date">2021‑09‑15</span>
+</td>
+</tr>
+<tr data-index="18" data-categories="Anselm,ontological arguments" data-listing-date-sort="1625457600000" data-listing-file-modified-sort="1720404476830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1286" data-listing-title-sort="Ontological arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-07-05_ontological-arguments/index.html" class="title listing-title">Ontological arguments</a>
+</td>
+<td>
+<span class="listing-date">2021‑07‑05</span>
+</td>
+</tr>
+<tr data-index="19" data-categories="space charge,resonance,instability" data-listing-date-sort="1625112000000" data-listing-file-modified-sort="1720404476824" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16" data-listing-title-sort="Space charge resonances and instabilities" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-07-01_space-charge-instabilities/index.html" class="title listing-title">Space charge resonances and instabilities</a>
+</td>
+<td>
+<span class="listing-date">2021‑07‑01</span>
+</td>
+</tr>
+<tr data-index="20" data-categories="arguments,theism" data-listing-date-sort="1623470400000" data-listing-file-modified-sort="1720404476819" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2985" data-listing-title-sort="Arguing about gods" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-06-12_arguing-about-gods/index.html" class="title listing-title">Arguing about gods</a>
+</td>
+<td>
+<span class="listing-date">2021‑06‑12</span>
+</td>
+</tr>
+<tr data-index="21" data-categories="particle accelerators,painting" data-listing-date-sort="1622088000000" data-listing-file-modified-sort="1720404476700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2546" data-listing-title-sort="Painting a particle beam" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-05-27_painting-a-particle-beam/index.html" class="title listing-title">Painting a particle beam</a>
+</td>
+<td>
+<span class="listing-date">2021‑05‑27</span>
+</td>
+</tr>
+<tr data-index="22" data-categories="particle accelerators,space charge,Vlasov" data-listing-date-sort="1620878400000" data-listing-file-modified-sort="1720404476618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2904" data-listing-title-sort="Computing matched envelopes" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-05-13_matched-envelope/index.html" class="title listing-title">Computing matched envelopes</a>
+</td>
+<td>
+<span class="listing-date">2021‑05‑13</span>
+</td>
+</tr>
+<tr data-index="23" data-categories="stylometry,natural language processing,support vector machine" data-listing-date-sort="1619668800000" data-listing-file-modified-sort="1720404476513" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3947" data-listing-title-sort="Authorship identification" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-04-29_authorship-identification/index.html" class="title listing-title">Authorship identification</a>
+</td>
+<td>
+<span class="listing-date">2021‑04‑29</span>
+</td>
+</tr>
+<tr data-index="24" data-categories="classical mechanics,nonlinear,resonance,particle accelerators" data-listing-date-sort="1616904000000" data-listing-file-modified-sort="1720404476336" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2472" data-listing-title-sort="Nonlinear resonances" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-03-28_nonlinear-resonances/index.html" class="title listing-title">Nonlinear resonances</a>
+</td>
+<td>
+<span class="listing-date">2021‑03‑28</span>
+</td>
+</tr>
+<tr data-index="25" data-categories="electrodynamics,space charge,particle accelerators" data-listing-date-sort="1613970000000" data-listing-file-modified-sort="1731181508633" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2494" data-listing-title-sort="Particle-in-cell simulation" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-02-22_pic/index.html" class="title listing-title">Particle-in-cell simulation</a>
+</td>
+<td>
+<span class="listing-date">2021‑02‑22</span>
+</td>
+</tr>
+<tr data-index="26" data-categories="classical mechanics,particle accelerators,coupling" data-listing-date-sort="1611550800000" data-listing-file-modified-sort="1720404476205" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1615" data-listing-title-sort="Coupled parametric oscillators" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-01-25_coupled-parametric-oscillators/index.html" class="title listing-title">Coupled parametric oscillators</a>
+</td>
+<td>
+<span class="listing-date">2021‑01‑25</span>
+</td>
+</tr>
+<tr data-index="27" data-categories="classical mechanics,particle accelerators" data-listing-date-sort="1611205200000" data-listing-file-modified-sort="1720404476127" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1872" data-listing-title-sort="Parametric oscillators" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./posts/2021-01-21_parametric-oscillators/index.html" class="title listing-title">Parametric oscillators</a>
+</td>
+<td>
+<span class="listing-date">2021‑01‑21</span>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
-</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -957,7 +623,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = true;
+  const darkModeDefault = false;
   let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
