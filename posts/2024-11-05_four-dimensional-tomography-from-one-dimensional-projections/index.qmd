@@ -14,7 +14,7 @@ The paper isn't really about the reconstruction algorithm; it's more about the e
 
 We performed our experiment at the Spallation Neutron Source (SNS) accelerator. The SNS generates high-power proton pulses via multiturn charge-exchange injection from a linac into an accumulator ring. After all $10^{14}$ protons are accumulated, they're extracted and sent to the spallation target to make neutrons. We measured the beam in the RTBT (Ring Target Beam Transport) section shown in @fig-sns. 
 
-![](images/fig_sns_diagram.png){#fig-sns fig-align=left}
+![(Click to enlarge.)](images/fig_sns_diagram.png){#fig-sns fig-align=center}
 
 The beam intensity and energy preclude the use of screens to measure the two-dimensional beam density. Instead, the SNS has a set of four *wire scanners*. Each wire scanner has a horizontal, diagonal, and vertical wire that sweeps across the beam. By recording the secondary electron emission from the wire, we can measure the particle density as a function of position. We end up with three signals per wire scanner: $\{ f(x), f(y), f(u) \}$, where $u = (x - y) / \sqrt(2)$ is the diagonal axis. The wire scanners run in parallel, generating twelve profiles on each scan.
 
@@ -24,27 +24,27 @@ A key finding in that older study was that the nominal optics lead to an ill-con
 
 I started by fitting the covariance matrix to the measured signal variances ($\langle xx \rangle, \langle yy \rangle, \langle uu \rangle$). @fig-cov shows a tight fit to the data. Using standard least-squares error propagation, I estimated a low sensitivity to errors.
 
-![](images/fig_cov.png){#fig-cov width=50% fig-align=left}
+![](images/fig_cov.png){#fig-cov width=65% fig-align=center}
 
 Next, I used MENT to reconstruct the distribution. MENT updates a prior $f_*(x, x', y, y')$ to a posterior $f(x, x', y, y')$ by maximizing the entropy of $f$ relative to $f_*$. This ensures the posterior is as simple as possible relative to the prior. A uniform prior often makes sense, but we've already estimated the covariance matrix from the least-squares fit, and we don't want to ignore this information. One could imagine starting from a uniform prior and running MENT with the measured covariance matrix as a constraint. The result is a Gaussian distribution. So I used a Gaussian prior with the measured covariance matrix.
 
 Here are the reconstruction results. First, the measured profiles (black points) compared to the simulated/predicted profiles:
 
-![](images/fig_profiles.png){#fig-profiles fig-align=left}
+![](images/fig_profiles.png){#fig-profiles width=75% fig-align=center}
 
 Perfect agreement. The log-scale plots show agreement in low-density regions as well:
 
-![](images/fig_profiles_log.png){#fig-profiles-log fig-align=left}
+![](images/fig_profiles_log.png){#fig-profiles-log width=75% fig-align=center}
 
 I'm not sure what's causing the shoulders in the vertical ($y$) profiles; it might be cross-talk between wires. But this is an encouraging result. It means we might be able to study halo formation in the ring by improving the wire scanner dynamic range.
 
 Here are the 2D projections of the 4D distribution that generated those profiles:
 
-![](images/fig_proj2d.png){#fig-proj2d width=75% fig-align=left}
+![](images/fig_proj2d.png){#fig-proj2d width=75% fig-align=center}
 
 I didn't say much about this figure in the paper because I was focused on the measurement, not the physics. But note that running the same measurement with a different injection painting scheme yields a much different result (@fig-exp02-proj2d). In both cases, the reconstructed distribution is close to what we expected based on simulations.
 
-![](images/fig_exp02_proj2d.png){#fig-exp02-proj2d width=75% fig-align=left}
+![](images/fig_exp02_proj2d.png){#fig-exp02-proj2d width=75% fig-align=center}
 
 
 
@@ -53,30 +53,30 @@ Okay, great. But should we trust these results? There are many possible errors i
 Thus I followed the strategy of several other papers: simulate the reconstruction. I used four different initial distributions. The first is the result of a beam physics simulation, so it's somewhat realistic. The second is a superposition of Gaussian blobs. The third is a "Waterbag" distribution, which has a uniform density inside the unit ball. The fourth is a "Hollow" distribution, which is a hollowed-out version of the Waterbag. Here are the results:
 
 ::: {layout-nrow=2}
-![](images/fig_sim_proj2d_sim){width=75% fig-align=left}
-![](images/fig_sim_profiles_sim){width=75% fig-align=left}
+![](images/fig_sim_proj2d_sim){width=75% fig-align=center}
+![](images/fig_sim_profiles_sim){width=75% fig-align=center}
 :::
 
 ::: {layout-nrow=2}
-![](images/fig_sim_proj2d_gm){width=75% fig-align=left}
-![](images/fig_sim_profiles_gm){width=75% fig-align=left}
+![](images/fig_sim_proj2d_gm){width=75% fig-align=center}
+![](images/fig_sim_profiles_gm){width=75% fig-align=center}
 :::
 
 ::: {layout-nrow=2}
-![](images/fig_sim_proj2d_waterbag){width=75% fig-align=left}
-![](images/fig_sim_profiles_waterbag){width=75% fig-align=left}
+![](images/fig_sim_proj2d_waterbag){width=75% fig-align=center}
+![](images/fig_sim_profiles_waterbag){width=75% fig-align=center}
 :::
 
 ::: {layout-nrow=2}
-![](images/fig_sim_proj2d_hollow){width=75% fig-align=left}
-![](images/fig_sim_profiles_hollow){width=75% fig-align=left}
+![](images/fig_sim_proj2d_hollow){width=75% fig-align=center}
+![](images/fig_sim_profiles_hollow){width=75% fig-align=center}
 :::
 
 It looks like most 2D features are captured by the MENT distribution. That's good news for our experiments: 2D features tell us a lot about the beam. There's more uncertainty in the cross-plane projections, such as $x$-$y$ and $x'$-$y'$, but the uncertainty isn't enormous.
 
 A closer look shows that the internal 4D structure is incorrect for the Waterbag and Hollow distributions. See @fig-slice, which shows the 1D projections within a 3D ball in the unplotted coordinates. As the ball shrinks, we approach a 1D slice through the 4D density. You can see that the MENT posterior is uniform, not hollow. Note that both distributions match the data *exactly*. 
 
-![](images/fig_sim_slice_sphere_all.png){#fig-slice width=50% fig-align=left}
+![](images/fig_sim_slice_sphere_all.png){#fig-slice width=50% fig-align=center}
 
 The failure to capture the hollow core is somewhat expected from previous studies [here](https://journals.aps.org/prab/abstract/10.1103/PhysRevAccelBeams.23.124201), [here](https://doi.org/10.1103/PhysRevAccelBeams.24.014201), and [here](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.033163). Low-dimensional projections average over multiple dimensions and easily hide "holes" in the high-dimensional distribution. There is also a good reason why the MENT posterior is not hollow: the prior is a Gaussian, so MENT will flatten the Gaussian just until the measurements match the data, but no more. In other words, a hollow distribution is very far from the prior. 
 
