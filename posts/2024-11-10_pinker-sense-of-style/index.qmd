@@ -1,0 +1,94 @@
+---
+title: "Notes on *The Sense of Style* by Steven Pinker"
+date: 2024-11-10
+author: Austin Hoover
+toc: false
+categories:
+  - books
+  - writing
+---
+
+> So many things can go wrong in a passage of prose. The writing can be bloated, self-conscious, academic; these are habits that classic style, which treats prose as a window onto the world, is designed to break. The passage can be cryptic, abstruse, arcane; these are symptoms of the curse of knowledge. The syntax can be defective, convoluted, ambiguous; these are flaws that can be prevented by an awareness of the treelike nature of a sentence. [...] Even if every sentence in a text is crisp, lucid, and well formed, a succession of them can feel choppy, disjointed, unfocused---in a word, incoherent.
+
+I recently read *The Sense of Style* by Steven Pinker. It was great! I've struggled with my writing since starting my PhD six years ago. This book gave me plenty to keep in mind when writing my next paper.
+
+
+## A window onto the world
+
+
+Pinker advocates for *classic style*, in which:
+
+* "A writer, in conversation with a reader, directs the reader's gaze to something in the world."
+* "The writer can see something that the reader has not yet noticed, and he orients the reader's gaze so that she can see it for herself. The purpose of writing is presentation, and its motive is disinterested truth."
+* The writer can count on the reader to "read between the lines, catch his drift, and connect the dots".
+* The writer puts aside philosophical questions about the subject.
+
+Classic style is clear, focused, and direct. Basically, classic style respects the reader. This is in stark contrast to the "academese" found in many academic papers, such as:
+
+> The move from a structuralist account in which capital is understood to structure social relations in relatively homologous ways to a view of hegemony in which power relations are subject to repetition, convergence, and rearticulation brought the question of temporality into the thinking of structure, and marked a shift from a form of Althusserian theory that takes structural totalities as theoretical objects too one in which the insights into the contingent possibility of structure inaugurate a renewed conception of hegemony as bound up with the contingent sites and strategies of the rearticulation of power.
+
+Pinker provides several recommendations to move one's writing toward classic style. For example:
+
+*Use signposts sparingly.* Common signposts include "This paper is organized as follows" and "The previous paragraph explained". Pinker argues that while these signposts can be useful in oral presentations, they are unnecessary in written works. I agree! I skip these paragraphs when I read scientific papers. If the paper is so long that it needs an outline, then a proper table of contents is helpful. Pinker suggests using signposts sparingly. Examples include asking a question ("What drives halo formation?") or using "we" to signify that the reader and writer are on a journey together ("As we have seen", "Let us begin by", "Now that we have").
+
+*Speak directly about the topic*. Avoid statements like "In recent years, there has been an explosion of research on...". Why should the reader care what researchers are doing? It's better to just explain why the topic is interesting or important. Asking a question is often a nice way to begin.
+
+*Avoid self-conscious writing.* Here's a hilarious example from the book:
+
+> The problem of language acquisition is extremely complex. It is difficult to give precise definitions of the concept of "language" and the concept of "acquisition and the concept of "children". There is much uncertainty about the interpretation of experimental data and a great deal of controversy surrounding the theories. More research needs to be done.
+
+*Avoid quotation marks around common expressions.* This is again very common in academic papers.
+
+*Avoid excessive hedging.* This is difficult for me because I don't want to say anything wrong and I don't like when people are overly confident in academic papers. But Pinker convinced me that it's easy to swing in the other direction, with too many words like *fairly*, *somewhat*, etc.
+
+*Avoid [cliches](https://prowritingaid.com/list-of-cliches).*
+
+*Avoid [zombie nouns](https://archive.nytimes.com/opinionator.blogs.nytimes.com/2012/07/23/zombie-nouns/)*.
+
+
+
+## The curse of knowledge
+
+> We would rather run the risk of confusing them while at least appearing to be sophisticated than take a chance at belaboring the obvious while striking them as naive or condescending.
+
+The curse of knowledge is "the difficulty in imagining what it is like for someone else not to know something that you know". Pinker argues that the curse of knowledge is the best explanation for why there is so much unintentionally bad writing. This one hit home.
+
+I like Pinker's explanation in terms of "chunking". Over time, we develop abstract "chunks": single words that describe complex ideas. Then we package these chunks into higher-level chunks, and so on. By the end, we're speaking a foreign language and dealing with very abstract concepts, creating an enormous barrier to entry for new researchers. It can even make our work inaccessible to researchers in the same field of study! 
+
+Unfortunately, it's not easy to lift the curse. First, there's pressure to make oneself sound smart in academic papers. I've been told to remove sentences because they are too obvious, advised to remove explanations and diagrams, etc.; this feedback begins soon after you begin your PhD and continues until you can comfortably use the same confusing jargon as your peers. Second, it's just hard to imagine not knowing what you know. 
+
+To lift the curse of knowledge, Pinker recommends picturing the audience as you write. This strategy is imperfect because we naturally overestimate the audience's background knowledge. Thus, Pinker recommends reading your paper after an extended break---long enough to forget what you wrote. Finally, it's wise to let someone else read your paper and to take their feedback seriously.
+
+
+## The Web, the Tree, and the String
+
+This fourth chapter contains a detailed explanation of sentence structure and how it can clarify one's message. Lots to reread here. The main point: writing is using a tree of phrases to turn a web of ideas into a string of words.
+
+
+
+## Arcs of coherence
+
+
+> There is a big difference between a coherent passage of writing and a flaunting of one's erudition, a running journal of one's thoughts, or a published version of one's notes. A coherent text is a designed object: an ordered tree of sections within sections, crisscrossed by arcs that track topics, points, actors, and themes, and held together by connectors that tie one proposition to the next. Like other designed objects, it comes about not by accident but by drafting a blueprint, attending to details, and maintaining a sense of harmony and balance.
+
+Coherence is probably the weakest aspect of my writing. I suppose my problem isn't with the high-level structure (the ordered tree), but with the connections between sentences. Pinker writes, "Whenever one sentence comes after another, readers need to see a connection between them." I find myself wanting to write a series of disjointed sentences, all of which support one main point but which sound choppy when read one after the other.
+
+Pinker has quite a few suggestions to improve coherence, including stating the topic up front to focus the reader's attention, using paragraphs to give the reader breaks, using the right number of connectives (too many = pedantic; too few = incoherent), minimizing negations, and avoiding unnecessary word variation.
+
+
+## Telling right from wrong
+
+> There is a kind of writer who makes issues of usage impossible to ignore. These writers are incurious about the logic and history of the English language and the ways in which it has been used by its exemplary stylists. They have a tin ear for its nuances of meaning and emphasis. Too lazy to crack open a dictionary, they are led by gut feeling and intuition rather than attention to careful scholarship. For these writers, language is not a vehicle for clarity and grace but a way to signal their membership in a social clique. (page 188)
+
+This last chapter discusses grammar rules. Pinker argues that there is no contradiction between descriptive and prescriptive linguistics (descriptive rules summarize how people use language, while prescriptive rules are conventions). Language is flexible and ever-changing, but conventions exist for a reason.
+
+The rest of the chapter takes stances on many different grammar questions, such as who/whom, shall/will, and split infinitives, as well as punctuation rules, formality, diction, etc. A great reference to keep nearby.
+
+
+## Next steps
+
+It's discouraging to realize how many things can go wrong in my writing, and it's hard to know how to improve. If I write more frequently, I could improve, but I could also get worse. It's like lifting weights, playing piano, or any other motor skill: practice reinforces technique. Improvement requires practicing *good* technique. 
+
+It's impossible to improve all these things at once. I guess the solution is to focus on a few things each time I write. (I recently listened to a podcast with NFL running back Marshawn Lynch, who said he used to focus on a single aspect of his technique at each practice.) Or maybe it's better to write freely and then focus on one thing at a time during the revision process. I'm not sure.
+
+My next step will probably be to distill Pinker's advice into a few bullet points and keep these by my computer when I write. I also plan to write my outlines on paper before typing anything. Finally, Pinker (and every other writer) recommends reading a lot of books. I'm a slow reader, but I've increased my reading time in the last year and hope to increase a bit more next year.
