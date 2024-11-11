@@ -1,13 +1,14 @@
 cap-location: bottom  # figure caption {bottom, margin}
 citation: false
 comments:
-    utterances:
-        repo: austin-hoover/blog
+  hypothesis:
+    theme: clean
+    openSidebar: false
 execute:
-    echo: true
-    enabled: false
-    cache: true
-    freeze: true
+  echo: true
+  enabled: false
+  cache: true
+  freeze: true
 lightbox: true
 sidebar: false
 title-block-categories: false
