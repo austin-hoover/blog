@@ -3,7 +3,7 @@ citation: false
 comments:
   hypothesis:
     theme: clean
-    openSidebar: false
+    openSidebar: true
 execute:
   echo: true
   enabled: false
