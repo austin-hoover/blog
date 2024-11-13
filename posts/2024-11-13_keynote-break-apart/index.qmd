@@ -5,6 +5,6 @@ toc: false
 date: 2024-11-13
 ---
 
-In Keynote, you can break apart png images into parts:
+In Keynote, you can break png images into parts:
 
 {{< video fig_break.mov >}}
