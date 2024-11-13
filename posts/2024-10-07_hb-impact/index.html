@@ -9,7 +9,7 @@
 <meta name="author" content="Austin Hoover">
 <meta name="dcterms.date" content="2024-10-07">
 
-<title>The impact of phase space correlations on the beam dynamics in a linear accelerator – Accelerated Inquiry</title>
+<title>The impact of high-dimensional phase space correlations on the beam dynamics in a linear accelerator – Accelerated Inquiry</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +22,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -103,39 +83,10 @@ gtag('js', new Date());
 gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -176,24 +127,13 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#the-initial-beam" id="toc-the-initial-beam" class="nav-link active" data-scroll-target="#the-initial-beam">The initial beam</a></li>
-  <li><a href="#parmteq-vs.-reality" id="toc-parmteq-vs.-reality" class="nav-link" data-scroll-target="#parmteq-vs.-reality">PARMTEQ vs.&nbsp;reality</a></li>
-  <li><a href="#is-6d-structure-important-in-the-sns-linac" id="toc-is-6d-structure-important-in-the-sns-linac" class="nav-link" data-scroll-target="#is-6d-structure-important-in-the-sns-linac">Is 6D structure important in the SNS linac?</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The impact of phase space correlations on the beam dynamics in a linear accelerator</h1>
+<h1 class="title">The impact of high-dimensional phase space correlations on the beam dynamics in a linear accelerator</h1>
   </div>
 
 
@@ -222,221 +162,15 @@ window.Quarto = {
 </header>
 
 
-<p>Almost one year ago, CERN hosted the “68th ICFA Advanced Beam Dynamics Workshop on High-Intensity and High-Brightness Hadron Beams”, also known as “HB”. I gave a talk on our work at the SNS Beam Test Facility (BTF). I intended to share that work on this blog, but never got around to it. Better late than never:</p>
-<section id="the-initial-beam" class="level2">
-<h2 class="anchored" data-anchor-id="the-initial-beam">The initial beam</h2>
-<p>I usually start these talks by reviewing the LEDA (Low Energy Test Accelerator) experiment at Los Alamos National Laboratory <span class="citation" data-cites="Allen_2002">&nbsp;[<a href="#ref-Allen_2002" role="doc-biblioref">1</a>]</span>. LEDA was a proton source followed by 50 quadrupole magnets arranged in an alternating focus-defocus pattern (FODO). A series of experiments recorded the one-dimensional particle distribution different sets of quadrupole strengths. In some cases, simulations reproduced the measurements in regions of high particle density, i.e., the beam core. But no simulation reproduced the low-density “tails” or “halo”.</p>
-<div id="fig-leda" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-leda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_leda.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Measured and simulated beam profiles in the LEDA experiment @Qiang_2002."><img src="figures/fig_leda.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-leda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Measured and simulated beam profiles in the LEDA experiment <span class="citation" data-cites="Qiang_2002">&nbsp;[<a href="#ref-Qiang_2002" role="doc-biblioref">2</a>]</span>.
-</figcaption>
-</figure>
-</div>
-<p>Halo formation is driven by space charge (electric forces between particles). Thus, the discrepancies might have been due to an inaccurate initial distribution in 6D phase space. (They only estimated second-order moments.) On the other hand, errors in the accelerator model might have been to blame. Reproducing halo-level features requires modeling a delicate interplay between applied and self-generated fields.</p>
-<p>At the BTF, we’re trying to improve on LEDA’s results. Our primary advantage is a suite of novel phase space diagnostics. One of these diagnostics images the 6D phase space distribution at the beginning of the lattice <span class="citation" data-cites="Cathey_2018">&nbsp;[<a href="#ref-Cathey_2018" role="doc-biblioref">3</a>]</span>. Another diagnostic measures the beam halo in 2D phase space at the end of the lattice <span class="citation" data-cites="Aleksandrov_2021">&nbsp;[<a href="#ref-Aleksandrov_2021" role="doc-biblioref">4</a>]</span>. In the first half of my postdoc, I focused on measurements of the initial distribution: see conference reports <a href="https://accelconf.web.cern.ch/napac2022/papers/frxd3.pdf">here</a> and <a href="https://accelconf.web.cern.ch/ipac2023/pdf/WEPA028.pdf">here</a>. We observed major differences between our predictions at the end of the beamline and our predictions at the start of the beamline. One culprit could have been the paperclip layout of the BTF. Bending 180 degrees generated dispersion in the beamline, and we were unsure if we were modeling the dipole magnets correctly. In any case, linacs are typically straight lines, so we upgraded the BTF to a new straight layout. This took several months.</p>
-<p>In the meantime, I examined a question that could be partially answered by computer simulations: How important is the initial 6D phase space structure? What if we ignore correlations between certain dimensions? An easy way to answer this question is to use the measured 6D distribution. However, 6D measurements currently have low resolution (<span class="math inline">\(\approx 10^6\)</span> points), and low dynamic range (<span class="math inline">\(\approx 10^1\)</span>), and it’s unclear if this is sufficient to predict anything about the halo at the end of the beamline.</p>
-<p>There’s another way to generate the initial beam which avoids direct 6D measurements. The initial beam is not really the initial beam; it’s the beam at the location labeled “First Emittance Station” in <a href="#fig-btf-01" class="quarto-xref">Figure&nbsp;2</a>.</p>
-<div id="fig-btf-01" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-btf-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_btf_01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: The SNS Beam Test Facility (BTF)."><img src="figures/fig_btf_01.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-btf-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: The SNS Beam Test Facility (BTF).
-</figcaption>
-</figure>
-</div>
-<p>The beam emerges from the ion source as a continuous stream of ions. The RFQ (Radio Frequency Quadrupole) accelerates the beam to 2.5 MeV and converts the continuous stream to a train of short <em>bunches</em>. Before the RFQ, the longitudinal distribution is spatially uniform with a tiny energy spread; thus, defining the initial beam would only require a 4D (transverse) phase space measurement. However, we would then need to simulate the journey through the RFQ, which involves complex dynamics over hundreds of focusing periods with strong space charge. So, we opted for a more difficult measurement after the RFQ.</p>
-<p>Still, we could try this approach. We don’t have any diagnostics before the RFQ (there’s no room), but we do have 2D diagnostics at a dedicated Ion Source Test Stand. The ion source is different from the one in BTF, but it should produce a similar distribution. We took some old measurement data of a 50 mA beam in the Ion Source Test Stand and tracked it through the RFQ. The RFQ code (PARMTEQ) predicted 42 mA beam current, but the real RFQ generated around 26 mA. That’s a huge unexplained discrepancy! We’re still unsure what caused this because we can’t peer inside the RFQ. Unphased, we artificially changed the bunch current to 26 mA in the simulation and tracked it to the first measurement station in the BTF.</p>
-<div id="fig-btf-02" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-btf-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_btf_02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: PARMTEQ model bunch generation. An initial 2D measurement is transported through the RFQ using PARMTEQ and through the first section of the BTF using PyORBIT."><img src="figures/fig_btf_02.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-btf-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: PARMTEQ model bunch generation. An initial 2D measurement is transported through the RFQ using PARMTEQ and through the first section of the BTF using PyORBIT.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="parmteq-vs.-reality" class="level2">
-<h2 class="anchored" data-anchor-id="parmteq-vs.-reality">PARMTEQ vs.&nbsp;reality</h2>
-<p>The PARMTEQ simulations generate a fully correlated 6D bunch without a direct measurement. The tradeoff is that we’re unsure how realistic this distribution is. We know PARMTEQ gets the basic physics correct, but the model contains various approximations, such as an assumed cylindrical symmetry when solving the Possion equation. The only way to know is to compare it to direct measurements.</p>
-<p>A previous paper found reasonable agreement in high-dimensional slices <span class="citation" data-cites="Ruisard_2020">&nbsp;[<a href="#ref-Ruisard_2020" role="doc-biblioref">5</a>]</span>, and I set out to perform a more comprehensive comparison. We have already performed 5D measurements of the initial beam, mapping the density as a function of <span class="math inline">\(x\)</span>, <span class="math inline">\(p_x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(p_y\)</span>, and <span class="math inline">\(p_z\)</span> <span class="citation" data-cites="Hoover_2022">&nbsp;[<a href="#ref-Hoover_2022" role="doc-biblioref">6</a>]</span>. The missing dimension, <span class="math inline">\(z\)</span>, is strongly correlated with <span class="math inline">\(p_z\)</span>, so most features are visible from the five measured variables. 5D measurements are much faster than 6D measurements because we can image two dimensions at once on a screen (and because there is one less dimension to measure). Because of the boosted resolution and dynamic range, we can visualize sharper features in low-density regions of phase space.</p>
-<p>Here are the 1D and 2D projections of the measured and predicted (PARMTEQ) distributions. Note that I use <span class="math inline">\(x' = p_x / p_z\)</span> and <span class="math inline">\(y' = p_y / p_z\)</span> for the transverse momentum. I also use <span class="math inline">\(w\)</span> instead of <span class="math inline">\(p_z\)</span>, where <span class="math inline">\(w = E - E_0\)</span> is the deviation from the design energy.</p>
-<div id="fig-corner" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-corner-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_01a.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: Measured (black) and predicted (red) phase space distributions in the BTF."><img src="figures/fig_01a.png" class="img-fluid figure-img" style="width:80.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-corner-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Measured (black) and predicted (red) phase space distributions in the BTF.
-</figcaption>
-</figure>
-</div>
-<p>These contours are on a logarithmic scale, showing three orders of magnitude in density. It’s is not a total disaster, but it’s kinda bad. Particularly troublesome is the <span class="math inline">\(x\)</span>-<span class="math inline">\(p_x\)</span> distribution, which is much wider than measured. However, look what happens after a linear transformation:</p>
-<div id="fig-corner-normalized" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-corner-normalized-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_01b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: Normalized phase space distribution."><img src="figures/fig_01b.png" class="img-fluid figure-img" style="width:80.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-corner-normalized-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Normalized phase space distribution.
-</figcaption>
-</figure>
-</div>
-<p>Much better! All I did was normalize both distributions to identity covariance so that</p>
-<p><span class="math display">\[\begin{equation}
-\Sigma =
-\begin{bmatrix}
-\langle xx   \rangle &amp; \langle xp_x   \rangle &amp; \langle xy   \rangle &amp; \langle xp_y   \rangle &amp; \langle x p_z  \rangle \\
-\langle xp_x \rangle &amp; \langle p_xp_x \rangle &amp; \langle yp_x \rangle &amp; \langle p_xp_y \rangle &amp; \langle p_xp_z \rangle \\
-\langle xy   \rangle &amp; \langle yp_x   \rangle &amp; \langle yy   \rangle &amp; \langle yp_y   \rangle &amp; \langle y p_z  \rangle \\
-\langle xp_y \rangle &amp; \langle p_xp_y \rangle &amp; \langle yp_y \rangle &amp; \langle p_yp_y \rangle &amp; \langle p_yp_z \rangle \\
-\langle xp_z \rangle &amp; \langle p_xp_z \rangle &amp; \langle yp_z \rangle &amp; \langle p_yp_z \rangle &amp; \langle p_zp_z \rangle
-\end{bmatrix}
-=
-\begin{bmatrix}
-1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
-\end{bmatrix}
-\end{equation}\]</span></p>
-<p>From now on, I’ll let <span class="math inline">\(x\)</span>, <span class="math inline">\(p_x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(p_y\)</span>, and <span class="math inline">\(p_z\)</span> refer to these “normalized” coordinates. <a href="#fig-corner-normalized" class="quarto-xref">Figure&nbsp;5</a> shows that the distributions are similar, up to a linear transformation. PARMTEQ has gotten the nonlinear stuff right, even though it predicts a much larger transmission than measured in the real RFQ. This suggests that losses occur very early in the bunch formation process and have little impact on the higher-order distribution moments.</p>
-<p><a href="#fig-corner-normalized" class="quarto-xref">Figure&nbsp;5</a> does <em>not</em> prove that the distributions are identical in the full five-dimensional space. There are two higher-dimensional correlations we’ve identified in our 5D measurement. First, we know the energy distribution (<span class="math inline">\(p_z\)</span>) depends on the transverse coordinates. The energy distribution is bimodal near the transverse core but unimodal outside the core. You can’t see this in the 1D and 2D projections. One way to visualize the relationship is to use “elliptical slices”. <a href="#fig-slice-shell" class="quarto-xref">Figure&nbsp;6</a> shows the <span class="math inline">\(p-z\)</span> distribution of particles within a radial band in <span class="math inline">\(x\)</span>-<span class="math inline">\(p_x\)</span>-<span class="math inline">\(y\)</span>-<span class="math inline">\(p_y\)</span> space. The model bunch has the correct relationship between energy and transverse radius.</p>
-<div id="fig-slice-shell" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-slice-shell-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_slice_shell.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: Energy distribution within ellipsoidal shells in the transverse plane."><img src="figures/fig_slice_shell.png" class="img-fluid figure-img" style="width:75.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-slice-shell-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Energy distribution within ellipsoidal shells in the transverse plane.
-</figcaption>
-</figure>
-</div>
-<p>The above feature develops somewhere in the RFQ. We’ve also measured hollowing in the 3D space <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span>-<span class="math inline">\(z\)</span>. This feature develops after the RFQ. As the beam transitions from strong to weak focusing at the RFQ exit, space charge launches a density wave that flattens the initially peaked distribution to a more uniform and, eventually, hollow distribution. The beam freely expands in the longitudinal plane, creating a strong linear correlation such that (<span class="math inline">\(z \approx p_z\)</span>). Again, we see similar features in the model bunch. We conclude that the RFQ simulation reproduces nearly all measured features in both low-dimensional and high-dimensional phase space, up to a linear transformation.</p>
-<div id="fig-slice-pz" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-slice-pz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_slice_pz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: Transverse charge distribution (x-y) as a function of energy (p_z)."><img src="figures/fig_slice_pz.png" class="img-fluid figure-img" style="width:75.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-slice-pz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Transverse charge distribution (<span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span>) as a function of energy (<span class="math inline">\(p_z\)</span>).
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="is-6d-structure-important-in-the-sns-linac" class="level2">
-<h2 class="anchored" data-anchor-id="is-6d-structure-important-in-the-sns-linac">Is 6D structure important in the SNS linac?</h2>
-<p>The above result is interesting and not too obvious; I’d like to include it in a future publication alongside a more detailed study of the beam dynamics in the RFQ. The result is also useful because linear correlations are easy to measure. We can just map the PARMTEQ bunch to the measured linear correlations, and, <em>voila</em>, we have a fully correlated 6D bunch that should be very similar to the real bunch.</p>
-<p>We can also use this model bunch to examine what could happen in the SNS linac. Predicting beam loss in the SNS is our ultimate goal. This is way harder than our task in the BTF: the SNS is around 500 meters long compared to 10 meters in the BTF; the SNS accelerates the beam using hundreds of RF cavities, while the BTF has no acceleration; we are much less certain about the accelerator parameters; etc. <a href="#fig-sns" class="quarto-xref">Figure&nbsp;8</a> gives a sense of scale. Still, we can assume our linac model is correct and see how different initial beams behave. This must tell us <em>something</em>.</p>
-<div id="fig-sns" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_sns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;8: Diagram of the SNS accelerator. The linac is around 400 meters long."><img src="figures/fig_sns.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: Diagram of the SNS accelerator. The linac is around 400 meters long.
-</figcaption>
-</figure>
-</div>
-<p>We treated our PARTMEQ bunch as the ground truth. We then <em>decorrelated</em> the three planes:</p>
-<p><span class="math display">\[\begin{equation}
-\begin{aligned}
-    \{ x_i, {p_x}_i \} &amp;\rightarrow \{ x_i, {p_x}_i \}, \\
-    \{ y_i, {p_y}_i \} &amp;\rightarrow \{ y_j, {p_y}_j \}, \\
-    \{ z_i, {p_z}_i \} &amp;\rightarrow \{ z_k, {p_z}_k \},
-\end{aligned}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(i\)</span>, <span class="math inline">\(j\)</span>, and <span class="math inline">\(k\)</span> are random permutations of the particle indices. The resulting distribution is a product of the 2D distributions:</p>
-<p><span class="math display">\[\begin{equation}
-f(x, p_x, y, p_y, z, p_z) = f(x, p_x) f(y, p_y) f(z, p_z).
-\end{equation}\]</span></p>
-<p>All cross-plane correlations, including higher-order correlations, vanish in the decorrelated bunch. Then we tracked these two bunches (correlated and decorrelated) through the linac in our PyORBIT model and compared the trajectories.</p>
-<p>This isn’t new. My colleague did this in 2021, finding that the two beams diverged in their rms sizes (<a href="#fig-ipac" class="quarto-xref">Figure&nbsp;9</a>).</p>
-<div id="fig-ipac" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ipac-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_ipac.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;9: RMS beam size evolution for a correlated/decorrelated initial beam in the SNS linac. Presented at IPAC (2021)."><img src="figures/fig_ipac.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ipac-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: RMS beam size evolution for a correlated/decorrelated initial beam in the SNS linac. Presented at IPAC (2021).
-</figcaption>
-</figure>
-</div>
-<p>I wanted to find out exactly how the 6D phase space correlations were affecting the beam dynamics, including halo formation. When I reproduced this figure, though, I noticed something strange. The rms bunch length (<span class="math inline">\(z\)</span>) spiked halfway through the simulation.</p>
-<div id="fig-wrong" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-wrong-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_wrong.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;10: Some particles are lagging behind the bunch…"><img src="figures/fig_wrong.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wrong-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: Some particles are lagging behind the bunch…
-</figcaption>
-</figure>
-</div>
-<p>Plotting the phase space coordinates at these locations made me realize that some particles were falling <em>way</em> behind the bunch. Eventually, these particles were intercepted by the transverse apertures and removed from the simulation. It doesn’t make sense to keep these particles in the bunch, so I added energy and phase apertures throughout the lattice to remove particles as soon as they deviated from the synchronous coordinates. The rms bunch length was now well-behaved, but I no longer saw any difference between the transverse sizes of the correlated and decorrelated bunches.</p>
-<div id="fig-corr" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-corr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_corr.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;11: RMS beam sizes after adding longitudinal apertures. Compare to Figure&nbsp;9."><img src="figures/fig_corr.png" class="img-fluid figure-img" style="width:75.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-corr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11: RMS beam sizes after adding longitudinal apertures. Compare to <a href="#fig-ipac" class="quarto-xref">Figure&nbsp;9</a>.
-</figcaption>
-</figure>
-</div>
-<p>What’s going on? It turns out that the lost particles were affecting the space charge calculation. To compute the beam’s electric field, we solve the Poisson equation on a grid:</p>
-<p><span class="math display">\[\begin{equation}
-\nabla \cdot \nabla \phi(x, y, z) = \frac{ \rho(x, y, z) } {\epsilon_0},
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(\phi\)</span> is the electric potential and $is the charge density. In PyORBIT, the grid expands to include all particles. In <a href="#fig-wrong" class="quarto-xref">Figure&nbsp;10</a>, the grid would expand in the middle plot to include the <span class="math inline">\(z\)</span> coordinates behind the bunch. This would leave almost all particles in one <span class="math inline">\(z\)</span> bin, giving an inaccurate charge density and space charge forces.</p>
-<p>So that’s settled. But it also raises the question: do cross-plane correlations matter <em>at all</em>? <a href="#fig-corr" class="quarto-xref">Figure&nbsp;11</a> shows that the one-dimensional beam density is independent of the initial cross-plane correlations, even at the level of beam halo. Thus the answer is no: according to our model, cross-plane correlations do not affect the beam dynamics in the SNS. The more detailed view in <a href="#fig-tumble" class="quarto-xref">Figure&nbsp;12</a> shows that the differences between the distributions disappear quickly, within a few meters. You can see the hollow initial <span class="math inline">\(z\)</span> distribution in the 1D lineout compared to the peaked <span class="math inline">\(z\)</span> distribution; this represents a correlation because the distribution is only hollow near <span class="math inline">\(x = y = p_x = p_y = 0\)</span>. The lineouts merge soon after acceleration begins. The output distributions are <em>both</em> highly correlated by the end of the figure.</p>
-<div id="fig-tumble" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-tumble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_tumble.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;12: Longitudinal phase space evolution in the linac. Each plot is the longitudinal phase space (z-p_z) distribution within a 4D ball in the transverse plane. 1D lineouts onto the z axis are plotted on the bottom row. Blue = correlated, red = decorrelated initial bunch."><img src="figures/fig_tumble.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tumble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12: Longitudinal phase space evolution in the linac. Each plot is the longitudinal phase space (<span class="math inline">\(z\)</span>-<span class="math inline">\(p_z\)</span>) distribution within a 4D ball in the transverse plane. 1D lineouts onto the <span class="math inline">\(z\)</span> axis are plotted on the bottom row. Blue = correlated, red = decorrelated initial bunch.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>If these calculations are correct, and if our linac model is realistic, then these findings are significant. We suspect that measuring <span class="math inline">\(f(x, p_x)\)</span>, <span class="math inline">\(f(y, p_y)\)</span>, and <span class="math inline">\(f(z, p_z)\)</span> should give the same results as <span class="math inline">\(f(x, p_x, y, p_y, z, p_z)\)</span>. Since 2D measurements are easy to measure, it gives hope to many existing accelerators. Any remaining discrepancies would be due to an inaccurate lattice model, not the initial beam. Of course, all of this needs experimental validation.</p>
+<p>CERN hosted the “68th ICFA Advanced Beam Dynamics Workshop on High-Intensity and High-Brightness Hadron Beams” (HB conference), almost one year ago. At one point I intended to write a summary of my contribution, but I never got around to it. Here it is:</p>
+<p>I gave a talk about our work at the SNS Beam Test Facility (BTF). The BTF experimental program is following the footsteps at the Low Energy Demonstration Accelerator (LEDA), a project at Los Alamos National Lab around 20 years ago. LEDA was a proton source followed by 50 quadrupole magnets aranged in an alternating focus-defocus pattern (FODO). A particle in the FODO channel sees a quasi-periodic focusing force in the transverse plane, but also see a defocusing force from the other particles in the beam. The motion in such a system is difficult to treat analytically. We can gain some insight by considering a simple model in which a single particle responds to the field of the oscillating beam core, but does not affect the core. This model is kind of like a harmonic oscillator with a periodic driving force, where the natural frequency is given by the accelerator lattice and the driving frequency is given by the oscillating beam core. Certain frequencies lead to resonant particle oscillations, and a small fraction of initial phase space coordinates will end up far from the beam, forming a low-density “halo”.</p>
+<p>Particle-core models explain one mechanism behind halo formation, although the real situation is more complicated. The important point is that the particle trajectories have a complicated dependence on the initial particle distribution in six-dimensional phase space.</p>
+<p><a href="figures/fig_leda.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="figures/fig_leda.png" class="img-fluid"></a></p>
+<p>Halo is troublesome in real accelerators. We’d like to be able to predict when and where it will form using computer simulations, but this is troubling in</p>
 
 
 
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-Allen_2002" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">C. K. Allen et al., <em><a href="https://doi.org/10.1103/PhysRevLett.89.214802">Beam-Halo Measurements in High-Current Proton Beams</a></em>, Phys. Rev. Lett. <strong>89</strong>, 214802 (2002).</div>
-</div>
-<div id="ref-Qiang_2002" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">J. Qiang, P. L. Colestock, D. Gilpatrick, H. V. Smith, T. P. Wangler, and M. E. Schulze, <em><a href="https://doi.org/10.1103/PhysRevSTAB.5.124201">Macroparticle Simulation Studies of a Proton Beam Halo Experiment</a></em>, Phys. Rev. ST Accel. Beams <strong>5</strong>, 124201 (2002).</div>
-</div>
-<div id="ref-Cathey_2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">B. Cathey, S. Cousineau, A. Aleksandrov, and A. Zhukov, <em><a href="https://doi.org/10.1103/PhysRevLett.121.064804">First Six Dimensional Phase Space Measurement of an Accelerator Beam</a></em>, Phys. Rev. Lett. <strong>121</strong>, 064804 (2018).</div>
-</div>
-<div id="ref-Aleksandrov_2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline">A. Aleksandrov, S. Cousineau, K. Ruisard, and A. Zhukov, <em><a href="https://doi.org/10.1016/j.nima.2020.164829">First Measurement of a 2.5 MeV RFQ Output Emittance with 1 Part-Per-Million Dynamic Range</a></em>, Nuclear Instruments and Methods in Physics Research, Section A: Accelerators, Spectrometers, Detectors and Associated Equipment <strong>987</strong>, (2021).</div>
-</div>
-<div id="ref-Ruisard_2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline">K. Ruisard, A. Aleksandrov, S. Cousineau, V. Tzoganis, and A. Zhukov, <em><a href="https://doi.org/10.1103/PhysRevAccelBeams.23.124201">High Dimensional Characterization of the Longitudinal Phase Space Formed in a Radio Frequency Quadrupole</a></em>, Phys. Rev. Accel. Beams <strong>23</strong>, 124201 (2020).</div>
-</div>
-<div id="ref-Hoover_2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[6] </div><div class="csl-right-inline">A. Hoover, K. Ruisard, A. Aleksandrov, A. Zhukov, and S. Cousineau, <em><a href="https://doi.org/10.1103/PhysRevAccelBeams.26.064202">Analysis of a Hadron Beam in Five-Dimensional Phase Space</a></em>, Phys. Rev. Accel. Beams <strong>26</strong>, 064202 (2023).</div>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1004,7 +738,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
