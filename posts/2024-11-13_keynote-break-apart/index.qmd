@@ -1,0 +1,10 @@
+---
+title: "Break apart images in Keynote"
+categories: misc
+toc: false
+date: 2024-11-13
+---
+
+In Keynote, you can break apart png images into parts:
+
+![](fig_break.mov)
