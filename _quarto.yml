@@ -5,18 +5,20 @@ website:
   title: "Accelerated Inquiry"
   navbar:
     right:
-      - href: ./about/index.qmd
+      - href: about/index.qmd
         text: "About"
-      - href: ./index.qmd
+      - href: index.qmd
         text: "Posts"
-      - href: ./notes/index.qmd
+      - href: links.qmd
+        text: "Links"
+      - href: notes/index.qmd
         text: "Notes"
   google-analytics: "G-DLC4C8LZFB"
 format:
   html:
     theme:
-        light: [default, ./style/custom_light.scss]
-        dark:  [default, ./style/custom_dark.scss]
+        light: [default, style/custom_light.scss]
+        dark:  [default, style/custom_dark.scss]
     toc: false
     toc-depth: 5
     toc-location: right

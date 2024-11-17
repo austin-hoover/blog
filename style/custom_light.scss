@@ -14,11 +14,5 @@ $body-color: rgb(20, 20, 20);
 // /*-- scss:rules --*/
 
 h1, h2, h3, h4, h5, h6, h7 {
-    color: black !important;
-}
-
-// "Source Sans Pro" font
-$web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" !default;
-@if $web-font-path {
-  @import url($web-font-path);
+  color: black !important;
 }
