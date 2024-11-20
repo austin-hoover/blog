@@ -24,6 +24,6 @@ format:
     toc-location: right
     grid:
         body-width: 700px    
-    mainfont: Georgia
-    fontsize: 15.25px
+    mainfont: "Latin Modern"
+    linestretch: 1.25
     html-math-method: mathjax
