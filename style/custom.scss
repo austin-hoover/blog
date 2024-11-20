@@ -9,20 +9,27 @@ $h6-font-size: 1.00em;
 
 /*-- scss:defaults --*/
 
+// Make all headers bold
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600 !important;
 }
 
+// Remove line and padding after h2 headers
 h2, .h2 {
     border-bottom: none !important;
     padding-bottom: 0.0em !important;
 }
 
+// Use sans-serif font for header
 .navbar {
-    padding-bottom: 2.5px !important;
-    padding-top: 2.5px !important;
+    padding-bottom: 2.9px !important;
+    padding-top: 2.9px !important;
     border-bottom-width: 0px !important;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+// Smaller code font
+pre, code {
+    font-size: 13.0px !important;
+}
 
