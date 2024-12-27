@@ -2,7 +2,9 @@
 title: "Initial halo-level particle-in-cell simulation benchmarks"
 author: Austin Hoover
 date: 2024-12-26
-draft: true
+categories:
+  - particle accelerators
+  - halo
 ---
 
 
