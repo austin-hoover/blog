@@ -1,5 +1,0 @@
----
-title: "Initial high-dynamic-range benchmarks of particle-in-cell codes"
-author: Austin Hoover
-draft: true
----

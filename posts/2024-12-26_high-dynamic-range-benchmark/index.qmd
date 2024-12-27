@@ -1,0 +1,71 @@
+---
+title: "Initial halo-level particle-in-cell simulation benchmarks"
+author: Austin Hoover
+date: 2024-12-26
+draft: true
+---
+
+
+## Background 
+
+An ongoing research program at the SNS Beam Test Facility (BTF) is to predict the evolution of an intense hadron beam in a linear accelerator (linac). Specifically, we want to predict the formation of beam *halo*, a low-density cloud of particles surrounding the dense beam core (much like galactic halo). Halo formation is driven by nonlinear periodic forces in the accelerator combined with the self-fields of the beam, which generate chaotic trajectories with strong sensitivity to the accelerator parameters and initial phase space distribution. Particle-in-cell (PIC) codes have not been able to reproduce measurements at the halo level, which means we have no model-based approach to reducing beam loss and, therefore, a fundamental limit on the beam intensity. At the SNS BTF, we're trying to improve these benchmarks by eliminating the uncertainty in both the accelerator model and the initial phase space distribution.
+
+The BTF is a 10-meter replica of the first section of the SNS linac (which is around 400 meters long). In the first part of the BTF, a continuous stream of ions is bunched and accelerated to 2.5 MeV kinetic energy in a radiofrequency quadrupole (RFQ). The remaining beamline is a series of alternating focusing and defocusing quadrupole magnets (a "FODO" channel). Halo is expected to develop in the FODO channel, with increased halo extent for strongly mismatched beams. Our current goal is to measure the output halo distribution and reproduce it in simulation.
+
+Phase space measurements in the BTF utilize a set of moving slits and luminescent screens. The slits isolate a slice of the phase space distribution, and the screens record the density within the slice. We can measure the full 6D phase space distribution by scanning multiple slits in a nested loop. In high-dimensional measurements, the dynamic range, i.e., the ratio between the largest and smallest measured intensity, is only around $10^2$. To observe the beam halo, we must boost the dynamic range to around $10^6$ by reducing the number of slits, i.e., by decreasing the dimension of the measured phase space. 2D high-dynamic-range (HDR) measurements were pioneered at the BTF and allow us to image the beam halo in the $x$-$p_x$ or $y$-$p_y$ plane, where $x$ and $y$ are the transverse positions and $p_x$ and $p_y$ are the momentum.
+
+![The Spallation Neutron Source (SNS) Beam Test Facility (BTF). Shown is the low-energy beam transport (LEBT), radiofrequency quadrupole (RFQ), medium-energy beam transport (MEBT) and FODO channel.](images/fig_sns_btf.png){#fig-btf}
+
+
+
+## LDR benchmark
+
+Most of the work in the last few years has focused on reproducing low-dynamic-range (LDR) measurements. In an old layout of the BTF, where the accelerator bent 180 degrees, we didn’t have much luck. Although a series of model improvements^[The main improvements were adding an overlapping quadrupole field model a multi-bunch space charge solver.] brought the simulations closer to the measurements, there remained gross discrepancy in the vertical phase space.^[See [here](https://napac2022.vrws.de/papers/frxd3.pdf) or [here](https://accelconf.web.cern.ch/ipac2021/papers/thxa01.pdf) for example.] One problem was that there seemed to be significant uncorrected dispersion in the beamline, which complicated the dynamics by coupling the longitudinal and transverse motion. Switching to a straight layout seems to have helped.^[See [here](https://accelconf.web.cern.ch/ipac2024/pdf/THPC75.pdf) and [here](https://accelconf.web.cern.ch/ipac2021/papers/thxa01.pdf).]
+
+Old benchmarks were also trying to model a highly mismatched beam, meaning that the beam size was far from periodic in the FODO channel. Mismatched beams are expected to be more difficult to model because smaller changes in the focusing fields can generate larger changes in the beam size relative to a matched beam. After some model-based optimization, we now have a set of optics that generates a matched beam at much higher currents than previous benchmarks (52 mA vs. 25 mA). 
+
+The current LDR benchmark is shown below, where we compare a 5D measurement to a simulated bunch. This measurement corresponds to a matched beam. We find good agreement in all two-dimensional projections down to the $10^{-1} contour (relative to the peak density). This is great news.^[The initial bunch was reconstructed by measuring the initial 2D phase space projections $\{ f(z, p_z), f(y, p_y), f(z, p_z) \}$ and ignoring cross-plane correlations by setting $f(x, p_x, y, p_y, z, p_z) = f(x, p_x) f(y, p_y) f(z, p_z)$. We didn't use a full 6D measurement because 6D measurements are still extremely slow and memory-hungry; also, simulations based on simulated but realistic input beams indicate that cross-plane correlations have very little impact on the beam dynamics in the BTF. See [here](https://accelconf.web.cern.ch/hb2023/papers/tuc1c2.pdf).]
+
+![Low-dynamic-range 5D simulation benchmark. Contours range from 0.01 to 1.0 as a fraction of the peak density in each frame. Black contours are measured and red contours are predicted.](images/matched/fig_corner_log-False_meas-5d_pred.png){#fig-ldr width=85%}
+
+
+## HDR benchmark
+
+I’m writing this post is to share an initial benchmark at much higher dynamic range. These are the first HDR benchmarks, although we won't publish them until ironing out some kinks in our model. The HDR measurements were performed by colleagues at the first and second measurement stations for both matched and mismatched optics.^[These measurements take a few hours and require specialize elliptical scan patterns to reduce noise and capture all low-density features.] We then sampled $10^7$ particles from the initial measurements and tracked them through the lattice.^[With eight MPI processors, the simulations took only a few minutes.] We use the code [PyORBIT](https://github.com/PyORBIT-Collaboration/PyORBIT3). We will eventually make our model open source.
+
+
+
+### Matched optics
+
+Here are the simulated root-mean-square (RMS) beam sizes $\tilde{x} = \sqrt{\langle xx \rangle}$ and $\tilde{y} = \sqrt{\langle yy \rangle}$, where the brackets represent expected values, as a function of position in the lattice for the matched optics. I also show the maximum $x$ and $y$ coordinates among all particles.
+
+![Simulated root-mean-square (RMS) beam sizes in the FODO channel for the case of matched optics. The faint dashed lines correspond to the maximum particle coordinates among all beam particles.](images/matched/fig_beam_size.png){#fig-matched-rms width=65%}
+
+The beam core is well-matched, as expected.^[The matched beam core minimizes the free energy available to drive particles into the halo.] Here are the predicted and measured phase space distributions at the end of the lattice in logarithmic scale.
+
+![Measured vs. predicted high-dynamic-range phase space distributions. The color scale is logarithmic (base 10).](images/matched/fig_projections_00_log.png){#fig-matched width=75%}
+
+These results are encouraging because the overall structure of the phase space distribution is not radically different than predicted. The primary difference are at the edges of the distributions, where the predicted distribution extends far beyond measured. It looks like the measured distribution is artificially cut off. This may be due to "scaping" at some point in the lattice, where the beam hits an aperture. It's unclear where this is happening since our model predicts zero beam loss.
+
+Note the beautiful spiral patterns that emerge in both phase space projections. In general, spiral patterns are due to an amplitude-dependent focusing forces which rotate particles by different angles in the phase space. Although the lattice focusing is linear, space charge generates a highly nonlinear defocusing force. If you look closely, you'll see two sets of spiral arms in the vertical distribution. I believe these correspond to different positions within the bunch (core vs. head/tail), which experience different space charge strengths and, therefore, phase advances.
+
+
+
+### Mismatched optics
+
+Here are the same plots for the mismatched optics.
+
+![Simulated root-mean-square (RMS) beam sizes in the FODO channel for the case of mismatched optics. The faint dashed lines correspond to the maximum particle coordinates among all beam particles.](images/mismatched/fig_beam_size.png){#fig-matched-rms width=65%}
+
+![Measured vs. predicted high-dynamic-range phase space distributions. The color scale is logarithmic (base 10).](images/mismatched/fig_projections_00_log.png){#fig-matched width=75%}
+
+The agreement with measurement is not quite as good as the matched case. In addition to a linear phase advance error in the horizontal plane that we haven't been able to pinpoint, there is an asymmetry in the measured $x$-$x'$ distribution that does not appear in the simulation. There is probably scraping that is unaccounted for in the simulation, but it's unclear how this could be responsible for this asymmetry. This is the next puzzle to solve.
+
+
+
+## Contour mapping
+
+The applied electromagnetic fields in the accelerator and the self-generated fields in the beam warp the phase space via a symplectic transformation. The phase space density behaves as an incompressible fluid under such transformations. We can begin to study the transformation in the BTF by marking particles in the input and output distributions. Below, I mark particles within a thin loop in the initial phase space. The blurring of the lines may be due to the significantly different space charge effects in the core and head/tail of the bunch, which leads to different phase advances as a function of energy.
+
+![Mapping of two-dimensional contours of the initial beam. Coordinates are normalized to remove linear correlations and scaled to unit variance along each dimension.](images/matched/fig_particle_mapping.png){#fig-map width=65%}
+
