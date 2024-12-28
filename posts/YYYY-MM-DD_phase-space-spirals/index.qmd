@@ -1,5 +1,0 @@
----
-title: "Phase space spirals"
-author: Austin Hoover
-draft: true
----
