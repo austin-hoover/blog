@@ -6,6 +6,7 @@ categories:
   - particle accelerators
   - halo
   - nonlinear
+toc: false
 ---
 
 In the [previous post](../2024-12-26_high-dynamic-range-benchmark) I showed the first high-dynamic-range PIC simulation benchmark of the beam dynamics in the SNS Beam Test Facility (BTF). The most striking observation from these studies is that the two-dimensional phase space projections develop low-density spiral arms. Spiral patterns are generic features of nonlinear dynamics: in a linear system, all particles rotate by the same angle in phase space, but in nonlinear systems, the rotation angle depends on the particle amplitude. 

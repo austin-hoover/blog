@@ -11,8 +11,6 @@ listing:
         author: "Author"
         date: "Date"
         categories: "Categories"
-    sort: 
-        - title
     type: table
     date-format: YYYY‑MM‑DD
     table-hover: false
