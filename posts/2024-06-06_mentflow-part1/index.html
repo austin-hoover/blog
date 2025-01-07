@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Austin Hoover">
 <meta name="dcterms.date" content="2024-06-06">
 
-<title>Accelerated Inquiry - Maximum-entropy phase space tomography using normalizing flows (part 1)</title>
+<title>Maximum-entropy phase space tomography using normalizing flows (part 1) – Accelerated Inquiry</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -159,7 +159,7 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -182,7 +182,7 @@ window.Quarto = {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -422,10 +422,10 @@ L[
 }
 \tag{14}\]</span></span></p>
 <p>We minimize this loss function for a fixed penalty parameter <span class="math inline">\(\mu\)</span>, starting from <span class="math inline">\(\mu = 0\)</span> (returning the prior). Then we increase <span class="math inline">\(mu\)</span> and rerun the optimization, starting from the last solution.</p>
-<div id="fig-diagram" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<div id="fig-diagram" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/fig_diagram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="figures/fig_diagram.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a>
+<a href="figures/fig_diagram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: GPSR with a normalizing flow generator. The flow uses a smooth, invertible transformation to unnormalize the n-dimensional Gaussian base distribution, producing a phase space distribution \rho(\mathbf{x}). The phase space coordinates are propagated through a series of symplectic transformatiosn \mathbf{u}_k = \mathcal{M}_k(\mathbf{x}), projected onto the m-dimensional measurement axes \mathbf{u}_{k_\parallel}, and binned to compare to the measurements. Each step is differentiable, enabling gradient-based optimization of the flow parameters."><img src="figures/fig_diagram.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: GPSR with a normalizing flow generator. The flow uses a smooth, invertible transformation to unnormalize the <span class="math inline">\(n\)</span>-dimensional Gaussian base distribution, producing a phase space distribution <span class="math inline">\(\rho(\mathbf{x})\)</span>. The phase space coordinates are propagated through a series of symplectic transformatiosn <span class="math inline">\(\mathbf{u}_k = \mathcal{M}_k(\mathbf{x})\)</span>, projected onto the <span class="math inline">\(m\)</span>-dimensional measurement axes <span class="math inline">\(\mathbf{u}_{k_\parallel}\)</span>, and binned to compare to the measurements. Each step is differentiable, enabling gradient-based optimization of the flow parameters.
@@ -444,9 +444,6 @@ Figure&nbsp;1: GPSR with a normalizing flow generator. The flow uses a smooth, i
 <p>In the next post, I’ll describe the model architecture and the numerical experiments we used to answer these questions. I’ll also describe an experiment we performed at the SNS to reconstruct the 4D phase space distribution of an intense ion beam from 1D profile measurements using MENT-Flow.</p>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: GPSR with a normalizing flow generator. The flow uses a smooth, invertible transformation to unnormalize the <span class="math inline">\(n\)</span>-dimensional Gaussian base distribution, producing a phase space distribution <span class="math inline">\(\rho(\mathbf{x})\)</span>. The phase space coordinates are propagated through a series of symplectic transformatiosn <span class="math inline">\(\mathbf{u}_k = \mathcal{M}_k(\mathbf{x})\)</span>, projected onto the <span class="math inline">\(m\)</span>-dimensional measurement axes <span class="math inline">\(\mathbf{u}_{k_\parallel}\)</span>, and binned to compare to the measurements. Each step is differentiable, enabling gradient-based optimization of the flow parameters.</span>
-</div>
 
 </section>
 
@@ -646,18 +643,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -689,7 +675,47 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -724,7 +750,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -999,30 +1029,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
     }
-  });
-
-};
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
           </script>
 
 

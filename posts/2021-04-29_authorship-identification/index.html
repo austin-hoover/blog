@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Austin Hoover">
 <meta name="dcterms.date" content="2021-04-29">
 
-<title>Accelerated Inquiry - Authorship identification</title>
+<title>Authorship identification – Accelerated Inquiry</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -152,7 +152,7 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -196,7 +196,7 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -219,7 +219,7 @@ window.Quarto = {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -292,7 +292,7 @@ window.Quarto = {
 <p>In this post, I’ll summarize a paper by John Houvardas and Efstathios Stamatatos titled <em>N-Gram Feature Selection for Authorship Identification</em><span class="citation" data-cites="Houvardas2006">&nbsp;[<a href="#ref-Houvardas2006" role="doc-biblioref">1</a>]</span>. The topic of the paper is <em>authorship identification</em>, that is, to identify the author of an unlabeled document given a list of possible authors and some sample of each author’s writing. I’ll first motivate the problem of authorship identification, then briefly introduce the relevant statistical methods, and finally, summarize and implement the methods in the paper.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="task.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Fig. 1. The authorship identification task."><img src="task.png" class="img-fluid figure-img" alt="Fig. 1. The authorship identification task."></a></p>
+<p><a href="task.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Fig. 1. The authorship identification task."><img src="task.png" class="img-fluid figure-img" alt="Fig. 1. The authorship identification task."></a></p>
 <figcaption>Fig. 1. The authorship identification task.</figcaption>
 </figure>
 </div>
@@ -301,7 +301,7 @@ window.Quarto = {
 <p>The Federalist Papers are an important collection of 85 essays written by Hamilton, Madison, and Jay in 1787 and 1788. The essays were published under the alias “Plubious”, and although it became well-known that the three men were involved, the authorship of each paper was kept hidden for over a decade. This was actually in the interest of both Hamilton and Madison; both were politicians who had changed positions on several issues and didn’t want their political opponents to use their own words against them. Days before his death, Hamilton allegedly wrote down who he believed to be the correct author of each essay, claiming over 60 for himself. Madison waited several years before publishing his own list, and in the end, there were 12 essays claimed by both Madison and Hamilton. Details on the controversy are in<span class="citation" data-cites="Adair1944">&nbsp;[<a href="#ref-Adair1944" role="doc-biblioref">2</a>]</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Hamilton_and_Madison.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Fig. 2. Alexander Hamilton (left) and James Madison (right). (Source: Wikipedia.)"><img src="Hamilton_and_Madison.png" class="img-fluid figure-img" style="width:75.0%" alt="Fig. 2. Alexander Hamilton (left) and James Madison (right). (Source: Wikipedia.)"></a></p>
+<p><a href="Hamilton_and_Madison.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Fig. 2. Alexander Hamilton (left) and James Madison (right). (Source: Wikipedia.)"><img src="Hamilton_and_Madison.png" class="img-fluid figure-img" style="width:75.0%" alt="Fig. 2. Alexander Hamilton (left) and James Madison (right). (Source: Wikipedia.)"></a></p>
 <figcaption>Fig. 2. Alexander Hamilton (left) and James Madison (right). (Source: Wikipedia.)</figcaption>
 </figure>
 </div>
@@ -314,7 +314,7 @@ window.Quarto = {
 <p>The physicist <a href="https://en.wikipedia.org/wiki/Thomas_Corwin_Mendenhall">Thomas Mendenhall</a> is considered the first to statistically analyze large literary texts. He presented the following idea in an 1887 paper titled <a href="https://www.jstor.org/stable/pdf/1764604.pdf"><em>The Characteristic Curves of Composition</em></a><span class="citation" data-cites="Mendenhall1887">&nbsp;[<a href="#ref-Mendenhall1887" role="doc-biblioref">4</a>]</span>: it is known that each chemical element emits light with a unique distribution of wavelengths when it is heated; perhaps each author has a unique distribution of word lengths in the texts they have written. It’s a cool idea, and I recommend reading his original paper. Mendenhall tallied word lengths by hand for various books, usually in batches of 1000 words or so. Here is Fig. 2 from his paper which shows the characteristic curves for a few excerpts of <em>Oliver Twist</em>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Mendenhall_Fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Fig. 3. Distribution of word lengths in “Oliver Twist”. Each curve is for a different sample of 1000 words. (Source:[@Mendenhall1887]."><img src="Mendenhall_Fig2.png" class="img-fluid figure-img" style="width:75.0%" alt="Fig. 3. Distribution of word lengths in “Oliver Twist”. Each curve is for a different sample of 1000 words. (Source:&nbsp;[4]."></a></p>
+<p><a href="Mendenhall_Fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Fig. 3. Distribution of word lengths in “Oliver Twist”. Each curve is for a different sample of 1000 words. (Source:[@Mendenhall1887]."><img src="Mendenhall_Fig2.png" class="img-fluid figure-img" style="width:75.0%" alt="Fig. 3. Distribution of word lengths in “Oliver Twist”. Each curve is for a different sample of 1000 words. (Source:&nbsp;[4]."></a></p>
 <figcaption>Fig. 3. Distribution of word lengths in “Oliver Twist”. Each curve is for a different sample of 1000 words. (Source:<span class="citation" data-cites="Mendenhall1887">&nbsp;[<a href="#ref-Mendenhall1887" role="doc-biblioref">4</a>]</span>.</figcaption>
 </figure>
 </div>
@@ -326,7 +326,7 @@ f(k) \propto k^{-1}.
 <p>The idea expressed by this law is that short words are much more frequent than large words. Surprisingly, the law holds up very well, albeit not perfectly, for most texts. <em>Why</em> this is the case is still unknown; a comprehensive review of the current state of the law can be found in<span class="citation" data-cites="Piantadosi2014">&nbsp;[<a href="#ref-Piantadosi2014" role="doc-biblioref">5</a>]</span>. The law also shows up in other situations such as national GDP:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Cristelli_Fig1_big.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Fig. 4. National GDPs appear to be moving toward the prediction by Zipf’s Law (red line). (Source:[@Cristelli2012].)"><img src="Cristelli_Fig1_big.png" class="img-fluid figure-img" style="width:75.0%" alt="Fig. 4. National GDPs appear to be moving toward the prediction by Zipf’s Law (red line). (Source:&nbsp;[6].)"></a></p>
+<p><a href="Cristelli_Fig1_big.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Fig. 4. National GDPs appear to be moving toward the prediction by Zipf’s Law (red line). (Source:[@Cristelli2012].)"><img src="Cristelli_Fig1_big.png" class="img-fluid figure-img" style="width:75.0%" alt="Fig. 4. National GDPs appear to be moving toward the prediction by Zipf’s Law (red line). (Source:&nbsp;[6].)"></a></p>
 <figcaption>Fig. 4. National GDPs appear to be moving toward the prediction by Zipf’s Law (red line). (Source:<span class="citation" data-cites="Cristelli2012">&nbsp;[<a href="#ref-Cristelli2012" role="doc-biblioref">6</a>]</span>.)</figcaption>
 </figure>
 </div>
@@ -345,7 +345,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 <p><br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="svm.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="Fig. 5. Maximum margin separating plane. (Source: Wikipedia.)"><img src="svm.png" class="img-fluid figure-img" style="width:40.0%" alt="Fig. 5. Maximum margin separating plane. (Source: Wikipedia.)"></a></p>
+<p><a href="svm.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Fig. 5. Maximum margin separating plane. (Source: Wikipedia.)"><img src="svm.png" class="img-fluid figure-img" style="width:40.0%" alt="Fig. 5. Maximum margin separating plane. (Source: Wikipedia.)"></a></p>
 <figcaption>Fig. 5. Maximum margin separating plane. (Source: Wikipedia.)</figcaption>
 </figure>
 </div>
@@ -433,7 +433,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_dec_boundary.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="Fig. 6. An SVM decision boundary for a two-class data set. Each point is colored by its class."><img src="./_output_dec_boundary.png" class="img-fluid figure-img" style="width:40.0%" alt="Fig. 6. An SVM decision boundary for a two-class data set. Each point is colored by its class."></a></p>
+<p><a href="./_output_dec_boundary.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Fig. 6. An SVM decision boundary for a two-class data set. Each point is colored by its class."><img src="./_output_dec_boundary.png" class="img-fluid figure-img" style="width:40.0%" alt="Fig. 6. An SVM decision boundary for a two-class data set. Each point is colored by its class."></a></p>
 <figcaption>Fig. 6. An SVM decision boundary for a two-class data set. Each point is colored by its class.</figcaption>
 </figure>
 </div>
@@ -465,7 +465,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./output_circles.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="Fig. 7. Two-dimensional data set which no linear model can classify."><img src="./output_circles.png" class="img-fluid figure-img" style="width:40.0%" alt="Fig. 7. Two-dimensional data set which no linear model can classify."></a></p>
+<p><a href="./output_circles.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Fig. 7. Two-dimensional data set which no linear model can classify."><img src="./output_circles.png" class="img-fluid figure-img" style="width:40.0%" alt="Fig. 7. Two-dimensional data set which no linear model can classify."></a></p>
 <figcaption>Fig. 7. Two-dimensional data set which no linear model can classify.</figcaption>
 </figure>
 </div>
@@ -510,7 +510,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_circles_dec_region.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="Fig. 9. Result of SVM with RBF kernel"><img src="./_output_circles_dec_region.png" class="img-fluid figure-img" style="width:40.0%" alt="Fig. 9. Result of SVM with RBF kernel"></a></p>
+<p><a href="./_output_circles_dec_region.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Fig. 9. Result of SVM with RBF kernel"><img src="./_output_circles_dec_region.png" class="img-fluid figure-img" style="width:40.0%" alt="Fig. 9. Result of SVM with RBF kernel"></a></p>
 <figcaption>Fig. 9. Result of SVM with RBF kernel</figcaption>
 </figure>
 </div>
@@ -554,7 +554,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_svm_multiclass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Fig. 10. Linear SVM trained on three-class data."><img src="./_output_svm_multiclass.png" class="img-fluid figure-img" style="width:55.0%" alt="Fig. 10. Linear SVM trained on three-class data."></a></p>
+<p><a href="./_output_svm_multiclass.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Fig. 10. Linear SVM trained on three-class data."><img src="./_output_svm_multiclass.png" class="img-fluid figure-img" style="width:55.0%" alt="Fig. 10. Linear SVM trained on three-class data."></a></p>
 <figcaption>Fig. 10. Linear SVM trained on three-class data.</figcaption>
 </figure>
 </div>
@@ -569,7 +569,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 <p>The Reuters Corpus Volume 1 (RCV1) data set is a big collection of news articles labeled by topic. Around 100,000 of these have known authors, and there are around 2000 different authors. A specific topic was chosen, and only authors who wrote at least one article which fell under this topic were considered. From this subset of authors, the top 50 in terms of number of articles written were chosen. 100 articles from each author were selected — 5000 in total — and these were evenly split into a training and testing set. The resulting corpus is a good challenge for authorship identification because the genre is invariant across documents and because the authors write about similar topics. Hopefully this leaves the author’s style as the primary distinguishing factor. The data set can be downloaded <a href="https://archive.ics.uci.edu/ml/datasets/Reuter_50_50">here</a>. The files are organized like this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="files.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="Fig. 11. Organization of RCV1 data set."><img src="files.png" class="img-fluid figure-img" alt="Fig. 11. Organization of RCV1 data set."></a></p>
+<p><a href="files.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Fig. 11. Organization of RCV1 data set."><img src="files.png" class="img-fluid figure-img" alt="Fig. 11. Organization of RCV1 data set."></a></p>
 <figcaption>Fig. 11. Organization of RCV1 data set.</figcaption>
 </figure>
 </div>
@@ -594,7 +594,6 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </div>
 <div id="cell-52" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display" data-execution_count="5">
-<div>
 <div>
 
 
@@ -681,7 +680,6 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </div>
 </div>
 </div>
-</div>
 <p>The following histogram shows the distribution of document lengths in the training set; it’s expected that the short average document length will greatly increases the difficulty of the classification task relative to longer works such as books.</p>
 <div id="cell-55" class="cell">
 <details class="code-fold">
@@ -696,7 +694,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_training_docs_lengths.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-glightbox="description: .lightbox-desc-11" title="Fig. 11. Distribution of document lengths in training set."><img src="./_output_training_docs_lengths.png" class="img-fluid figure-img" style="width:67.0%" alt="Fig. 11. Distribution of document lengths in training set."></a></p>
+<p><a href="./_output_training_docs_lengths.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Fig. 11. Distribution of document lengths in training set."><img src="./_output_training_docs_lengths.png" class="img-fluid figure-img" style="width:67.0%" alt="Fig. 11. Distribution of document lengths in training set."></a></p>
 <figcaption>Fig. 11. Distribution of document lengths in training set.</figcaption>
 </figure>
 </div>
@@ -776,7 +774,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_n_gram_count.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" data-glightbox="description: .lightbox-desc-12" title="Fig. 12. Distribution of character n-grams in the training text."><img src="./_output_n_gram_count.png" class="img-fluid figure-img" style="width:70.0%" alt="Fig. 12. Distribution of character n-grams in the training text."></a></p>
+<p><a href="./_output_n_gram_count.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Fig. 12. Distribution of character n-grams in the training text."><img src="./_output_n_gram_count.png" class="img-fluid figure-img" style="width:70.0%" alt="Fig. 12. Distribution of character n-grams in the training text."></a></p>
 <figcaption>Fig. 12. Distribution of character n-grams in the training text.</figcaption>
 </figure>
 </div>
@@ -811,7 +809,7 @@ y(\mathbf{x}) = \mathbf{w}^T\mathbf{x} + w_0 = 0
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_confusion_matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" data-glightbox="description: .lightbox-desc-13" title="Fig. 13. Confusion matrix for linear SVM after training. The total accuracy is 70%."><img src="./_output_confusion_matrix.png" class="img-fluid figure-img" style="width:45.0%" alt="Fig. 13. Confusion matrix for linear SVM after training. The total accuracy is 70%."></a></p>
+<p><a href="./_output_confusion_matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Fig. 13. Confusion matrix for linear SVM after training. The total accuracy is 70%."><img src="./_output_confusion_matrix.png" class="img-fluid figure-img" style="width:45.0%" alt="Fig. 13. Confusion matrix for linear SVM after training. The total accuracy is 70%."></a></p>
 <figcaption>Fig. 13. Confusion matrix for linear SVM after training. The total accuracy is 70%.</figcaption>
 </figure>
 </div>
@@ -912,7 +910,7 @@ p(\bar{t}) \sum_{i=1}^{m}p(c_i | \bar{t}) \log p(c_i | \bar{t}) -
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_compare_acc_ig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" data-glightbox="description: .lightbox-desc-14" title="Fig. 14. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 1 \le k \le 200"><img src="./_output_compare_acc_ig1.png" class="img-fluid figure-img" style="width:42.0%" alt="Fig. 14. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 1 \le k \le 200"></a></p>
+<p><a href="./_output_compare_acc_ig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Fig. 14. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 1 \le k \le 200"><img src="./_output_compare_acc_ig1.png" class="img-fluid figure-img" style="width:42.0%" alt="Fig. 14. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 1 \le k \le 200"></a></p>
 <figcaption>Fig. 14. Information Gain (IG) accuracy vs.&nbsp;number of features (<span class="math inline">\(k\)</span>) for <span class="math inline">\(1 \le k \le 200\)</span></figcaption>
 </figure>
 </div>
@@ -929,7 +927,7 @@ p(\bar{t}) \sum_{i=1}^{m}p(c_i | \bar{t}) \log p(c_i | \bar{t}) -
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_compare_acc_ig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" data-glightbox="description: .lightbox-desc-15" title="Fig. 15. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 200 \le k \le 2000"><img src="./_output_compare_acc_ig2.png" class="img-fluid figure-img" style="width:42.0%" alt="Fig. 15. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 200 \le k \le 2000"></a></p>
+<p><a href="./_output_compare_acc_ig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Fig. 15. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 200 \le k \le 2000"><img src="./_output_compare_acc_ig2.png" class="img-fluid figure-img" style="width:42.0%" alt="Fig. 15. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 200 \le k \le 2000"></a></p>
 <figcaption>Fig. 15. Information Gain (IG) accuracy vs.&nbsp;number of features (<span class="math inline">\(k\)</span>) for <span class="math inline">\(200 \le k \le 2000\)</span></figcaption>
 </figure>
 </div>
@@ -945,14 +943,14 @@ p(\bar{t}) \sum_{i=1}^{m}p(c_i | \bar{t}) \log p(c_i | \bar{t}) -
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_compare_acc_ig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" data-glightbox="description: .lightbox-desc-16" title="Fig. 16. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 2000 \le k \le 10000"><img src="./_output_compare_acc_ig3.png" class="img-fluid figure-img" style="width:42.0%" alt="Fig. 16. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 2000 \le k \le 10000"></a></p>
+<p><a href="./_output_compare_acc_ig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Fig. 16. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 2000 \le k \le 10000"><img src="./_output_compare_acc_ig3.png" class="img-fluid figure-img" style="width:42.0%" alt="Fig. 16. Information Gain (IG) accuracy vs.&nbsp;number of features (k) for 2000 \le k \le 10000"></a></p>
 <figcaption>Fig. 16. Information Gain (IG) accuracy vs.&nbsp;number of features (<span class="math inline">\(k\)</span>) for <span class="math inline">\(2000 \le k \le 10000\)</span></figcaption>
 </figure>
 </div>
 <p>I noticed that 5-grams make a big jump from last place to first place. I’m not sure if I have any deep insights into this behavior, but it’s interesting that the best n-gram to choose depends on the number of features selected. Now, I should compare with Fig. 1 from the paper:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="stamatatos_fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" data-glightbox="description: .lightbox-desc-17" title="Fig. 17. Authorship identification results using information gain for feature selection. (From[@Houvardas2006].)"><img src="stamatatos_fig1.png" class="img-fluid figure-img" style="width:85.0%" alt="Fig. 17. Authorship identification results using information gain for feature selection. (From&nbsp;[1].)"></a></p>
+<p><a href="stamatatos_fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Fig. 17. Authorship identification results using information gain for feature selection. (From[@Houvardas2006].)"><img src="stamatatos_fig1.png" class="img-fluid figure-img" style="width:85.0%" alt="Fig. 17. Authorship identification results using information gain for feature selection. (From&nbsp;[1].)"></a></p>
 <figcaption>Fig. 17. Authorship identification results using information gain for feature selection. (From<span class="citation" data-cites="Houvardas2006">&nbsp;[<a href="#ref-Houvardas2006" role="doc-biblioref">1</a>]</span>.)</figcaption>
 </figure>
 </div>
@@ -1123,7 +1121,7 @@ FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1}
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_localmaxs_vs_ig.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" data-glightbox="description: .lightbox-desc-18" title="Fig. 18. IG vs.&nbsp;LocalMaxs feature selection for 3/4/5-grams."><img src="./_output_localmaxs_vs_ig.png" class="img-fluid figure-img" style="width:55.0%" alt="Fig. 18. IG vs.&nbsp;LocalMaxs feature selection for 3/4/5-grams."></a></p>
+<p><a href="./_output_localmaxs_vs_ig.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Fig. 18. IG vs.&nbsp;LocalMaxs feature selection for 3/4/5-grams."><img src="./_output_localmaxs_vs_ig.png" class="img-fluid figure-img" style="width:55.0%" alt="Fig. 18. IG vs.&nbsp;LocalMaxs feature selection for 3/4/5-grams."></a></p>
 <figcaption>Fig. 18. IG vs.&nbsp;LocalMaxs feature selection for 3/4/5-grams.</figcaption>
 </figure>
 </div>
@@ -1155,7 +1153,7 @@ FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1}
 <p>As mentioned earlier, IG selects many related terms such as <em>the</em> and <em>the_</em>. The LocalMaxs vocabulary is much “richer”, as the authors put it. Here is the corresponding figure from the paper (ignore the white squares):</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="stamatatos_fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" data-glightbox="description: .lightbox-desc-19" title="Results of the proposed method using only variable-length n-grams and variable-length n-grams plus words longer than 5 characters. (Source:[@Houvardas2006].)"><img src="stamatatos_fig2.png" class="img-fluid figure-img" style="width:80.0%" alt="Results of the proposed method using only variable-length n-grams and variable-length n-grams plus words longer than 5 characters. (Source:&nbsp;[1].)"></a></p>
+<p><a href="stamatatos_fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Results of the proposed method using only variable-length n-grams and variable-length n-grams plus words longer than 5 characters. (Source:[@Houvardas2006].)"><img src="stamatatos_fig2.png" class="img-fluid figure-img" style="width:80.0%" alt="Results of the proposed method using only variable-length n-grams and variable-length n-grams plus words longer than 5 characters. (Source:&nbsp;[1].)"></a></p>
 <figcaption>Results of the proposed method using only variable-length n-grams and variable-length n-grams plus words longer than 5 characters. (Source:<span class="citation" data-cites="Houvardas2006">&nbsp;[<a href="#ref-Houvardas2006" role="doc-biblioref">1</a>]</span>.)</figcaption>
 </figure>
 </div>
@@ -1168,27 +1166,6 @@ FairSCP(c_1 \dots c_n) = \frac{p(c_1 \dots c_n)^2}{\frac{1}{n-1}\sum_{i=1}^{n-1}
 <p>In the future, I may apply these methods to my own data set; I’m particularly interested in what would happen with <a href="https://en.wikipedia.org/wiki/Chinese_characters">Chinese characters</a>. A different problem I’d like to examine is that of <em>artist</em> identification; the problem would be to match a collection of paintings with their painters. The <a href="https://www.wga.hu/index.html">Web Gallery of Art</a> is a database I found after a quick search, and I’m sure there are others. This would give me the chance to learn about image classification.</p>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Fig. 1. The authorship identification task.</span>
-<span class="glightbox-desc lightbox-desc-2">Fig. 2. Alexander Hamilton (left) and James Madison (right). (Source: Wikipedia.)</span>
-<span class="glightbox-desc lightbox-desc-3">Fig. 3. Distribution of word lengths in “Oliver Twist”. Each curve is for a different sample of 1000 words. (Source:<span class="citation" data-cites="Mendenhall1887">&nbsp;[<a href="#ref-Mendenhall1887" role="doc-biblioref">4</a>]</span>.</span>
-<span class="glightbox-desc lightbox-desc-4">Fig. 4. National GDPs appear to be moving toward the prediction by Zipf’s Law (red line). (Source:<span class="citation" data-cites="Cristelli2012">&nbsp;[<a href="#ref-Cristelli2012" role="doc-biblioref">6</a>]</span>.)</span>
-<span class="glightbox-desc lightbox-desc-5">Fig. 5. Maximum margin separating plane. (Source: Wikipedia.)</span>
-<span class="glightbox-desc lightbox-desc-6">Fig. 6. An SVM decision boundary for a two-class data set. Each point is colored by its class.</span>
-<span class="glightbox-desc lightbox-desc-7">Fig. 7. Two-dimensional data set which no linear model can classify.</span>
-<span class="glightbox-desc lightbox-desc-8">Fig. 9. Result of SVM with RBF kernel</span>
-<span class="glightbox-desc lightbox-desc-9">Fig. 10. Linear SVM trained on three-class data.</span>
-<span class="glightbox-desc lightbox-desc-10">Fig. 11. Organization of RCV1 data set.</span>
-<span class="glightbox-desc lightbox-desc-11">Fig. 11. Distribution of document lengths in training set.</span>
-<span class="glightbox-desc lightbox-desc-12">Fig. 12. Distribution of character n-grams in the training text.</span>
-<span class="glightbox-desc lightbox-desc-13">Fig. 13. Confusion matrix for linear SVM after training. The total accuracy is 70%.</span>
-<span class="glightbox-desc lightbox-desc-14">Fig. 14. Information Gain (IG) accuracy vs.&nbsp;number of features (<span class="math inline">\(k\)</span>) for <span class="math inline">\(1 \le k \le 200\)</span></span>
-<span class="glightbox-desc lightbox-desc-15">Fig. 15. Information Gain (IG) accuracy vs.&nbsp;number of features (<span class="math inline">\(k\)</span>) for <span class="math inline">\(200 \le k \le 2000\)</span></span>
-<span class="glightbox-desc lightbox-desc-16">Fig. 16. Information Gain (IG) accuracy vs.&nbsp;number of features (<span class="math inline">\(k\)</span>) for <span class="math inline">\(2000 \le k \le 10000\)</span></span>
-<span class="glightbox-desc lightbox-desc-17">Fig. 17. Authorship identification results using information gain for feature selection. (From<span class="citation" data-cites="Houvardas2006">&nbsp;[<a href="#ref-Houvardas2006" role="doc-biblioref">1</a>]</span>.)</span>
-<span class="glightbox-desc lightbox-desc-18">Fig. 18. IG vs.&nbsp;LocalMaxs feature selection for 3/4/5-grams.</span>
-<span class="glightbox-desc lightbox-desc-19">Results of the proposed method using only variable-length n-grams and variable-length n-grams plus words longer than 5 characters. (Source:<span class="citation" data-cites="Houvardas2006">&nbsp;[<a href="#ref-Houvardas2006" role="doc-biblioref">1</a>]</span>.)</span>
-</div>
 
 </section>
 
@@ -1400,18 +1377,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1443,7 +1409,47 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1478,7 +1484,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1753,30 +1763,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
     }
-  });
-
-};
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
           </script>
 
 
