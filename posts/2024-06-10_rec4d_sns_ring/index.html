@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.550">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Austin Hoover">
+<meta name="dcterms.date" content="2024-06-10">
+
+<title>Accelerated Inquiry - Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DLC4C8LZFB"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Accelerated Inquiry</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../archive.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notes/index.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#eigenpainting" id="toc-eigenpainting" class="nav-link active" data-scroll-target="#eigenpainting">Eigenpainting</a></li>
+  <li><a href="#sns-experiments" id="toc-sns-experiments" class="nav-link" data-scroll-target="#sns-experiments">SNS experiments</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring</h1>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Austin Hoover </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 10, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In the <a href="../2024-06-09_mentflow_part2">previous post</a>, I discussed numerical experiments to test an approximate high-dimensional maximum-entropy phase space tomography algorithm by modifying the Generative Phase Space Reconstruction (GPSR) approach. I recently applied this approach to reconstruct the 4D phase space distribution of a high-power proton beam in the SNS ring.</p>
+<section id="eigenpainting" class="level2">
+<h2 class="anchored" data-anchor-id="eigenpainting">Eigenpainting</h2>
+<p>The SNS accelerates H- ions to 1 GeV, strips the electrons, and injects the remaining protons into a ring. After 1000 injected turns, the accumulated pulse contains over <span class="math inline">\(10^{14}\)</span> protons—over 1 MW of beam power when operating at the full 60 Hz repetition rate. Some more info on the injection scheme is <a href="../2021-05-27_painting_a_particle_beam">here</a>. Injecting all particles in a tiny region would lead to an enormous charge pileup and emittance growth. Thus, we slowly move the circulating beam away from the injected beam during injection to fill the phase space more uniformly.</p>
+<p>The SNS starts with a large offset between the injected and circulating beams. At one position in the accelerator, the turn-by-turn particle coordinates jump around an ellipse in 2D phase space (<span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span>, <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>); thus, the 2D phase space distributions <span class="math inline">\(\rho(x, x')\)</span> and <span class="math inline">\(\rho(y, y')\)</span> begin as donuts. Nonlinear and collective effects cause filamentation, filling in the donuts. We end up with a somewhat uniform density rectangular distribution in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane. <a href="#fig-sns-prod-sim" class="quarto-xref">Figure&nbsp;1</a> plots a typical simulated beam using this “production” setup.</p>
+<div id="fig-sns-prod-sim" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sns-prod-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/sns_prod_sim.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="figures/sns_prod_sim.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sns-prod-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Simulated beam distribution in the SNS ring.
+</figcaption>
+</figure>
+</div>
+<p>When we move the circulating beam away from the injected beam, we effectively change the phase space coordinates of the injected particles. In the scheme above, we use time-varying dipole magnets to adjust the position <span class="math inline">\(x\)</span> (or <span class="math inline">\(y\)</span>). We could also use the same magnets to change the momentum <span class="math inline">\(x'\)</span> (or <span class="math inline">\(y'\)</span>) by introducing an angle between the injected and circulating beams. By varying the dipole magnet currents as a function of time, we move the injection point through the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> phase space. <em>Phase space painting</em> thus seems like an appropriate name.</p>
+<p>We could extend phase space painting to four phase space dimensions by introducing correlations between the horizontal and vertical dipole strengths. We then trace a line through the 4D phase space <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span>-<span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>: <span class="math inline">\(\mathbf{x}(t)\)</span>, where <span class="math inline">\(t\)</span> represents either the time or the turn number. 4D phase space painting might enable more precise control of the beam distribution, but no one has tried it.</p>
+<div id="fig-sns-inj-zoom" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sns-inj-zoom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/sns_inj_zoom.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="figures/sns_inj_zoom.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sns-inj-zoom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The SNS injection region uses eight injection kickers (time-varying dipole magnets), to control the 4D phase space coordinates of the injected beam.
+</figcaption>
+</figure>
+</div>
+<p>Some time ago, Slava Danilov (ORNL) proposed a 4D phase space painting technique, which we now call <em>eigenpainting</em>. The idea is to create coupling in the ring using solenoid or skew quadrupole magnets, then to inject particles along an eigenvector of the <span class="math inline">\(4 \times 4\)</span> ring transfer matrix <span class="math inline">\(\mathbf{M}\)</span>.</p>
+<p><span class="math display">\[
+\mathbf{M} \mathbf{v}_k = e^{-2 \pi \nu_k} \mathbf{v}_k,
+\]</span></p>
+<p>where <span class="math inline">\(\mathbf{v}_k\)</span> are the eigenvectors, <span class="math inline">\(\nu_k\)</span> are the tunes, and <span class="math inline">\(k = 1, 2\)</span>. In general, particle motion is a linear combination of the eigenvectors:</p>
+<p><span class="math display">\[
+\mathbf{x} = \Re \left\{ \sum_k \sqrt{2 J_k} \mathbf{v}_k e^{\mathbf{i \psi_k}} \right\},
+\]</span></p>
+<p>where <span class="math inline">\(J_k\)</span> are amplitudes, <span class="math inline">\(\psi_k\)</span> are phases, and <span class="math inline">\(\Re\)</span> selects the non-imaginary component. In eigenpainting, we inject particles into the ring with <span class="math inline">\(J_1 \gg J_2\)</span>. If we continuously injected particles in this way at a fixed amplitude, the particles would eventually uniformly populate an invariant closed surface in the 4D phase space. If we scaled the injection amplitude, we would fill another surface enclosing the first. It would be like adding a layer of paint to “The Rock” at the University of Michigan.</p>
+<div id="fig-rock" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/umich_rock.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="figures/umich_rock.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Students have been adding layers of paint to the “The Rock” at the University of Michigan for many years.
+</figcaption>
+</figure>
+</div>
+<p>Each eigenvector <a href="../2021-01-25_coupled_parametric_oscillators">traces an ellipse</a> when projected onto any 2D subspace, so we could generate a uniform charge density within an ellipse in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane by scaling the injection amplitude as the square root of time.</p>
+<p><span class="math display">\[
+\mathbf{x}(t) = \Re \left\{ \sqrt{2 J_k} \mathbf{v}_k e^{\mathbf{i \psi_k}}  \right\} \sqrt{t}.
+\]</span></p>
+<p>We would also generate a vortex velocity field, illustrated in <a href="#fig-painting-illustration" class="quarto-xref">Figure&nbsp;4</a>. The distribution would live on a 2D surface in the 4D phase space, and the 4D phase space volume, or <em>emittance</em>, would be <em>zero</em>.</p>
+<div id="fig-painting-illustration" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-painting-illustration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/painting_illustration.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4"><img src="figures/painting_illustration.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:40.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-painting-illustration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Eigenpainting illustration.
+</figcaption>
+</figure>
+</div>
+<p>Things become much more complicated when particles interact through the Coloumb force. These so-called <em>space charge</em> interactions generally invalidate the assumption of linear dynamics. But, surprisingly, eigenpainting works even with space charge. The distribution described above is an equilibrium solution to the Vlasov-Poisson equations, which describe the self-consistent evolution of a phase space distribution under applied focusing forces and intense space charge fields. Equilibrium distributions maintain their functional form over time, even under intense space charge forces. This is not at all trivial. Our distribution, which we call the <em>Danilov distribution</em>, generates space charge forces that are <em>linear</em> in the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> displacements, and the linearity of the space charge force is maintined for all time. It means we can still describe the particle motion using a transfer matrix as long as this transfer matrix includes the self-consistent space charge forces from the beam. Thus, eigenpainting works at any beam intensity.</p>
+<p>A Danilov-like distribution could have significant benefits for accelerator performance. Linear space charge forces result in the same tune shift (change in oscillation frequency) for every beam particle. Space-charge-driven tune spread is a significant intensity limitation in high-intensity rings. Paricle-core resonances driven by nonlinear space charge may also be reduced. Several authors have additionally shown that angular momentum can blur particle-core resonances and enhance beam stability. Thus, perhaps eigenpainting could bypass space charge limitations and produce higher-intensity hadron beams.</p>
+<p>In addition to reduced space charge effects, the beam’s angular momentum could benefit high-energy hadron colliders. High-energy hadron colliders, such as the LHC, begin with an H- linac and injection into a low-energy ring. Generating a beam with low 4D emittance in these early stages makes it possible to flatten the beam at later stages to boost the collision luminosity. The 4D emittance is typically lower-bounded by space charge effects at low energy, but with eigenpainting, one could generate a small 4D emittance beam of arbitrary intensity.</p>
+<div id="fig-flat-beam" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flat-beam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/flat_beam.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5"><img src="figures/flat_beam.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flat-beam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Eigenpainting could be used to generate flat beams for high-energy hadron colliders.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sns-experiments" class="level2">
+<h2 class="anchored" data-anchor-id="sns-experiments">SNS experiments</h2>
+<p>We’ve been working on testing the eigenpainting method in the SNS ring. These experiments have been very frustrating, typically taking 6-8 hours to set up the ring and leaving little time for experiments. And we only get a maximum of one experiment per month. However, we do have some initial results that look promising. I won’t describe the details of the experiment here. Essentially, we set up the ring and programmed the injection kickers to perform the painting method as best we could under various constraints that don’t show up in simulations. Then we injected the beam.</p>
+<p>I’ve been focusing on how to measure the beam during injection. We’re looking to measure strong linear correlations between planes, indicating a small four-dimensional emittance, and to measure the uniformity of the charge density in the transverse plane. Our diagnostics are limited. We can’t measure the beam in the ring, but we can extract the beam on a specific turn and send it to the target. The Ring-Target Beam Transport (RTBT) line, shown in <a href="#fig-rtbt" class="quarto-xref">Figure&nbsp;6</a>, contains several wirescanners. Each wirescanner has a horizontal, diagonal, and vertical wire, generating vertical, horizontal, and diagonal profiles. The wirescanners run in parallel, so a single measurement generates twelve profiles. Since the wirescanners are at different locations along the beamline, each profile corresponds to a different projection axis in the 4D phase space at some point upstream of the wirescanners.</p>
+<div id="fig-rtbt" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rtbt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/rtbt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6"><img src="figures/rtbt.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rtbt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Left: the accumulator ring and ring-target-beam-transport (RTBT) sections of the Spallation Neutron Source (SNS) accelerator. Right: <span class="math inline">\(\beta\)</span> functions phase advances, and focusing element and wirescanner positions at the end of the beamline. The red box outlines the wirescanner region.
+</figcaption>
+</figure>
+</div>
+<p>In <a href="https://arxiv.org/pdf/2204.08303">this paper</a>, I found that these twelve profiles do not determine the 4D covariance matrix. There are constraints on the beam size and minimal control over the phase advances, but we found a slightly better set of optics for the 4D reconstruction. Although one set of measurements can generate a noisy estimate of the 4D covariance matrix, it’s better to take two or three. Unfortunately, this takes time: each measurement takes nearly five minutes! The wirescanners actually measure many different beam pulses as they slowly step through the beam and back to their starting points. If we collect three sets of optics, we’re looking at fifteen minutes per measurement. That severely limits the number of measurements we can take in our limited beam study periods. In our latest experiment, after finally getting the machine set up properly, we were able to take three good sets of wire scans, generating 36 one-dimensional profiles.</p>
+<p>Although we aimed to measure the emittance, I realized we could apply MENT-Flow to the same data to estimate the 4D phase space density. <a href="../2021-10-16_tomographic_reconstruction_in_four_dimensions">During my PhD</a>, I tried to do this using the image of the beam on the target, but the image ended up being too noisy, so I gave up. The wirescanner measurements are more reliable, but it’s unclear if the 1D projections in the RTBT provide enough information to constrain the 4D distribution. That’s the perfect time to use entropy maximization! (Actually, MaxEnt is always the right choice, but it’s most important when data is scarce.)</p>
+<p>We assumed the accelerator lattice could be described by linear focusing elements and, hence, linear transfer matrices connecting the reconstruction to the diagnostics, so it was straightforward to implement a differentiable accelerator model. I then ran MENT-Flow using a Gaussian prior based on the measured covariance matrix. Here’s the reconstruction result:</p>
+<div id="fig-rec" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="figures/rec.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7"><img src="figures/rec.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Experimental MENT-Flow reconstruction of a proton beam from 1D measurements in the SNS RTBT. True/simulated profiles are plotted in red/black on the top right. The 1D and 2D projections of the reconstructed distribution are plotted on the left.
+</figcaption>
+</figure>
+</div>
+<p>The fits aren’t perfect. After extensive testing with known ground-truth distributions, I’m confident that MENT-Flow should be able to fit the distribution to this measurement set and that the result should be close to the true distribution. However, there could be errors in our beam dynamics model or measurements. It’s unclear how to determine the problem.</p>
+<p>The fits aren’t perfect, but they’re still pretty good! There are only a few bad apples. The overall good fit, combined with the entropic regularization, makes me confident that the primary features in the distribution are real. We observed two things. First, there are clear cross-plane dependencies in the reconstructed distribution. The correlations are not nearly as strong as we intended, but their presence tells us we’re moving in the right direction. Second, the beam density is not purely Gaussian; the data have pulled the reconstruction toward something more uniform. A uniform beam density is also a goal of the eigenpainting method. Although the beam density is not as uniform as we’d like it to be, it’s again encouraging that we’re moving in the right direction.</p>
+<p>I’m using simulations to understand how space charge and other effects degrade the beam quality during injection, blurring these correlations by the time we measure the beam. From my studies thus far, I think it’s very likely that strong space charge effects—amplified by the low 0.8 GeV beam energy and small beam size—significantly impacted the beam dynamics. 4D phase space tomography gives us a more powerful comparison to simulations and visually striking communication of our results.</p>
+
+
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Simulated beam distribution in the SNS ring.</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: The SNS injection region uses eight injection kickers (time-varying dipole magnets), to control the 4D phase space coordinates of the injected beam.</span>
+<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;3: Students have been adding layers of paint to the “The Rock” at the University of Michigan for many years.</span>
+<span class="glightbox-desc lightbox-desc-4">Figure&nbsp;4: Eigenpainting illustration.</span>
+<span class="glightbox-desc lightbox-desc-5">Figure&nbsp;5: Eigenpainting could be used to generate flat beams for high-energy hadron colliders.</span>
+<span class="glightbox-desc lightbox-desc-6">Figure&nbsp;6: Left: the accumulator ring and ring-target-beam-transport (RTBT) sections of the Spallation Neutron Source (SNS) accelerator. Right: <span class="math inline">\(\beta\)</span> functions phase advances, and focusing element and wirescanner positions at the end of the beamline. The red box outlines the wirescanner region.</span>
+<span class="glightbox-desc lightbox-desc-7">Figure&nbsp;7: Experimental MENT-Flow reconstruction of a proton beam from 1D measurements in the SNS RTBT. True/simulated profiles are plotted in red/black on the top right. The 1D and 2D projections of the reconstructed distribution are plotted on the left.</span>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="austin-hoover/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>
