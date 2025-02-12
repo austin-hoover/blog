@@ -23,7 +23,7 @@ format:
     toc-depth: 5
     toc-location: right
     grid:
-        body-width: 730px    
+        body-width: 720px    
     mainfont: "Latin Modern"
     linestretch: 1.25
     html-math-method: mathjax
