@@ -208,11 +208,10 @@ window.Quarto = {
 
 
 <p>In the <a href="../2024-12-26_high-dynamic-range-benchmark">previous post</a> I showed the first high-dynamic-range PIC simulation benchmark of the beam dynamics in the SNS Beam Test Facility (BTF). The most striking observation from these studies is that the two-dimensional phase space projections develop low-density spiral arms. Spiral patterns are generic features of nonlinear dynamics: in a linear system, all particles rotate by the same angle in phase space, but in nonlinear systems, the rotation angle depends on the particle amplitude.</p>
-<p>It’s interesting to trace the development of these spirals within the accelerator. The following figures show the two-dimensional distributions on the <span class="math inline">\(x\)</span>-<span class="math inline">\(p_x\)</span>, <span class="math inline">\(y\)</span>-<span class="math inline">\(p_y\)</span>, and <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> planes. The coordinates are normalized such that the covariance matrix <span class="math inline">\(\mathbf{\Sigma} = \langle \mathbf{x} \mathbf{x}^T \rangle = \mathbf{I}\)</span>, where <span class="math inline">\(\mathbf{I}\)</span> is the identity matrix and <span class="math inline">\(\mathbf{x} = (x, p_x, y, p_y)\)</span>. In these coordinates, linear forces leave the distribution invariant; all changes are due to nonlinear forces.</p>
-<p><a href="images/figs.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/figs.gif" class="img-fluid" style="width:100.0%"></a></p>
-<p><a href="images/figs_log.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/figs_log.gif" class="img-fluid" style="width:100.0%"></a></p>
-<p>The initially slow rotations occur before the FODO line, while the fast rotations occur in the FODO line, where the beam size oscillates rapidly.</p>
-<p><a href="images/fig_beam_size.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/fig_beam_size.png" class="img-fluid" style="width:66.0%"></a></p>
+<p>It’s interesting to trace the development of these spirals within the accelerator. The following figures show the two-dimensional distributions on the <span class="math inline">\(x\)</span>-<span class="math inline">\(p_x\)</span>, <span class="math inline">\(y\)</span>-<span class="math inline">\(p_y\)</span>, and <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> planes. The coordinates are normalized such that the covariance matrix <span class="math inline">\(\mathbf{\Sigma} = \langle \mathbf{x} \mathbf{x}^T \rangle = \mathbf{I}\)</span>, where <span class="math inline">\(\mathbf{I}\)</span> is the identity matrix and <span class="math inline">\(\mathbf{x} = (x, p_x, y, p_y)\)</span>. In these coordinates, linear forces leave the distribution invariant; all changes are due to nonlinear forces. Note that the density is in log-scale.</p>
+<p><a href="images/figs_log.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/figs_log.gif" class="img-fluid" style="width:100.0%"></a></p>
+<p>The initially slow rotations occur before the FODO line, while the fast rotations occur in the FODO line, where the beam size oscillates rapidly. The following figure shows the root-mean-square (rms) beam size, i.e., the standard deviation of the transverse positions <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, as a function of position. The figure also shows the maximum <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> coordinates among all particles in the bunch. Notice that the rms beam size is periodic, i.e., <em>matched</em> to the lattice, while the maximum beam size is not matched.</p>
+<p><a href="images/fig_beam_size.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/fig_beam_size.png" class="img-fluid" style="width:66.0%"></a></p>
 
 
 
@@ -749,7 +748,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
