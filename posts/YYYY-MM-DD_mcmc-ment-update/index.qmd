@@ -2,3 +2,11 @@
 title: "Applying 6D MENT to data" 
 draft: true
 ---
+
+Last year I submitted a paper called *N-dimensional maximum-entropy tomography via particle sampling* to PRAB. (See [this post](../2024-10-30_n-dimensional-ment-particle-sampling). The reviewers had some helpful comments, and I finally got around to submitting a [new version](https://arxiv.org/pdf/2409.17915) last week. 
+
+This version focuses exclusively on extending MENT to 6D using MCMC sampling techniques. Last time, I demonstrated this method on a 6D Gaussian mixture distribution. I've now added a benchmark against data from the Argonne Wakefield Accelerator (AWA). The data set was collected and described in [this paper](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.27.094601) by Roussel et al. and is shared in an open-source repository. Kudos to the authors for supporting open science.
+
+The data set contains 36 measured images of an electron beam on a scintillating screen in the $x$-$y$ plane. In addition 
+
+The data set contains 36 images of an electron beam in the $x$-$y$ plane. Each image corresponds to a different set of accelerator parameters.
