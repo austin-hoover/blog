@@ -1,0 +1,23 @@
+---
+title: "Cross-validation as uncertainty quantification"
+date: 2025-03-21
+toc: false
+categories:
+  - uncertainty
+  - tomography
+draft: true
+---
+
+[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is one way to estimate the "generalizability" of a model. The idea is to train a model on a portion of data, and then later test on unseen data to estimate how well the method will do in the wild. There are many cross-validation strategies, and it seems to be a very effective way to avoid overfitting.
+
+In the context of phase space tomography, the authors of [this paper](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.27.094601) claim that
+
+>We can be confident that the reconstructed distribution is accurate if the generative model can accurately predict measurements inside the test set.
+
+Is this always correct? Cross-validation avoids model *complexity*, but for inverse problems, the model accuracy might not always be clear from these sorts of tests.
+
+Take 2D tomography for example, where we want to reconstruct a 2D distribution from its projections. Assume the distribution is rotated by angles $\theta$ within the range $[\theta_{-}, \theta_{+}]$. For a finite number of angles, this is an ill-posed inverse problem. It's known that the reconstruction uncertainty is minimized when $\Delta\theta = \theta_{+} - \theta_{-} = \pi$, i.e., when the angles span a full half rotation. If the angles span only a quarter rotation, the reconstruction may be poor *regardless of the number of projections*. If one collected data with $\Delta\theta = \pi/2$ and split it into a training and testing set, good performance on the testing set would not imply an accurate reconstruction. To claim that cross-validation quantifies uncertainty, I think we have to assume that the data spans the entire range of possibilities.
+
+In 6D, unlike in 2D, it's unclear whether a given set of transformations places tight constraints on the distribution. In other words, it's difficult to know if a given set of transformations is the equivalent of the $[0, \pi]$ coverage in the 2D case.^[I'm not claiming that the reconstruction in this paper is inaccurate.]
+
+
