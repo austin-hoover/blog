@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2024-04-01">
+<meta name="dcterms.date" content="2025-03-20">
 
-<title>Austin’s Blog - Princeton Muon Collider Workshop</title>
+<title>Austin’s Blog - Applying 6D MENT to data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -115,6 +94,35 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
   });
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -165,28 +173,22 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Princeton Muon Collider Workshop</h1>
+<h1 class="title">Applying 6D MENT to data</h1>
   </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Austin Hoover </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 1, 2024</p>
+      <p class="date">March 20, 2025</p>
     </div>
   </div>
   
@@ -198,29 +200,92 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 </header>
 
 
-<p>The Large Hadron Collider (LHC) will soon double its luminosity, but progress in high-energy physics (HEP) will eventually require a new laboratory <span class="citation" data-cites="Shiltsev_2021">&nbsp;[<a href="#ref-Shiltsev_2021" role="doc-biblioref">1</a>]</span>. There are a few options. The <a href="https://fcc.web.cern.ch/overview">Future Circular Collider (FCC)</a> would collide ~100 TeV protons in a 100 km ring, using the LHC (7 TeV, 25 km) as a booster ring. The plan would be to start colliding leptons (FCC-ee) in the 2040s and switch to protons (FCC-hh) in the 2070s. The accelerator would be a relatively straightforward extension of the LHC, although there would be some new challenges, especially the required 16 T (!) bending magnets.</p>
-<p>An alternative approach is to collide leptons. Hadron collisions distribute energy among quarks and gluons, and it can be difficult to extract signals from the debris. Leptons don’t seem to have any internal structure; their collisions are clean and efficient, enabling precision measurements of certain reactions. Such collisions would be especially useful for studying the Higgs boson. Unfortunately, synchrotron radiation limits lepton energy in circular accelerators. Linear accelerators eliminate this problem but need to by very long to probe BSM physics. The proposed <a href="https://linearcollider.org">International Linear Collider (ILC)</a> would collide electrons with positrons at ~1 TeV in a ~50 km linac. The ILC has undergone a comprehensive design study and is ready to launch. Japan has shown interest, and although there are no official plans, the ILC could start running as soon as 2035.</p>
-<p>A muon collider (MuC) would be a hybrid approach. A MuC would collide muons and antimuons at ~10 TeV in a ~10 km ring (approximately the size of the LHC). Since muons are much heavier than electrons, they can be accelerated to 10 TeV in a compact ring. And since they are leptons, their collisions are more useful than hadrons at the same energy. A MuC is likely the only hope for a collider beyond LHC energy within my lifetime; if all goes well, it could start running in 2045. But there’s a problem: muons decay almost instantly. And another problem: muon beams are hot—they occupy a large volume in position-momentum space. And other problems too, such as neutrino radiation (!). These problems require novel solutions. Thus, the muon collider might be both the fastest and most challenging path to the energy frontier.</p>
-<p>The US Muon Accelerator Program (MAP) developed a preliminary MuC design some years ago, and the <a href="https://muoncollider.web.cern.ch">International Muon Collider Collaboration (IMCC)</a> has started where MAP left off. The preliminary design is shown below <span class="citation" data-cites="Accettura_2023">&nbsp;[<a href="#ref-Accettura_2023" role="doc-biblioref">2</a>]</span>:</p>
-<p><a href="./files/fig_muc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./files/fig_muc.png" class="img-fluid"></a></p>
-<p>The front end generates the muon and antimuon beams by colliding a proton beam with a metal target, the middle section cools the beams, reducing their phase space volume by six orders of magnitude (!), and the final section accelerates and collides the beams at dedicated interaction points. There is a push to deliver a collider design in the next few years, reflecting growing support from the <a href="https://www.slac.stanford.edu/econf/C210711/">HEP community</a>.</p>
-<p>I recently gave a talk at a workshop on muon colliders at Princeton University. The workshop discussed how the US could address the key technological challenges in the next five years. All presentations are available <a href="https://agenda.hep.wisc.edu/event/2140/timetable/#20240222">online</a>. I discussed how the SNS could test the extreme proton bunch compression needed to generate the initial muon beam. It was a unique workshop because of the mix of accelerator and particle physicists. While most of the talks focused on accelerator physics, around a third focused on detectors or HEP theory. A major topic was the beam-induced background (BIB) due to muon decay. I didn’t understand these talks well, but they motivated me to resume my particle physics self-education. (I probably would have gone into HEP if I’d attended a different grad school.)</p>
-<p>It was interesting to hear the particle physicists’ perspectives. Some expressed a desire for more accelerator-particle physics collaboration, especially among graduate students. I’m not sure how a Ph.D.&nbsp;student could have time to learn both accelerator physics and the complicated data analysis required for experimental particle physics. But I like this idea, and I’m sure many projects would benefit from multiple perspectives and skill sets.</p>
-<p>I also liked hearing about the state of HEP. One experimentalist expressed his opinion that particle physicists undersell their work. He drew a comparison to condensed matter physics, where experiments reveal exciting and unpredicted phenomena despite agreeing with the underlying theory of quantum mechanics. He argued that similar findings are commonplace at the LHC — many new processes do not contradict the Standard Model (SM) but are, nonetheless, unexpected and exciting. I suppose material science discoveries will always get more attention because they can lead to new technologies, while particle physics is more out there. In other words, who cares if tetraquarks exist? But from a fundamental scientific viewpoint, these discoveries are equally exciting.</p>
-<p>I was happy to attend this workshop and look forward to exploring SNS contributions to MuC design. It’s exciting to think about projects twenty (or even fifty) years away.</p>
-<p>A few up-to-date talks on future colliders: <a href="https://indico.cern.ch/event/1260648/attachments/2610683/4510782/IMCC_Schulte_CERN_2023.pdf">IMCC</a>, <a href="https://indico.cern.ch/event/1260648/attachments/2610683/4510781/FrankZimmermann-230314_Future-Colliders-FCC.pdf">FCC</a>, <a href="https://indico.cern.ch/event/1260648/attachments/2610683/4511473/linear-colliders.pdf">ILC</a>.</p>
-
-
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-Shiltsev_2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">V. Shiltsev and F. Zimmermann, <em>Modern and Future Colliders</em>, Reviews of Modern Physics <strong>93</strong>, 015006 (2021).</div>
+<p>Last year I submitted a paper called <em>N-dimensional maximum-entropy tomography via particle sampling</em>. (See <a href="../2024-10-30_n-dimensional-ment-particle-sampling">this post</a>.) The idea was to use Markov Chain Monte Carlo (MCMC) sampling techniques to approximate high-dimensional integrals that appear in the MENT algorithm. I demonstrated the method on a toy problem, reconstructing a 6D Gaussian Mixture (GM) distribution from its pairwise projections.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/fig_gmm_flat.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="6D Gaussian Mixture reconstruction. Shown are the 2D marginal distributions of the true and reconstructed distribution. (Click to enlarge.)"><img src="images/fig_gmm_flat.png" class="img-fluid figure-img" alt="6D Gaussian Mixture reconstruction. Shown are the 2D marginal distributions of the true and reconstructed distribution. (Click to enlarge.)"></a></p>
+<figcaption>6D Gaussian Mixture reconstruction. Shown are the 2D marginal distributions of the true and reconstructed distribution. (Click to enlarge.)</figcaption>
+</figure>
 </div>
-<div id="ref-Accettura_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">C. Accettura et al., <em>Towards a Muon Collider</em>, The European Physical Journal C <strong>83</strong>, 864 (2023).</div>
+<p>I finally got around to submitting a <a href="https://arxiv.org/pdf/2409.17915">new version</a>. I added an example where I applied MENT to data from the Argonne Wakefield Accelerator (AWA). The data set is described in <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.27.094601">this paper</a> by Roussel et al.&nbsp;and is shared in an <a href="https://github.com/roussel-ryan/gpsr_6d_paper/tree/main/examples/AWA_6d">open-source repository</a>. It contains 36 measured images of an electron beam in the AWA beamline, each with a different set of accelerator parameters.</p>
+<p>The accelerator begins with a series of quadrupole magnets, each of which provides linear focusing in one transverse plane (<span class="math inline">\(x\)</span>) and defocusing in the other plane (<span class="math inline">\(y\)</span>). The quadrupoles are followed by a transverse deflecting cavity (TDC). The TDC generates a sinusoidal electric field that points mainly along the <span class="math inline">\(y\)</span> axis. Particles receive a vertical momentum kick dependent on arrival time, rotating the longitudinal coordinate <span class="math inline">\(z\)</span> into the vertical plane. The TDC is followed by a dipole bend, which couples the horizontal position <span class="math inline">\(x\)</span> to the longitudinal momentum <span class="math inline">\(p_z\)</span> because of momentum <a href="https://en.wikipedia.org/wiki/Dispersion_(optics)">dispersion</a>. There are two beamlines after the dipole so that the beam can be measured with the dipole on or off. Scanning the quadrupoles constrains the 4D transverse phase space density <span class="math inline">\(\rho(x, p_x, y, p_y)\)</span>. Quadrupole scans were repeated with the TDC turned on/off, and then with the dipole turned on/off, generating different transverse-longitudinal correlations in the distribution at the measurement screen. A full 6D reconstruction is necessary to fit the data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/fig_awa_images.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Images from the AWA data set. Columns correspond to different quadrupole values."><img src="images/fig_awa_images.png" class="img-fluid figure-img" alt="Images from the AWA data set. Columns correspond to different quadrupole values."></a></p>
+<figcaption>Images from the AWA data set. Columns correspond to different quadrupole values.</figcaption>
+</figure>
 </div>
-</div></section></div></main> <!-- /main -->
+<p>The authors used a differential simulation to propagate particles through the accelerator and a differentiable kernel density estimator to compute the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> projections. The differentiable forward model enables gradient-based optimization of the phase space distribution. A generative model was used to represent the distribution, and the model parameters were varied to minimize the pixel-wise error between measured and simulated images. This is called Generative Phase Space Reconstruction (GPSR). Very cool method!</p>
+<p>It’s straightforward to apply MENT to arbitrary problems using <a href="https://github.com/austin-hoover/ment/">this GitHub implementation</a>. The key step is to create a list of functions that transform input phase space coordinates to output phase space coordinates, where the coordinates are passed as NumPy arrays. The transformations do not need to be differentiable. In this case, I just wrote a wrapper function that takes a NumPy array, transforms the NumPy array using the Bmad-X accelerator (the differentiable simulation), and then converts back to NumPy at the end. One complication is that it’s best to estimate the covariance matrix of the unknown phase space distribution. This is mostly for the MCMC sampling algorithm, which performs best on “round” distributions, i.e., distributions with roughly the same variance in every direction and no linear correlations between variables. I mention a few strategies to estimate the covariance matrix in the paper. In this example, I just assumed a known covariance matrix which I obtained from the previous GPSR fit.</p>
+<p>I used the <a href="https://en.wikipedia.org/wiki/Metropolis–Hastings_algorithm">Metropolis-Hastings</a> (MH) algorithm to sample particles from the MENT distribution function. I chose MH because it does not require a differentiable target distribution and is simple to code. We start with a set of points at random locations <span class="math inline">\(x_t\)</span> in the phase space. Then we sample another point <span class="math inline">\(x_*\)</span> from a <em>jumping distribution</em> <span class="math inline">\(q\)</span>, which we take to be a Gaussian. The new point is accepted or rejected according to the following procedure: <span class="math display">\[\begin{equation}
+    {x}_{t + 1} =
+    \begin{cases}
+        {x}_*  &amp; \text{if}\ r \leq \pi({x}_* | {x}_t),  \\
+        {x}_t &amp; \text{otherwise},
+    \end{cases}
+\end{equation}\]</span> where <span class="math display">\[\begin{equation}
+    \pi({x}_* | {x}_t) =
+    \text{min}
+    \left(
+        1,
+        \frac{ \rho({x}_*) }{ \rho({x}_t) }
+        \frac{ q({x}_t | {x}_*) }{ q({x}_* | {x}_t) }
+    \right),
+\end{equation}\]</span> where <span class="math inline">\(r \in [0, 1]\)</span> is a random number.</p>
+<p>MH converges to the target distribution in the long run, but its performance is highly dependent on the jumping distribution. Too wide, and most points will be rejected; too narrow, and it will take forever to explore the space. Although there’s a whole literature on tuning and diagnosing MCMC, I just tuned the width of the Gaussian jumping distribution until the acceptance rate was ~0.25-0.5 and checked that the projections/distribution didn’t look too strange. I sampled around <span class="math inline">\(5 \times 10^5\)</span> particles with 500-1000 chains, and all chains gave pretty much the same result, so I was fairly confident that the chains converged. Sampling this huge number of particles can be pretty fast using a <a href="https://colindcarroll.com/2019/08/18/very-parallel-mcmc-sampling/">vectorized</a> MCMC implementation.</p>
+<p>Here are the measured vs.&nbsp;simulated projections of the 6D distribution after a few MENT iterations:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/fig_awa_proj_05.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Simulated vs.&nbsp;measured images. (Click to enlarge.)"><img src="images/fig_awa_proj_05.png" class="img-fluid figure-img" alt="Simulated vs.&nbsp;measured images. (Click to enlarge.)"></a></p>
+<figcaption>Simulated vs.&nbsp;measured images. (Click to enlarge.)</figcaption>
+</figure>
+</div>
+<p>Not bad! I don’t see any major errors. Here are the 1D and 2D marginal projections of the reconstructed 6D MENT distribution compared to GPSR:</p>
+<div class="column-body">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/fig_ment_corner_samp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="MENT (click to enlarge)"><img src="images/fig_ment_corner_samp.png" class="img-fluid figure-img" alt="MENT (click to enlarge)"></a></p>
+<figcaption>MENT (click to enlarge)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/fig_gpsr_corner_samp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="GPSR (click to enlarge)"><img src="images/fig_gpsr_corner_samp.png" class="img-fluid figure-img" alt="GPSR (click to enlarge)"></a></p>
+<figcaption>GPSR (click to enlarge)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The plots look similar, with the biggest differences in the longitudinal projections, where MENT is smoother. This is some evidence that the problem is well-constrained. The fit errors are small for both models. Here are blurred histograms of 90,000 particles sampled from the MENT and GPSR reconstructions compared to the measured histograms.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/fig_awa_compare_data_train.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="MENT vs.&nbsp;GPSR predicted images."><img src="images/fig_awa_compare_data_train.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500" alt="MENT vs.&nbsp;GPSR predicted images."></a></p>
+<figcaption>MENT vs.&nbsp;GPSR predicted images.</figcaption>
+</figure>
+</div>
+<p>I know the MCMC algorithm is not perfect, so I’m not completely convinced that <em>all</em> features in the MENT distribution are suggested by the data. In other words, the entropy may be slightly lower than maximum due to unconverged MCMC chains. The longitudinal distribution is very thin, which I would expect to give MH trouble. However, the distribution matches the data and has a slightly higher entropy than the GPSR reconstruction, so I think I got reasonably close to the entropy maximum. There’s room to explore other sampling methods or improvements to MH.</p>
+
+
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">6D Gaussian Mixture reconstruction. Shown are the 2D marginal distributions of the true and reconstructed distribution. (Click to enlarge.)</span>
+<span class="glightbox-desc lightbox-desc-2">Images from the AWA data set. Columns correspond to different quadrupole values.</span>
+<span class="glightbox-desc lightbox-desc-3">Simulated vs.&nbsp;measured images. (Click to enlarge.)</span>
+<span class="glightbox-desc lightbox-desc-4">MENT (click to enlarge)</span>
+<span class="glightbox-desc lightbox-desc-5">GPSR (click to enlarge)</span>
+<span class="glightbox-desc lightbox-desc-6">MENT vs.&nbsp;GPSR predicted images.</span>
+</div>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -753,7 +818,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
