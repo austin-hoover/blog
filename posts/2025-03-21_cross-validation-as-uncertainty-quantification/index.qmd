@@ -5,7 +5,6 @@ toc: false
 categories:
   - uncertainty
   - tomography
-draft: true
 ---
 
 [Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is one way to estimate the "generalizability" of a model. The idea is to train a model on a portion of data, and then later test on unseen data to estimate how well the method will do in the wild. There are many cross-validation strategies, and it seems to be a very effective way to avoid overfitting.
