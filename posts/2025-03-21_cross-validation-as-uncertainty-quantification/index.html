@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2024-06-10">
+<meta name="dcterms.date" content="2025-03-21">
 
-<title>Austin’s Blog - Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring</title>
+<title>Austin’s Blog - Cross-validation as uncertainty quantification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,9 +42,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -127,7 +123,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -172,39 +168,24 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#eigenpainting" id="toc-eigenpainting" class="nav-link active" data-scroll-target="#eigenpainting">Eigenpainting</a></li>
-  <li><a href="#sns-experiments" id="toc-sns-experiments" class="nav-link" data-scroll-target="#sns-experiments">SNS experiments</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring</h1>
+<h1 class="title">Cross-validation as uncertainty quantification</h1>
   </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Austin Hoover </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 10, 2024</p>
+      <p class="date">March 21, 2025</p>
     </div>
   </div>
   
@@ -216,125 +197,24 @@ window.Quarto = {
 </header>
 
 
-<p>In the <a href="../2024-06-09_mentflow_part2">previous post</a>, I discussed numerical experiments to test an approximate high-dimensional maximum-entropy phase space tomography algorithm by modifying the Generative Phase Space Reconstruction (GPSR) approach. I recently applied this approach to reconstruct the 4D phase space distribution of a high-power proton beam in the SNS ring.</p>
-<section id="eigenpainting" class="level2">
-<h2 class="anchored" data-anchor-id="eigenpainting">Eigenpainting</h2>
-<p>The SNS accelerates H- ions to 1 GeV, strips the electrons, and injects the remaining protons into a ring. After 1000 injected turns, the accumulated pulse contains over <span class="math inline">\(10^{14}\)</span> protons—over 1 MW of beam power when operating at the full 60 Hz repetition rate. Some more info on the injection scheme is <a href="../2021-05-27_painting_a_particle_beam">here</a>. Injecting all particles in a tiny region would lead to an enormous charge pileup and emittance growth. Thus, we slowly move the circulating beam away from the injected beam during injection to fill the phase space more uniformly.</p>
-<p>The SNS starts with a large offset between the injected and circulating beams. At one position in the accelerator, the turn-by-turn particle coordinates jump around an ellipse in 2D phase space (<span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span>, <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>); thus, the 2D phase space distributions <span class="math inline">\(\rho(x, x')\)</span> and <span class="math inline">\(\rho(y, y')\)</span> begin as donuts. Nonlinear and collective effects cause filamentation, filling in the donuts. We end up with a somewhat uniform density rectangular distribution in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane. <a href="#fig-sns-prod-sim" class="quarto-xref">Figure&nbsp;1</a> plots a typical simulated beam using this “production” setup.</p>
-<div id="fig-sns-prod-sim" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sns-prod-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/sns_prod_sim.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="figures/sns_prod_sim.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:80.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sns-prod-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Simulated beam distribution in the SNS ring.
-</figcaption>
-</figure>
-</div>
-<p>When we move the circulating beam away from the injected beam, we effectively change the phase space coordinates of the injected particles. In the scheme above, we use time-varying dipole magnets to adjust the position <span class="math inline">\(x\)</span> (or <span class="math inline">\(y\)</span>). We could also use the same magnets to change the momentum <span class="math inline">\(x'\)</span> (or <span class="math inline">\(y'\)</span>) by introducing an angle between the injected and circulating beams. By varying the dipole magnet currents as a function of time, we move the injection point through the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> phase space. <em>Phase space painting</em> thus seems like an appropriate name.</p>
-<p>We could extend phase space painting to four phase space dimensions by introducing correlations between the horizontal and vertical dipole strengths. We then trace a line through the 4D phase space <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span>-<span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>: <span class="math inline">\(\mathbf{x}(t)\)</span>, where <span class="math inline">\(t\)</span> represents either the time or the turn number. 4D phase space painting might enable more precise control of the beam distribution, but no one has tried it.</p>
-<div id="fig-sns-inj-zoom" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sns-inj-zoom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/sns_inj_zoom.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="figures/sns_inj_zoom.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sns-inj-zoom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: The SNS injection region uses eight injection kickers (time-varying dipole magnets), to control the 4D phase space coordinates of the injected beam.
-</figcaption>
-</figure>
-</div>
-<p>Some time ago, Slava Danilov (ORNL) proposed a 4D phase space painting technique, which we now call <em>eigenpainting</em>. The idea is to create coupling in the ring using solenoid or skew quadrupole magnets, then to inject particles along an eigenvector of the <span class="math inline">\(4 \times 4\)</span> ring transfer matrix <span class="math inline">\(\mathbf{M}\)</span>.</p>
-<p><span class="math display">\[
-\mathbf{M} \mathbf{v}_k = e^{-2 \pi \nu_k} \mathbf{v}_k,
-\]</span></p>
-<p>where <span class="math inline">\(\mathbf{v}_k\)</span> are the eigenvectors, <span class="math inline">\(\nu_k\)</span> are the tunes, and <span class="math inline">\(k = 1, 2\)</span>. In general, particle motion is a linear combination of the eigenvectors:</p>
-<p><span class="math display">\[
-\mathbf{x} = \Re \left\{ \sum_k \sqrt{2 J_k} \mathbf{v}_k e^{\mathbf{i \psi_k}} \right\},
-\]</span></p>
-<p>where <span class="math inline">\(J_k\)</span> are amplitudes, <span class="math inline">\(\psi_k\)</span> are phases, and <span class="math inline">\(\Re\)</span> selects the non-imaginary component. In eigenpainting, we inject particles into the ring with <span class="math inline">\(J_1 \gg J_2\)</span>. If we continuously injected particles in this way at a fixed amplitude, the particles would eventually uniformly populate an invariant closed surface in the 4D phase space. If we scaled the injection amplitude, we would fill another surface enclosing the first. It would be like adding a layer of paint to “The Rock” at the University of Michigan.</p>
-<div id="fig-rock" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-rock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/umich_rock.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="figures/umich_rock.png" class="img-fluid figure-img" style="width:100.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Students have been adding layers of paint to the “The Rock” at the University of Michigan for many years.
-</figcaption>
-</figure>
-</div>
-<p>Each eigenvector <a href="../2021-01-25_coupled_parametric_oscillators">traces an ellipse</a> when projected onto any 2D subspace, so we could generate a uniform charge density within an ellipse in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane by scaling the injection amplitude as the square root of time.</p>
-<p><span class="math display">\[
-\mathbf{x}(t) = \Re \left\{ \sqrt{2 J_k} \mathbf{v}_k e^{\mathbf{i \psi_k}}  \right\} \sqrt{t}.
-\]</span></p>
-<p>We would also generate a vortex velocity field, illustrated in <a href="#fig-painting-illustration" class="quarto-xref">Figure&nbsp;4</a>. The distribution would live on a 2D surface in the 4D phase space, and the 4D phase space volume, or <em>emittance</em>, would be <em>zero</em>.</p>
-<div id="fig-painting-illustration" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-painting-illustration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/painting_illustration.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4"><img src="figures/painting_illustration.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:40.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-painting-illustration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Eigenpainting illustration.
-</figcaption>
-</figure>
-</div>
-<p>Things become much more complicated when particles interact through the Coloumb force. These so-called <em>space charge</em> interactions generally invalidate the assumption of linear dynamics. But, surprisingly, eigenpainting works even with space charge. The distribution described above is an equilibrium solution to the Vlasov-Poisson equations, which describe the self-consistent evolution of a phase space distribution under applied focusing forces and intense space charge fields. Equilibrium distributions maintain their functional form over time, even under intense space charge forces. This is not at all trivial. Our distribution, which we call the <em>Danilov distribution</em>, generates space charge forces that are <em>linear</em> in the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> displacements, and the linearity of the space charge force is maintined for all time. It means we can still describe the particle motion using a transfer matrix as long as this transfer matrix includes the self-consistent space charge forces from the beam. Thus, eigenpainting works at any beam intensity.</p>
-<p>A Danilov-like distribution could have significant benefits for accelerator performance. Linear space charge forces result in the same tune shift (change in oscillation frequency) for every beam particle. Space-charge-driven tune spread is a significant intensity limitation in high-intensity rings. Paricle-core resonances driven by nonlinear space charge may also be reduced. Several authors have additionally shown that angular momentum can blur particle-core resonances and enhance beam stability. Thus, perhaps eigenpainting could bypass space charge limitations and produce higher-intensity hadron beams.</p>
-<p>In addition to reduced space charge effects, the beam’s angular momentum could benefit high-energy hadron colliders. High-energy hadron colliders, such as the LHC, begin with an H- linac and injection into a low-energy ring. Generating a beam with low 4D emittance in these early stages makes it possible to flatten the beam at later stages to boost the collision luminosity. The 4D emittance is typically lower-bounded by space charge effects at low energy, but with eigenpainting, one could generate a small 4D emittance beam of arbitrary intensity.</p>
-<div id="fig-flat-beam" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-flat-beam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/flat_beam.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5"><img src="figures/flat_beam.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flat-beam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Eigenpainting could be used to generate flat beams for high-energy hadron colliders.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="sns-experiments" class="level2">
-<h2 class="anchored" data-anchor-id="sns-experiments">SNS experiments</h2>
-<p>We’ve been working on testing the eigenpainting method in the SNS ring. These experiments have been very frustrating, typically taking 6-8 hours to set up the ring and leaving little time for experiments. And we only get a maximum of one experiment per month. However, we do have some initial results that look promising. I won’t describe the details of the experiment here. Essentially, we set up the ring and programmed the injection kickers to perform the painting method as best we could under various constraints that don’t show up in simulations. Then we injected the beam.</p>
-<p>I’ve been focusing on how to measure the beam during injection. We’re looking to measure strong linear correlations between planes, indicating a small four-dimensional emittance, and to measure the uniformity of the charge density in the transverse plane. Our diagnostics are limited. We can’t measure the beam in the ring, but we can extract the beam on a specific turn and send it to the target. The Ring-Target Beam Transport (RTBT) line, shown in <a href="#fig-rtbt" class="quarto-xref">Figure&nbsp;6</a>, contains several wirescanners. Each wirescanner has a horizontal, diagonal, and vertical wire, generating vertical, horizontal, and diagonal profiles. The wirescanners run in parallel, so a single measurement generates twelve profiles. Since the wirescanners are at different locations along the beamline, each profile corresponds to a different projection axis in the 4D phase space at some point upstream of the wirescanners.</p>
-<div id="fig-rtbt" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-rtbt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/rtbt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6"><img src="figures/rtbt.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rtbt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Left: the accumulator ring and ring-target-beam-transport (RTBT) sections of the Spallation Neutron Source (SNS) accelerator. Right: <span class="math inline">\(\beta\)</span> functions phase advances, and focusing element and wirescanner positions at the end of the beamline. The red box outlines the wirescanner region.
-</figcaption>
-</figure>
-</div>
-<p>In <a href="https://arxiv.org/pdf/2204.08303">this paper</a>, I found that these twelve profiles do not determine the 4D covariance matrix. There are constraints on the beam size and minimal control over the phase advances, but we found a slightly better set of optics for the 4D reconstruction. Although one set of measurements can generate a noisy estimate of the 4D covariance matrix, it’s better to take two or three. Unfortunately, this takes time: each measurement takes nearly five minutes! The wirescanners actually measure many different beam pulses as they slowly step through the beam and back to their starting points. If we collect three sets of optics, we’re looking at fifteen minutes per measurement. That severely limits the number of measurements we can take in our limited beam study periods. In our latest experiment, after finally getting the machine set up properly, we were able to take three good sets of wire scans, generating 36 one-dimensional profiles.</p>
-<p>Although we aimed to measure the emittance, I realized we could apply MENT-Flow to the same data to estimate the 4D phase space density. <a href="../2021-10-16_tomographic_reconstruction_in_four_dimensions">During my PhD</a>, I tried to do this using the image of the beam on the target, but the image ended up being too noisy, so I gave up. The wirescanner measurements are more reliable, but it’s unclear if the 1D projections in the RTBT provide enough information to constrain the 4D distribution. That’s the perfect time to use entropy maximization! (Actually, MaxEnt is always the right choice, but it’s most important when data is scarce.)</p>
-<p>We assumed the accelerator lattice could be described by linear focusing elements and, hence, linear transfer matrices connecting the reconstruction to the diagnostics, so it was straightforward to implement a differentiable accelerator model. I then ran MENT-Flow using a Gaussian prior based on the measured covariance matrix. Here’s the reconstruction result:</p>
-<div id="fig-rec" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-rec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="figures/rec.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7"><img src="figures/rec.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Experimental MENT-Flow reconstruction of a proton beam from 1D measurements in the SNS RTBT. True/simulated profiles are plotted in red/black on the top right. The 1D and 2D projections of the reconstructed distribution are plotted on the left.
-</figcaption>
-</figure>
-</div>
-<p>The fits aren’t perfect. After extensive testing with known ground-truth distributions, I’m confident that MENT-Flow should be able to fit the distribution to this measurement set and that the result should be close to the true distribution. However, there could be errors in our beam dynamics model or measurements. It’s unclear how to determine the problem.</p>
-<p>The fits aren’t perfect, but they’re still pretty good! There are only a few bad apples. The overall good fit, combined with the entropic regularization, makes me confident that the primary features in the distribution are real. We observed two things. First, there are clear cross-plane dependencies in the reconstructed distribution. The correlations are not nearly as strong as we intended, but their presence tells us we’re moving in the right direction. Second, the beam density is not purely Gaussian; the data have pulled the reconstruction toward something more uniform. A uniform beam density is also a goal of the eigenpainting method. Although the beam density is not as uniform as we’d like it to be, it’s again encouraging that we’re moving in the right direction.</p>
-<p>I’m using simulations to understand how space charge and other effects degrade the beam quality during injection, blurring these correlations by the time we measure the beam. From my studies thus far, I think it’s very likely that strong space charge effects—amplified by the low 0.8 GeV beam energy and small beam size—significantly impacted the beam dynamics. 4D phase space tomography gives us a more powerful comparison to simulations and visually striking communication of our results.</p>
+<p><a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">Cross-validation</a> is one way to estimate the “generalizability” of a model. The idea is to train a model on a portion of data, and then later test on unseen data to estimate how well the method will do in the wild. There are many cross-validation strategies, and it seems to be a very effective way to avoid overfitting.</p>
+<p>In the context of phase space tomography, the authors of <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.27.094601">this paper</a> claim that</p>
+<blockquote class="blockquote">
+<p>We can be confident that the reconstructed distribution is accurate if the generative model can accurately predict measurements inside the test set.</p>
+</blockquote>
+<p>Is this always correct? Cross-validation avoids model <em>complexity</em>, but for inverse problems, the model accuracy might not always be clear from these sorts of tests.</p>
+<p>Take 2D tomography for example, where we want to reconstruct a 2D distribution from its projections. Assume the distribution is rotated by angles <span class="math inline">\(\theta\)</span> within the range <span class="math inline">\([\theta_{-}, \theta_{+}]\)</span>. For a finite number of angles, this is an ill-posed inverse problem. It’s known that the reconstruction uncertainty is minimized when <span class="math inline">\(\Delta\theta = \theta_{+} - \theta_{-} = \pi\)</span>, i.e., when the angles span a full half rotation. If the angles span only a quarter rotation, the reconstruction may be poor <em>regardless of the number of projections</em>. If one collected data with <span class="math inline">\(\Delta\theta = \pi/2\)</span> and split it into a training and testing set, good performance on the testing set would not imply an accurate reconstruction. To claim that cross-validation quantifies uncertainty, I think we have to assume that the data spans the entire range of possibilities.</p>
+<p>In 6D, unlike in 2D, it’s unclear whether a given set of transformations places tight constraints on the distribution. In other words, it’s difficult to know if a given set of transformations is the equivalent of the <span class="math inline">\([0, \pi]\)</span> coverage in the 2D case.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Simulated beam distribution in the SNS ring.</span>
-<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: The SNS injection region uses eight injection kickers (time-varying dipole magnets), to control the 4D phase space coordinates of the injected beam.</span>
-<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;3: Students have been adding layers of paint to the “The Rock” at the University of Michigan for many years.</span>
-<span class="glightbox-desc lightbox-desc-4">Figure&nbsp;4: Eigenpainting illustration.</span>
-<span class="glightbox-desc lightbox-desc-5">Figure&nbsp;5: Eigenpainting could be used to generate flat beams for high-energy hadron colliders.</span>
-<span class="glightbox-desc lightbox-desc-6">Figure&nbsp;6: Left: the accumulator ring and ring-target-beam-transport (RTBT) sections of the Spallation Neutron Source (SNS) accelerator. Right: <span class="math inline">\(\beta\)</span> functions phase advances, and focusing element and wirescanner positions at the end of the beamline. The red box outlines the wirescanner region.</span>
-<span class="glightbox-desc lightbox-desc-7">Figure&nbsp;7: Experimental MENT-Flow reconstruction of a proton beam from 1D measurements in the SNS RTBT. True/simulated profiles are plotted in red/black on the top right. The 1D and 2D projections of the reconstructed distribution are plotted on the left.</span>
-</div>
-</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>I’m not claiming that the reconstruction in this paper is inaccurate.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -867,31 +747,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 
