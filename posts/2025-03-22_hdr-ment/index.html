@@ -187,7 +187,7 @@ window.Quarto = {
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../links.html"> 
+    <a class="nav-link" href="../../links/index.html"> 
 <span class="menu-text">Links</span></a>
   </li>  
   <li class="nav-item">
@@ -252,7 +252,7 @@ window.Quarto = {
 </header>
 
 
-<p>Several papers have tried to reconstruct 4D or 6D distrbiutions from 1D or 2D projections. But so far, no one has examined the <em>dynamic range</em> of the reconstruction. The dynamic range is defined as the ratio of the maximum to minimum density in the distribution; for example, a dynamic range of <span class="math inline">\(10^3\)</span> means the peak density is one thousand times higher than the noise floor. Densities below <span class="math inline">\(10^{-2}\)</span> (as a fraction of the peak) are basically invisible to the naked eye and are therefore unimportant in most applications. However, low-density regions can be <em>very</em> important in high-power particle accelerators, where tiny fractional beam loss contributes to intensity-limiting reactivity in the accelerator tunnel.</p>
+<p>Several papers have tried to reconstruct 4D or 6D distributions from 1D or 2D projections. But so far, no one has examined the <em>dynamic range</em> of the reconstruction. The dynamic range is defined as the ratio of the maximum to minimum density in the distribution; for example, a dynamic range of <span class="math inline">\(10^3\)</span> means the peak density is one thousand times higher than the noise floor. Densities below <span class="math inline">\(10^{-2}\)</span> (as a fraction of the peak) are basically invisible to the naked eye and are therefore unimportant in most applications. However, low-density regions can be <em>very</em> important in high-power particle accelerators, where tiny fractional beam loss contributes to intensity-limiting reactivity in the accelerator tunnel.</p>
 <p>I ran an initial simulation to see if <a href="https://github.com/austin-hoover/ment/">MENT</a> can image so-called “halo” in 2D phase space from a set of 1D high-dynamic-range (HDR) 1D projections.</p>
 <div id="49be3aeb-69c5-444f-870b-731316343eca" class="cell" data-execution_count="1">
 <details class="code-fold">
@@ -451,7 +451,7 @@ window.Quarto = {
 </section>
 <section id="reconstruction-model" class="level2">
 <h2 class="anchored" data-anchor-id="reconstruction-model">Reconstruction model</h2>
-<p>I’ll use the MENT algorithm linked above. It requires a list of transformation functions (<code>transforms</code>), which map the distrbiution from the reconstruction point to each measurement, as well as a list of measured projections (<code>projections</code>). It also requires a prior distribution, which I’ll take to be ~uniform over the phase space. I’ll use numerical integration to simulate the projections, which is quite fast in 2D.</p>
+<p>I’ll use the MENT algorithm linked above. It requires a list of transformation functions (<code>transforms</code>), which map the distribution from the reconstruction point to each measurement, as well as a list of measured projections (<code>projections</code>). It also requires a prior distribution, which I’ll take to be ~uniform over the phase space. I’ll use numerical integration to simulate the projections, which is quite fast in 2D.</p>
 <div id="ef80bea3-9b71-40c8-bc78-cb9ba6ffebe7" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Defina a wide Gaussian prior (basically uniform).</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ndim <span class="op">=</span> <span class="dv">2</span></span>
@@ -1196,7 +1196,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
