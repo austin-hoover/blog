@@ -180,7 +180,7 @@
             "underline": false
         },
         "Comment": {
-            "text-color": "#000000",
+            "text-color": "#808080",
             "background-color": null,
             "bold": false,
             "italic": true,

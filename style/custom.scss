@@ -1,13 +1,14 @@
-/*-- scss:functions --*/
+/*-- scss:defaults --*/
 
 $h2-font-size: 1.50em;
 $h3-font-size: 1.25em;
 $h4-font-size: 1.00em;
 $h5-font-size: 1.00em;
 $h6-font-size: 1.00em;
+$navbar-bg: rgb(50, 50, 50);
 
 
-/*-- scss:defaults --*/
+// /*-- scss:rules --*/
 
 // Make all headers bold
 h1, h2, h3, h4, h5, h6 {
@@ -20,16 +21,15 @@ h2, .h2 {
     padding-bottom: 0.0em !important;
 }
 
-// Use sans-serif font for header
+// Use sans-serif font for website header
 .navbar {
-    padding-bottom: 2.9px !important;
-    padding-top: 2.9px !important;
-    border-bottom-width: 0px !important;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    // padding-bottom: 2.9px !important;
+    // padding-top: 2.9px !important;
+    // border-bottom-width: 0px !important;
+    font-family: "Helvetica Neue";
 }
 
 // Smaller code font
 pre, code {
     font-size: 13.0px !important;
 }
-

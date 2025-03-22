@@ -8,13 +8,23 @@
 /*-- scss:defaults --*/
 
 $primary: white;
-$navbar-bg: #181818;
-$body-bg: #181818;
+$navbar-bg: rgb(20, 20, 20);
 $body-color: rgb(200, 200, 200);
-$code-block-bg: rgb(40, 40, 40);
+$body-bg: rgb(20, 20, 20);
 
-// /*-- scss:rules --*/
+$code-block-bg: rgb(40, 40, 40);
+$code-color: $body-color;  // inline code text
+$code-bg: $code-block-bg;  // inline code background
+
+
+/*-- scss:rules --*/
 
 h1, h2, h3, h4, h5, h6, h7 {
-    color: white !important;
+  color: white !important;
+}
+
+.cell-output {
+  pre, code {
+    color: $body-color !important;
+  }
 }
