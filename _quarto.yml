@@ -9,7 +9,7 @@ website:
         text: "About"
       - href: index.qmd
         text: "Posts"
-      - href: lines/index.qmd
+      - href: links/index.qmd
         text: "Links"
       - href: notes/index.qmd
         text: "Notes"
