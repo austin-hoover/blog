@@ -97,6 +97,9 @@ div.csl-indent {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -266,16 +269,16 @@ window.Quarto = {
     \frac{q}{m} \left( \mathbf{E} + \mathbf{v} \times \mathbf{B} \right) \cdot \frac{\partial{f}}{\partial{\dot{\mathbf{x}}}}
     = 0,
 \tag{1}\]</span></span></p>
-<p>where <span class="math inline">\(q\)</span> is the particle charge, <span class="math inline">\(m\)</span> is the particle mass, and <span class="math inline">\(\mathbf{E}\)</span> is the electric field, and <span class="math inline">\(\mathbf{B}\)</span> is the magnetic field. <span class="math inline">\(\mathbf{E}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> account for both external/applied and internal/self-generated fields. Assume that self-generated magnetic fields are negligible and that applied fields are entirely magnetic. Then <span class="math inline">\(\mathbf{B}(\mathbf{x}, t)\)</span> is given and <span class="math inline">\(\mathbf{E}(\mathbf{x}, t)\)</span> is determined by the Poisson equation:</p>
+<p>where <span class="math inline">\(q\)</span> is the particle charge, <span class="math inline">\(m\)</span> is the particle mass, <span class="math inline">\(\mathbf{E}\)</span> is the electric field, and <span class="math inline">\(\mathbf{B}\)</span> is the magnetic field. <span class="math inline">\(\mathbf{E}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> account for both external/applied and internal/self-generated fields. Assume that self-generated magnetic fields are negligible and that applied fields are entirely magnetic. Then <span class="math inline">\(\mathbf{B}(\mathbf{x}, t)\)</span> is given and <span class="math inline">\(\mathbf{E}(\mathbf{x}, t)\)</span> is determined by the Poisson equation:</p>
 <p><span id="eq-poisson"><span class="math display">\[
 \frac{\partial}{\partial \mathbf{x}} \mathbf{E}(\mathbf{x}, t) =  \int f(\mathbf{x},
 \dot{\mathbf{x}}, t) d\dot{\mathbf{x}}
 \tag{2}\]</span></span></p>
-<p>Equilibrium solutions to this set of equations are necessarily functions of invariants <span class="math inline">\(\{c_i\}\)</span>, since <span class="math display">\[
+<p>Equilibrium solutions to this set of equations are functions of invariants <span class="math inline">\(\{c_i\}\)</span>, since <span id="eq-invariants"><span class="math display">\[
 \frac{d}{dt} f(\{c_i\}) = \sum_i \frac{df}{dc_i} \frac{dc_i}{dt} = 0.
-\]</span> To find an equilibrium distribution, we must build a distribution function out of single-particle invariants, compute the electric field from the distribution, and verify that the fields preserve the invariants.</p>
-<p>For time-dependent external fields, the Kapchinskij-Vladimirskij (KV) distribution is the only known solution: the distribution is a function of linear field invariants, and it generates a linear electric field, closing the feedback loop. But the structure of the KV distribution makes it unstable with respect to small perturbations in periodic focusing systems. Certain external field configurations can drive filamentation of the phase space that does not occur in realistic beams. To probe intensity limits, it makes more sense to launch an equilibrium distribution with a nonuniform charge density. Unfortunately, a nonuniform charge density generates nonlinear electric forces, and finding single-particle invariants in nonlinear systems is <em>much</em> more challenging than in linear systems. There is no proof of the existence or nonexistence of such solutions.</p>
-<p>Lund <span class="citation" data-cites="Lund_2009">&nbsp;[<a href="#ref-Lund_2009" role="doc-biblioref">1</a>]</span> suggested a method to construct 4D “pseudoequilibrium” distributions which are not strictly equilibrium distributions but exhibit much smaller variation as a function of time due to their nonlinear charge densities. The method works by constructing a smooth approximation of a time-dependent focusing channel, for which exact equilibrium distributions can be constructed, and then transforming back to rms equivalency in the original lattice. This worked very well. Below is a screenshot from the paper showing the initial and final profiles evolutions.</p>
+\tag{3}\]</span></span> To find an equilibrium distribution, we must build a distribution function out of single-particle invariants, compute the electric field from <a href="#eq-poisson" class="quarto-xref">Equation&nbsp;2</a>, and verify that the fields preserve the invariants.</p>
+<p>For time-dependent external fields, the Kapchinskij-Vladimirskij (KV) distribution is the only known equilibrium distribution. The KV distribution is a function of linear-field invariants, and it generates a linear electric field, closing the feedback loop. But the structure of the KV distribution (a 4D ellipsoid) makes it unstable with respect to small perturbations in periodic focusing systems. Certain external field configurations can drive filamentation of the phase space which does not occur in realistic beams. To probe intensity limits, it makes more sense to launch an equilibrium distribution that is a smooth function of invariants rather than a delta function. Unfortunately, a nonuniform charge density generates nonlinear electric forces, and finding invariants in nonlinear systems is <em>much</em> more challenging than in linear systems. There is no proof of the existence or nonexistence of equilibrium distributions in such systems.</p>
+<p>Lund <span class="citation" data-cites="Lund_2009">&nbsp;[<a href="#ref-Lund_2009" role="doc-biblioref">1</a>]</span> suggested a method to construct smooth 4D “pseudoequilibrium” distributions which are not strictly equilibrium distributions but exhibit much less filamentation than the KV distribution. The method works by constructing a smooth approximation of a time-dependent focusing channel, for which exact equilibrium distributions can be constructed, and then transforming back to rms equivalency in the original channel. This worked very well. Below is a screenshot from the paper showing the profile evolutions for two beams with the same rms moments but different density profiles. On the left is a Waterbag distribution (uniformly filled 4D ellipsoid) and on the right is the pseudoequilibrium distribution.</p>
 <div>
 
 </div>
@@ -289,129 +292,162 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>I think this method only works in linear uncoupled focusing systems. I’ve recently done some work with normalizing flows, and I’ve started to think they could be useful for finding equilibrium distributions. The idea would be to train a model to generate a particle distribution that is invariant after on pass through the accelerator lattice. We need a differentiable loss that measures the divergence or distance between the initial and transformed samples.</p>
-<p>Let’s define the transformed particles as <span class="math inline">\(\tilde{\mathbf{x}} = \mathcal{M}(\mathbf{x})\)</span>. We can generate samples <span class="math inline">\(\mathbf{x} \sim f(\mathbf{x})\)</span> and transformed samples particles, we can generate transformed samples <span class="math inline">\(\tilde{\mathbf{x}} \sim f(\tilde{\mathbf{x}})\)</span></p>
-<p><span class="math inline">\(x \sim f(x)\)</span></p>
-<p><span class="math inline">\(\tilde{x} = \mathcal{M}(x)\)</span></p>
-<div id="b8abc578-3255-411f-a82b-2ba62c4fcba0" class="cell">
+<p>Partly motivated by <a href="https://conference.sns.gov/event/335/contributions/526/attachments/891/8197/Antonsen_Knoxville_V2.pdf">this talk</a>, I’ve started to think that <a href="https://jmlr.org/papers/volume22/19-1028/19-1028.pdf">normalizing flows</a> could be used to find 6D pseudoequilibrium distributions in coupled or nonlinear lattices. The idea would be to train a model to generate a distribution that is invariant after one pass though the accelerator lattice. Flows are typically trained on samples <span class="math inline">\(\{\mathbf{x}_i \} \sim f(\mathbf{x})\)</span> from an unknown distribution <span class="math inline">\(f(\mathbf{x})\)</span>. The training procedure minimizes a Monte Carlo estimate of the KL divergence between the unknown <span class="math inline">\(f(\mathbf{x})\)</span> and the model distribution <span class="math inline">\(f_\theta(\mathbf{x})\)</span>, where <span class="math inline">\(\theta\)</span> is a vector of parameters:</p>
+<p><span id="eq-kl"><span class="math display">\[
+D[f(\mathbf{x}), f_\theta(\mathbf{x})] = \int f(\mathbf{x}) ( \log f(\mathbf{x}) - \log f_\theta(\mathbf{x}) ) d\mathbf{x}.
+\tag{4}\]</span></span></p>
+<p>Since the first term doesn’t depend on <span class="math inline">\(\theta\)</span>, we can drop it and just minimize the following loss function:</p>
+<p><span id="eq-loss-long"><span class="math display">\[
+L(\theta) = - \int f(\mathbf{x}) \log f_\theta(\mathbf{x})  d\mathbf{x}.
+\tag{5}\]</span></span></p>
+<p>Finally, although we don’t have access to <span class="math inline">\(f(\mathbf{x})\)</span>, we do have access to samples <span class="math inline">\(\{\mathbf{x}_i\} \sim f(\mathbf{x})\)</span>. Thus we can estimate the integral by the Monte Carlo approximation</p>
+<p><span id="eq-loss"><span class="math display">\[
+L(\theta) = - \frac{1}{N} \sum_{i=1}^N \log f_\theta(\mathbf{x}_i).
+\tag{6}\]</span></span></p>
+<p>The loss in <a href="#eq-loss" class="quarto-xref">Equation&nbsp;6</a> is often called the <em>negative log likelihood</em> or <em>NLL</em>, and this procedure is called <em>maximum likelihood training</em>.</p>
+<p>Let’s define the phase space coordinates in the initial distribution as <span class="math inline">\(\mathbf{x}(0)\)</span> and the transformed coordinates as <span class="math inline">\(\mathbf{x}(t)\)</span>. Our task is to minimize the divergence between initial distribution <span class="math inline">\(f_{t_0}(\mathbf{x})\)</span> and the final distribution <span class="math inline">\(f_{t_1}(\mathbf{x})\)</span>, where <span class="math inline">\(t_1 - t_0\)</span> is the period length. Given a normalizing flow, we can generate samples from <span class="math inline">\(f_{t0}\)</span> by sampling from a normal distribution and sending the samples through the flow. And we can generate samples from <span class="math inline">\(f_{t_1}\)</span> by integrating the equations of motion. Then we could try to minimize the KL divergence between the two distributions using <a href="#eq-loss" class="quarto-xref">Equation&nbsp;6</a>, where the samples are now from <span class="math inline">\(f_{t_1}\)</span>. The difference is that the samples now depend on the model parameters <span class="math inline">\(\theta\)</span>.</p>
+<p>I’ll label the coordinates after one lattice period as <span class="math inline">\(\tilde{\mathbf{x}}\)</span>, so the loss function becomes: <span id="eq-loss-new"><span class="math display">\[
+L(\theta) = - \frac{1}{N} \sum_{i=1}^N \log f_\theta ( \tilde{\mathbf{x}}_i ).
+\tag{7}\]</span></span></p>
+<p>To minimize <a href="#eq-loss-new" class="quarto-xref">Equation&nbsp;7</a> with respect to <span class="math inline">\(\theta\)</span>, the forward operator <span class="math inline">\(\mathcal{M}\)</span> must be differentiable. Several differentiable accelerator elements have been released as part of the Cheetah code <span class="citation" data-cites="Kaiser_2024">&nbsp;[<a href="#ref-Kaiser_2024" role="doc-biblioref">2</a>]</span>. I also saw that a 3D space charge solver was <a href="https://github.com/desy-ml/cheetah/pull/142">added to Cheetah</a>. It looks like the solver uses the FFT Greens function approach, but I haven’t looked at the details.</p>
+<p>This post is a quick test to see if the optimization scheme will work in 2D, not including space charge. I’ll use a nonlinear map which should admit stationary solutions but does not admit simple single-particle invariants as in linear systems <span class="citation" data-cites="Zolkin_2024">&nbsp;[<a href="#ref-Zolkin_2024" role="doc-biblioref">3</a>]</span>. Each transformation will consist of a rotation in phase space followed by a nonlinear kick.</p>
+<div id="b8abc578-3255-411f-a82b-2ba62c4fcba0" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> zuko</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Transform(torch.nn.Module):</span>
+<div id="4c683879-3879-4b88-b7b9-4160098426eb" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Transform(torch.nn.Module):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x: torch.Tensor) <span class="op">-&gt;</span> torch.Tensor:</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">NotImplementedError</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="4c683879-3879-4b88-b7b9-4160098426eb" class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Transform(torch.nn.Module):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x: torch.Tensor) <span class="op">-&gt;</span> torch.Tensor:</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">NotImplementedError</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ComposedTransform(Transform):</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, <span class="op">*</span>transforms) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.transforms <span class="op">=</span> torch.nn.Sequential(<span class="op">*</span>transforms)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x: torch.Tensor) <span class="op">-&gt;</span> torch.Tensor:</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        x_out <span class="op">=</span> torch.clone(x)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> transform <span class="kw">in</span> <span class="va">self</span>.transforms:</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>            x_out <span class="op">=</span> transform(x_out)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x_out</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Rotation(Transform):</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, angle: <span class="bu">float</span>, <span class="op">**</span>kwargs) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="op">**</span>kwargs)</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix <span class="op">=</span> torch.zeros((<span class="dv">2</span>, <span class="dv">2</span>))</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="op">+</span>math.cos(angle)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix[<span class="dv">1</span>, <span class="dv">1</span>] <span class="op">=</span> <span class="op">+</span>math.cos(angle)</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix[<span class="dv">0</span>, <span class="dv">1</span>] <span class="op">=</span> <span class="op">+</span>math.sin(angle)</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix[<span class="dv">1</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="op">-</span>math.sin(angle)</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x: torch.Tensor) <span class="op">-&gt;</span> torch.Tensor:</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> torch.matmul(x, <span class="va">self</span>.matrix.T)</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Drift(Transform):</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, length: <span class="bu">float</span>, <span class="op">**</span>kwargs) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="op">**</span>kwargs)</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.length <span class="op">=</span> length</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x: torch.Tensor) <span class="op">-&gt;</span> torch.Tensor:</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>        x_out <span class="op">=</span> torch.clone(x)</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>        x_out[:, <span class="dv">0</span>] <span class="op">+=</span> x_out[:, <span class="dv">1</span>] <span class="op">*</span> length</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x_out</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> NonlinearKick(Transform):</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># https://arxiv.org/abs/2405.05657</span></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, phi: <span class="bu">float</span>, A: <span class="bu">float</span>, E: <span class="bu">float</span>, T: <span class="bu">float</span>, <span class="op">**</span>kwargs) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="op">**</span>kwargs)</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.phi <span class="op">=</span> torch.tensor(phi)</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.A <span class="op">=</span> A</span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.E <span class="op">=</span> E</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.T <span class="op">=</span> T</span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x: torch.Tensor) <span class="op">-&gt;</span> torch.Tensor:</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>        E <span class="op">=</span> <span class="va">self</span>.E</span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>        A <span class="op">=</span> <span class="va">self</span>.A</span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>        T <span class="op">=</span> <span class="va">self</span>.T</span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>        phi <span class="op">=</span> <span class="va">self</span>.phi</span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>        _x  <span class="op">=</span> x[:, <span class="dv">0</span>]</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>        _px <span class="op">=</span> x[:, <span class="dv">1</span>]</span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>        _y  <span class="op">=</span> _x <span class="op">*</span> <span class="fl">0.0</span></span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>        _py <span class="op">=</span> _px <span class="op">*</span> <span class="fl">0.0</span></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>        r <span class="op">=</span> torch.<span class="bu">abs</span>(_x)</span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>        t <span class="op">=</span> torch.arctan2(_y, _x)</span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>        dr <span class="op">=</span> <span class="op">-</span>(<span class="fl">1.0</span> <span class="op">/</span> (torch.sin(phi))) <span class="op">*</span> ((E <span class="op">*</span> r) <span class="op">/</span> (A <span class="op">*</span> r<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> T)) <span class="op">-</span> ((<span class="fl">2.0</span> <span class="op">*</span> r) <span class="op">/</span> (torch.tan(phi)))</span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>        x_out <span class="op">=</span> x.clone()</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>        x_out[:, <span class="dv">1</span>] <span class="op">+=</span> dr <span class="op">*</span> torch.cos(t)</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x_out</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">NotImplementedError</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ComposedTransform(Transform):</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, <span class="op">*</span>transforms) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.transforms <span class="op">=</span> torch.nn.Sequential(<span class="op">*</span>transforms)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x: torch.Tensor) <span class="op">-&gt;</span> torch.Tensor:</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        x_out <span class="op">=</span> torch.clone(x)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> transform <span class="kw">in</span> <span class="va">self</span>.transforms:</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>            x_out <span class="op">=</span> transform(x_out)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x_out</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Rotation(Transform):</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, angle: <span class="bu">float</span>, <span class="op">**</span>kwargs) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="op">**</span>kwargs)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix <span class="op">=</span> torch.zeros((<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="op">+</span>math.cos(angle)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix[<span class="dv">1</span>, <span class="dv">1</span>] <span class="op">=</span> <span class="op">+</span>math.cos(angle)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix[<span class="dv">0</span>, <span class="dv">1</span>] <span class="op">=</span> <span class="op">+</span>math.sin(angle)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix[<span class="dv">1</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="op">-</span>math.sin(angle)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x: torch.Tensor) <span class="op">-&gt;</span> torch.Tensor:</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> torch.matmul(x, <span class="va">self</span>.matrix.T)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Drift(Transform):</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, length: <span class="bu">float</span>, <span class="op">**</span>kwargs) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="op">**</span>kwargs)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.length <span class="op">=</span> length</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x: torch.Tensor) <span class="op">-&gt;</span> torch.Tensor:</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>        x_out <span class="op">=</span> torch.clone(x)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>        x_out[:, <span class="dv">0</span>] <span class="op">+=</span> x_out[:, <span class="dv">1</span>] <span class="op">*</span> length</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x_out</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> NonlinearKick(Transform):</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># https://arxiv.org/abs/2405.05657</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, phi: <span class="bu">float</span>, A: <span class="bu">float</span>, E: <span class="bu">float</span>, T: <span class="bu">float</span>, <span class="op">**</span>kwargs) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(<span class="op">**</span>kwargs)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.phi <span class="op">=</span> torch.tensor(phi)</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.A <span class="op">=</span> A</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.E <span class="op">=</span> E</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.T <span class="op">=</span> T</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x: torch.Tensor) <span class="op">-&gt;</span> torch.Tensor:</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>        E <span class="op">=</span> <span class="va">self</span>.E</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>        A <span class="op">=</span> <span class="va">self</span>.A</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>        T <span class="op">=</span> <span class="va">self</span>.T</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>        phi <span class="op">=</span> <span class="va">self</span>.phi</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>        _x  <span class="op">=</span> x[:, <span class="dv">0</span>]</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>        _px <span class="op">=</span> x[:, <span class="dv">1</span>]</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>        _y  <span class="op">=</span> _x <span class="op">*</span> <span class="fl">0.0</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>        _py <span class="op">=</span> _px <span class="op">*</span> <span class="fl">0.0</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>        r <span class="op">=</span> torch.<span class="bu">abs</span>(_x)</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>        t <span class="op">=</span> torch.arctan2(_y, _x)</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>        dr <span class="op">=</span> <span class="op">-</span>(<span class="fl">1.0</span> <span class="op">/</span> (torch.sin(phi))) <span class="op">*</span> ((E <span class="op">*</span> r) <span class="op">/</span> (A <span class="op">*</span> r<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> T)) <span class="op">-</span> ((<span class="fl">2.0</span> <span class="op">*</span> r) <span class="op">/</span> (torch.tan(phi)))</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>        x_out <span class="op">=</span> x.clone()</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>        x_out[:, <span class="dv">1</span>] <span class="op">+=</span> dr <span class="op">*</span> torch.cos(t)</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x_out</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>[Make lattice tranforms…]</p>
-<div id="01e45ba7-d3b0-40b8-ab21-4c5d809542e9" class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>phi <span class="op">=</span> <span class="fl">2.0</span> <span class="op">*</span> math.pi <span class="op">*</span> <span class="fl">0.18</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>transforms <span class="op">=</span> []</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    transforms.append(Rotation(phi))</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    transforms.append(NonlinearKick(phi<span class="op">=</span>phi, A<span class="op">=</span><span class="fl">1.0</span>, E<span class="op">=</span><span class="fl">0.9</span>, T<span class="op">=</span><span class="fl">1.0</span>))</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>transform <span class="op">=</span> ComposedTransform(<span class="op">*</span>transforms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="01e45ba7-d3b0-40b8-ab21-4c5d809542e9" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>phi <span class="op">=</span> <span class="fl">2.0</span> <span class="op">*</span> math.pi <span class="op">*</span> <span class="fl">0.18</span>  <span class="co"># phase advance</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>transforms <span class="op">=</span> []</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    transforms.append(Rotation(phi))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    transforms.append(NonlinearKick(phi<span class="op">=</span>phi, A<span class="op">=</span><span class="fl">1.0</span>, E<span class="op">=</span><span class="fl">0.9</span>, T<span class="op">=</span><span class="fl">1.0</span>))</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>transform <span class="op">=</span> ComposedTransform(<span class="op">*</span>transforms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>[Create normalizing flow…]</p>
-<div id="d5bc58fb-2f16-4f70-a50f-9ff1e0a653c9" class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ndim <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>flow <span class="op">=</span> zuko.flows.NSF(features<span class="op">=</span>ndim, transforms<span class="op">=</span><span class="dv">3</span>, hidden_features<span class="op">=</span>[<span class="dv">64</span>] <span class="op">*</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="https://github.com/probabilists/zuko">Zuko</a> provides nice implementations of standard flow architectures. I’ll use the Neural Spline Flow (NSF) architecture here. This model uses autoregressive layers, so it’s <span class="math inline">\(D\)</span> times as fast one direction (density evaluation) than the other direction (sampling) for phase space dimension <span class="math inline">\(D\)</span>. We’ll have to do both in this training loop, so coupling layers would be better in a future implementation.</p>
+<div id="d5bc58fb-2f16-4f70-a50f-9ff1e0a653c9" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ndim <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>flow <span class="op">=</span> zuko.flows.NSF(features<span class="op">=</span>ndim, transforms<span class="op">=</span><span class="dv">3</span>, hidden_features<span class="op">=</span>[<span class="dv">64</span>] <span class="op">*</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>[Push the flow toward Gaussian distribution…]</p>
-<div id="30faba70-9aaa-438e-971b-84311dbaa136" class="cell" data-scrolled="true">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.Adam(flow.parameters(), lr<span class="op">=</span><span class="fl">0.01</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>prior_loc <span class="op">=</span> torch.zeros(ndim)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>prior_cov <span class="op">=</span> torch.eye(ndim)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>prior <span class="op">=</span> torch.distributions.MultivariateNormal(prior_loc, prior_cov)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> iteration <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    x, log_prob <span class="op">=</span> flow().rsample_and_log_prob((<span class="dv">1_000</span>,))</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> torch.mean(log_prob) <span class="op">-</span> torch.mean(prior.log_prob(x))</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    loss.backward()</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    optimizer.step()</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    optimizer.zero_grad()</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(iteration, loss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let’s start the model at a Gaussian distribution. The initial model parameters are initialized randomly. To move toward a Gaussian distribution, we can train the flow by reverse KL:</p>
+<div id="30faba70-9aaa-438e-971b-84311dbaa136" class="cell" data-scrolled="true" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.Adam(flow.parameters(), lr<span class="op">=</span><span class="fl">0.01</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>prior_loc <span class="op">=</span> torch.zeros(ndim)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>prior_cov <span class="op">=</span> torch.eye(ndim)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>prior <span class="op">=</span> torch.distributions.MultivariateNormal(prior_loc, prior_cov)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> iteration <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    x, log_prob <span class="op">=</span> flow().rsample_and_log_prob((<span class="dv">1_000</span>,))</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> torch.mean(log_prob) <span class="op">-</span> torch.mean(prior.log_prob(x))</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    loss.backward()</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    optimizer.step()</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    optimizer.zero_grad()</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(iteration, loss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0 tensor(0.2569, grad_fn=&lt;SubBackward0&gt;)
+1 tensor(4.1617, grad_fn=&lt;SubBackward0&gt;)
+2 tensor(0.4406, grad_fn=&lt;SubBackward0&gt;)
+3 tensor(0.1966, grad_fn=&lt;SubBackward0&gt;)
+4 tensor(0.4468, grad_fn=&lt;SubBackward0&gt;)
+5 tensor(0.5276, grad_fn=&lt;SubBackward0&gt;)
+6 tensor(0.4098, grad_fn=&lt;SubBackward0&gt;)
+7 tensor(0.3596, grad_fn=&lt;SubBackward0&gt;)
+8 tensor(0.2974, grad_fn=&lt;SubBackward0&gt;)
+9 tensor(0.2163, grad_fn=&lt;SubBackward0&gt;)
+10 tensor(0.1174, grad_fn=&lt;SubBackward0&gt;)
+11 tensor(0.0549, grad_fn=&lt;SubBackward0&gt;)
+12 tensor(0.0858, grad_fn=&lt;SubBackward0&gt;)
+13 tensor(0.1349, grad_fn=&lt;SubBackward0&gt;)
+14 tensor(0.0939, grad_fn=&lt;SubBackward0&gt;)
+15 tensor(0.0565, grad_fn=&lt;SubBackward0&gt;)
+16 tensor(0.0508, grad_fn=&lt;SubBackward0&gt;)
+17 tensor(0.0540, grad_fn=&lt;SubBackward0&gt;)
+18 tensor(0.0242, grad_fn=&lt;SubBackward0&gt;)
+19 tensor(0.0383, grad_fn=&lt;SubBackward0&gt;)</code></pre>
 </div>
-<div id="e2f85282-879f-482e-9382-4b2e380b2940" class="cell">
+</div>
+<p>Here’s the initial Gaussian distribution propagated through the accelerator model:</p>
+<div id="e2f85282-879f-482e-9382-4b2e380b2940" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_flow(flow, transform, nsamp<span class="op">=</span><span class="dv">1_000</span>, <span class="op">**</span>kws):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    x0 <span class="op">=</span> flow().sample((nsamp,))</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    x1 <span class="op">=</span> transform(x0.clone())</span>
@@ -420,52 +456,72 @@ window.Quarto = {
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    x1 <span class="op">=</span> x1.detach().numpy()</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plt.subplots(</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        ncols<span class="op">=</span><span class="dv">2</span>, </span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        figsize<span class="op">=</span>(<span class="fl">5.5</span>, <span class="fl">2.75</span>), </span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        sharex<span class="op">=</span><span class="va">True</span>, </span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        sharey<span class="op">=</span><span class="va">True</span>, </span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        gridspec_kw<span class="op">=</span><span class="bu">dict</span>(wspace<span class="op">=</span><span class="fl">0.1</span>),</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        constrained_layout<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax, x <span class="kw">in</span> <span class="bu">zip</span>(axs, [x0, x1]):</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        ax.scatter(x[:, <span class="dv">0</span>], x[:, <span class="dv">1</span>], <span class="op">**</span>kws)</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        ax.set_xlim(<span class="op">-</span><span class="fl">5.0</span>, <span class="fl">5.0</span>)</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        ax.set_ylim(<span class="op">-</span><span class="fl">5.0</span>, <span class="fl">5.0</span>)</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="vs">r"$x$"</span>)</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="vs">r"$p_x$"</span>)       </span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax, title <span class="kw">in</span> <span class="bu">zip</span>(axs, [<span class="st">"Input"</span>, <span class="st">"Output"</span>]):</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        ax.set_title(title, fontsize<span class="op">=</span><span class="st">"medium"</span>)    </span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig, axs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        ncols<span class="op">=</span><span class="dv">2</span>, figsize<span class="op">=</span>(<span class="fl">5.5</span>, <span class="fl">2.75</span>), sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>, gridspec_kw<span class="op">=</span><span class="bu">dict</span>(wspace<span class="op">=</span><span class="fl">0.1</span>),</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax, x <span class="kw">in</span> <span class="bu">zip</span>(axs, [x0, x1]):</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        ax.scatter(x[:, <span class="dv">0</span>], x[:, <span class="dv">1</span>], <span class="op">**</span>kws)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        ax.set_xlim(<span class="op">-</span><span class="fl">5.0</span>, <span class="fl">5.0</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        ax.set_ylim(<span class="op">-</span><span class="fl">5.0</span>, <span class="fl">5.0</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="vs">r"$x$"</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="vs">r"$p_x$"</span>)       </span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax, title <span class="kw">in</span> <span class="bu">zip</span>(axs, [<span class="st">"Input"</span>, <span class="st">"Output"</span>]):</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        ax.set_title(title, fontsize<span class="op">=</span><span class="st">"medium"</span>)    </span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig, axs</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plot_flow(flow, transform, nsamp<span class="op">=</span><span class="dv">10_000</span>, s<span class="op">=</span><span class="fl">0.4</span>, c<span class="op">=</span><span class="st">"black"</span>, ec<span class="op">=</span><span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/cell-8-output-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
 </div>
-<div id="3aa53776-33d2-461b-8d4c-dee6f6199e85" class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plot_flow(flow, transform, nsamp<span class="op">=</span><span class="dv">10_000</span>, s<span class="op">=</span><span class="fl">0.4</span>, ec<span class="op">=</span><span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="af78fc5a-22ac-4ea5-ac62-f2c47ea67f6b" class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find stationary distribution</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.Adam(flow.parameters(), lr<span class="op">=</span><span class="fl">0.01</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> iteration <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">51</span>):</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    x, log_prob <span class="op">=</span> flow().rsample_and_log_prob((<span class="dv">1_000</span>,))  <span class="co"># model will have unnorm_matrix</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    x_out <span class="op">=</span> transform(x)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># KL divergence</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> torch.mean(<span class="op">-</span>flow().log_prob(x_out))</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Entropy penatly</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> loss <span class="op">+</span> <span class="fl">1.0</span> <span class="op">*</span> torch.mean(log_prob)</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    loss.backward()</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    optimizer.step()</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    optimizer.zero_grad()</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> iteration <span class="op">%</span> <span class="dv">25</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"iter=</span><span class="sc">{</span>iteration<span class="sc">}</span><span class="ss"> loss=</span><span class="sc">{</span>loss<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ce87923c-e84c-463d-90c4-d3174ee9b7b1" class="cell">
+<p>I’ll train the flow using the ADAM optimizer and batches of 1000 particles. Without space charge, there should be an infinite number of periodic distributions. The model can also simply collapse to a delta function, with all particles starting and ending at the origin. To encourage a unique solution, I’ll add an entropy penalty to pull the distribution toward a simple Gaussian.</p>
+<div id="af78fc5a-22ac-4ea5-ac62-f2c47ea67f6b" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find stationary distribution</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.Adam(flow.parameters(), lr<span class="op">=</span><span class="fl">0.01</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> iteration <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">51</span>):</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    x, log_prob <span class="op">=</span> flow().rsample_and_log_prob((<span class="dv">1_000</span>,))  <span class="co"># model will have unnorm_matrix</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    x_out <span class="op">=</span> transform(x)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># KL divergence between input and output distributions</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> torch.mean(<span class="op">-</span>flow().log_prob(x_out))</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># KL divergence between input and Gaussian distribution</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> loss <span class="op">+</span> <span class="fl">1.0</span> <span class="op">*</span> torch.mean(log_prob)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    loss.backward()</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    optimizer.step()</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    optimizer.zero_grad()</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> iteration <span class="op">%</span> <span class="dv">25</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"iter=</span><span class="sc">{</span>iteration<span class="sc">}</span><span class="ss"> loss=</span><span class="sc">{</span>loss<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>iter=0 loss=0.8728091716766357
+iter=25 loss=0.02266407012939453
+iter=50 loss=0.006170749664306641</code></pre>
+</div>
+</div>
+<div id="ce87923c-e84c-463d-90c4-d3174ee9b7b1" class="cell" data-execution_count="9">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plot_flow(flow, transform, nsamp<span class="op">=</span><span class="dv">10_000</span>, s<span class="op">=</span><span class="fl">0.4</span>, ec<span class="op">=</span><span class="st">"none"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plot_flow(flow, transform, nsamp<span class="op">=</span><span class="dv">10_000</span>, s<span class="op">=</span><span class="fl">0.4</span>, c<span class="op">=</span><span class="st">"black"</span>, ec<span class="op">=</span><span class="st">"none"</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/cell-10-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/cell-10-output-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
 </div>
+</div>
+</div>
+<p>The model appears to be working. The next step will be to explore the Cheetah space charge module and build a test case for this algorithm.</p>
 
 
 
@@ -473,6 +529,12 @@ window.Quarto = {
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
 <div id="ref-Lund_2009" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">S. M. Lund, T. Kikuchi, and R. C. Davidson, <em><a href="https://doi.org/10.1103/PhysRevSTAB.12.114801">Generation of Initial Kinetic Distributions for Simulation of Long-Pulse Charged Particle Beams with High Space-Charge Intensity</a></em>, Phys. Rev. ST Accel. Beams <strong>12</strong>, 114801 (2009).</div>
+</div>
+<div id="ref-Kaiser_2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">J. Kaiser, C. Xu, A. Eichler, and A. Santamaria Garcia, <em><a href="https://doi.org/10.1103/PhysRevAccelBeams.27.054601">Bridging the Gap Between Machine Learning and Particle Accelerator Physics with High-Speed, Differentiable Simulations</a></em>, Phys. Rev. Accel. Beams <strong>27</strong>, 054601 (2024).</div>
+</div>
+<div id="ref-Zolkin_2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">T. Zolkin, B. Cathey, and S. Nagaitsev, <em><a href="https://arxiv.org/abs/2405.05657">Dynamics of McMillan Mappings II. Axially Symmetric Map</a></em>, (2024).</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1007,6 +1069,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
