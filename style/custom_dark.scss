@@ -17,6 +17,7 @@ $code-color: $body-color;  // inline code text
 $code-bg: $code-block-bg;  // inline code background
 
 
+
 /*-- scss:rules --*/
 
 h1, h2, h3, h4, h5, h6, h7 {
@@ -27,4 +28,8 @@ h1, h2, h3, h4, h5, h6, h7 {
   pre, code {
     color: $body-color !important;
   }
+}
+
+.quarto-listing-table {
+  border-color: rgb(150, 150, 150) !important;
 }
