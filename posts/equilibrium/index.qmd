@@ -1,0 +1,20 @@
+---
+draft: true
+---
+
+The phase space density $f(\mathbf{x}, \dot{\mathbf{x}}, t)$ of a collisionless plasma obeys the Vlasov equation:
+$$
+    \frac{df}{dt} 
+    =
+    \frac{\partial{f}}{\partial{t}} + 
+    \dot{\mathbf{x} } \cdot \frac{\partial{f}}{\partial{     \mathbf{x}}} + 
+    \frac{q}{m} \left( \mathbf{E} + \mathbf{v} \times \mathbf{B} \right) \cdot \frac{\partial{f}}{\partial{\dot{\mathbf{x}}}} 
+    = 0,
+$${#eq-vlasov}
+
+where $q$ is the particle charge, $m$ is the particle mass, and $\mathbf{E}$ is the electric field, and $\mathbf{B}$ is the magnetic field. $\mathbf{E}$ and $\mathbf{B}$ account for both external/applied and internal/self-generated fields. Assume that self-generated magnetic fields are negligible and that applied fields are entirely magnetic. Then $\mathbf{B}(\mathbf{x}, t)$ is given and $\mathbf{E}(\mathbf{x}, t)$ is determined by the Poisson equation:
+
+$$
+\frac{\partial}{\partial \mathbf{x}} \mathbf{E}(\mathbf{x}, t) =  \int f(\mathbf{x}, 
+\dot{\mathbf{x}}, t) d\dot{\mathbf{x}}
+$${#eq-poisson}
