@@ -1,0 +1,57 @@
+---
+title: "Eichmann in Jerusalem"
+date: 2025-03-30
+author: Austin Hoover
+toc: false
+categories:
+  - books
+  - wwii
+---
+
+Some quotes from Hannah Arendt's *Eichmann in Jerusalem: A Report on the Banality of Evil*.
+
+> The triumph of the SS demands that the tortured victim allow himself to be led to the noose without protesting, that he renounce and abandon himself to the point of ceasing to affirm his identity. (11)
+
+> Dr. Otto Bradfisch, of the *Einsatzgruppen*, the mobile killing units of the S.S. in the East, was sentenced to ten years of hard labor for the killing of fifteen thousand Jews; Dr. Otto Hunsche, Eichmann's legal expert and personally responsible for a last-minute deportation of some twelve hundred Hungarian Jewes, of whom at least six hundred were killed, received a sentence of five years of hard labor; and Joseph Lechthaler, who had "liquidated" the Jewish inhabitants of Slutsk and Smolevichi in Russia, was sentenced to three years and six months." (15)
+
+> Not only in Argentina, leading the unhappy existence of a refugee, but also in the courtroom in Jerusalem, with his life as good as forfeited, he might still have preferred---if anybody had asked him---to be hanged as *Obersturmbannfuhrer a.D.* (in retirement) rather than living out his life quietly and normally as a traveling salesman for the Vacuum Oil Company. (34)
+
+> "This is like an automatic factory, like a flour mill connected with some bakery. At one end you put in a Jew who still has some property, a factory, or a shop, or a bank account, and he goes through the building from counter to counter, from office to office, and comes out at the other end without any money, without any rights, with only a passport on which it says: "you must leave the country within a fortnight. Otherwise you will go to a concentration camp." (46)
+
+> But bragging is a common vice, and a more specific, and also more decisive, flaw in Eichmann's character was his almost total inability ever to look at anything from the other fellow's point of view. (48)
+
+> From beginning to end, Nazi propaganda was fiercely, unequivocally, uncompromisingly anti-Semitic. (60)
+
+> Servatius declared the accused innocent of charges bearing on his responsibility for 'the collection of skeletons, sterilizations, killings by gas, and *similar medical matters*', whereupon Judge Halivi interrupted him: 'Dr. Servatius, I assume you made a slip of the tongue when you said that killing by gas was a medical matter.' To which Servatius replied: 'It was indeed a medical matter, since it was prepared by physicians; *it was a matter of killing, and killing, too, is a medical matter*.' (69)
+
+> Eichmann’s memory, jumping with great ease over the years, was certainly not controlled by chronological order, but it was not simply erratic. It was like a storehouse, filled with human-interest stories of the worst type. (81)
+
+> Instead of saying: What horrible things I did to people!, the murderers would be able to say: what horrible things I had to watch in the pursuance of my duties, how heavily the task weighed upon my shoulders! (106)
+
+> To a Jew, this role of the Jewish leaders in the destruction of their own people is undoubtedly the darkest chapter of the whole dark story. (117)
+
+> That Eichmann had at all times done his best to make the Final Solution final was therefore not in dispute. The question was only whether this was indeed proof of his fanaticism, his boundless hatred of Jews, and whether he had lied to the police and committed perjury in court when he claimed he had always obeyed orders. (146)
+
+> Eichmann never joined this "moderate wing", and it is questionable whether he would have been admitted if he had tried to. Not only was he too deeply compromised and, because of his constant contact with Jewish functionaries, too well known; he was too primitive for these well-educated upper-middle-class "gentlemen", against whom he harbored the most violent resentment up to the very end. 
+
+> And just as the law in civilized countries assumes that the voice of conscience tells everybody "Thou shalt not kill", even though man's natural desires and inclinations may at times be murderous, so the law of Hitler's land demanded that the voice of conscience tell everybody: "Thou shalt kill", although the organizers of the massacres knew full well that murder is against the normal desires and inclinations of most people.
+
+> Evil in the Third Reich had lost the quality by which most people recognize it---the quality of temptation. (150)
+
+> This came as a great surprise to the Nazis, who were genuinely convinced that antisemitism could become the common denominator that would unite all Europe. (154)
+
+> There existed not a single organization or public institution in Germany, at least during the war years, that did not become involved in criminal actions and transactions. (159)
+
+> The behavior of the Danish people and their government was unique among all the countries of Europe---whether occupied, or a partner of the Axis, or neutral and truly independent. One is tempted to recommend the story as required reading in political science for all students who wish to learn something about the enormous power potential inherent in nonviolent action and in resistance to an opponent possessing vastly superior means of violence. (171)
+
+> Politically and psychologically, the most interesting aspect of this incident is perhaps the role played by the German authorities in Denmark, their obvious sabotage of orders from Berlin. It is the only case we know of in which the Nazis met with *open* native resistance, and the result seems to have been that those exposed to it changed their minds. (175)
+
+> It is the same story repeated over and over again: those who escaped the Nuremberg Trials and were not extradited to the countries where they had committed their crimes either were never brought to justice, or found in the German courts the greatest possible "understanding". (185)
+
+> For the lesson of such stories is simple and within everyone’s grasp. Politically speaking, it is that under conditions of terror most people will comply but *some people will not*, just as the lesson of the countries to which the Final Solution was proposed is that “it could happen” in most places but *it did not happen everywhere*. Humanly speaking, no more is required, and no more can reasonably be asked, for this planet to remain a place fit for human habitation. (233)
+
+> It was as though in those last minutes he was summing up the lesson that this long course in human wickedness had taught us---the lesson of the fearsome, word-and-thought-defying *banality of evil*. (252)
+
+> On the contrary, in general *the degree of responsibility increases as we draw further away from the man who uses the fatal instrument with his own hands*. (247)
+
+> And just as you supported and carried out a policy of not wanting to share the earth with the Jewish people and the people of a number of other nations---as though you and your superiors had any right to determine who should and who should not inhabit the world---we find that no one, that is, no member of the human race, can be expected to want to share the earth with you. This is the reason, and the only reason, you must hang. (279)
