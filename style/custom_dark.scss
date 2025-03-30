@@ -25,11 +25,15 @@ h1, h2, h3, h4, h5, h6, h7 {
 }
 
 .cell-output {
-  pre, code {
-    color: $body-color !important;
-  }
+    pre, code {
+        color: $body-color !important;
+    }
 }
 
 .quarto-listing-table {
-  border-color: rgb(150, 150, 150) !important;
+    border-color: rgb(150, 150, 150) !important;
+}
+
+blockquote {
+    border-left: .25rem solid rgb(40, 40, 40);
 }
