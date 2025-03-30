@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Austin Hoover">
 <meta name="dcterms.date" content="2021-02-22">
 
-<title>Austin’s Blog - Particle-in-cell simulation</title>
+<title>Particle-in-cell simulation – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -129,7 +129,7 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
   });
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -173,7 +173,7 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -196,7 +196,7 @@ window.Quarto = {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -268,14 +268,14 @@ window.Quarto = {
 <p>We’ll use <em>bunch</em> to refer to a group of particles in three-dimensional (3D) space, and we’ll use a local cartesian coordinate system whose origin moves with the center of the bunch as shown below:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="coordinate_system.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Fig. 1. Coordinate system defined in the beam rest frame."><img src="coordinate_system.png" class="img-fluid figure-img" style="width:55.0%" alt="Fig. 1. Coordinate system defined in the beam rest frame."></a></p>
+<p><a href="coordinate_system.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Fig. 1. Coordinate system defined in the beam rest frame."><img src="coordinate_system.png" class="img-fluid figure-img" style="width:55.0%" alt="Fig. 1. Coordinate system defined in the beam rest frame."></a></p>
 <figcaption>Fig. 1. Coordinate system defined in the beam rest frame.</figcaption>
 </figure>
 </div>
 <p>The <span class="math inline">\(s\)</span> coordinate specifies the position of the bunch in the accelerator, and the path can be curved. Now for a few assumptions and approximations. First, assume all particles in the bunch move at a constant velocity <span class="math inline">\(\beta c\)</span>, where <span class="math inline">\(c\)</span> is the speed of light. We then make the <em>paraxial approximation</em>. It’s conventional to use the slope <span class="math inline">\(x' = dx/ds\)</span> instead of the velocity, and the paraxial approximation assumes this slope is very small. Usually we report this slope in milliradians since <span class="math inline">\(tan\theta \approx \theta\)</span> for small angles. Next we assume that the transverse (<span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span>) size of the bunch varies slowly along the <span class="math inline">\(s\)</span> axis. If this is true and we look at the electric field in a transverse slice of the bunch, there won’t be much difference between the true field and the field of an infinitely long, uniform density cylinder. Our focus will be on the transverse dynamics of such a slice, so we’ll treat each “particle” as an infinite line of charge. The figure below illustrates this approximation.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="coasting_beam.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Fig. 2. Coasting beam approximation. (Source: G. Franchetti, Space charge in circular machines, CERN Accelerator School Proceedings (2017). https://e-publishing.cern.ch/index.php/CYRSP/article/view/413)"><img src="coasting_beam.png" class="img-fluid figure-img" style="width:70.0%" alt="Fig. 2. Coasting beam approximation. (Source: G. Franchetti, Space charge in circular machines, CERN Accelerator School Proceedings (2017). https://e-publishing.cern.ch/index.php/CYRSP/article/view/413)"></a></p>
+<p><a href="coasting_beam.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Fig. 2. Coasting beam approximation. (Source: G. Franchetti, Space charge in circular machines, CERN Accelerator School Proceedings (2017). https://e-publishing.cern.ch/index.php/CYRSP/article/view/413)"><img src="coasting_beam.png" class="img-fluid figure-img" style="width:70.0%" alt="Fig. 2. Coasting beam approximation. (Source: G. Franchetti, Space charge in circular machines, CERN Accelerator School Proceedings (2017). https://e-publishing.cern.ch/index.php/CYRSP/article/view/413)"></a></p>
 <figcaption>Fig. 2. Coasting beam approximation. (Source: G. Franchetti, <em>Space charge in circular machines</em>, CERN Accelerator School Proceedings (2017). <a href="https://e-publishing.cern.ch/index.php/CYRSP/article/view/413">https://e-publishing.cern.ch/index.php/CYRSP/article/view/413</a>)</figcaption>
 </figure>
 </div>
@@ -286,7 +286,7 @@ window.Quarto = {
 <p>where <span class="math inline">\(\mathbf{x} = [x, y]^T\)</span> is the coordinate vector, <span class="math inline">\(\mathbf{E} = [E_x, E_y]^T\)</span> is the self-generated electric field, <span class="math inline">\(m\)</span> is the particle mass, and <span class="math inline">\(\gamma = \left({1 - \beta^2}\right)^{-1/2}\)</span>. Let’s first address the factor <span class="math inline">\(\gamma^{-3}\)</span> in the equation of motion, which means that the space charge force goes to zero as the velocity approaches the speed of light. This is because parallel moving charges generate an attractive magnetic force which grows with velocity, completely cancelling the electric force in the limit <span class="math inline">\(v \rightarrow c\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="parallel_currents.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Fig. 3. The magnetic force between parallel currents is attractive. (Source: OpenStax University Physics.)"><img src="parallel_currents.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Fig. 3. The magnetic force between parallel currents is attractive. (Source: OpenStax University Physics.)"></a></p>
+<p><a href="parallel_currents.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Fig. 3. The magnetic force between parallel currents is attractive. (Source: OpenStax University Physics.)"><img src="parallel_currents.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Fig. 3. The magnetic force between parallel currents is attractive. (Source: OpenStax University Physics.)"></a></p>
 <figcaption>Fig. 3. The magnetic force between parallel currents is attractive. (Source: OpenStax University Physics.)</figcaption>
 </figure>
 </div>
@@ -318,7 +318,7 @@ window.Quarto = {
 <p><br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="pic_loop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Fig. 4. The particle-in-cell (PIC) loop."><img src="pic_loop.png" class="img-fluid figure-img" style="width:77.0%" alt="Fig. 4. The particle-in-cell (PIC) loop."></a></p>
+<p><a href="pic_loop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Fig. 4. The particle-in-cell (PIC) loop."><img src="pic_loop.png" class="img-fluid figure-img" style="width:77.0%" alt="Fig. 4. The particle-in-cell (PIC) loop."></a></p>
 <figcaption>Fig. 4. The particle-in-cell (PIC) loop.</figcaption>
 </figure>
 </div>
@@ -420,7 +420,7 @@ window.Quarto = {
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_NGP_CIC.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="Fig. 5. Effective particle shape for Nearest-grid-point (NGP) and cloud-in-cell (CIC) weighting."><img src="./_output_NGP_CIC.png" class="img-fluid figure-img" style="width:55.0%" alt="Fig. 5. Effective particle shape for Nearest-grid-point (NGP) and cloud-in-cell (CIC) weighting."></a></p>
+<p><a href="./_output_NGP_CIC.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Fig. 5. Effective particle shape for Nearest-grid-point (NGP) and cloud-in-cell (CIC) weighting."><img src="./_output_NGP_CIC.png" class="img-fluid figure-img" style="width:55.0%" alt="Fig. 5. Effective particle shape for Nearest-grid-point (NGP) and cloud-in-cell (CIC) weighting."></a></p>
 <figcaption>Fig. 5. Effective particle shape for Nearest-grid-point (NGP) and cloud-in-cell (CIC) weighting.</figcaption>
 </figure>
 </div>
@@ -584,7 +584,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="Fig. 6. Test of cloud-in-cell (CIC) particle weighting on a regular 64 x 64 grid."><img src="index_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img" alt="Fig. 6. Test of cloud-in-cell (CIC) particle weighting on a regular 64 x 64 grid."></a></p>
+<p><a href="index_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Fig. 6. Test of cloud-in-cell (CIC) particle weighting on a regular 64 x 64 grid."><img src="index_files/figure-html/cell-8-output-1.png" width="700" height="382" alt="Fig. 6. Test of cloud-in-cell (CIC) particle weighting on a regular 64 x 64 grid." class="figure-img"></a></p>
 <figcaption>Fig. 6. Test of cloud-in-cell (CIC) particle weighting on a regular 64 x 64 grid.</figcaption>
 </figure>
 </div>
@@ -696,7 +696,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-10-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="Fig. 7. Electric potential on doubled grid."><img src="index_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img" alt="Fig. 7. Electric potential on doubled grid."></a></p>
+<p><a href="index_files/figure-html/cell-10-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Fig. 7. Electric potential on doubled grid."><img src="index_files/figure-html/cell-10-output-1.png" width="800" height="400" alt="Fig. 7. Electric potential on doubled grid." class="figure-img"></a></p>
 <figcaption>Fig. 7. Electric potential on doubled grid.</figcaption>
 </figure>
 </div>
@@ -724,7 +724,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="Fig. 8. Electric field on original grid."><img src="index_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img" alt="Fig. 8. Electric field on original grid."></a></p>
+<p><a href="index_files/figure-html/cell-11-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Fig. 8. Electric field on original grid."><img src="index_files/figure-html/cell-11-output-1.png" width="750" height="376" alt="Fig. 8. Electric field on original grid." class="figure-img"></a></p>
 <figcaption>Fig. 8. Electric field on original grid.</figcaption>
 </figure>
 </div>
@@ -748,7 +748,7 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
 <p><br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="leapfrog.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Fig. 9. Leapfrog integration. (Source: S. Lund.)"><img src="leapfrog.png" class="img-fluid figure-img" style="width:75.0%" alt="Fig. 9. Leapfrog integration. (Source: S. Lund.)"></a></p>
+<p><a href="leapfrog.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Fig. 9. Leapfrog integration. (Source: S. Lund.)"><img src="leapfrog.png" class="img-fluid figure-img" style="width:75.0%" alt="Fig. 9. Leapfrog integration. (Source: S. Lund.)"></a></p>
 <figcaption>Fig. 9. Leapfrog integration. (Source: S. Lund.)</figcaption>
 </figure>
 </div>
@@ -1057,7 +1057,7 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./_output_anim.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="Fig. 11. Evolution of 10,000 macroparticles (black) and KV envelope (red) during free-expansion."><img src="./_output_anim.gif" class="img-fluid figure-img" style="width:70.0%" alt="Fig. 11. Evolution of 10,000 macroparticles (black) and KV envelope (red) during free-expansion."></a></p>
+<p><a href="./_output_anim.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Fig. 11. Evolution of 10,000 macroparticles (black) and KV envelope (red) during free-expansion."><img src="./_output_anim.gif" class="img-fluid figure-img" style="width:70.0%" alt="Fig. 11. Evolution of 10,000 macroparticles (black) and KV envelope (red) during free-expansion."></a></p>
 <figcaption>Fig. 11. Evolution of 10,000 macroparticles (black) and KV envelope (red) during free-expansion.</figcaption>
 </figure>
 </div>
@@ -1073,18 +1073,6 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
 </ul>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Fig. 1. Coordinate system defined in the beam rest frame.</span>
-<span class="glightbox-desc lightbox-desc-2">Fig. 2. Coasting beam approximation. (Source: G. Franchetti, <em>Space charge in circular machines</em>, CERN Accelerator School Proceedings (2017). <a href="https://e-publishing.cern.ch/index.php/CYRSP/article/view/413">https://e-publishing.cern.ch/index.php/CYRSP/article/view/413</a>)</span>
-<span class="glightbox-desc lightbox-desc-3">Fig. 3. The magnetic force between parallel currents is attractive. (Source: OpenStax University Physics.)</span>
-<span class="glightbox-desc lightbox-desc-4">Fig. 4. The particle-in-cell (PIC) loop.</span>
-<span class="glightbox-desc lightbox-desc-5">Fig. 5. Effective particle shape for Nearest-grid-point (NGP) and cloud-in-cell (CIC) weighting.</span>
-<span class="glightbox-desc lightbox-desc-6">Fig. 6. Test of cloud-in-cell (CIC) particle weighting on a regular 64 x 64 grid.</span>
-<span class="glightbox-desc lightbox-desc-7">Fig. 7. Electric potential on doubled grid.</span>
-<span class="glightbox-desc lightbox-desc-8">Fig. 8. Electric field on original grid.</span>
-<span class="glightbox-desc lightbox-desc-9">Fig. 9. Leapfrog integration. (Source: S. Lund.)</span>
-<span class="glightbox-desc lightbox-desc-10">Fig. 11. Evolution of 10,000 macroparticles (black) and KV envelope (red) during free-expansion.</span>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -1267,18 +1255,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1310,7 +1287,47 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1345,7 +1362,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1620,30 +1641,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
     }
-  });
-
-};
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
           </script>
 
 

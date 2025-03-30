@@ -6,6 +6,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2025-03-30_eichmann-in-jerusalem/index.html",
       "/posts/2025-03-23_flow-equilibrium/index.html",
       "/posts/2025-03-22_hdr-ment/index.html",
       "/posts/2025-03-21_cross-validation-as-uncertainty-quantification/index.html",
@@ -13,7 +14,7 @@
       "/posts/2024-12-27_phase-space-spirals/index.html",
       "/posts/2024-12-26_high-dynamic-range-benchmark/index.html",
       "/posts/2024-11-13_keynote-break-apart/index.html",
-      "/posts/2024-11-10_pinker-sense-of-style/index.html",
+      "/posts/2024-11-10_the-sense-of-style/index.html",
       "/posts/2024-11-05_four-dimensional-tomography-from-one-dimensional-projections/index.html",
       "/posts/2024-10-30_n-dimensional-ment-particle-sampling/index.html",
       "/posts/2024-10-13_impact/index.html",
