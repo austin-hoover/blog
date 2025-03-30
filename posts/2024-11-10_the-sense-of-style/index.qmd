@@ -1,5 +1,5 @@
 ---
-title: "Notes on *The Sense of Style* by Steven Pinker"
+title: "The Sense of Style"
 date: 2024-11-10
 author: Austin Hoover
 toc: false
