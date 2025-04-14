@@ -27,6 +27,7 @@ format:
     mainfont: "Latin Modern"
     linestretch: 1.25
     html-math-method: mathjax
-    highlight-style: 
-      light: style/highlight/monochrome-light.theme
-      dark:  style/highlight/monochrome-dark.theme
+    highlight-style: github
+    # highlight-style: 
+    #   light: style/highlight/monochrome-light.theme
+    #   dark:  style/highlight/monochrome-dark.theme
