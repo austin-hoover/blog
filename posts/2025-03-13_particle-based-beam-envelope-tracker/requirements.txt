@@ -1,0 +1,4 @@
+matplotlib==3.9.2
+numpy==2.2.2
+PyORBIT==0.1.dev1255+g6760788
+scipy==1.15.1
