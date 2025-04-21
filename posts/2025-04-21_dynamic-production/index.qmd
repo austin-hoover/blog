@@ -1,0 +1,39 @@
+---
+title: "Dynamic production"
+date: 2025-04-21
+author: Austin Hoover
+draft: true
+---
+
+
+**Dynamic Production**: Laws explain by producing later states of the universe from earlier ones. [Chen]
+
+Dynamic production is one way to view laws of physics. The idea aligns with our basic intuitions. However Chen @Chen and Adlam @Adlam argue that dynamic production may be too restrictive and may be incompatible with modern theories of physics, and that we should also allow *constraint laws* which constrain the possible spacetime trajectories.
+
+Chen considers a classical system of $N$ particles, each of mass $m = 1$, interacting through Newtonian gravity. The acceleration $\ddot{x}_i$ of particle $i$ is determined by the *force* exerted on particle *i* through the dynamical law: $\ddot{x}_i = F_i$. The collective gravitational force is given by
+
+$$
+F_i(x_i) = -\sum_{j \ne i} \frac{G m_i m_j}{|x_i - x_j|^2}.
+$$
+
+To integrate the equations of motion, we write them as first-order derivatives of the position and velocity v = \dot{x}:
+
+$$
+\begin{aligned}
+\dot{x}_i(t) &= v_i(t), \\
+\dot{v}_i(t) &= -\sum_{j \ne i} \frac{G m_i m_j}{|x_i - x_j|^2}.
+\end{aligned}
+$$
+
+Integrating the equations of motion from initial conditions $\{ x_i(0), v_i(0) \}$ leads to $N$ unique trajectories $\{ x_i(t) \} as a function of time.
+
+One subtle problem is how to think about the velocity (or momentum) in this picture. The initial state defines a position and velocity at $t = 0$. But it's a bit strange to think of the velocity on its own, without reference to the position, instead of a property of a trajectory $x(t)$. 
+
+A second issue is relativity. In special relativity, the idea of a state $S$ at time $t$ is fuzzy. [...]
+
+A third issue is that there is another way to formulate classical mechanical equations of motion. Rather than writing down the forces, we can write the Lagrangian L = T - U and search for a trajectory that minimzes the action $S$
+
+[...]
+
+The Lagrangian formulation of classical mechanics deals with *energies* rather than *forces*, and the laws act as constraints on entire trajectories. This is seems different than the intuitive dynamical production view of laws just described, and for this reason one may think the Lagrangian formulation is a mathematical trick, rather than a law with the same status as Newton's Law of motion.
+
