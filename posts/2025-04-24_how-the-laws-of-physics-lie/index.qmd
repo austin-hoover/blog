@@ -1,0 +1,8 @@
+---
+title: "How the Laws of Physics Lie"
+author: Austin Hoover
+date: 2025-04-24
+categories:
+  - books
+  - laws
+---
