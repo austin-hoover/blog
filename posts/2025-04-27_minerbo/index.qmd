@@ -2,6 +2,7 @@
 title: "Gerald Minerbo"
 author: Austin Hoover
 date: 2025-04-27
+toc: false
 categories:
   - people
 ---
