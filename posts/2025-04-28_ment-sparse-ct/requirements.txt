@@ -1,0 +1,4 @@
+matplotlib==3.9.4
+ment==1.1.4  # @git+https://github.com/austin-hoover/ment.git@v1.1.4
+numpy==1.26.4
+scikit-image==0.24.0
