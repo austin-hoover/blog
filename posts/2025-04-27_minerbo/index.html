@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2024-11-05">
+<meta name="dcterms.date" content="2025-04-27">
 
-<title>Four-dimensional phase space tomography from one-dimensional measurements of a hadron beam – Austin’s Blog</title>
+<title>Gerald Minerbo – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,9 +43,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-18843ccebd024c17f870e1998d5b17ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-c11b9b046847788c7e0d1fae360915a4.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -95,39 +92,10 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
   });
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -172,13 +140,15 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Four-dimensional phase space tomography from one-dimensional measurements of a hadron beam</h1>
+<h1 class="title">Gerald Minerbo</h1>
   </div>
 
 
@@ -195,7 +165,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 5, 2024</p>
+      <p class="date">April 27, 2025</p>
     </div>
   </div>
   
@@ -207,136 +177,18 @@ window.Quarto = {
 </header>
 
 
-<p>An older <a href="../2024-06-10_rec4d-sns-ring">post</a> explained how I used MENT-Flow to reconstruct the four-dimensional phase space density of a beam in the SNS ring. I’ve since improved the reconstruction. First, I found a bug that was setting the beam energy to 1 GeV instead of the correct value of 0.8 GeV. Second, I switched from MENT-Flow to <a href="https://github.com/austin-hoover/ment">MENT</a>. After making these changes, I reproduced the measured beam profiles almost perfectly. I’ve written up these results in a <a href="https://arxiv.org/pdf/2409.02862">paper</a> which is under review at PRAB.</p>
-<p>The paper isn’t really about the reconstruction algorithm; it’s more about the experimental design and uncertainty quantification needed to trust the results. For instance, it wasn’t clear how many one-dimensional projections we needed to constrain the four-dimensional density.</p>
-<p>We performed our experiment at the Spallation Neutron Source (SNS) accelerator. The SNS generates high-power proton pulses via multiturn charge-exchange injection from a linac into an accumulator ring. After all <span class="math inline">\(10^{14}\)</span> protons are accumulated, they’re extracted and sent to the spallation target to make neutrons. We measured the beam in the RTBT (Ring Target Beam Transport) section shown in <a href="#fig-sns" class="quarto-xref">Figure&nbsp;1</a>.</p>
-<div id="fig-sns" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/fig_sns_diagram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: (Click to enlarge.)"><img src="images/fig_sns_diagram.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: (Click to enlarge.)
-</figcaption>
-</figure>
-</div>
-<p>The beam intensity and energy preclude the use of screens to measure the two-dimensional beam density. Instead, the SNS has a set of four <em>wire scanners</em>. Each wire scanner has a horizontal, diagonal, and vertical wire that sweeps across the beam. By recording the secondary electron emission from the wire, we can measure the particle density as a function of position. We end up with three signals per wire scanner: <span class="math inline">\(\{ f(x), f(y), f(u) \}\)</span>, where <span class="math inline">\(u = (x - y) / \sqrt(2)\)</span> is the diagonal axis. The wire scanners run in parallel, generating twelve profiles on each scan.</p>
-<p>Each signal is a one-dimensional projection of the four-dimensional phase space distribution <span class="math inline">\(f(x, x', y, y')\)</span>, where <span class="math inline">\(x'\)</span> and <span class="math inline">\(y'\)</span> are the momentum coordinates. In an older <a href="https://arxiv.org/abs/2204.08303">study</a>, I found that we could use the variance of each signal to nail down the <span class="math inline">\(4 \times 4\)</span> covariance matrix <span class="math inline">\(\Sigma\)</span>. Reconstructing the full distribution is a natural next step.</p>
-<p>A key finding in that older study was that the nominal optics lead to an ill-conditioned least-squares problem when computing the covariance matrix. I solved this by adding another set of optics. There isn’t much wiggle room in the wire scanner region (due to shared quadrupole power supplies and beam size constraints), but I found another working point that led to a better-conditioned problem. In our experiment, we measured the beam with the nominal optics, modified optics, and one additional set of optics, generating 36 profiles.</p>
-<p>I started by fitting the covariance matrix to the measured signal variances (<span class="math inline">\(\langle xx \rangle, \langle yy \rangle, \langle uu \rangle\)</span>). <a href="#fig-cov" class="quarto-xref">Figure&nbsp;2</a> shows a tight fit to the data. Using standard least-squares error propagation, I estimated a low sensitivity to errors.</p>
-<div id="fig-cov" class="quarto-float quarto-figure quarto-figure-left anchored" width="65%" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-cov-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/fig_cov.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: "><img src="images/fig_cov.png" id="fig-cov" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:65.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-cov-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2
-</figcaption>
-</figure>
-</div>
-<p>Next, I used MENT to reconstruct the distribution. MENT updates a prior <span class="math inline">\(f_*(x, x', y, y')\)</span> to a posterior <span class="math inline">\(f(x, x', y, y')\)</span> by maximizing the entropy of <span class="math inline">\(f\)</span> relative to <span class="math inline">\(f_*\)</span>. This ensures the posterior is as simple as possible relative to the prior. A uniform prior often makes sense, but we’ve already estimated the covariance matrix from the least-squares fit, and we don’t want to ignore this information. One could imagine starting from a uniform prior and running MENT with the measured covariance matrix as a constraint. The result is a Gaussian distribution. So I used a Gaussian prior with the measured covariance matrix.</p>
-<p>Here are the reconstruction results. First, the measured profiles (black points) compared to the simulated/predicted profiles:</p>
-<div id="fig-profiles" class="quarto-float quarto-figure quarto-figure-left anchored" width="75%" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/fig_profiles.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: "><img src="images/fig_profiles.png" id="fig-profiles" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:75.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3
-</figcaption>
-</figure>
-</div>
-<p>Perfect agreement. The log-scale plots show agreement in low-density regions as well:</p>
-<div id="fig-profiles-log" class="quarto-float quarto-figure quarto-figure-left anchored" width="75%" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-profiles-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/fig_profiles_log.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: "><img src="images/fig_profiles_log.png" id="fig-profiles-log" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:75.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-profiles-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4
-</figcaption>
-</figure>
-</div>
-<p>I’m not sure what’s causing the shoulders in the vertical (<span class="math inline">\(y\)</span>) profiles; it might be cross-talk between wires. But this is an encouraging result. It means we might be able to study halo formation in the ring by improving the wire scanner dynamic range.</p>
-<p>Here are the 2D projections of the 4D distribution that generated those profiles:</p>
-<div id="fig-proj2d" class="quarto-float quarto-figure quarto-figure-left anchored" width="75%" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-proj2d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/fig_proj2d.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: "><img src="images/fig_proj2d.png" id="fig-proj2d" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:75.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-proj2d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5
-</figcaption>
-</figure>
-</div>
-<p>I didn’t say much about this figure in the paper because I was focused on the measurement, not the physics. But note that running the same measurement with a different injection painting scheme yields a much different result (<a href="#fig-exp02-proj2d" class="quarto-xref">Figure&nbsp;6</a>). In both cases, the reconstructed distribution is close to what we expected based on simulations.</p>
-<div id="fig-exp02-proj2d" class="quarto-float quarto-figure quarto-figure-left anchored" width="75%" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-exp02-proj2d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/fig_exp02_proj2d.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: "><img src="images/fig_exp02_proj2d.png" id="fig-exp02-proj2d" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:75.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-exp02-proj2d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6
-</figcaption>
-</figure>
-</div>
-<p>Should we trust these results? There are many possible errors in the accelerator and measurement model, but we think our modeling errors are quite small. The remaining uncertainty is due to the inverse nature of the reconstruction problem. The measurements render some distributions more likely than others, but they <em>do not identify a unique distribution</em>. An ideal reconstruction algorithm would somehow report the spread of distributions compatible with the measurements. No such algorithm exists at the moment.</p>
-<p>Thus I followed the strategy of several other papers: simulate the reconstruction. I used four different initial distributions. The first is the result of a beam physics simulation, so it’s somewhat realistic. The second is a superposition of Gaussian blobs. The third is a “Waterbag” distribution, which has a uniform density inside the unit ball. The fourth is a “Hollow” distribution, which is a hollowed-out version of the Waterbag. Here are the results:</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-nrow="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p><img src="images/fig_sim_proj2d_sim.png" class="img-fluid quarto-figure quarto-figure-left" style="width:75.0%"> <img src="images/fig_sim_profiles_sim.png" class="img-fluid quarto-figure quarto-figure-left" style="width:75.0%"></p>
-</div>
-</div>
-</div>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-nrow="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p><img src="images/fig_sim_proj2d_gm.png" class="img-fluid quarto-figure quarto-figure-left" style="width:75.0%"> <img src="images/fig_sim_profiles_gm.png" class="img-fluid quarto-figure quarto-figure-left" style="width:75.0%"></p>
-</div>
-</div>
-</div>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-nrow="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p><img src="images/fig_sim_proj2d_waterbag.png" class="img-fluid quarto-figure quarto-figure-left" style="width:75.0%"> <img src="images/fig_sim_profiles_waterbag.png" class="img-fluid quarto-figure quarto-figure-left" style="width:75.0%"></p>
-</div>
-</div>
-</div>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-nrow="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p><img src="images/fig_sim_proj2d_hollow.png" class="img-fluid quarto-figure quarto-figure-left" style="width:75.0%"> <img src="images/fig_sim_profiles_hollow.png" class="img-fluid quarto-figure quarto-figure-left" style="width:75.0%"></p>
-</div>
-</div>
-</div>
-<p>It looks like most 2D features are captured by the MENT distribution. That’s good news for our experiments: 2D features tell us a lot about the beam. There’s more uncertainty in the cross-plane projections, such as <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> and <span class="math inline">\(x'\)</span>-<span class="math inline">\(y'\)</span>, but the uncertainty isn’t enormous.</p>
-<p>A closer look shows that the internal 4D structure is incorrect for the Waterbag and Hollow distributions. See <a href="#fig-slice" class="quarto-xref">Figure&nbsp;7</a>, which shows the 1D projections within a 3D ball in the unplotted coordinates. As the ball shrinks, we approach a 1D slice through the 4D density. You can see that the MENT posterior is uniform, not hollow. Note that both distributions match the data <em>exactly</em>.</p>
-<div id="fig-slice" class="quarto-float quarto-figure quarto-figure-left anchored" width="65%" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-slice-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/fig_sim_slice_sphere_all.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: "><img src="images/fig_sim_slice_sphere_all.png" id="fig-slice" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:65.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-slice-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7
-</figcaption>
-</figure>
-</div>
-<p>The failure to capture the hollow core is somewhat expected from previous studies <a href="https://journals.aps.org/prab/abstract/10.1103/PhysRevAccelBeams.23.124201">here</a>, <a href="https://doi.org/10.1103/PhysRevAccelBeams.24.014201">here</a>, and <a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.033163">here</a>. Low-dimensional projections average over multiple dimensions and easily hide “holes” in the high-dimensional distribution. There is also a good reason why the MENT posterior is not hollow: the prior is a Gaussian, so MENT will flatten the Gaussian just until the measurements match the data, but no more. In other words, a hollow distribution is very far from the prior.</p>
-<p>I concluded that four-dimensional tomography can be useful in real accelerators when only one-dimensional measurements are available. The reconstruction seems reliable for our purposes, as beams are unlikely to be hollow in the SNS ring. Additional constraints or prior information would be needed to reconstruct <em>arbitrary</em> four-dimensional distributions.</p>
-<p>I think this method will be useful for benchmarking accelerator physics codes. By extracting the beam on different turns, we can measure the distribution as a function of time: <span class="math inline">\(f(x, x', y, y', t)\)</span> and compare to the model predictions.</p>
+<p>I found out that Gerald Minerbo, author of MENT, passed away recently. Here’s his <a href="https://jhvonline.com/dr-gerald-minerbo-p34697-124.htm">obituary</a>.</p>
+<blockquote class="blockquote">
+<p>Dr.&nbsp;Gerald Nelson Nessim Minerbo, a distinguished mathematician and physicist, passed away at his home on Tuesday, March 18, 2025, in Missouri City, Texas.</p>
+<p>Gerry, as he was called by those who loved him, was born in Alexandria, Egypt, to Salvator and Lily Minerbo (nee Farhi). His family fled Egypt in 1956 due to political uncertainty and religious persecution, landing in New York City.</p>
+<p>Gerald earned a B.S. in applied math from Brooklyn Polytechnic School of Engineering and earned his Ph.D.&nbsp;in applied mathematics and theoretical physics from the University of Cambridge in 1968 under the mentorship of Richard J. Eden.</p>
+<p>Gerald married Dr.&nbsp;Grace Moffat in August 1966. Together, they had two children, Julie and Geoffrey. They lived briefly in New York, Buenos Aires, Argentina and Los Alamos, New Mexico, before settling in Missouri City, Texas, in August 1981.</p>
+<p>During his career, Gerald worked at Brookhaven National Laboratory, Los Alamos National Laboratory and Schlumberger, for over 30 years, when he retired. Of his many patents, one of his most notable was The Periscope, which was very beneficial for drilling and exploration.</p>
+<p>He made significant advancements in the physical sciences, earning over 80 U.S. patents and publishing in countless academic journals. Most notably, his work on the Maximum Entropy (MENT) method has been influential in data analysis and modeling. Recent studies have built upon his foundational research applying N-dimensional MENT to experimental data, demonstrating the enduring impact of his work.</p>
+<p>In addition to his theoretical contributions, Dr.&nbsp;Minerbo was involved in the practical applications of his research. He co-authored studies on directional electromagnetic measurements for well placement and formation evaluation while drilling, showcasing his interdisciplinary expertise in both physics and engineering. He served as an independent consultant following his retirement from Schlumberger.</p>
+<p>Gerald was preceded in death by his wife, Dr.&nbsp;Grace Moffat Minerbo, who passed away in 2005, and sister, Claude Sasson, who passed away in 2022. He is survived by his daughter, Julie; and son, Geoffrey; his sister, Hedy; and several nieces and nephews who marvel at his genius and his love for his work.</p>
+<p>Dr.&nbsp;Minerbo’s legacy of intellectual rigor and dedication to science will be remembered by colleagues, friends and family. Gerry was incredibly brilliant, accomplished, passionate and knowledgeable on a vast array of topics. He was very generous, passionate about learning and had a wicked sense of humor.</p>
+</blockquote>
 
 
 
@@ -903,38 +755,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
