@@ -1,0 +1,6 @@
+---
+title:
+draft: true 
+---
+
+Repeat this study but show that we can use relative entropy to incorporate strong prior information. https://kmh-lanl.hansonhub.com/publications/ismiii82.pdf
