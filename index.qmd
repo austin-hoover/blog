@@ -7,5 +7,5 @@ listing:
     date-format: YYYY‑MM‑DD
     table-hover: true
     categories: true
-    max-items: 9999999
+    page-size: 200
 ---
