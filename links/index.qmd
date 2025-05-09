@@ -80,6 +80,7 @@ title: Links
 * [Little debates](https://www.routledge.com/Little-Debates-about-Big-Questions/book-series/LDABQ)
 * [Einstein papers](https://einsteinpapers.press.princeton.edu)
 * [Probability theory as extended logic](https://bayes.wustl.edu)
+* [US Muon Collider Collaboration](https://www.muoncollider.us)
 * Articles
     * [Why academics stink at writing](https://www.chronicle.com/article/why-academics-stink-at-writing/)
     * [The preprint revolution](https://upstream.force11.org/the-preprint-revolution-implications-for-bibliographic-databases/)
