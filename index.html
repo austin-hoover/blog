@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,20 +32,17 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-bcbce66894bfa8e7e94e40e0186b9bb8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4e7a6ecc11b04d2331dcee725084a9de.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-bcbce66894bfa8e7e94e40e0186b9bb8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-34b54161b321180ab073507ff9230d2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -144,168 +141,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -351,10 +187,9 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(41)</span></div><div class="category" data-category="YWNjZWxlcmF0b3Jz">accelerators <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QW5zZWxt">Anselm <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YXJndW1lbnRz">arguments <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmF5ZXNpYW4=">bayesian <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmlvbG9naWNhbCUyMGRlc2lnbg==">biological design <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ym9va3M=">books <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Y2xhc3NpY2FsJTIwbWVjaGFuaWNz">classical mechanics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Y29uZmVyZW5jZXM=">conferences <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29zbW9sb2dpY2FsJTIwYXJndW1lbnRz">cosmological arguments <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y291cGxpbmc=">coupling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGFyd2lu">Darwin <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZHluYW1pYyUyMHJhbmdl">dynamic range <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZWxlY3Ryb2R5bmFtaWNz">electrodynamics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZW50cm9weQ==">entropy <span class="quarto-category-count">(6)</span></div><div class="category" data-category="ZmluZS10dW5pbmc=">fine-tuning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2VuZXJhdGl2ZSUyMG1vZGVscw==">generative models <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aGFsbw==">halo <span class="quarto-category-count">(3)</span></div><div class="category" data-category="aGlnaC1kaW1lbnNpb25hbCUyMGRhdGE=">high-dimensional data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW5maW5pdHk=">infinity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="aW5zdGFiaWxpdHk=">instability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="S2FsYW0=">Kalam <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGF3cw==">laws <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGVpYm5peg==">Leibniz <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWNtYw==">mcmc <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWlzYw==">misc <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bXVsdGl2ZXJzZQ==">multiverse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bXVvbiUyMGNvbGxpZGVy">muon collider <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bmF0dXJhbCUyMGxhbmd1YWdlJTIwcHJvY2Vzc2luZw==">natural language processing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bm9ubGluZWFy">nonlinear <span class="quarto-category-count">(3)</span></div><div class="category" data-category="b250b2xvZ2ljYWwlMjBhcmd1bWVudHM=">ontological arguments <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGFpbnRpbmc=">painting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGFwZXJz">papers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGFydGljbGUlMjBhY2NlbGVyYXRvcnM=">particle accelerators <span class="quarto-category-count">(13)</span></div><div class="category" data-category="cGVvcGxl">people <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVzb25hbmNl">resonance <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c2ltdWxhdGlvbg==">simulation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c25z">sns <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c3BhY2UlMjBjaGFyZ2U=">space charge <span class="quarto-category-count">(4)</span></div><div class="category" data-category="c3RhdGlzdGljYWwlMjBtZWNoYW5pY3M=">statistical mechanics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3R5bG9tZXRyeQ==">stylometry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VwcG9ydCUyMHZlY3RvciUyMG1hY2hpbmU=">support vector machine <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGVsZW9sb2dpY2FsJTIwYXJndW1lbnRz">teleological arguments <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dGhlaXNt">theism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dG9tb2dyYXBoeQ==">tomography <span class="quarto-category-count">(11)</span></div><div class="category" data-category="dW5jZXJ0YWludHk=">uncertainty <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dmlzdWFsaXphdGlvbg==">visualization <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Vmxhc292">Vlasov <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d3JpdGluZw==">writing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d3dpaQ==">wwii <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(41)</span></div><div class="category" data-category="Anselm">Anselm <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Darwin">Darwin <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Kalam">Kalam <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Leibniz">Leibniz <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Vlasov">Vlasov <span class="quarto-category-count">(1)</span></div><div class="category" data-category="accelerators">accelerators <span class="quarto-category-count">(1)</span></div><div class="category" data-category="arguments">arguments <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bayesian">bayesian <span class="quarto-category-count">(1)</span></div><div class="category" data-category="biological design">biological design <span class="quarto-category-count">(1)</span></div><div class="category" data-category="books">books <span class="quarto-category-count">(3)</span></div><div class="category" data-category="classical mechanics">classical mechanics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="conferences">conferences <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cosmological arguments">cosmological arguments <span class="quarto-category-count">(2)</span></div><div class="category" data-category="coupling">coupling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dynamic range">dynamic range <span class="quarto-category-count">(1)</span></div><div class="category" data-category="electrodynamics">electrodynamics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="entropy">entropy <span class="quarto-category-count">(6)</span></div><div class="category" data-category="fine-tuning">fine-tuning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="generative models">generative models <span class="quarto-category-count">(1)</span></div><div class="category" data-category="halo">halo <span class="quarto-category-count">(3)</span></div><div class="category" data-category="high-dimensional data">high-dimensional data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="infinity">infinity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="instability">instability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="laws">laws <span class="quarto-category-count">(1)</span></div><div class="category" data-category="mcmc">mcmc <span class="quarto-category-count">(1)</span></div><div class="category" data-category="misc">misc <span class="quarto-category-count">(1)</span></div><div class="category" data-category="multiverse">multiverse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="muon collider">muon collider <span class="quarto-category-count">(2)</span></div><div class="category" data-category="natural language processing">natural language processing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="nonlinear">nonlinear <span class="quarto-category-count">(3)</span></div><div class="category" data-category="ontological arguments">ontological arguments <span class="quarto-category-count">(1)</span></div><div class="category" data-category="painting">painting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="papers">papers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="particle accelerators">particle accelerators <span class="quarto-category-count">(13)</span></div><div class="category" data-category="people">people <span class="quarto-category-count">(1)</span></div><div class="category" data-category="resonance">resonance <span class="quarto-category-count">(2)</span></div><div class="category" data-category="simulation">simulation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="sns">sns <span class="quarto-category-count">(3)</span></div><div class="category" data-category="space charge">space charge <span class="quarto-category-count">(4)</span></div><div class="category" data-category="statistical mechanics">statistical mechanics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="stylometry">stylometry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="support vector machine">support vector machine <span class="quarto-category-count">(1)</span></div><div class="category" data-category="teleological arguments">teleological arguments <span class="quarto-category-count">(2)</span></div><div class="category" data-category="theism">theism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="tomography">tomography <span class="quarto-category-count">(11)</span></div><div class="category" data-category="uncertainty">uncertainty <span class="quarto-category-count">(1)</span></div><div class="category" data-category="visualization">visualization <span class="quarto-category-count">(2)</span></div><div class="category" data-category="writing">writing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="wwii">wwii <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
-
+<main class="content" id="quarto-document-content">
 
 
 
@@ -366,20 +201,20 @@ window.Quarto = {
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-    </select>
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+     </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
@@ -389,20 +224,16 @@ window.Quarto = {
 <table class="quarto-listing-table table table-hover">
 <thead>
 <tr>
-
 <th>
 <a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
-
 <th>
 <a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
 </th>
-
 </tr>
 </thead>
 <tbody class="list">
-
-<tr data-index="0" data-categories="dG9tb2dyYXBoeQ==" data-listing-date-sort="1745812800000" data-listing-file-modified-sort="1745807350285" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1092" data-listing-title-sort="Maximum entropy for sparse CT" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="0" data-categories="tomography" data-listing-date-sort="1745812800000" data-listing-file-modified-sort="1746584981586" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1092" data-listing-title-sort="Maximum entropy for sparse CT" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2025-04-28_ment-sparse-ct/index.html" class="title listing-title">Maximum entropy for sparse CT</a>
@@ -410,10 +241,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2025‑04‑28</span>
 </td>
-
 </tr>
-
-<tr data-index="1" data-categories="cGVvcGxl" data-listing-date-sort="1745726400000" data-listing-file-modified-sort="1745808993979" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="415" data-listing-title-sort="Gerald Minerbo" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="1" data-categories="people" data-listing-date-sort="1745726400000" data-listing-file-modified-sort="1746584981561" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="415" data-listing-title-sort="Gerald Minerbo" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2025-04-27_minerbo/index.html" class="title listing-title">Gerald Minerbo</a>
@@ -421,10 +250,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2025‑04‑27</span>
 </td>
-
 </tr>
-
-<tr data-index="2" data-categories="Ym9va3MlMkNsYXdz" data-listing-date-sort="1745467200000" data-listing-file-modified-sort="1745789151589" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="How the Laws of Physics Lie" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="2" data-categories="books,laws" data-listing-date-sort="1745467200000" data-listing-file-modified-sort="1746584981561" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="How the Laws of Physics Lie" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2025-04-24_how-the-laws-of-physics-lie/index.html" class="title listing-title">How the Laws of Physics Lie</a>
@@ -432,10 +259,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2025‑04‑24</span>
 </td>
-
 </tr>
-
-<tr data-index="3" data-categories="c3BhY2UlMjBjaGFyZ2UlMkNzaW11bGF0aW9u" data-listing-date-sort="1744516800000" data-listing-file-modified-sort="1744601493617" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="27" data-listing-word-count-sort="5246" data-listing-title-sort="Particle-based beam envelope tracker" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="3" data-categories="space charge,simulation" data-listing-date-sort="1744516800000" data-listing-file-modified-sort="1745199172410" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="27" data-listing-word-count-sort="5246" data-listing-title-sort="Particle-based beam envelope tracker" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2025-04-13_particle-based-beam-envelope-tracker/index.html" class="title listing-title">Particle-based beam envelope tracker</a>
@@ -443,10 +268,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2025‑04‑13</span>
 </td>
-
 </tr>
-
-<tr data-index="4" data-categories="Ym9va3MlMkN3d2lp" data-listing-date-sort="1743307200000" data-listing-file-modified-sort="1744425144411" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1193" data-listing-title-sort="Eichmann in Jerusalem" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="4" data-categories="books,wwii" data-listing-date-sort="1743307200000" data-listing-file-modified-sort="1743370389250" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1193" data-listing-title-sort="Eichmann in Jerusalem" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2025-03-30_eichmann-in-jerusalem/index.html" class="title listing-title">Eichmann in Jerusalem</a>
@@ -454,10 +277,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2025‑03‑30</span>
 </td>
-
 </tr>
-
-<tr data-index="5" data-categories="bm9ubGluZWFyJTJDZ2VuZXJhdGl2ZSUyMG1vZGVscw==" data-listing-date-sort="1742702400000" data-listing-file-modified-sort="1742706678799" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1045" data-listing-title-sort="Can flow-based models find equilibrium distributions?" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="5" data-categories="nonlinear,generative models" data-listing-date-sort="1742702400000" data-listing-file-modified-sort="1743365058012" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1045" data-listing-title-sort="Can flow-based models find equilibrium distributions?" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2025-03-23_flow-equilibrium/index.html" class="title listing-title">Can flow-based models find equilibrium distributions?</a>
@@ -465,10 +286,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2025‑03‑23</span>
 </td>
-
 </tr>
-
-<tr data-index="6" data-categories="dG9tb2dyYXBoeSUyQ2R5bmFtaWMlMjByYW5nZQ==" data-listing-date-sort="1742616000000" data-listing-file-modified-sort="1742673539196" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="527" data-listing-title-sort="High-dynamic-range tomography" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="6" data-categories="tomography,dynamic range" data-listing-date-sort="1742616000000" data-listing-file-modified-sort="1743365057998" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="527" data-listing-title-sort="High-dynamic-range tomography" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2025-03-22_hdr-ment/index.html" class="title listing-title">High-dynamic-range tomography</a>
@@ -476,10 +295,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2025‑03‑22</span>
 </td>
-
 </tr>
-
-<tr data-index="7" data-categories="dW5jZXJ0YWludHklMkN0b21vZ3JhcGh5" data-listing-date-sort="1742529600000" data-listing-file-modified-sort="1742540855979" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="303" data-listing-title-sort="Cross-validation as uncertainty quantification" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="7" data-categories="uncertainty,tomography" data-listing-date-sort="1742529600000" data-listing-file-modified-sort="1743365057978" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="303" data-listing-title-sort="Cross-validation as uncertainty quantification" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2025-03-21_cross-validation-as-uncertainty-quantification/index.html" class="title listing-title">Cross-validation as uncertainty quantification</a>
@@ -487,10 +304,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2025‑03‑21</span>
 </td>
-
 </tr>
-
-<tr data-index="8" data-categories="cGFwZXJzJTJDdG9tb2dyYXBoeQ==" data-listing-date-sort="1742443200000" data-listing-file-modified-sort="1742446184096" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1046" data-listing-title-sort="Applying 6D MENT to data" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="8" data-categories="papers,tomography" data-listing-date-sort="1742443200000" data-listing-file-modified-sort="1743365057977" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1046" data-listing-title-sort="Applying 6D MENT to data" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2025-03-20_applying-6d-ment-to-data/index.html" class="title listing-title">Applying 6D MENT to data</a>
@@ -498,10 +313,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2025‑03‑20</span>
 </td>
-
 </tr>
-
-<tr data-index="9" data-categories="cGFydGljbGUlMjBhY2NlbGVyYXRvcnMlMkNoYWxvJTJDbm9ubGluZWFy" data-listing-date-sort="1735275600000" data-listing-file-modified-sort="1739979619123" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="239" data-listing-title-sort="Phase space spirals" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="9" data-categories="particle accelerators,halo,nonlinear" data-listing-date-sort="1735275600000" data-listing-file-modified-sort="1741832707478" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="239" data-listing-title-sort="Phase space spirals" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-12-27_phase-space-spirals/index.html" class="title listing-title">Phase space spirals</a>
@@ -509,10 +322,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑12‑27</span>
 </td>
-
 </tr>
-
-<tr data-index="10" data-categories="cGFydGljbGUlMjBhY2NlbGVyYXRvcnMlMkNoYWxv" data-listing-date-sort="1735189200000" data-listing-file-modified-sort="1735273435104" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1406" data-listing-title-sort="Initial halo-level particle-in-cell simulation benchmarks" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="10" data-categories="particle accelerators,halo" data-listing-date-sort="1735189200000" data-listing-file-modified-sort="1736107861603" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1406" data-listing-title-sort="Initial halo-level particle-in-cell simulation benchmarks" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-12-26_high-dynamic-range-benchmark/index.html" class="title listing-title">Initial halo-level particle-in-cell simulation benchmarks</a>
@@ -520,10 +331,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑12‑26</span>
 </td>
-
 </tr>
-
-<tr data-index="11" data-categories="bWlzYw==" data-listing-date-sort="1731474000000" data-listing-file-modified-sort="1731805901569" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="12" data-listing-title-sort="Break apart images in Keynote" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="11" data-categories="misc" data-listing-date-sort="1731474000000" data-listing-file-modified-sort="1731817671293" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="12" data-listing-title-sort="Break apart images in Keynote" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-11-13_keynote-break-apart/index.html" class="title listing-title">Break apart images in Keynote</a>
@@ -531,10 +340,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑11‑13</span>
 </td>
-
 </tr>
-
-<tr data-index="12" data-categories="Ym9va3MlMkN3cml0aW5n" data-listing-date-sort="1731214800000" data-listing-file-modified-sort="1744425144410" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1556" data-listing-title-sort="The Sense of Style" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="12" data-categories="books,writing" data-listing-date-sort="1731214800000" data-listing-file-modified-sort="1743365318537" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1556" data-listing-title-sort="The Sense of Style" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-11-10_the-sense-of-style/index.html" class="title listing-title">The Sense of Style</a>
@@ -542,10 +349,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑11‑10</span>
 </td>
-
 </tr>
-
-<tr data-index="13" data-categories="dG9tb2dyYXBoeSUyQ3Nucw==" data-listing-date-sort="1730782800000" data-listing-file-modified-sort="1735250054547" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1147" data-listing-title-sort="Four-dimensional phase space tomography from one-dimensional measurements of a hadron beam" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="13" data-categories="tomography,sns" data-listing-date-sort="1730782800000" data-listing-file-modified-sort="1736107861577" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1147" data-listing-title-sort="Four-dimensional phase space tomography from one-dimensional measurements of a hadron beam" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-11-05_four-dimensional-tomography-from-one-dimensional-projections/index.html" class="title listing-title">Four-dimensional phase space tomography from one-dimensional measurements of a hadron beam</a>
@@ -553,10 +358,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑11‑05</span>
 </td>
-
 </tr>
-
-<tr data-index="14" data-categories="ZW50cm9weSUyQ3RvbW9ncmFwaHklMkNtY21j" data-listing-date-sort="1730260800000" data-listing-file-modified-sort="1731805901529" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="789" data-listing-title-sort="N-dimensional MENT via particle sampling" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="14" data-categories="entropy,tomography,mcmc" data-listing-date-sort="1730260800000" data-listing-file-modified-sort="1731182592457" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="789" data-listing-title-sort="N-dimensional MENT via particle sampling" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-10-30_n-dimensional-ment-particle-sampling/index.html" class="title listing-title">N-dimensional MENT via particle sampling</a>
@@ -564,10 +367,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑10‑30</span>
 </td>
-
 </tr>
-
-<tr data-index="15" data-categories="cGFydGljbGUlMjBhY2NlbGVyYXRvcnMlMkNzbnMlMkNoYWxv" data-listing-date-sort="1728792000000" data-listing-file-modified-sort="1728924748147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2433" data-listing-title-sort="The impact of phase space correlations on the beam dynamics in linear accelerators" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="15" data-categories="particle accelerators,sns,halo" data-listing-date-sort="1728792000000" data-listing-file-modified-sort="1728839171446" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2433" data-listing-title-sort="The impact of phase space correlations on the beam dynamics in linear accelerators" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-10-13_impact/index.html" class="title listing-title">The impact of phase space correlations on the beam dynamics in linear accelerators</a>
@@ -575,10 +376,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑10‑13</span>
 </td>
-
 </tr>
-
-<tr data-index="16" data-categories="ZW50cm9weSUyQ2JheWVzaWFu" data-listing-date-sort="1727582400000" data-listing-file-modified-sort="1728924748121" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="638" data-listing-title-sort="Maximum Entropy and Bayesian Inference" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="16" data-categories="entropy,bayesian" data-listing-date-sort="1727582400000" data-listing-file-modified-sort="1728157190073" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="638" data-listing-title-sort="Maximum Entropy and Bayesian Inference" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-09-29_ment-and-bayes/index.html" class="title listing-title">Maximum Entropy and Bayesian Inference</a>
@@ -586,10 +385,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑09‑29</span>
 </td>
-
 </tr>
-
-<tr data-index="17" data-categories="YWNjZWxlcmF0b3JzJTJDbXVvbiUyMGNvbGxpZGVy" data-listing-date-sort="1723435200000" data-listing-file-modified-sort="1724100613619" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="43" data-listing-title-sort="Inaugural US Muon Collider Collaboration meeting" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="17" data-categories="accelerators,muon collider" data-listing-date-sort="1723435200000" data-listing-file-modified-sort="1723514718610" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="43" data-listing-title-sort="Inaugural US Muon Collider Collaboration meeting" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-08-12_usmcc/index.html" class="title listing-title">Inaugural US Muon Collider Collaboration meeting</a>
@@ -597,10 +394,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑08‑12</span>
 </td>
-
 </tr>
-
-<tr data-index="18" data-categories="ZW50cm9weSUyQ3RvbW9ncmFwaHklMkNzbnM=" data-listing-date-sort="1717992000000" data-listing-file-modified-sort="1719770102662" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1869" data-listing-title-sort="Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="18" data-categories="entropy,tomography,sns" data-listing-date-sort="1717992000000" data-listing-file-modified-sort="1720404477300" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1869" data-listing-title-sort="Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-06-10_rec4d-sns-ring/index.html" class="title listing-title">Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring</a>
@@ -608,10 +403,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑06‑10</span>
 </td>
-
 </tr>
-
-<tr data-index="19" data-categories="ZW50cm9weSUyQ3RvbW9ncmFwaHk=" data-listing-date-sort="1717905600000" data-listing-file-modified-sort="1719770102662" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3011" data-listing-title-sort="Maximum-entropy phase space tomography using normalizing flows (part 2)" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="19" data-categories="entropy,tomography" data-listing-date-sort="1717905600000" data-listing-file-modified-sort="1720404477273" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3011" data-listing-title-sort="Maximum-entropy phase space tomography using normalizing flows (part 2)" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-06-09_mentflow-part2/index.html" class="title listing-title">Maximum-entropy phase space tomography using normalizing flows (part 2)</a>
@@ -619,10 +412,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑06‑09</span>
 </td>
-
 </tr>
-
-<tr data-index="20" data-categories="ZW50cm9weSUyQ3RvbW9ncmFwaHk=" data-listing-date-sort="1717646400000" data-listing-file-modified-sort="1719770102629" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2658" data-listing-title-sort="Maximum-entropy phase space tomography using normalizing flows (part 1)" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="20" data-categories="entropy,tomography" data-listing-date-sort="1717646400000" data-listing-file-modified-sort="1730946173442" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2658" data-listing-title-sort="Maximum-entropy phase space tomography using normalizing flows (part 1)" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-06-06_mentflow-part1/index.html" class="title listing-title">Maximum-entropy phase space tomography using normalizing flows (part 1)</a>
@@ -630,10 +421,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑06‑06</span>
 </td>
-
 </tr>
-
-<tr data-index="21" data-categories="ZW50cm9weSUyQ3N0YXRpc3RpY2FsJTIwbWVjaGFuaWNzJTJDdG9tb2dyYXBoeQ==" data-listing-date-sort="1715832000000" data-listing-file-modified-sort="1719770102626" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="669" data-listing-title-sort="Why maximize entropy?" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="21" data-categories="entropy,statistical mechanics,tomography" data-listing-date-sort="1715832000000" data-listing-file-modified-sort="1720404477035" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="669" data-listing-title-sort="Why maximize entropy?" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-05-16_why-maximize-entropy/index.html" class="title listing-title">Why maximize entropy?</a>
@@ -641,10 +430,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑05‑16</span>
 </td>
-
 </tr>
-
-<tr data-index="22" data-categories="cGFydGljbGUlMjBhY2NlbGVyYXRvcnMlMkNjb25mZXJlbmNlcyUyQ211b24lMjBjb2xsaWRlcg==" data-listing-date-sort="1711944000000" data-listing-file-modified-sort="1719770102626" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="818" data-listing-title-sort="Princeton Muon Collider Workshop" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="22" data-categories="particle accelerators,conferences,muon collider" data-listing-date-sort="1711944000000" data-listing-file-modified-sort="1717551783096" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="818" data-listing-title-sort="Princeton Muon Collider Workshop" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-04-01_muon/index.html" class="title listing-title">Princeton Muon Collider Workshop</a>
@@ -652,10 +439,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑04‑01</span>
 </td>
-
 </tr>
-
-<tr data-index="23" data-categories="cGFydGljbGUlMjBhY2NlbGVyYXRvcnMlMkNjb25mZXJlbmNlcw==" data-listing-date-sort="1711166400000" data-listing-file-modified-sort="1719770102618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="911" data-listing-title-sort="High Brightness Workshop 2023" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="23" data-categories="particle accelerators,conferences" data-listing-date-sort="1711166400000" data-listing-file-modified-sort="1717551543138" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="911" data-listing-title-sort="High Brightness Workshop 2023" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2024-03-23_hb/index.html" class="title listing-title">High Brightness Workshop 2023</a>
@@ -663,10 +448,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2024‑03‑23</span>
 </td>
-
 </tr>
-
-<tr data-index="24" data-categories="dGVsZW9sb2dpY2FsJTIwYXJndW1lbnRzJTJDZmluZS10dW5pbmclMkNtdWx0aXZlcnNl" data-listing-date-sort="1688961600000" data-listing-file-modified-sort="1719770102618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3428" data-listing-title-sort="Fine-tuning arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="24" data-categories="teleological arguments,fine-tuning,multiverse" data-listing-date-sort="1688961600000" data-listing-file-modified-sort="1720404477034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3428" data-listing-title-sort="Fine-tuning arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2023-07-10_fine-tuning/index.html" class="title listing-title">Fine-tuning arguments</a>
@@ -674,10 +457,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2023‑07‑10</span>
 </td>
-
 </tr>
-
-<tr data-index="25" data-categories="dGVsZW9sb2dpY2FsJTIwYXJndW1lbnRzJTJDYmlvbG9naWNhbCUyMGRlc2lnbiUyQ0Rhcndpbg==" data-listing-date-sort="1688875200000" data-listing-file-modified-sort="1719770102617" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="683" data-listing-title-sort="Biological design arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="25" data-categories="teleological arguments,biological design,Darwin" data-listing-date-sort="1688875200000" data-listing-file-modified-sort="1720404477032" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="683" data-listing-title-sort="Biological design arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2023-07-09_biological-design-arguments/index.html" class="title listing-title">Biological design arguments</a>
@@ -685,10 +466,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2023‑07‑09</span>
 </td>
-
 </tr>
-
-<tr data-index="26" data-categories="cGFydGljbGUlMjBhY2NlbGVyYXRvcnMlMkNoaWdoLWRpbWVuc2lvbmFsJTIwZGF0YSUyQ3Zpc3VhbGl6YXRpb24=" data-listing-date-sort="1685246400000" data-listing-file-modified-sort="1719770102617" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2183" data-listing-title-sort="High-dimensional phase space measurements" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="26" data-categories="particle accelerators,high-dimensional data,visualization" data-listing-date-sort="1685246400000" data-listing-file-modified-sort="1714340817372" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2183" data-listing-title-sort="High-dimensional phase space measurements" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2023-05-28_btf/index.html" class="title listing-title">High-dimensional phase space measurements</a>
@@ -696,10 +475,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2023‑05‑28</span>
 </td>
-
 </tr>
-
-<tr data-index="27" data-categories="Y29zbW9sb2dpY2FsJTIwYXJndW1lbnRzJTJDTGVpYm5peiUyQ2luZmluaXR5" data-listing-date-sort="1647921600000" data-listing-file-modified-sort="1719770102613" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3471" data-listing-title-sort="Leibnizian cosmological arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="27" data-categories="cosmological arguments,Leibniz,infinity" data-listing-date-sort="1647921600000" data-listing-file-modified-sort="1720404477029" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3471" data-listing-title-sort="Leibnizian cosmological arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2022-03-22_leibnizian-cosmological-arguments/index.html" class="title listing-title">Leibnizian cosmological arguments</a>
@@ -707,10 +484,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2022‑03‑22</span>
 </td>
-
 </tr>
-
-<tr data-index="28" data-categories="dmlzdWFsaXphdGlvbg==" data-listing-date-sort="1644555600000" data-listing-file-modified-sort="1719770102612" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1195" data-listing-title-sort="Some figures to illustrate beam injection and accumulation" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="28" data-categories="visualization" data-listing-date-sort="1644555600000" data-listing-file-modified-sort="1720404476999" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1195" data-listing-title-sort="Some figures to illustrate beam injection and accumulation" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2022-02-11_injection-figures/index.html" class="title listing-title">Some figures to illustrate beam injection and accumulation</a>
@@ -718,10 +493,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2022‑02‑11</span>
 </td>
-
 </tr>
-
-<tr data-index="29" data-categories="dG9tb2dyYXBoeSUyQ3BhcnRpY2xlJTIwYWNjZWxlcmF0b3Jz" data-listing-date-sort="1634356800000" data-listing-file-modified-sort="1719770102598" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2619" data-listing-title-sort="Tomographic reconstruction in four dimensions" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="29" data-categories="tomography,particle accelerators" data-listing-date-sort="1634356800000" data-listing-file-modified-sort="1720404476927" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2619" data-listing-title-sort="Tomographic reconstruction in four dimensions" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-10-16_tomographic-reconstruction-in-four-dimensions/index.html" class="title listing-title">Tomographic reconstruction in four dimensions</a>
@@ -729,10 +502,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑10‑16</span>
 </td>
-
 </tr>
-
-<tr data-index="30" data-categories="Y29zbW9sb2dpY2FsJTIwYXJndW1lbnRzJTJDS2FsYW0lMkNpbmZpbml0eQ==" data-listing-date-sort="1631678400000" data-listing-file-modified-sort="1719770102598" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3490" data-listing-title-sort="Kalam cosmological arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="30" data-categories="cosmological arguments,Kalam,infinity" data-listing-date-sort="1631678400000" data-listing-file-modified-sort="1720404476838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3490" data-listing-title-sort="Kalam cosmological arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-09-15_kalam-cosmological-arguments/index.html" class="title listing-title">Kalam cosmological arguments</a>
@@ -740,10 +511,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑09‑15</span>
 </td>
-
 </tr>
-
-<tr data-index="31" data-categories="QW5zZWxtJTJDb250b2xvZ2ljYWwlMjBhcmd1bWVudHM=" data-listing-date-sort="1625457600000" data-listing-file-modified-sort="1719770102597" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1286" data-listing-title-sort="Ontological arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="31" data-categories="Anselm,ontological arguments" data-listing-date-sort="1625457600000" data-listing-file-modified-sort="1720404476830" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1286" data-listing-title-sort="Ontological arguments" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-07-05_ontological-arguments/index.html" class="title listing-title">Ontological arguments</a>
@@ -751,10 +520,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑07‑05</span>
 </td>
-
 </tr>
-
-<tr data-index="32" data-categories="c3BhY2UlMjBjaGFyZ2UlMkNyZXNvbmFuY2UlMkNpbnN0YWJpbGl0eQ==" data-listing-date-sort="1625112000000" data-listing-file-modified-sort="1719770102595" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16" data-listing-title-sort="Space charge resonances and instabilities" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="32" data-categories="space charge,resonance,instability" data-listing-date-sort="1625112000000" data-listing-file-modified-sort="1720404476824" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16" data-listing-title-sort="Space charge resonances and instabilities" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-07-01_space-charge-instabilities/index.html" class="title listing-title">Space charge resonances and instabilities</a>
@@ -762,10 +529,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑07‑01</span>
 </td>
-
 </tr>
-
-<tr data-index="33" data-categories="YXJndW1lbnRzJTJDdGhlaXNt" data-listing-date-sort="1623470400000" data-listing-file-modified-sort="1719770102594" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2985" data-listing-title-sort="Arguing about gods" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="33" data-categories="arguments,theism" data-listing-date-sort="1623470400000" data-listing-file-modified-sort="1720404476819" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2985" data-listing-title-sort="Arguing about gods" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-06-12_arguing-about-gods/index.html" class="title listing-title">Arguing about gods</a>
@@ -773,10 +538,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑06‑12</span>
 </td>
-
 </tr>
-
-<tr data-index="34" data-categories="cGFydGljbGUlMjBhY2NlbGVyYXRvcnMlMkNwYWludGluZw==" data-listing-date-sort="1622088000000" data-listing-file-modified-sort="1719770102579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2546" data-listing-title-sort="Painting a particle beam" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="34" data-categories="particle accelerators,painting" data-listing-date-sort="1622088000000" data-listing-file-modified-sort="1720404476700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2546" data-listing-title-sort="Painting a particle beam" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-05-27_painting-a-particle-beam/index.html" class="title listing-title">Painting a particle beam</a>
@@ -784,10 +547,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑05‑27</span>
 </td>
-
 </tr>
-
-<tr data-index="35" data-categories="cGFydGljbGUlMjBhY2NlbGVyYXRvcnMlMkNzcGFjZSUyMGNoYXJnZSUyQ1ZsYXNvdg==" data-listing-date-sort="1620878400000" data-listing-file-modified-sort="1719770102566" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2904" data-listing-title-sort="Computing matched envelopes" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="35" data-categories="particle accelerators,space charge,Vlasov" data-listing-date-sort="1620878400000" data-listing-file-modified-sort="1720404476618" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2904" data-listing-title-sort="Computing matched envelopes" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-05-13_matched-envelope/index.html" class="title listing-title">Computing matched envelopes</a>
@@ -795,10 +556,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑05‑13</span>
 </td>
-
 </tr>
-
-<tr data-index="36" data-categories="c3R5bG9tZXRyeSUyQ25hdHVyYWwlMjBsYW5ndWFnZSUyMHByb2Nlc3NpbmclMkNzdXBwb3J0JTIwdmVjdG9yJTIwbWFjaGluZQ==" data-listing-date-sort="1619668800000" data-listing-file-modified-sort="1719770102548" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3947" data-listing-title-sort="Authorship identification" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="36" data-categories="stylometry,natural language processing,support vector machine" data-listing-date-sort="1619668800000" data-listing-file-modified-sort="1720404476513" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3947" data-listing-title-sort="Authorship identification" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-04-29_authorship-identification/index.html" class="title listing-title">Authorship identification</a>
@@ -806,10 +565,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑04‑29</span>
 </td>
-
 </tr>
-
-<tr data-index="37" data-categories="Y2xhc3NpY2FsJTIwbWVjaGFuaWNzJTJDbm9ubGluZWFyJTJDcmVzb25hbmNlJTJDcGFydGljbGUlMjBhY2NlbGVyYXRvcnM=" data-listing-date-sort="1616904000000" data-listing-file-modified-sort="1719770102522" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2472" data-listing-title-sort="Nonlinear resonances" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="37" data-categories="classical mechanics,nonlinear,resonance,particle accelerators" data-listing-date-sort="1616904000000" data-listing-file-modified-sort="1720404476336" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2472" data-listing-title-sort="Nonlinear resonances" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-03-28_nonlinear-resonances/index.html" class="title listing-title">Nonlinear resonances</a>
@@ -817,10 +574,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑03‑28</span>
 </td>
-
 </tr>
-
-<tr data-index="38" data-categories="ZWxlY3Ryb2R5bmFtaWNzJTJDc3BhY2UlMjBjaGFyZ2UlMkNwYXJ0aWNsZSUyMGFjY2VsZXJhdG9ycw==" data-listing-date-sort="1613970000000" data-listing-file-modified-sort="1742607992041" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2494" data-listing-title-sort="Particle-in-cell simulation" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="38" data-categories="electrodynamics,space charge,particle accelerators" data-listing-date-sort="1613970000000" data-listing-file-modified-sort="1743819213430" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2494" data-listing-title-sort="Particle-in-cell simulation" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-02-22_pic/index.html" class="title listing-title">Particle-in-cell simulation</a>
@@ -828,10 +583,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑02‑22</span>
 </td>
-
 </tr>
-
-<tr data-index="39" data-categories="Y2xhc3NpY2FsJTIwbWVjaGFuaWNzJTJDcGFydGljbGUlMjBhY2NlbGVyYXRvcnMlMkNjb3VwbGluZw==" data-listing-date-sort="1611550800000" data-listing-file-modified-sort="1719770102484" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1615" data-listing-title-sort="Coupled parametric oscillators" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="39" data-categories="classical mechanics,particle accelerators,coupling" data-listing-date-sort="1611550800000" data-listing-file-modified-sort="1720404476205" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1615" data-listing-title-sort="Coupled parametric oscillators" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-01-25_coupled-parametric-oscillators/index.html" class="title listing-title">Coupled parametric oscillators</a>
@@ -839,10 +592,8 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑01‑25</span>
 </td>
-
 </tr>
-
-<tr data-index="40" data-categories="Y2xhc3NpY2FsJTIwbWVjaGFuaWNzJTJDcGFydGljbGUlMjBhY2NlbGVyYXRvcnM=" data-listing-date-sort="1611205200000" data-listing-file-modified-sort="1719770102472" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1872" data-listing-title-sort="Parametric oscillators" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="40" data-categories="classical mechanics,particle accelerators" data-listing-date-sort="1611205200000" data-listing-file-modified-sort="1720404476127" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1872" data-listing-title-sort="Parametric oscillators" data-listing-filename-sort="index.ipynb" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="./posts/2021-01-21_parametric-oscillators/index.html" class="title listing-title">Parametric oscillators</a>
@@ -850,263 +601,391 @@ window.Quarto = {
 <td>
 <span class="listing-date">2021‑01‑21</span>
 </td>
-
 </tr>
-
 </tbody>
 </table>
-<div class="listing-no-matching d-none">No matching items</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
-    setColorSchemeToggle(hasAlternateSentinel())
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
         }
       }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
       return false;
     }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
       }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
     }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
     }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
         }
       }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
     }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
     }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
       } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
         }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
       }
     }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
           }
         } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
+          // See if we can fetch this
+          fetch(url.split('#')[0])
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
+            const note = htmlDoc.getElementById(id);
             if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
+              const html = processXRef(id, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1114,161 +993,185 @@ window.Quarto = {
             instance.show();
           });
         }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
       } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
             }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
         });
       }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
     }
-  });
-  </script>
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
 </div> <!-- /content -->
 
 
