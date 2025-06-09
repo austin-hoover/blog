@@ -1,0 +1,37 @@
+---
+title: "Exact solutions for 2N-dimensional phase space reconstruction from N-dimensional projections"
+author: Austin Hoover
+date: 2025-06-08
+bibliography: bibliography.bib
+csl: aps.csl
+categories:
+  - tomography
+---
+
+*This is a draft of a note that I might put on arXiv. I don't know if it deserves to be published in a journal because it's kind of obvious from previous work, but it still might be worth sharing.*
+
+Let $f_t(x)$ be a probability density function defined over positions $x = (x_1, \dots , x_n)$ and velocities $v = (v_1, \dots , v_n)$ in an $n$-dimensional space at time $t$. Suppose we know the marginal distributions $\{ f_{t_1}(x) , f_{t_2}(x) , \dots, f_{t_k}(x) \}$ at times $t_1 < t_2, \dots, < t_k$. Can we use this information to reconstruct the initial distribution $f_{t_0}(x, v)$?
+
+If the distribution evolves in an uncoupled harmonic oscillator, the coordinates simply rotate in each $x_i$-$v_i$ plane. We will consider a continuous set of projections $f_{\theta}(x)$ indexed by the rotation angles $\theta = (\theta_1, \dots, \theta_n)$, where $\theta_i \in [0, \pi]$, and write the initial phase space distribution as $f(x, v)$.
+
+When $n = 1$, we can define the transformed coordinates as
+
+\begin{align}
+    x'(\theta) &= x \cos\theta + v \sin\theta, \\
+    v'(\theta) &= v \cos\theta - x \sin\theta.
+\end{align}
+
+The Radon Transform (RT) is:
+
+\begin{equation}
+    \mathcal{R} f = \int_{-\infty}^{\infty}{f(x'(\theta), v'(\theta)) dv'}.
+\end{equation}
+
+Since the RT is invertible, there is a one-to-one map between the projections $f_\theta(x)$ and the distribution $f(x, v)$.
+
+When $n = 2$, we can write the projections as $f_{\theta}(x) = f_{\theta_1, \theta_2}(x_1, x_2)$. Hock and Wolski @Hock_2013 derived an exact solution for this case. The solution is to first apply the Inverse Radon Transform (IRT) to the slices $f_{\theta_1, \theta_2}(x_1 | x_2)$ for fixed $\theta_2$, giving $f_{\theta_2}(x_1, x_2, v_1)$. Then, for fixed $x_1$ and $x_2$, apply the IRT to reconstruct the $x_2$-$v_2$ distribution, giving $f(x_1, x_2, v_1, v_2)$. I'll call this the Hock-Wolski (HW) method.
+
+Jaster-Merz et al. @Jaster_2024 showed that if one measures the three-dimensional projections $f_{\theta_1, \theta_2}(x_1, x_2, x_3)$, one can reconstruct the five-dimensional phase space distribution $f(x_1, x_2, x_3, v_1, v_2)$ by running the HW method for each fixed $x_3$, i.e., on each two-dimensional slice $f_{\theta_1, \theta_2}(x_1, x_2 | x_3)$ of the three-dimensional projections. This idea can be extended to reconstruct the six-dimensional phase space distribution $f(x_1, x_2, x_3, v_1, v_2, v_3)$ by considering three rotation angles $\{\theta_1, \theta_2, \theta_3\}$.^[In particle accelerators, one can vary the phase of an accelerating cavity to approximate rotations in the longitudinal phase space.] One now has a set of five-dimensional distributions $f_{\theta_3}(x_1, x_2, x_3, v_1, v_2)$ indexed by $\theta_3$. Applying the IRT to reconstruct the $x_3$-$v_3$ distribution (while fixing the other coordinates) gives the six-dimensional phase space distribution $f(x_1, x_2, x_3, v_1, v_2, v_3)$.
+
+This idea extends to $n$ dimensions, where projections are indexed by $n$ rotation angles.
+
