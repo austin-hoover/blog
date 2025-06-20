@@ -73,7 +73,7 @@ title: Links
     * [ArXiv (computational physics)](https://arxiv.org/list/physics.comp-ph/recent)
     * [ArXiv (data analysis, statistics, and probability)](https://arxiv.org/list/physics.data-an/recent)
     * [ArXiv (history and philosophy of physics)](https://arxiv.org/list/physics.hist-ph/recent)
-    * [PhilSci](http://philsci-archive.pitt.edu)
+    * [PhilSci](https://philsci-archive.pitt.edu/cgi/latest_days2?n=30)
     * [philpeople.org](https://philpeople.org)
 * [Bibliography on the problem of evil](https://docs.google.com/document/d/1dprquqrzQxJsmOArxEoBDaMx15T9T--P8dagUqX6kQI/edit#heading=h.x1uym8fk8fq3)
 * [lesswrong](https://www.lesswrong.com)
