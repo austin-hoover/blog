@@ -32,6 +32,7 @@ title: Links
     * [PRE](https://journals.aps.org/pre/)
     * [PRL](https://journals.aps.org/prl/)
     * [Science](https://www.science.org/journal/science)
+    * [Web of Science Master Journal List](https://mjl.clarivate.com/home)
 * People
     * [Alexander Pruss](http://alexanderpruss.com)
     * [Adrian Oeftiger](http://www.oeftiger.net)
