@@ -31,7 +31,7 @@ title: Links
     * [PRAB](https://journals.aps.org/prab/)
     * [PRE](https://journals.aps.org/pre/)
     * [PRL](https://journals.aps.org/prl/)
-    * [Science](https://www.science.org)
+    * [Science](https://www.science.org/journal/science)
 * People
     * [Alexander Pruss](http://alexanderpruss.com)
     * [Adrian Oeftiger](http://www.oeftiger.net)
