@@ -25,6 +25,13 @@ title: Links
     * [The Splintered Mind](http://schwitzsplinters.blogspot.com)
     * [Statistical Modeling](https://statmodeling.stat.columbia.edu)
     * [Danny Yee's Book Reviews](https://dannyreviews.com)
+* Journals
+    * [Chaos](https://pubs.aip.org/aip/cha)
+    * [Nature](https://www.nature.com)
+    * [PRAB](https://journals.aps.org/prab/)
+    * [PRE](https://journals.aps.org/pre/)
+    * [PRL](https://journals.aps.org/prl/)
+    * [Science](https://www.science.org)
 * People
     * [Alexander Pruss](http://alexanderpruss.com)
     * [Adrian Oeftiger](http://www.oeftiger.net)
@@ -57,14 +64,6 @@ title: Links
     * [ORNL](https://www.ornl.gov)
     * [SNS](https://neutrons.ornl.gov)
     * [UTK physics](https://physics.utk.edu)
-* Physics journals
-    * [Chaos](https://pubs.aip.org/aip/cha)
-    * [Entropy](https://www.mdpi.com/journal/entropy)
-    * [Nature](https://www.nature.com)
-    * [PRAB](https://journals.aps.org/prab/)
-    * [PRE](https://journals.aps.org/pre/)
-    * [PRL](https://journals.aps.org/prl/)
-    * [Science](https://www.science.org)
 * Preprint servers
     * [ArXiv](https://arxiv.org)
     * [ArXiv (accelerator physics)](https://arxiv.org/list/physics.acc-ph/recent)
