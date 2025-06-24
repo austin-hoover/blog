@@ -27,7 +27,7 @@ title: Links
     * [Danny Yee's Book Reviews](https://dannyreviews.com)
 * Journals
     * [Chaos](https://pubs.aip.org/aip/cha)
-    * [Nature](https://www.nature.com)
+    * [Nature Physics](https://www.nature.com/nphys/)
     * [PRAB](https://journals.aps.org/prab/)
     * [PRE](https://journals.aps.org/pre/)
     * [PRL](https://journals.aps.org/prl/)
