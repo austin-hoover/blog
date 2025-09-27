@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2023-07-09">
+<meta name="dcterms.date" content="2025-09-27">
 
-<title>Biological design arguments – Austin’s Blog</title>
+<title>Single-turn tune estimation in coupled systems – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,7 +148,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -357,14 +357,24 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tune-estimation-in-uncoupled-systems" id="toc-tune-estimation-in-uncoupled-systems" class="nav-link active" data-scroll-target="#tune-estimation-in-uncoupled-systems">Tune-estimation in uncoupled systems</a></li>
+  <li><a href="#extension-to-coupled-systems" id="toc-extension-to-coupled-systems" class="nav-link" data-scroll-target="#extension-to-coupled-systems">Extension to coupled systems</a></li>
+  <li><a href="#designing-the-normalization-matrix" id="toc-designing-the-normalization-matrix" class="nav-link" data-scroll-target="#designing-the-normalization-matrix">Designing the normalization matrix</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Biological design arguments</h1>
+<h1 class="title">Single-turn tune estimation in coupled systems</h1>
   </div>
 
 
@@ -381,7 +391,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 9, 2023</p>
+      <p class="date">September 27, 2025</p>
     </div>
   </div>
   
@@ -393,35 +403,113 @@ window.Quarto = {
 </header>
 
 
-<p>Paley famously expressed a version of the biological design argument:</p>
-<blockquote class="blockquote">
-<p>“In crossing a heath, suppose I pitched my foot against a stone, and were asked how the stone came to be there; I might possibly answer, that, for anything I knew to the contrary, it had lain there forever: nor would it perhaps be very easy to show the absurdity of this answer. But suppose I had found a watch upon the ground, and it should be inquired how the watch happened to be in that place; I should hardly think of the answer I had before given, that for anything I knew, the watch might have always been there. … There must have existed, at some time, and at some place or other, an artificer or artificers, who formed [the watch] for the purpose which we find it actually to answer; who comprehended its construction, and designed its use. … Every indication of contrivance, every manifestation of design, which existed in the watch, exists in the works of nature; with the difference, on the side of nature, of being greater or more, and that in a degree which exceeds all computation.” <span class="citation" data-cites="Paley_1829">&nbsp;[<a href="#ref-Paley_1829" role="doc-biblioref">1</a>]</span></p>
-</blockquote>
-<p>Oppy <span class="citation" data-cites="Oppy_2006_arguing">&nbsp;[<a href="#ref-Oppy_2006_arguing" role="doc-biblioref">2</a>]</span> has a compact critique of Paley’s argument: Paley’s inference to design stems from three observations: (i) the watch has a principal function, (ii) various parts of the watch have functions, and (iii) the materials from which the parts are constructed are well suited to the functions that those parts have. But it appears that Paley’s inference to design relies instead on the background knowledge that there are no watch factories in nature, so his inference is unlikely to work for biological systems. The argument never gets off the ground.</p>
-<p>An extension of the biological design argument focuses on “irreducibly complex” systems that would cease functioning if any of their parts were removed <span class="citation" data-cites="Behe_2003">&nbsp;[<a href="#ref-Behe_2003" role="doc-biblioref">3</a>]</span>. Behe claims that it would be impossible for any irreducibly complex system to arise from gradual changes since the predecessor of any irreducibly complex system would have to be irreducibly complex. It seems that the proponent of this argument would want to identify the first irreducibly complex system with the first biological system. A broader definition would include non-biological systems whose complexity is explained by theories of physics and chemistry. A narrower definition would exclude some non-initial biological life forms, but evolutionary theory provides a plausible link between these relatively simple life forms and more complex life forms, such as humans. But I see no reason why there could be no natural link between chemical and biological systems.</p>
-<p>Another problem: if the designer creates a self-organizing world, why stop the self-organization at the origin of life? It would be like designing a computer program that stops halfway through and demands the user hit the space bar before continuing.</p>
-<p>In conclusion, biological design arguments suffer from various problems; most obviously, they are undercut by modern scientific theories. There are major gaps to fill in these theories, but it is plausible that the laws of physics, chemistry, and biology are all that are needed to connect the early universe to the present universe. This type of explanation is not complete, however. Note that we posit physical laws which link prior states of the world to the present state. All prior states are explained by recursion: the state at time <span class="math inline">\(t\)</span> is explained by the laws and the state at time <span class="math inline">\(t’\)</span>, where <span class="math inline">\(t’ &lt; t\)</span>; however, we will eventually arrive at either an initial state (<span class="math inline">\(t = 0\)</span>) or an infinite regress of prior states (<span class="math inline">\(t \rightarrow -\infty\)</span>). It is difficult to know what else to do if there is an initial state since our explanatory mechanism (laws + prior states) no longer works. It might be troubling if the initial state had no explanation, for then all subsequent states would lack an ultimate explanation. It is unclear whether an infinite explanatory regress solves this problem.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Furthermore, one might ask for an explanation of the physical laws. Deeper considerations such as these are central to cosmic fine-tuning arguments and nomological arguments.</p>
+<p>In circular accelerators, single-particle tunes can be estimated from turn-by-turn data using the Fast Fourier Transform (FFT). If we only have a few turns, we can estimate the tunes using the Average Phase Advance (APA) method <span class="citation" data-cites="bartolini_1995_tune">&nbsp;[<a href="#ref-bartolini_1995_tune" role="doc-biblioref">1</a>]</span>. Using APA, we can estimate the tunes from the phase space coordiantes on two neighboring turns.</p>
+<section id="tune-estimation-in-uncoupled-systems" class="level2">
+<h2 class="anchored" data-anchor-id="tune-estimation-in-uncoupled-systems">Tune-estimation in uncoupled systems</h2>
+<p>In a 1D system (2D phase space), we normalize the <span class="math inline">\(x-x'\)</span> phase space coordinates such that the turn-by-turn normalized coordiantes <span class="math inline">\(u_x-u_x'\)</span> jump around a circle of area <span class="math inline">\(A_x = 2 \pi J_x = \pi (u_x^2 + u_x'^2)\)</span>. Here <span class="math inline">\(J_x\)</span> is the Courant-Snyder (CS) invariant, or “action”. The phase angle <span class="math inline">\(\theta_x\)</span> is defined by</p>
+<p><span id="eq-phase"><span class="math display">\[
+\tan(\theta_x) = u_x' / u_x.
+\tag{1}\]</span></span></p>
+<p>The tune <span class="math inline">\(\nu_x\)</span> is estimated from the average phase advance over <span class="math inline">\(N\)</span> turns:</p>
+<p><span id="eq-tune"><span class="math display">\[
+\nu_x = \frac{1}{2 \pi N} \sum_{t=1}^{N} \left( \theta_x^{(t)} - \theta_x^{(t - 1)} \right)
+\tag{2}\]</span></span></p>
+<p>The vertical pane is treated in the same way. The normalized coordinates <span class="math inline">\(u_x, u_x'\)</span> are defined as <span class="citation" data-cites="lee_2018_accelerator">&nbsp;[<a href="#ref-lee_2018_accelerator" role="doc-biblioref">2</a>]</span>:</p>
+<p><span id="eq-norm-2d"><span class="math display">\[
+\begin{align}
+\tilde{x} &amp;= x - \eta_x \delta_p, \\
+\tilde{x}' &amp;= x' - \eta_x' \delta_p, \\
+\begin{bmatrix} u_x \\ u_x' \end{bmatrix}
+&amp;=
+\sqrt{\frac{1}{\beta}} \begin{bmatrix}
+1 &amp; 0 \\
+\alpha_x &amp; \beta_x \\
+\end{bmatrix}
+\begin{bmatrix} \tilde{x} \\ \tilde{x}' \end{bmatrix},
+\end{align}
+\tag{3}\]</span></span></p>
+<p>where <span class="math inline">\(\delta_p = (p - p_0) / p_0\)</span> is the fractional momentum offset and <span class="math inline">\(\\{ \alpha_x, \beta_x, \eta_x \\}\)</span> are the CS parameters and dispersion computed from the transfer matrix.</p>
+</section>
+<section id="extension-to-coupled-systems" class="level2">
+<h2 class="anchored" data-anchor-id="extension-to-coupled-systems">Extension to coupled systems</h2>
+<p>To extend this analysis to <span class="math inline">\(N\)</span>-dimensional systems (<span class="math inline">\(2N\)</span>-dimensional phase space), we can define a <span class="math inline">\(2N \times 2N\)</span> normalization matrix <span class="math inline">\(\mathbf{V}^{-1}\)</span> <span class="citation" data-cites="lebedev_2010_betatron">&nbsp;[<a href="#ref-lebedev_2010_betatron" role="doc-biblioref">3</a>]</span>:</p>
+<p><span id="eq-norm-nd"><span class="math display">\[
+\mathbf{u} = \mathbf{V}^{-1} \mathbf{x},
+\tag{4}\]</span></span></p>
+<p>with phase space coordinates <span class="math inline">\(\mathbf{x}\)</span> and normalized coordiantes <span class="math inline">\(\mathbf{u}\)</span>:</p>
+<p><span id="eq-vec"><span class="math display">\[
+\begin{align}
+\mathbf{x} &amp;= [x_1, x_1', \dots, x_N, x_N' ]^T, \\
+\mathbf{u} &amp;= [u_1, u_1', \dots, u_N, u_N' ]^T.
+\end{align}
+\tag{5}\]</span></span></p>
+<p>If the matrix is designed correctly, it will convert the one-turn transfer matrix <span class="math inline">\(\mathbf{M}\)</span> to the form:</p>
+<p><span id="eq-tmat"><span class="math display">\[
+\mathbf{M} = \mathbf{V} \mathbf{P} \mathbf{V}^{-1},
+\tag{6}\]</span></span></p>
+<p>where the <span class="math inline">\(\mathbf{P}\)</span> is a block-diagonal <em>phase advance matrix</em>:</p>
+<p><span id="eq-rotation"><span class="math display">\[
+\begin{aligned}
+\mathbf{P}(\nu_1, \nu_2, \nu_3) &amp;= \begin{bmatrix}
+\mathbf{R}(2 \pi \nu_1) &amp; \mathbf{0} &amp; \mathbf{0} \\
+\mathbf{0} &amp; \mathbf{R}(2 \pi \nu_2) &amp; \mathbf{0} \\
+\mathbf{0} &amp; \mathbf{0} &amp; \mathbf{R}(2 \pi \nu_3)
+\end{bmatrix}
+\\\
+\mathbf{R}(\theta) &amp;=
+\begin{bmatrix}
++\cos\theta &amp; +\sin\theta \\\ -\sin\theta &amp; +\cos\theta
+\end{bmatrix}
+\end{aligned}
+\tag{7}\]</span></span></p>
+<p>The phase <span class="math inline">\(\phi_k\)</span> in mode <span class="math inline">\(k\)</span> is computed as in the 2D analysis (<span class="math inline">\(\tan(\theta_k) = u_k' / u_k\)</span>). The tune <span class="math inline">\(\nu_k\)</span> is again estimated from the average phase advance:</p>
+<p><span id="eq-tune-nd"><span class="math display">\[
+\nu_k = \frac{1}{2 \pi N} \sum_{t=1}^{N} \left( \theta_k^{(t)} - \theta_k^{(t - 1)} \right),
+\tag{8}\]</span></span></p>
+<p>And the action is given by:</p>
+<p><span id="eq-action-nd"><span class="math display">\[
+J_{k} = \frac{u_k^2 + u_k'^2}{2}.
+\tag{9}\]</span></span></p>
+</section>
+<section id="designing-the-normalization-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="designing-the-normalization-matrix">Designing the normalization matrix</h2>
+<p>In a linear lattice, we can compute the <span class="math inline">\(\mathbf{V}\)</span> matrix using the eigenvectors of the transfer matrix.</p>
+<p><span id="eq-eig"><span class="math display">\[
+\mathbf{M} \mathbf{v}_k = \lambda_k \mathbf{v}_k.
+\tag{10}\]</span></span></p>
+<p>For an <span class="math inline">\(N\)</span>-dimensional system, the eigenvectors come in <span class="math inline">\(N\)</span> pairs: <span class="math inline">\(\{ \mathbf{v}_k, \mathbf{v}_k^* \}\)</span>, where <span class="math inline">\(^*\)</span> means complex conjugate. The <span class="math inline">\(\mathbf{V}\)</span> matrix then takes the form [2]:</p>
+<p><span id="eq-norm-eig"><span class="math display">\[
+\mathbf{V} = [Re(\mathbf{v}_1), -Im(\mathbf{v}_1), Re(\mathbf{v}_2), -Im(\mathbf{v}_2), \dots].
+\tag{11}\]</span></span></p>
+<p>The tunes <span class="math inline">\(\nu_k\)</span> are related to the eigenvalues.</p>
+<p><span id="eq-eigtunes"><span class="math display">\[
+\lambda_k = \exp(-2 \pi i \nu_k)
+\tag{12}\]</span></span></p>
+<p>Alternatively, if we have a collection of particles and know that the bunch’s covariance matrix <span class="math inline">\(\mathbf{\Sigma} = \langle \mathbf{x} \mathbf{x}^T \rangle\)</span> is “matched” to the transfer matrix (<span class="math inline">\(\mathbf{M}\mathbf{\Sigma}\mathbf{M}^T = \mathbf{\Sigma}\)</span>), we can compute the eigenvectors without the transfer matrix by solving:</p>
+<p><span id="eq-eig-cov"><span class="math display">\[
+\mathbf{\Sigma} \mathbf{U} \mathbf{v} = i\varepsilon_k \mathbf{v}.
+\tag{13}\]</span></span></p>
+<p>Here, <span class="math inline">\(\varepsilon_k\)</span> are the invariant emittances (“eigenemittances”, “intrinsic emittances”, “mode emittances”), whose product is the total emittance:</p>
+<p><span id="eq-emittance"><span class="math display">\[
+\varepsilon \equiv | \mathbf{\Sigma} |^{1/2} = \prod_{k} \varepsilon_k.
+\tag{14}\]</span></span></p>
+<p>The <span class="math inline">\(\mathbf{V}\)</span> matrix is then constructed from the eigenvectors in the same way as above.</p>
 
 
 
-
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-Paley_1829" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">W. Paley, <em>Natural Theology: Or, Evidences of the Existence and Attributes of the Deity, Collected from the Appearances of Nature</em> (Lincoln; Edmands, 1829).</div>
+<div id="ref-bartolini_1995_tune" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">R. Bartolini, M. Giovannozzi, A. Bazzani, W. Scandale, and E. Todesco, <em><a href="https://cds.cern.ch/record/292773/files/p147.pdf">Tune Evaluation in Simulations and Experiments</a></em>, Part. Accel. <strong>52</strong>, 147 (1995).</div>
 </div>
-<div id="ref-Oppy_2006_arguing" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">G. Oppy, <em>Arguing about Gods</em> (Cambridge University Press, 2006).</div>
+<div id="ref-lee_2018_accelerator" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S.-Y. Lee, <em>Accelerator Physics</em> (World Scientific Publishing Company, 2018).</div>
 </div>
-<div id="ref-Behe_2003" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">M. Behe, <em>The Modern Intelligent Design Hypothesis: Breaking Rules 1</em>, in <em>God and Design</em> (Routledge, 2003), pp. 276–290.</div>
+<div id="ref-lebedev_2010_betatron" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">V. A. Lebedev and S. Bogacz, <em><a href="https://arxiv.org/pdf/1207.5526">Betatron Motion with Coupling of Horizontal and Vertical Degrees of Freedom</a></em>, Journal of Instrumentation <strong>5</strong>, P10010 (2010).</div>
 </div>
-</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>These considerations demonstrate a relationship between cosmological and design arguments.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
