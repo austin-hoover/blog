@@ -2,139 +2,134 @@
 title: "Single-turn tune estimation in coupled systems"
 author: Austin Hoover
 date: 2025-09-27
+bibliography: references.bib
+csl: ./aps.csl
 categories:
   - accelerators
   - coupling
 ---
 
 
-This PR updates `orbit.diagnostics.TeapotTuneAnalysisNode` to handle coupled accelerator lattices.
+In circular accelerators, single-particle tunes can be estimated from turn-by-turn data using the Fast Fourier Transform (FFT). If we only have a few turns, we can estimate the tunes using the Average Phase Advance (APA) method @bartolini_1995_tune. Using APA, we can estimate the tunes from the phase space coordiantes on two neighboring turns.
 
-## Background
 
-This class estimates the tunes using the Average Phase Advance (APA) method [1] over one turn. The $x-x'$ phase space coordinates are normalized such that the turn-by-turn normalized coordinates $u_x-u_x'$ jump around a circle of area $A_x = 2 \pi J_x = \pi (u_x^2 + u_x'^2)$. Here $J_x$ is the Courant-Snyder (CS) invariant, or "action". The phase $\theta_x$ is defined by
+## Tune-estimation in uncoupled systems
+ 
+In a 1D system (2D phase space), we normalize the $x-x'$ phase space coordinates such that the turn-by-turn normalized coordiantes $u_x-u_x'$ jump around a circle of area $A_x = 2 \pi J_x = \pi (u_x^2 + u_x'^2)$. Here $J_x$ is the Courant-Snyder (CS) invariant, or "action". The phase angle $\theta_x$ is defined by
 
 $$
 \tan(\theta_x) = u_x' / u_x.
-$$
+$$ {#eq-phase}
 
 The tune $\nu_x$ is estimated from the average phase advance over $N$ turns:
 
 $$
 \nu_x = \frac{1}{2 \pi N} \sum_{t=1}^{N} \left( \theta_x^{(t)} - \theta_x^{(t - 1)} \right)
-$$
+$$ {#eq-tune}
 
-This node sets $N = 1$. The vertical pane is treated in the same way. The normalized coordinates $u_x, u_x'$ are defined as [2]:
+The vertical pane is treated in the same way. The normalized coordinates $u_x, u_x'$ are defined as @lee_2018_accelerator:
 
 $$
 \begin{align}
-\tilde{x} &= x - \eta_x \delta_p, \\\
-\tilde{x}' &= x' - \eta_x' \delta_p, \\\
-\begin{bmatrix} u_x \\\ u_x' \end{bmatrix} &=
+\tilde{x} &= x - \eta_x \delta_p, \\
+\tilde{x}' &= x' - \eta_x' \delta_p, \\
+\begin{bmatrix} u_x \\ u_x' \end{bmatrix} 
+&=
 \sqrt{\frac{1}{\beta}} \begin{bmatrix}
-1 & 0 \\\
-\alpha_x & \beta_x \\\
+1 & 0 \\
+\alpha_x & \beta_x \\
 \end{bmatrix}
-\begin{bmatrix} \tilde{x} \\\ \tilde{x}' \end{bmatrix},
+\begin{bmatrix} \tilde{x} \\ \tilde{x}' \end{bmatrix},
 \end{align}
-$$
+$$ {#eq-norm-2d}
 
-where $\delta_p = (p - p_0) / p_0$ is the fractional momentum offset and $\\{ \alpha_x, \beta_x, \eta_x \\}$ are parameters set by the user (corresponding to Courant-Snyder parameters and dispersion).
+where $\delta_p = (p - p_0) / p_0$ is the fractional momentum offset and $\\{ \alpha_x, \beta_x, \eta_x \\}$ are the CS parameters and dispersion computed from the transfer matrix.
 
 
-## Extension to coupled lattices
+## Extension to coupled systems 
 
-To extend the analysis to coupled lattices, we can define a $6 \times 6$ normalization matrix $\mathbf{V}^{-1}$ [3]:
+To extend this analysis to $N$-dimensional systems ($2N$-dimensional phase space), we can define a $2N \times 2N$ normalization matrix $\mathbf{V}^{-1}$ @lebedev_2010_betatron:
 
 $$
 \mathbf{u} = \mathbf{V}^{-1} \mathbf{x},
-$$
+$$ {#eq-norm-nd}
 
-with $\mathbf{x} = [x, x', y, y', z, \delta_p]^T$ and $\mathbf{u} = [u_1, u_1', u_2, u_2', u_3, u_3']^T$. If the matrix is designed correctly, it will convert the one-turn transfer matrix $\mathbf{M}$ to the form:
+with phase space coordinates $\mathbf{x}$ and normalized coordiantes $\mathbf{u}$:
+
+$$
+\begin{align}
+\mathbf{x} &= [x_1, x_1', \dots, x_N, x_N' ]^T, \\
+\mathbf{u} &= [u_1, u_1', \dots, u_N, u_N' ]^T.
+\end{align}
+$$ {#eq-vec}
+
+If the matrix is designed correctly, it will convert the one-turn transfer matrix $\mathbf{M}$ to the form:
 
 $$
 \mathbf{M} = \mathbf{V} \mathbf{P} \mathbf{V}^{-1},
-$$
+$$ {#eq-tmat}
 
 where the $\mathbf{P}$ is a block-diagonal *phase advance matrix*:
 
 $$
 \begin{aligned}
-\mathbf{P}(\nu_1, \nu_2, \nu_3) &= \begin{pmatrix}
-\mathbf{R}(2 \pi \nu_1) & \mathbf{0} & \mathbf{0} \\\
-\mathbf{0} & \mathbf{R}(2 \pi \nu_2) & \mathbf{0} \\\
+\mathbf{P}(\nu_1, \nu_2, \nu_3) &= \begin{bmatrix}
+\mathbf{R}(2 \pi \nu_1) & \mathbf{0} & \mathbf{0} \\
+\mathbf{0} & \mathbf{R}(2 \pi \nu_2) & \mathbf{0} \\
 \mathbf{0} & \mathbf{0} & \mathbf{R}(2 \pi \nu_3)
-\end{pmatrix}
+\end{bmatrix}
 \\\
 \mathbf{R}(\theta) &=
-\begin{pmatrix}
+\begin{bmatrix}
 +\cos\theta & +\sin\theta \\\ -\sin\theta & +\cos\theta
-\end{pmatrix}
+\end{bmatrix}
 \end{aligned}
-$$
+$$ {#eq-rotation}
 
 The phase $\phi_k$ in mode $k$ is computed as in the 2D analysis ($\tan(\theta_k) = u_k' / u_k$). The tune $\nu_k$ is again estimated from the average phase advance:
 
 $$
 \nu_k = \frac{1}{2 \pi N} \sum_{t=1}^{N} \left( \theta_k^{(t)} - \theta_k^{(t - 1)} \right),
-$$
+$$ {#eq-tune-nd}
 
 And the action is given by:
 
 $$
 J_{k} = \frac{u_k^2 + u_k'^2}{2}.
-$$
+$$ {#eq-action-nd}
 
 
-## Selection of normalization matrix
+## Designing the normalization matrix
 
 In a linear lattice, we can compute the $\mathbf{V}$ matrix using the eigenvectors of the transfer matrix.
 
 $$
 \mathbf{M} \mathbf{v}_k = \lambda_k \mathbf{v}_k.
-$$
+$$ {#eq-eig}
 
-For an $N$-dimensional system ($2N$-dimensional phase space), the eigenvectors come in $N$ pairs: $\\{ \mathbf{v}_k, \mathbf{v}_k^* \\}$, where $^*$ means complex conjugate. The $\mathbf{V}$ matrix then takes the form [2]:
+For an $N$-dimensional system, the eigenvectors come in $N$ pairs: $\{ \mathbf{v}_k, \mathbf{v}_k^* \}$, where $^*$ means complex conjugate. The $\mathbf{V}$ matrix then takes the form [2]:
 
 $$
 \mathbf{V} = [Re(\mathbf{v}_1), -Im(\mathbf{v}_1), Re(\mathbf{v}_2), -Im(\mathbf{v}_2), \dots].
+$$ {#eq-norm-eig}
+
+The tunes $\nu_k$ are related to the eigenvalues. 
+
 $$
+\lambda_k = \exp(-2 \pi i \nu_k)
+$$ {#eq-eigtunes}
 
 Alternatively, if we have a collection of particles and know that the bunch's covariance matrix $\mathbf{\Sigma} = \langle \mathbf{x} \mathbf{x}^T \rangle$ is "matched" to the transfer matrix ($\mathbf{M}\mathbf{\Sigma}\mathbf{M}^T = \mathbf{\Sigma}$), we can compute the eigenvectors without the transfer matrix by solving:
 
 $$
 \mathbf{\Sigma} \mathbf{U} \mathbf{v} = i\varepsilon_k \mathbf{v}.
-$$
+$$ {#eq-eig-cov}
 
 Here, $\varepsilon_k$ are the invariant emittances ("eigenemittances", "intrinsic emittances", "mode emittances"), whose product is the total emittance:
 
 $$
 \varepsilon \equiv | \mathbf{\Sigma} |^{1/2} = \prod_{k} \varepsilon_k.
-$$
+$$ {#eq-emittance}
 
-The $\mathbf{V}$ matrix is then constructed inform the eigenvectors in the same way as above.
-
-
-## Implementation
-
-* Added $6 \times 6$ normalization matrix to `BunchTuneAnalysis`.
-* Updated the method `assignTwiss` to set elements of the normalization matrix.
-* Added ability to set normalization matrix by hand. There are multiple ways to parameterize this matrix, so I leave it up to the user. Later, specific parameterizations could be added to mirror `assignTwiss` for coupled systems.
-* The node stores data by adding an attribute array called `ParticlePhaseAttributes` to each particle. I've added methods `getData` to extract the data from the bunch after tracking. These attributes are also written to a file along with the particle coordinates when `bunch.dumpBunch` is called. (Column labels are wrong; see Issue #78.)
-* Added `getTunes` and `getActions` method to get only the tune and action data.
-
-
-## Tests
-
-There are examples [here](https://github.com/austin-hoover/pyorbit/tree/tune/examples/Diagnostics/Tunes). These tests calculate the tunes in a FODO lattice and compare them to those calculated from the one-turn transfer matrix. There is a test for an uncoupled FODO lattice as well as a coupled lattice. The tunes are compared to the values obtained from the transfer matrix eigenvalues $\lambda_k$:
-
-$$
-\lambda_k = \exp(-2 \pi i \nu_k).
-$$
-
-## References
-
-[1]  https://cds.cern.ch/record/292773/files/p147.pdf
-[2] https://arxiv.org/pdf/1207.5526
-[3] S. Y. Lee, *Accelerator Physics*
+The $\mathbf{V}$ matrix is then constructed from the eigenvectors in the same way as above.
 
