@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.23">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,19 +69,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6e03bc272f1cdef1d8296ac38e217ebd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d329e753491efaeac79c98c4b193a686.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-1c30796a6f707f67558b23278592a34c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-61cad99fa7c7aee1e5b9756405187482.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-1c30796a6f707f67558b23278592a34c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-34b54161b321180ab073507ff9230d2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -148,7 +147,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -335,8 +334,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Austin’s Blog</span>
     </a>
@@ -451,15 +448,15 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 <section id="d-reconstruction" class="level2">
 <h2 class="anchored" data-anchor-id="d-reconstruction">2D reconstruction</h2>
 <div id="2516723f-a02b-46f5-a271-4d984dd368a1" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> proplot <span class="im">as</span> pplt</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> skimage <span class="im">import</span> transform</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> psdist.visualization <span class="im">as</span> psv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> psdist.visualization <span class="im">as</span> psv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>I’ll use the following distribution to test the reconstruction algorithms.</p>
 <div id="dcd32160-3f7f-4250-aa07-f64451225d8c" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">1.75</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">1.75</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">300000</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.vstack([</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    np.random.normal(scale<span class="op">=</span>[<span class="fl">1.0</span>, <span class="fl">1.0</span>], loc<span class="op">=</span>[<span class="fl">0.0</span>, <span class="fl">0.0</span>], size<span class="op">=</span>(n, <span class="dv">2</span>)),</span>
@@ -480,7 +477,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots()</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>ax.pcolormesh(xcenters, ycenters, Z_true.T)</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="st">"x"</span>, ylabel<span class="op">=</span><span class="st">"x'"</span>)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -489,7 +486,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 </div>
 <p>We now simulate the measurements. Assume we have the ability to rotate the distribution without any shearing or scaling. We then rotate the distribution by different angles and project it onto the <span class="math inline">\(x\)</span> axis. It will turn out that measurement time limits the number of projections we can use; for now, we’ll limit ourselves to 15 projections.</p>
 <div id="0f110dd4-d299-4133-82fd-caaa17f8de99" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rotation_matrix(angle):</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rotation_matrix(angle):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    cs, sn <span class="op">=</span> np.cos(angle), np.sin(angle)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array([[cs, sn], [<span class="op">-</span>sn, cs]])</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -506,7 +503,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots()</span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>ax.pcolormesh(projections.T)</span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="st">"Projection axis"</span>, ylabel<span class="op">=</span><span class="st">"Projection number"</span>, ytickminor<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -515,7 +512,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 </div>
 <p>We’ll also need some helper functions.</p>
 <div id="e6628ff4-6b44-41cd-b372-12b888c4f6d5" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="bu">apply</span>(M, X):</span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="bu">apply</span>(M, X):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.apply_along_axis(<span class="kw">lambda</span> row: np.matmul(M, row), <span class="dv">1</span>, X)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -564,16 +561,16 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 <span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>    axs.<span class="bu">format</span>(xticks<span class="op">=</span>[], yticks<span class="op">=</span>[], suptitle<span class="op">=</span>suptitle)</span>
 <span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax, title <span class="kw">in</span> <span class="bu">zip</span>(axs, [<span class="st">"Reconstructed"</span>, <span class="st">"Original"</span>, <span class="st">"Error"</span>]):</span>
 <span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>        ax.set_title(title)</span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig, axs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig, axs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="filtered-back-projection-fpb" class="level3">
 <h3 class="anchored" data-anchor-id="filtered-back-projection-fpb">Filtered Back-Projection (FPB)</h3>
 <p>In filtered back-projection (FBP) each projection is Fourier transformed and then smeared back across the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> plane. The Fourier transform acts as a filter and creates a sharper image.</p>
 <div id="2d90b222-b8ec-40ba-9645-7692cbd6d232" class="cell" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> transform.iradon(projections, theta<span class="op">=-</span>angles).T</span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> transform.iradon(projections, theta<span class="op">=-</span>angles).T</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> process(Z, keep_positive<span class="op">=</span><span class="va">True</span>, density<span class="op">=</span><span class="va">True</span>, limits<span class="op">=</span>limits)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plot_rec(Z, Z_true, <span class="st">'FBP'</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -603,10 +600,10 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 <p><span class="math display">\[ \rho = P \psi. \]</span></p>
 <p>All we need to do is invert these equations. The problem is that <span class="math inline">\(P\)</span> could be huge. If there are <span class="math inline">\(K\)</span> projections, <span class="math inline">\(P\)</span> will be have <span class="math inline">\(K N \times N^2\)</span> elements. Inverting such a matrix could be a pain, so people have developed iterative methods to find the answer. Scikit-image has one ready to go called simultaneous algebraic reconstruction (SART).</p>
 <div id="29546c4d-4a27-4a56-87d2-2373582d07f1" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> transform.iradon_sart(projections, theta<span class="op">=-</span>angles).T</span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> transform.iradon_sart(projections, theta<span class="op">=-</span>angles).T</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> process(Z, keep_positive<span class="op">=</span><span class="va">True</span>, density<span class="op">=</span><span class="va">True</span>, limits<span class="op">=</span>limits)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plot_rec(Z, Z_true, <span class="st">'SART (1 iteration)'</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -615,11 +612,11 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 </div>
 <p>The SART algorithm looks like it does better with fewer projections. SART is known to produce a good answer in only one iteration. Running it again with the original reconstruction as an initial estimate can sharpen image but may increase noise. In this case, it looks like running SART again leads to a better reconstruction without increasing noise.</p>
 <div id="5553c79a-27b6-40a5-923a-ae62ae31b78c" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> transform.iradon_sart(projections, theta<span class="op">=-</span>angles).T</span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> transform.iradon_sart(projections, theta<span class="op">=-</span>angles).T</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> transform.iradon_sart(projections, theta<span class="op">=-</span>angles, image<span class="op">=</span>Z.T).T</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> process(Z, keep_positive<span class="op">=</span><span class="va">True</span>, density<span class="op">=</span><span class="va">True</span>, limits<span class="op">=</span>limits)</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plot_rec(Z, Z_true, <span class="st">'SART (2 iterations)'</span>)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -646,7 +643,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 <p>I’ve mentioned that at least three methods (ART, MENT, grid-based) will generalize to 4D reconstruction from 2D projections. But what I’d like to look at now is a different, hopefully easier method described in Hock (2013). The method uses 2D projections but only uses 2D reconstruction methods like those described in this post. It’s sort of like a CT scan: 1D projections are used to reconstruct a 2D slice of a human body, and then the slice is moved along the body to reconstruct the 3D image. This would be nice because the conditions for a good 2D reconstruction are well-understood, but might not be clear for higher-dimensional versions of the algorithms.</p>
 <p>First, we need a 4D distribution.</p>
 <div id="38a29458-445b-4f6c-80b8-1869b24a41c2" class="cell" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a rigid rotating distribution.</span></span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a rigid rotating distribution.</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.random.normal(size<span class="op">=</span>(<span class="dv">400000</span>, <span class="dv">4</span>))</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.apply_along_axis(<span class="kw">lambda</span> row: row <span class="op">/</span> np.linalg.norm(row), <span class="dv">1</span>, X)</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>X[:, <span class="dv">3</span>] <span class="op">=</span> <span class="op">+</span>X[:, <span class="dv">0</span>]</span>
@@ -669,7 +666,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 <span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    labels<span class="op">=</span>labels,</span>
 <span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>limits <span class="op">=</span> [ax.get_xlim() <span class="cf">for</span> ax <span class="kw">in</span> g.axs[<span class="op">-</span><span class="dv">1</span>, :]]</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -678,17 +675,17 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 </div>
 <p>We can estimate the distribution by binning the particles on a 4D grid.</p>
 <div id="d950960a-741b-4c2c-9101-baf2ed0579ab" class="cell" data-execution_count="18">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Z_true, edges <span class="op">=</span> np.histogramdd(X, n_bins, limits, density<span class="op">=</span><span class="va">True</span>)</span>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Z_true, edges <span class="op">=</span> np.histogramdd(X, n_bins, limits, density<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>centers <span class="op">=</span> []</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _edges <span class="kw">in</span> edges:</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    centers.append(<span class="fl">0.5</span> <span class="op">*</span> (_edges[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> _edges[<span class="dv">1</span>:]))</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>bin_volume <span class="op">=</span> get_bin_volume(limits, n_bins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>bin_volume <span class="op">=</span> get_bin_volume(limits, n_bins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="description-of-hocks-method" class="level3">
 <h3 class="anchored" data-anchor-id="description-of-hocks-method">Description of Hock’s method</h3>
 <p>Now for the method. Suppose we can independently rotate the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> and <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> projections of the phase space distribution. Let the angles in <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> be <span class="math inline">\(\left\{\mu_{x_1}, \dots, \mu_{x_k}, \dots, \mu_{x_K}\right\}\)</span> and the angles in <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> be <span class="math inline">\(\left\{\mu_{y_1}, \dots, \mu_{y_l}, \dots, \mu_{y_L}\right\}\)</span>. For each combination of <span class="math inline">\(\mu_x\)</span> and <span class="math inline">\(\mu_y\)</span>, we measure the beam intensity on a screen. In other words, we create a matrix <span class="math inline">\(S\)</span> such that <span class="math inline">\(S_{ijkl}\)</span> gives the intensity at point <span class="math inline">\((x_i, y_j)\)</span> on the screen for phase advances (angles) <span class="math inline">\(\mu_{x_k}\)</span> and <span class="math inline">\(\mu_{y_l}\)</span>.</p>
 <div id="344a17c1-077b-4220-a475-d64d2739132b" class="cell" data-execution_count="19">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>K <span class="op">=</span> <span class="dv">15</span> <span class="co"># number of angles in x dimension</span></span>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>K <span class="op">=</span> <span class="dv">15</span> <span class="co"># number of angles in x dimension</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">15</span> <span class="co"># number of angles in y dimension</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>muxx <span class="op">=</span> muyy <span class="op">=</span> np.linspace(<span class="fl">0.</span>, <span class="fl">180.</span>, K, endpoint<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -705,7 +702,7 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>S <span class="op">=</span> np.zeros((n_bins, n_bins, K, L))</span>
 <span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k, xx <span class="kw">in</span> <span class="bu">enumerate</span>(xx_list):</span>
 <span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> l, yy <span class="kw">in</span> <span class="bu">enumerate</span>(yy_list):</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>        S[:, :, k, l], _, _ <span class="op">=</span> np.histogram2d(xx, yy, n_bins, (limits[<span class="dv">0</span>], limits[<span class="dv">2</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>        S[:, :, k, l], _, _ <span class="op">=</span> np.histogram2d(xx, yy, n_bins, (limits[<span class="dv">0</span>], limits[<span class="dv">2</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -715,35 +712,35 @@ f(x) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}{f(x
 <p>The above animation shows a few steps in the scan; since the transfer matrices are rotation matrices, only the cross-plane correlation changes.</p>
 <p>We can immediately reconstruct the 3D projection the 4D phase space distribution using this data. Consider one row of the beam image — the intensity along the row gives a 1D projection onto the <span class="math inline">\(x\)</span> axis for a vertical slice of the beam. We have a set of these 1D projections at different <span class="math inline">\(\mu_k\)</span> which we can use to reconstruct the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> distribution at this vertical slice using any 1D <span class="math inline">\(\rightarrow\)</span> 2D reconstruction method. I’ll use SART since this seemed to work well with 15 projections. We repeat this at each slice. We thus have an array <span class="math inline">\(D\)</span> such that <span class="math inline">\(D_{j,l,r,s}\)</span> gives the density at <span class="math inline">\(x = x_r\)</span>, <span class="math inline">\(x' = x'_s\)</span> for <span class="math inline">\(y = y_j\)</span> and <span class="math inline">\(\mu_y = \mu_{y_l}\)</span>.</p>
 <div id="961e753f-ce76-4f02-8bb2-f1b1dd409a45" class="cell" data-execution_count="21">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> np.zeros((n_bins, L, n_bins, n_bins))</span>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> np.zeros((n_bins, L, n_bins, n_bins))</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(n_bins):</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> l <span class="kw">in</span> <span class="bu">range</span>(L):</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        _Z <span class="op">=</span> transform.iradon_sart(S[:, j, :, l], theta<span class="op">=-</span>muxx).T</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        _Z <span class="op">=</span> transform.iradon_sart(S[:, j, :, l], theta<span class="op">=-</span>muxx, image<span class="op">=</span>_Z.T).T</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        D[j, l, :, :] <span class="op">=</span>_Z</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        D[j, l, :, :] <span class="op">=</span>_Z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>I should also mention that the reconstruction grid doesn’t need to be the same size as the measurement grid. We can now do a similar thing in the vertical plane. For each bin in the reconstructed x-x’ grid, <code>D[:, :, r, s]</code> gives the projections of <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> at each <span class="math inline">\(\mu_{y_l}\)</span>; thus, <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> can be reconstructed at each <span class="math inline">\(x_r\)</span> and <span class="math inline">\(x'_s\)</span>, and we have an array <span class="math inline">\(Z\)</span> such that <span class="math inline">\(Z_{r,s,t,u}\)</span> gives the density at <span class="math inline">\(x = x_r\)</span>, <span class="math inline">\(x' = x'_s\)</span>, <span class="math inline">\(y = y_t\)</span>, <span class="math inline">\(y' = y'_u\)</span>.</p>
 <div id="13dd09c1-3939-4ff7-a633-6b53cf3ab175" class="cell" data-execution_count="22">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> np.zeros((n_bins, n_bins, n_bins, n_bins))</span>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> np.zeros((n_bins, n_bins, n_bins, n_bins))</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> r <span class="kw">in</span> <span class="bu">range</span>(n_bins):</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> s <span class="kw">in</span> <span class="bu">range</span>(n_bins):</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        _Z <span class="op">=</span> transform.iradon_sart(D[:, :, r, s], theta<span class="op">=-</span>muyy).T</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        _Z <span class="op">=</span> transform.iradon_sart(D[:, :, r, s], theta<span class="op">=-</span>muyy, image<span class="op">=</span>_Z.T).T</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        Z[r, s, :, :] <span class="op">=</span> _Z</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        Z[r, s, :, :] <span class="op">=</span> _Z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="accuracy" class="level3">
 <h3 class="anchored" data-anchor-id="accuracy">Accuracy</h3>
 <p>SART could make some bins negative, so set those to zero. We then need to normalize <code>Z</code> for comparison with <code>Z_true</code>.</p>
 <div id="7d2db923-5017-4f14-89d9-a10958ba81f5" class="cell" data-execution_count="23">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> process(Z, keep_positive<span class="op">=</span><span class="va">True</span>, density<span class="op">=</span><span class="va">True</span>, limits<span class="op">=</span>limits)</span>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> process(Z, keep_positive<span class="op">=</span><span class="va">True</span>, density<span class="op">=</span><span class="va">True</span>, limits<span class="op">=</span>limits)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'min(Z) = </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(np.<span class="bu">min</span>(Z)))</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'max(Z) = </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(np.<span class="bu">max</span>(Z)))</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'sum(Z) * bin_volume = </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(np.<span class="bu">sum</span>(Z) <span class="op">*</span> bin_volume))</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'min(Z_true) = </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(np.<span class="bu">min</span>(Z_true)))</span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'max(Z_true) = </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(np.<span class="bu">max</span>(Z_true)))</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'sum(Z_true) * bin_volume = </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(np.<span class="bu">sum</span>(Z_true) <span class="op">*</span> bin_volume))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'sum(Z_true) * bin_volume = </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(np.<span class="bu">sum</span>(Z_true) <span class="op">*</span> bin_volume))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>min(Z) = 0.0
 max(Z) = 0.17036653561113582
@@ -756,8 +753,8 @@ sum(Z_true) * bin_volume = 0.9999999999999879</code></pre>
 </div>
 <p>I’m not sure the best way to quantify the difference between the distributions. My initial thought is to subtract <code>Z_true</code> from <code>Z</code>, take the absolute value, and divide by the number of bins; this would give the average absolute error over the bins.</p>
 <div id="82664ac4-65c6-41ec-b78c-7f60f69d6ddd" class="cell" data-execution_count="24">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>avg_abs_err_per_bin <span class="op">=</span> np.<span class="bu">sum</span>(np.<span class="bu">abs</span>(Z <span class="op">-</span> Z_true)) <span class="op">/</span> Z.size</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Average absolute error per bin = </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(avg_abs_err_per_bin))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>avg_abs_err_per_bin <span class="op">=</span> np.<span class="bu">sum</span>(np.<span class="bu">abs</span>(Z <span class="op">-</span> Z_true)) <span class="op">/</span> Z.size</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Average absolute error per bin = </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(avg_abs_err_per_bin))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Average absolute error per bin = 0.002540311656083561</code></pre>
 </div>
@@ -766,13 +763,13 @@ sum(Z_true) * bin_volume = 0.9999999999999879</code></pre>
 <div id="5963d695-f562-485b-9f9c-134293504176" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> pplt.subplots(ncols<span class="op">=</span><span class="dv">4</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">2</span>), spanx<span class="op">=</span><span class="va">False</span>)</span>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> pplt.subplots(ncols<span class="op">=</span><span class="dv">4</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">2</span>), spanx<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    axs[i].plot(centers[i], project(Z_true, i), color<span class="op">=</span><span class="st">'black'</span>, label<span class="op">=</span><span class="st">'True'</span>)</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    axs[i].plot(centers[i], project(Z, i), color<span class="op">=</span><span class="st">'red8'</span>, ls<span class="op">=</span><span class="st">'dotted'</span>, label<span class="op">=</span><span class="st">'Reconstructed'</span>)</span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    axs[i].set_xlabel(labels[i])</span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].legend(loc<span class="op">=</span>(<span class="fl">0.0</span>, <span class="fl">1.02</span>), framealpha<span class="op">=</span><span class="fl">0.0</span>, ncol<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -783,7 +780,7 @@ sum(Z_true) * bin_volume = 0.9999999999999879</code></pre>
 <div id="a490aa65-1fb1-46b4-8b6a-28756da177f3" class="cell" data-execution_count="33">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>indices <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">3</span>), (<span class="dv">0</span>, <span class="dv">2</span>), (<span class="dv">0</span>, <span class="dv">3</span>), (<span class="dv">2</span>, <span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">3</span>)]</span>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>indices <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">3</span>), (<span class="dv">0</span>, <span class="dv">2</span>), (<span class="dv">0</span>, <span class="dv">3</span>), (<span class="dv">2</span>, <span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">3</span>)]</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> pplt.subplots(nrows<span class="op">=</span><span class="dv">6</span>, ncols<span class="op">=</span><span class="dv">3</span>, figwidth<span class="op">=</span><span class="fl">5.0</span>, sharex<span class="op">=</span><span class="va">False</span>, sharey<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row, (i, j) <span class="kw">in</span> <span class="bu">enumerate</span>(indices):</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    _Z_true <span class="op">=</span> project(Z_true, [i, j])</span>
@@ -806,7 +803,7 @@ sum(Z_true) * bin_volume = 0.9999999999999879</code></pre>
 <span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax, title <span class="kw">in</span> <span class="bu">zip</span>(axs[<span class="dv">0</span>, :], [<span class="st">"Reconstructed"</span>, <span class="st">"True"</span>, <span class="st">"Error"</span>]):</span>
 <span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>    ax.set_title(title)</span>
 <span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(xticks<span class="op">=</span>[], yticks<span class="op">=</span>[])</span>
-<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -930,14 +927,13 @@ sum(Z_true) * bin_volume = 0.9999999999999879</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

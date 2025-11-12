@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.23">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,19 +69,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6e03bc272f1cdef1d8296ac38e217ebd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d329e753491efaeac79c98c4b193a686.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-1c30796a6f707f67558b23278592a34c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-61cad99fa7c7aee1e5b9756405187482.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-1c30796a6f707f67558b23278592a34c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-34b54161b321180ab073507ff9230d2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -148,7 +147,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -335,8 +334,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Austin’s Blog</span>
     </a>
@@ -478,7 +475,7 @@ r_y''(s) &amp;= \kappa(s) r_y(s) + \frac{\varepsilon_y^2}{r_y(s)^3} - \frac{2Q}{
 <h2 class="anchored" data-anchor-id="particle-based-envelope-solver">Particle-based envelope solver</h2>
 <p><a href="https://web.ornl.gov/~holmesja1/JHolmes/interests.html">Jeff Holmes</a> had a neat idea to solve the KV envelope equations equations using the <a href="https://github.com/PyORBIT-Collaboration/PyORBIT3">PyORBIT</a> tracking code. He noted that the first term <a href="#eq-kv-env" class="quarto-xref">Equation&nbsp;7</a> resembles a single-particle equation of motion, where <span class="math inline">\(r_x\)</span> and <span class="math inline">\(r_y\)</span> are treated as the particle coordinates, and that the next two terms act as nonlinear driving forces on this fictitous particle. It’s straightforward to implement integrate these equations in PyORBIT, which represents the accelerator as a set of <em>nodes</em> that sequentially update the phase space coordinates of each particle in the bunch. We can simply let the first bunch particle store the envelope radii <span class="math inline">\(r_{x, y}\)</span> as its <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> coordinates, and the first derivatives <span class="math inline">\(r_{x,y}'\)</span> as its <span class="math inline">\(x'\)</span> and <span class="math inline">\(y'\)</span> coordinates. The first term in <a href="#eq-kv-env" class="quarto-xref">Equation&nbsp;7</a> will be handled by the existing nodes in the lattice. To apply the nonlinear driving terms, we can define a new node which applies a momentum kick based on these coordinates and constants <span class="math inline">\(\varepsilon_{x}\)</span>, <span class="math inline">\(\varepsilon_y\)</span>, and <span class="math inline">\(Q\)</span>. All additional particles in the bunch can receive regular space charge kicks, assuming a uniform-density elliptical beam with dimensions given by the envelope parameters. These additional particles are considered “test” particles because they do not affect the space charge field of the beam in a self-consistent way.</p>
 <p>PyORBIT tracking algorithms are written in C++ and accessible from the Python level using “wrapper” functions. So to implement the new node type, we start by writing a C++ class. The fundamental object in PyORBIT is a <code>Bunch</code>, which contains an array of phase space coordinates for each particle. The method below tracks a bunch instance over a distance <code>length</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"KVEnvelopeSolver.hh"</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"KVEnvelopeSolver.hh"</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>KVEnvelopeSolver<span class="op">::</span>KVEnvelopeSolver<span class="op">(</span><span class="dt">double</span> perveance<span class="op">,</span> <span class="dt">double</span> eps_x<span class="op">,</span> <span class="dt">double</span> eps_y<span class="op">)</span> <span class="op">:</span> CppPyWrapper<span class="op">(</span>NULL<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  _perveance <span class="op">=</span> perveance<span class="op">;</span></span>
@@ -546,9 +543,9 @@ r_y''(s) &amp;= \kappa(s) r_y(s) + \frac{\varepsilon_y^2}{r_y(s)^3} - \frac{2Q}{
 <span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>    bunch<span class="op">-&gt;</span>xp<span class="op">(</span>i<span class="op">)</span> <span class="op">+=</span> delta_xp<span class="op">;</span></span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    bunch<span class="op">-&gt;</span>yp<span class="op">(</span>i<span class="op">)</span> <span class="op">+=</span> delta_yp<span class="op">;</span></span>
 <span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>After compilation, the C++ class is accessible from the <code>orbit.ext.kv_envelope</code> module in Python scripts. To use this solver in simulations, we need a Python object that subclasses <code>orbit.lattice.AccNodeBunchTracker</code>, a base class for all PyORBIT node classes. This class just calls the <code>KVEnvelopeSolver</code> instance when it’s time to track the bunch.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> orbit.lattice <span class="im">import</span> AccActionsContainer</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> orbit.lattice <span class="im">import</span> AccActionsContainer</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> orbit.lattice <span class="im">import</span> AccLattice</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> orbit.lattice <span class="im">import</span> AccNode</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> orbit.lattice <span class="im">import</span> AccNodeBunchTracker</span>
@@ -595,9 +592,9 @@ r_y''(s) &amp;= \kappa(s) r_y(s) + \frac{\varepsilon_y^2}{r_y(s)^3} - \frac{2Q}{
 <span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="va">self</span>.active:</span>
 <span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
 <span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        bunch <span class="op">=</span> params_dict[<span class="st">"bunch"</span>]</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.solver.trackBunch(bunch, <span class="va">self</span>.kick_length)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.solver.trackBunch(bunch, <span class="va">self</span>.kick_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>I’ll now create a function to add a set of these nodes to an existing <code>AccLattice</code> objects. This function will split up the existing nodes as necessary to approach evenly-spaced KV envelope solver nodes. The function also sets the length of the space charge kick to match the subsequent node length.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Parent:</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Parent:</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, node: AccNode, part_index: <span class="bu">int</span>, position: <span class="bu">float</span>, path_length: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.node <span class="op">=</span> node</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> <span class="va">self</span>.node.getName()</span>
@@ -661,9 +658,9 @@ r_y''(s) &amp;= \kappa(s) r_y(s) + \frac{\varepsilon_y^2}{r_y(s)^3} - \frac{2Q}{
 <span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    solver_node <span class="op">=</span> KVEnvelopeSolverNode(name<span class="op">=</span>solver_node_name, kick_length<span class="op">=</span>rest_length, <span class="op">**</span>solver_node_kwargs)</span>
 <span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    solver_nodes.append(solver_node)</span>
 <span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    parent.node.addChildNode(solver_node, parent.node.BODY, parent.part_index, parent.node.BEFORE)</span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> solver_nodes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> solver_nodes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Finally, we need a way to easily run simulations. I’ll first create a class called <code>KVEnvelope</code> that lets me set the distribution parameters, intensity, etc.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> copy</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> copy</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Iterable</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Self</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -819,9 +816,9 @@ r_y''(s) &amp;= \kappa(s) r_y(s) + \frac{\varepsilon_y^2}{r_y(s)^3} - \frac{2Q}{
 <span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(samples.shape[<span class="dv">0</span>]):</span>
 <span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>                bunch.addParticle(<span class="op">*</span>samples[i])</span>
 <span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> bunch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> bunch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>I’ll also need a <code>KVEnvelopeMonitor</code> class to store the envelope parameters vs.&nbsp;tracking distance.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> KVEnvelopeMonitor:</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> KVEnvelopeMonitor:</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, verbose: <span class="bu">int</span> <span class="op">=</span> <span class="dv">0</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.verbose <span class="op">=</span> verbose</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.distance <span class="op">=</span> <span class="fl">0.0</span></span>
@@ -860,9 +857,9 @@ r_y''(s) &amp;= \kappa(s) r_y(s) + \frac{\varepsilon_y^2}{r_y(s)^3} - \frac{2Q}{
 <span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Print update</span></span>
 <span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.verbose:</span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"s=</span><span class="sc">{:0.3f}</span><span class="st"> x_rms=</span><span class="sc">{:0.2f}</span><span class="st">, y_rms=</span><span class="sc">{:0.2f}</span><span class="st">"</span>.<span class="bu">format</span>(<span class="va">self</span>.distance, x_rms, y_rms))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"s=</span><span class="sc">{:0.3f}</span><span class="st"> x_rms=</span><span class="sc">{:0.2f}</span><span class="st">, y_rms=</span><span class="sc">{:0.2f}</span><span class="st">"</span>.<span class="bu">format</span>(<span class="va">self</span>.distance, x_rms, y_rms))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Finally, I’ll create a <code>KVEnvelopeTracker</code> class that modifies an existing lattice by adding envelope solver nodes and tracks the envelope.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> KVEnvelopeTracker:</span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> KVEnvelopeTracker:</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""KV envelope tracker."""</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, lattice: AccLattice, path_length_max: <span class="bu">float</span> <span class="op">=</span> <span class="va">None</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.lattice <span class="op">=</span> lattice</span>
@@ -946,7 +943,7 @@ r_y''(s) &amp;= \kappa(s) r_y(s) + \frac{\varepsilon_y^2}{r_y(s)^3} - \frac{2Q}{
 <span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> scipy.optimize.least_squares(</span>
 <span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>            loss_function, envelope.params.copy(), bounds<span class="op">=</span>(<span class="va">self</span>.lb, <span class="va">self</span>.ub), <span class="op">**</span>kwargs</span>
-<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>        )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>        )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>I’ve also added capabilities to find the periodic envelope, i.e., an envelope which returns to its original state after one lattice period.</p>
 </section>
 <section id="benchmark-against-pic-solver" class="level2">
@@ -955,7 +952,7 @@ r_y''(s) &amp;= \kappa(s) r_y(s) + \frac{\varepsilon_y^2}{r_y(s)^3} - \frac{2Q}{
 <div id="cell-19" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.optimize</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> orbit.core.bunch <span class="im">import</span> Bunch</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> orbit.core.bunch <span class="im">import</span> BunchTwissAnalysis</span>
@@ -1161,13 +1158,13 @@ r_y''(s) &amp;= \kappa(s) r_y(s) + \frac{\varepsilon_y^2}{r_y(s)^3} - \frac{2Q}{
 <span id="cb7-204"><a href="#cb7-204" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-205"><a href="#cb7-205" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.history[<span class="st">"s"</span>].append(<span class="va">self</span>.distance)</span>
 <span id="cb7-206"><a href="#cb7-206" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.history[<span class="st">"xrms"</span>].append(np.sqrt(cov_matrix[<span class="dv">0</span>, <span class="dv">0</span>]))</span>
-<span id="cb7-207"><a href="#cb7-207" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.history[<span class="st">"yrms"</span>].append(np.sqrt(cov_matrix[<span class="dv">2</span>, <span class="dv">2</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-207"><a href="#cb7-207" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.history[<span class="st">"yrms"</span>].append(np.sqrt(cov_matrix[<span class="dv">2</span>, <span class="dv">2</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Okay, we’re ready to run the benchmark. We’ll consider a long bunch of protons at 1 GeV kinetic energy traveling through a FODO lattice of length 5 meters. The phase advance is 85 degrees in both planes. The covariance matrix of the transverse distribution is set to “match” the lattice without space charge; this means that, without space charge, the beam distribution returns to its initial state after one lattice period. With space charge, the beam will be mismatched. The longitudinal distribution is uniform in <span class="math inline">\(z\)</span> with zero spread in particle energies, meaning that space charge forces only affect the transverse distribution.</p>
 <p>We’ll track the bunch through five lattice periods and record the rms beam size as a function of distance, comparing the envelope solver predictions to PIC predictions. Since the space charge forces are completely transverse, we’ll use a 2D space charge solver.</p>
 <div id="cell-21" class="cell" data-execution_count="38">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Settings</span></span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Settings</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>periods <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>path_length_max <span class="op">=</span> <span class="fl">0.10</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>mass <span class="op">=</span> <span class="fl">0.938</span>  <span class="co"># [GeV]</span></span>
@@ -1244,7 +1241,7 @@ r_y''(s) &amp;= \kappa(s) r_y(s) + \frac{\varepsilon_y^2}{r_y(s)^3} - \frac{2Q}{
 <span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">"x rms [mm]"</span>)</span>
 <span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">"y rms [mm]"</span>)</span>
 <span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].legend(loc<span class="op">=</span><span class="st">"upper right"</span>, labels<span class="op">=</span>[<span class="st">"PIC"</span>, <span class="st">"ENV"</span>])</span>
-<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1328,14 +1325,13 @@ r_y''(s) &amp;= \kappa(s) r_y(s) + \frac{\varepsilon_y^2}{r_y(s)^3} - \frac{2Q}{
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
