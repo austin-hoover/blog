@@ -1,3 +1,15 @@
+- title: "Numerical Recipes"
+  author: William Press
+  categories:
+    - algorithms
+    - computational physics
+
+- title: "Introduction to Plasma Theory"
+  author: Dwight Nicholson
+  categories:
+    - physics
+    - plasma physics
+
 - title: "The Quiet American"
   author: Graham Greene
   categories:
