@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.23">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,18 +69,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d329e753491efaeac79c98c4b193a686.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6e03bc272f1cdef1d8296ac38e217ebd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-34b54161b321180ab073507ff9230d2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1c30796a6f707f67558b23278592a34c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-61cad99fa7c7aee1e5b9756405187482.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1c30796a6f707f67558b23278592a34c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -147,7 +148,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -334,6 +335,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Austin’s Blog</span>
     </a>
@@ -421,16 +424,16 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="charge-exchange-injection">Charge-exchange injection</h2>
 <p>One method to create high-intensity hadron beams is charge-exchange injection: negatively charged particles are repeatedly accelerated in a linear accelerator (linac) and injected into a circular accelerator (ring), accumulating charge in the ring over time. I created a simple animation to visualize this process.</p>
 <div id="3608f0ca-e375-4662-a0e7-475087492780" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> truncnorm</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> animation</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> proplot <span class="im">as</span> pplt</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>And some helper functions.</p>
 <div id="6055f2f8-f5c5-4b1d-98e7-eae82d7a4c35" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rotation_matrix(angle):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rotation_matrix(angle):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Clockwise rotation matrix."""</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    cs, sn <span class="op">=</span> np.cos(angle), np.sin(angle)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array([[cs, sn], [<span class="op">-</span>sn, cs]])</span>
@@ -438,11 +441,11 @@ window.Quarto = {
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="bu">apply</span>(M, X):</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Apply matrix `M` to each row of `X`."""</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.apply_along_axis(<span class="kw">lambda</span> row: np.matmul(M, row), <span class="dv">1</span>, X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.apply_along_axis(<span class="kw">lambda</span> row: np.matmul(M, row), <span class="dv">1</span>, X)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The Bunch class stores the <span class="math inline">\(x\)</span>, <span class="math inline">\(x'\)</span>, and <span class="math inline">\(z\)</span> coordinates, which are measured relative to the bunch centroid. It also stores <span class="math inline">\(s\)</span>, the location of the bunch center along the beam line. To transport the beam, we just increase <span class="math inline">\(s\)</span>. We’ll let the particles perform harmonic oscillations in the transverse plane. The only tricky part is to convert to an aerial view and to bend the circulating beam around the ring.</p>
 <div id="4aee665f-b35c-4986-8087-951cca210479" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Bunch:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Bunch:</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Class to store bunch coordinates.</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Attributes</span></span>
@@ -537,11 +540,11 @@ window.Quarto = {
 <span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>        R <span class="op">=</span> rotation_matrix(phi)</span>
 <span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>        coords <span class="op">=</span> np.vstack([x, y]).T</span>
 <span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>        coords <span class="op">=</span> <span class="bu">apply</span>(R, coords)</span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> coords</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> coords</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>To run the “simulation”, we will create two bunches: the first circulates in the ring, and the second is repeatedly stepped through the linac. After one revolution, the second bunch gives its particles to the first bunch.</p>
 <div id="315c0550-b32f-474c-9db3-04f8e4cc3649" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Settings</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Settings</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>n_turns <span class="op">=</span> <span class="dv">6</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>n_steps <span class="op">=</span> <span class="dv">50</span>  <span class="co"># steps per turn.</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>ring_length <span class="op">=</span> <span class="fl">2.0</span> <span class="op">*</span> np.pi</span>
@@ -565,13 +568,13 @@ window.Quarto = {
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        lcoords.append(lbunch.global_coords_line(x0, y0))</span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        rcoords.append(rbunch.global_coords_ring(ring_length))</span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    rbunch.X <span class="op">=</span> np.vstack([rbunch.X, lbunch.X])</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    lbunch.<span class="fu">__init__</span>(n, zrms, aspect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    lbunch.<span class="fu">__init__</span>(n, zrms, aspect)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Here is the animation:</p>
 <div id="54201df0-1d65-48d3-9170-bf248a8c0c61" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(figwidth<span class="op">=</span><span class="fl">6.7</span>, figheight<span class="op">=</span><span class="fl">3.6</span>, aspect<span class="op">=</span><span class="fl">1.0</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> pplt.subplots(figwidth<span class="op">=</span><span class="fl">6.7</span>, figheight<span class="op">=</span><span class="fl">3.6</span>, aspect<span class="op">=</span><span class="fl">1.0</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>kws <span class="op">=</span> <span class="bu">dict</span>(zorder<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">"black"</span>, lw<span class="op">=</span><span class="fl">0.75</span>, alpha<span class="op">=</span><span class="fl">0.06</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="op">-</span>ring_length, <span class="fl">0.0</span>], [<span class="fl">1.0</span>, <span class="fl">1.0</span>], <span class="op">**</span>kws)</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>psi <span class="op">=</span> np.linspace(<span class="fl">0.0</span>, <span class="fl">2.0</span> <span class="op">*</span> np.pi, <span class="dv">1000</span>)</span>
@@ -598,7 +601,7 @@ window.Quarto = {
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>frames <span class="op">=</span> n_steps <span class="op">*</span> n_turns <span class="op">+</span> <span class="dv">1</span></span>
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>fps <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> (frames <span class="op">/</span> n_turns)</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>anim <span class="op">=</span> animation.FuncAnimation(fig, update, frames<span class="op">=</span>frames, interval<span class="op">=</span>(<span class="fl">1000.0</span> <span class="op">/</span> fps))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>anim <span class="op">=</span> animation.FuncAnimation(fig, update, frames<span class="op">=</span>frames, interval<span class="op">=</span>(<span class="fl">1000.0</span> <span class="op">/</span> fps))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -634,7 +637,7 @@ window.Quarto = {
 <p>Realistic painting simulations take a long time. I sometimes just want to see the turn-by-turn distribution without particle interactions or nonlinear effects. In this case, propagating the beam through the ring reduces to matrix multiplication, and if we view the distribution in normalized <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> and <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> phase space, the transfer matrix reduces to a rotation matrix in those planes. The rotation angle is <span class="math inline">\(2\pi\nu_x\)</span> in the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> plane and <span class="math inline">\(2\pi\nu_y\)</span> in the vertical plane, where <span class="math inline">\(\nu_{x}\)</span> and <span class="math inline">\(\nu_y\)</span> are the number of phase space oscillations per turn in either plane.</p>
 <p>This can still take a while if many particles are used — the circulating beam needs to be rotated in the transverse plane on each turn. We can reduce the time in the following way. Assume we want to know the distribution on turn <span class="math inline">\(t\)</span>. First, generate <span class="math inline">\(t\)</span> minipulses from the linac and put them at the origin. Second, slide each minipulse to its final amplitude using Eq.<span class="math inline">\(~\)</span>(1) or Eq.<span class="math inline">\(~\)</span>(2). Third, rotate each minipulse in <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> and <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> according to when it was injected: the first minipulse does <span class="math inline">\(t\)</span> turns, the second does <span class="math inline">\(t - 1\)</span> turns, etc. until the last minipulse, which doesn’t move. The following Painter class performs these steps.</p>
 <div id="814d8e3a-f5b6-4adf-8070-8c040a902e0a" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Painter:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Painter:</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Class to illustrate phase space painting.</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">    (Linear approximation, non-interacting particles, normalized phase space.)</span></span>
@@ -724,11 +727,11 @@ window.Quarto = {
 <span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>            M[:<span class="dv">2</span>, :<span class="dv">2</span>] <span class="op">=</span> rotation_matrix(<span class="fl">2.0</span> <span class="op">*</span> np.pi <span class="op">*</span> nux <span class="op">*</span> _turns)</span>
 <span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>            M[<span class="dv">2</span>:, <span class="dv">2</span>:] <span class="op">=</span> rotation_matrix(<span class="fl">2.0</span> <span class="op">*</span> np.pi <span class="op">*</span> nuy <span class="op">*</span> _turns)</span>
 <span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>            X.append(<span class="bu">apply</span>(M, X0))</span>
-<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.vstack(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.vstack(X)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>We’ll also need a method to plot the 2D projections of the 4D phase space distribution during injection.</p>
 <div id="e6a2f5ed-7aec-4c16-b802-f745caef0f77" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_projections(coords, method, painter):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_projections(coords, method, painter):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    limits <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> [(<span class="op">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>)]</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    indices <span class="op">=</span> [(<span class="dv">0</span>, <span class="dv">2</span>), (<span class="dv">0</span>, <span class="dv">1</span>), (<span class="dv">2</span>, <span class="dv">3</span>), (<span class="dv">0</span>, <span class="dv">3</span>), (<span class="dv">2</span>, <span class="dv">1</span>), (<span class="dv">1</span>, <span class="dv">3</span>)]</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    line_kws <span class="op">=</span> <span class="bu">dict</span>(color<span class="op">=</span><span class="st">"black"</span>, lw<span class="op">=</span><span class="fl">0.4</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
@@ -768,11 +771,11 @@ window.Quarto = {
 <span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>            )</span>
 <span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>            ax.axvline(xinj[i], <span class="op">**</span>line_kws)</span>
 <span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>            ax.axhline(xinj[j], <span class="op">**</span>line_kws)</span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> axs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> axs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Let’s first look at correlated painting. We’ll assume that the lattice is uncoupled and has unequal tunes.</p>
 <div id="f258d197-343d-4582-81d9-af06893ac324" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>nux <span class="op">=</span> <span class="fl">0.1810201</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>nux <span class="op">=</span> <span class="fl">0.1810201</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>nuy <span class="op">=</span> nux <span class="op">-</span> <span class="fl">0.143561</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>n_turns <span class="op">=</span> <span class="dv">3000</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>turns_list <span class="op">=</span> np.linspace(<span class="dv">100</span>, n_turns <span class="op">-</span> <span class="dv">1</span>, <span class="dv">5</span>).astype(<span class="bu">int</span>)</span>
@@ -782,7 +785,7 @@ window.Quarto = {
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>method <span class="op">=</span> <span class="st">'correlated'</span></span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>coords <span class="op">=</span> [painter.paint(nux, nuy, turns, method) <span class="cf">for</span> turns <span class="kw">in</span> turns_list]</span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>axs <span class="op">=</span> plot_projections(coords, method, painter)</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(suptitle<span class="op">=</span><span class="st">'Correlated painting'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(suptitle<span class="op">=</span><span class="st">'Correlated painting'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -794,11 +797,11 @@ window.Quarto = {
 <p>All plots are shown in the rest frame of the circulating beam at a fixed position in the ring; new particles are injected at the intersection of the faint horizontal and vertical lines. The reason for the square root time-dependence was to create the uniform density ellipses in <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> and <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>. The <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> distriubtion is rectangular because of the unequal tunes. Interestingly, there are nonzero higher-order correlations between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, as seen in the higher density cross. The distribution will not look exactly like this during real injection since space charge and other nonlinear effects will perturb the particle oscillations; however, this large peak density is not ideal. For example, at the Spallation Neutron Source (SNS), it is important to minimize the peak density of the beam when it collides with the liquid mercury target. Also, the electric field within the beam in the figure has a nonlinear dependence on the particle coordinates, leading to other undesirable effects. Therefore, the SNS uses correlated painting with an initial offset, creating a hollow beam that eventually fills in during accumulation. The final beam has a more uniform density.</p>
 <p>Let’s now look at anti-correlated painting.</p>
 <div id="28f1724f-0887-4e2e-9b88-a3e4eb71eda0" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>method <span class="op">=</span> <span class="st">'anti-correlated'</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>coords <span class="op">=</span> [painter.paint(nux, nuy, turns, method) <span class="cf">for</span> turns <span class="kw">in</span> turns_list]</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>axs <span class="op">=</span> plot_projections(coords, method, painter)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(suptitle<span class="op">=</span><span class="st">'Anti-correlated painting'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(suptitle<span class="op">=</span><span class="st">'Anti-correlated painting'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -815,10 +818,10 @@ window.Quarto = {
 <p>Here <span class="math inline">\(\mathbf{x} = (x, x', y, y')^T\)</span>, <span class="math inline">\(\mathbf{v}_l\)</span> is the eigenvector, <span class="math inline">\(J_l\)</span> is an amplitude, <span class="math inline">\(\psi_l\)</span> is a phase, <span class="math inline">\(Re\{z\}\)</span> selects the real component of <span class="math inline">\(z\)</span>, and <span class="math inline">\(l = 1,2\)</span>. This method takes advantage of coupled motion in the ring and generates a Danilov distribution, which has many of the same attractive properties as the KV distribution. The main difference is that it has angular momentum.</p>
 <p>There is more to say about this method, but for now, let’s just look at the distribution it creates in the linear approximation. One way to perform elliptical painting is by setting equal tunes in the ring. In this case, one eigenvector is <span class="math inline">\(\mathbf{v} = (x_{max}, 0, 0, y_{max}')^T\)</span>.</p>
 <div id="d6f09a08-4013-4fc5-9837-462f307e464e" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>method <span class="op">=</span> <span class="st">'correlated'</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>method <span class="op">=</span> <span class="st">'correlated'</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>painter.set_xmax([<span class="fl">1.0</span>, <span class="fl">0.0</span>, <span class="fl">0.0</span>, <span class="fl">1.0</span>])</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>coords <span class="op">=</span> [painter.paint(nux, nux, turns, method) <span class="cf">for</span> turns <span class="kw">in</span> turns_list]</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>axs <span class="op">=</span> plot_projections(coords, method, painter)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>axs <span class="op">=</span> plot_projections(coords, method, painter)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -897,13 +900,14 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

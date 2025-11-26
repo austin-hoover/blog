@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.23">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,18 +69,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d329e753491efaeac79c98c4b193a686.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6e03bc272f1cdef1d8296ac38e217ebd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-34b54161b321180ab073507ff9230d2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1c30796a6f707f67558b23278592a34c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-61cad99fa7c7aee1e5b9756405187482.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1c30796a6f707f67558b23278592a34c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -147,7 +148,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -334,6 +335,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Austin’s Blog</span>
     </a>
@@ -494,7 +497,7 @@ window.Quarto = {
 <div id="cell-17" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Imports</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> Cython</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> Cython</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext cython</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -509,12 +512,12 @@ window.Quarto = {
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> odeint</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> truncnorm</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm.notebook <span class="im">import</span> trange </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm.notebook <span class="im">import</span> trange </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>Let’s first create a <code>Bunch</code> class, which is a simple container for the bunch coordinates.</p>
 <div id="cell-20" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Bunch:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Bunch:</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Container for four-dimensional phase space distribution.</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Attributes</span></span>
@@ -559,7 +562,7 @@ window.Quarto = {
 <span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Get extreme x and y coorinates."""</span></span>
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.xmin, <span class="va">self</span>.ymin <span class="op">=</span> np.<span class="bu">min</span>(<span class="va">self</span>.positions, axis<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.xmax, <span class="va">self</span>.ymax <span class="op">=</span> np.<span class="bu">max</span>(<span class="va">self</span>.positions, axis<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.xlim, <span class="va">self</span>.ylim <span class="op">=</span> (<span class="va">self</span>.xmin, <span class="va">self</span>.xmax), (<span class="va">self</span>.ymin, <span class="va">self</span>.ymax)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.xlim, <span class="va">self</span>.ylim <span class="op">=</span> (<span class="va">self</span>.xmin, <span class="va">self</span>.xmax), (<span class="va">self</span>.ymin, <span class="va">self</span>.ymax)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <section id="weighting" class="level3">
 <h3 class="anchored" data-anchor-id="weighting">Weighting</h3>
@@ -567,7 +570,7 @@ window.Quarto = {
 <div id="cell-23" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> shape_func(u, v, cell_width, method<span class="op">=</span><span class="st">'NGP'</span>):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> shape_func(u, v, cell_width, method<span class="op">=</span><span class="st">'NGP'</span>):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    S, diff <span class="op">=</span> <span class="fl">0.0</span>, np.<span class="bu">abs</span>(u <span class="op">-</span> v)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> method.upper() <span class="op">==</span> <span class="st">'NGP'</span>:</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        S <span class="op">=</span> <span class="fl">1.0</span> <span class="cf">if</span> diff <span class="op">&lt;</span> (<span class="fl">0.5</span> <span class="op">*</span> cell_width) <span class="cf">else</span> <span class="fl">0.0</span></span>
@@ -582,7 +585,7 @@ window.Quarto = {
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    ax.plot(xvals, densities, color<span class="op">=</span><span class="st">'black'</span>, ls<span class="op">=</span>[<span class="st">'-'</span>, <span class="st">':'</span>][i], label<span class="op">=</span>method,)</span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">format</span>(ylim<span class="op">=</span>(<span class="fl">0.0</span>, <span class="fl">1.1</span>), xlabel<span class="op">=</span><span class="st">'($x - x_k) </span><span class="er">\</span><span class="st">,/</span><span class="er">\</span><span class="st">, </span><span class="er">\</span><span class="st">Delta x$'</span>, ylabel<span class="op">=</span><span class="st">'Density'</span>)</span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'r'</span>, ncols<span class="op">=</span><span class="dv">1</span>, framealpha<span class="op">=</span><span class="fl">0.0</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -594,7 +597,7 @@ window.Quarto = {
 <p>The NGP method leads to a discontinuous boundary while the CIC method leads to a continous boundary (but discontinous derivative). There are also higher order methods which lead to a smooth boundary, but I don’t cover those here.</p>
 <p>We also need to perform the inverse operation: given the electric field at each grid point, interpolate the value at each particle position. The same method applies here. NGP just uses the electric field at the nearest grid point, while CIC weights the four nearest grid points. The following <code>Grid</code> class implements the CIC method. Notice that <a href="https://cython.readthedocs.io/en/latest/src/userguide/numpy_tutorial.html">Cython</a> is used in the for-loop in the <code>distribute</code> method. I couldn’t figure out a way to perform this operation with the loop, and in pure Python it took about 90% of the runtime for a single simulation step. Using Cython gave a significant performance boost.</p>
 <div id="cell-27" class="cell" data-scrolled="true" data-tags="[]" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>cython</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>cython</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.interpolate <span class="im">import</span> RegularGridInterpolator</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -701,13 +704,13 @@ window.Quarto = {
 <span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a><span class="co">        gradx, grady : ndarray, shape (Nx, Ny)</span></span>
 <span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a><span class="co">            The x and y gradient at each grid point.</span></span>
 <span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
-<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.gradient(grid_vals, <span class="va">self</span>.dx, <span class="va">self</span>.dy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.gradient(grid_vals, <span class="va">self</span>.dx, <span class="va">self</span>.dy)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>It should also be mentioned that the field interpolation method should be the same as the charge deposition method; if this is not true, it is possible for a particle to exert a force on itself! Let’s test the method with a <span class="math inline">\(64 \times 64\)</span> grid.</p>
 <div id="cell-29" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2D bunch.</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2D bunch.</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">1</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>n_parts <span class="op">=</span> <span class="dv">100000</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>_X <span class="op">=</span> np.random.normal(scale<span class="op">=</span><span class="fl">1.0</span>, size<span class="op">=</span>(n_parts, <span class="dv">2</span>))</span>
@@ -746,7 +749,7 @@ window.Quarto = {
 <span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].pcolormesh(grid.x, grid.y, rho.T, cmap<span class="op">=</span><span class="st">'mono_r'</span>)</span>
 <span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(xlim<span class="op">=</span>grid.xlim, ylim<span class="op">=</span>grid.ylim)</span>
 <span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].<span class="bu">format</span>(title<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>n_samp<span class="sc">}</span><span class="ss"> random samples'</span>)</span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].<span class="bu">format</span>(title<span class="op">=</span><span class="st">'CIC weighting'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].<span class="bu">format</span>(title<span class="op">=</span><span class="st">'CIC weighting'</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -794,7 +797,7 @@ window.Quarto = {
 <p>where the hat represents the discrete Fourier transform. The time complexity can be reduced to <span class="math inline">\(O\left(N \log N\right)\)</span> with the <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">FFT</a> algorithm at our disposal.</p>
 <p>There is a caveat to this method: <a href="#eq-Poisson_Green" class="quarto-xref">Equation&nbsp;10</a> must be a circular convolution in order to use the FFT algorithm, which means <span class="math inline">\(G\)</span> must be periodic. But the beam is in free space (we’ve neglected any conducting boundary), so this is not true. We can make it true by doubling the grid size in each dimension. We then make <span class="math inline">\(G\)</span> a mirror reflection in the new quadrants so that it is periodic, and also set the charge density equal to zero in these regions. After running the method on this larger grid, the potential in the new quadrants will be unphysical; however, the potential in the original quadrant will be correct. There are also some tricks we can play to reduce the space complexity, and in the end doubling the grid size is not much of a price to pay for the gain in speed. The method is implemented in the <code>PoissonSolver</code> class.</p>
 <div id="cell-35" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PoissonSolver:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PoissonSolver:</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Class to solve Poisson's equation on a 2D grid.</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Attributes</span></span>
@@ -840,13 +843,13 @@ window.Quarto = {
 <span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.rho[:Nx, :Ny] <span class="op">=</span> rho</span>
 <span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.compute_greens_function()</span>
 <span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.phi <span class="op">=</span> ifft2(fft2(<span class="va">self</span>.G) <span class="op">*</span> fft2(<span class="va">self</span>.rho)).real</span>
-<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.phi[:Nx, :Ny]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.phi[:Nx, :Ny]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Running the algorithm gives the following potential on the doubled grid:</p>
 <div id="cell-37" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>solver <span class="op">=</span> PoissonSolver(grid)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>solver <span class="op">=</span> PoissonSolver(grid)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>phi <span class="op">=</span> solver.get_potential(rho)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> pplt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, figwidth<span class="op">=</span><span class="fl">8.0</span>, share<span class="op">=</span><span class="va">False</span>, space<span class="op">=</span><span class="dv">5</span>)</span>
@@ -858,7 +861,7 @@ window.Quarto = {
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> xy <span class="kw">in</span> [(<span class="fl">0.65</span>, <span class="fl">0.75</span>), (<span class="fl">0.15</span>, <span class="fl">0.75</span>), (<span class="fl">0.65</span>, <span class="fl">0.25</span>)]:</span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        ax.annotate(<span class="st">'unphysical'</span>, xy<span class="op">=</span>xy, xycoords<span class="op">=</span><span class="st">'axes fraction'</span>, c<span class="op">=</span><span class="st">'w'</span>)</span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].<span class="bu">format</span>(title<span class="op">=</span><span class="vs">r'Density </span><span class="dv">$</span><span class="ch">\r</span><span class="vs">ho</span><span class="dv">$</span><span class="vs">'</span>)</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].<span class="bu">format</span>(title<span class="op">=</span><span class="vs">r'Potential </span><span class="dv">$</span><span class="er">\</span><span class="vs">phi</span><span class="dv">$</span><span class="vs">'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].<span class="bu">format</span>(title<span class="op">=</span><span class="vs">r'Potential </span><span class="dv">$</span><span class="er">\</span><span class="vs">phi</span><span class="dv">$</span><span class="vs">'</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -875,7 +878,7 @@ window.Quarto = {
 <div id="cell-40" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Ex, Ey <span class="op">=</span> grid.gradient(<span class="op">-</span>phi)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Ex, Ey <span class="op">=</span> grid.gradient(<span class="op">-</span>phi)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> pplt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, figwidth<span class="op">=</span><span class="fl">7.5</span>, sharey<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax, E <span class="kw">in</span> <span class="bu">zip</span>(axs, [Ex, Ey]):</span>
@@ -886,7 +889,7 @@ window.Quarto = {
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>fig.colorbar(m, width<span class="op">=</span><span class="st">'1.25em'</span>)</span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="st">'x'</span>, ylabel<span class="op">=</span><span class="st">'y'</span>)</span>
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].<span class="bu">format</span>(title<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">E_x</span><span class="dv">$</span><span class="vs"> / max</span><span class="kw">(</span><span class="dv">$</span><span class="vs">E_x</span><span class="dv">$</span><span class="kw">)</span><span class="vs">'</span>)</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].<span class="bu">format</span>(title<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">E_y</span><span class="dv">$</span><span class="vs"> / max</span><span class="kw">(</span><span class="dv">$</span><span class="vs">E_y</span><span class="dv">$</span><span class="kw">)</span><span class="vs">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].<span class="bu">format</span>(title<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">E_y</span><span class="dv">$</span><span class="vs"> / max</span><span class="kw">(</span><span class="dv">$</span><span class="vs">E_y</span><span class="dv">$</span><span class="kw">)</span><span class="vs">'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -899,8 +902,8 @@ window.Quarto = {
 </div>
 <p>Finally, the value of the electric field at each particle position can be interpolated from the grid.</p>
 <div id="cell-42" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Ex_int <span class="op">=</span> grid.interpolate(Ex, bunch.positions)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Ey_int <span class="op">=</span> grid.interpolate(Ey, bunch.positions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Ex_int <span class="op">=</span> grid.interpolate(Ex, bunch.positions)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Ey_int <span class="op">=</span> grid.interpolate(Ey, bunch.positions)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="particle-mover" class="level3">
@@ -935,7 +938,7 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
 </ol>
 <p>We’ll first create a <code>History</code> class which stores the beam moments or phase space coordinates.</p>
 <div id="cell-51" class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> History:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> History:</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Class to store bunch data over time.</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Atributes</span></span>
@@ -967,11 +970,11 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
 <span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> package(<span class="va">self</span>):</span>
 <span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.moments <span class="op">=</span> np.array(<span class="va">self</span>.moments)</span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.coords <span class="op">=</span> np.array(<span class="va">self</span>.coords)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.coords <span class="op">=</span> np.array(<span class="va">self</span>.coords)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Now we’ll create a <code>Simulation</code> class.</p>
 <div id="cell-53" class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Simulation:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Simulation:</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Class to simulate the evolution of a charged particle bunch in free space.</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Attributes</span></span>
@@ -1066,7 +1069,7 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
 <span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.s <span class="op">+=</span> <span class="va">self</span>.step_size</span>
 <span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.steps_performed <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.store()</span>
-<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.history.package()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.history.package()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="benchmark-freely-expanding-vlasov-equilibrium-distribution" class="level3">
@@ -1075,7 +1078,7 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
 <p><span class="math display">\[ a'' = \frac{2Q}{a + b} + \frac{\varepsilon_x}{a^3}, \]</span> <span class="math display">\[ b'' = \frac{2Q}{a + b} + \frac{\varepsilon_y}{b^3}. \tag{18}\]</span></p>
 <p>These are known as the <em>KV envelope equations</em> or simply <em>envelope equations</em>. <span class="math inline">\(Q\)</span>, called the <em>perveance</em>, is a dimensionless number which is proportional to the beam intensity but reduced by the beam energy. We can think of this constant as a measure of the space charge strength. The <span class="math inline">\(\varepsilon_x\)</span> and <span class="math inline">\(\varepsilon_y\)</span> terms are called the <em>emittances</em> and determine the area occupied by the beam in <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> and <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> phase space. For example, a beam with all particles sitting perfectly still in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane has no emittance, but a beam which is instead spreading out has a nonzero emittance. These emittances will also be conserved for the KV distribution. The following function integrates the envelope equations.</p>
 <div id="cell-57" class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> track_env(X, positions, perveance<span class="op">=</span><span class="fl">0.0</span>):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> track_env(X, positions, perveance<span class="op">=</span><span class="fl">0.0</span>):</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Track beam moments (assuming KV distribution) through free space.</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
@@ -1107,11 +1110,11 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
 <span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>        envp[<span class="dv">3</span>] <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> perveance<span class="op">/</span>(a <span class="op">+</span> b) <span class="op">+</span> epsy<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> b<span class="op">**</span><span class="dv">3</span></span>
 <span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> envp</span>
 <span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> odeint(derivs, [a, ap, b, bp], positions, atol<span class="op">=</span><span class="fl">1e-14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> odeint(derivs, [a, ap, b, bp], positions, atol<span class="op">=</span><span class="fl">1e-14</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Some care must be taken in the choice of simulation parameters; we need a fine enough grid to resolve the hard edge of the beam and enough macroparticles per grid cell to collect good statistics. I chose what I thought was reasonable: 128,000 macroparticles, a step size of 2.5 cm, and a <span class="math inline">\(128 \times 128\)</span> grid. Let’s create and track four identical KV distributions, each with a different intensity.</p>
 <div id="cell-59" class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bunch parameters</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bunch parameters</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>nparts <span class="op">=</span> <span class="dv">128000</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>bunch_length <span class="op">=</span> <span class="fl">250.0</span> <span class="co"># [m]</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>intensities <span class="op">=</span> [<span class="fl">0.0</span>, <span class="fl">10.0e14</span>, <span class="fl">20.0e14</span>, <span class="fl">40.0e14</span>]</span>
@@ -1150,12 +1153,12 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
 <span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>    bunch.fill(np.copy(X))</span>
 <span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>    sim <span class="op">=</span> Simulation(bunch, distance, step_size, grid_size, meas_every<span class="op">=</span>meas_every, samples<span class="op">=</span>samples)</span>
 <span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>    sim.run()</span>
-<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>    sims.append(sim)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>    sims.append(sim)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="cell-60" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>bunch_positions <span class="op">=</span> sims[<span class="dv">0</span>].history.moment_positions</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>bunch_positions <span class="op">=</span> sims[<span class="dv">0</span>].history.moment_positions</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>env_positions <span class="op">=</span> np.linspace(<span class="dv">0</span>, distance, <span class="dv">400</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>rms_sizes_lists <span class="op">=</span> {<span class="st">'bunch'</span>:[], <span class="st">'env'</span>:[]}</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> sim <span class="kw">in</span> sims:</span>
@@ -1178,14 +1181,14 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
 <span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].legend(lines, [<span class="ss">f'$I/I_0$ = </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span> <span class="cf">for</span> i <span class="kw">in</span> (<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>)], ncols<span class="op">=</span><span class="dv">1</span>, fontsize<span class="op">=</span><span class="dv">7</span>)</span>
 <span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_title(<span class="st">'Horizontal'</span>)</span>
 <span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_title(<span class="st">'Vertical'</span>)</span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">10.5</span>), ylabel<span class="op">=</span><span class="st">'RMS beam size [$mm$]'</span>, xlabel<span class="op">=</span><span class="st">'Position [m]'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(xlim<span class="op">=</span>(<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">10.5</span>), ylabel<span class="op">=</span><span class="st">'RMS beam size [$mm$]'</span>, xlabel<span class="op">=</span><span class="st">'Position [m]'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>This plot shows the horizontal and vertical beam size over time for each of the four chosen beam intensities. The solid lines are the result of integrating the envelope equations, while the dots are the result of the PIC calculation. Notice that the beam expands on its own due to the nonzero emittance and that the effect of space charge is to increase the expansion rate. It seems to be quite accurate over this distance, and the runtime is acceptable for my purposes. Here is the evolution of 10,000 randomly sampled macroparicles compared with the KV envelope.</p>
 <div id="cell-62" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get coordinates</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get coordinates</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>coords_list <span class="op">=</span> [sim.history.coords <span class="cf">for</span> sim <span class="kw">in</span> sims]</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>positions <span class="op">=</span> sims[<span class="dv">0</span>].history.coord_positions</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>umax <span class="op">=</span> <span class="fl">1.25</span> <span class="op">*</span> <span class="bu">max</span>([np.<span class="bu">max</span>(np.<span class="bu">max</span>(coords, axis<span class="op">=</span><span class="dv">1</span>)[:, [<span class="dv">0</span>, <span class="dv">2</span>]]) <span class="cf">for</span> coords <span class="kw">in</span> coords_list])</span>
@@ -1219,7 +1222,7 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
 <span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>    axs[<span class="dv">0</span>].set_title(<span class="st">'s = </span><span class="sc">{:.2f}</span><span class="st"> m'</span>.<span class="bu">format</span>(positions[t]))</span>
 <span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>frames <span class="op">=</span> <span class="bu">len</span>(coords_list[<span class="dv">0</span>]) <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>anim <span class="op">=</span> animation.FuncAnimation(fig, update, frames<span class="op">=</span>frames, interval<span class="op">=</span><span class="fl">1000.0</span> <span class="op">/</span> <span class="fl">20.0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>anim <span class="op">=</span> animation.FuncAnimation(fig, update, frames<span class="op">=</span>frames, interval<span class="op">=</span><span class="fl">1000.0</span> <span class="op">/</span> <span class="fl">20.0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -1307,13 +1310,14 @@ m \left(\frac{\mathbf{v}_{i+1/2} - \mathbf{v}_{i-1/2}}{\Delta_t}\right) = \mathb
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

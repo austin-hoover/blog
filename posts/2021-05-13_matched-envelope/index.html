@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.23">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -89,18 +89,19 @@ div.csl-indent {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d329e753491efaeac79c98c4b193a686.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-59898bd1c6b9d2bb783127feaa000c76.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6e03bc272f1cdef1d8296ac38e217ebd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-34b54161b321180ab073507ff9230d2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-0c2b74b3e6b161bb0120eb18a8af25a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1c30796a6f707f67558b23278592a34c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-61cad99fa7c7aee1e5b9756405187482.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1c30796a6f707f67558b23278592a34c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -167,7 +168,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -354,6 +355,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Austin’s Blog</span>
     </a>
@@ -459,7 +462,7 @@ window.Quarto = {
 <div id="cell-7" class="cell">
 <details class="code-fold">
 <summary>Imports</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#hide</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#hide</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> animation</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.lines <span class="im">import</span> Line2D</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Ellipse</span>
@@ -467,13 +470,13 @@ window.Quarto = {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> proplot <span class="im">as</span> pplt</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> psdist.visualization <span class="im">as</span> psv</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> odeint</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> odeint</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div id="cell-9" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a uniform density distribution.</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a uniform density distribution.</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">6</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">int</span>(<span class="fl">1e4</span>)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">2.0</span> <span class="op">*</span> np.sqrt(np.random.uniform(size<span class="op">=</span>n))</span>
@@ -517,7 +520,7 @@ window.Quarto = {
 <span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    yticks<span class="op">=</span>[<span class="fl">0.0</span>],</span>
 <span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    ygrid<span class="op">=</span><span class="va">True</span>,</span>
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -576,7 +579,7 @@ f(x, p_x, y, p_y) = \delta(x^2 + {p_y}^2 + y^2 + {p_y}^2 - 1),
 <div id="cell-24" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.random.normal(size<span class="op">=</span>(<span class="bu">int</span>(<span class="fl">7e6</span>), <span class="dv">4</span>))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.random.normal(size<span class="op">=</span>(<span class="bu">int</span>(<span class="fl">7e6</span>), <span class="dv">4</span>))</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.apply_along_axis(<span class="kw">lambda</span> x: x <span class="op">/</span> np.linalg.norm(x), <span class="dv">1</span>, X)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> psv.cloud.corner(</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    X,</span>
@@ -586,7 +589,7 @@ f(x, p_x, y, p_y) = \delta(x^2 + {p_y}^2 + y^2 + {p_y}^2 - 1),
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    rms_ellipse<span class="op">=</span><span class="va">True</span>,</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    rms_ellipse_kws<span class="op">=</span><span class="bu">dict</span>(level<span class="op">=</span><span class="fl">2.0</span>),</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -605,7 +608,7 @@ f(x, p_x, y, p_y) = \delta(x^2 + {p_y}^2 + y^2 + {p_y}^2 - 1),
 <p>From here, one can derive a system of differential equations to evolve the distribution. This is an incredible simplification of the Vlasov-Poisson system. The equations track the beam <em>envelope</em>, the elliptical boundary containing the particles in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane. These envelope equations, as they’re called, have been important for understanding space charge effects. In addition to providing a theoretical benchmark for computer simulations, they capture the approximate behavior of more realistic beams in some cases.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> More details are in <span class="citation" data-cites="Lund2004">&nbsp;[<a href="#ref-Lund2004" role="doc-biblioref">4</a>]</span>.</p>
 <p>Let’s try integrating these equations in a simple periodic focusing system.</p>
 <div id="cell-28" class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fodo(s, quad_strength<span class="op">=</span><span class="fl">0.556</span>, cell_length<span class="op">=</span><span class="fl">5.0</span>):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fodo(s, quad_strength<span class="op">=</span><span class="fl">0.556</span>, cell_length<span class="op">=</span><span class="fl">5.0</span>):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> (s <span class="op">%</span> cell_length) <span class="op">/</span> cell_length</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    delta <span class="op">=</span> <span class="fl">0.125</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> s <span class="op">&lt;</span> delta <span class="kw">or</span> s <span class="op">&gt;</span> <span class="dv">1</span> <span class="op">-</span> delta:</span>
@@ -649,12 +652,12 @@ f(x, p_x, y, p_y) = \delta(x^2 + {p_y}^2 + y^2 + {p_y}^2 - 1),
 <span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>positions <span class="op">=</span> np.linspace(<span class="dv">0</span>, cell_length <span class="op">*</span> periods, npts)</span>
 <span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>Q <span class="op">=</span> <span class="fl">1.0e-5</span></span>
 <span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>sizes <span class="op">=</span> track_kv(params, positions, Q, fodo)</span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>sizes0 <span class="op">=</span> track_kv(params, positions, <span class="fl">0.0</span>, fodo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>sizes0 <span class="op">=</span> track_kv(params, positions, <span class="fl">0.0</span>, fodo)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="cell-29" class="cell" data-tags="[]">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> pplt.Cycle(<span class="st">"colorblind"</span>).by_key()[<span class="st">"color"</span>]</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> pplt.Cycle(<span class="st">"colorblind"</span>).by_key()[<span class="st">"color"</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>kws1 <span class="op">=</span> <span class="bu">dict</span>(fc<span class="op">=</span><span class="st">"lightgrey"</span>, lw<span class="op">=</span><span class="fl">0.75</span>, ec<span class="op">=</span><span class="st">"None"</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>kws2 <span class="op">=</span> <span class="bu">dict</span>(fill<span class="op">=</span><span class="va">False</span>, ls<span class="op">=</span><span class="st">"--"</span>, color<span class="op">=</span><span class="st">"k"</span>, lw<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>stride <span class="op">=</span> <span class="dv">10</span></span>
@@ -725,7 +728,7 @@ f(x, p_x, y, p_y) = \delta(x^2 + {p_y}^2 + y^2 + {p_y}^2 - 1),
 <span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>anim <span class="op">=</span> animation.FuncAnimation(</span>
 <span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>    fig, update, frames<span class="op">=</span><span class="bu">len</span>(positions[::stride]), interval<span class="op">=</span>(<span class="fl">1000.0</span> <span class="op">/</span> <span class="fl">14.0</span>)</span>
-<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -746,7 +749,7 @@ f(x, p_x, y, p_y) = \delta(p_x - e_{11} x - e_{12} y) \delta(p_y - e_{21} x - e_
 <div id="cell-35" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.random.normal(size<span class="op">=</span>(<span class="bu">int</span>(<span class="fl">7e6</span>), <span class="dv">4</span>))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.random.normal(size<span class="op">=</span>(<span class="bu">int</span>(<span class="fl">7e6</span>), <span class="dv">4</span>))</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.apply_along_axis(<span class="kw">lambda</span> x: x <span class="op">/</span> np.linalg.norm(x), <span class="dv">1</span>, X)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>X[:, <span class="dv">3</span>] <span class="op">=</span> <span class="op">+</span>X[:, <span class="dv">0</span>]</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>X[:, <span class="dv">1</span>] <span class="op">=</span> <span class="op">-</span>X[:, <span class="dv">2</span>]</span>
@@ -758,7 +761,7 @@ f(x, p_x, y, p_y) = \delta(p_x - e_{11} x - e_{12} y) \delta(p_y - e_{21} x - e_
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    rms_ellipse<span class="op">=</span><span class="va">True</span>,</span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    rms_ellipse_kws<span class="op">=</span><span class="bu">dict</span>(level<span class="op">=</span><span class="fl">2.0</span>),</span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -770,7 +773,7 @@ f(x, p_x, y, p_y) = \delta(p_x - e_{11} x - e_{12} y) \delta(p_y - e_{21} x - e_
 <p>In general, the particles in the beam swirl in a vortex pattern within an ellipse, always with a uniform density. It is also apparently possible to construct this type of vortex distribution in six-dimensional phase space, which is not true of the KV distribution.</p>
 <p>We can again derive equations for the elliptical beam envelope, but they are now going to include coupling between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. This is because the beam ellipse tiltes in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span>- plane, producing a term proportional to <span class="math inline">\(xy\)</span> in the electric field. More details can be found in<span class="citation" data-cites="Danilov2003">&nbsp;[<a href="#ref-Danilov2003" role="doc-biblioref">5</a>]</span>.</p>
 <div id="cell-40" class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_tilt_angle(a, b, e, f):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_tilt_angle(a, b, e, f):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> np.arctan2(<span class="fl">2.0</span> <span class="op">*</span> (a <span class="op">*</span> e <span class="op">+</span> b <span class="op">*</span> f), a<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> e<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> f<span class="op">**</span><span class="dv">2</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -823,12 +826,12 @@ f(x, p_x, y, p_y) = \delta(p_x - e_{11} x - e_{12} y) \delta(p_y - e_{21} x - e_
 <span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> np.array([<span class="fl">0.0179</span>, <span class="fl">0.0</span>, <span class="dv">0</span>, <span class="fl">0.0022</span>, <span class="dv">0</span>, <span class="op">-</span><span class="fl">0.0079</span>, <span class="fl">0.0051</span>, <span class="dv">0</span>])</span>
 <span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>positions <span class="op">=</span> np.linspace(<span class="fl">0.0</span>, <span class="fl">20.0</span>, <span class="dv">1000</span>)</span>
 <span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>sizes, radii, angles <span class="op">=</span> track_danilov(params, positions, Q, fodo)</span>
-<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>sizes0, radii0, angles0 <span class="op">=</span> track_danilov(params, positions, <span class="fl">0.0</span>, fodo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>sizes0, radii0, angles0 <span class="op">=</span> track_danilov(params, positions, <span class="fl">0.0</span>, fodo)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="cell-41" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>umin <span class="op">=</span> np.<span class="bu">min</span>(sizes)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>umin <span class="op">=</span> np.<span class="bu">min</span>(sizes)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>umax <span class="op">=</span> np.<span class="bu">max</span>(sizes)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>umax_pad <span class="op">=</span> <span class="fl">1.25</span> <span class="op">*</span> umax</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -902,7 +905,7 @@ f(x, p_x, y, p_y) = \delta(p_x - e_{11} x - e_{12} y) \delta(p_y - e_{21} x - e_
 <span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>anim <span class="op">=</span> animation.FuncAnimation(</span>
 <span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>    fig, update, frames<span class="op">=</span><span class="bu">len</span>(positions[::stride]), interval<span class="op">=</span>(<span class="fl">1000.0</span> <span class="op">/</span> <span class="fl">14.0</span>)</span>
-<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -1127,13 +1130,14 @@ f(x, p_x, y, p_y) = \delta(p_x - e_{11} x - e_{12} y) \delta(p_y - e_{21} x - e_
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
