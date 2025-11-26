@@ -1,3 +1,14 @@
+- title: "Breakneck"
+  author: Dan Wang
+  categories:
+    - china
+    - society
+
+- title: "Ficciones"
+  author: Jorge Luis Borges
+  categories:
+    - fiction
+
 - title: "Numerical Recipes"
   author: William Press
   categories:
@@ -38,13 +49,13 @@
   author: Frank Dikötter
   categories:
     - history
-    - China
+    - china
 
 - title: "Mao's Great Famine"
   author: Frank Dikötter
   categories:
     - history
-    - China
+    - china
 
 - title: "The Tragedy of Liberation"
   author: Frank Dikötter
@@ -79,7 +90,7 @@
   author: Hannah Arendt
   categories:
     - evil
-    - Holocaust
+    - holocaust
 
 - title: "Physics of Collective Beam Instabilities in High Energy Accelerators"
   author: A. Chao
@@ -142,40 +153,40 @@
   categories:
     - ethics
 
-- title: Exhalation
+- title: "Exhalation"
   author: Ted Chiang
   categories:
     - science fiction
 
-- title: Wealth, Poverty, and Politics
+- title: "Wealth, Poverty, and Politics"
   author: Thomas Sowell
   categories:
     - sociology
 
-- title: The Disappearance of Childhood
+- title: "The Disappearance of Childhood"
   author: Niel Postman
   categories:
     - sociology
 
-- title: Mere Christianity
+- title: "Mere Christianity"
   author: C. S. Lewis
   categories:
     - religion
     - christianity
 
-- title: Statistical Physics of Particles
+- title: "Statistical Physics of Particles"
   author: M. Kardar
   categories:
     - physics
     - statistical mechanics
 
-- title: Introduction to Thermal Physics
+- title: "Introduction to Thermal Physics"
   author: D. Schroeder
   categories:
     - physics
     - thermodynamics
 
-- title: Optical Coherence and Quantum Optics
+- title: "Optical Coherence and Quantum Optics"
   author: I. Mandel and E. Wolf
   categories:
     - physics
@@ -187,7 +198,7 @@
     - physics
     - quantum mechanics
 
-- title: Modern Quantum Mechanics
+- title: "Modern Quantum Mechanics"
   author: J. Sakurai
   categories:
     - physics
@@ -199,104 +210,104 @@
     - physics
     - history
 
-- title: Modern Elementary Particle Physics
+- title: "Modern Elementary Particle Physics"
   author: G. Kane
   categories:
     - physics
     - particle physics
 
-- title: Introduction to High Energy Physics
+- title: "Introduction to High Energy Physics"
   author: D. Perkins
   categories:
     - physics
     - particle physics
 
-- title: Introduction to Elementary Particle Physics
+- title: "Introduction to Elementary Particle Physics"
   author: R. Griffiths
   categories:
     - physics
     - particle physics
 
-- title: Classical Mechanics
+- title: "Classical Mechanics"
   author: J. Taylor
   categories:
     - physics
     - classical mechanics
 
-- title: Classical Mechanics
+- title: "Classical Mechanics"
   author: S. Goldstein
   categories:
     - physics
     - classical mechanics
 
-- title: Introduction to Electrodynamics
+- title: "Introduction to Electrodynamics"
   author: R. Griffiths
   categories:
     - physics
     - electromagnetism
 
-- title: Classical Electromagnetism
+- title: "Classical Electromagnetism"
   author: J. Franklin
   categories:
     - physics
     - electromagnetism
 
-- title: Classical Electrodynamics
+- title: "Classical Electrodynamics"
   author: J. Jackson
   categories:
     - physics
     - electromagnetism
 
-- title: Astrophysics in a Nutshell
+- title: "Astrophysics in a Nutshell"
   author: D. Maoz
   categories:
     - physics
     - astrophysics
 
-- title: Theory and Design of Charged Particle Beams
+- title: "Theory and Design of Charged Particle Beams"
   author: M. Reiser
   categories:
     - physics
     - accelerator physics
 
-- title: Space Charge Physics for Particle Accelerators
+- title: "Space Charge Physics for Particle Accelerators"
   author: I. Hofmann
   categories:
     - physics
     - accelerator physics
     - space charge
 
-- title: RF Linear Accelerators
+- title: "RF Linear Accelerators"
   author: T. Wangler
   categories:
     - physics
     - accelerator physics
 
-- title: Particle Accelerator Physics
+- title: "Particle Accelerator Physics"
   author: H. Wiedemann
   categories:
     - physics
     - accelerator physics
 
-- title: Measurement and Control of Charged Particle Beams
+- title: "Measurement and Control of Charged Particle Beams"
   author: M. Minty and F. Zimmerman
   categories:
     - physics
     - accelerator physics
 
-- title: Introduction to the Physics of High Energy Accelerators
+- title: "Introduction to the Physics of High Energy Accelerators"
   author: D. Edwards and M. Syphers
   categories:
     - physics
     - accelerator physics
 
-- title: Accelerator Physics
+- title: "Accelerator Physics"
   author: S. Y. Lee
   categories:
     - physics
     - accelerator physics
 
-- title: Time and Chance
+- title: "Time and Chance"
   author: David Albert
   categories:
     - philosophy
@@ -314,7 +325,7 @@
     - philosophy
     - science
 
-- title: The Emergent Multiverse
+- title: "The Emergent Multiverse"
   author: David Wallace
   categories:
     - philosophy
@@ -326,123 +337,123 @@
     - philosophy
     - religion
 
-- title: Five Proofs of the Existence of God
+- title: "Five Proofs of the Existence of God"
   author: Edward Feser
   categories:
     - philosophy
     - religion
 
-- title: Is God the Best Explanation of Things? A Dialogue
+- title: "Is God the Best Explanation of Things? A Dialogue"
   author: Joshua Rasmussen and Felipe Leon
   categories:
     - philosophy
     - religion
 
-- title: Arguing About Gods
+- title: "Arguing About Gods"
   author: Graham Oppy
   categories:
     - philosophy
     - religion
 
-- title: Necessary Existence
+- title: "Necessary Existence"
   author: Alexander Pruss and Joshua Rasmussen
   categories:
     - philosophy
     - metaphysics
 
-- title: Infinity, Causation, and Paradox
+- title: "Infinity, Causation, and Paradox"
   author: Alexander Pruss
   categories:
     - philosophy
     - infinity
 
-- title: Knowledge and Christian Belief
+- title: "Knowledge and Christian Belief"
   author: Alvin Plantinga
   categories:
     - philosophy
     - epistemology
 
-- title: Change in View
+- title: "Change in View"
   author: Gilbert Harman
   categories:
     - philosophy
     - epistemology
 
-- title: Envisioning Information
+- title: "Envisioning Information"
   author: Edward Tufte
   categories:
     - visualization
 
-- title: Mathematics of Classical and Quantum Physics
+- title: "Mathematics of Classical and Quantum Physics"
   author: F. Byron and R. Fuller
   categories:
     - mathematics
 
-- title: Mathematical Methods for Physicists
+- title: "Mathematical Methods for Physicists"
   author: G. Arfken, F. Weber, and F. Harris
   categories:
     - mathematics
     - physics
 
-- title: Stories of Your Life and Others
+- title: "Stories of Your Life and Others"
   author: Ted Chiang
   categories:
     - science fiction
 
-- title: The Road
+- title: "The Road"
   author: Cormac McCarthy
   categories:
     - fiction
 
-- title: No Country for Old Men
+- title: "No Country for Old Men"
   author: Cormac McCarthy
   categories:
     - fiction
 
-- title: Moby Dick
+- title: "Moby Dick"
   author: Herman Melville
   categories:
     - fiction
 
-- title: Fahrenheit 451
+- title: "Fahrenheit 451"
   author: Ray Bradbury
   categories:
     - science fiction
 
-- title: Crime and Punishment
+- title: "Crime and Punishment"
   author: Fyodor Dostoevsky
   categories:
     - historical fiction
     - Russia
 
-- title: The Alchemist
+- title: "The Alchemist"
   author: Paulo Coelho
   categories:
     - fiction
 
-- title: Pattern Recognition and Machine Learning
+- title: "Pattern Recognition and Machine Learning"
   author: C. Bishop
   categories:
     - machine learning
 
-- title: Neural Networks and Deep Learning
+- title: "Neural Networks and Deep Learning"
   author: M. Nielsen
   categories:
     - machine learning
 
-- title: Elements of Programming Interviews
+- title: "Elements of Programming Interviews"
   author: A. Aziz, T. Lee, and A. Prakash
   categories:
     - computer science
     - algorithms
 
-- title: Cry, the Beloved Country
+- title: "Cry, the Beloved Country"
   author: Alan Paton
   categories:
     - historical fiction
     - apartheid
 
-- title: Algorithms
+- title: "Algorithms"
   author: R. Sedgewick and K. Wayne
   categories:
     - computer science
