@@ -2,7 +2,7 @@
 
 $h2-font-size: 1.50em;
 $h3-font-size: 1.25em;
-$h4-font-size: 1.00em;
+$h4-font-size: 1.05em;
 $h5-font-size: 1.00em;
 $h6-font-size: 1.00em;
 $navbar-bg: rgb(50, 50, 50);
@@ -16,10 +16,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Remove line and padding after h2 headers
-h2, .h2 {
-    border-bottom: none !important;
-    padding-bottom: 0.0em !important;
-}
+// h2, .h2 {
+//     border-bottom: none !important;
+//     padding-bottom: 0.0em !important;
+// }
 
 // Use sans-serif font for website header
 .navbar {

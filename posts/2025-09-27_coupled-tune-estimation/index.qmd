@@ -13,7 +13,7 @@ categories:
 In circular accelerators, single-particle tunes can be estimated from turn-by-turn data using the Fast Fourier Transform (FFT). If we only have a few turns, we can estimate the tunes using the Average Phase Advance (APA) method @bartolini_1995_tune. Using APA, we can estimate the tunes from the phase space coordiantes on two neighboring turns.
 
 
-## Tune-estimation in uncoupled systems
+## Tune estimation in uncoupled systems
  
 In a 1D system (2D phase space), we normalize the $x-x'$ phase space coordinates such that the turn-by-turn normalized coordiantes $u_x-u_x'$ jump around a circle of area $A_x = 2 \pi J_x = \pi (u_x^2 + u_x'^2)$. Here $J_x$ is the Courant-Snyder (CS) invariant, or "action". The phase angle $\theta_x$ is defined by
 

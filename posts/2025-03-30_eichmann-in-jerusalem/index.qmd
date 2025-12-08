@@ -1,5 +1,5 @@
 ---
-title: "Eichmann in Jerusalem"
+title: "*Eichmann in Jerusalem* (Arendt)"
 date: 2025-03-30
 author: Austin Hoover
 toc: false

@@ -13,4 +13,5 @@ lightbox: true
 sidebar: false
 title-block-categories: false
 toc: true
-toc-depth: 5
+toc-depth: 3
+toc-expand: true
