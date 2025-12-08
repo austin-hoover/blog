@@ -6,12 +6,13 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2025-12-07_stalin-paradoxes-of-power/index.html",
       "/posts/2025-09-27_coupled-tune-estimation/index.html",
       "/posts/2025-06-08_exact-solutions-phase-space-tomo/index.html",
       "/posts/2025-06-02_dragt-book/index.html",
       "/posts/2025-04-28_ment-sparse-ct/index.html",
       "/posts/2025-04-27_minerbo/index.html",
-      "/posts/2025-04-24_how-the-laws-of-physics-lie/index.html",
+      "/posts/how-the-laws-of-physics-lie/index.html",
       "/posts/2025-04-13_particle-based-beam-envelope-tracker/index.html",
       "/posts/2025-03-30_eichmann-in-jerusalem/index.html",
       "/posts/2025-03-23_flow-equilibrium/index.html",
