@@ -1,8 +1,5 @@
 ---
 title: "Web"
-format:
-  html:
-    mainfont: Georgia
 ---
 
 * [What is it like to be a philosopher?](http://www.whatisitliketobeaphilosopher.com)
