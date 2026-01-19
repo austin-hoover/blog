@@ -1,6 +1,5 @@
 ---
 title: Books
-image: books.jpg
 listing:
   fields: [title, author, score]
   field-display-names:

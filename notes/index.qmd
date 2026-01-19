@@ -10,10 +10,10 @@ listing:
   filter-ui: false
   max-description-length: 50
   contents: 
-    - books
+    - books/index.qmd
     - blogs.qmd
-    - people
-    - web.qmd
-    - papers-philosophy
-    - papers-stem
+    - people/index.qmd
+    - web/index.qmd
+    - papers-philosophy/index.qmd
+    - papers-stem/index.qmd
 ---

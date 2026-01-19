@@ -1,6 +1,7 @@
 ---
 title: "Philosophy papers"
 listing:
+    contents: data.yml
     fields: [title, author]
     field-display-names:
         title: "Title"

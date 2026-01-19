@@ -1,9 +1,9 @@
 ---
 title: "Web"
+format:
+  html:
+    mainfont: Georgia
 ---
-
-Websites:
-
 
 * [What is it like to be a philosopher?](http://www.whatisitliketobeaphilosopher.com)
 * [Bibliography on the problem of evil](https://docs.google.com/document/d/1dprquqrzQxJsmOArxEoBDaMx15T9T--P8dagUqX6kQI/edit#heading=h.x1uym8fk8fq3)
@@ -38,3 +38,4 @@ Articles, essays, blog posts:
 * [Zombie nouns](https://archive.nytimes.com/opinionator.blogs.nytimes.com/2012/07/23/zombie-nouns/)
 * [The preprint revolution](https://upstream.force11.org/the-preprint-revolution-implications-for-bibliographic-databases/)
 * [Runescape helps Venezuelans survive](https://www.polygon.com/features/2020/5/27/21265613/runescape-is-helping-venezuelans-survive)
+
