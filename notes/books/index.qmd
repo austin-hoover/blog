@@ -2,20 +2,21 @@
 title: Books
 image: books.jpg
 listing:
-    contents:
-        - "*.qmd"
-        - "books.yml"
-    fields: [title, author]
-    field-display-names:
-        title: "Title"
-        author: "Author"
-        date: "Date"
-        categories: "Categories"
-    type: table
-    date-format: YYYY‑MM‑DD
-    table-hover: false
-    categories: true
-    max-items: 99999999
-    page-size: 99999999
+  fields: [title, author, score]
+  field-display-names:
+    title: "Title"
+    author: "Author"
+    date: "Date"
+    categories: "Categories"
+    score: "Score"
+  type: table
+  date-format: YYYY‑MM‑DD
+  table-hover: false
+  categories: true
+  max-items: 99999999
+  page-size: 99999999
+  contents:
+    - "*.qmd"
+    - "books.yml"
 ---
 

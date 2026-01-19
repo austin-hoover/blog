@@ -1,0 +1,40 @@
+---
+title: "Web"
+---
+
+Websites:
+
+
+* [What is it like to be a philosopher?](http://www.whatisitliketobeaphilosopher.com)
+* [Bibliography on the problem of evil](https://docs.google.com/document/d/1dprquqrzQxJsmOArxEoBDaMx15T9T--P8dagUqX6kQI/edit#heading=h.x1uym8fk8fq3)
+* [lesswrong](https://www.lesswrong.com)
+* [Little debates](https://www.routledge.com/Little-Debates-about-Big-Questions/book-series/LDABQ)
+* [Einstein papers](https://einsteinpapers.press.princeton.edu)
+* [Probability theory as extended logic](https://bayes.wustl.edu)
+* [US Muon Collider Collaboration](https://www.muoncollider.us)
+* Journals
+    * [Chaos](https://pubs.aip.org/aip/cha)
+    * [Nature Physics](https://www.nature.com/nphys/)
+    * [PRAB](https://journals.aps.org/prab/)
+    * [PRE](https://journals.aps.org/pre/)
+    * [PRL](https://journals.aps.org/prl/)
+    * [Science](https://www.science.org/journal/science)
+    * [Web of Science Master Journal List](https://mjl.clarivate.com/home)
+* Preprint servers
+    * [ArXiv](https://arxiv.org)
+    * [ArXiv (accelerator physics)](https://arxiv.org/list/physics.acc-ph/recent)
+    * [ArXiv (astrophysics of galaxies)](https://arxiv.org/list/astro-ph.GA/recent)
+    * [ArXiv (chaotic dynamics)](https://arxiv.org/list/nlin.CD/recent)
+    * [ArXiv (computational physics)](https://arxiv.org/list/physics.comp-ph/recent)
+    * [ArXiv (data analysis, statistics, and probability)](https://arxiv.org/list/physics.data-an/recent)
+    * [ArXiv (history and philosophy of physics)](https://arxiv.org/list/physics.hist-ph/recent)
+    * [PhilSci](https://philsci-archive.pitt.edu/cgi/latest_days2?n=30)
+    * [philpeople.org](https://philpeople.org)
+
+
+Articles, essays, blog posts:
+
+* [Why academics stink at writing](https://www.chronicle.com/article/why-academics-stink-at-writing/)
+* [Zombie nouns](https://archive.nytimes.com/opinionator.blogs.nytimes.com/2012/07/23/zombie-nouns/)
+* [The preprint revolution](https://upstream.force11.org/the-preprint-revolution-implications-for-bibliographic-databases/)
+* [Runescape helps Venezuelans survive](https://www.polygon.com/features/2020/5/27/21265613/runescape-is-helping-venezuelans-survive)

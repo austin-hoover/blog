@@ -9,8 +9,6 @@ website:
         text: "About"
       - href: index.qmd
         text: "Posts"
-      - href: links/index.qmd
-        text: "Links"
       - href: notes/index.qmd
         text: "Notes"
   google-analytics: "G-DLC4C8LZFB"
@@ -25,9 +23,9 @@ format:
     grid:
       body-width: 720px    
     mainfont: "Latin Modern"
+    fontsize: 16px
     linestretch: 1.25
     html-math-method: mathjax
     highlight-style: github
-    # highlight-style: 
-    #   light: style/highlight/monochrome-light.theme
-    #   dark:  style/highlight/monochrome-dark.theme
+    listing:
+      table-hover: true

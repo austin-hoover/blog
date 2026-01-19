@@ -1,11 +1,19 @@
 ---
 title: Notes
-metadata-files: ["_listing_meta.yml"]
 listing:
-    contents: 
-        - "/*.qmd"
-        - "/*/index.qmd"
-    page-size: 99999999
-    max-items: 99999999
-    table-hover: true
+  fields: [title]
+  date-format: YYYY‑MM‑DD
+  table-hover: true
+  type: table
+  sort: false
+  sort-ui: false
+  filter-ui: false
+  max-description-length: 50
+  contents: 
+    - books
+    - blogs.qmd
+    - people
+    - web.qmd
+    - papers-philosophy
+    - papers-stem
 ---

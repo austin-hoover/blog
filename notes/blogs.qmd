@@ -1,0 +1,106 @@
+---
+title: "Blogs"
+listing:
+  id: sample-listings
+  sort: false
+  type: table
+  categories: false
+  sort-ui: true
+  filter-ui: true
+  max-items: 99999999
+  page-size: 99999999
+  contents: 
+    - title: "Statistical Modeling, Causal Inference, and Social Science"
+      path: "https://statmodeling.stat.columbia.edu"
+    - title: "Marginal Revolution"
+      path: "https://marginalrevolution.com"
+    - title: "The Splintered Mind"
+      path: "http://schwitzsplinters.blogspot.com"
+    - title: "Shtetl-Optimized"
+      path: "https://scottaaronson.blog"
+    - title: "Alexander Pruss"
+      path: "http://alexanderpruss.blogspot.com"
+    - title: "Edward Feser"
+      path: "https://edwardfeser.blogspot.com"
+    - title: "Notebooks"
+      path: "http://bactra.org/notebooks/"
+    - title: "China Talk"
+      path: "https://www.chinatalk.media"
+    - title: "Scott Hawley"
+      path: "https://drscotthawley.github.io/blog/"
+    - title: "Condensed Concepts"
+      path: "https://condensedconcepts.blogspot.co"
+    - title: "Nanoscale Views"
+      path: "http://nanoscale.blogspot.com"
+    - title: "ex-apologist"
+      path: "http://exapologist.blogspot.com"
+    - title: "Fake Nous"
+      path: "https://fakenous.substack.com"
+    - title: "Lil'Log"
+      path: "https://lilianweng.github.io"
+    - title: "Not Even Wrong"
+      path: "https://www.math.columbia.edu/~woit/wordpress/"
+    - title: "Notes From a Data Witch"
+      path: "https://blog.djnavarro.net"
+    - title: Of Particular Significance"
+      path: "https://profmattstrassler.com/blog/"
+    - title: "Physics Matt"
+      path: "http://www.physicsmatt.com/blog/)"
+    - title: "Preposterous Universe"
+      path: "https://www.preposterousuniverse.com/blog/"
+    - title: "Asymptotia"
+      path: "https://asymptotia.com"
+    - title: "The Secure Transport of Light"
+      path: "https://danwang.co"
+    - title: "Danny Yee's Book Reviews"
+      path: "https://dannyreviews.com"
+    - title: "After Babel"
+      path: "https://www.afterbabel.com"
+    - title: "AI: A Guide for Thinking Humans"
+      path: "https://aiguide.substack.com"
+    - title: "Bentham's Bulldog"
+      path: "https://benthams.substack.com/"
+    - title: "Coleman's Corner"
+      path: "https://colemanhughes.substack.com/"
+    - title: "Commonplace Philosophy"
+      path: "https://jaredhenderson.substack.com/"
+    - title: "Future Doctrina"
+      path: "https://mickryan.substack.com"
+    - title: "GIRLS"
+      path: "https://www.freyaindia.co.uk/"
+    - title: "Gowing Awol"
+      path: "https://wollenblog.substack.com/"
+    - title: "Greco and Wansley"
+      path: "https://grecowansley.substack.com/"
+    - title: "The Grumpy Economist"
+      path: "https://www.grumpy-economist.com/"
+    - title: "Kareem Takes on the News"
+      path: "https://kareem.substack.com/"
+    - title: "The Motivated Skeptic"
+      path: "https://rbnmckenna86.substack.com/"
+    - title: "Pens and Poison"
+      path: "https://www.pensandpoison.org/"
+    - title: "Reflections on What Matters"
+      path: "https://jpandrew.substack.com/"
+    - title: "Sherman Alexie"
+      path: "https://shermanalexie.substack.com/"
+    - title: "Wondering Freely"
+      path: "https://helendecruz.substack.com/"
+---
+
+::: {#sample-listings}
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+

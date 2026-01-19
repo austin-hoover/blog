@@ -1,479 +1,546 @@
-- title: "A Christmas Carol"
-  author: Charles Dickens
+- title: "The Brothers Karamazov"
+  author: Dostoevsky
+  score: "-"
   categories:
-    - fiction
+    - Fiction
+    - Russia
+
+- title: "The Covenant of Water"
+  author: Verghese
+  score: "-"
+  categories:
+    - Fiction
+    - India
+    
+- title: "A Christmas Carol"
+  author: Dickens
+  score: "-"
+  categories:
+    - Fiction
 
 - title: "The Chinese Question"
-  author: Mae Ngai
+  author: Ngai
+  score: "-"
   categories:
-    - history
-    - china
+    - History
+    - China
 
 - title: "Knowledge and Decisions"
-  author: Thomas Sowell
+  author: Sowell
+  score: "-"
   categories:
-    - economics
+    - Economics
 
 - title: "Breakneck"
-  author: Dan Wang
+  author: Wang
+  score: "-"
   categories:
-    - china
-    - society
-
-- title: "Ficciones"
-  author: Jorge Luis Borges
-  categories:
-    - fiction
+    - China
 
 - title: "Numerical Recipes"
-  author: William Press
+  author: Press
+  score: "-"
   categories:
-    - algorithms
-    - computational physics
+    - Computational Physics
+    - Computer Science
+
+- title: "Ficciones"
+  author: Borges
+  score: "-"
+  categories:
+    - Fiction
+    
+- title: "The Book of Sand"
+  author: Borges
+  score: "-"
+  categories:
+    - Fiction
+
+- title: "Shakespeare's Memory"
+  author: Borges
+  score: "-"
+  categories:
+    - Fiction
 
 - title: "Introduction to Plasma Theory"
-  author: Dwight Nicholson
+  author: Nicholson
+  score: "-"
   categories:
-    - physics
-    - plasma physics
+    - Physics (Plasma)
 
 - title: "The Quiet American"
   author: Graham Greene
   categories:
-    - fiction
+    - Fiction
 
 - title: "Stalin: Waiting for Hitler, 1929–1941"
-  author: Stephen Kotkin
+  author: Kotkin
+  score: "-"
   categories:
-    - history
-    - world war ii
+    - History
+    - World War II
 
 - title: "Our National Parks"
-  author: John Muir
+  author: Muir
+  score: "-"
   categories:
-    - nature
-    - travel
+    - Nature
+    - Travel
 
 - title: "Probabilistic Artificial Intelligence"
-  author: Andreas Krause, Jonas Hubotter
+  author: Krause and Hubotter
+  score: "-"
   categories:
-    - mathematics
-    - probability
-    - machine learning
+    - Mathematics
+    - Probability
+    - Machine Learning
 
 - title: "The Cultural Revolution"
-  author: Frank Dikötter
+  author: Dikötter
+  score: "-"
   categories:
-    - history
-    - china
+    - History
+    - China
 
 - title: "Mao's Great Famine"
-  author: Frank Dikötter
+  author: Dikötter
+  score: "-"
   categories:
-    - history
-    - china
+    - History
+    - China
 
 - title: "The Tragedy of Liberation"
-  author: Frank Dikötter
+  author: Dikötter
+  score: "-"
   categories:
-    - history
+    - History
     - China
 
 - title: "Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics"
-  author: Alex Dragt
+  author: Dragt
+  score: "-"
   categories:
-    - physics
-    - accelerator physics
-    - math
+    - Physics (Accelerator)
+    - Mathematics
 
 - title: "White Nights"
-  author: Fyodor Dostoevsky
+  author: Dostoevsky
+  score: "-"
   categories:
-    - fiction
+    - Fiction
+    - Russia
 
 - title: "The Human Condition"
-  author: Hannah Arendt
+  author: Arendt
+  score: "-"
   categories:
-    - sociology
+    - Sociology
 
 - title: "How the Laws of Physics Lie"
-  author: Nancy Cartwright
+  author: Cartwright
+  score: "-"
   categories:
-    - physics
-    - laws
+    - Physics
+    - Laws
 
 - title: "Eichmann in Jerusalem: A Report on the Banality of Evil"
-  author: Hannah Arendt
+  author: Arendt
+  score: "-"
   categories:
-    - evil
-    - holocaust
+    - Morality
+    - World War II
 
 - title: "Physics of Collective Beam Instabilities in High Energy Accelerators"
-  author: A. Chao
+  author: Chao
+  score: "-"
   categories:
-    - physics
-    - accelerator physics
+    - Physics (Accelerator)
 
 - title: "The Sense of Style"
-  author: S. Pinker
+  author: Pinker
+  score: "-"
   categories:
-    - writing
+    - Writing
 
 - title: "Deep Learning: Foundations and Concepts"
-  author: C. Bishop, H. Bishop
+  author: Bishop, and Bishop
+  score: "-"
   categories:
-    - machine learning
+    - Machine Learning
 
 - title: "Entropic Physics"
-  author: Ariel Caticha
+  author: Caticha
+  score: "-"
   categories:
-    - mathematics
-    - probability
-    - statistics
+    - Mathematics
+    - Probability
 
 - title: "Probability Theory: The Logic of Science"
-  author: E. T. Jaynes
+  author: Jaynes
+  score: "-"
   categories:
-    - mathematics
-    - probability
-    - statistics
+    - Mathematics
+    - Probability
 
 - title: "The Ethics of Abortion"
-  author: Christopher Kaczor
+  author: Kaczor
+  score: "-"
   categories:
-    - ethics
-    - abortion
+    - Ethics
+    - Abortion
 
 - title: "Data Analysis: A Bayesian Tutorial"
-  author: D. Sivia, J. Skilling
+  author: Sivia and Skilling
+  score: "-"
   categories:
-    - mathematics
-    - probability
-    - statistics
+    - Mathematics
+    - Probability
 
 - title: "Bayesian Data Analysis"
-  author: A. Gelman, J. Carlin, H. Stern, D. Rubin
+  author: Gelman, Carlin, Stern, and Rubin
+  score: "-"
   categories:
-    - mathematics
-    - probability
-    - statistics
+    - Mathematics
+    - Probability
 
 - title: "Stalin: Paradoxes of Power, 1878-1928"
-  author: Stephen Kotkin
+  author: Kotkin
+  score: "-"
   categories:
-    - history
-    - world war ii
+    - History
+    - World War II
 
 - title: "The Character Gap"
-  author: Christian Miller
+  author: Miller
+  score: "-"
   categories:
-    - ethics
+    - Ethics
 
 - title: "Exhalation"
-  author: Ted Chiang
+  author: Chiang
+  score: "-"
   categories:
-    - science fiction
+    - Science Fiction
 
 - title: "Wealth, Poverty, and Politics"
-  author: Thomas Sowell
+  author: Sowell
+  score: "-"
   categories:
-    - sociology
+    - Sociology
 
 - title: "The Disappearance of Childhood"
-  author: Niel Postman
+  author: Postman
+  score: "-"
   categories:
-    - sociology
+    - Sociology
 
 - title: "Mere Christianity"
-  author: C. S. Lewis
+  author: Lewis
+  score: "-"
   categories:
-    - religion
-    - christianity
+    - Religion
+    - Christianity
 
 - title: "Statistical Physics of Particles"
-  author: M. Kardar
+  author: Kardar
+  score: "-"
   categories:
-    - physics
-    - statistical mechanics
+    - Physics (Statistical Mechanics)
 
 - title: "Introduction to Thermal Physics"
-  author: D. Schroeder
+  author: Schroeder
+  score: "-"
   categories:
-    - physics
-    - thermodynamics
+    - Physics (Statistical Mechanics)
 
 - title: "Optical Coherence and Quantum Optics"
-  author: I. Mandel and E. Wolf
+  author: Mandel and Wolf
+  score: "-"
   categories:
-    - physics
-    - quantum optics
+    - Physics (Quantum Optics)
 
 - title: "Quantum Mechanics: Concepts and Applications"
-  author: N. Zettili
+  author: Zettili
+  score: "-"
   categories:
-    - physics
-    - quantum mechanics
+    - Physics (Quantum Mechanics)
 
 - title: "Modern Quantum Mechanics"
-  author: J. Sakurai
+  author: Sakurai
+  score: "-"
   categories:
-    - physics
-    - quantum mechanics
+    - Physics (Quantum Mechanics)
 
 - title: "What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics"
-  author: Adam Becker
+  author: Becker
+  score: "-"
   categories:
-    - physics
-    - history
+    - Physics
+    - History
 
 - title: "Modern Elementary Particle Physics"
-  author: G. Kane
+  author: Kane
+  score: "-"
   categories:
-    - physics
-    - particle physics
+    - Physics (Particle)
 
 - title: "Introduction to High Energy Physics"
-  author: D. Perkins
+  author: Perkins
+  score: "-"
   categories:
-    - physics
-    - particle physics
+    - Physics (Particle)
 
 - title: "Introduction to Elementary Particle Physics"
-  author: R. Griffiths
+  author: Griffiths
+  score: "-"
   categories:
-    - physics
-    - particle physics
+    - Physics (Particle)
 
 - title: "Classical Mechanics"
-  author: J. Taylor
+  author: Taylor
+  score: "-"
   categories:
-    - physics
-    - classical mechanics
+    - Physics (CM)
 
 - title: "Classical Mechanics"
-  author: S. Goldstein
+  author: Goldstein
+  score: "-"
   categories:
-    - physics
-    - classical mechanics
-
+    - Physics (CM)
+    
 - title: "Introduction to Electrodynamics"
-  author: R. Griffiths
+  author: Griffiths
+  score: "-"
   categories:
-    - physics
-    - electromagnetism
+    - Physics (EM)
 
 - title: "Classical Electromagnetism"
-  author: J. Franklin
+  author: Franklin
+  score: "-"
   categories:
-    - physics
-    - electromagnetism
+    - Physics (EM)
 
 - title: "Classical Electrodynamics"
-  author: J. Jackson
+  author: Jackson
+  score: "-"
   categories:
-    - physics
-    - electromagnetism
+    - Physics (EM)
 
 - title: "Astrophysics in a Nutshell"
-  author: D. Maoz
+  author: Maoz
+  score: "-"
   categories:
-    - physics
-    - astrophysics
+    - Physics (Astro)
 
 - title: "Theory and Design of Charged Particle Beams"
-  author: M. Reiser
+  author: Reiser
+  score: "-"
   categories:
-    - physics
-    - accelerator physics
+    - Physics (Accelerator)
 
 - title: "Space Charge Physics for Particle Accelerators"
-  author: I. Hofmann
+  author: Hofmann
+  score: "-"
   categories:
-    - physics
-    - accelerator physics
-    - space charge
+    - Physics (Accelerator)
+    - Physics (Plasma)
 
 - title: "RF Linear Accelerators"
-  author: T. Wangler
+  author: Wangler
+  score: "-"
   categories:
-    - physics
-    - accelerator physics
+    - Physics (Accelerator)
 
 - title: "Particle Accelerator Physics"
-  author: H. Wiedemann
+  author: Wiedemann
+  score: "-"
   categories:
-    - physics
-    - accelerator physics
+    - Physics (Accelerator)
 
 - title: "Measurement and Control of Charged Particle Beams"
-  author: M. Minty and F. Zimmerman
+  author: Minty and Zimmerman
+  score: "-"
   categories:
-    - physics
-    - accelerator physics
+    - Physics (Accelerator)
 
 - title: "Introduction to the Physics of High Energy Accelerators"
-  author: D. Edwards and M. Syphers
+  author: Edwards and Syphers
+  score: "-"
   categories:
-    - physics
-    - accelerator physics
+    - Physics (Accelerator)
 
 - title: "Accelerator Physics"
-  author: S. Y. Lee
+  author: Lee
+  score: "-"
   categories:
-    - physics
-    - accelerator physics
+    - Physics (Accelerator)
 
 - title: "Time and Chance"
-  author: David Albert
+  author: Albert
+  score: "-"
   categories:
-    - philosophy
-    - science
+    - Philosophy (Science)
 
 - title: "Philosophy of Physics: Space and Time"
-  author: Tim Maudlin
+  author: Maudlin
+  score: "-"
   categories:
-    - philosophy
-    - science
+    - Philosophy (Science)
 
 - title: "Philosophy of Physics: Quantum Theory"
-  author: Tim Maudlin
+  author: Maudlin
+  score: "-"
   categories:
-    - philosophy
-    - science
+    - Philosophy (Science)
 
 - title: "The Emergent Multiverse"
-  author: David Wallace
+  author: Wallace
+  score: "-"
   categories:
-    - philosophy
-    - science
+    - Philosophy (Science)
 
 - title: "Taking Pascal's Wager"
-  author: Michael Rota
+  author: Rota
+  score: "-"
   categories:
-    - philosophy
-    - religion
+    - Philosophy (Religion)
 
 - title: "Five Proofs of the Existence of God"
-  author: Edward Feser
+  author: Feser
+  score: "-"
   categories:
-    - philosophy
-    - religion
+    - Philosophy (Religion)
 
 - title: "Is God the Best Explanation of Things? A Dialogue"
-  author: Joshua Rasmussen and Felipe Leon
+  author: Rasmussen and Leon
+  score: "-"
   categories:
-    - philosophy
-    - religion
+    - Philosophy (Religion)
 
 - title: "Arguing About Gods"
-  author: Graham Oppy
+  author: Oppy
+  score: "-"
   categories:
-    - philosophy
-    - religion
+    - Philosophy (Religion)
 
 - title: "Necessary Existence"
-  author: Alexander Pruss and Joshua Rasmussen
+  author: Pruss and Rasmussen
+  score: "-"
   categories:
-    - philosophy
-    - metaphysics
+    - Philosophy (Religion)
+    - Philosophy (Metaphysics)
 
 - title: "Infinity, Causation, and Paradox"
-  author: Alexander Pruss
+  author: Pruss
+  score: "-"
   categories:
-    - philosophy
-    - infinity
+    - Infinity
+    - Paradox
 
 - title: "Knowledge and Christian Belief"
-  author: Alvin Plantinga
+  author: Plantinga
+  score: "-"
   categories:
-    - philosophy
-    - epistemology
+    - Philosophy (Religion)
+    - Philosophy (Epistemology)
 
 - title: "Change in View"
-  author: Gilbert Harman
+  author: Harman
+  score: "-"
   categories:
-    - philosophy
-    - epistemology
+    - Philosophy (Epistemology)
 
 - title: "Envisioning Information"
-  author: Edward Tufte
+  author: Tufte
+  score: "-"
   categories:
-    - visualization
+    - Visualization
 
 - title: "Mathematics of Classical and Quantum Physics"
-  author: F. Byron and R. Fuller
+  author: Byron and Fuller
+  score: "-"
   categories:
-    - mathematics
+    - Mathematics
 
 - title: "Mathematical Methods for Physicists"
-  author: G. Arfken, F. Weber, and F. Harris
+  author: Arfken, Weber, and Harris
+  score: "-"
   categories:
-    - mathematics
-    - physics
+    - Mathematics
+    - Physics
 
 - title: "Stories of Your Life and Others"
-  author: Ted Chiang
+  author: Chiang
+  score: "-"
   categories:
-    - science fiction
+    - Science Fiction
 
 - title: "The Road"
-  author: Cormac McCarthy
+  author: McCarthy
+  score: "-"
   categories:
-    - fiction
+    - Fiction
 
 - title: "No Country for Old Men"
-  author: Cormac McCarthy
+  author: McCarthy
+  score: "-"
   categories:
-    - fiction
+    - Fiction
 
 - title: "Moby Dick"
-  author: Herman Melville
+  author: Melville
+  score: "-"
   categories:
-    - fiction
+    - Fiction
 
 - title: "Fahrenheit 451"
-  author: Ray Bradbury
+  author: Bradbury
+  score: "-"
   categories:
-    - science fiction
+    - Science Fiction
 
 - title: "Crime and Punishment"
-  author: Fyodor Dostoevsky
+  author: Dostoevsky
+  score: "-"
   categories:
-    - historical fiction
+    - Fiction
     - Russia
 
 - title: "The Alchemist"
-  author: Paulo Coelho
+  author: Coelho
+  score: "-"
   categories:
-    - fiction
+    - Fiction
 
 - title: "Pattern Recognition and Machine Learning"
-  author: C. Bishop
+  author: Bishop
+  score: "-"
   categories:
-    - machine learning
+    - Machine Learning
+    - Probability
 
 - title: "Neural Networks and Deep Learning"
-  author: M. Nielsen
+  author: Nielsen
+  score: "-"
   categories:
-    - machine learning
+    - Machine Learning
 
 - title: "Elements of Programming Interviews"
-  author: A. Aziz, T. Lee, and A. Prakash
+  author: Aziz, Lee, and Prakash
+  score: "-"
   categories:
-    - computer science
-    - algorithms
+    - Computer Science
 
 - title: "Cry, the Beloved Country"
-  author: Alan Paton
+  author: Paton
+  score: "-"
   categories:
-    - historical fiction
-    - apartheid
+    - Fiction
+    - South Africa
 
 - title: "Algorithms"
-  author: R. Sedgewick and K. Wayne
+  author: Sedgewick and Wayne
+  score: "-"
   categories:
-    - computer science
-    - algorithms
+    - Computer Science
 
-
-    

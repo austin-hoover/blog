@@ -1,16 +1,15 @@
 ---
-title: Papers
+title: "STEM papers"
 listing:
     contents:
         - "*.qmd"
-        - "papers.yml"
+        - "data.yml"
     fields: [title, author]
     field-display-names:
         title: "Title"
         author: "Author"
         date: "Date"
-    sort: 
-        - title
+    sort: false
     type: table
     categories: true
     max-items: 99999999
