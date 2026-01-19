@@ -1,0 +1,13 @@
+---
+title: "Demonstration of a novel phase space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams"
+author: Austin Hoover
+date: 2026-01-21
+bibliography: references.bib
+csl: ./aps.csl
+categories:
+  - accelerators
+  - papers
+draft: true
+---
+
+[Summarize PRL.]
