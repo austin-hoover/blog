@@ -1,5 +1,6 @@
 ---
 title: "Applying 6D MENT to data" 
+author: Austin Hoover
 date: 2025-03-20
 toc: false
 categories:
