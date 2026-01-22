@@ -1,7 +1,7 @@
 ---
-title: "Demonstration of a novel phase space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams"
+title: "*Eigenpainting*: a novel method to mitigate space charge in high-intensity hadron beams"
 author: Austin Hoover
-date: 2026-01-21
+date: 2026-01-29
 bibliography: references.bib
 csl: ./aps.csl
 categories:
@@ -10,4 +10,23 @@ categories:
 draft: true
 ---
 
-[Summarize PRL.]
+Our paper *Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams* was recently [published](https://journals.aps.org/prl/accepted/10.1103/bvwq-34jf) in Physical Review Letters (PRL). (Here's the [preprint](https://arxiv.org/pdf/2601.13517).) This post gives a more user-friendly introduction to the proposed method and elaborates a bit more on the findings.
+
+Background: High-intensity and high-power hadron accelerators are used for experiments in condensed matter physics, particle physics, nuclear physics, and other fields [@wei_2003_synchrotrons; @wei_2014_very]. After decades of R&D, a few modern facilities now operate above 1 MW beam power @cousineau_2015_high.
+
+Future applications will require even higher intensities, but will also place tighter constraints on the beam loss.
+
+At the same time, accelerator applications increasingly require detailed control of the beam distribution at the target. At the lowest level, we want to control the average particle energy and position, as well as the overall beam size. The ultimate goal is to control individual particle trajectories, or rather to control the exact particle distribution in phase space---the six-dimensional space of particle positions ($x$, $y$, $z$) and velocities ($v_x$, $v_y$, $v_z$). 
+
+At high intensities, the beam dynamics is affected by a spectrum of *collective effects*, i.e., effects that depend on the entire particle ensemble. Collective effects can cause dramatic changes to the phase space distribution as the beam evolves. These changes are generally difficult to predict 
+
+
+The purpose of this method is to create a specific distribution of charged particles in four-dimensional phase space --- the space of particle positions and velocities in the plane transverse to the beam. The motivation 
+
+
+## Background: collective effects and phase space painting
+
+
+First, particles generate *wakefields* on the conducting beam pipe, and these wakefields can influence trailing particles or the same particlces on subsequent turns. These types of intstabilities are described in the classic book by Chao @chao_1993_physics.^[You can get it [here](https://www.amazon.com/Collective-Instabilities-Accelerators-Accelerator-Technology/dp/0471551848) for only $350.] Second, particles interact directly with each other through ~electrostatic forces in the beam's rest frame. These are known as *space charge* forces.
+
+I focus here on *space charge* effects, which refers to the approximately electrostatic forces between particles in the beam's rest frame. Space charge is a major issue in high-intneisytt
