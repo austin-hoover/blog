@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.23">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -57,7 +57,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -76,9 +96,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6e03bc272f1cdef1d8296ac38e217ebd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-d3e0597557539958695697773efc63fa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -354,8 +374,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Austin’s Blog</span>
     </a>
@@ -395,13 +413,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#equations-of-motion" id="toc-equations-of-motion" class="nav-link active" data-scroll-target="#equations-of-motion">Equations of motion</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a>
-  <ul class="collapse">
-  <li><a href="#transfer-matrix-eigenvectors" id="toc-transfer-matrix-eigenvectors" class="nav-link" data-scroll-target="#transfer-matrix-eigenvectors">Transfer matrix eigenvectors</a></li>
+  <li><a href="#sources-of-coupling" id="toc-sources-of-coupling" class="nav-link active" data-scroll-target="#sources-of-coupling">Sources of coupling</a></li>
+  <li><a href="#turn-by-turn-data" id="toc-turn-by-turn-data" class="nav-link" data-scroll-target="#turn-by-turn-data">Turn-by-turn data</a></li>
+  <li><a href="#eigenvector-analysis" id="toc-eigenvector-analysis" class="nav-link" data-scroll-target="#eigenvector-analysis">Eigenvector analysis</a></li>
   <li><a href="#eigenvector-parameterization" id="toc-eigenvector-parameterization" class="nav-link" data-scroll-target="#eigenvector-parameterization">Eigenvector parameterization</a></li>
   <li><a href="#floquet-transformation" id="toc-floquet-transformation" class="nav-link" data-scroll-target="#floquet-transformation">Floquet transformation</a></li>
-  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
@@ -441,529 +457,592 @@ window.Quarto = {
 </header>
 
 
-<section id="equations-of-motion" class="level2">
-<h2 class="anchored" data-anchor-id="equations-of-motion">Equations of motion</h2>
-<p>A <a href="https://austin-hoover.github.io/posts/2021-01-21-parametric_oscillators/2021-01-21-parametric_oscillators.html">previous post</a> examined the analytic solutions to the equation of motion describing a parametric oscillator — an oscillator whose physical properties are time-dependent. This problem was motivated by describing the transverse oscillations of a charged particle in an accelerator. In this post, the treatment will be extended to a <em>coupled</em> parametric oscillator. The oscillator obeys the following equation of motion:</p>
+<p>A <a href="../2021-01-21_parametric-oscillators">previous post</a> studied the parametric oscillator — an oscillator whose physical properties are time-dependent. The solution was used to describe the transverse oscillations of a charged particle in an accelerator. In this post, the treatment will be extended to <em>coupled</em> parametric oscillators.</p>
+<section id="sources-of-coupling" class="level2">
+<h2 class="anchored" data-anchor-id="sources-of-coupling">Sources of coupling</h2>
+<p>We’ll consider the following equation of motion:</p>
 <p><span id="eq-EOM"><span class="math display">\[
 \begin{aligned}
     x'' + k_{11}(s)x + k_{13}(s)y + k_{14}(s)y' &amp;= 0, \\
     y'' + k_{33}(s)y + k_{31}(s)x + k_{32}(s)x' &amp;= 0,
 \end{aligned}
 \tag{1}\]</span></span></p>
-<p>where the prime denotes differentiation with respect to <span class="math inline">\(s\)</span>. We will also assume that <span class="math inline">\(k_{ij}(s + L) = k_{ij}(s)\)</span> for some <span class="math inline">\(L\)</span>.</p>
-<p>The first possible source of coupling is the longitudinal magnetic field produced within a solenoid magnet.</p>
+<p>where the prime denotes differentiation with respect to <span class="math inline">\(s\)</span>, the time-like coordinate. We’ll assume a periodic lattice: <span class="math inline">\(k_{ij}(s + L) = k_{ij}(s)\)</span> for some distance <span class="math inline">\(L\)</span>. The terms <span class="math inline">\(k_{13}\)</span>, <span class="math inline">\(k_{31}\)</span>, <span class="math inline">\(k_{14}\)</span>, and <span class="math inline">\(k_{32}\)</span> generate linear coupling between the planes.</p>
+<p>The first potential source of coupling is the longitudinal magnetic field within a solenoid, as shown in <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a>.</p>
 <p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="solenoid.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Fig. 1. A solenoid magnetic field generated by a loop of current. (Source: brilliant.org)"><img src="solenoid.jpg" class="img-fluid figure-img" style="width:45.0%" alt="Fig. 1. A solenoid magnetic field generated by a loop of current. (Source: brilliant.org)"></a></p>
-<figcaption>Fig. 1. A solenoid magnetic field generated by a loop of current. (Source: brilliant.org)</figcaption>
+<div id="fig-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/solenoid.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Solenoid magnetic field generated by current loop. (Source: brilliant.org)"><img src="images/solenoid.jpg" class="img-fluid figure-img" width="300"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Solenoid magnetic field generated by current loop. (Source: brilliant.org)
+</figcaption>
 </figure>
 </div>
 <p><br></p>
-<p>If we assume that the solenoid is very long, the field within the coils points in the longitudinal direction and is approximately constant (<span class="math inline">\(\mathbf{B}_{sol} = B_0\hat{s}\)</span>). Plugging this into the Lorentz force equation, we find:</p>
+<p>For a long solennoid, the field within the coils points in the longitudinal direction and is approximately constant (<span class="math inline">\(\mathbf{B}_{sol} = B_0\hat{s}\)</span>). From the Lorentz force equation, we find:</p>
 <p><span id="eq-vcrossB"><span class="math display">\[
-\dot{\mathbf{v}}
-= \frac{q}{m} \mathbf{v} \times \mathbf{B}
-= \frac{qB_0}{m}\left({v_y\hat{x} - v_x\hat{y}}\right).
+m\dot{\mathbf{v}}
+= q \mathbf{v} \times \mathbf{B}
+= {qB_0} \left({v_y\hat{x} - v_x\hat{y}}\right).
 \tag{2}\]</span></span></p>
-<p>The motion in <span class="math inline">\(x\)</span> depends on the velocity in <span class="math inline">\(y\)</span>, and vice versa. Coupling can also be produced by transverse magnetic fields. Recall the multipole expansion of the transverse magnetic field <span class="math inline">\(\mathbf{B} = (B_x, B_y)\)</span>:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="multipoles.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Fig. 2. Multipole expansion of the magnetic field up to fourth order."><img src="multipoles.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Fig. 2. Multipole expansion of the magnetic field up to fourth order."></a></p>
+<p>The motion in <span class="math inline">\(x\)</span> depends on the velocity in <span class="math inline">\(y\)</span>, and vice versa. This corresponds to the <span class="math inline">\(k_{14}\)</span> and <span class="math inline">\(k_{32}\)</span> terms in <a href="#eq-EOM" class="quarto-xref">Equation&nbsp;1</a>.</p>
+<p>Coupling can also be produced by transverse magnetic fields. Recall the multipole expansion of the transverse magnetic field <span class="math inline">\(\mathbf{B} = (B_x, B_y)\)</span>, shown in <a href="#fig-2" class="quarto-xref">Figure&nbsp;2</a>. There will be nonlinear coupling terms when <span class="math inline">\(n &gt; 2\)</span>, but we are only interested in the linear coupling from the skew quadrupole component. The field couples the force in one plane to the displacement in the other, corresponding to nonzero <span class="math inline">\(k_{13}\)</span> and <span class="math inline">\(k_{31}\)</span> terms in <a href="#eq-EOM" class="quarto-xref">Equation&nbsp;1</a>.</p>
+<div id="fig-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/multipoles.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Multipole expansion of the magnetic field up to fourth order."><img src="images/multipoles.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Multipole expansion of the magnetic field up to fourth order.
+</figcaption>
 </figure>
 </div>
-<figcaption>Fig. 2. Multipole expansion of the magnetic field up to fourth order.</figcaption>
-</figure>
-</div>
-<p>There will be nonlinear coupling terms (terms proportional to <span class="math inline">\(x^j y^k\)</span>, where <span class="math inline">\(j,k &gt; 1\)</span>) when <span class="math inline">\(n &gt; 2\)</span>, but we are interested only in linear coupling. This occurs when the skew quadrupole term <span class="math inline">\(a_2\)</span> is nonzero, which is true when a quadrupole is tilted in the transverse plane. The field couples the motion in one plane to the displacement in the other.</p>
 </section>
-<section id="solution" class="level2">
-<h2 class="anchored" data-anchor-id="solution">Solution</h2>
-<p>Let’s review the approach we took in analyzing the 1D parametric oscillator. We wrote the solution in pseudo-harmonic form with an amplitude <span class="math inline">\(\sqrt{2 J \beta(s)}\)</span> and phase <span class="math inline">\(\mu(s)\)</span>. We then focused on the motion of a particle in <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> phase space after each focusing period. We observed that the particle jumps around an ellipse: the area of the ellipse is constant and proportional to <span class="math inline">\(2 J\)</span>; the dimensions of the ellipse are determined by <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\alpha = -\beta' / 2\)</span>; the size of the jumps around the ellipse are determined by <span class="math inline">\(\mu\)</span>. We then wrote the symplectic <span class="math inline">\(2 \times 2\)</span> transfer matrix <span class="math inline">\(\mathbf{M}\)</span>, which connects the initial and final phase space coordinates through one period, as</p>
+<section id="turn-by-turn-data" class="level2">
+<h2 class="anchored" data-anchor-id="turn-by-turn-data">Turn-by-turn data</h2>
+<p>Let’s review the approach we took in analyzing the one-dimensional parametric oscillator. We wrote the solution in pseudo-harmonic form:</p>
+<p><span id="eq-pseudo"><span class="math display">\[
+x(s) = \sqrt{2 J \beta(s)} \cos(\mu(s)),
+\tag{3}\]</span></span></p>
+<p>with a time-dependent amplitude <span class="math inline">\(\sqrt{2 J \beta(s)}\)</span> and phase <span class="math inline">\(\mu(s)\)</span>. We then studied the motion of a particle in <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> phase space after each focusing period. We observed that the particle jumps around an ellipse: the area of the ellipse is constant and proportional to <span class="math inline">\(2 J\)</span>; the dimensions of the ellipse are determined by <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\alpha = -\beta' / 2\)</span>; the size of the jumps around the ellipse are determined by <span class="math inline">\(\mu\)</span>. We then wrote the symplectic <span class="math inline">\(2 \times 2\)</span> transfer matrix <span class="math inline">\(\mathbf{M}\)</span>, which connects the initial and final phase space coordinates through one period, as</p>
 <p><span id="eq-norm"><span class="math display">\[
 \mathbf{M} = \mathbf{V}\mathbf{P}\mathbf{V}^{-1}.
-\tag{3}\]</span></span></p>
+\tag{4}\]</span></span></p>
 <p><span class="math inline">\(\mathbf{V}^{-1}\)</span>, which is a function of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, is a symplectic transformation that deforms the ellipse into a circle while preserving its area, and <span class="math inline">\(\mathbf{P}\)</span> is a rotation in phase space by the phase advance <span class="math inline">\(\mu\)</span>.</p>
-<p>This is an elegant way to describe the motion with a minimal set of parameters. The question is: can we do something similar for coupled motion, in which the phase space is four-dimensional, not two-dimensional? To start, let’s track a particle in a lattice with a nonzero skew quadrupole coefficient and plot its phase space coordinates after each period. (All code is in the following collapsed cell.)</p>
-<div id="cell-13" class="cell">
+<p>This is an elegant parameterization of the dynamics. Can we do something similar for coupled motion? To start, let’s track a particle in a lattice with a nonzero skew quadrupole coefficient and plot its phase space coordinates after each turn.</p>
+<div id="cell-12" class="cell">
 <details class="code-fold">
 <summary>Imports</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> animation</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> proplot <span class="im">as</span> pplt</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> psdist.visualization <span class="im">as</span> psv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.animation</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">"axes.linewidth"</span>] <span class="op">=</span> <span class="fl">1.25</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">"figure.constrained_layout.use"</span>] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">"xtick.minor.visible"</span>] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">"ytick.minor.visible"</span>] <span class="op">=</span> <span class="va">True</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-15" class="cell">
+<div id="cell-13" class="cell">
 <details class="code-fold">
 <summary>Plotting</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">"x"</span>, <span class="st">"x'"</span>, <span class="st">"y"</span>, <span class="st">"y'"</span>]</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> vector(v, ax<span class="op">=</span><span class="va">None</span>, origin<span class="op">=</span>(<span class="fl">0.0</span>, <span class="fl">0.0</span>), color<span class="op">=</span><span class="st">'black'</span>, lw<span class="op">=</span><span class="va">None</span>, style<span class="op">=</span><span class="st">'-&gt;'</span>, head_width<span class="op">=</span><span class="fl">0.4</span>, head_length<span class="op">=</span><span class="fl">0.8</span>):</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    props <span class="op">=</span> <span class="bu">dict</span>()</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    props[<span class="st">'arrowstyle'</span>] <span class="op">=</span> <span class="st">'</span><span class="sc">{}</span><span class="st">,head_width=</span><span class="sc">{}</span><span class="st">,head_length=</span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(style, head_width, head_length)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    props[<span class="st">'shrinkA'</span>] <span class="op">=</span> props[<span class="st">'shrinkB'</span>] <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    props[<span class="st">'fc'</span>] <span class="op">=</span> props[<span class="st">'ec'</span>] <span class="op">=</span> color</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    props[<span class="st">'lw'</span>] <span class="op">=</span> lw</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    ax.annotate(<span class="st">''</span>, xy<span class="op">=</span>(origin[<span class="dv">0</span>] <span class="op">+</span> v[<span class="dv">0</span>], origin[<span class="dv">1</span>] <span class="op">+</span> v[<span class="dv">1</span>]), xytext<span class="op">=</span>origin, arrowprops<span class="op">=</span>props)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ax</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> animate_corner(X, vecs<span class="op">=</span><span class="va">None</span>, limits<span class="op">=</span><span class="va">None</span>, vec_kws<span class="op">=</span><span class="va">None</span>, <span class="op">**</span>kws):</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> limits <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        maxs <span class="op">=</span> <span class="fl">1.4</span> <span class="op">*</span> np.<span class="bu">max</span>(X, axis<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        maxs[[<span class="dv">0</span>, <span class="dv">2</span>]] <span class="op">=</span> np.<span class="bu">max</span>(maxs[[<span class="dv">0</span>, <span class="dv">2</span>]])</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        maxs[[<span class="dv">1</span>, <span class="dv">3</span>]] <span class="op">=</span> np.<span class="bu">max</span>(maxs[[<span class="dv">1</span>, <span class="dv">3</span>]])</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        limits <span class="op">=</span> [(<span class="op">-</span>m, m) <span class="cf">for</span> m <span class="kw">in</span> maxs]</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> vec_kws <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        vec_kws <span class="op">=</span> <span class="bu">dict</span>()</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    vec_kws.setdefault(<span class="st">'head_width'</span>, <span class="fl">0.2</span>)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    vec_kws.setdefault(<span class="st">'head_length'</span>, <span class="fl">0.4</span>)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">'marker'</span>, <span class="st">'.'</span>)</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">'mec'</span>, <span class="st">'None'</span>)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">'lw'</span>, <span class="fl">0.0</span>)</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">'color'</span>, <span class="st">'black'</span>)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">'ms'</span>, <span class="fl">5.0</span>)</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> psv.CornerGrid(figwidth<span class="op">=</span><span class="fl">4.5</span>, diag<span class="op">=</span><span class="va">False</span>, limits<span class="op">=</span>limits, labels<span class="op">=</span>labels)</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    lines <span class="op">=</span> [[], [], []]</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    old_lines <span class="op">=</span> [[], [], []]</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>            ax <span class="op">=</span> grid.axs[i, j]</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>            old_line, <span class="op">=</span> ax.plot([], [], alpha<span class="op">=</span><span class="fl">0.25</span>, <span class="op">**</span>kws)</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>            old_lines[i].append(old_line)</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>            line, <span class="op">=</span> ax.plot([], [], <span class="op">**</span>kws)</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>            lines[i].append(line)</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    plt.close()</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(frame):</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ax <span class="kw">in</span> grid.axs:</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> annotation <span class="kw">in</span> ax.texts:</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>                annotation.set_visible(<span class="va">False</span>)</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        _X <span class="op">=</span> X[:frame, :]</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>                ax <span class="op">=</span> grid.axs[i, j]</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>                old_lines[i][j].set_data(X[:frame, j], X[:frame, i <span class="op">+</span> <span class="dv">1</span>])</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>                lines[i][j].set_data(X[frame, j], X[frame, i <span class="op">+</span> <span class="dv">1</span>])</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> vecs <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>                    v1 <span class="op">=</span> vecs[<span class="dv">0</span>][frame]</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>                    v2 <span class="op">=</span> vecs[<span class="dv">1</span>][frame]</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>                    ax <span class="op">=</span> vector(v1[[j, i<span class="op">+</span><span class="dv">1</span>]], ax<span class="op">=</span>ax, origin<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>), color<span class="op">=</span><span class="st">'blue6'</span>, <span class="op">**</span>vec_kws)</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>                    ax <span class="op">=</span> vector(v2[[j, i<span class="op">+</span><span class="dv">1</span>]], ax<span class="op">=</span>ax, origin<span class="op">=</span>(v1[[j, i<span class="op">+</span><span class="dv">1</span>]]), color<span class="op">=</span><span class="st">'red6'</span>, <span class="op">**</span>vec_kws)     </span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>        grid.axs[<span class="dv">0</span>, <span class="dv">1</span>].annotate(</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Period </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(frame), xy<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>),</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>            xycoords<span class="op">=</span><span class="st">'axes fraction'</span>, horizontalalignment<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> animation.FuncAnimation(grid.fig, update, frames<span class="op">=</span>X.shape[<span class="dv">0</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> CornerGrid:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, ndim: <span class="bu">int</span>, limits: <span class="bu">list</span>[<span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>]] <span class="op">=</span> <span class="va">None</span>, labels: <span class="bu">list</span>[<span class="bu">str</span>] <span class="op">=</span> <span class="va">None</span>, figwidth: <span class="bu">float</span> <span class="op">=</span> <span class="va">None</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.ndim <span class="op">=</span> ndim       </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Create figure</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> figwidth <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>            figwidth <span class="op">=</span> <span class="fl">2.0</span> <span class="op">*</span> (<span class="va">self</span>.ndim <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fig, <span class="va">self</span>.axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span>(ndim <span class="op">-</span> <span class="dv">1</span>), nrows<span class="op">=</span>(ndim <span class="op">-</span> <span class="dv">1</span>), figsize<span class="op">=</span>(figwidth, figwidth), sharex<span class="op">=</span><span class="st">"col"</span>, sharey<span class="op">=</span><span class="st">"row"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Turn off upper-diagonal plots.</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.ndim <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.ndim <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> i <span class="op">&lt;</span> j:</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                    <span class="va">self</span>.axs[i, j].axis(<span class="st">"off"</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Remove top/right spines.</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ax <span class="kw">in</span> <span class="va">self</span>.axs.flat:</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> loc <span class="kw">in</span> [<span class="st">"top"</span>, <span class="st">"right"</span>]:</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                ax.spines[loc].set_visible(<span class="va">False</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Set axis limits and labels.</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.limits <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.labels <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.set_limits(limits)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.set_labels(labels)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> set_limits(<span class="va">self</span>, limits: <span class="bu">list</span>[<span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>]] <span class="op">=</span> <span class="va">None</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> limits <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.limits <span class="op">=</span> limits</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.ndim <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> ax <span class="kw">in</span> <span class="va">self</span>.axs[:, j]:</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>                ax.set_xlim(<span class="va">self</span>.limits[j])</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.ndim <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> ax <span class="kw">in</span> <span class="va">self</span>.axs[i, :]:</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>                ax.set_ylim(<span class="va">self</span>.limits[i <span class="op">+</span> <span class="dv">1</span>])</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> set_labels(<span class="va">self</span>, labels: <span class="bu">list</span>[<span class="bu">str</span>] <span class="op">=</span> <span class="va">None</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> labels <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.labels <span class="op">=</span> labels</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.ndim <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.axs[<span class="op">-</span><span class="dv">1</span>, j].set_xlabel(<span class="va">self</span>.labels[j])</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.ndim <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.axs[i, <span class="dv">0</span>].set_ylabel(<span class="va">self</span>.labels[i <span class="op">+</span> <span class="dv">1</span>])</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fig.align_xlabels()</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fig.align_ylabels()</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> plot_scatter(<span class="va">self</span>, points: np.ndarray, <span class="op">**</span>kws) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.ndim <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.ndim <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>                ax <span class="op">=</span> <span class="va">self</span>.axs[i, j]</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> i <span class="op">&gt;=</span> j:</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>                    ax.scatter(points[:, j], points[:, i <span class="op">+</span> <span class="dv">1</span>], <span class="op">**</span>kws)</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.set_limits(<span class="va">self</span>.limits)</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_vector(</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    vector: np.ndarray,</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    origin: <span class="bu">tuple</span>[<span class="bu">float</span>] <span class="op">=</span> (<span class="fl">0.0</span>, <span class="fl">0.0</span>),</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    color: <span class="bu">str</span> <span class="op">=</span> <span class="st">"black"</span>,</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    lw: <span class="bu">float</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    style: <span class="bu">str</span> <span class="op">=</span> <span class="st">"-&gt;"</span>,</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    head_width: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.4</span>,</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    head_length: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.8</span>,</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span><span class="va">None</span>,</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    props <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    props[<span class="st">"arrowstyle"</span>] <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>style<span class="sc">}</span><span class="ss">,head_width=</span><span class="sc">{</span>head_width<span class="sc">}</span><span class="ss">,head_length=</span><span class="sc">{</span>head_length<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    props[<span class="st">"shrinkA"</span>] <span class="op">=</span> props[<span class="st">"shrinkB"</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    props[<span class="st">"fc"</span>] <span class="op">=</span> props[<span class="st">"ec"</span>] <span class="op">=</span> color</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>    props[<span class="st">"lw"</span>] <span class="op">=</span> lw</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>    vector <span class="op">=</span> np.copy(vector)</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>    vector <span class="op">=</span> np.add(vector, origin)</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>    ax.annotate(<span class="st">""</span>, xy<span class="op">=</span>(vector[<span class="dv">0</span>], vector[<span class="dv">1</span>]), xytext<span class="op">=</span>origin, arrowprops<span class="op">=</span>props)</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> animate_corner(</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>    particles: np.ndarray, </span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>    vectors: <span class="bu">list</span>[<span class="bu">list</span>[np.ndarray]] <span class="op">=</span> <span class="va">None</span>, </span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>    limits: <span class="bu">list</span>[<span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>]] <span class="op">=</span> <span class="va">None</span>, </span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>    vector_kws: <span class="bu">dict</span> <span class="op">=</span> <span class="va">None</span>, </span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>kws</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> matplotlib.animation.FuncAnimation:</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set plot limits.</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> limits <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>        xmax <span class="op">=</span> np.<span class="bu">max</span>(particles, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>        xmax <span class="op">=</span> xmax <span class="op">*</span> <span class="fl">1.4</span></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>        xmax[<span class="dv">0</span>] <span class="op">=</span> xmax[<span class="dv">2</span>] <span class="op">=</span> <span class="bu">max</span>(xmax[<span class="dv">0</span>], xmax[<span class="dv">2</span>])</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>        xmax[<span class="dv">1</span>] <span class="op">=</span> xmax[<span class="dv">3</span>] <span class="op">=</span> <span class="bu">max</span>(xmax[<span class="dv">1</span>], xmax[<span class="dv">3</span>])</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>        limits <span class="op">=</span> <span class="bu">list</span>(<span class="bu">zip</span>(<span class="op">-</span>xmax, xmax))</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set plot labels.</span></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>    labels <span class="op">=</span> [<span class="st">"x"</span>, <span class="st">"x'"</span>, <span class="st">"y"</span>, <span class="st">"y'"</span>]</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set default key word arguments.</span></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> vector_kws <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>        vector_kws <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>    vector_kws.setdefault(<span class="st">"head_width"</span>, <span class="fl">0.2</span>)</span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>    vector_kws.setdefault(<span class="st">"head_length"</span>, <span class="fl">0.4</span>)</span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">"marker"</span>, <span class="st">"."</span>)</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">"mec"</span>, <span class="st">"None"</span>)</span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">"lw"</span>, <span class="fl">0.0</span>)</span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">"color"</span>, <span class="st">"black"</span>)</span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>    kws.setdefault(<span class="st">"ms"</span>, <span class="fl">5.0</span>)</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create figure</span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> CornerGrid(ndim<span class="op">=</span><span class="dv">4</span>, figwidth<span class="op">=</span><span class="fl">6.0</span>, limits<span class="op">=</span>limits, labels<span class="op">=</span>labels)</span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>    new_lines <span class="op">=</span> [[], [], []]</span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>    old_lines <span class="op">=</span> [[], [], []]</span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>            ax <span class="op">=</span> grid.axs[i, j]</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>            old_line, <span class="op">=</span> ax.plot([], [], alpha<span class="op">=</span><span class="fl">0.25</span>, <span class="op">**</span>kws)</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>            old_lines[i].append(old_line)</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>            new_line, <span class="op">=</span> ax.plot([], [], <span class="op">**</span>kws)</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>            new_lines[i].append(new_line)</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>    plt.close()</span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define update rule</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(frame):</span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ax <span class="kw">in</span> grid.axs.flat:</span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> annotation <span class="kw">in</span> ax.texts:</span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>                annotation.set_visible(<span class="va">False</span>)</span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> particles[frame]</span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>                ax <span class="op">=</span> grid.axs[i, j]</span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>                axis <span class="op">=</span> (j, i <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>                old_lines[i][j].set_data(particles[:frame, axis[<span class="dv">0</span>]], particles[:frame, axis[<span class="dv">1</span>]])</span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a>                new_lines[i][j].set_data((x[axis[<span class="dv">0</span>]],), (x[axis[<span class="dv">1</span>]],))</span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> vectors <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>                    v1 <span class="op">=</span> vectors[<span class="dv">0</span>][frame]</span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>                    v2 <span class="op">=</span> vectors[<span class="dv">1</span>][frame]</span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>                    v1_proj <span class="op">=</span> v1[[axis[<span class="dv">0</span>], axis[<span class="dv">1</span>]]]</span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>                    v2_proj <span class="op">=</span> v2[[axis[<span class="dv">0</span>], axis[<span class="dv">1</span>]]]</span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>                    plot_vector(</span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>                        v1_proj,</span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>                        origin<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>), </span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>                        color<span class="op">=</span><span class="st">"blue"</span>, </span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>                        ax<span class="op">=</span>ax, </span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>                        <span class="op">**</span>vector_kws</span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>                    )</span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a>                    plot_vector(</span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>                        v2_proj,</span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>                        origin<span class="op">=</span>v1_proj,</span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>                        color<span class="op">=</span><span class="st">"red"</span>,</span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>                        ax<span class="op">=</span>ax,</span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>                        <span class="op">**</span>vector_kws</span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>                    )</span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>                    </span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>        grid.axs[<span class="dv">0</span>, <span class="dv">1</span>].annotate(</span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Period </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(frame),</span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>            xy<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>),</span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>            xycoords<span class="op">=</span><span class="st">"axes fraction"</span>,</span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>            horizontalalignment<span class="op">=</span><span class="st">"center"</span>,</span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> matplotlib.animation.FuncAnimation(grid.fig, update, frames<span class="op">=</span>particles.shape[<span class="dv">0</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="cell-16" class="cell">
+<div id="cell-14" class="cell">
 <details class="code-fold">
 <summary>Tracking</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> unit_symplectic_matrix(n<span class="op">=</span><span class="dv">2</span>):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Construct 2n x 2n unit symplectic matrix.</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Each 2 x 2 block is [[0, 1], [-1, 0]]. This assumes our phase space vector</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">    is ordered as [x, x', y, y', ...].</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span>:</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"n must be an even integer"</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    U <span class="op">=</span> np.zeros((n, n))</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, n, <span class="dv">2</span>):</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        U[i : i <span class="op">+</span> <span class="dv">2</span>, i : i <span class="op">+</span> <span class="dv">2</span>] <span class="op">=</span> [[<span class="fl">0.0</span>, <span class="fl">1.0</span>], [<span class="op">-</span><span class="fl">1.0</span>, <span class="fl">0.0</span>]]</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> U</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> normalize(eigvecs):</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Normalize transfer matrix eigenvectors."""</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    v1, _, v2, _ <span class="op">=</span> eigvecs.T</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    U <span class="op">=</span> unit_symplectic_matrix(<span class="dv">4</span>)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> (<span class="dv">0</span>, <span class="dv">2</span>):</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        v <span class="op">=</span> eigvecs[:, i]</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        val <span class="op">=</span> np.linalg.multi_dot([np.conj(v), U, v]).imag</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> val <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>            eigvecs[:, i], eigvecs[:, i <span class="op">+</span> <span class="dv">1</span>] <span class="op">=</span> eigvecs[:, i <span class="op">+</span> <span class="dv">1</span>], eigvecs[:, i]</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        eigvecs[:, i : i <span class="op">+</span> <span class="dv">2</span>] <span class="op">*=</span> np.sqrt(<span class="fl">2.0</span> <span class="op">/</span> np.<span class="bu">abs</span>(val))</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> eigvecs</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> construct_normalization_matrix(eigvecs):</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Construct normalization matrix from transfer matrix eigenvectors."""</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    v1, _, v2, _ <span class="op">=</span> normalize(eigvecs).T</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    V <span class="op">=</span> np.zeros((<span class="dv">4</span>, <span class="dv">4</span>))</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    V[:, <span class="dv">0</span>] <span class="op">=</span> v1.real</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    V[:, <span class="dv">1</span>] <span class="op">=</span> (<span class="ot">1.0j</span> <span class="op">*</span> v1).real</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    V[:, <span class="dv">2</span>] <span class="op">=</span> v2.real</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    V[:, <span class="dv">3</span>] <span class="op">=</span> (<span class="ot">1.0j</span> <span class="op">*</span> v2).real</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> V</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rotate_matrix(M, angle<span class="op">=</span><span class="fl">0.0</span>):</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Get matrix in x-y rotated frame."""</span></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> np.cos(angle)</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> np.sin(angle)</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    R <span class="op">=</span> np.array([[c, <span class="dv">0</span>, s, <span class="dv">0</span>], [<span class="dv">0</span>, c, <span class="dv">0</span>, s], [<span class="op">-</span>s, <span class="dv">0</span>, c, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="op">-</span>s, <span class="dv">0</span>, c]])</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.linalg.multi_dot([np.linalg.inv(R), M, R])</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_poisson_matrix(ndim: <span class="bu">int</span> <span class="op">=</span> <span class="dv">4</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    U <span class="op">=</span> np.zeros((ndim, ndim))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, ndim, <span class="dv">2</span>):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        U[i : i <span class="op">+</span> <span class="dv">2</span>, i : i <span class="op">+</span> <span class="dv">2</span>] <span class="op">=</span> [[<span class="fl">0.0</span>, <span class="fl">1.0</span>], [<span class="op">-</span><span class="fl">1.0</span>, <span class="fl">0.0</span>]]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> U</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> normalize_eigvec(v: np.ndarray) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    ndim <span class="op">=</span> v.shape[<span class="dv">0</span>]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    U <span class="op">=</span> build_poisson_matrix(ndim)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    norm <span class="op">=</span> np.<span class="bu">abs</span>(np.imag(np.linalg.multi_dot([np.conj(v), U, v])))</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> norm <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> v <span class="op">*</span> np.sqrt(<span class="fl">2.0</span> <span class="op">/</span> norm)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> v</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_norm_matrix_from_eigvecs(v1: np.ndarray, v2: np.ndarray) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    v1 <span class="op">=</span> normalize_eigvec(v1)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    v2 <span class="op">=</span> normalize_eigvec(v2)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    V <span class="op">=</span> np.zeros((<span class="dv">4</span>, <span class="dv">4</span>))</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    V[:, <span class="dv">0</span>] <span class="op">=</span> <span class="op">+</span>v1.real</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    V[:, <span class="dv">1</span>] <span class="op">=</span> <span class="op">-</span>v1.imag</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    V[:, <span class="dv">2</span>] <span class="op">=</span> <span class="op">+</span>v2.real</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    V[:, <span class="dv">3</span>] <span class="op">=</span> <span class="op">-</span>v2.imag</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.linalg.inv(V)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_norm_matrix_from_tmat(M: np.ndarray) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    eig_res <span class="op">=</span> np.linalg.eig(<span class="va">self</span>.M)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    v1 <span class="op">=</span> normalize_eigvec(eig_res.eigenvectors[:, <span class="dv">0</span>])</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    v2 <span class="op">=</span> normalize_eigvec(eig_res.eigenvectors[:, <span class="dv">2</span>])</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> build_norm_matrix_from_eigvecs(v1, v2)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rotate_matrix(M: np.ndarray, angle: <span class="bu">float</span>) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> np.cos(angle)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> np.sin(angle)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    R <span class="op">=</span> np.array([[c, <span class="dv">0</span>, s, <span class="dv">0</span>], [<span class="dv">0</span>, c, <span class="dv">0</span>, s], [<span class="op">-</span>s, <span class="dv">0</span>, c, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="op">-</span>s, <span class="dv">0</span>, c]])</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.linalg.multi_dot([np.linalg.inv(R), M, R])</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_matrix_drift_2d(length: <span class="bu">float</span>) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array([[<span class="fl">1.0</span>, length], [<span class="fl">0.0</span>, <span class="fl">1.0</span>]])</span>
 <span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MatrixLattice:</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Transfer matrix representation of periodic linear system."""</span></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrices <span class="op">=</span> []  <span class="co"># [element1, element2, ...]</span></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.M <span class="op">=</span> <span class="va">None</span>  <span class="co"># transfer matrix</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.V <span class="op">=</span> <span class="va">None</span>  <span class="co"># normalization matrix</span></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigvals <span class="op">=</span> <span class="va">None</span>  <span class="co"># eigenvalues of M</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigvecs <span class="op">=</span> <span class="va">None</span>  <span class="co"># eigenvalues of M</span></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.v1 <span class="op">=</span> <span class="va">None</span>  <span class="co"># eigenvector 1 </span></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.v2 <span class="op">=</span> <span class="va">None</span>  <span class="co"># eigenvector 2</span></span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eig1 <span class="op">=</span> <span class="va">None</span>  <span class="co"># eigenvalue 1</span></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eig2 <span class="op">=</span> <span class="va">None</span>  <span class="co"># eigenvalue 2</span></span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params <span class="op">=</span> <span class="bu">dict</span>()  <span class="co"># lattice parameters</span></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> n_elements(<span class="va">self</span>):</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Return the number of elements in the lattice."""</span></span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">len</span>(<span class="va">self</span>.matrices)</span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> add(<span class="va">self</span>, mat):</span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Add an element to the end of the lattice."""</span></span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrices.append(mat)</span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.build()</span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> rotate(<span class="va">self</span>, phi):</span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Apply transverse rotation to all elements."""</span></span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.M <span class="op">=</span> rotate_matrix(<span class="va">self</span>.M, np.radians(phi))</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.analyze()</span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> build(<span class="va">self</span>):</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Compute the one-turn transfer matrix."""</span></span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>        n_elements <span class="op">=</span> <span class="va">self</span>.n_elements()</span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> n_elements <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> n_elements <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.M <span class="op">=</span> <span class="va">self</span>.matrices[<span class="dv">0</span>]</span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.M <span class="op">=</span> np.linalg.multi_dot(<span class="bu">list</span>(<span class="bu">reversed</span>(<span class="va">self</span>.matrices)))</span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> analyze(<span class="va">self</span>):</span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Compute the lattice parameters."""</span></span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigvals, <span class="va">self</span>.eigvecs_raw <span class="op">=</span> np.linalg.eig(<span class="va">self</span>.M)</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eig1, <span class="va">self</span>.eig2 <span class="op">=</span> <span class="va">self</span>.eigvals[[<span class="dv">0</span>, <span class="dv">2</span>]]</span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.v1_raw, <span class="va">self</span>.v2_raw <span class="op">=</span> <span class="va">self</span>.eigvecs_raw[:, [<span class="dv">0</span>, <span class="dv">2</span>]].T</span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.V <span class="op">=</span> construct_normalization_matrix(<span class="va">self</span>.eigvecs_raw.copy())</span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigvecs <span class="op">=</span> normalize(<span class="va">self</span>.eigvecs_raw)</span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.v1, <span class="va">self</span>.v2 <span class="op">=</span> <span class="va">self</span>.eigvecs[:, [<span class="dv">0</span>, <span class="dv">2</span>]].T</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.Vinv <span class="op">=</span> np.linalg.inv(<span class="va">self</span>.V)</span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.analyze_2D()</span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.analyze_4D()</span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> analyze_2D(<span class="va">self</span>):</span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Compute the 2D Twiss parameters."""</span></span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> analyze_2x2(M):</span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>            cos_phi <span class="op">=</span> (M[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">+</span> M[<span class="dv">1</span>, <span class="dv">1</span>]) <span class="op">/</span> <span class="fl">2.0</span></span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>            sign <span class="op">=</span> <span class="fl">1.0</span></span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="bu">abs</span>(M[<span class="dv">0</span>, <span class="dv">1</span>]) <span class="op">!=</span> <span class="dv">0</span>:</span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>                sign <span class="op">=</span> M[<span class="dv">0</span>, <span class="dv">1</span>] <span class="op">/</span> <span class="bu">abs</span>(M[<span class="dv">0</span>, <span class="dv">1</span>])</span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>            sin_phi <span class="op">=</span> sign <span class="op">*</span> np.sqrt(<span class="fl">1.0</span> <span class="op">-</span> cos_phi<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>            beta <span class="op">=</span> M[<span class="dv">0</span>, <span class="dv">1</span>] <span class="op">/</span> sin_phi</span>
-<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>            alpha <span class="op">=</span> (M[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">-</span> M[<span class="dv">1</span>, <span class="dv">1</span>]) <span class="op">/</span> (<span class="fl">2.0</span> <span class="op">*</span> sin_phi)</span>
-<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>            tune <span class="op">=</span> np.arccos(cos_phi) <span class="op">/</span> (<span class="fl">2.0</span> <span class="op">*</span> np.pi) <span class="op">*</span> sign</span>
-<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> alpha, beta, tune</span>
-<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>        alpha_x, beta_x, tune_x <span class="op">=</span> analyze_2x2(<span class="va">self</span>.M[:<span class="dv">2</span>, :<span class="dv">2</span>])</span>
-<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>        alpha_y, beta_y, tune_y <span class="op">=</span> analyze_2x2(<span class="va">self</span>.M[<span class="dv">2</span>:, <span class="dv">2</span>:])</span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'alpha_x'</span>] <span class="op">=</span> alpha_x</span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'alpha_y'</span>] <span class="op">=</span> alpha_y</span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'beta_x'</span>] <span class="op">=</span> beta_x</span>
-<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'beta_y'</span>] <span class="op">=</span> beta_y</span>
-<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'tune_x'</span>] <span class="op">=</span> tune_x</span>
-<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'tune_y'</span>] <span class="op">=</span> tune_y</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_matrix_drift(length: <span class="bu">float</span>) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>    matrix <span class="op">=</span> np.zeros((<span class="dv">4</span>, <span class="dv">4</span>))</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    matrix[<span class="dv">0</span>:<span class="dv">2</span>, <span class="dv">0</span>:<span class="dv">2</span>] <span class="op">=</span> build_matrix_drift_2d(length)</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    matrix[<span class="dv">2</span>:<span class="dv">4</span>, <span class="dv">2</span>:<span class="dv">4</span>] <span class="op">=</span> build_matrix_drift_2d(length)</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> matrix</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_matrix_quad_2d(length: <span class="bu">float</span>, k: <span class="bu">float</span>) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>    sign <span class="op">=</span> np.sign(k)</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> np.sqrt(np.<span class="bu">abs</span>(k))</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    matrix <span class="op">=</span> np.zeros((<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> sign <span class="op">&gt;=</span> <span class="dv">0</span>:        </span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>        matrix[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="op">+</span>np.cos(k <span class="op">*</span> length)</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>        matrix[<span class="dv">0</span>, <span class="dv">1</span>] <span class="op">=</span> <span class="op">+</span>np.sin(k <span class="op">*</span> length) <span class="op">/</span> k</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>        matrix[<span class="dv">1</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="op">-</span>np.sin(k <span class="op">*</span> length) <span class="op">*</span> k</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>        matrix[<span class="dv">1</span>, <span class="dv">1</span>] <span class="op">=</span> <span class="op">+</span>np.cos(k <span class="op">*</span> length)</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>        matrix[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="op">+</span>np.cosh(k <span class="op">*</span> length)</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>        matrix[<span class="dv">0</span>, <span class="dv">1</span>] <span class="op">=</span> <span class="op">+</span>np.sinh(k <span class="op">*</span> length) <span class="op">/</span> k</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>        matrix[<span class="dv">1</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="op">+</span>np.sinh(k <span class="op">*</span> length) <span class="op">*</span> k</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>        matrix[<span class="dv">1</span>, <span class="dv">1</span>] <span class="op">=</span> <span class="op">+</span>np.cosh(k <span class="op">*</span> length)</span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> matrix</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_matrix_quad(length: <span class="bu">float</span>, k: <span class="bu">float</span>, tilt: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.0</span>) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>    matrix <span class="op">=</span> np.zeros((<span class="dv">4</span>, <span class="dv">4</span>))</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>    matrix[<span class="dv">0</span>:<span class="dv">2</span>, <span class="dv">0</span>:<span class="dv">2</span>] <span class="op">=</span> build_matrix_quad_2d(length, <span class="op">+</span>k)</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>    matrix[<span class="dv">2</span>:<span class="dv">4</span>, <span class="dv">2</span>:<span class="dv">4</span>] <span class="op">=</span> build_matrix_quad_2d(length, <span class="op">-</span>k)</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> tilt:</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>        matrix <span class="op">=</span> rotate_matrix(matrix, tilt)</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> matrix</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Lattice:</span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrices <span class="op">=</span> []</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.M <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.V <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.V_inv <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigvec_1 <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigvec_2 <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigval_1 <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigval_2 <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> length(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">len</span>(<span class="va">self</span>.matrices)</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> add(<span class="va">self</span>, matrix: np.ndarray) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrices.append(matrix)</span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.build()</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> build(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>        length <span class="op">=</span> <span class="va">self</span>.length()</span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> length <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> length <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.M <span class="op">=</span> <span class="va">self</span>.matrices[<span class="dv">0</span>]</span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.M <span class="op">=</span> np.linalg.multi_dot(<span class="bu">list</span>(<span class="bu">reversed</span>(<span class="va">self</span>.matrices)))</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> analyze(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> np.linalg.eig(<span class="va">self</span>.M)</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigval_1 <span class="op">=</span> result.eigenvalues[<span class="dv">0</span>]</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigval_2 <span class="op">=</span> result.eigenvalues[<span class="dv">2</span>]</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigvec_1 <span class="op">=</span> normalize_eigvec(result.eigenvectors[:, <span class="dv">0</span>])</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.eigvec_2 <span class="op">=</span> normalize_eigvec(result.eigenvectors[:, <span class="dv">2</span>])</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.V_inv <span class="op">=</span> build_norm_matrix_from_eigvecs(<span class="va">self</span>.eigvec_1, <span class="va">self</span>.eigvec_2)</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.V <span class="op">=</span> np.linalg.inv(<span class="va">self</span>.V_inv)</span>
 <span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> analyze_4D(<span class="va">self</span>):</span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Compute the 4D Twiss parameters."""</span></span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>        V <span class="op">=</span> <span class="va">self</span>.V</span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>        beta_1x <span class="op">=</span> V[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>        beta_2y <span class="op">=</span> V[<span class="dv">2</span>, <span class="dv">2</span>] <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>        alpha_1x <span class="op">=</span> <span class="op">-</span>np.sqrt(beta_1x) <span class="op">*</span> V[<span class="dv">1</span>, <span class="dv">0</span>]</span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>        alpha_2y <span class="op">=</span> <span class="op">-</span>np.sqrt(beta_2y) <span class="op">*</span> V[<span class="dv">3</span>, <span class="dv">2</span>]</span>
-<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> <span class="fl">1.0</span> <span class="op">-</span> V[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">*</span> V[<span class="dv">1</span>, <span class="dv">1</span>]</span>
-<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>        nu1 <span class="op">=</span> np.arctan2(<span class="op">-</span>V[<span class="dv">2</span>, <span class="dv">1</span>], V[<span class="dv">2</span>, <span class="dv">0</span>])</span>
-<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>        nu2 <span class="op">=</span> np.arctan2(<span class="op">-</span>V[<span class="dv">0</span>, <span class="dv">3</span>], V[<span class="dv">0</span>, <span class="dv">2</span>])</span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>        beta_1y <span class="op">=</span> (V[<span class="dv">2</span>, <span class="dv">0</span>] <span class="op">/</span> np.cos(nu1)) <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>        beta_2x <span class="op">=</span> (V[<span class="dv">0</span>, <span class="dv">2</span>] <span class="op">/</span> np.cos(nu2)) <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>        alpha_1y <span class="op">=</span> (u <span class="op">*</span> np.sin(nu1) <span class="op">-</span> V[<span class="dv">3</span>, <span class="dv">0</span>] <span class="op">*</span> np.sqrt(beta_1y)) <span class="op">/</span> np.cos(nu1)</span>
-<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>        alpha_2x <span class="op">=</span> (u <span class="op">*</span> np.sin(nu2) <span class="op">-</span> V[<span class="dv">1</span>, <span class="dv">2</span>] <span class="op">*</span> np.sqrt(beta_2x)) <span class="op">/</span> np.cos(nu2)</span>
-<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'alpha_1x'</span>] <span class="op">=</span> alpha_1x</span>
-<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'alpha_1y'</span>] <span class="op">=</span> alpha_1y</span>
-<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'alpha_2x'</span>] <span class="op">=</span> alpha_2x</span>
-<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'alpha_2y'</span>] <span class="op">=</span> alpha_2y</span>
-<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'beta_1x'</span>] <span class="op">=</span> beta_1x</span>
-<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'beta_1y'</span>] <span class="op">=</span> beta_1y</span>
-<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'beta_2x'</span>] <span class="op">=</span> beta_2x</span>
-<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'beta_2y'</span>] <span class="op">=</span> beta_2y</span>
-<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'u'</span>] <span class="op">=</span> u</span>
-<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'nu1'</span>] <span class="op">=</span> nu1</span>
-<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'nu2'</span>] <span class="op">=</span> nu2</span>
-<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'tune_1'</span>] <span class="op">=</span> np.arccos(<span class="va">self</span>.eig1.real) <span class="op">/</span> (<span class="fl">2.0</span> <span class="op">*</span> np.pi)</span>
-<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.params[<span class="st">'tune_2'</span>] <span class="op">=</span> np.arccos(<span class="va">self</span>.eig2.real) <span class="op">/</span> (<span class="fl">2.0</span> <span class="op">*</span> np.pi)</span>
-<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> normal_form(<span class="va">self</span>):</span>
-<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Return normal form of lattice transfer matrix."""</span></span>
-<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.linalg.multi_dot([np.linalg.inv(<span class="va">self</span>.V), <span class="va">self</span>.M, <span class="va">self</span>.V])</span>
-<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> track_part(<span class="va">self</span>, x, nturns<span class="op">=</span><span class="dv">1</span>, norm_coords<span class="op">=</span><span class="va">False</span>, element_wise<span class="op">=</span><span class="va">False</span>):</span>
-<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Track a single particle."""</span></span>
-<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> norm_coords:</span>
-<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> np.matmul(np.linalg.inv(<span class="va">self</span>.V), x)</span>
-<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>            M_oneturn <span class="op">=</span> <span class="va">self</span>.normal_form()</span>
-<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>            M_oneturn <span class="op">=</span> <span class="va">self</span>.M</span>
-<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>        X <span class="op">=</span> [x]</span>
-<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(nturns):</span>
-<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> element_wise:</span>
-<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>                <span class="cf">for</span> M <span class="kw">in</span> <span class="va">self</span>.matrices:</span>
-<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a>                    X.append(np.matmul(M, X[<span class="op">-</span><span class="dv">1</span>]))</span>
-<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a>                X.append(np.matmul(M_oneturn, X[<span class="op">-</span><span class="dv">1</span>]))</span>
-<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.array(X)</span>
-<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fodo(k1, k2, length, fill_fac<span class="op">=</span><span class="fl">0.5</span>, quad_tilt<span class="op">=</span><span class="dv">0</span>, start<span class="op">=</span><span class="st">'quad'</span>, n_parts<span class="op">=</span><span class="dv">1</span>):</span>
-<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Create a FODO lattice (focus, off, defocus, off)."""</span></span>
-<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> matrix_drift(length):</span>
-<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Drift transfer matrix."""</span></span>
-<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>        M <span class="op">=</span> np.zeros((<span class="dv">4</span>, <span class="dv">4</span>))</span>
-<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a>        M[:<span class="dv">2</span>, :<span class="dv">2</span>] <span class="op">=</span> M[<span class="dv">2</span>:, <span class="dv">2</span>:] <span class="op">=</span> [[<span class="dv">1</span>, length], [<span class="dv">0</span>, <span class="dv">1</span>]]</span>
-<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> M</span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> normal_form(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.linalg.multi_dot([<span class="va">self</span>.V_inv, <span class="va">self</span>.M, <span class="va">self</span>.V])</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> track(<span class="va">self</span>, x: np.ndarray, turns: <span class="bu">int</span> <span class="op">=</span> <span class="dv">1</span>, normalize: <span class="bu">bool</span> <span class="op">=</span> <span class="va">False</span>):</span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>        M <span class="op">=</span> np.copy(<span class="va">self</span>.M)</span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> normalize:</span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> np.matmul(<span class="va">self</span>.V_inv, x)</span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>            M <span class="op">=</span> <span class="va">self</span>.normal_form()</span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>        X <span class="op">=</span> np.zeros((turns <span class="op">+</span> <span class="dv">1</span>, x.shape[<span class="dv">0</span>]))</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>        X[<span class="dv">0</span>, :] <span class="op">=</span> np.copy(x)</span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, turns):</span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>            X[i, :] <span class="op">=</span> np.matmul(M, X[i <span class="op">-</span> <span class="dv">1</span>, :])</span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> X</span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> build_fodo_lattice(length: <span class="bu">float</span>, k: <span class="bu">float</span>, quad_tilt: <span class="bu">float</span> <span class="op">=</span> <span class="dv">0</span>) <span class="op">-&gt;</span> Lattice:</span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>    length <span class="op">=</span> <span class="fl">0.125</span> <span class="op">*</span> length</span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>    lattice <span class="op">=</span> Lattice()</span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>    lattice.add(build_matrix_drift(length))</span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>    lattice.add(build_matrix_quad(length, <span class="op">+</span>k, tilt<span class="op">=+</span>quad_tilt))</span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>    lattice.add(build_matrix_quad(length, <span class="op">+</span>k, tilt<span class="op">=+</span>quad_tilt))</span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>    lattice.add(build_matrix_drift(length))</span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>    lattice.add(build_matrix_drift(length))</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>    lattice.add(build_matrix_quad(length, <span class="op">-</span>k, tilt<span class="op">=-</span>quad_tilt))</span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>    lattice.add(build_matrix_quad(length, <span class="op">-</span>k, tilt<span class="op">=-</span>quad_tilt))</span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a>    lattice.add(build_matrix_drift(length))</span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> lattice</span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a FODO lattice. The quadrupoles are tilted to generate x-y coupling.</span></span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>lattice <span class="op">=</span> build_fodo_lattice(length<span class="op">=</span><span class="fl">5.0</span>, k<span class="op">=</span><span class="fl">0.25</span>, quad_tilt<span class="op">=</span>np.radians(<span class="op">-</span><span class="fl">1.0</span>))</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>lattice.analyze()</span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a><span class="co"># Set initial particle coordinates. Three particles: v1, v2, v1 + v2.</span></span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>action_1 <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> <span class="fl">40.0</span>  <span class="co"># mode 1 amplitude</span></span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>action_2 <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> <span class="fl">10.0</span>  <span class="co"># mode 2 amplitude</span></span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>phase_1 <span class="op">=</span> np.pi <span class="op">*</span> <span class="fl">0.00</span>  <span class="co"># mode 1 phase</span></span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>phase_2 <span class="op">=</span> np.pi <span class="op">*</span> <span class="fl">0.25</span>  <span class="co"># mode 2 phase</span></span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>x_1 <span class="op">=</span> np.real(np.sqrt(<span class="fl">2.0</span> <span class="op">*</span> action_1) <span class="op">*</span> lattice.eigvec_1 <span class="op">*</span> np.exp(<span class="ot">1.0j</span> <span class="op">*</span> phase_1))</span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>x_2 <span class="op">=</span> np.real(np.sqrt(<span class="fl">2.0</span> <span class="op">*</span> action_2) <span class="op">*</span> lattice.eigvec_2 <span class="op">*</span> np.exp(<span class="ot">1.0j</span> <span class="op">*</span> phase_2))</span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x_1 <span class="op">+</span> x_2</span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a><span class="co"># Track particles 1000 turns and store turn-by-turn coordinates.</span></span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a>turns <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a>particles_1 <span class="op">=</span> lattice.track(x_1, turns)</span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a>particles_2 <span class="op">=</span> lattice.track(x_2, turns)</span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>particles <span class="op">=</span> lattice.track(x, turns)</span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a><span class="co"># Animate first 45 turns in corner plot.</span></span>
+<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a>turns_plot <span class="op">=</span> <span class="dv">45</span></span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a>xmax <span class="op">=</span> <span class="fl">1.4</span> <span class="op">*</span> np.<span class="bu">max</span>(particles, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>xmax[<span class="dv">0</span>] <span class="op">=</span> xmax[<span class="dv">2</span>] <span class="op">=</span> <span class="bu">max</span>(xmax[<span class="dv">0</span>], xmax[<span class="dv">2</span>])</span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a>xmax[<span class="dv">1</span>] <span class="op">=</span> xmax[<span class="dv">3</span>] <span class="op">=</span> <span class="bu">max</span>(xmax[<span class="dv">1</span>], xmax[<span class="dv">3</span>])</span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a>limits <span class="op">=</span> <span class="bu">list</span>(<span class="bu">zip</span>(<span class="op">-</span>xmax, xmax))</span>
 <span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> matrix_quad(length, k, kind<span class="op">=</span><span class="st">'qf'</span>, tilt<span class="op">=</span><span class="dv">0</span>):</span>
-<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Focusing quadrupole transfer matrix."""</span></span>
-<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a>        k <span class="op">=</span> np.sqrt(np.<span class="bu">abs</span>(k))</span>
-<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>        cos <span class="op">=</span> np.cos(k <span class="op">*</span> length)</span>
-<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a>        sin <span class="op">=</span> np.sin(k <span class="op">*</span> length)</span>
-<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a>        cosh <span class="op">=</span> np.cosh(k <span class="op">*</span> length)</span>
-<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a>        sinh <span class="op">=</span> np.sinh(k <span class="op">*</span> length)</span>
-<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> kind <span class="op">==</span> <span class="st">'qf'</span>:</span>
-<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>            M <span class="op">=</span> np.array([[cos, sin <span class="op">/</span> k, <span class="dv">0</span>, <span class="dv">0</span>],</span>
-<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>                          [<span class="op">-</span>k<span class="op">*</span>sin, cos, <span class="dv">0</span>, <span class="dv">0</span>],</span>
-<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>                          [<span class="dv">0</span>, <span class="dv">0</span>, cosh, sinh <span class="op">/</span> k],</span>
-<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>                          [<span class="dv">0</span>, <span class="dv">0</span>, k <span class="op">*</span> sinh, cosh]])</span>
-<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> kind <span class="op">==</span> <span class="st">'qd'</span>:</span>
-<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>            M <span class="op">=</span> np.array([[cosh, sinh <span class="op">/</span> k, <span class="dv">0</span>, <span class="dv">0</span>],</span>
-<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>                          [k <span class="op">*</span> sinh, cosh, <span class="dv">0</span>, <span class="dv">0</span>],</span>
-<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>                          [<span class="dv">0</span>, <span class="dv">0</span>, cos, sin <span class="op">/</span> k],</span>
-<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>                          [<span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span>k <span class="op">*</span> sin, cos]])</span>
-<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> tilt:</span>
-<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a>            M <span class="op">=</span> rotate_matrix(M, np.radians(tilt))</span>
-<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> M</span>
-<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>    length_quad <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> fill_fac <span class="op">*</span> length</span>
-<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a>    length_quad <span class="op">=</span> length_quad <span class="op">/</span> n_parts</span>
-<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a>    length_drift <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> (<span class="fl">1.0</span> <span class="op">-</span> fill_fac) <span class="op">*</span> length</span>
-<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a>    length_drift <span class="op">=</span> length_drift <span class="op">/</span> n_parts</span>
-<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a>    lattice <span class="op">=</span> MatrixLattice()</span>
-<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> start <span class="op">==</span> <span class="st">'quad'</span>:</span>
-<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_parts):</span>
-<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>            lattice.add(matrix_quad(<span class="fl">0.5</span> <span class="op">*</span> length_quad, k1, <span class="st">'qf'</span>, quad_tilt))</span>
-<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_parts):</span>
-<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a>            lattice.add(matrix_drift(length_drift))</span>
-<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_parts):</span>
-<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a>            lattice.add(matrix_quad(length_quad, k2, <span class="st">'qd'</span>, <span class="op">-</span>quad_tilt))</span>
-<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_parts):</span>
-<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>            lattice.add(matrix_drift(length_drift))</span>
-<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_parts):</span>
-<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a>            lattice.add(matrix_quad(<span class="fl">0.5</span> <span class="op">*</span> length_quad, k1, <span class="st">'qf'</span>, quad_tilt))</span>
-<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> start <span class="op">==</span> <span class="st">'drift'</span>:</span>
-<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_parts):</span>
-<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a>            lattice.add(matrix_drift(<span class="fl">0.5</span> <span class="op">*</span> length_drift))</span>
-<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_parts):</span>
-<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a>            lattice.add(matrix_quad(length_quad, k1, <span class="st">'qf'</span>, <span class="op">+</span>quad_tilt))</span>
-<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_parts):</span>
-<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a>            lattice.add(matrix_drift(length_drift))</span>
-<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_parts):</span>
-<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a>            lattice.add(matrix_quad(length_quad, k2, <span class="st">'qd'</span>, <span class="op">-</span>quad_tilt))</span>
-<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_parts):</span>
-<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a>            lattice.add(matrix_drift(<span class="fl">0.5</span> <span class="op">*</span> length_drift))</span>
-<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a>    lattice.analyze()</span>
-<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> lattice</span>
-<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a FODO lattice. The two quadrupoles are tilted in opposite directions</span></span>
-<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a><span class="co"># by one degree to generate linear x-y coupling.</span></span>
-<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="fl">5.0</span></span>
-<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a>k1 <span class="op">=</span> <span class="fl">0.25</span></span>
-<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a>k2 <span class="op">=</span> <span class="fl">0.25</span></span>
-<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a>lattice <span class="op">=</span> fodo(k1, k2, L, fill_fac<span class="op">=</span><span class="fl">0.5</span>, quad_tilt<span class="op">=-</span><span class="fl">1.0</span>, start<span class="op">=</span><span class="st">'drift'</span>)</span>
-<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the initial particle phase space coordinates.</span></span>
-<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a>J1 <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> <span class="fl">40.0</span>  <span class="co"># amplitude of mode 1</span></span>
-<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a>J2 <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> <span class="fl">10.0</span>  <span class="co"># amplitude of mode 2</span></span>
-<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a>psi1 <span class="op">=</span> np.radians(<span class="fl">0.0</span>)  <span class="co"># initial phase of eigenvector 1</span></span>
-<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a>psi2 <span class="op">=</span> np.radians(<span class="fl">90.0</span>)  <span class="co"># initial phase of eigenvector 2</span></span>
-<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.real(np.sqrt(<span class="fl">2.0</span> <span class="op">*</span> J1) <span class="op">*</span> lattice.v1 <span class="op">*</span> np.exp(<span class="ot">1.0j</span> <span class="op">*</span> psi1)) <span class="co"># mode 1 contribution</span></span>
-<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.real(np.sqrt(<span class="fl">2.0</span> <span class="op">*</span> J2) <span class="op">*</span> lattice.v2 <span class="op">*</span> np.exp(<span class="ot">1.0j</span> <span class="op">*</span> psi2)) <span class="co"># mode 2 contribution</span></span>
-<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x1 <span class="op">+</span> x2</span>
-<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a><span class="co"># Track for 1000 turns.</span></span>
-<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a>n_turns <span class="op">=</span> <span class="dv">1000</span></span>
-<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> lattice.track_part(x1, n_turns)</span>
-<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a>X2 <span class="op">=</span> lattice.track_part(x2, n_turns)</span>
-<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> lattice.track_part(x, n_turns)</span>
-<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a><span class="co"># Animate 45 turns in corner plot.</span></span>
-<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a>scale <span class="op">=</span> <span class="fl">1.4</span></span>
-<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a>maxs <span class="op">=</span> <span class="fl">1.4</span> <span class="op">*</span> np.<span class="bu">max</span>(X, axis<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a>maxs[[<span class="dv">0</span>, <span class="dv">2</span>]] <span class="op">=</span> np.<span class="bu">max</span>(maxs[[<span class="dv">0</span>, <span class="dv">2</span>]])</span>
-<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a>maxs[[<span class="dv">1</span>, <span class="dv">3</span>]] <span class="op">=</span> np.<span class="bu">max</span>(maxs[[<span class="dv">1</span>, <span class="dv">3</span>]])</span>
-<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a>limits <span class="op">=</span> [(<span class="op">-</span>m, m) <span class="cf">for</span> m <span class="kw">in</span> maxs]</span>
-<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a>anim <span class="op">=</span> animate_corner(X[:<span class="dv">45</span>, :], limits<span class="op">=</span>limits)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a>animation <span class="op">=</span> animate_corner(particles[:turns_plot, :], limits<span class="op">=</span>limits)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./_output_corner.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Fig. 3. Period-by-period four-dimensional phase space coordinates of a coupled parametric oscillator."><img src="./_output_corner.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Fig. 3. Period-by-period four-dimensional phase space coordinates of a coupled parametric oscillator."></a></p>
+<div id="fig-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="outputs/corner.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Period-by-period four-dimensional phase space coordinates of a coupled parametric oscillator."><img src="outputs/corner.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" width="470"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Period-by-period four-dimensional phase space coordinates of a coupled parametric oscillator.
+</figcaption>
 </figure>
 </div>
-<figcaption>Fig. 3. Period-by-period four-dimensional phase space coordinates of a coupled parametric oscillator.</figcaption>
-</figure>
-</div>
-<p>The particle traces donut-like shapes in <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> and <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> instead of ellipses. Here are the shapes after 1000 periods.</p>
-<div id="cell-20" class="cell">
+<p><a href="#fig-3" class="quarto-xref">Figure&nbsp;3</a> shows the 2D projections of the turn-by-turn coordinates. Instead of ellipses, the particle traces donut-like shapes in the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> and <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> planes. <a href="#fig-4" class="quarto-xref">Figure&nbsp;4</a> shows the result after 1000 turns.</p>
+<div id="cell-18" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> psv.CornerGrid(diag<span class="op">=</span><span class="va">False</span>, figwidth<span class="op">=</span><span class="fl">4.5</span>, labels<span class="op">=</span>labels, limits<span class="op">=</span>limits)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>grid.plot_cloud(X, kind<span class="op">=</span><span class="st">'scatter'</span>, s<span class="op">=</span><span class="fl">0.75</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> CornerGrid(ndim<span class="op">=</span><span class="dv">4</span>, figwidth<span class="op">=</span><span class="fl">6.0</span>, limits<span class="op">=</span>limits, labels<span class="op">=</span>[<span class="st">"x"</span>, <span class="st">"x'"</span>, <span class="st">"y"</span>, <span class="st">"y'"</span>])</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>grid.plot_scatter(particles, s<span class="op">=</span><span class="fl">0.75</span>, c<span class="op">=</span><span class="st">"black"</span>, ec<span class="op">=</span><span class="st">"none"</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>grid.axs[<span class="dv">0</span>, <span class="dv">1</span>].annotate(</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Period 1000'</span>, xy<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>), xycoords<span class="op">=</span><span class="st">'axes fraction'</span>,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    horizontalalignment<span class="op">=</span><span class="st">'center'</span>, verticalalignment<span class="op">=</span><span class="st">'center'</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Period 1000"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    xy<span class="op">=</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    xycoords<span class="op">=</span><span class="st">"axes fraction"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    horizontalalignment<span class="op">=</span><span class="st">"center"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    verticalalignment<span class="op">=</span><span class="st">"center"</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>plt.close()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./_output_corner_1000.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Fig. 4. Phase space coordates after 1000 periods."><img src="./_output_corner_1000.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Fig. 4. Phase space coordates after 1000 periods."></a></p>
+<div id="fig-4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="outputs/corner_1000.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: Phase space coordates after 1000 periods."><img src="outputs/corner_1000.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="470"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Phase space coordates after 1000 periods.
+</figcaption>
 </figure>
 </div>
-<figcaption>Fig. 4. Phase space coordates after 1000 periods.</figcaption>
-</figure>
-</div>
-<p>There is clearly more than one frequency present.</p>
-<div id="cell-24" class="cell">
+<p>There’s clearly more than one frequency present. Here’s the FFT of the horizontal coordinate <span class="math inline">\(x\)</span>:</p>
+<div id="cell-22" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> pplt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, figsize<span class="op">=</span>(<span class="fl">8.0</span>, <span class="fl">1.5</span>), sharey<span class="op">=</span><span class="va">False</span>, spanx<span class="op">=</span><span class="va">False</span>, space<span class="op">=</span><span class="dv">6</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].plot(X[:<span class="dv">150</span>, <span class="dv">0</span>], color<span class="op">=</span><span class="st">'black'</span>, marker<span class="op">=</span><span class="st">'.'</span>, ms<span class="op">=</span><span class="dv">4</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].<span class="bu">format</span>(ylabel<span class="op">=</span><span class="st">'x [mm]'</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> X.shape[<span class="dv">0</span>]</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> n <span class="op">//</span> <span class="dv">2</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> (<span class="fl">1.0</span> <span class="op">/</span> n) <span class="op">*</span> np.arange(m)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>xf <span class="op">=</span> (<span class="fl">1.0</span> <span class="op">/</span> m) <span class="op">*</span> <span class="bu">abs</span>(scipy.fft.fft(X[:, <span class="dv">0</span>])[:m])</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(title_kw<span class="op">=</span><span class="bu">dict</span>(fontsize<span class="op">=</span><span class="st">'medium'</span>))</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].<span class="bu">format</span>(xlabel<span class="op">=</span><span class="st">'Period number'</span>)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].<span class="bu">format</span>(xlabel<span class="op">=</span><span class="st">'Frequency'</span>)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].plot(f[<span class="dv">1</span>:], xf[<span class="dv">1</span>:], color<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>axs[:, <span class="dv">1</span>].<span class="bu">format</span>(ylabel<span class="op">=</span><span class="st">'FFT amplitude'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> particles.shape[<span class="dv">0</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> n <span class="op">//</span> <span class="dv">2</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> (<span class="fl">1.0</span> <span class="op">/</span> n) <span class="op">*</span> np.arange(m)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>xf <span class="op">=</span> (<span class="fl">1.0</span> <span class="op">/</span> m) <span class="op">*</span> <span class="bu">abs</span>(scipy.fft.fft(particles[:, <span class="dv">0</span>])[:m])</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, figsize<span class="op">=</span>(<span class="fl">9.0</span>, <span class="fl">1.7</span>), sharey<span class="op">=</span><span class="va">False</span>, gridspec_kw<span class="op">=</span><span class="bu">dict</span>(wspace<span class="op">=</span><span class="fl">0.1</span>))</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].plot(particles[:<span class="dv">150</span>, <span class="dv">0</span>], color<span class="op">=</span><span class="st">"black"</span>, marker<span class="op">=</span><span class="st">"."</span>, ms<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_xlabel(<span class="st">"Turn"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_ylabel(<span class="st">"x [mm]"</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].plot(f[<span class="dv">1</span>:], xf[<span class="dv">1</span>:], color<span class="op">=</span><span class="st">"black"</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_xlabel(<span class="st">"Frequency"</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_ylabel(<span class="st">"FFT amplitude"</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>This is typical of a coupled oscillator. The motion in coupled systems can be understood as the superposition of <a href="https://en.wikipedia.org/wiki/Normal_mode">normal modes</a>, each of which corresponds to a single frequency. For example, consider two masses connected with a spring. There are two possible ways for the masses to oscillate at the same frequency. The first is a <em>breathing mode</em> in which they move in opposite directions, and the second is a <em>sloshing mode</em> in which they move in the same direction. The motion is the sum of these two modes. We will try to do something similar for a coupled parameteric oscillator.</p>
-<section id="transfer-matrix-eigenvectors" class="level3">
-<h3 class="anchored" data-anchor-id="transfer-matrix-eigenvectors">Transfer matrix eigenvectors</h3>
-<p>If the phase space coordinate vector <span class="math inline">\(\mathbf{x} = (x, x', y, y')^T\)</span> evolves according to</p>
+<p><a href="outputs/fft.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="outputs/fft.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>This is a signature of a linearly coupled oscillator. The motion in coupled systems can be understood as the superposition of <a href="https://en.wikipedia.org/wiki/Normal_mode">normal modes</a>, each of which corresponds to a single frequency. For example, consider two masses connected with a spring. There are two possible ways for the masses to oscillate at the same frequency. The first is a <em>breathing mode</em> in which they move in opposite directions, and the second is a <em>sloshing mode</em> in which they move in the same direction. The actual motion is the sum of these two modes. We will try to do something similar for a coupled parameteric oscillator.</p>
+</section>
+<section id="eigenvector-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="eigenvector-analysis">Eigenvector analysis</h2>
+<p>The phase space coordinate vector <span class="math inline">\(\mathbf{x} = (x, x', y, y')^T\)</span> evolves according to</p>
 <p><span id="eq-label"><span class="math display">\[
 \mathbf{x} \rightarrow \mathbf{Mx},
-\tag{4}\]</span></span></p>
-<p>where <span class="math inline">\(\rightarrow\)</span> represents tracking through one period, it can be shown that <span class="math inline">\(\mathbf{M}\)</span> is <a href="https://en.wikipedia.org/wiki/Symplectic_matrix#Properties">symplectic</a> due to the Hamiltonian mechanics of the system. Consider the eigenvectors of <span class="math inline">\(\mathbf{M}\)</span>:</p>
-<p><span id="eq-label"><span class="math display">\[
-\mathbf{Mv} = e^{-i\mu}\mathbf{v}.
 \tag{5}\]</span></span></p>
-<p>The symplecticity condition causes the eigenvalues and eigenvectors come in two complex conjugate pairs; this gives <span class="math inline">\(\mathbf{v}_1\)</span>, <span class="math inline">\(\mathbf{v}_2\)</span>, <span class="math inline">\(\mu_1\)</span>, <span class="math inline">\(\mu_2\)</span> and their complex conjugates. The seemingly complex motion is simplified when written in terms of the eigenvectors. We can write any coordinate vector as a linear combination of the real and imaginary components of <span class="math inline">\(\mathbf{v}_1\)</span> and <span class="math inline">\(\mathbf{v}_2\)</span>:</p>
+<p>where <span class="math inline">\(\rightarrow\)</span> represents tracking through one period. It can be shown that <span class="math inline">\(\mathbf{M}\)</span> is <a href="https://en.wikipedia.org/wiki/Symplectic_matrix#Properties">symplectic</a> due to the Hamiltonian mechanics of the system. Consider the eigenvectors of <span class="math inline">\(\mathbf{M}\)</span>:</p>
+<p><span id="eq-label"><span class="math display">\[
+\mathbf{Mv}_k = \lambda_k \mathbf{v}_k = e^{-i\mu_k} \mathbf{v}_k.
+\tag{6}\]</span></span></p>
+<p>The symplectic condition leads to a degeneracy of the eigenvalues and eigenvectors: they can be grouped into pairs related by complex conjugation. This means we can label the eigenvalues as <span class="math inline">\(\{\lambda_k, \lambda_k^* \}\)</span> and eigenvectors as <span class="math inline">\(\{\mathbf{v}_k, \mathbf{v}_k^* \}\)</span> for <span class="math inline">\(k = 1, 2\)</span>. We can write any coordinate vector as a linear combination of the real and imaginary components of <span class="math inline">\(\mathbf{v}_1\)</span> and <span class="math inline">\(\mathbf{v}_2\)</span>:</p>
 <p><span id="eq-cvec"><span class="math display">\[
 \mathbf{x} = \text{Re} \left\{
     \sqrt{2 J_1}\mathbf{v}_1e^{-i\psi_1} +
     \sqrt{2 J_2}\mathbf{v}_2e^{-i\psi_2}
-\right\}.
-\tag{6}\]</span></span></p>
-<p><span class="math inline">\(\text{Re}\{\dots\}\)</span> selects the non-imaginary component of <span class="math inline">\(\{\dots\}\)</span>. We have introduced two invariant amplitudes (<span class="math inline">\(J_1\)</span> and <span class="math inline">\(J_2\)</span>) as well as two initial phases (<span class="math inline">\(\psi_1\)</span> and <span class="math inline">\(\psi_2\)</span>). Applying the transfer matrix tacks on a phase to each eigenvector. Thus, what we are observing are the 2D projections of the real components of these eigenvectors as they rotate in the complex plane.</p>
+\right\},
+\tag{7}\]</span></span></p>
+<p>where <span class="math inline">\(\text{Re}\{\dots\}\)</span> selects the non-imaginary component. We have introduced two invariant amplitudes (<span class="math inline">\(J_1\)</span> and <span class="math inline">\(J_2\)</span>) as well as two initial phases (<span class="math inline">\(\psi_1\)</span> and <span class="math inline">\(\psi_2\)</span>). The transfer matrix <span class="math inline">\(\mathbf{M}\)</span>% simply tacks on a phase to each eigenvector.</p>
 <p><span id="eq-cvec_evolved"><span class="math display">\[
 \mathbf{Mx} = \text{Re} \left\{
     \sqrt{2 J_1}\mathbf{v}_1e^{-i\left(\psi_1 + \mu_1\right)} +
     \sqrt{2 J_2}\mathbf{v}_2e^{-i(\psi_2 + \mu_2)}
 \right\}.
-\tag{7}\]</span></span></p>
-<p>Let’s replay the animation, but this time draw a blue arrow for <span class="math inline">\(\mathbf{v}_1\)</span> and a red arrow for <span class="math inline">\(\mathbf{v}_2\)</span>. We’ve chosen <span class="math inline">\(J_1 = 4 J_2\)</span> and <span class="math inline">\(\psi_2 - \psi_1 = \pi/2\)</span>.</p>
-<div id="cell-28" class="cell">
+\tag{8}\]</span></span></p>
+<p>Let’s replay the corner plot animation, but this time draw a blue arrow for <span class="math inline">\(\mathbf{v}_1\)</span> and a red arrow for <span class="math inline">\(\mathbf{v}_2\)</span>. I’ve chosen initial amplitudes <span class="math inline">\(J_1 = 4 J_2\)</span> and phases <span class="math inline">\(\psi_2 - \psi_1 = \pi/2\)</span>.</p>
+<div id="cell-29" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>anim <span class="op">=</span> animate_corner(X[:<span class="dv">45</span>, :], vecs<span class="op">=</span>[X1, X2], limits<span class="op">=</span>limits)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>animation <span class="op">=</span> animate_corner(particles[:turns_plot, :], limits<span class="op">=</span>limits, vectors<span class="op">=</span>[particles_1, particles_2])<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./_output_corner_vec.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Fig. 6. Period-by-period coordinates with eigenvector projections as blue/red arrows."><img src="./_output_corner_vec.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Fig. 6. Period-by-period coordinates with eigenvector projections as blue/red arrows."></a></p>
+<div id="fig-6" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./_output_corner_vec.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: Turn-by-turn coordinates with eigenvector projections as blue/red arrows."><img src="./_output_corner_vec.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" width="470"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Turn-by-turn coordinates with eigenvector projections as blue/red arrows.
+</figcaption>
 </figure>
 </div>
-<figcaption>Fig. 6. Period-by-period coordinates with eigenvector projections as blue/red arrows.</figcaption>
-</figure>
+<p>Much simpler. Each eigenvector <span class="math inline">\(\mathbf{v}_k\)</span> simply rotates in the complex plane at its frequency <span class="math inline">\(\mu_k\)</span>. It also explains why the amplitudes in the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> and <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> planes trade back and forth: the eigenvector projections rotate at different frequencies, sometimes aligning and sometimes anti-aligning. The amplitudes <span class="math inline">\(J_{1, 2}\)</span> are generalizations of the Courant-Snyder (CS) invariants <span class="math inline">\(J_{x, y}\)</span> derived for uncoupled focusing. In the four-dimensional phase space, the amplitudes define an inner and outer “radius” of an invariant four-dimensional torus. The phases simply define a point on the torus.</p>
+<div id="fig-7" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="torus.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: Representation of the invariant torus in four-dimensional phase space."><img src="torus.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="250"></a>
 </div>
-<p>Much simpler. Each eigenvector simply rotates at its frequency <span class="math inline">\(\mu_l\)</span>. It also explains why the amplitude in the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> and <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> planes trade back and forth: it is because the projections of the eigenvectors rotate at different frequencies, sometimes aligning and sometimes anti-aligning. Because of this, the previous invariants <span class="math inline">\(J_{x,y}\)</span> are replaced by <span class="math inline">\(J_{1,2}\)</span>. In the four-dimensional phase space, each eigenvector traces an ellipsoid, and the particle moves on a torus (represented below). The amplitudes determine the inner and outer radii, and the two phases determine the location on the surface.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="torus.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Fig. 7. Representation of the invariant torus in four-dimensional phase space."><img src="torus.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" alt="Fig. 7. Representation of the invariant torus in four-dimensional phase space."></a></p>
-</figure>
-</div>
-<figcaption>Fig. 7. Representation of the invariant torus in four-dimensional phase space.</figcaption>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Representation of the invariant torus in four-dimensional phase space.
+</figcaption>
 </figure>
 </div>
 </section>
-<section id="eigenvector-parameterization" class="level3">
-<h3 class="anchored" data-anchor-id="eigenvector-parameterization">Eigenvector parameterization</h3>
-<p>We are now going to introduce a set of parameters for these eigenvectors, and in turn the transfer matrix. We already have two phases, so that leaves 8 parameters. Our strategy is to observe that each eigenvector traces an ellipse in both horizontal (<span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span>) and vertical (<span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>) phase space. Then, we will simply assign an <span class="math inline">\(\alpha\)</span> function and <span class="math inline">\(\beta\)</span> function to each of these ellipses. So, for the ellipse traced by <span class="math inline">\(\mathbf{v}_1\)</span> in the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> plane, we have <span class="math inline">\(\beta_{1x}\)</span> and <span class="math inline">\(\alpha_{1x}\)</span>, and then for the second eigenvector we have <span class="math inline">\(\beta_{2x}\)</span> and <span class="math inline">\(\alpha_{2x}\)</span>. The same thing goes for the vertical dimension with <span class="math inline">\(x\)</span> replaced by <span class="math inline">\(y\)</span>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="4dtwiss.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Fig. 8. Four-dimensional Twiss parameters. Each eigenvector traces an ellipse in each two-dimensional plane (x=x', y-y'); each ellipse is assigned an \alpha and \beta parameter."><img src="4dtwiss.png" class="img-fluid figure-img" style="width:100.0%" alt="Fig. 8. Four-dimensional Twiss parameters. Each eigenvector traces an ellipse in each two-dimensional plane (x=x', y-y'); each ellipse is assigned an \alpha and \beta parameter."></a></p>
-<figcaption>Fig. 8. Four-dimensional Twiss parameters. Each eigenvector traces an ellipse in each two-dimensional plane (<span class="math inline">\(x\)</span>=<span class="math inline">\(x'\)</span>, <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>); each ellipse is assigned an <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> parameter.</figcaption>
+<section id="eigenvector-parameterization" class="level2">
+<h2 class="anchored" data-anchor-id="eigenvector-parameterization">Eigenvector parameterization</h2>
+<p>In the previous analysis of uncoupled systems, we <em>parameterized</em> the normalization matrix <span class="math inline">\(\mathbf{V}\)</span> using the so-called <em>Courant-Synder</em> (CS) parameters <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. We can also come up with four-dimensional parameterizations, but there is no universally agreed-upon method to do this. The following is the method described by Lebedev and Bocacz in <span class="citation" data-cites="lebedev_2010_betatron">&nbsp;[<a href="#ref-lebedev_2010_betatron" role="doc-biblioref">1</a>]</span>.</p>
+<p>First, since the eigenvectors are related to the transfer matrix, they must also be related to the normalization matrix <span class="math inline">\(\mathbf{V}\)</span>. Indeed, <span class="math inline">\(\mathbf{V}\)</span> is constructed from <span class="math inline">\(\mathbf{v}_1\)</span> and <span class="math inline">\(\mathbf{v_2}\)</span> as follows:</p>
+<p><span class="math display">\[
+\mathbf{V} =
+\left[
+    +\Re\{\mathbf{v}_1\}
+    -\Im\{\mathbf{v}_1\}
+    +\Re\{\mathbf{v}_2\}
+    -\Im\{\mathbf{v}_2\}
+\right],
+\]</span></p>
+<p>where <span class="math inline">\(\Re\)</span> and <span class="math inline">\(\Im\)</span> select the real and imaginary components, respectively. So parameterizing the normalization matrix is equivalent to parameterizing the eigenvectors.</p>
+<p>To motivate the parameterization, notice that each eigenvector traces an ellipse in both the horizontal (<span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span>) and vertical (<span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>) phase planes. Let’s assign an <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> parameter to each of the four ellipses. For the ellipse traced by <span class="math inline">\(\mathbf{v}_1\)</span> in the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> plane, we have <span class="math inline">\(\beta_{1x}\)</span> and <span class="math inline">\(\alpha_{1x}\)</span>, and then for the second eigenvector we have <span class="math inline">\(\beta_{2x}\)</span> and <span class="math inline">\(\alpha_{2x}\)</span>. For the ellipse traced by <span class="math inline">\(\mathbf{v}_1\)</span> in the <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> plane, we have <span class="math inline">\(\beta_{1y}\)</span> and <span class="math inline">\(\alpha_{1y}\)</span>, and then for the second eigenvector we have <span class="math inline">\(\beta_{2y}\)</span> and <span class="math inline">\(\alpha_{2y}\)</span>. See <a href="#fig-8" class="quarto-xref">Figure&nbsp;7</a>.</p>
+<div id="fig-8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="4dtwiss.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: Four-dimensional Twiss parameters. Each eigenvector traces an ellipse in each two-dimensional plane (x-x', y-y'); each ellipse is assigned an \alpha and \beta parameter."><img src="4dtwiss.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Four-dimensional Twiss parameters. Each eigenvector traces an ellipse in each two-dimensional plane (<span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span>, <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span>); each ellipse is assigned an <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> parameter.
+</figcaption>
 </figure>
 </div>
-<p>The actual eigenvectors written in terms of the parameters are</p>
+<p>We can then write the eigenvectors in terms of the alpha and beta functions, plus a few more parameters:</p>
 <p><span id="eq-label"><span class="math display">\[
-\vec{v}_1 = \begin{bmatrix}
-    \sqrt{\beta_{1x}} \\\\
-    -\frac{\alpha_{1x} + i(1-u)}{\sqrt{\beta_{1x}}} \\\\
-    \sqrt{\beta_{1y}}e^{i\nu_1} \\\\
+\mathbf{v}_1 = \begin{bmatrix}
+    \sqrt{\beta_{1x}} \\
+    -\frac{\alpha_{1x} + i(1-u)}{\sqrt{\beta_{1x}}} \\
+    \sqrt{\beta_{1y}}e^{i\nu_1} \\
     -\frac{\alpha_{1y} + iu}{\sqrt{\beta_{1y}}} e^{i\nu_1}
 \end{bmatrix},
 \quad
-\vec{v}_2 = \begin{bmatrix}
-    \sqrt{\beta_{2x}}e^{i\nu_2} \\\\
-    -\frac{\alpha_{2x} + iu}{\sqrt{\beta_{2x}}}e^{i\nu_2} \\\\
-    \sqrt{\beta_{2y}} \\\\
+\mathbf{v}_2 = \begin{bmatrix}
+    \sqrt{\beta_{2x}}e^{i\nu_2} \\
+    -\frac{\alpha_{2x} + iu}{\sqrt{\beta_{2x}}}e^{i\nu_2} \\
+    \sqrt{\beta_{2y}} \\
     -\frac{\alpha_{2y} + i(1-u)}{\sqrt{\beta_{2y}}}
 \end{bmatrix}
-\tag{8}\]</span></span></p>
-<p>So in addition to the phases <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span> we have <span class="math inline">\(\alpha_{1x}\)</span>, <span class="math inline">\(\alpha_{2x}\)</span>, <span class="math inline">\(\alpha_{1y}\)</span>, <span class="math inline">\(\alpha_{2y}\)</span>, <span class="math inline">\(\beta_{1x}\)</span>, <span class="math inline">\(\beta_{2x}\)</span>, <span class="math inline">\(\beta_{1y}\)</span>, and <span class="math inline">\(\beta_{2y}\)</span>. That’s pretty much it. There are a few other parameters we need to introduce to simplify the notation, but they are not independent. The first is <span class="math inline">\(u\)</span>, which, as noted in the figure, determines the areas of the ellipses in one plane relative to the other. The second and third are <span class="math inline">\(\nu_1\)</span> and <span class="math inline">\(\nu_2\)</span>, which are phase differences between the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> components of the eigenvectors (in the animation they are either <span class="math inline">\(0\)</span> or <span class="math inline">\(\pi\)</span>). I won’t discuss these here. The last thing to note is that the parameters reduce to their 1D definitions when there is no coupling in the lattice. So we would have <span class="math inline">\(\beta_{1x}, \beta_{2y} \rightarrow \beta_{x}, \beta_{y}\)</span> and <span class="math inline">\(\beta_{2x}, \beta_{1y} \rightarrow 0\)</span>, and similar for <span class="math inline">\(\alpha\)</span>. The invariants and phase advances would also revert back to their original values: <span class="math inline">\(J_{1,2} \rightarrow J{x,y}\)</span> and <span class="math inline">\(\mu_{1,2} \rightarrow \mu_{x,y}\)</span>.</p>
+\tag{9}\]</span></span></p>
+<p>The additional parameters are not independent. The first additional parameter is <span class="math inline">\(u\)</span>, which determines the areas of the ellipses in one plane relative to the other. The second and third additional parameters are <span class="math inline">\(\nu_1\)</span> and <span class="math inline">\(\nu_2\)</span>, which are phase differences between the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> components of the eigenvectors (in the animation they are either <span class="math inline">\(0\)</span> or <span class="math inline">\(\pi\)</span>). I won’t discuss these here.</p>
+<p>The last thing to note is that the parameters reduce to their 1D counterparts when there is no coupling in the lattice: <span class="math inline">\(\beta_{1x}, \beta_{2y} \rightarrow \beta_{x}, \beta_{y}\)</span> and <span class="math inline">\(\beta_{2x}, \beta_{1y} \rightarrow 0\)</span> (similar for <span class="math inline">\(\alpha\)</span>). The invariants and phase advances would also revert back to their original definitions: <span class="math inline">\(J_{1,2} \rightarrow J_{x,y}\)</span> and <span class="math inline">\(\mu_{1,2} \rightarrow \mu_{x,y}\)</span>.</p>
 </section>
-<section id="floquet-transformation" class="level3">
-<h3 class="anchored" data-anchor-id="floquet-transformation">Floquet transformation</h3>
-<p>These eigenvectors can also be used to construct a transformation which removes both the variance in the focusing strength and the coupling between the planes, turning the coupled parametric oscillator into an uncoupled harmonic oscillator. In other words, we seek a matrix <span class="math inline">\(\mathbf{V}\)</span> such that</p>
+<section id="floquet-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="floquet-transformation">Floquet transformation</h2>
+<p>The eigenvectors/normalization matrix can be used to construct a transformation that removes both the <span class="math inline">\(s\)</span>-dependence of the focusing strength and coupling between planes, transforming the coupled parametric oscillator into an uncoupled harmonic oscillator.</p>
 <p><span id="eq-label"><span class="math display">\[\mathbf{V^{-1} M V} = \mathbf{P} =
 \begin{bmatrix}
     \cos{\mu_1} &amp; \sin{\mu_1}  &amp; 0 &amp; 0 \\
@@ -971,53 +1050,48 @@ window.Quarto = {
     0 &amp; 0 &amp; \cos{\mu_2} &amp; \sin{\mu_2} \\
     0 &amp; 0 &amp; -\sin{\mu_2} &amp; \cos{\mu_2}
 \end{bmatrix}
-\tag{9}\]</span></span></p>
-<p>We can do this simply by rewriting <a href="#eq-cvec" class="quarto-xref">Equation&nbsp;6</a> as <span class="math inline">\(\mathbf{x} = \mathbf{V}\mathbf{x}_n\)</span> with</p>
-<p><span id="eq-label"><span class="math display">\[
-\mathbf{x}_n = \begin{bmatrix}
-  \sqrt{2J_1}\cos{\psi_1} \\\\
-  -\sqrt{2J_1}\sin{\psi_1} \\\\  
-  \sqrt{2J_2}\cos{\psi_2} \\\\
-  -\sqrt{2J_2}\sin{\psi_2}
-\end{bmatrix}
 \tag{10}\]</span></span></p>
-<p><span class="math display">\[
-\mathbf{V} = \left[
-    \text{Re}\{\mathbf{v}_1\},
-    -\text{Im}\{\mathbf{v}_1\},
-    \text{Re}\{\mathbf{v}_2\},
-    -\text{Im}\{\mathbf{v}_2\}
-\right]
-\]</span></p>
-<p>Let’s observe the motion in these new coordinates <span class="math inline">\(\mathbf{x}_n\)</span>.</p>
-<div id="cell-41" class="cell">
+<p>We can do this simply by rewriting <a href="#eq-cvec" class="quarto-xref">Equation&nbsp;7</a> as <span class="math inline">\(\mathbf{x} = \mathbf{V}\mathbf{u}\)</span> with</p>
+<p><span id="eq-label"><span class="math display">\[
+\mathbf{u} = \begin{bmatrix}
+  +\sqrt{2J_1}\cos{\psi_1} \\
+  -\sqrt{2J_1}\sin{\psi_1} \\
+  +\sqrt{2J_2}\cos{\psi_2} \\
+  -\sqrt{2J_2}\sin{\psi_2}
+\end{bmatrix}.
+\tag{11}\]</span></span></p>
+<p>Let’s observe the motion in the normalized coordiantes <span class="math inline">\(\mathbf{u} = [u_1, u_1', u_2, u_2']\)</span>.</p>
+<div id="cell-43" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x1 <span class="op">+</span> x2</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> lattice.track_part(x1, n_turns, norm_coords<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>X2 <span class="op">=</span> lattice.track_part(x2, n_turns, norm_coords<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>X1[:, <span class="dv">2</span>:] <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>X2[:, :<span class="dv">2</span>] <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> lattice.track_part(x, n_turns, norm_coords<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>anim <span class="op">=</span> animate_corner(X[:<span class="dv">45</span>, :], vecs<span class="op">=</span>[X1, X2])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x_1 <span class="op">+</span> x_2</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>particles <span class="op">=</span> lattice.track(x, turns, normalize<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>particles_1 <span class="op">=</span> lattice.track(x_1, turns, normalize<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>particles_2 <span class="op">=</span> lattice.track(x_2, turns, normalize<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>particles_1[:, <span class="dv">2</span>:<span class="dv">4</span>] <span class="op">*=</span> <span class="dv">0</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>particles_2[:, <span class="dv">0</span>:<span class="dv">2</span>] <span class="op">*=</span> <span class="dv">0</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>animation <span class="op">=</span> animate_corner(particles[:turns_plot, :], vectors<span class="op">=</span>[particles_1, particles_2])<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="_output_corner_vec_norm.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Fig. 8. Period-by-period motion in normalized/Floquet coordinates"><img src="_output_corner_vec_norm.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Fig. 8. Period-by-period motion in normalized/Floquet coordinates"></a></p>
+<div id="fig-10" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="outputs/corner_vec_norm.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: Period-by-period motion in normalized/Floquet coordinates"><img src="outputs/corner_vec_norm.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" width="470"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Period-by-period motion in normalized/Floquet coordinates
+</figcaption>
 </figure>
 </div>
-<figcaption>Fig. 8. Period-by-period motion in normalized/Floquet coordinates</figcaption>
-</figure>
-</div>
-<p>The motion is uncoupled after this transformation; i.e., particles move in a circle of area <span class="math inline">\(2J_1\)</span> in the <span class="math inline">\(x_n\)</span>-<span class="math inline">\(x_n'\)</span> plane at frequency <span class="math inline">\(\mu_1\)</span>, and in a circle of area <span class="math inline">\(2J_2\)</span> in the <span class="math inline">\(y_n\)</span>-<span class="math inline">\(y_n'\)</span> plane at frequency <span class="math inline">\(\mu_2\)</span>.</p>
-</section>
+<p>The motion is uncoupled after this transformation; i.e., particles move in a circle of area <span class="math inline">\(2J_1\)</span> in the <span class="math inline">\(u_1\)</span>-<span class="math inline">\(u_1'\)</span> plane at frequency <span class="math inline">\(\mu_1\)</span>, and in a circle of area <span class="math inline">\(2J_2\)</span> in the <span class="math inline">\(u_1\)</span>-<span class="math inline">\(u_1'\)</span> plane at frequency <span class="math inline">\(\mu_2\)</span>.</p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>The method introduced here describes a coupled parametric oscillator using the minimum number of parameters. Our physical motivation was an accelerator lattice with linear, coupled forces. There is no agreed upon method to do this among accelerator physicists, but this is the method I have used in my research. I’ve left out details which can be found in <span class="citation" data-cites="Lebedev2010 Willeke1989">&nbsp;[<a href="#ref-Lebedev2010" role="doc-biblioref"><strong>Lebedev2010?</strong></a>,<a href="#ref-Willeke1989" role="doc-biblioref"><strong>Willeke1989?</strong></a>]</span>.</p>
+<p>This post has described the eigenvector analysis of linear parametric oscillators. Note that the Lebedev-Bogacz parameterization <span class="citation" data-cites="lebedev_2010_betatron">&nbsp;[<a href="#ref-lebedev_2010_betatron" role="doc-biblioref">1</a>]</span> isn’t the only choice; it’s just what I’ve used in my own research. There’s also a more recent formulation that doesn’t use eigenvectors at all <span class="citation" data-cites="qin_2009_generalized">&nbsp;[<a href="#ref-qin_2009_generalized" role="doc-biblioref">2</a>]</span>. But I think I would need to learn some math (group theory) to understand that approach.</p>
+<p>This post has described the eigenvector analysis and parameterization of a linear parametric oscillator. There is no universal standard approach adopted in the accelerator community, but this is the method I’ve used in my own research.</p>
+
 
 
 
@@ -1028,7 +1102,14 @@ window.Quarto = {
 
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-lebedev_2010_betatron" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">V. A. Lebedev and S. Bogacz, <em>Betatron Motion with Coupling of Horizontal and Vertical Degrees of Freedom</em>, Journal of Instrumentation <strong>5</strong>, P10010 (2010).</div>
+</div>
+<div id="ref-qin_2009_generalized" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">H. Qin and R. C. Davidson, <em><a href="https://doi.org/10.1103/PhysRevSTAB.12.064001">Generalized Courant-Snyder Theory for Coupled Transverse Dynamics of Charged Particles in Electromagnetic Focusing Lattices</a></em>, Phys. Rev. ST Accel. Beams <strong>12</strong>, 064001 (2009).</div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

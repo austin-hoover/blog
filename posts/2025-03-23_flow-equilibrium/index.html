@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.23">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -96,9 +96,9 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6e03bc272f1cdef1d8296ac38e217ebd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-04c7ee197ec4d7edf3c29ccb71f7023e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-d3e0597557539958695697773efc63fa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -374,8 +374,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Austin’s Blog</span>
     </a>
@@ -464,7 +462,7 @@ window.Quarto = {
 \tag{3}\]</span></span> To find an equilibrium distribution, we must build a distribution function out of single-particle invariants, compute the electric field from <a href="#eq-poisson" class="quarto-xref">Equation&nbsp;2</a>, and verify that the fields preserve the invariants.</p>
 <p>For time-dependent external fields, the Kapchinskij-Vladimirskij (KV) distribution is the only known equilibrium distribution. The KV distribution is a function of linear-field invariants, and it generates a linear electric field, closing the feedback loop. But the structure of the KV distribution (a 4D ellipsoid) makes it unstable with respect to small perturbations in periodic focusing systems. Certain external field configurations can drive filamentation of the phase space which does not occur in realistic beams. To probe intensity limits, it makes more sense to launch an equilibrium distribution that is a smooth function of invariants rather than a delta function. Unfortunately, a nonuniform charge density generates nonlinear electric forces, and finding invariants in nonlinear systems is <em>much</em> more challenging than in linear systems. There is no proof of the existence or nonexistence of equilibrium distributions in such systems.</p>
 <p>Lund <span class="citation" data-cites="Lund_2009">&nbsp;[<a href="#ref-Lund_2009" role="doc-biblioref">1</a>]</span> suggested a method to construct smooth 4D “pseudoequilibrium” distributions which are not strictly equilibrium distributions but exhibit much less filamentation than the KV distribution. The method works by constructing a smooth approximation of a time-dependent focusing channel, for which exact equilibrium distributions can be constructed, and then transforming back to rms equivalency in the original channel. This worked very well. Below is a screenshot from the paper showing the profile evolutions for two beams with the same rms moments but different density profiles. On the left is a Waterbag distribution (uniformly filled 4D ellipsoid) and on the right is the pseudoequilibrium distribution.</p>
-<div class="quarto-layout-panel" data-layout-ncol="2" data-align="left">
+<div class="quarto-layout-panel" data-align="left" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><img src="images/fig_lund_prof_01.png" width="300px"></p>
