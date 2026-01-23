@@ -1,5 +1,5 @@
 ---
-title: "Wake fields and impedances"
+title: "Chao, Chapter 2: Wake Fields and Impedances"
 date: 2026-01-27
 author: Austin Hoover
 bibliography: references.bib
@@ -16,30 +16,30 @@ Following @chao_1993_physics, Chapter 2, *Wake Fields and Impedances*.
 
 ## Mode expansion of the charge and current distributions
 
-We will use cylindrical coordiantes $r$, $\theta$, $s$, where $s$ is the axial coordinate. Consider a charge charge distribution $\rho(r, \theta, s)$ and current distribution $\mathbf{j}(r, \theta, s) of the form:
+We will use cylindrical coordiantes $r$, $\theta$, $s$, where $s$ is the axial coordinate. Consider a charge charge distribution $\rho(r, \theta, s)$ and current distribution $\mathbf{J}(r, \theta, s)$ of the form:
 
 $$
 \begin{aligned}
 \rho(r, \theta, s) &= \sum_{m = 0}^{\infty} \rho_m(r, \theta, s) , \\
 \mathbf{J}(r, \theta, s) &= \sum_{m = 0}^{\infty} \mathbf{J}_m(r, \theta, s) ,
 \end{aligned}
-$${#eq-label}
+$${#eq-ring-beam}
 
 with the modes $\rho_m$ and $\mathbf{J}_m$ defined as follows:
 
 $$
 \begin{aligned}
-\rho_m(r, \theta, s) &= \frac{I_m}{\pi a^{m + 1} (1 + \delta_{m0}} \delta(s - ct) \delta(r - a) \cos(m\theta) , \\
+\rho_m(r, \theta, s) &= \frac{I_m}{\pi a^{m + 1} (1 + \delta_{m0})} \delta(s - ct) \delta(r - a) \cos(m\theta) , \\
 \mathbf{J}_m(r, \theta, s) &= c \rho_m(r, \theta, s) \hat{s} ,
 \end{aligned}
-$${#eq-moments}
+$${#eq-ring-beam-moments}
 
 where $a$ is a radius, $\delta_{m0} = 1$ if $m = 0$ and $0$ otherwise, $I_m$ is the $m$th moment of the distribution, $c$ is the speed of light, and $t$ is time. @eq-moments describes a ring of radius $a$ with density proportional to $\cos(m\theta)$. The longitudinal density is a pancake, enforced by the $\delta(s - ct)$ term. 
 
 
 ## Wake functions
 
-What is the force experienced by a particle trailing the beam? Assume the particle moves only along the $s$ axis. In the cylindrical coordinates, the Lorentz force $\mathbf{F} = q(\mathbf{E} + \hat{s} \times \mathbf{B}$ becomes
+What is the force experienced by a particle trailing the beam? Assume the particle moves only along the $s$ axis. In the cylindrical coordinates, the Lorentz force $\mathbf{F} = q(\mathbf{E} + \hat{s} \times \mathbf{B})$ becomes
 
 $$
 \begin{aligned}
@@ -72,7 +72,7 @@ $W_m(z)$ is called the *wake function* and $W'_m(z)$ is the derivative of the wa
 
 $$
 \nabla_{\perp} \bar{F}_{\parallel} = \nabla_z \bar{\mathbf{F}}_{\perp} = \frac{\partial}{\partial z} \bar{\mathbf{F}}_{\perp} .
-$$
+$${#eq-pw}
 
 Properties of wake functions:
 
@@ -92,3 +92,107 @@ The section ends with a discussion of wake field acceleration.
 
 
 
+
+## Impedances
+
+Define the *longitudinal impedance* $Z_{m}^{\parallel}(\omega)$ and *transverse impedance* $Z_{m}^{\perp}(\omega)$ as the Fourier transforms of the longitudinal and transverse wake functions:
+
+$$
+Z_{m}^{\parallel}(\omega) = \frac{1}{c} \int_{-\infty}^{+\infty} e^{-i \omega z / c} W_m'(z) dz.
+$${#eq-impedance-longitudinal}
+
+$$
+Z_{m}^{\perp}(\omega) = \frac{i}{c} \int_{-\infty}^{+\infty} e^{-i \omega z / c} W_m (z) dz.
+$${#eq-impedance-transverse}
+
+It's often the case that one is most interested in the $m=0$ longitudinal mode and $m = 1$ transverse modes; thus *longitudinal impedance* and *transverse impedance* are sometimes used to refer only to $Z_{0}^{\parallel}$ and $Z_{1}^{\perp}$.
+
+@eq-pw states the relationship between the transverse and longitudinal impedance:
+
+$$
+Z_{m}^{\parallel}(\omega) = \frac{\omega}{c} Z_{m}^{\perp}(\omega).
+$$
+
+
+### Space charge impedance
+
+For the ring beam described above (@eq-ring-beam and eq-ring-beam-moments), the electric field is given by (1.32) and (1.51) [...]. The fields in the region $r < a$ can be expressed using a wake function (2.55):
+
+$$
+W_m(z) = \frac{2 L}{\gamma^2} \delta(z) 
+\begin{cases} 
+\ln\left(\frac{b}{a}\right) & \text{if } m = 0, \\
+\frac{1}{m} \left( \frac{1}{a^{2m}} - \frac{1}{b^{2m}} \right) & \text{if } m > 0. 
+\end{cases}
+$${#eq-sc-ring-beam-wake}
+
+To cast @eq-sc-ring-beam-wake in the impedance framework, we assume a circular accelerator of radius $R$ and set the integration window to $L = 2 \pi R$. This gives the following expression for the longitudinal space charge impedance:
+
+$$
+Z_{m}^{\parallel}(\omega) = i Z_0 \frac{R \omega}{c \gamma^2}
+\begin{cases} 
+\ln\left(\frac{b}{a}\right) & \text{if } m = 0, \\
+\frac{1}{m} \left( \frac{1}{a^{2m}} - \frac{1}{b^{2m}} \right) & \text{if } m > 0.,
+\end{cases}
+$${#eq-sc-ring-beam-imp}
+
+where $Z_0 = 4 \pi / c$. For a uniform disk beam, the space charge forces cannot be described using a wake function. It is only possible to do it for the $m = 0$ longitudinal case. The wake function is
+
+$$
+W_0(z) = \frac{4 \pi R}{\gamma^2} \delta(z) \left( \ln\left(\frac{b}{a}\right) + \frac{1}{2} \right),
+$$
+
+and the corresponding impedance is
+
+$$
+Z_{0}^{\parallel}(\omega) = i Z_0 \frac{R\omega}{c \gamma^2} \left( \ln\left(\frac{b}{a}\right) + \frac{1}{2} \right) .
+$$
+
+
+### LRC circuit
+
+We can model the longitudinal impedance using an LRC circuit. Recall the definition of impedance from electrical engineering. [...]
+
+
+### Properties of impedance
+
+1. Symmetries
+
+1. In most cases, the integrals of imaginary impedance are zero.
+
+1. There cannot be any singularities in the upper half of the complex plane. 
+
+1. The energy loss for a longitudinal distribution $\rho(z)$ is given by
+
+$$
+\begin{align}
+\Delta \mathcal{E} &= -\int_{-\infty}^{+\infty} dz' \rho(z') \int_{z'}^{\infty} dz \rho(z) W_m'(z' - z) \\
+\Delta \mathcal{E} &= -\frac{1}{2\pi} \int_{-\infty}^{+\infty} d\omega \left| \tilde{\rho}(\omega) \right|^2 \text{Re} Z_{m}^{\parallel}(\omega) .
+\end{align}
+$$
+
+The term $\tilde{\rho}(\omega)$ is the Fourier transform of the charge distribution:
+
+$$
+\tilde{\rho}(\omega) = \int_{\infty}^{+\infty} dz e^{-i \omega z / c} \rho(z).
+$$
+
+There can be no net energy gain from the pipe structure; therefore, $\text{Re} Z_{m}^{\parallel}(\omega) \ge 0$ for all $\omega$.
+
+
+### Broad-band resonator model of cavity impedance
+
+### Diffraction model of cavity impedance
+
+
+
+
+## Calculation of wake fields and impedances
+
+Describes two approaches to impedance calculation.
+
+
+
+## Parasitic loss
+
+*Parasitic loss* refers to the transfer of energy from the beam to the wake fields. The reverse process is ultimately responsible for beam instabilities.
