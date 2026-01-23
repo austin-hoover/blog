@@ -1,5 +1,6 @@
 /*-- scss:defaults --*/
 
+$h1-font-size: 2.0em;
 $h2-font-size: 1.5em;
 $h3-font-size: 1.2em;
 $h4-font-size: 1.0em;
@@ -33,4 +34,10 @@ h1, h2, h3, h4, h5, h6 {
 // Smaller code font
 pre, code {
     font-size: 12px !important;
+}
+
+// Subtitle
+.lead {
+    font-size: 1.05rem !important;
+    font-weight: 200 !important;
 }
