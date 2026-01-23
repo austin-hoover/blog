@@ -1061,7 +1061,7 @@
     "href": "posts/2021-01-25_coupled-parametric-oscillators/index.html#conclusion",
     "title": "Coupled parametric oscillators",
     "section": "Conclusion",
-    "text": "Conclusion\nThis post has described the eigenvector analysis of linear parametric oscillators. Note that the Lebedev-Bogacz parameterization  [1] isn’t the only choice; it’s just what I’ve used in my own research. There’s also a more recent formulation that doesn’t use eigenvectors at all  [2]. But I think I would need to learn some math (group theory) to understand that approach.\nThis post has described the eigenvector analysis and parameterization of a linear parametric oscillator. There is no universal standard approach adopted in the accelerator community, but this is the method I’ve used in my own research."
+    "text": "Conclusion\nThis post has described the eigenvector analysis of linear parametric oscillators. Note that the Lebedev-Bogacz parameterization  [1] isn’t the only choice; it’s just what I’ve used in my own research. There’s also a more recent formulation that doesn’t use eigenvectors at all  [2]. But I think I would need to learn some math (group theory) to understand that approach."
   },
   {
     "objectID": "posts/2025-04-28_ment-sparse-ct/index.html",
