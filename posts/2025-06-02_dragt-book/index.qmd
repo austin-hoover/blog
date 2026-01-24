@@ -8,4 +8,4 @@ categories:
   - books
 ---
 
-[Here](https://physics.umd.edu/dsat/).
+[Here](https://www.physics.umd.edu/dsat/docs/Book12Nov2019.pdf).
