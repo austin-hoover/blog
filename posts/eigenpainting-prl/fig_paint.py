@@ -186,7 +186,7 @@ if __name__ == "__main__":
     )
 
     data = {}
-    for method in ["corr", "anticorr", "eig"]:
+    for method in ["corr", "anticorr", "flat", "eig"]:
         data[method] = {}
         for key in ["bunch", "centroid"]:
             data[method][key] = []
@@ -200,6 +200,11 @@ if __name__ == "__main__":
     painter.inj_xmax = np.array([1.0, 0.0, 1.0, 0.0])
     data["corr"]["bunch"] = [painter.paint(t) for t in turns_list]
     data["corr"]["centroid"] = [painter.get_inj_coords(t) for t in turns_list]
+
+    painter.method = "correlated"
+    painter.inj_xmax = np.array([1.0, 0.0, 0.0, 0.0])
+    data["flat"]["bunch"] = [painter.paint(t) for t in turns_list]
+    data["flat"]["centroid"] = [painter.get_inj_coords(t) for t in turns_list]
 
     painter.method = "correlated"
     painter.inj_xmax = np.array([1.0, 0.0, 0.0, 1.0])  # eigenvector
