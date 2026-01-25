@@ -41,3 +41,8 @@ pre, code {
     font-size: 1.05rem !important;
     font-weight: 200 !important;
 }
+
+// Section numbers
+span.header-section-number::after {
+    // content: ".";  // add period after number
+}
