@@ -1,4 +1,6 @@
+import argparse
 import os
+
 import numpy as np
 import matplotlib.colors
 import matplotlib.pyplot as plt
@@ -21,41 +23,7 @@ def rotation_matrix(angle: float) -> np.ndarray:
     return matrix
 
 
-def truncate_cmap(cmap, left=0.0, right=1.0, n=100):
-    string = "trunc({n},{a:.2f},{b:.2f})".format(n=cmap.name, a=left, b=right)
-    values = cmap(np.linspace(left, right, n))
-    return matplotlib.colors.LinearSegmentedColormap.from_list(string, values)
-
-
-def cubehelix_cmap(color="red", dark=0.20):
-    kws = dict(
-        n_colors=12,
-        rot=0.0,
-        gamma=1.0,
-        hue=1.0,
-        light=1.0,
-        dark=dark,
-        as_cmap=True,
-    )
-
-    cmap = None
-    if color == "red":
-        cmap = sns.cubehelix_palette(start=0.9, **kws)
-    elif color == "pink":
-        cmap = sns.cubehelix_palette(start=0.8, **kws)
-    elif color == "blue":
-        cmap = sns.cubehelix_palette(start=2.8, **kws)
-    else:
-        raise ValueError
-    return cmap
-
-
 class Painter:
-    """Runs painting simulation space painting.
-
-    (Linear approximation, non-interacting particles, normalized phase space.)
-    """
-
     def __init__(
         self,
         tune_x: float,
@@ -120,180 +88,193 @@ class Painter:
         return bunch
 
 
+class CornerGrid:
+    def __init__(
+        self,
+        ndim: int,
+        limits: list[tuple[float, float]] = None,
+        labels: list[str] = None,
+        figwidth: float = None,
+    ) -> None:
+        self.ndim = ndim
+
+        if figwidth is None:
+            figwidth = 1.7 * ndim
+
+        self.fig, self.axs = plt.subplots(
+            ncols=ndim,
+            nrows=ndim,
+            figsize=(figwidth, figwidth),
+            sharex=False,
+            sharey=False,
+        )
+
+        for i in range(self.ndim - 1):
+            for ax in self.axs[i, :]:
+                ax.set_xticklabels([])
+
+        for j in range(1, self.ndim):
+            for ax in self.axs[:, j]:
+                ax.set_yticklabels([])
+
+        for i in range(self.ndim):
+            self.axs[i, i].set_yticks([])
+
+        for ax in self.axs.flat:
+            for loc in ["top", "right"]:
+                ax.spines[loc].set_visible(False)
+
+        for i in range(self.ndim):
+            for j in range(self.ndim):
+                if i < j:
+                    self.axs[i, j].axis("off")
+
+        self.limits = None
+        self.labels = None
+        self.set_limits(limits)
+        self.set_labels(labels)
+
+    def set_limits(self, limits: list[tuple[float, float]] = None) -> None:
+        if limits is None:
+            return
+
+        self.limits = limits
+        for i in range(4):
+            for j in range(4):
+                ax = self.axs[i, j]
+                ax.set_xlim(limits[j])
+                if i != j:
+                    ax.set_ylim(limits[i])
+
+    def set_labels(self, labels: list[str] = None) -> None:
+        if labels is None:
+            return
+
+        self.labels = labels
+        for i in range(self.ndim):
+            for j in range(self.ndim):
+                ax = self.axs[i, j]
+                if j == 0:
+                    ax.set_ylabel(labels[i])
+                if i == self.ndim - 1:
+                    ax.set_xlabel(labels[j])
+
+        self.fig.align_xlabels()
+        self.fig.align_ylabels()
+
+  
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
     
-# Settings
-# --------------------------------------------------------------------------------
+    tune_x = 0.1810201  # horizontal tune
+    tune_y = tune_x - 0.143561  # vertical tune
+    n_turns = 2800  # number of turns to paint
+    n_inj = 200  # number of particles per turn
 
-tune_x = 0.1810201  # horizontal tune
-tune_y = tune_x - 0.143561  # vertical tune
-n_turns = 2800  # number of turns to paint
-n_inj = 200  # number of particles per turn
+    stride = 200
+    turns_list = list(range(0, n_turns + stride, stride))
 
-# Plot only these turns
-stride = 200
-turns_list = list(range(0, n_turns + stride, stride))
+    painter = Painter(
+        tune_x=tune_x,
+        tune_y=tune_y,
+        n_turns=n_turns,
+        n_inj=n_inj,
+        inj_rms=0.10,
+    )
 
-# Create simulator
-# --------------------------------------------------------------------------------
+    data = {}
+    for method in ["corr", "anticorr", "eig"]:
+        data[method] = {}
+        for key in ["bunch", "centroid"]:
+            data[method][key] = []
 
-painter = Painter(
-    tune_x=tune_x,
-    tune_y=tune_y,
-    n_turns=n_turns,
-    n_inj=n_inj,
-    inj_rms=0.10,
-)
+    painter.method = "anti-correlated"
+    painter.inj_xmax = np.array([1.0, 0.0, 1.0, 0.0])
+    data["anticorr"]["bunch"] = [painter.paint(t) for t in turns_list]
+    data["anticorr"]["centroid"] = [painter.get_inj_coords(t) for t in turns_list]
 
-# Run simulations
-# --------------------------------------------------------------------------------
+    painter.method = "correlated"
+    painter.inj_xmax = np.array([1.0, 0.0, 1.0, 0.0])
+    data["corr"]["bunch"] = [painter.paint(t) for t in turns_list]
+    data["corr"]["centroid"] = [painter.get_inj_coords(t) for t in turns_list]
 
-bunches = {}
-centroids = {}
+    painter.method = "correlated"
+    painter.inj_xmax = np.array([1.0, 0.0, 0.0, 1.0])  # eigenvector
+    painter.tune_x = tune_x
+    painter.tune_y = tune_x
+    data["eig"]["bunch"] = [painter.paint(t) for t in turns_list]
+    data["eig"]["centroid"] = [painter.get_inj_coords(t) for t in turns_list]
 
-# Anti-correlated painting
-painter.method = "anti-correlated"
-painter.inj_xmax = np.array([1.0, 0.0, 1.0, 0.0])
-bunches["anti-correlated"] = [painter.paint(t) for t in turns_list]
-centroids["anti-correlated"] = [painter.get_inj_coords(t) for t in turns_list]
+    for method in data:
+        output_dir = os.path.join("outputs", method)
+        os.makedirs(output_dir, exist_ok=True)
 
-# Correlated painting
-painter.method = "correlated"
-painter.inj_xmax = np.array([1.0, 0.0, 1.0, 0.0])
-bunches["correlated"] = [painter.paint(t) for t in turns_list]
-centroids["correlated"] = [painter.get_inj_coords(t) for t in turns_list]
+        # Settings
+        limits = 4 * [(-2.0, 2.0)]
+        labels = ["x", "x'", "y", "y'"]
+        bins = 64
+        cmap = "gray_r"
+        blur = 1.0
 
-# Eigenpainting (correlated painting along eigenvector)
-painter.method = "correlated"
-painter.inj_xmax = np.array([1.0, 0.0, 0.0, 1.0])  # eigenvector
-painter.tune_x = tune_x
-painter.tune_y = tune_x
-bunches["eig"] = [painter.paint(t) for t in turns_list]
-centroids["eig"] = [painter.get_inj_coords(t) for t in turns_list]
-
-
-# Create GIF
-# --------------------------------------------------------------------------------
-
-os.makedirs("outputs", exist_ok=True)
-
-key = "correlated"
-
-bins = 64
-limits = [(-2.0, 2.0), (-2.0, 2.0)]
-
-cmap = "gray_r"
-colors = [(i, i, i, 1.0) for i in [1.0, 0.8, 0.6, 0.4, 0.2, 0.0]]
-rng = np.random.default_rng(123)
-
-
-# for index in range(len(turns_list)):
-    
-    
-#     turn = turns_list[index]
-    
-#     bunch = bunches[key][index]
-    
-#     fig, ax = plt.subplots(figsize=(4, 4))
-#     hist, edges = np.histogramdd(bunch[:, (0, 2)], bins=bins, range=limits)
-#     hist = scipy.ndimage.gaussian_filter(hist, 1.0)
-#     hist = hist / np.max(hist)
-#     coords = [0.5 * (e[:-1] + e[1:]) for e in edges]
-#     # ax.contourf(coords[0], coords[1], hist.T, levels=5, colors=colors)
-#     ax.pcolormesh(coords[0], coords[1], hist.T, cmap=cmap)
-    
-#     # for centroid in centroids[key][:index]:
-#     centroid = centroids[key][index]
-#     ax.scatter(
-#         centroid[0],
-#         centroid[2],
-#         color="red",
-#         s=10.0,
-#     )
-    
-#     ax.quiver(
-#         centroid[0],
-#         centroid[2],
-#         centroid[1],
-#         centroid[3],
-#         color="red",
-#         scale=10.0,
-#     )
-#     ax.set_xlim(limits[0])
-#     ax.set_ylim(limits[0])
-    
-#     plt.savefig(f"outputs/fig_{turn:05.0f}.png", dpi=200)
-#     plt.close()
-    
-
-limits = 4 * [(-2.0, 2.0)]
-for index in range(len(turns_list)):
-    bunch = bunches[key][index]
-    turn = turns_list[index]
-    
-    fig, axs = plt.subplots(figsize=(8, 8), sharex=False, sharey=False, nrows=4, ncols=4)
-
-    for i in range(4):
-        for j in range(4):
-            ax = axs[i, j]
-            ax.set_xlim(limits[j])
-            if i != j:
-                ax.set_ylim(limits[i])
-
-    for i in range(3):
-        for ax in axs[i, :]:
-            ax.set_xticks([])
-    for j in range(1, 4):
-        for ax in axs[:, j]:
-            ax.set_yticks([])
-                    
-    for i in range(4):
-        for j in range(4):
-            ax = axs[i, j]
-
-            axis = (j, i)
-
-            if i == j:
-                ax.hist(bunch[:, i], bins=bins, range=limits[i], histtype="step", color="black")
-
-            elif i > j:
-                hist, edges = np.histogramdd(bunch[:, axis], bins=bins, range=[limits[k] for k in axis])
-                hist = scipy.ndimage.gaussian_filter(hist, 1.0)
-                hist = hist / np.max(hist)
-                coords = [0.5 * (e[:-1] + e[1:]) for e in edges]
-                # ax.contourf(coords[0], coords[1], hist.T, levels=5, colors=colors)
-                ax.pcolormesh(coords[0], coords[1], hist.T, cmap=cmap)
+        # Global scaling
+        bunch = data[method]["bunch"][-1]
             
-                centroid = centroids[key][index]
-                ax.scatter(
-                    centroid[j],
-                    centroid[i],
-                    color="red",
-                    s=10.0,
+        ymax_global = 0.0
+        for i in range(4):
+            values, edges = np.histogram(bunch[:, i], bins=bins, range=limits[i])
+            ymax_global = max(ymax_global, np.max(values))
+
+        vmax_global = np.zeros((4, 4))
+        for i in range(4):
+            for j in range(i):
+                axis = (j, i)
+                values, edges = np.histogramdd(
+                    bunch[:, (j, i)], bins=bins, range=(limits[j], limits[i])
                 )
-            else:
-                ax.axis("off")
+                values = scipy.ndimage.gaussian_filter(values, blur)
+                vmax_global[i, j] = max(vmax_global[i, j], np.max(values))
 
-    axs[0, 0].set_yticks([])
+        # Plot
+        for index in range(len(turns_list)):
+            centroid = data[method]["centroid"][index]
+            bunch = data[method]["bunch"][index]
+            turn = turns_list[index]
 
-    for ax in axs.flat:
-        for loc in ["top", "right"]:
-            ax.spines[loc].set_visible(False)
-    
-    plt.savefig(f"outputs/fig_{turn:05.0f}.png", dpi=200)
-    plt.close()
-    
-    
-    
+            grid = CornerGrid(ndim=4, limits=limits, labels=labels)
 
+            for i in range(4):
+                for j in range(i + 1):
+                    ax = grid.axs[i, j]
+                    if i == j:
+                        ax.hist(bunch[:, i], bins=bins, range=limits[i], histtype="step", color="black", lw=1.3)
+                    else:
+                        values, edges = np.histogramdd(bunch[:, (j, i)], bins=bins, range=(limits[j], limits[i]))
+                        values = scipy.ndimage.gaussian_filter(values, blur)
+                        ax.pcolormesh(edges[0], edges[1], values.T, cmap="Greys", vmax=None)
+            
+            for i in range(4):
+                grid.axs[i, i].set_ylim(0.0, ymax_global * 1.2)
 
+            for i in range(4):
+                for j in range(i):
+                    ax = grid.axs[i, j]
+                    ax.scatter(
+                        centroid[j],
+                        centroid[i],
+                        c="red",
+                        s=8.0,
+                    )
 
+            grid.axs[1, 2].annotate(
+                "t = {:0.2f}".format(float(turn / n_turns)),
+                xy=(0.5, 0.5),
+                xycoords="axes fraction",
+                horizontalalignment="center",
+                verticalalignment="center",
+                color="black",
+                fontsize="large",
+            )
 
-
-
-
-
-    
-
-    
-
-    
+            # Save figure
+            plt.savefig(os.path.join(output_dir, f"fig_{turn:05.0f}.png"), dpi=200)
+            plt.close()
