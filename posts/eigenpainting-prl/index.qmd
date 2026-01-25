@@ -90,7 +90,7 @@ So far this has nothing to do with spinning beams. The connection comes when we 
 
 ## Eigenpainting
 
-To review: I've listed several possible applications of spinning beams: the production of flat beams in hadron colliders, the suppression of space charge structure resonances, and the reduction of space-charge-driven tune spread. Now we can introduce the *eigenpainting* method. I'll first generalize existing painting methods, *correlated* and *anti-correlated* painting, to include linear coupling between the two planes of motion. Once that's done, it will be clear that eigenpainting is a special case of both methods. If you're unfamiliar with the theory of coupled linear optics, see [this post](https://austin-hoover.github.io/blog/posts/2021-01-25_coupled-parametric-oscillators/).
+To review: I've listed several possible applications of spinning beams: the production of flat beams in hadron colliders, the suppression of space charge structure resonances, and the reduction of space-charge-driven tune spread. Now we can introduce the *eigenpainting* method. I'll first generalize existing painting methods, *correlated* and *anti-correlated* painting, to include linear coupling between the two planes of motion. Once that's done, it will be clear that eigenpainting is a special case of both methods.
 
 Recall the Courant-Snyder (CS) invariants $J_x(x, x')$ and $J_y(y, y')$ in uncoupled linear optics. The turn-by-turn particle coordinates trace an ellipse of area $2 \pi J_x$ in the $x$-$x'$ plane $2 \pi J_y$ in the $y$-$y'$ plane. (We an also refer to $J_{x, y}$ as *amplitudes* or *actions*). Thus, when we continuously inject particles at a constant amplitude, we uniformly fill an ellipse. Our paintbrush is really an ellipse, rather than a point in the two-dimensional phase space. By varying the injection amplitude, we create elliptically symmetric distributions with arbitrary density profiles $f(J_x)$ and $f(J_y)$. Thus, we can move our painting path from the four-dimensional space of position-momentum coordinates to the two-dimensional space of amplitudes $J_x(t)$-$J_y(t)$.
 
@@ -126,11 +126,74 @@ $${#eq-kv}
 
 which describes a uniform distribution of particles on a four-dimensional ellipsoid. If we turned on space charge in @fig-paint-anticorr, the nonuniform beam density would mess everything up, and we wouldn't end up with the same KV distribution at the end.
 
-Suppose we took the limit $\tilde{J}_y \rightarrow 0$. Now, regardless of which method we run, we get the same distribution
+Suppose we took the limit $\tilde{J}_y \rightarrow 0$. Now correlated and anti-correlated painting give the same distribution. The amplitude in one plane remains near zero, while the amplitude in the other plane linearly increases with time.
+
+![Correlated and anti-correlated painting as $\tilde{J}_y \rightarrow 0$.](images/paint_flat.gif){#fig-paint-flat width=450px fig-align=left}
+
+Notice that the only difference between turns is a global scaling factor; the functional form of the distribution does not change. This means we *can* paint a KV distribution; it just needs to have a very small emittance in one of the planes. Unfortunately, this doesn't get us anywhere; we're back to the flat-beam injection mentioned above. 
+
+**Here's the trick**: introduce coupling to the lattice. In the uncoupled lattice, the amplitudes $J_{x, y}$ describe two modes of oscillation---one along $x$, one along $y$. In the coupled lattice, we label the mode amplitudes $J_{1, 2}$, where each is a function of all four phase space coordinates. These new modes do not correspond to pure $x$ or $y$ oscillations. *Therefore, setting one of the amplitudes to zero does not generate a flat beam.* 
+
+The coupled version of correlated painting is obtained by replacing $(x, y) \rightarrow (1, 2)$:
+
+$$
+\begin{aligned}
+J_1(t) &= t \tilde{J}_1 , \\
+J_2(t) &= t \tilde{J}_2 .
+\end{aligned}
+$$
+
+Same for anti-correlated painting.
+
+$$
+\begin{aligned}
+J_1(t) &= t \tilde{J}_1 , \\
+J_2(t) &= (1 - t) \tilde{J}_2 .
+\end{aligned}
+$$
+
+We define uniform eigenpainting by the limit $\tilde{J}_2 \rightarrow 0$, leaving only the $J_1$ term:
+
+$$
+\begin{equation}
+\begin{boxed}
+J_1(t) &= t \tilde{J}_1.
+\end{boxed}
+\end{equation}
+$$
+
+For the general definition of eigenpainting, there can be arbitrary time-dependence; if it is linear, it generates a uniform particle density.
 
 
+we can just define the phase space in @fig-paint-flat as a *normalized* space, connected to the actual phase space coordinates by a symplectic transformation $\mathbf{V}$. Let's call the normalized coordinates $\mathbf{u}$; then the actual coordinates $\mathbf{x}$ are defined as
 
-![Correlated and anti-correlated painting as $\tilde{J}_y \rightarrow 0$.](images/paint_eig.gif){#fig-paint-flat width=450px fig-align=left}
+$$
+\mathbf{x} = \mathbf{V} \mathbf{u} .
+$$
+
+We'll construct $\mathbf{V}$ from the eigenvectors of the transfer matrix $\mathbf{M}$, as described in [this post](https://austin-hoover.github.io/blog/posts/2021-01-25_coupled-parametric-oscillators/):
+
+
+$$
+\mathbf{V} = 
+\left[ 
+    +\Re\{\mathbf{v}_1\} 
+    -\Im\{\mathbf{v}_1\} 
+    +\Re\{\mathbf{v}_2\} 
+    -\Im\{\mathbf{v}_2\} 
+\right],
+$${#eq-vmat-eig}
+
+
+$$
+\mathbf{V^{-1} M V} = \mathbf{P} = 
+\begin{bmatrix}
+    \cos{\mu_1} & \sin{\mu_1}  & 0 & 0 \\
+    -\sin{\mu_1} & \cos{\mu_1}  & 0 & 0 \\
+    0 & 0 & \cos{\mu_2} & \sin{\mu_2} \\
+    0 & 0 & -\sin{\mu_2} & \cos{\mu_2}
+\end{bmatrix}
+$${#eq-vmat-tmat}
 
 
 ![Eigenpainting.](images/paint_eig.gif){#fig-paint-eig width=450px fig-align=left}
