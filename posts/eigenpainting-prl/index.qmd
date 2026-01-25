@@ -1,5 +1,5 @@
 ---
-title: "*Eigenpainting*: a novel method to mitigate space charge in high-intensity hadron beams"
+title: "Eigenpainting: a novel method to mitigate space charge in high-intensity hadron beams"
 author: Austin Hoover
 date: 2026-01-29
 bibliography: references.bib
@@ -7,19 +7,127 @@ csl: ./aps.csl
 categories:
   - accelerators
   - papers
-draft: true
-toc: false
+draft: false
+format:
+  html:
+    toc: true
+    number-sections: true
+    fig-align: left
 ---
 
-Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/bvwq-34jf), was recently in Physical Review Letters (PRL).^[Here's the [preprint](https://arxiv.org/pdf/2601.13517).] The purpose of the paper was to demonstrate a method called *eigenpainting*, first proposed by Viatcheslav (Slava) Danilov over twenty years ago.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace, both of which led to major ongoing research programs at ORNL @cousineau_2017_lace and FNAL @antipov_2017_iota.] Eigenpainting utilizes linear coupling between the planes to generate a "vortex" distribution which could be used to mitigate space charge effects in low-energy accumulator rings, or to increase luminosity in high-energy colliders. Our paper is the first experimental test of this method. We utilized four-dimensional phase space reconstruction techniques to benchmark the result against PIC simulations and identified [...] 
+Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/bvwq-34jf), was recently in Physical Review Letters (PRL).^[Here's the [preprint](https://arxiv.org/pdf/2601.13517).] The purpose of the paper was to demonstrate a method called *eigenpainting*, first proposed by Viatcheslav (Slava) Danilov over twenty years ago.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace, both of which led to major ongoing research programs at ORNL @cousineau_2017_lace and FNAL @antipov_2017_iota.] Eigenpainting utilizes linear coupling between the planes to generate a "vortex" distribution which could be used to mitigate space charge effects in low-energy accumulator rings, or to increase luminosity in high-energy colliders. We performed the first experimental test of this method in the Spallation Neutron Source (SNS) accelerator. 
 
-## Background
 
-Accelerator facilities such as the [SNS](https://neutrons.ornl.gov/sns) and [J-PARC](https://j-parc.jp/c/en/) use *charge-exchange injection* to create intense proton beams for neutron scattering experiments.^[I wrote a post about the beam formation process [here](../2021-05-27_painting-a-particle-beam).] The injection is a three-step process: H- (negative hydrogren) ions are accelerated to the GeV energy range in a linac, converted to protons using a carbon foil or laser-magnet system [@wei_2003_synchrotrons; @aleksandrov_2023_sequential], and finally stored in an accumulator ring. We call each batch of injected protons a *minipulse*. After the first minipulse completes one lap around the ring, a second is injected. This process repeats for hundreds or thousands of turns to accumulate roughly $10^{14}$ protons in the ring. Finally, the accumulated beam is extracted and guided to the target. In the SNS, the entire process repeats at 60 Hz frequency to generate 1+ MW beam power on the target.
+## Phase space painting
 
-Vanilla charge-exchange injection leads to charge pile-up at the injection point. This is not ideal when space charge forces (electrostatic forces in the beam's rest frame) are considered. Space charge deforms the beam distribution, leading to halo formation and particle loss. This motivates the use of *phase space painting*: variation of the injection point in phase space (position-momentum space) during accumulation. At a basic level, painting lets us spread the charge over a larger area, reducing the peak density and associated space charge effects. But more detailed control over the distribution remains challenging because of the lap-to-lap beam evolution. As soon as we change the beam by injecting a new minipulse, we also change the particle trajectories on the next turn. It's like an artist trying to paint a scene that evolves between each brush stroke.
+Accelerators such as the [SNS](https://neutrons.ornl.gov/sns) and [J-PARC](https://j-parc.jp/c/en/) use *charge-exchange injection* to create intense proton beams for neutron scattering experiments.^[I wrote a post about the beam formation process [here](../2021-05-27_painting-a-particle-beam).] The injection is a three-step process: H- (negative hydrogren) ions are accelerated in a linac, converted to protons using a carbon foil or laser-magnet system, and then transfered to an accumulator ring. We call each batch of injected protons a *minipulse*. After the first minipulse completes one lap around the ring, a second is injected, and so on for hundreds or thousands of turns. The final number of protons in the ring is typically on the order of $10^{14}$. In the SNS, the entire process is run at 60 Hz frequency to generate 1+ MW beam power on the target.
+
+Vanilla charge-exchange injection leads to charge pile-up at the injection point. This is not ideal when space charge forces (electrostatic forces in the beam's rest frame) are considered. Space charge deforms the beam distribution, leading to halo formation and particle loss. This motivates the use of *phase space painting*: the use of dipole magnets to vary the injection point in phase space (position-momentum space) during accumulation. At a basic level, painting lets us spread the charge over a larger area, reducing the peak density and associated space charge effects. But more detailed control over the distribution remains challenging because of the lap-to-lap beam evolution. As soon as we change the beam by injecting a new minipulse, we also change the particle trajectories on the next turn. It's like an artist trying to paint a scene that evolves between each brush stroke.
+
+Our general problem is to choose a four-dimensional painting path $\mathbf{x}(t) = [x(t), x'(t), y(t), y'(t)]$ (positions $x$-$y$ and momenta $x'$-$y'$) that optimizes the accumulated beam distribution. Of course, the optimal distribution depends on the application. In the paper, we highlight that *spinning beams* could have several advantages.
+
+
+## Spinning beams
+
+### Spinning beams for hadron colliders
+
+
+First, spinning beams could be used to boost the luminosity in high-energy hadron colliders @burov_2013_circular. The idea is to accumulate a round, spinning beam at low energies, accelerate the beam and remove its angular momentum at the higher energy. Since the angular momentum is removed *without changing the four-dimensional emittance* @kim_2003_round, the high-energy beam will have an aspect ratio larger than one. The larger the initial angular momentum, the larger the final aspect ratio. In the limit of rigid rotation in the initial beam, the final beam is *completely flat*. See @fig-roundflat.
+
+![A round-to-flat transformation removes angular momentum from the beam without changing the four-dimensional emittance. Source: [my talk](https://conference.sns.gov/event/335/contributions/528/attachments/892/8194/2022-10-26_Hoover_space_charge_workshop.pdf).](images/roundflat.png){#fig-roundflat }
+
+For colliders, it makes sense to use flat beams to increase the luminosity @xu_2023_damping. It's straightforward to paint a flat beam, but this is a poor choice because of the strong space charge forces at low energies. So we can play a trick: paint a round, spinning beam, then flatten it *after* acceleration, when space charge is negligible.
+
+![Concept of round-to-flat transformation in a collider. Phase space painting would be used to accumulate a low-energy beam with large angular momentum. The angular momentum would be removed after acceleration, when space charge is neglible, leaving a flat beam. [LHC diagram](https://cds.cern.ch/record/2693837/files/Poster-2019-858.pdf).](images/collider.png){#fig-collider}
+
+The flatness is characterized by the ratio of *emittances*, labeled as $C$ in the figures above. To define the emittances, let's write the $4 \times 4$ covariance matrix $\mathbf{\Sigma}$ as
+
+$$
+\mathbf{\Sigma} = 
+\begin{bmatrix}
+    \mathbf{\Sigma}_{xx}   & \mathbf{\Sigma}_{xy} \\
+    \mathbf{\Sigma}_{xy}^T & \mathbf{\Sigma}_{yy}
+\end{bmatrix}.
+$${#eq-cov-uncoupled}
+
+Then the *projected* emittances $\varepsilon_{x, y}$ characterize the area of the rms ellipse in the $x$-$x'$ and $y$-$y'$ planes:
+
+$$
+\begin{aligned}
+\varepsilon_x &= \sqrt{\det{\mathbf{\Sigma}_{xx}}} , \\
+\varepsilon_y &= \sqrt{\det{\mathbf{\Sigma}_{yy}}} . \\
+\end{aligned}
+$${#eq-proj-emitt}
+
+The projected emittances are invariants in *uncoupled* linear focusing systems. In *coupled* systems, it is the *four-dimensional* emittance $\varepsilon_{4D}$ that is conserved:
+
+$$
+\varepsilon_{4D} = \sqrt{\det{\mathbf{\Sigma}}}.
+$${#eq-4d-emitt}
+
+We can also write the four-dimensional emittance as $\varepsilon_{4D} = \varepsilon_{1}\varepsilon_{2}$, where $\varepsilon_{1, 2}$ are the individually conserved *intrinsic* emittances. The intrinsic emittances reduce to the projected emittances when there is no angular momentum in the distribution, i.e., when $\mathbf{\Sigma}_{xy} = 0$. **Therefore, a round-to-flat transformation maps the projected emittances to the intrinsic emittances:**
+
+$$
+\varepsilon_{x, y} \rightarrow \varepsilon_{1, 2}.
+$$
+
+It follows that the "intrinsic flatness" is defined by the intrinsic emittance ratio $\varepsilon_1 / \varepsilon_2$. That's the number we want to maximize.
+
+
+
+### Spinning beams for space charge mitigation
+
+There's another application of spinning beams that has nothing to do with colliders: mitigating space charge effects. Consider a simplified model that represents the beam as a frozen background potential $\Phi(x, y)$. In a Gaussian distribution, the potential contains terms proportional to $x^2$, $x^4$, and so on. These terms act as nonlinear driving forces on the particles, exciting resonances at specific frequencies. These are sometimes called *space charge structure resonances*. The classic example is the fourth-order resonance, which creates four resonance islands in $x$-$x'$ phase space. Recently, Cheon et al. @cheon_2022_spinning showed that angular momentum can suppress this resonance in linear accelerators, and I expect the same should hold in circular accelerators. See @fig-fourth.
+
+![Fourth-order resonance suppression from angular momentum in a bunched beam. Particles in the spinning beam avoid direct passage through the oscillating beam core. Source: @cheon_2022_spinning.](images/fourth.png){#fig-fourth}
+
+Space charge can also excite nonlinear resonances driven by the accelerator lattice.^[See [this post](../2021-03-28_nonlinear-resonances) on nonlinear resonances.] See @fig-tunespread, which shows the tune spread within a Gaussian bunch. As the intensity increases, the tune spread grows, and more particles enter the forbidden regions of tune space. Thus, space charge essentially broadens the resonance stop-bands in the lattice. It would be nice if we could generate a uniform-density bunch, which completely eliminates the tune spread.^[This is only true in the absence of coherent instabilities...]
+
+![Tune spread for Gaussian and uniform distributions. Adapted from: *G. Franchetti, Space charge in circular machines, CERN Accelerator School.*](images/tunespread.png){#fig-tunespread width=500px}
+
+
+There is one distribution that generates the desired uniform density and linear space charge forces while maintaining a finite emittance: the KV distribution. The KV distribution is an equilibrium solution of the Vlasov-Poisson equations, which describe the self-consistent dynamics of the beam in response to external self-generated forces. This means that if we start with a KV distribution in the ring, it will maintain its functional form in phase space. This is a remarkable fact that I don't have the space to discuss here. The point is that the KV distribution is an obvious target if we want to minimize the tune spread.
+
+So far this has nothing to do with spinning beams. The connection comes when we try to *paint* the KV distribution. It is *impossible* to paint a KV distribution without angular momentum in the presence of space charge. Well, not impossible: we can easily paint a completely *flat* KV distribution, i.e., a distribution with $\varepsilon_y = 0$ or $\varepsilon_x = 0$. But then we've back to the same problem: the flat beam will have enormous density and associate space charge forces. Again, we can play a trick: linearly map the flat KV distribution to a round, rotating distribution. It will turn out that we *can* paint the round, rotating distribution, which has zero four-dimensional emittance ($\varepsilon_2 \ll \varepsilon_1$) but still projects to a uniform density in the $x$-$y$ plane. I'll explain this more when defining the painting methods in the next section.
+
+
+## Eigenpainting
+
+To review: I've listed several possible applications of spinning beams: the production of flat beams in hadron colliders, the suppression of space charge structure resonances, and the reduction of space-charge-driven tune spread. Now we can introduce the *eigenpainting* method. To do this, I'll first generalize existing painting methods to include linear coupling between the planes of motion. Once that's done, it should be clear that eigenpainting is a limiting case of these methods.
+
+The two painting methods used today are *correlated* and *anti-correlated* painting. Both methods are based on the Courant-Snyder parameterization. 
+
+motion in two-dimesional phase space. Start with correlated painting. In correlated painting, the injection point moves along the $x = y$ diagonal with the momenta set to zero $x' = y' = 0$. In a linear, uncoupled lattice, we can uniformly fill the $x$-$x'$ and $y$-$y$' planes by scaling the coodinates as the square root of time. @fig-corr illustrates the 1D and 2D projections using a linear lattice model.
+
+
+
+If you're unfamiliar the standard treatment of linear optics, please start with [this post](https://austin-hoover.github.io/blog/posts/2021-01-25_coupled-parametric-oscillators/).
+
+The two painting schemes used today are *correlated* painting and *anti-correlated* painting. Both methods are based on linear motion in two-dimesional phase space. Start with correlated painting. In correlated painting, the injection point moves along the $x = y$ diagonal with the momenta set to zero $x' = y' = 0$. In a linear, uncoupled lattice, we can uniformly fill the $x$-$x'$ and $y$-$y$' planes by scaling the coodinates as the square root of time. @fig-corr illustrates the 1D and 2D projections using a linear lattice model.
+
+![Linear model of correlated eigenpainting. The injection point is plotted as a red dot. The time $t$ is scaled to the range [0, 1].](images/corr.gif){#fig-corr width=450px fig-align=left}
+
+Notice that the $x$-$y$ distribution does *not* have a uniform density. Thus, when space charge is included, it will generically lead to distortion and growth the phase space distribution. 
+
+
+
+Notice that the $x$-$y$ distribution is *not* uniform. At high intensities, 
+
+
+Can we do any better? 
+
 
 It would be easier if the beam was *stationary* lap-to-lap. There's only one known stationary distribution in four-dimensional phase space in the presence of space charge: the KV distribution. Particles in the KV distribution are uniformly distributed on a four-dimensional ellipsoid. The projection of the distribution on the transverse plane generates linear space charge forces. 
+
+
+![Anti-correlated painting](images/anticorr.gif){#fig-anticorr width=450px fig-align=left}
+
+![Eigenpainting.](images/eig.gif){#fig-eig width=450px fig-align=left}
+
+
+
+
+Particles in the KV distribution are uniformly distributed on a four-dimensional ellipsoid. The projection of the distribution on the transverse plane generates linear space charge forces. 
 
 The distribution is constructed from two invariants of the motion, which we call $J_x$ and $J_y$. Each defines an ellipse in the $x$-$x'$ or $y$-$y'$ plane:
 
@@ -43,10 +151,12 @@ So can we paint a KV distribution? Actually it's quite simple. The delta functio
 This is known as *anti-correlated* painting.
 
 
-![](images/fig1.png)
 
 
 
+## Questions and future work
 
+
+Setting
 
 

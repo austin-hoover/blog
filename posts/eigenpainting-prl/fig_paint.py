@@ -165,21 +165,24 @@ class CornerGrid:
   
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("--nturns", type=int, default=2800)
+    parser.add_argument("--nparts", type=int, default=200)
+    parser.add_argument("--stride", type=int, default=200)
+    parser.add_argument("--inj-rms", type=float, default=0.10)
+    args = parser.parse_args()
+
     
     tune_x = 0.1810201  # horizontal tune
     tune_y = tune_x - 0.143561  # vertical tune
-    n_turns = 2800  # number of turns to paint
-    n_inj = 200  # number of particles per turn
 
-    stride = 200
-    turns_list = list(range(0, n_turns + stride, stride))
+    turns_list = list(range(0, args.nturns + args.stride, args.stride))
 
     painter = Painter(
         tune_x=tune_x,
         tune_y=tune_y,
-        n_turns=n_turns,
-        n_inj=n_inj,
-        inj_rms=0.10,
+        n_turns=args.nturns,
+        n_inj=args.nparts,
+        inj_rms=args.inj_rms,
     )
 
     data = {}
@@ -266,13 +269,12 @@ if __name__ == "__main__":
                     )
 
             grid.axs[1, 2].annotate(
-                "t = {:0.2f}".format(float(turn / n_turns)),
+                "t = {:0.2f}".format(float(turn / args.nturns)),
                 xy=(0.5, 0.5),
                 xycoords="axes fraction",
                 horizontalalignment="center",
                 verticalalignment="center",
                 color="black",
-                fontsize="large",
             )
 
             # Save figure
