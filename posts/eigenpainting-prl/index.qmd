@@ -8,25 +8,45 @@ categories:
   - accelerators
   - papers
 draft: true
+toc: false
 ---
 
-Our paper *Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams* was recently [published](https://journals.aps.org/prl/accepted/10.1103/bvwq-34jf) in Physical Review Letters (PRL). (Here's the [preprint](https://arxiv.org/pdf/2601.13517).) This post gives a more user-friendly introduction to the proposed method and elaborates a bit more on the findings.
+Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/bvwq-34jf), was recently in Physical Review Letters (PRL).^[Here's the [preprint](https://arxiv.org/pdf/2601.13517).] The purpose of the paper was to demonstrate a method called *eigenpainting*, first proposed by Viatcheslav (Slava) Danilov over twenty years ago.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace, both of which led to major ongoing research programs at ORNL @cousineau_2017_lace and FNAL @antipov_2017_iota.] Eigenpainting utilizes linear coupling between the planes to generate a "vortex" distribution which could be used to mitigate space charge effects in low-energy accumulator rings, or to increase luminosity in high-energy colliders. Our paper is the first experimental test of this method. We utilized four-dimensional phase space reconstruction techniques to benchmark the result against PIC simulations and identified [...] 
 
-Background: High-intensity and high-power hadron accelerators are used for experiments in condensed matter physics, particle physics, nuclear physics, and other fields [@wei_2003_synchrotrons; @wei_2014_very]. After decades of R&D, a few modern facilities now operate above 1 MW beam power @cousineau_2015_high.
+## Background
 
-Future applications will require even higher intensities, but will also place tighter constraints on the beam loss.
+Accelerator facilities such as the [SNS](https://neutrons.ornl.gov/sns) and [J-PARC](https://j-parc.jp/c/en/) use *charge-exchange injection* to create intense proton beams for neutron scattering experiments.^[I wrote a post about the beam formation process [here](../2021-05-27_painting-a-particle-beam).] The injection is a three-step process: H- (negative hydrogren) ions are accelerated to the GeV energy range in a linac, converted to protons using a carbon foil or laser-magnet system [@wei_2003_synchrotrons; @aleksandrov_2023_sequential], and finally stored in an accumulator ring. We call each batch of injected protons a *minipulse*. After the first minipulse completes one lap around the ring, a second is injected. This process repeats for hundreds or thousands of turns to accumulate roughly $10^{14}$ protons in the ring. Finally, the accumulated beam is extracted and guided to the target. In the SNS, the entire process repeats at 60 Hz frequency to generate 1+ MW beam power on the target.
 
-At the same time, accelerator applications increasingly require detailed control of the beam distribution at the target. At the lowest level, we want to control the average particle energy and position, as well as the overall beam size. The ultimate goal is to control individual particle trajectories, or rather to control the exact particle distribution in phase space---the six-dimensional space of particle positions ($x$, $y$, $z$) and velocities ($v_x$, $v_y$, $v_z$). 
+Vanilla charge-exchange injection leads to charge pile-up at the injection point. This is not ideal when space charge forces (electrostatic forces in the beam's rest frame) are considered. Space charge deforms the beam distribution, leading to halo formation and particle loss. This motivates the use of *phase space painting*: variation of the injection point in phase space (position-momentum space) during accumulation. At a basic level, painting lets us spread the charge over a larger area, reducing the peak density and associated space charge effects. But more detailed control over the distribution remains challenging because of the lap-to-lap beam evolution. As soon as we change the beam by injecting a new minipulse, we also change the particle trajectories on the next turn. It's like an artist trying to paint a scene that evolves between each brush stroke.
 
-At high intensities, the beam dynamics is affected by a spectrum of *collective effects*, i.e., effects that depend on the entire particle ensemble. Collective effects can cause dramatic changes to the phase space distribution as the beam evolves. These changes are generally difficult to predict 
+It would be easier if the beam was *stationary* lap-to-lap. There's only one known stationary distribution in four-dimensional phase space in the presence of space charge: the KV distribution. Particles in the KV distribution are uniformly distributed on a four-dimensional ellipsoid. The projection of the distribution on the transverse plane generates linear space charge forces. 
+
+The distribution is constructed from two invariants of the motion, which we call $J_x$ and $J_y$. Each defines an ellipse in the $x$-$x'$ or $y$-$y'$ plane:
+
+$$
+\begin{align}
+J_x &= \gamma x^2 + 2 \alpha x x' + \beta {x'}^2 , \\
+J_y &= \gamma y^2 + 2 \alpha y y' + \beta {y'}^2 . \\
+\end{align}
+$$
+
+The probability density function $f(x, x', y, y') is proportional to:
+
+$$
+f(x, x', y, y') = f(J_x, J_y) = \delta \left( 1 - J_x / \tilde{J}_x - J_y / \tilde{J}_y \right),
+$${#eq-kv}
+
+where $\tilde{J}_{x, y}$ are maximum values of $J_{x, y}$. 
+
+So can we paint a KV distribution? Actually it's quite simple. The delta function in @eq-kv enforces the condition $J_x / \tilde{J}_x + J_y / \tilde{J}_y = 1$. If we plot this in $J_x$-$J_y$ space, we have a diagonal line. [...] All we need to do is vary the injection point along this line.
+
+This is known as *anti-correlated* painting.
 
 
-The purpose of this method is to create a specific distribution of charged particles in four-dimensional phase space --- the space of particle positions and velocities in the plane transverse to the beam. The motivation 
+![](images/fig1.png)
 
 
-## Background: collective effects and phase space painting
 
 
-First, particles generate *wakefields* on the conducting beam pipe, and these wakefields can influence trailing particles or the same particlces on subsequent turns. These types of intstabilities are described in the classic book by Chao @chao_1993_physics.^[You can get it [here](https://www.amazon.com/Collective-Instabilities-Accelerators-Accelerator-Technology/dp/0471551848) for only $350.] Second, particles interact directly with each other through ~electrostatic forces in the beam's rest frame. These are known as *space charge* forces.
 
-I focus here on *space charge* effects, which refers to the approximately electrostatic forces between particles in the beam's rest frame. Space charge is a major issue in high-intneisytt
+
