@@ -66,9 +66,9 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-4ad02ce9f71f8a96fe4ea4995ad6f0ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-1e014a43d4b03fbd54feb8f12d802151.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-4ad02ce9f71f8a96fe4ea4995ad6f0ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-aaa6d8e3e6106d34fab33260610a3c53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-b4535009f682d1529ee74e8fdbdc8aeb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-aaa6d8e3e6106d34fab33260610a3c53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -167,7 +167,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -370,9 +370,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -408,7 +406,6 @@ window.Quarto = {
 </header>
 
 
-<p><em>This is a draft of a note that I might put on arXiv. I don’t know if it deserves to be published in a journal because it’s kind of obvious from previous work, but it still might be worth sharing.</em></p>
 <p>Let <span class="math inline">\(f_t(x)\)</span> be a probability density function defined over positions <span class="math inline">\(x = (x_1, \dots , x_n)\)</span> and velocities <span class="math inline">\(v = (v_1, \dots , v_n)\)</span> in an <span class="math inline">\(n\)</span>-dimensional space at time <span class="math inline">\(t\)</span>. Suppose we know the marginal distributions <span class="math inline">\(\{ f_{t_1}(x) , f_{t_2}(x) , \dots, f_{t_k}(x) \}\)</span> at times <span class="math inline">\(t_1 &lt; t_2, \dots, &lt; t_k\)</span>. Can we use this information to reconstruct the initial distribution <span class="math inline">\(f_{t_0}(x, v)\)</span>?</p>
 <p>If the distribution evolves in an uncoupled harmonic oscillator, the coordinates simply rotate in each <span class="math inline">\(x_i\)</span>-<span class="math inline">\(v_i\)</span> plane. We will consider a continuous set of projections <span class="math inline">\(f_{\theta}(x)\)</span> indexed by the rotation angles <span class="math inline">\(\theta = (\theta_1, \dots, \theta_n)\)</span>, where <span class="math inline">\(\theta_i \in [0, \pi]\)</span>, and write the initial phase space distribution as <span class="math inline">\(f(x, v)\)</span>.</p>
 <p>When <span class="math inline">\(n = 1\)</span>, we can define the transformed coordinates as</p>
