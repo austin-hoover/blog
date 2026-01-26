@@ -54,6 +54,14 @@ span.header-section-number::after {
     // content: ".";  // add period after number
 }
 
+// Listing table titles
 .listing-title {
-    // text-decoration: underline !important;
+    text-decoration: underline !important;
+}
+
+// Listing table rows
+.quarto-listing-table td {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    // line-height: 1.25;
 }

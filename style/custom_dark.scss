@@ -11,10 +11,10 @@ $primary: white;
 $navbar-bg: rgb(20, 20, 20);
 $body-color: rgb(200, 200, 200);
 $body-bg: rgb(20, 20, 20);
-
 $code-block-bg: rgb(40, 40, 40);
 $code-color: $body-color;  // inline code text
 $code-bg: $code-block-bg;  // inline code background
+$table-hover-bg: rgb(35, 35, 35);
 
 
 /*-- scss:rules --*/
@@ -38,7 +38,19 @@ h2, .h2 {
 }
 
 .quarto-listing-table {
-    border-color: rgb(150, 150, 150) !important;
+    border-color: rgb(20, 20, 20, 0);
+}
+
+.quarto-listing-table th {
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+    border-top-color: white;
+    border-top-width: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: left;
+    vertical-align: middle;
+    color: white;
 }
 
 blockquote {

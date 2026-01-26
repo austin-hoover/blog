@@ -1,5 +1,7 @@
 ---
 title: "Blogs"
+date: 2026-01-01
+date-modified: 2026-01-10
 listing:
   id: sample-listings
   sort: false
@@ -66,8 +68,6 @@ listing:
       path: "https://jaredhenderson.substack.com/"
     - title: "Future Doctrina"
       path: "https://mickryan.substack.com"
-    - title: "GIRLS"
-      path: "https://www.freyaindia.co.uk/"
     - title: "Gowing Awol"
       path: "https://wollenblog.substack.com/"
     - title: "Greco and Wansley"

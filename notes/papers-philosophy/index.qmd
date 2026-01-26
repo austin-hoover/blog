@@ -1,5 +1,11 @@
 ---
-title: "Philosophy papers"
+title: "Philosophy Papers"
+date: 2023-01-01
+date-modified: 2024-01-01
+format:
+  html:
+    grid:
+      body-width: 700px
 listing:
     contents: data.yml
     fields: [title, author]

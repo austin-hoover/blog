@@ -1,5 +1,7 @@
 ---
 title: Books
+date: 2023-01-01
+date-modified: 2026-01-01
 listing:
   fields: [title, author, score]
   field-display-names:
@@ -16,6 +18,6 @@ listing:
   page-size: 99999999
   contents:
     - "*.qmd"
-    - "books.yml"
+    - "data.yml"
 ---
 

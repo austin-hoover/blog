@@ -8,4 +8,6 @@ listing:
     table-hover: true
     categories: true
     page-size: 200
+    sort-ui: false
+    filter-ui: false
 ---

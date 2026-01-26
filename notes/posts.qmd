@@ -1,5 +1,7 @@
 ---
 title: "Articles, blog posts, essays"
+date: 2026-01-26
+title-block-banner: false
 ---
 
 * [Why academics stink at writing](https://www.chronicle.com/article/why-academics-stink-at-writing/)

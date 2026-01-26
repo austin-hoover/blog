@@ -11,8 +11,7 @@ $primary: black;
 $navbar-bg: white;
 $body-color: rgb(20, 20, 20);
 $code-color: $body-color;  // inline code text
-
-
+    
 /*-- scss:rules --*/
 
 h1, h2, h3, h4, h5, h6, h7 {
@@ -32,4 +31,20 @@ h1, h2, h3, h4, h5, h6, h7 {
 
 .navbar-title {
     // fontsize: 16px;
+}
+
+.quarto-listing-table {
+    border-color: rgb(20, 20, 20, 0) !important;
+}
+
+.quarto-listing-table th {
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    border-top-color: black;
+    border-top-width: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: left;
+    vertical-align: middle;
+    color: black;
 }
