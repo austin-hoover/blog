@@ -11,11 +11,14 @@ draft: false
 format:
   html:
     toc: true
+    toc-expand: 1
     number-sections: true
     fig-align: left
 ---
 
-Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/bvwq-34jf), was recently in Physical Review Letters (PRL).^[Here's the [preprint](https://arxiv.org/pdf/2601.13517).] The purpose of the paper was to demonstrate a method called *eigenpainting*, first proposed by Viatcheslav (Slava) Danilov over twenty years ago.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace, both of which led to major ongoing research programs at ORNL @cousineau_2017_lace and FNAL @antipov_2017_iota.] Eigenpainting utilizes linear coupling between the planes to generate a vortex distribution which could be used to mitigate space charge effects in low-energy accumulator rings, or to increase luminosity in high-energy colliders. We performed the first experimental test of the method in the Spallation Neutron Source (SNS) accelerator. 
+Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/bvwq-34jf), was recently in Physical Review Letters (PRL).^[Here's the [preprint](https://arxiv.org/pdf/2601.13517).] The purpose of the paper was to demonstrate a method called *eigenpainting*, first proposed by Viatcheslav (Slava) Danilov over twenty years ago.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace.] Eigenpainting utilizes linear coupling between the planes to generate a vortex distribution which could be used to mitigate space charge effects in low-energy accumulator rings, or to increase luminosity in high-energy colliders. We performed the first experimental test of the method in the Spallation Neutron Source (SNS) accelerator. 
+
+This post expands on the ideas in the paper.
 
 
 ## Phase space painting
@@ -101,11 +104,11 @@ $$
 J_x(t) &= t \tilde{J}_x , \\
 J_y(t) &= t \tilde{J}_y ,
 \end{aligned}
-$$
+$${#eq-paint-corr}
 
 where $t$ is scaled to the range $[0, 1]$ and $\tilde{J}_{x, y}$ are maximum values of $J_{x, y}$. @fig-paint-corr illustrates the resulting 1D and 2D projections.
 
-![Linear model of correlated eigenpainting. The injection point is plotted as a red dot. The time $t$ is scaled to the range [0, 1].](images/paint_corr.gif){#fig-paint-corr width=450px fig-align=left}
+![Linear model of correlated eigenpainting: $J_x(t) = t \tilde{J}_x; J_y(t) = t \tilde{J}_y$. The injection point is plotted as a red dot. The time $t$ is scaled to the range [0, 1].](images/paint_corr.gif){#fig-paint-corr width=450px fig-align=left}
 
 Notice that the $x$-$y$ distribution does *not* have a uniform density. Anti-correlated painting runs the opposite way: the amplitude in one plane increases while the other decreases:
 
@@ -114,7 +117,7 @@ $$
 J_x(t) &= t \tilde{J}_x , \\
 J_y(t) &= (1 - t) \tilde{J}_y .
 \end{aligned}
-$$
+$${#eq-paint-anticorr}
 
 ![Anti-correlated painting](images/paint_anticorr.gif){#fig-paint-anticorr width=450px fig-align=left}
 
@@ -141,7 +144,7 @@ $$
 J_1(t) &= t \tilde{J}_1 , \\
 J_2(t) &= t \tilde{J}_2 .
 \end{aligned}
-$$
+$${#eq-paint-corr-coupled}
 
 Same for anti-correlated painting.
 
@@ -150,17 +153,16 @@ $$
 J_1(t) &= t \tilde{J}_1 , \\
 J_2(t) &= (1 - t) \tilde{J}_2 .
 \end{aligned}
-$$
+$${#eq-paint-anticorr-coupled}
 
 We define uniform eigenpainting by the limit $\tilde{J}_2 \rightarrow 0$, leaving only the $J_1$ term:
 
 $$
-\begin{equation}
-\begin{boxed}
-J_1(t) &= t \tilde{J}_1.
-\end{boxed}
-\end{equation}
-$$
+\begin{aligned}
+J_1(t) &= t \tilde{J}_1 , \\
+J_2(t) &= 0 . \\
+\end{aligned}
+$${#eq-paint-eig}
 
 For the general definition of eigenpainting, there can be arbitrary time-dependence; if it is linear, it generates a uniform particle density.
 
@@ -169,7 +171,7 @@ we can just define the phase space in @fig-paint-flat as a *normalized* space, c
 
 $$
 \mathbf{x} = \mathbf{V} \mathbf{u} .
-$$
+$${#eq-norm}
 
 We'll construct $\mathbf{V}$ from the eigenvectors of the transfer matrix $\mathbf{M}$, as described in [this post](https://austin-hoover.github.io/blog/posts/2021-01-25_coupled-parametric-oscillators/):
 
@@ -213,6 +215,8 @@ where $\tilde{J}_{x, y}$ are maximum values of $J_{x, y}$.
 This is known as *anti-correlated* painting.
 
 
+
+## Experimental implementation of eigenpainting
 
 
 

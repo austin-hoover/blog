@@ -1,17 +1,10 @@
----
-about:
-    id: heading
-    template: solana
-    image: images/sextupole.png
-    image-shape: rectangle
----
-
-:::{#heading}
-
 The purpose of this blog is to share my research in accelerator physics and learn about other topics. Outside of physics, I'm especially interested in philosophy of science, philosophy of mind, and philosophy of religion.
 
 Homepage: [https://austin-hoover.github.io](https://austin-hoover.github.io)
 
-:::
+<br>
+
+![](images/sextupole.png){fig-align=center width=300px}
+
 
 
