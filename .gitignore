@@ -2,5 +2,5 @@
 /_site/
 .DS_Store
 .ipynb_checkpoints
-
+.idea
 **/*.quarto_ipynb
