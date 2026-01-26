@@ -4,11 +4,10 @@ author: Austin Hoover
 date: 2025-06-08
 bibliography: bibliography.bib
 csl: aps.csl
+toc: false
 categories:
   - tomography
 ---
-
-*This is a draft of a note that I might put on arXiv. I don't know if it deserves to be published in a journal because it's kind of obvious from previous work, but it still might be worth sharing.*
 
 Let $f_t(x)$ be a probability density function defined over positions $x = (x_1, \dots , x_n)$ and velocities $v = (v_1, \dots , v_n)$ in an $n$-dimensional space at time $t$. Suppose we know the marginal distributions $\{ f_{t_1}(x) , f_{t_2}(x) , \dots, f_{t_k}(x) \}$ at times $t_1 < t_2, \dots, < t_k$. Can we use this information to reconstruct the initial distribution $f_{t_0}(x, v)$?
 
