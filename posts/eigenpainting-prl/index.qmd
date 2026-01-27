@@ -7,7 +7,7 @@ csl: ./aps.csl
 categories:
   - accelerators
   - papers
-draft: true
+draft: false
 format:
   html:
     toc: true
@@ -19,36 +19,28 @@ format:
 Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/b vwq-34jf), was recently accepted for publication in Physical Review Letters (PRL) @evans_2026_demonstration. Here's the [preprint](https://arxiv.org/pdf/2601.13517). The purpose of the paper was to demonstrate a method called *eigenpainting*, first proposed over twenty years ago by Viatcheslav (Slava) Danilov.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace.] Eigenpainting utilizes linear coupling between the planes to generate a vortex distribution which could be used to mitigate space charge effects in low-energy accumulator rings, or to increase luminosity in high-energy colliders. Our paper describes the first experimental test of this method in the [Spallation Neutron Source (SNS)](https://neutrons.ornl.gov/sns) accelerator. This post provides additional background information and figures to help understand the results.
 
 
-* Context
-    * Hadron accelerators
-    * Space charge effects
-    * Phase space painting
-* Theory
-* Experiment
-* Results
-
-## Phase space painting in high-power hadron accelerators
+## Phase space painting in high-power hadron rings
 
 Accelerators such as the [SNS](https://neutrons.ornl.gov/sns) and [J-PARC](https://j-parc.jp/c/en/) use [*charge-exchange injection*](../2021-05-27_painting-a-particle-beam) to create intense proton beams for neutron scattering experiments. The injection is a three-step process: H- (negative hydrogren) ions are accelerated in a linac, converted to protons using a carbon foil or laser-magnet system, and then transfered to an accumulator ring. We call each batch of injected protons a *minipulse*. After the first minipulse completes one lap around the ring, a second is injected, and so on for hundreds or thousands of turns. The final bunch intensity can be more than $10^{14}$ protons. In the SNS, the entire process is repeated at 60 Hz frequency to generate 1+ MW beam power on the target.
 
 Vanilla charge-exchange injection leads to charge pile-up at the injection point. This is not ideal when space charge forces (electrostatic forces in the beam's rest frame) are considered. Space charge deforms the beam distribution, leading to halo formation and particle loss. This motivates the technique of *phase space painting*: the use of dipole magnets to move the injection point in phase space (position-momentum space) during accumulation. At a basic level, painting lets us spread the charge over a larger area in the ring, reducing the peak density and associated space charge effects. Painting can also enable more detailed control of the distribution, but this is generally challenging because of collective effects. As soon as we change the beam by injecting a new minipulse, we also change the particle trajectories on the next turn. This is kind of like an artist trying to paint a scene that evolves between each brush stroke.
 
-The general painting problem is to design a four-dimensional injection path $\mathbf{x}(t) = [x(t), x'(t), y(t), y'(t)]$ (positions $x$-$y$ and momenta $x'$-$y'$) that optimizes the accumulated phase space distribution. There are two important questions to answer. First, what is the target distribution? This will depend on the application, the beam intensity, etc. In the next section, I argue that *vortex distributions* could be useful in several contexts. Second, suppose we identify a target distribution: can we paint it? This is where I'll introduce *eigenpainting*, a method to generate vortex distributions at larger intensities. 
+The general painting problem is to design a four-dimensional injection path $\mathbf{x}(t) = [x(t), x'(t), y(t), y'(t)]$ (positions $x$-$y$ and momenta $x'$-$y'$) that optimizes the accumulated phase space distribution. There are two important questions to answer. First, what is the target distribution? This will depend on the application, the beam intensity, etc. In the next section, I'll argue that *vortex distributions* could be useful in several contexts. Second, suppose we identify a target distribution: can we paint it? This is where I'll introduce *eigenpainting*, which is a method to paint vortex distributions.
 
 
 ## Vortex beam distributions
 
 
-In our paper, we highlight that *vortex distributions* could have several advantages. We mean distributions like these:
+By *vortex distributions*, I mean distributions like these:
 
-![Examples of vortex distributions".](images/vortex.png){#fig-vortex}
+![](images/vortex.png){fig-align=center width=500px}
 
-Such distributions have a large *vorticity*, or curl of the velocity field @groening_2021_vorticity.^[I avoid using the word "rotation" because what we care about is the *internal* rotation of the particles within the beam.] Accelerators are typically designed to eliminate cross-plane coupling, so the strong cross-plane correlations in @fig-vortex represent an unusual situation. Nonetheless, there are several reasons why we might introduce these correlations in the context of high-intensity beams.
+Such distributions have a large *vorticity*, or curl of the velocity field @groening_2021_vorticity.^[I avoid using the word "rotation" because what we care about is the *internal* rotation of the particles within the beam.] Accelerators are typically designed to eliminate cross-plane coupling, so the strong cross-plane correlations in a vortex distributions represent an unusual situation. Nonetheless, there are several reasons why we might introduce these correlations in the context of high-intensity beams.
 
 
 ### Vortex distributions for hadron colliders
 
-First, vortex beams could be used to boost the luminosity in hadron colliders @burov_2013_circular. To maximize the luminosity (the number of collisions per unit time per unit area), we want to maximize the particle density at the collision point, for example by flattening the $x$-$y$ distribution. Unfortunately, space charge places fundamental limits on the beam density during the low-energy accumulation stage. But we can play a trick: we can accumulate a round, spinning beam, accelerate it to high energy, and then flatten it by removing its angular momentum --- the so-called round-to-flat (RTF) transformation @kim_2003_round. Since inter-particle forces are negligble at the higher energy, this scheme essentially bipasses the space charge limit on the beam density.
+First, vortex beams could be used to boost the luminosity in hadron colliders @burov_2013_circular. To maximize the luminosity (the number of collisions per unit time per unit area), we want to maximize the particle density at the collision point, for example by flattening the $x$-$y$ distribution. Unfortunately, space charge places fundamental limits on the beam density during the low-energy accumulation stage. But we can play a trick: we can accumulate a round vortex beam, accelerate it to high energy, and then flatten it by removing its angular momentum --- the so-called round-to-flat (RTF) transformation @kim_2003_round. Since inter-particle forces are negligble at the higher energy, this scheme essentially bipasses the space charge limit on the beam density.
 
 ![A round-to-flat transformation removes angular momentum from the beam without changing the four-dimensional emittance. Source: [my talk](https://conference.sns.gov/event/335/contributions/528/attachments/892/8194/2022-10-26_Hoover_space_charge_workshop.pdf).](images/roundflat.png){#fig-roundflat }
 
@@ -91,7 +83,7 @@ It follows that the "intrinsic flatness" is defined by the intrinsic emittance r
 
 ### Vortex distributions for space charge mitigation
 
-Spinning beams could also be used to mitigate space charge effects. Consider a simplified model that represents the beam as a frozen background potential $\phi(x, y)$. In a Gaussian distribution, the potential contains terms proportional to $x^2$, $x^4$, and so on. These terms act as nonlinear driving forces and can excite resonances at certain frequencies. These resonances are sometimes called *space charge structure resonances*. The classic example is the fourth-order resonance, which creates four resonance islands in $x$-$x'$ phase space. Recently, Cheon et al. @cheon_2022_spinning showed that angular momentum can suppress the fourth-order resonance in linear accelerators, and I expect the same could hold in circular accelerators. See @fig-fourth.
+Vortex beams could also be used to mitigate space charge effects. Consider a simplified model that represents the beam as a frozen background potential $\phi(x, y)$. In a Gaussian distribution, the potential contains terms proportional to $x^2$, $x^4$, and so on. These terms act as nonlinear driving forces and can excite resonances at certain frequencies. These resonances are sometimes called *space charge structure resonances*. The classic example is the fourth-order resonance, which creates four resonance islands in $x$-$x'$ phase space. Recently, Cheon et al. @cheon_2022_spinning showed that angular momentum can suppress the fourth-order resonance in linear accelerators, and I expect the same could hold in circular accelerators. See @fig-fourth.
 
 ![Fourth-order resonance suppression from angular momentum in a bunched beam. Particles in the spinning beam avoid direct passage through the oscillating beam core. Source: @cheon_2022_spinning.](images/fourth.png){#fig-fourth}
 
@@ -101,12 +93,12 @@ Space charge can also excite [nonlinear resonances](../2021-03-28_nonlinear-reso
 
 It would be nice if we could generate a uniform-density bunch, which completely eliminates the tune spread.^[This is only true in the absence of coherent instabilities...] There is one phase space distribution that generates the desired density while maintaining a finite emittance: the KV distribution. The KV distribution is an equilibrium solution of the Vlasov-Poisson equations, which describe the self-consistent dynamics of the beam in response to external and self-generated forces. If we start with a KV distribution in the ring, it will maintain its functional form as it evolves. This is a remarkable fact that I don't have the space to discuss here. The point is that the KV distribution is an obvious target if we want to minimize the tune spread.
 
-So far this has nothing to do with spinning beams. The connection comes when we try to *paint* the KV distribution. It is *impossible* to paint a KV distribution in the presence of space charge. Well, not impossible: we can easily paint a completely *flat* KV distribution, i.e., a KV distribution with $\varepsilon_y = 0$ or $\varepsilon_x = 0$. But then we're back to the same problem: the flat beam will have enormous density and associate space charge forces. Again, we can play a trick: linearly map the flat KV distribution to a round, rotating distribution. It will turn out that we *can* paint the round, rotating distribution, which has zero four-dimensional emittance ($\varepsilon_2 \ll \varepsilon_1$) but still projects to a uniform density in the $x$-$y$ plane. I'll explain this more when defining the painting methods in the next section.
+So far this has nothing to do with vortex beams. The connection comes when we try to *paint* the KV distribution. It is *impossible* to paint a KV distribution in the presence of space charge. Well, not impossible: we can easily paint a completely *flat* KV distribution, i.e., a KV distribution with $\varepsilon_y = 0$ or $\varepsilon_x = 0$. But then we're back to the same problem: the flat beam will have enormous density and associate space charge forces. Again, we can play a trick: linearly map the flat KV distribution to a round, rotating distribution. It will turn out that we *can* paint the round, rotating distribution, which has zero four-dimensional emittance ($\varepsilon_2 \ll \varepsilon_1$) but still projects to a uniform density in the $x$-$y$ plane. I'll explain this more when defining the painting methods in the next section.
 
 
 ## Eigenpainting
 
-To review: I've listed several applications of spinning beams: the production of flat beams in hadron colliders, the suppression of space charge structure resonances, and the reduction of space-charge-driven tune spread. Now we can introduce our *eigenpainting* method, which uses phase space painting to generate angular momentum
+To review: I've listed several applications of vortex beam distributions: the production of flat beams in hadron colliders, the suppression of space charge structure resonances, and the reduction of space-charge-driven tune spread. Now we can introduce our *eigenpainting* method, which uses phase space painting to generate angular momentum
 
 . I'll start by generaliziong existing methods, *correlated* and *anti-correlated* painting, to include linear coupling between the planes of motion. Once that's done, it will be clear that eigenpainting is a special case of both methods. If you're unfamiliar with linear coupling in accelerators, I recommend looking at [this post](../2021-01-25_coupled-parametric-oscillators/) first.
 
