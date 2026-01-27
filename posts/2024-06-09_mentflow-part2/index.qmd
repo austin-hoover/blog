@@ -20,7 +20,7 @@ We performed a few numerical experiments to answer these questions. The experime
 
 Normalizing flow transformations are [diffeomorphisms](https://math.stackexchange.com/questions/301364/what-is-a-diffeomorphism)---smooth, invertible transformations that preserve the topological features of the base distribution. If the base density is nonzero everywhere, the transformed distribution is also nonzero everywhere; therefore, flows can't perfectly represent disconnected modes. Stimper, Scholkopf, and Hernandez-Lobato illustrate this in @fig-modes.
 
-![Normalizing flows cannot perfectly map a unimodal distribution to a bimodal distribution. Source: [@Stimper_2022_resample].](figures/stimper_fig01.png){#fig-modes fig-align=center width=75%}
+![Normalizing flows cannot perfectly map a unimodal distribution to a bimodal distribution. Source: [@Stimper_2022_resample].](figures/stimper_fig01.png){#fig-modes fig-align=center width=450px}
 
 Flows can still push the density arbitrarily close to zero, so they can represent many multimodal distributions in practice. The problem is that building complicated, invertible transformations is expensive—fully connected neural networks are *not* invertible. Two approaches have emerged to build powerful flow transformations. 
 
@@ -96,7 +96,7 @@ The reason for this architecture is twofold. First, the transformation is invert
 
 We still need to implement the transformer and conditioner. For the conditioner, we use a masked neural network. The idea is to block some connections between the neurons in a neural network to ensure $c_i(\mathbf{z}) = c_i(\mathbf{z}_{<i})$. Easy enough! For the transformer, we need an invertible 1D function $\tau$. NSF introduces a transformer based on splines, i.e., piecewise-defined functions. The conditioner provides $K$ different spline *knots* $\{ x^{(k)} , y^{(k)} \}$; as shown in @fig-splines, the function must pass through these knots. The conditioner also provides the derivatives at the knots. 
 
-![Monotonic rational-quadratic splines used in the autoregressive transformer function. Source: [@Durkan_2019_nsf].](figures/durkan_fig01.png){#fig-splines fig-align=center width=60%}
+![Monotonic rational-quadratic splines used in the autoregressive transformer function. Source: [@Durkan_2019_nsf].](figures/durkan_fig01.png){#fig-splines fig-align=center width=500px}
 
 We then write a rather complicated function of these inputs (knot locations and derivatives) that ends up being a quadratic function of the input variable ($x$) divided by another quadratic function of the input variable. This function has an analytic derivative and, therefore, an analytic Jacobian determinant. And the function can be inverted quickly by finding the roots of a quadratic equation.
 
@@ -123,7 +123,7 @@ When evaluating these results, it's important to keep in mind that one cannot do
 
 As I mentioned, MENT-Flow solutions are approximate because we use a penalty method for the constrained optimization. We minimize $L = -H + \mu D$, where $H$ is the entropy and $D$ is the data mismatch. We start with $\mu = 0$, then gradually increase $\mu$ until $D$ is small enough. There is a risk of overfitting if $\mu$ becomes too large too quickly. I don't have an automatic stopping criterion. I find it best to check the simulated vs. measured projections by eye because we usually know approximately how tight our fit should be based on the measurement quality (and how much we trust our beam physics simulation). It makes sense to monitor the reconstructed distribution at the same time. It's usually obvious when the NSF flow is overfitting because of unnatural-looking high-frequency terms.
 
-![A typical training run. The plot shows the negative entropy in black, and the data fit in grey. Both quantities should be as small as possible. The distribution moves from the unconstrained to the constrained point of maximum entropy as the penalty parameter increases at each epoch. The jumps in the loss curves correspond to jumps in the penalty parameter.](figures/fig_loss.png){#fig-loss fig-align=center width=50%}
+![A typical training run. The plot shows the negative entropy in black, and the data fit in grey. Both quantities should be as small as possible. The distribution moves from the unconstrained to the constrained point of maximum entropy as the penalty parameter increases at each epoch. The jumps in the loss curves correspond to jumps in the penalty parameter.](figures/fig_loss.png){#fig-loss fig-align=center width=350px}
 
 
 ## 6D reconstructions from 1D projections
@@ -134,7 +134,7 @@ Designing the 6D numerical experiments was daunting. 6D tomography is brand new.
 
 Unlike 2D tomography, there isn't a clear way to manipulate the beam to maximize the information encoded in the measurement set. In 2D tomography, we know we should rotate the distribution around 180 degrees, typically with equally spaced angles. Things are way less clear in high dimensions. To start, we needed to select the dimension of the measurements: 1D or 2D. We selected 1D projections because it is easier to generalize the notion of "projection angle" to high dimensions when the projections are 1D. Note that a 1D projection is defined by a point on the unit sphere, or a unit vector $\mathbf{v}$. This is the projection axis. The integration axis is an ($n - 1$)-dimensional plane orthogonal to $\mathbf{v}$. Although there is no well-defined "projection angle," there is a well-defined angle *between projections*: $\cos\theta = \mathbf{v}_I \cdot \mathbf{v}_j$. It seems like we want to maximize the average angle between vectors. In other words, we want to distribute unit vectors as uniformly as possible on the unit sphere. We can easily generate random samples from a uniform distribution on the sphere by sampling from an $n$-dimensional Gaussian distribution and dividing each point by its radius. So that's what we decided to do. The reconstruction should converge to the true distribution in the limit of many projections.
 
-![Illustration of random 1D projection axes sampled from the the unit sphere in 6D phase space.](figures/random_projections.png){#fig-unitsphere width=20% fig-align=left}
+![Illustration of random 1D projection axes sampled from the the unit sphere in 6D phase space.](figures/random_projections.png){#fig-unitsphere width=125px fig-align=center}
 
 
 ### GMM

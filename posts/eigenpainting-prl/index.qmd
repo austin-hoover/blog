@@ -7,7 +7,7 @@ csl: ./aps.csl
 categories:
   - accelerators
   - papers
-draft: true
+draft: false
 format:
   html:
     toc: true
@@ -23,16 +23,16 @@ Our paper, [*Demonstration of a novel phase-space painting method in a coupled l
 
 Accelerators such as the [SNS](https://neutrons.ornl.gov/sns) and [J-PARC](https://j-parc.jp/c/en/) use [*charge-exchange injection*](../2021-05-27_painting-a-particle-beam) to create intense proton beams for neutron scattering experiments. The injection is a three-step process: H- (negative hydrogren) ions are accelerated in a linac, converted to protons using a carbon foil or laser-magnet system, and then transfered to an accumulator ring. We call each batch of injected protons a *minipulse*. After the first minipulse completes one lap around the ring, a second is injected, and so on for hundreds or thousands of turns. In the SNS, the final bunch intensity is greater than $10^{14}$ protons, and the entire process is repeated at 60 Hz to generate 1+ MW beam power on the target.
 
-Vanilla charge-exchange injection leads to charge pile-up at the injection point, which is not ideal when space charge forces (electrostatic forces in the beam's rest frame) are considered. Space charge deforms the beam distribution, leading to halo formation and particle loss. This motivates the technique of *phase space painting*: the use of dipole magnets to move the injection point in phase space (position-momentum space) during accumulation. At a basic level, painting lets us spread the charge over a larger area in the ring, reducing the peak density and associated space charge effects. Painting can also enable more detailed control of the distribution, although this is challenging because each injected minipulse changes the beam dynamics on the subsequent turn. This is kind of like an artist trying to paint a scene that evolves between each brush stroke.
+Vanilla charge-exchange injection leads to charge pile-up at the injection point, which is not ideal when space charge forces (electrostatic forces in the beam's rest frame) are considered. Space charge deforms the beam distribution, leading to halo formation and particle loss. This motivates the technique of *phase space painting*: the use of dipole magnets to move the injection point in phase space (position-momentum space) during accumulation. At a basic level, painting lets us spread the charge over a larger area in the ring, reducing the peak density and associated space charge effects. Painting can also enable more detailed control of the distribution, although this is challenging because each injected minipulse changes the beam dynamics on the subsequent turn. It's like an artist trying to paint a scene that evolves between each brush stroke.
 
-Our study focuses on two questions related to phase space painting. First, what is the target beam distribution? After covering some relevant background in @sec-emitt, I'll argue in @sec-vortex that *vortex distributions* are attractive options for several different applications of high-intensity beams. Second, suppose we've identified a target distribution: can we paint it? I'll address this question in @sec-eigenpainting, which introduces *eigenpainting* as a method to paint vortex distributions in the presence of space charge. Finally, in @sec-exp, I'll explain our attempt to implement this method in the SNS accumulator ring and explain our results.
+Our study focuses on two questions related to phase space painting. First, what is the target beam distribution? After covering some relevant background in @sec-emitt, I'll argue in @sec-vortex that *vortex distributions* are attractive options for several different applications of high-intensity beams. Second, suppose we've identified a target distribution: can we paint it? I'll address this question in @sec-eigenpainting, which introduces *eigenpainting* as a method to paint vortex distributions in the presence of space charge. Finally, in @sec-exp, I'll explain our attempt to implement this method in the SNS accumulator ring.
 
 
 ## Background: intrinsic and projected emittances {#sec-emitt}
 
-A central concept in our study is the *emittance*, a measure of volume in phase space. This section defines the four-dimensional emittance and its relationship to the two-dimensional *intrinsic* and *projected* emittances. Later, we'll use the intrinsic emittances to define a figure of merit in our experiments.
+A central concept in our study is the *emittance*, a measure of volume in phase space. This section defines the four-dimensional emittance and its relationship to the two-dimensional *intrinsic* and *projected* emittances. Later, we'll use the intrinsic emittances as a figure of merit for our experiments.
 
-Let $\mathbf{x} = (x, x', y, y')$ be the phase space coordinate vector, where $x$-$y$ and $x'$-$y'$ are the positions and velocities, respectively. Let $\mathbf{\Sigma}$ be the covariance matrix:
+Let $\mathbf{x} = (x, x', y, y')$ be the phase space coordinate vector, where $x$-$y$ and $x'$-$y'$ are the transverse positions and velocities, respectively. Let $\mathbf{\Sigma}$ be the covariance matrix:
 
 $$
 \mathbf{\Sigma} = \langle \mathbf{x} \mathbf{x}^T \rangle
@@ -53,7 +53,7 @@ $${#eq-4d-emitt}
 
 From Liouville's Theorem, the four-dimensional emittance is conserved under linear symplectic transformations. 
 
-We can also write the four-dimensional emittance as the product $\varepsilon_{4D} = \varepsilon_{1}\varepsilon_{2}$, where $\varepsilon_{1, 2}$ are called the *intrinsic* emittances. The intrinsic emittances are individually conserved under linear symplectic transformations. They are calculated by diagonalizing the covariance matrix with a symplectic matrix $\mathbf{V}$:
+We can also write the four-dimensional emittance as the product $\varepsilon_{4D} = \varepsilon_{1}\varepsilon_{2}$, where $\varepsilon_{1, 2}$ are called the *intrinsic* emittances. The intrinsic emittances are individually conserved under linear symplectic transformations. They are calculated by finding a symplectic matrix $\mathbf{V}$ that diagonalizes the covariance matrix:
 
 $$
 \mathbf{\Sigma}
@@ -65,25 +65,20 @@ $$
 0 & 0 & \varepsilon_2 & 0 \\
 0 & 0 & 0 & \varepsilon_2 
 \end{bmatrix}
-\mathbf{V}^T
+\mathbf{V}^T .
 $${#eq-cov-diag}
 
-@eq-cov-diag motivates the definition of "normalized" coordinates $\mathbf{u} = \mathbf{V}^{-1} \mathbf{x}$. When projected onto the first two dimensions of $\mathbf{u}$,
-
-
-
-
-We can also define the *projected* emittances. To do so, it is convenient to split the covariance matrix into four blocks:
+We will also define the *projected* emittances. The four-dimensional ellipsoid projects to a two-dimensional ellipse on the $x$-$x'$ or $y$-$y'$ plane. The projected emittances $\varepsilon_{x, y}$ are the areas enclosed by these ellipses. Writing the covariance matrix as
 
 $$
 \mathbf{\Sigma} = 
 \begin{bmatrix}
     \mathbf{\Sigma}_{xx}   & \mathbf{\Sigma}_{xy} \\
     \mathbf{\Sigma}_{xy}^T & \mathbf{\Sigma}_{yy}
-\end{bmatrix} .
+\end{bmatrix} ,
 $${#eq-cov-uncoupled}
 
-The four-dimensional ellipsoid projects to an ellipse in the $x$-$x'$ or $y$-$y'$ plane. the *projected* emittances $\varepsilon_{x, y}$ characterize the areas enclosed the ellipses:
+the projected emittances are
 
 $$
 \begin{aligned}
@@ -92,47 +87,47 @@ $$
 \end{aligned}
 $${#eq-proj-emitt}
 
-the intrinsic emittances are conserved under uncoupled linear symplectic transformations, i.e., transformations that act in only one plane.  
+The projected emittances are conserved under uncoupled linear symplectic transformations, i.e., transformations that act in only one plane. 
 
-The most important point for our analysis is that *the intrinsic emittances are fundamental, not the projected emittances.* The intrinsic emittances constrain the projected emittances, which must satisfy the following relationship:
+The most important point for our analysis is that *the intrinsic emittances are fundamental, not the projected emittances*. The intrinsic emittances constrain the projected emittances, which must satisfy
 
 $$
-\varepsilon_x \varepsilon_y \ge \varepsilon_1 \varepsilon_2.
+\varepsilon_x \varepsilon_y \ge \varepsilon_1 \varepsilon_2 .
 $${#eq-emitt-relationship}
 
-with equality occuring when $\mathbf{\Sigma}_{xy} = 0$, i.e., when there are no cross-plane correlations in the beam. Stated another way, *the intrinsic emittance ratio $\varepsilon_1 / \varepsilon_2$ bounds the projected emittance ratio $\varepsilon_x / \varepsilon_y$*. For example, if the intrinsic emittances are equal, then so are the projected emittances.
+The equality in @eq-emitt-relationship occurs when $\mathbf{\Sigma}_{xy} = 0$, i.e., when there are no cross-plane correlations in the beam. We can think of the intrinsic emittances as the projected emittances after a symplectic diagonalization of the covariance matrix.
 
+::: {#fig-cov layout-ncol=2}
+
+![Phase space coordinates](images/cov.png){#fig-cov-a}
+
+![Normalized coordinates](images/cov_norm.png){#fig-cov-a}
+
+Projected rms ellipses before and after normalization (symplectic diagonalization of the covariance matrix).
+:::
 
 
 ## Vortex distributions {#sec-vortex}
 
-We're now in a position to define what we mean by *vortex distributions*. Simply put: a pure vortex distribution has a large ratio between its intrinsic emittances: $\varepsilon_1 \gg \varepsilon_2$. Such distributions have maximum *vorticity* @groening_2021_vorticity, or curl of the velocity field. Examples are shown in @fig-vortex.
+A *vortex* distribution is defined to have a large ratio between its intrinsic emittances: $\varepsilon_1 \gg \varepsilon_2$. Such distributions have large *vorticity*, or curl of the velocity field @groening_2021_vorticity. Examples are shown in @fig-vortex.
 
-![Examples of vortex distributions. Each distribution has a large intrinsic emittance ratio: $\varepsilon_1 \gg \varepsilon_2$, corresponding to a high-curl velocity field.](images/vortex.png){#fig-vortex fig-align=center width=500px}
+![Examples of vortex distributions. Each distribution has a large intrinsic emittance ratio: $\varepsilon_1 \gg \varepsilon_2$, corresponding to a high-curl velocity field.](images/vortex.png){#fig-vortex fig-align=center width=400px}
 
-But, as noted above, the *projected* emittance ratio is free to change. We can always find a symplectic matrix that removes all cross-plane correlations from the beam, sending $\varepsilon_{x, y} \rightarrow \varepsilon_{1, 2}$. This is the concept of the round-to-flat (RTF) transformation @kim_2003_round shown in @fig-roundflat.
-
-![A round-to-flat transformation removes all cross-plane correlations, mapping the projected emittances $\varepsilon_{x, y}$ to the intrinsic emittances $\varepsilon_{1, 2}$. Source: [my talk](https://conference.sns.gov/event/335/contributions/528/attachments/892/8194/2022-10-26_Hoover_space_charge_workshop.pdf).](images/roundflat.png){#fig-roundflat }
-
-This means the flat distribution on the right can also be considered a vortex distribution, even though there is no obvious rotation or cross-plane correlations. The characteristic feature remains the large intrinsic emittance ratio, which is the same in the round and flat beams. We'll return to this observation in the next sections.
-
-With vortex distribution now defined, we can move on to the applications of vortex distributions in accelerators. Accelerators are typically designed to eliminate cross-plane coupling, so the strong cross-plane correlations in a vortex distribution represent an unusual situation. Nonetheless, there are several reasons why we might intentionally generate these correlations. We focus on two applications: luminosity scaling and space charge mitigation.
+There are a few potential applications of vortex distributions which I'll highlight here.
 
 
-### Vortex distributions for hadron colliders
+### Vortex distributions in hadron colliders
 
-First, vortex beams could be used to boost the luminosity in hadron colliders @burov_2013_circular. To maximize the luminosity (the number of collisions per unit time per unit area), we want to maximize the particle density at the collision point, for example by flattening the $x$-$y$ distribution. Unfortunately, space charge places fundamental limits on the beam density during the low-energy accumulation stage. But we can play a trick: we can accumulate a round vortex beam, accelerate it to high energy, and then flatten it by removing its angular momentum --- the so-called round-to-flat (RTF) transformation @kim_2003_round. Since inter-particle forces are negligble at the higher energy, this scheme essentially bipasses the space charge limit on the beam density.
+First, vortex beams could be used to boost the luminosity of hadron collider @burov_2013_circular. To maximize the luminosity (the number of collisions per unit time per unit area), we want to maximize the particle density at the collision point, for example by flattening the $x$-$y$ distribution. Unfortunately, space charge places fundamental limits on the beam density during the low-energy accumulation stages. But we can play a trick: we can accumulate a round vortex beam, accelerate it to high energy, and then remove its angular momentum using a series of skew quadrupoles. The skew quadrupoles simply map the projected emittances to the intrinsic emittances, as in @fig-cov. Since the initial beam has a large intrinsic emittance ratio ($\varepsilon_1 \gg \varepsilon_2$), the final beam has a large projected emittance ratio ($\varepsilon_x \gg \varepsilon_y$). This is the so-called round-to-flat (RTF) transformation @kim_2003_round shown in @fig-roundflat. Since inter-particle forces are negligble at the higher energy, this scheme essentially bipasses the space charge limit on the beam density.
 
-![A round-to-flat transformation removes angular momentum from the beam without changing the four-dimensional emittance. Source: [my talk](https://conference.sns.gov/event/335/contributions/528/attachments/892/8194/2022-10-26_Hoover_space_charge_workshop.pdf).](images/roundflat.png){#fig-roundflat }
+![A round-to-flat transformation removes all cross-plane correlations, mapping the projected emittances $\varepsilon_{x, y}$ to the intrinsic emittances $\varepsilon_{1, 2}$. Since one of the intrinsic emittances is zero, the transformation maps a round, spinning beam to a flat beam. Source: [my talk](https://conference.sns.gov/event/335/contributions/528/attachments/892/8194/2022-10-26_Hoover_space_charge_workshop.pdf).](images/roundflat.png){#fig-roundflat }
 
-![Concept of round-to-flat transformation in a collider. Phase space painting would be used to accumulate a low-energy beam with large angular momentum. The angular momentum would be removed after acceleration, when space charge is neglible, leaving a flat beam. [LHC diagram](https://cds.cern.ch/record/2693837/files/Poster-2019-858.pdf).](images/collider.png){#fig-collider}
-
-The final beam aspect ratio is determined by the ratio of initial *emittances*, labeled as $C$ in the figures above. 
+![Concept of round-to-flat transformation in a collider. Phase space painting would be used to accumulate a low-energy beam with large angular momentum. The RTF transformation produces a flat beam at the collision point. [LHC diagram](https://cds.cern.ch/record/2693837/files/Poster-2019-858.pdf).](images/collider.png){#fig-collider}
 
 
 ### Vortex distributions for space charge mitigation
 
-Vortex beams could also be used to mitigate space charge effects. Consider a simplified model that represents the beam as a frozen background potential $\phi(x, y)$. In a Gaussian distribution, the potential contains terms proportional to $x^2$, $x^4$, and so on. These terms act as nonlinear driving forces and can excite resonances at certain frequencies. These resonances are sometimes called *space charge structure resonances*. The classic example is the fourth-order resonance, which creates four resonance islands in $x$-$x'$ phase space. Recently, Cheon et al. @cheon_2022_spinning showed that angular momentum can suppress the fourth-order resonance in linear accelerators, and I expect the same could hold in circular accelerators. See @fig-fourth.
+Vortex beams could also be used to mitigate space charge effects. Consider a simplified model that represents the beam as a frozen background potential $\phi(x, y)$. In a Gaussian distribution, the potential contains terms proportional to $x^2$, $x^4$, and so on. These terms act as nonlinear driving forces which excite resonances at certain frequencies. These resonances are sometimes called *space charge structure resonances*. The classic example is the fourth-order resonance, which creates four resonance islands in $x$-$x'$ phase space. Recently, Cheon et al. @cheon_2022_spinning showed that angular momentum can suppress the fourth-order resonance in linear accelerators (@fig-fourth), and I expect the same could hold in circular accelerators. A pure vortex beam with $\varepsilon_2 = 0$ is an extreme case in which there is absolutely no relative motion of particles in the beam.
 
 ![Fourth-order resonance suppression from angular momentum in a bunched beam. Particles in the spinning beam avoid direct passage through the oscillating beam core. Source: @cheon_2022_spinning.](images/fourth.png){#fig-fourth}
 
@@ -140,17 +135,16 @@ Space charge can also excite [nonlinear resonances](../2021-03-28_nonlinear-reso
 
 ![Tune spreads in increasingly nonuniform distributions. Source: @franchetti_2017_space.](images/tunespread.png){#fig-tunespread fig-align=center}
 
-It would be nice if we could generate a uniform-density bunch, which completely eliminates the tune spread.^[This is only true in the absence of coherent instabilities...] There is one phase space distribution that generates the desired density while maintaining a finite emittance: the KV distribution. The KV distribution is an equilibrium solution of the Vlasov-Poisson equations, which describe the self-consistent dynamics of the beam in response to external and self-generated forces. If we start with a KV distribution in the ring, it will maintain its functional form as it evolves. This is a remarkable fact that I don't have the space to discuss here. The point is that the KV distribution is an obvious target if we want to minimize the tune spread.
+It would be nice if we could generate a uniform-density bunch, which completely eliminates the tune spread.^[This is only true in the absence of coherent instabilities...] There is only one arangement of particles which projects to the desired density while maintaining a finite emittance: the KV distribution. The KV distribution is an equilibrium solution of the Vlasov-Poisson equations, which describe the self-consistent dynamics of the beam in response to external and self-generated forces. If we start with a KV distribution in the ring, it will maintain its functional form as it evolves. This is a remarkable fact that I don't have the space to discuss here. The point is that the KV distribution is an obvious target if we want to minimize the tune spread.
 
 So far this has nothing to do with vortex beams. The connection comes when we try to *paint* the KV distribution. It is *impossible* to paint a KV distribution in the presence of space charge. Well, not impossible: we can easily paint a completely *flat* KV distribution, i.e., a KV distribution with $\varepsilon_y = 0$ or $\varepsilon_x = 0$. But then we're back to the same problem: the flat beam will have enormous density and associate space charge forces. Again, we can play a trick: linearly map the flat KV distribution to a round, rotating distribution. It will turn out that we *can* paint the round, rotating distribution, which has zero four-dimensional emittance ($\varepsilon_2 \ll \varepsilon_1$) but still projects to a uniform density in the $x$-$y$ plane. I'll explain this more when defining the painting methods in the next section.
 
 
 ## Eigenpainting {#sec-eigenpainting}
 
-To review: I've listed several applications of vortex beam distributions: the production of flat beams in hadron colliders, the suppression of space charge structure resonances, and the reduction of space-charge-driven tune spread. Now we can introduce our *eigenpainting* method, which uses phase space painting to generate angular momentum
+To review: I've listed several applications of vortex beam distributions: the production of flat beams in hadron colliders, the suppression of space charge structure resonances, and the reduction of space-charge-driven tune spread. We now introduce *eigenpainting*, a method to accumulate a vortex distribution via phase space painting in an accumulator ring. 
 
-. I'll start by generaliziong existing methods, *correlated* and *anti-correlated* painting, to include linear coupling between the planes of motion. Once that's done, it will be clear that eigenpainting is a special case of both methods. If you're unfamiliar with linear coupling in accelerators, I recommend looking at [this post](../2021-01-25_coupled-parametric-oscillators/) first.
-
+I'm going to start by describing two conventional painting methods known as *correlated* and *anti-correlated* painting. [...]
 
 ### Correlated and anti-correlated painting in uncoupled focusing systems
 

@@ -21,7 +21,7 @@ format:
     toc-depth: 5
     toc-location: right
     grid:
-      body-width: 620px
+        body-width: 610px
     mainfont: "Latin Modern"
     fontsize: 16px
     linestretch: 1.3

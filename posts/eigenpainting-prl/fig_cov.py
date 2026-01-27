@@ -7,10 +7,6 @@ plt.rcParams["xtick.minor.visible"] = True
 plt.rcParams["ytick.minor.visible"] = True
 plt.rcParams["figure.constrained_layout.use"] = True
 
-plt.rcParams["text.usetex"] = True
-plt.rcParams["font.family"] = "serif"
-plt.rcParams["font.serif"] = ["Computer Modern"]
-
 
 def poisson_matrix(ndim: int) -> np.ndarray:
     U = np.zeros((ndim, ndim))
@@ -246,11 +242,11 @@ S = np.cov(X.T)
 xrms = np.std(X, axis=0)
 
 
-labels = [r"$x$ ($mm$)", r"$x'$ ($mrad$)", r"$y$ ($mm$)", r"$y'$ ($mrad$)"]
+labels = [r"$x$", r"$x'$", r"$y$", r"$y'$"]
 limits = get_limits(X)
 
-grid = CornerGrid(ndim=4, figwidth=6.0)
-grid.set_labels(labels, fontsize="medium")
+grid = CornerGrid(ndim=4, figwidth=5.5)
+grid.set_labels(labels)
 grid.set_limits(limits)
 grid.plot_scatter(X, s=1, c="grey", ec="none", diag_kws=dict(color="grey"))
 grid.plot_cov(S, color="red")
@@ -273,15 +269,15 @@ S = np.cov(X.T)
 xrms = np.std(X, axis=0)
 
 labels=[
-    r"$u_1$ ($\sqrt{mm \cdot mrad}$)",
-    r"$u_1'$ ($\sqrt{mm \cdot mrad}$)",
-    r"$u_2$ ($\sqrt{mm \cdot mrad}$)",
-    r"$u_2'$ ($\sqrt{mm \cdot mrad}$)",
+    r"$u_1$",
+    r"$u_1'$",
+    r"$u_2$",
+    r"$u_2'$",
 ]
 limits = get_limits(X)
 
-grid = CornerGrid(ndim=4, figwidth=6.0)
-grid.set_labels(labels, fontsize="medium")
+grid = CornerGrid(ndim=4, figwidth=5.5)
+grid.set_labels(labels)
 grid.set_limits(limits)
 grid.plot_scatter(X, s=1, c="grey", ec="none", diag_kws=dict(color="grey"))
 grid.plot_cov(S, color="red")
