@@ -12,9 +12,7 @@ radii = np.linspace(0.0, 1.0, levels + 1)
 
 points = []
 for r in radii[1:]:
-    # m = np.exp(r) * 7
     m = 5 + int(r * 10)
-    # m = 15
     m = int(m)
 
     t = np.linspace(0.0, 2.0 * np.pi, m)

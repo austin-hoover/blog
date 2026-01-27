@@ -16,23 +16,23 @@ format:
     fig-align: left
 ---
 
-Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/b vwq-34jf), was recently accepted for publication in Physical Review Letters (PRL) @evans_2026_demonstration. Here's the [preprint](https://arxiv.org/pdf/2601.13517). The paper describes the first experimental test of a method that we call *eigenpainting*, first proposed over twenty years ago by Viatcheslav (Slava) Danilov.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace.] In short, eigenpainting uses linear coupling between planes to generate a vortex beam distribution which could be used to mitigate space charge effects in hadron rings or to increase luminosity in high-energy colliders. This post expands on the paper, providing some background information and additional figures. 
+Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/b vwq-34jf), was recently accepted for publication in Physical Review Letters (PRL) @evans_2026_demonstration. Here's the [preprint](https://arxiv.org/pdf/2601.13517). The paper describes the first experimental test of a method that we call *eigenpainting*, first proposed over twenty years ago by Viatcheslav (Slava) Danilov.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace.] In short, eigenpainting uses linear coupling between planes to generate a vortex beam distribution which could be used to mitigate space charge effects in hadron rings or to increase luminosity in high-energy colliders. This post expands on the paper, providing some additional background information and figures. 
 
 
 ## Introduction  {#sec-intro}
 
-Accelerators such as the [SNS](https://neutrons.ornl.gov/sns) and [J-PARC](https://j-parc.jp/c/en/) use [*charge-exchange injection*](../2021-05-27_painting-a-particle-beam) to create intense proton beams for neutron scattering experiments. The injection is a three-step process: H- (negative hydrogren) ions are accelerated in a linac, converted to protons using a carbon foil or laser-magnet system, and then transfered to an accumulator ring. We call each batch of injected protons a *minipulse*. After the first minipulse completes one lap around the ring, a second is injected, and so on for hundreds or thousands of turns. The final bunch intensity can be more than $10^{14}$ protons. In the SNS, the entire process is repeated at 60 Hz frequency to generate 1+ MW beam power on the target.
+Accelerators such as the [SNS](https://neutrons.ornl.gov/sns) and [J-PARC](https://j-parc.jp/c/en/) use [*charge-exchange injection*](../2021-05-27_painting-a-particle-beam) to create intense proton beams for neutron scattering experiments. The injection is a three-step process: H- (negative hydrogren) ions are accelerated in a linac, converted to protons using a carbon foil or laser-magnet system, and then transfered to an accumulator ring. We call each batch of injected protons a *minipulse*. After the first minipulse completes one lap around the ring, a second is injected, and so on for hundreds or thousands of turns. In the SNS, the final bunch intensity is greater than $10^{14}$ protons, and the entire process is repeated at 60 Hz to generate 1+ MW beam power on the target.
 
 Vanilla charge-exchange injection leads to charge pile-up at the injection point, which is not ideal when space charge forces (electrostatic forces in the beam's rest frame) are considered. Space charge deforms the beam distribution, leading to halo formation and particle loss. This motivates the technique of *phase space painting*: the use of dipole magnets to move the injection point in phase space (position-momentum space) during accumulation. At a basic level, painting lets us spread the charge over a larger area in the ring, reducing the peak density and associated space charge effects. Painting can also enable more detailed control of the distribution, although this is challenging because each injected minipulse changes the beam dynamics on the subsequent turn. This is kind of like an artist trying to paint a scene that evolves between each brush stroke.
 
-Our study focuses on two related questions. First, what is the ideal beam distribution? After coving some relevant background in @sec-emitt, I'll argue in @sec-vortex that *vortex distributions* are attractive options for several different applications of high-intensity beams. Second, suppose we've identified a target distribution: can we paint it? I'll address this question in @sec-eigenpainting, which introduces *eigenpainting* as a method to paint vortex distributions in the presence of space charge. Finally, in @sec-exp, I'll explain our attempt to implement this method in the [Spallation Neutron Source (SNS)]() accumulator ring and explain our results.
+Our study focuses on two questions related to phase space painting. First, what is the target beam distribution? After covering some relevant background in @sec-emitt, I'll argue in @sec-vortex that *vortex distributions* are attractive options for several different applications of high-intensity beams. Second, suppose we've identified a target distribution: can we paint it? I'll address this question in @sec-eigenpainting, which introduces *eigenpainting* as a method to paint vortex distributions in the presence of space charge. Finally, in @sec-exp, I'll explain our attempt to implement this method in the SNS accumulator ring and explain our results.
 
 
 ## Background: intrinsic and projected emittances {#sec-emitt}
 
-A central concept in our study is the *emittance*, a measure of volume in phase space. This section defines the four-dimensional emittance and its relationship to the two-dimensional *intrinsic* and *projected* emittances.
+A central concept in our study is the *emittance*, a measure of volume in phase space. This section defines the four-dimensional emittance and its relationship to the two-dimensional *intrinsic* and *projected* emittances. Later, we'll use the intrinsic emittances to define a figure of merit in our experiments.
 
-Let $\mathbf{x} = (x, x', y, y')$ be the phase space coordinate vector, where $x$-$y$ and $x'$-$y'$ are the positions and velocities, respectively. Let $\mathbf{\Sigma}$ be the covariance matrix of the four-dimensional phase space distribution:
+Let $\mathbf{x} = (x, x', y, y')$ be the phase space coordinate vector, where $x$-$y$ and $x'$-$y'$ are the positions and velocities, respectively. Let $\mathbf{\Sigma}$ be the covariance matrix:
 
 $$
 \mathbf{\Sigma} = \langle \mathbf{x} \mathbf{x}^T \rangle
@@ -42,16 +42,18 @@ $$
 \langle{x'x}\rangle & \langle{x'x'}\rangle & \langle{x'y}\rangle & \langle{x'y'}\rangle \\
 \langle{yx}\rangle & \langle{yx'}\rangle & \langle{yy}\rangle & \langle{yy'}\rangle \\
 \langle{y'x}\rangle & \langle{y'x'}\rangle & \langle{y'y}\rangle & \langle{y'y'}\rangle
-\end{bmatrix} .
+\end{bmatrix} ,
 $${#eq-cov}
 
-The four-dimensional emittance $\varepsilon_{4D}$ is the square root of the determinant of the covariance matrix:
+where $\langle \dots \rangle$ represents an average over the distribution. The covariance matrix defines an ellipsoid by the expression $\mathbf{x}^T \mathbf{\Sigma}^{-1} \mathbf{x} = 1$. The four-dimensional emittance $\varepsilon_{4D}$ is defined as the volume of this ellipsoid:
 
 $$
 \varepsilon_{4D} = \sqrt{\det{\mathbf{\Sigma}}}.
 $${#eq-4d-emitt}
 
-It characterizes volume of an ellipsoid by the expression $\mathbf{x}^T \mathbf{\Sigma}^{-1} \mathbf{x} = 1$ and is conserved under linear symplectic transformations. We can also write the four-dimensional emittance as the product $\varepsilon_{4D} = \varepsilon_{1}\varepsilon_{2}$, where $\varepsilon_{1, 2}$ are the individually conserved *intrinsic* emittances. The intrinsic emittances are found by symplectic diagonalization of the covariance matrix, i.e., there is a symplectic matrix $\mathbf{V}$ such that
+From Liouville's Theorem, the four-dimensional emittance is conserved under linear symplectic transformations. 
+
+We can also write the four-dimensional emittance as the product $\varepsilon_{4D} = \varepsilon_{1}\varepsilon_{2}$, where $\varepsilon_{1, 2}$ are called the *intrinsic* emittances. The intrinsic emittances are individually conserved under linear symplectic transformations. They are calculated by diagonalizing the covariance matrix with a symplectic matrix $\mathbf{V}$:
 
 $$
 \mathbf{\Sigma}
@@ -63,10 +65,15 @@ $$
 0 & 0 & \varepsilon_2 & 0 \\
 0 & 0 & 0 & \varepsilon_2 
 \end{bmatrix}
-\mathbf{V}^T.
+\mathbf{V}^T
 $${#eq-cov-diag}
 
-In addition to the intrinsic emittances, we need to define the more common *projected* emittances. To do so, it is convenient to split the covariance matrix into four blocks:
+@eq-cov-diag motivates the definition of "normalized" coordinates $\mathbf{u} = \mathbf{V}^{-1} \mathbf{x}$. When projected onto the first two dimensions of $\mathbf{u}$,
+
+
+
+
+We can also define the *projected* emittances. To do so, it is convenient to split the covariance matrix into four blocks:
 
 $$
 \mathbf{\Sigma} = 
@@ -76,7 +83,7 @@ $$
 \end{bmatrix} .
 $${#eq-cov-uncoupled}
 
-The *projected* emittances $\varepsilon_{x, y}$ characterize the area of the rms ellipses in the $x$-$x'$ and $y$-$y'$ planes:
+The four-dimensional ellipsoid projects to an ellipse in the $x$-$x'$ or $y$-$y'$ plane. the *projected* emittances $\varepsilon_{x, y}$ characterize the areas enclosed the ellipses:
 
 $$
 \begin{aligned}
@@ -84,6 +91,8 @@ $$
 \varepsilon_y &= \sqrt{\det{\mathbf{\Sigma}_{yy}}} . \\
 \end{aligned}
 $${#eq-proj-emitt}
+
+the intrinsic emittances are conserved under uncoupled linear symplectic transformations, i.e., transformations that act in only one plane.  
 
 The most important point for our analysis is that *the intrinsic emittances are fundamental, not the projected emittances.* The intrinsic emittances constrain the projected emittances, which must satisfy the following relationship:
 
