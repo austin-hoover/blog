@@ -37,7 +37,7 @@ os.makedirs(output_dir, exist_ok=True)
 
 # Load transfer matrix
 M = np.loadtxt("data/matrix.txt")
-V = build_norm_matrix_from_tmat(M)
+V = np.linalg.inv(build_norm_matrix_from_tmat(M))
 v1, v2 = calc_eigvecs(M)
 nu1, nu2 = calc_eigtunes(M)
 
@@ -86,8 +86,8 @@ def run_sim(painter: NormalizedPainter, turns_list: list[int]) -> dict:
 # Set maximum amplitudes and phases.
 J1 = 25.0  # mode 1 amplitude
 J2 = 25.0  # mode 1 amplitude
-psi1 = np.pi * 0.00  # mode 1 phase
-psi2 = np.pi * 0.00  # mode 2 phase
+psi1 = np.pi * 0.0  # mode 1 phase
+psi2 = np.pi * 0.5  # mode 2 phase
 
 # Calculate maximum phase space coordinates.
 umax = np.zeros(4)
@@ -98,13 +98,13 @@ umax[3] = np.sqrt(2.0 * J2) * np.sin(psi2)
 painter.set_umax(umax)
 
 
-# Run correlated painting simulation.
-painter.method = "corr"
-data["corr"] = run_sim(painter, turns_list)
+# # Run correlated painting simulation.
+# painter.method = "corr"
+# data["corr"] = run_sim(painter, turns_list)
 
-# Run anti-correlated painting simulation.
-painter.method = "anticorr"
-data["anticorr"] = run_sim(painter, turns_list)
+# # Run anti-correlated painting simulation.
+# painter.method = "anticorr"
+# data["anticorr"] = run_sim(painter, turns_list)
 
 # Run eigenpainting simulation.
 J2 = 0.0
@@ -182,7 +182,7 @@ cmap = "gray_r"
 blur = args.blur
 
 # Plot phase space distribution
-last_bunch = data["corr"]["bunch"][-1]
+last_bunch = data[data.keys()[0]]["bunch"][-1]
 xmax = 3.5 * np.std(last_bunch, axis=0)
 xmax[0] = xmax[2] = max(xmax[0], xmax[2])
 xmax[1] = xmax[3] = max(xmax[1], xmax[3])
@@ -223,7 +223,7 @@ for method in data:
 
 # Plot phase space distribution (normalized coordinates)
 
-last_bunch = data["corr"]["bunch_n"][-1]
+last_bunch = data[data.keys()[0]]["bunch_n"][-1]
 xmax = 3.5 * np.std(last_bunch, axis=0)
 xmax[0] = xmax[2] = max(xmax[0], xmax[2])
 xmax[1] = xmax[3] = max(xmax[1], xmax[3])
