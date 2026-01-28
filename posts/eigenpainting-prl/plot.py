@@ -27,14 +27,26 @@ def plot_vector(
 
 
 class CornerGridNoDiag:
-    def __init__(self, ndim: int, limits: list[tuple[float, float]] = None, labels: list[str] = None, figwidth: float = None) -> None:
-        self.ndim = ndim       
+    def __init__(
+        self,
+        ndim: int,
+        limits: list[tuple[float, float]] = None,
+        labels: list[str] = None,
+        figwidth: float = None,
+    ) -> None:
+        self.ndim = ndim
 
         # Create figure
         if figwidth is None:
             figwidth = 2.0 * (self.ndim - 1)
-            
-        self.fig, self.axs = plt.subplots(ncols=(ndim - 1), nrows=(ndim - 1), figsize=(figwidth, figwidth), sharex="col", sharey="row")
+
+        self.fig, self.axs = plt.subplots(
+            ncols=(ndim - 1),
+            nrows=(ndim - 1),
+            figsize=(figwidth, figwidth),
+            sharex="col",
+            sharey="row",
+        )
 
         # Turn off upper-diagonal plots.
         for i in range(self.ndim - 1):
@@ -52,11 +64,11 @@ class CornerGridNoDiag:
         self.labels = None
         self.set_limits(limits)
         self.set_labels(labels)
-        
+
     def set_limits(self, limits: list[tuple[float, float]] = None) -> None:
         if limits is None:
             return
-            
+
         self.limits = limits
         for j in range(self.ndim - 1):
             for ax in self.axs[:, j]:
@@ -68,7 +80,7 @@ class CornerGridNoDiag:
     def set_labels(self, labels: list[str] = None) -> None:
         if labels is None:
             return
-            
+
         self.labels = labels
         for j in range(self.ndim - 1):
             self.axs[-1, j].set_xlabel(self.labels[j])
@@ -77,7 +89,7 @@ class CornerGridNoDiag:
 
         self.fig.align_xlabels()
         self.fig.align_ylabels()
-            
+
     def plot_scatter(self, points: np.ndarray, **kws) -> None:
         for i in range(self.ndim - 1):
             for j in range(self.ndim - 1):

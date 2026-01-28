@@ -268,7 +268,7 @@ S = np.cov(X.T)
 
 xrms = np.std(X, axis=0)
 
-labels=[
+labels = [
     r"$u_1$",
     r"$u_1'$",
     r"$u_2$",

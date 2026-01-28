@@ -16,11 +16,11 @@ def normalize_eigvec(v: np.ndarray) -> np.ndarray:
         return v * np.sqrt(2.0 / norm)
     return v
 
-    
+
 def build_norm_matrix_from_eigvecs(v1: np.ndarray, v2: np.ndarray) -> np.ndarray:
     v1 = normalize_eigvec(v1)
     v2 = normalize_eigvec(v2)
-    
+
     V = np.zeros((4, 4))
     V[:, 0] = +v1.real
     V[:, 1] = -v1.imag

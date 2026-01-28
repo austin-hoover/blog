@@ -9,7 +9,7 @@ def rotation_matrix(angle: float) -> np.ndarray:
     matrix[1, 0] = -np.sin(angle)
     return matrix
 
-    
+
 def track(matrix: np.ndarray, x: np.ndarray, turns: int) -> np.ndarray:
     coords = np.zeros((turns + 1, 4))
     coords[0, :] = np.copy(x)

@@ -40,17 +40,21 @@ points3 = np.copy(points2)
 phi = np.pi * 0.25
 c = np.cos(phi)
 s = np.sin(phi)
-R = np.array([
-    [c, 0, s, 0],
-    [0, c, 0, s],
-    [-s, 0, c, 0],
-    [0, -s, 0, c],
-])
+R = np.array(
+    [
+        [c, 0, s, 0],
+        [0, c, 0, s],
+        [-s, 0, c, 0],
+        [0, -s, 0, c],
+    ]
+)
 points3 = np.matmul(points3, R.T)
 
 points = points3
 
-fig, axs = plt.subplots(ncols=3, sharex=True, sharey=True, constrained_layout=True, figsize=(8, 2.5))
+fig, axs = plt.subplots(
+    ncols=3, sharex=True, sharey=True, constrained_layout=True, figsize=(8, 2.5)
+)
 xmax = 2.0
 for ax, points in zip(axs, [points1, points2, points3]):
     ax.set_xlim(-xmax, xmax)

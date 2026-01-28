@@ -80,7 +80,7 @@ class Painter:
 
 
 if __name__ == "__main__":
-        
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--nturns", type=int, default=2800)
     parser.add_argument("--nparts", type=int, default=200)
@@ -88,7 +88,6 @@ if __name__ == "__main__":
     parser.add_argument("--inj-rms", type=float, default=0.10)
     args = parser.parse_args()
 
-    
     # Create output directory
     # ----------------------------------------------------------------------
     path = pathlib.Path(__file__)
@@ -111,7 +110,7 @@ if __name__ == "__main__":
         n_inj=args.nparts,
         inj_rms=args.inj_rms,
     )
-    
+
     # Run simulations
     # ----------------------------------------------------------------------
     data = {}
@@ -157,7 +156,7 @@ if __name__ == "__main__":
 
         # Global scaling
         bunch = data[method]["bunch"][-1]
-            
+
         ymax_global = 0.0
         for i in range(4):
             values, edges = np.histogram(bunch[:, i], bins=bins, range=limits[i])
@@ -185,12 +184,23 @@ if __name__ == "__main__":
                 for j in range(i + 1):
                     ax = grid.axs[i, j]
                     if i == j:
-                        ax.hist(bunch[:, i], bins=bins, range=limits[i], histtype="step", color="black", lw=1.3)
+                        ax.hist(
+                            bunch[:, i],
+                            bins=bins,
+                            range=limits[i],
+                            histtype="step",
+                            color="black",
+                            lw=1.3,
+                        )
                     else:
-                        values, edges = np.histogramdd(bunch[:, (j, i)], bins=bins, range=(limits[j], limits[i]))
+                        values, edges = np.histogramdd(
+                            bunch[:, (j, i)], bins=bins, range=(limits[j], limits[i])
+                        )
                         values = scipy.ndimage.gaussian_filter(values, blur)
-                        ax.pcolormesh(edges[0], edges[1], values.T, cmap="Greys", vmax=None)
-            
+                        ax.pcolormesh(
+                            edges[0], edges[1], values.T, cmap="Greys", vmax=None
+                        )
+
             for i in range(4):
                 grid.axs[i, i].set_ylim(0.0, ymax_global * 1.2)
 

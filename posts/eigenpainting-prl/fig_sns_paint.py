@@ -34,7 +34,7 @@ class NormalizedPainter:
         self.inj_size = inj_size
         self.inj_rms = inj_rms
         self.inj_cut = np.repeat(inj_cut, 4)
-        
+
         self.times = np.linspace(0.0, 1.0, turns + 1)
 
         self.method = method
@@ -72,7 +72,7 @@ class NormalizedPainter:
 
     def paint(self, turns: list[int]) -> np.ndarray:
         bunches = [self.gen_bunch() for _ in range(turns + 1)]
-        
+
         for t in range(turns + 1):
             bunches[t] += self.get_inj_point(t)
 
@@ -92,7 +92,7 @@ if __name__ == "__main__":
     parser.add_argument("--inj-size", type=int, default=200)
     parser.add_argument("--inj-rms", type=float, default=0.10)
     args = parser.parse_args()
-    
+
     # Create output directory
     path = pathlib.Path(__file__)
     output_dir = os.path.join("outputs", path.stem)
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     # Set max amplitude in normalized space.
     J1 = J2 = 25.0
     psi1 = np.pi * 0.00  # mode 1 phase
-    psi2 = np.pi * 0.25  # mode 2 phase
+    psi2 = np.pi * 0.00  # mode 2 phase
 
     umax = np.zeros(4)
     umax[0] = np.sqrt(2.0 * J1) * np.cos(psi1)
@@ -127,17 +127,116 @@ if __name__ == "__main__":
     umax[2] = np.sqrt(2.0 * J2) * np.cos(psi2)
     umax[3] = np.sqrt(2.0 * J2) * np.sin(psi2)
     painter.set_umax(umax)
-    
+
     data = {}
     for method in ["corr", "anticorr", "flat", "eigen"]:
         data[method] = {}
-        for key in ["bunch", "centroid"]:
+        for key in ["bunch", "bunch_n", "inj", "inj_n"]:
             data[method][key] = []
 
     painter.method = "corr"
-    painter.set_umax([1.0, 0.0, 1.0, 0.0])
     data["corr"]["bunch_n"] = [painter.paint(t) for t in turns_list]
     data["corr"]["inj_n"] = [painter.get_inj_point(t) for t in turns_list]
 
-    data["corr"]["bunch"] = [np.matmul(bunch, V.T) for bunch in data["corr"]["bunch_n"]]
-    data["corr"]["inj"] = [np.matmul(V, u) for u in data["corr"]["inj_n"]]
+    for method in data:
+        data[method]["bunch"] = [
+            np.matmul(bunch, V.T) for bunch in data[method]["bunch_n"]
+        ]
+        data[method]["inj"] = [np.matmul(V, u) for u in data[method]["inj_n"]]
+
+    # Make plots
+    # ----------------------------------------------------------------------
+
+    def plot_bunch(
+        bunch: np.ndarray,
+        inj_point: np.ndarray,
+        t: float,
+        limits: list[tuple[float, float]],
+        labels: list[str],
+        yscale: float = None,
+    ):
+        grid = CornerGrid(ndim=4, limits=limits, labels=labels)
+        for i in range(4):
+            for j in range(i + 1):
+                ax = grid.axs[i, j]
+                if i == j:
+                    ax.hist(
+                        bunch[:, i],
+                        bins=bins,
+                        range=limits[i],
+                        histtype="step",
+                        color="black",
+                        lw=1.3,
+                    )
+                else:
+                    values, edges = np.histogramdd(
+                        bunch[:, (j, i)], bins=bins, range=(limits[j], limits[i])
+                    )
+                    values = scipy.ndimage.gaussian_filter(values, blur)
+                    ax.pcolormesh(edges[0], edges[1], values.T, cmap="Greys", vmax=None)
+
+        if ymax:
+            for i in range(4):
+                grid.axs[i, i].set_ylim(0.0, ymax * 1.2)
+
+        for i in range(4):
+            for j in range(i):
+                ax = grid.axs[i, j]
+                ax.scatter(
+                    inj_point[j],
+                    inj_point[i],
+                    c="red",
+                    s=8.0,
+                )
+
+        grid.axs[1, 2].annotate(
+            "t = {:0.2f}".format(t),
+            xy=(0.5, 0.5),
+            xycoords="axes fraction",
+            horizontalalignment="center",
+            verticalalignment="center",
+            color="black",
+        )
+        return (grid.fig, grid.axs)
+
+    # Settings
+    bunch = data["corr"]["bunch"][-1]
+
+    xmax = 3.5 * np.std(bunch, axis=0)
+    xmax[0] = xmax[2] = max(xmax[0], xmax[2])
+    xmax[1] = xmax[3] = max(xmax[1], xmax[3])
+    limits = list(zip(-xmax, xmax))
+
+    labels = ["x", "x'", "y", "y'"]
+    bins = 64
+    cmap = "gray_r"
+    blur = 1.0
+
+    for method in data:
+        if not data[method]["bunch"]:
+            continue
+
+        output_subdir = os.path.join(output_dir, method)
+        os.makedirs(output_subdir, exist_ok=True)
+
+        last_bunch = data[method]["bunch"][-1]
+        ymax = 0.0
+        for i in range(4):
+            values, edges = np.histogram(last_bunch[:, i], bins=bins, range=limits[i])
+            ymax = max(ymax, np.max(values))
+
+        for index in range(len(turns_list)):
+            bunch = data[method]["bunch"][index]
+            turn = turns_list[index]
+            inj_point = data[method]["inj"][index]
+
+            fig, axs = plot_bunch(
+                bunch=bunch,
+                inj_point=inj_point,
+                limits=limits,
+                labels=labels,
+                t=float(turn / args.turns),
+            )
+
+            plt.savefig(os.path.join(output_subdir, f"fig_{turn:05.0f}.png"), dpi=200)
+            plt.close()
