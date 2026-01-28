@@ -18,23 +18,19 @@ from utils import track
 plt.style.use("style.mplstyle")
 
 
-class Painter:
+class NormalizedPainter:
     def __init__(
         self,
-        matrix: np.ndarray,
+        nu1: float,
+        nu2: float,
         turns: int,
         inj_size: int,
         inj_rms: float = 0.15,
         inj_cut: float = 3.0,
         method: str = "correlated",
     ) -> None:
-        self.M = matrix
-        self.V_inv = build_norm_matrix_from_tmat(self.M)
-        self.V = np.linalg.inv(self.V_inv)
-
-        self.eigvecs = calc_eigvecs(self.M)
-        self.eigtunes = calc_eigtunes(self.M)
-        
+        self.nu1 = nu1
+        self.nu2 = nu2
         self.inj_size = inj_size
         self.inj_rms = inj_rms
         self.inj_cut = np.repeat(inj_cut, 4)
@@ -47,7 +43,7 @@ class Painter:
     def set_umax(self, umax: np.ndarray) -> None:
         self.umax = np.array(umax)
 
-    def get_inj_u(self, turn: int) -> np.ndarray:
+    def get_inj_point(self, turn: int) -> np.ndarray:
         t = self.times[turn]
         if self.method == "corr":
             return np.multiply(self.umax, np.sqrt(t))
@@ -58,33 +54,33 @@ class Painter:
         else:
             raise ValueError("Invalid method")
 
-    def get_inj_x(self, turn: int) -> np.ndarray:
-        return np.matmul(self.V, self.get_inj_u(turn))
-
     def gen_bunch(self) -> np.ndarray:
-        u = scipy.stats.truncnorm.rvs(
+        return scipy.stats.truncnorm.rvs(
             scale=self.inj_rms,
             size=(self.inj_size, 4),
             a=-self.inj_cut,
             b=+self.inj_cut,
         )
-        return u
+
+    def phase_adv_matrix(self, turns: int) -> np.ndarray:
+        mu1 = 2.0 * np.pi * self.nu1 * turns
+        mu2 = 2.0 * np.pi * self.nu2 * turns
+        matrix = np.zeros((4, 4))
+        matrix[0:2, 0:2] = rotation_matrix(mu1)
+        matrix[2:4, 2:4] = rotation_matrix(mu2)
+        return matrix
 
     def paint(self, turns: list[int]) -> np.ndarray:
         bunches = [self.gen_bunch() for _ in range(turns + 1)]
         
         for t in range(turns + 1):
-            bunches[t] += self.get_inj_u(t)
+            bunches[t] += self.get_inj_point(t)
 
         for t, minipulse in enumerate(tqdm(bunches)):
-            matrix = np.zeros((4, 4))
-            matrix[0:2, 0:2] = rotation_matrix(2.0 * np.pi * self.eigtunes[0] * t)
-            matrix[2:4, 2:4] = rotation_matrix(2.0 * np.pi * self.eigtunes[1] * t)
+            matrix = self.phase_adv_matrix(t)
             bunches[t] = np.matmul(bunches[t], matrix.T)
 
-        bunch = np.vstack(bunches)
-        bunch = np.matmul(bunch, self.V.T)
-        return bunch
+        return np.vstack(bunches)
 
 
 if __name__ == "__main__":
@@ -104,12 +100,14 @@ if __name__ == "__main__":
 
     # Load transfer matrix
     M = np.loadtxt("data/matrix.txt")
+    V = build_norm_matrix_from_tmat(M)
     v1, v2 = calc_eigvecs(M)
     nu1, nu2 = calc_eigtunes(M)
 
     # Create painter
-    painter = Painter(
-        matrix=M,
+    painter = NormalizedPainter(
+        nu1=nu1,
+        nu2=nu2,
         turns=args.turns,
         inj_size=args.inj_size,
         inj_rms=args.inj_rms,
@@ -138,5 +136,8 @@ if __name__ == "__main__":
 
     painter.method = "corr"
     painter.set_umax([1.0, 0.0, 1.0, 0.0])
-    data["corr"]["bunch"] = [painter.paint(t) for t in turns_list]
-    data["corr"]["centroid"] = [painter.get_inj_x(t) for t in turns_list]
+    data["corr"]["bunch_n"] = [painter.paint(t) for t in turns_list]
+    data["corr"]["inj_n"] = [painter.get_inj_point(t) for t in turns_list]
+
+    data["corr"]["bunch"] = [np.matmul(bunch, V.T) for bunch in data["corr"]["bunch_n"]]
+    data["corr"]["inj"] = [np.matmul(V, u) for u in data["corr"]["inj_n"]]
