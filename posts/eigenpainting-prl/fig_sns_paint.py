@@ -24,7 +24,7 @@ parser.add_argument("--turns", type=int, default=2800)
 parser.add_argument("--stride", type=int, default=200)
 parser.add_argument("--inj-size", type=int, default=200)
 parser.add_argument("--inj-rms", type=float, default=0.5)
-parser.add_argument("--blur", type=float, default=1.0)
+parser.add_argument("--blur", type=float, default=0.0)
 args = parser.parse_args()
 
 
@@ -127,7 +127,7 @@ def plot_bunch(
     inj_point: np.ndarray,
     t: float,
     limits: list[tuple[float, float]],
-    yscale: float = None,
+    ymax: np.ndarray = None,
     blur: float = 0.0,
 ) -> CornerGrid:
 
@@ -151,9 +151,9 @@ def plot_bunch(
                 values = scipy.ndimage.gaussian_filter(values, blur)
                 ax.pcolormesh(edges[0], edges[1], values.T, cmap="Greys", vmax=None)
 
-    if ymax:
+    if ymax is not None:
         for i in range(4):
-            grid.axs[i, i].set_ylim(0.0, ymax * 1.2)
+            grid.axs[i, i].set_ylim(0.0, ymax[i] * 1.2)
 
     for i in range(4):
         for j in range(i):
@@ -182,7 +182,7 @@ cmap = "gray_r"
 blur = args.blur
 
 # Plot phase space distribution
-last_bunch = data["corr"]["bunch"][-1]
+last_bunch = data["eig"]["bunch"][-1]
 xmax = 3.5 * np.std(last_bunch, axis=0)
 xmax[0] = xmax[2] = max(xmax[0], xmax[2])
 xmax[1] = xmax[3] = max(xmax[1], xmax[3])
@@ -198,10 +198,10 @@ for method in data:
     os.makedirs(output_subdir, exist_ok=True)
 
     last_bunch = data[method]["bunch"][-1]
-    ymax = 0.0
+    ymax = np.zeros(4)
     for i in range(4):
         values, edges = np.histogram(last_bunch[:, i], bins=bins, range=limits[i])
-        ymax = max(ymax, np.max(values))
+        ymax[i] = max(ymax[i], np.max(values))
 
     for index in range(len(turns_list)):
         bunch = data[method]["bunch"][index]
@@ -212,6 +212,7 @@ for method in data:
             bunch=bunch,
             inj_point=inj_point,
             limits=limits,
+            ymax=ymax,
             t=float(turn / args.turns),
             blur=blur,
         )
@@ -223,7 +224,7 @@ for method in data:
 
 # Plot phase space distribution (normalized coordinates)
 
-last_bunch = data["corr"]["bunch_n"][-1]
+last_bunch = data["eig"]["bunch_n"][-1]
 xmax = 3.5 * np.std(last_bunch, axis=0)
 xmax[0] = xmax[2] = max(xmax[0], xmax[2])
 xmax[1] = xmax[3] = max(xmax[1], xmax[3])
@@ -239,10 +240,10 @@ for method in data:
     os.makedirs(output_subdir, exist_ok=True)
 
     last_bunch = data[method]["bunch_n"][-1]
-    ymax = 0.0
+    ymax = np.zeros(4)
     for i in range(4):
         values, edges = np.histogram(last_bunch[:, i], bins=bins, range=limits[i])
-        ymax = max(ymax, np.max(values))
+        ymax[i] = max(ymax[i], np.max(values))
 
     for index in range(len(turns_list)):
         bunch = data[method]["bunch_n"][index]

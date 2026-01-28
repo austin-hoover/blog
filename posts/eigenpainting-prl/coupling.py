@@ -16,7 +16,7 @@ def normalize_eigvec(v: np.ndarray) -> np.ndarray:
 
     return v * np.sqrt(2.0 / np.abs(norm(v)))
 
-    
+
 def calc_eigvecs(M: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
     eig_res = np.linalg.eig(M)
     v1 = normalize_eigvec(eig_res.eigenvectors[:, 0])

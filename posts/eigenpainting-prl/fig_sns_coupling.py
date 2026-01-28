@@ -127,7 +127,6 @@ if __name__ == "__main__":
     v1, v2 = calc_eigvecs(M)
     nu1, nu2 = calc_eigtunes(M)
 
-    
     # Plot particle orbits
     # --------------------------------------------------------------------------------------
 
@@ -177,11 +176,9 @@ if __name__ == "__main__":
     )
     animation.save(os.path.join(output_dir, "fig_corner_vec.gif"), dpi=250)
 
-
-
     # Normalized coordinates
     # ----------------------------------------------------------------
-    
+
     coords = np.matmul(coords, V_inv.T)
     coords1 = np.matmul(coords1, V_inv.T)
     coords2 = np.matmul(coords2, V_inv.T)
@@ -215,4 +212,3 @@ if __name__ == "__main__":
         coords[:turns_plot], limits=limits, vectors=[coords1, coords2]
     )
     animation.save(os.path.join(output_dir, "fig_norm_corner_vec.gif"), dpi=250)
-
