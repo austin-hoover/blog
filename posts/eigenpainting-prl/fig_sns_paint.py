@@ -21,7 +21,7 @@ plt.style.use("style.mplstyle")
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--turns", type=int, default=2800)
-parser.add_argument("--stride", type=int, default=200)
+parser.add_argument("--stride", type=int, default=100)
 parser.add_argument("--inj-size", type=int, default=200)
 parser.add_argument("--inj-rms", type=float, default=0.5)
 parser.add_argument("--blur", type=float, default=0.0)
@@ -188,7 +188,7 @@ xmax[0] = xmax[2] = max(xmax[0], xmax[2])
 xmax[1] = xmax[3] = max(xmax[1], xmax[3])
 limits = list(zip(-xmax, xmax))
 
-labels = [r"$x$", r"$x'$", r"$y$", r"$y'$"]
+labels = [r"$x$ ($mm$)", r"$x'$ ($mrad$)", r"$y$ ($mm$)", r"$y'$ ($mrad$)"]
 
 for method in data:
     if not data[method]["bunch"]:
@@ -230,7 +230,7 @@ xmax[0] = xmax[2] = max(xmax[0], xmax[2])
 xmax[1] = xmax[3] = max(xmax[1], xmax[3])
 limits = list(zip(-xmax, xmax))
 
-labels = [r"$u_1$", r"$u_1'$", r"$u_2$", r"$u_2'$"]
+labels = [r"$u_1$ ($\sqrt{mm \dot mrad}$)", r"$x'$ ($\sqrt{mm \dot mrad}$)", r"$y$ [$\sqrt{mm \dot mrad}$]", r"$y'$ ($\sqrt{mm \dot mrad}$)"]
 
 for method in data:
     if not data[method]["bunch_n"]:
