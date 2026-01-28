@@ -21,7 +21,7 @@ plt.style.use("style.mplstyle")
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--turns", type=int, default=2800)
-parser.add_argument("--stride", type=int, default=100)
+parser.add_argument("--stride", type=int, default=200)
 parser.add_argument("--inj-size", type=int, default=200)
 parser.add_argument("--inj-rms", type=float, default=0.5)
 parser.add_argument("--blur", type=float, default=0.0)
@@ -218,7 +218,9 @@ for method in data:
         )
         grid.set_labels(labels)
 
-        plt.savefig(os.path.join(output_subdir, f"fig_{turn:05.0f}.png"), dpi=200)
+        filename = os.path.join(output_subdir, f"fig_{turn:05.0f}.png")
+        print(filename)
+        plt.savefig(filename, dpi=200)
         plt.close()
 
 
@@ -230,7 +232,12 @@ xmax[0] = xmax[2] = max(xmax[0], xmax[2])
 xmax[1] = xmax[3] = max(xmax[1], xmax[3])
 limits = list(zip(-xmax, xmax))
 
-labels = [r"$u_1$ ($\sqrt{mm \dot mrad}$)", r"$x'$ ($\sqrt{mm \dot mrad}$)", r"$y$ [$\sqrt{mm \dot mrad}$]", r"$y'$ ($\sqrt{mm \dot mrad}$)"]
+labels = [
+    r"$u_1$ ($\sqrt{mm \cdot mrad}$)",
+    r"$x'$ ($\sqrt{mm \cdot mrad}$)",
+    r"$y$ [$\sqrt{mm \cdot mrad}$]",
+    r"$y'$ ($\sqrt{mm \cdot mrad}$)",
+]
 
 for method in data:
     if not data[method]["bunch_n"]:
@@ -259,5 +266,7 @@ for method in data:
         )
         grid.set_labels(labels)
 
-        plt.savefig(os.path.join(output_subdir, f"fig_{turn:05.0f}.png"), dpi=200)
+        filename = os.path.join(output_subdir, f"fig_{turn:05.0f}.png")
+        print(filename)
+        plt.savefig(filename, dpi=200)
         plt.close()
