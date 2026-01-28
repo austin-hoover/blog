@@ -9,6 +9,7 @@ import scipy.stats
 from tqdm import tqdm
 
 from coupling import calc_eigvecs
+from coupling import calc_eigtunes
 from coupling import build_norm_matrix_from_tmat
 from plot import CornerGrid
 from utils import rotation_matrix
@@ -21,13 +22,15 @@ class Painter:
     def __init__(
         self,
         matrix: np.ndarray,
+        turns: int,
         inj_size: int,
         inj_rms: float = 0.15,
         inj_cut: float = 3.0,
         method: str = "correlated",
     ) -> None:
         self.M = matrix
-        self.V = build_norm_matrix_from_tmat(self.M)
+        self.V_inv = build_norm_matrix_from_tmat(self.M)
+        self.V = np.linalg.inv(self.V_inv)
 
         self.eigvecs = calc_eigvecs(self.M)
         self.eigtunes = calc_eigtunes(self.M)
@@ -36,7 +39,7 @@ class Painter:
         self.inj_rms = inj_rms
         self.inj_cut = np.repeat(inj_cut, 4)
         
-        self.times = np.linspace(0.0, 1.0, n_turns + 1)
+        self.times = np.linspace(0.0, 1.0, turns + 1)
 
         self.method = method
         self.umax = None
@@ -76,7 +79,9 @@ class Painter:
             matrix[2:4, 2:4] = rotation_matrix(2.0 * np.pi * self.eigtunes[1] * t)
             bunches[t] = np.matmul(bunches[t], matrix.T)
 
-        return np.vstack(bunches)
+        bunch = np.vstack(bunches)
+        bunch = np.matmul(bunch. self.V.T)
+        return bunch
 
 
 if __name__ == "__main__":
@@ -101,12 +106,11 @@ if __name__ == "__main__":
 
     # Create painter
     painter = Painter(
-        tune_x=tune_x,
-        tune_y=tune_y,
-        n_turns=args.nturns,
-        n_inj=args.nparts,
+        matrix=M,
+        turns=args.turns,
+        inj_size=args.inj_size,
         inj_rms=args.inj_rms,
     )
 
     # Run simulation
-    turns_list = list(range(0, args.nturns + args.stride, args.stride))
+    turns_list = list(range(0, args.turns + args.stride, args.stride))

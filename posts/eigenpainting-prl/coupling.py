@@ -30,7 +30,7 @@ def build_norm_matrix_from_eigvecs(v1: np.ndarray, v2: np.ndarray) -> np.ndarray
 
 
 def build_norm_matrix_from_tmat(M: np.ndarray) -> np.ndarray:
-    eig_res = np.linalg.eig(self.M)
+    eig_res = np.linalg.eig(M)
     v1 = normalize_eigvec(eig_res.eigenvectors[:, 0])
     v2 = normalize_eigvec(eig_res.eigenvectors[:, 2])
     return build_norm_matrix_from_eigvecs(v1, v2)
