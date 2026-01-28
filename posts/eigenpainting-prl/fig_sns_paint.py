@@ -206,7 +206,7 @@ for method in data:
     for index in range(len(turns_list)):
         bunch = data[method]["bunch"][index]
         turn = turns_list[index]
-        inj_point = data[method]["inj"][index]
+        inj_point = data[method]["inj_point"][index]
 
         grid = plot_bunch(
             bunch=bunch,
@@ -247,7 +247,7 @@ for method in data:
     for index in range(len(turns_list)):
         bunch = data[method]["bunch_n"][index]
         turn = turns_list[index]
-        inj_point = data[method]["inj_n"][index]
+        inj_point = data[method]["inj_point_n"][index]
 
         grid = plot_bunch(
             bunch=bunch,
