@@ -1,7 +1,9 @@
 /.quarto/
 /_site/
+**/*.quarto_ipynb
+
 __pycache__
 .DS_Store
 .ipynb_checkpoints
 .idea
-**/*.quarto_ipynb
+outputs
