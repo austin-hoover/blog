@@ -234,9 +234,9 @@ limits = list(zip(-xmax, xmax))
 
 labels = [
     r"$u_1$ ($\sqrt{mm \cdot mrad}$)",
-    r"$x'$ ($\sqrt{mm \cdot mrad}$)",
-    r"$y$ [$\sqrt{mm \cdot mrad}$]",
-    r"$y'$ ($\sqrt{mm \cdot mrad}$)",
+    r"$u_1'$ ($\sqrt{mm \cdot mrad}$)",
+    r"$u_2$ [$\sqrt{mm \cdot mrad}$]",
+    r"$u_2'$ ($\sqrt{mm \cdot mrad}$)",
 ]
 
 for method in data:
