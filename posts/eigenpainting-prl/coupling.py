@@ -9,12 +9,14 @@ def build_poisson_matrix(ndim: int = 4) -> None:
 
 
 def normalize_eigvec(v: np.ndarray) -> np.ndarray:
-    ndim = v.shape[0]
-    U = build_poisson_matrix(ndim)
-    norm = np.abs(np.imag(np.linalg.multi_dot([np.conj(v), U, v])))
-    return v * np.sqrt(2.0 / norm)
+    U = build_poisson_matrix(len(v))
 
+    def norm(v):
+        return np.linalg.multi_dot([np.conj(v), U, v])
 
+    return v * np.sqrt(2.0 / np.abs(norm(v)))
+
+    
 def calc_eigvecs(M: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
     eig_res = np.linalg.eig(M)
     v1 = normalize_eigvec(eig_res.eigenvectors[:, 0])
@@ -33,7 +35,7 @@ def build_norm_matrix_from_eigvecs(v1: np.ndarray, v2: np.ndarray) -> np.ndarray
     V[:, 0] = +np.real(v1)
     V[:, 1] = -np.imag(v1)
     V[:, 2] = +np.real(v2)
-    V[:, 3] = -np.real(v2)
+    V[:, 3] = -np.imag(v2)
     return np.linalg.inv(V)
 
 

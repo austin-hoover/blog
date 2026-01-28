@@ -14,6 +14,7 @@ from tqdm import tqdm
 
 from coupling import calc_eigtunes
 from coupling import calc_eigvecs
+from coupling import build_norm_matrix_from_tmat
 from plot import CornerGridNoDiag
 from plot import plot_vector
 from utils import track
@@ -119,11 +120,14 @@ if __name__ == "__main__":
 
     # Load transfer matrix.
     M = np.loadtxt("data/matrix.txt")
+    V_inv = build_norm_matrix_from_tmat(M)
+    V = np.linalg.inv(V_inv)
 
     # Calculate eigenvectors.
     v1, v2 = calc_eigvecs(M)
     nu1, nu2 = calc_eigtunes(M)
 
+    
     # Plot particle orbits
     # --------------------------------------------------------------------------------------
 
@@ -156,10 +160,6 @@ if __name__ == "__main__":
     plt.savefig(os.path.join(output_dir, "fig_corner.png"), dpi=250)
     plt.close()
 
-    turns_plot = 45
-    animation = animate_corner(coords[:turns_plot], limits=limits)
-    animation.save(os.path.join(output_dir, "fig_corner.gif"), dpi=250)
-
     # Plot corner with eigenvectors
     grid = CornerGridNoDiag(ndim=4, figwidth=6.0, limits=limits, labels=labels)
     grid.plot_scatter(coords, marker=".", s=5, ec="none", color="lightgrey")
@@ -168,7 +168,51 @@ if __name__ == "__main__":
     plt.savefig(os.path.join(output_dir, "fig_corner_eig_ellipse.png"), dpi=250)
     plt.close()
 
+    turns_plot = 45
+    animation = animate_corner(coords[:turns_plot], limits=limits)
+    animation.save(os.path.join(output_dir, "fig_corner.gif"), dpi=250)
+
     animation = animate_corner(
         coords[:turns_plot], limits=limits, vectors=[coords1, coords2]
     )
     animation.save(os.path.join(output_dir, "fig_corner_vec.gif"), dpi=250)
+
+
+
+    # Normalized coordinates
+    # ----------------------------------------------------------------
+    
+    coords = np.matmul(coords, V_inv.T)
+    coords1 = np.matmul(coords1, V_inv.T)
+    coords2 = np.matmul(coords2, V_inv.T)
+
+    xmax = 1.4 * np.max(coords, axis=0)
+    xmax[0] = xmax[2] = max(xmax[0], xmax[2])
+    xmax[1] = xmax[3] = max(xmax[1], xmax[3])
+    limits = list(zip(-xmax, xmax))
+
+    labels = ["u1", "u1'", "u2", "u2'"]
+
+    # Plot corner
+    grid = CornerGridNoDiag(ndim=4, figwidth=6.0, limits=limits, labels=labels)
+    grid.plot_scatter(coords, marker=".", s=5, ec="none", color="black")
+    plt.savefig(os.path.join(output_dir, "fig_norm_corner.png"), dpi=250)
+    plt.close()
+
+    # Plot corner with eigenvectors
+    grid = CornerGridNoDiag(ndim=4, figwidth=6.0, limits=limits, labels=labels)
+    grid.plot_scatter(coords, marker=".", s=5, ec="none", color="lightgrey")
+    grid.plot_scatter(coords1, marker=".", s=5, ec="none", color="red")
+    grid.plot_scatter(coords2 + coords1[0], marker=".", s=5, ec="none", color="blue")
+    plt.savefig(os.path.join(output_dir, "fig_norm_corner_eig_ellipse.png"), dpi=250)
+    plt.close()
+
+    turns_plot = 45
+    animation = animate_corner(coords[:turns_plot], limits=limits)
+    animation.save(os.path.join(output_dir, "fig_norm_corner.gif"), dpi=250)
+
+    animation = animate_corner(
+        coords[:turns_plot], limits=limits, vectors=[coords1, coords2]
+    )
+    animation.save(os.path.join(output_dir, "fig_norm_corner_vec.gif"), dpi=250)
+

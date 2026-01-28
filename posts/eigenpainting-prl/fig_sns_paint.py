@@ -23,7 +23,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--turns", type=int, default=2800)
 parser.add_argument("--stride", type=int, default=200)
 parser.add_argument("--inj-size", type=int, default=200)
-parser.add_argument("--inj-rms", type=float, default=0.10)
+parser.add_argument("--inj-rms", type=float, default=0.5)
 parser.add_argument("--blur", type=float, default=1.0)
 args = parser.parse_args()
 
