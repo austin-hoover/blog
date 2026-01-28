@@ -1,26 +1,18 @@
 import argparse
 import os
+import pathlib
 
 import numpy as np
-import matplotlib.colors
 import matplotlib.pyplot as plt
 import scipy.ndimage
 import scipy.stats
 from tqdm import tqdm
 
-plt.rcParams["axes.linewidth"] = 1.2
-plt.rcParams["xtick.minor.visible"] = True
-plt.rcParams["ytick.minor.visible"] = True
-plt.rcParams["figure.constrained_layout.use"] = True
+from plot import CornerGrid
+from utils import rotation_matrix
+from utils import track
 
-
-def rotation_matrix(angle: float) -> np.ndarray:
-    matrix = np.zeros((2, 2))
-    matrix[0, 0] = +np.cos(angle)
-    matrix[1, 1] = +np.cos(angle)
-    matrix[0, 1] = +np.sin(angle)
-    matrix[1, 0] = -np.sin(angle)
-    return matrix
+plt.style.use("style.mplstyle")
 
 
 class Painter:
@@ -60,7 +52,7 @@ class Painter:
         else:
             raise ValueError("Invalid method")
 
-    def generate_minipulse(self) -> np.ndarray:
+    def gen_bunch(self) -> np.ndarray:
         x = scipy.stats.truncnorm.rvs(
             scale=self.inj_rms,
             size=(self.n_inj, 4),
@@ -71,99 +63,24 @@ class Painter:
 
     def paint(self, nturns: list[int]) -> np.ndarray:
         # Generate `n_turns` minipulses at the origin.
-        minipulses = [self.generate_minipulse() for _ in range(nturns + 1)]
+        bunches = [self.gen_bunch() for _ in range(nturns + 1)]
 
         # Move each minipulse to its final amplitude.
         for t in range(nturns + 1):
-            minipulses[t] += self.get_inj_coords(t)
+            bunches[t] += self.get_inj_coords(t)
 
         # Rotate each minipulse by the requested number of turns.
-        for t, minipulse in enumerate(tqdm(minipulses)):
+        for t, minipulse in enumerate(tqdm(bunches)):
             matrix = np.zeros((4, 4))
             matrix[0:2, 0:2] = rotation_matrix(2.0 * np.pi * self.tune_x * t)
             matrix[2:4, 2:4] = rotation_matrix(2.0 * np.pi * self.tune_y * t)
-            minipulses[t] = np.matmul(minipulses[t], matrix.T)
+            bunches[t] = np.matmul(bunches[t], matrix.T)
 
-        bunch = np.vstack(minipulses)
-        return bunch
+        return np.vstack(bunches)
 
 
-class CornerGrid:
-    def __init__(
-        self,
-        ndim: int,
-        limits: list[tuple[float, float]] = None,
-        labels: list[str] = None,
-        figwidth: float = None,
-    ) -> None:
-        self.ndim = ndim
-
-        if figwidth is None:
-            figwidth = 1.7 * ndim
-
-        self.fig, self.axs = plt.subplots(
-            ncols=ndim,
-            nrows=ndim,
-            figsize=(figwidth, figwidth),
-            sharex=False,
-            sharey=False,
-        )
-
-        for i in range(self.ndim - 1):
-            for ax in self.axs[i, :]:
-                ax.set_xticklabels([])
-
-        for j in range(1, self.ndim):
-            for ax in self.axs[:, j]:
-                ax.set_yticklabels([])
-
-        for i in range(self.ndim):
-            self.axs[i, i].set_yticks([])
-
-        for ax in self.axs.flat:
-            for loc in ["top", "right"]:
-                ax.spines[loc].set_visible(False)
-
-        for i in range(self.ndim):
-            for j in range(self.ndim):
-                if i < j:
-                    self.axs[i, j].axis("off")
-
-        self.limits = None
-        self.labels = None
-        self.set_limits(limits)
-        self.set_labels(labels)
-
-    def set_limits(self, limits: list[tuple[float, float]] = None) -> None:
-        if limits is None:
-            return
-
-        self.limits = limits
-        for i in range(4):
-            for j in range(4):
-                ax = self.axs[i, j]
-                ax.set_xlim(limits[j])
-                if i != j:
-                    ax.set_ylim(limits[i])
-
-    def set_labels(self, labels: list[str] = None) -> None:
-        if labels is None:
-            return
-
-        self.labels = labels
-        for i in range(self.ndim):
-            for j in range(self.ndim):
-                ax = self.axs[i, j]
-                if j == 0:
-                    ax.set_ylabel(labels[i])
-                if i == self.ndim - 1:
-                    ax.set_xlabel(labels[j])
-
-        self.fig.align_xlabels()
-        self.fig.align_ylabels()
-
-  
 if __name__ == "__main__":
+        
     parser = argparse.ArgumentParser()
     parser.add_argument("--nturns", type=int, default=2800)
     parser.add_argument("--nparts", type=int, default=200)
@@ -172,11 +89,21 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     
+    # Create output directory
+    # ----------------------------------------------------------------------
+    path = pathlib.Path(__file__)
+    output_dir = os.path.join("outputs", path.stem)
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Setup painter
+    # ----------------------------------------------------------------------
     tune_x = 0.1810201  # horizontal tune
     tune_y = tune_x - 0.143561  # vertical tune
 
     turns_list = list(range(0, args.nturns + args.stride, args.stride))
 
+    # Create painter
+    # ----------------------------------------------------------------------
     painter = Painter(
         tune_x=tune_x,
         tune_y=tune_y,
@@ -184,7 +111,9 @@ if __name__ == "__main__":
         n_inj=args.nparts,
         inj_rms=args.inj_rms,
     )
-
+    
+    # Run simulations
+    # ----------------------------------------------------------------------
     data = {}
     for method in ["corr", "anticorr", "flat", "eig"]:
         data[method] = {}
@@ -213,9 +142,11 @@ if __name__ == "__main__":
     data["eig"]["bunch"] = [painter.paint(t) for t in turns_list]
     data["eig"]["centroid"] = [painter.get_inj_coords(t) for t in turns_list]
 
+    # Make plots
+    # ----------------------------------------------------------------------
     for method in data:
-        output_dir = os.path.join("outputs", method)
-        os.makedirs(output_dir, exist_ok=True)
+        output_subdir = os.path.join(output_dir, method)
+        os.makedirs(output_subdir, exist_ok=True)
 
         # Settings
         limits = 4 * [(-2.0, 2.0)]
@@ -283,5 +214,5 @@ if __name__ == "__main__":
             )
 
             # Save figure
-            plt.savefig(os.path.join(output_dir, f"fig_{turn:05.0f}.png"), dpi=200)
+            plt.savefig(os.path.join(output_subdir, f"fig_{turn:05.0f}.png"), dpi=200)
             plt.close()

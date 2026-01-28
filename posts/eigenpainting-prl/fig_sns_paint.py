@@ -1,84 +1,112 @@
+import argparse
+import os
+import pathlib
 
-# # Plot painting
-# # --------------------------------------------------------------------------------------
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.ndimage
+import scipy.stats
+from tqdm import tqdm
 
-# class Painter:
-#     def __init__(
-#         self,
-#         matrix: np.ndarray,
-#         inj_size: int,
-#         inj_rms: float = 0.15,
-#         inj_cut: float = 3.0,
-#         method: str = "correlated",
-#     ) -> None:
-#         self.M = matrix
+from coupling import calc_eigvecs
+from coupling import build_norm_matrix_from_tmat
+from plot import CornerGrid
+from utils import rotation_matrix
+from utils import track
+
+plt.style.use("style.mplstyle")
+
+
+class Painter:
+    def __init__(
+        self,
+        matrix: np.ndarray,
+        inj_size: int,
+        inj_rms: float = 0.15,
+        inj_cut: float = 3.0,
+        method: str = "correlated",
+    ) -> None:
+        self.M = matrix
+        self.V = build_norm_matrix_from_tmat(self.M)
+
+        self.eigvecs = calc_eigvecs(self.M)
+        self.eigtunes = calc_eigtunes(self.M)
         
-#         eig_res = np.linalg.eig(M)
-#         v1 = normalize_eigvec(eig_res.eigenvectors[:, 0])
-#         v2 = normalize_eigvec(eig_res.eigenvectors[:, 2])
-#         self.V_inv = build_norm_matrix_from_eigvecs(v1, v2)
-#         self.V = np.linalg.inv(self.V_inv)
+        self.inj_size = inj_size
+        self.inj_rms = inj_rms
+        self.inj_cut = np.repeat(inj_cut, 4)
         
-#         self.inj_size = inj_size
-#         self.n_turns = n_turns
-#         self.inj_rms = inj_rms
-#         self.inj_cut = np.repeat(inj_cut, 4)
-#         self.t_arr = np.linspace(0.0, 1.0, n_turns + 1)
+        self.times = np.linspace(0.0, 1.0, n_turns + 1)
 
-#         self.method = method
-#         self.umax = None  # normalized space
-#         self.is_initialized = False
+        self.method = method
+        self.umax = None
 
-#     def set_umax(self, xmax: np.ndarray) -> None:
-#         self.umax = umax
+    def set_inj_umax(self, umax: np.ndarray) -> None:
+        self.umax = umax
 
-#     def get_u(self, turn: int) -> np.ndarray:
-#         t = self.t_arr[turn]
-#         if self.method == "correlated":
-#             tau = np.sqrt(t)
-#             return np.multiply(self.umax, tau)
-#         elif self.method == "anti-correlated":
-#             tau1 = np.sqrt(1.0 - t)
-#             tau2 = np.sqrt(t)
-#             return np.multiply(self.umax, [tau1, tau1, tau2, tau2])
-#         else:
-#             raise ValueError("Invalid method")
+    def set_inj_u(self, turn: int) -> np.ndarray:
+        t = self.times[turn]
+        if self.method == "correlated":
+            return np.multiply(self.inj_umax, np.sqrt(t))
+        elif self.method == "anti-correlated":
+            tau1 = np.sqrt(1.0 - t)
+            tau2 = np.sqrt(t)
+            return np.multiply(self.inj_umax, [tau1, tau1, tau2, tau2])
+        else:
+            raise ValueError("Invalid method")
 
-#     def gen_pulse(self) -> np.ndarray:
-#         return scipy.stats.truncnorm.rvs(
-#             scale=self.inj_rms,
-#             size=(self.inj_size, 4),
-#             a=-self.inj_cut,
-#             b=+self.inj_cut,
-#         )
+    def gen_bunch(self) -> np.ndarray:
+        u = scipy.stats.truncnorm.rvs(
+            scale=self.inj_rms,
+            size=(self.n_inj, 4),
+            a=-self.inj_cut,
+            b=+self.inj_cut,
+        )
+        return u
 
-#     def paint(self, turns: list[int]) -> np.ndarray:
-#         bunches = [self.gen_pulse() for _ in range(turns + 1)]
+    def paint(self, turn: list[int]) -> np.ndarray:
+        bunches_n = [self.gen_bunch() for _ in range(nturns + 1)]
+        
+        for t in range(turns + 1):
+            bunches_n[t] += self.get_inj_coords(t)
 
-#         # Place minipulses at origin.
-#         for t in range(nturns + 1):
-#             bunches[t] += self.get_u(t)
+        for t, minipulse in enumerate(tqdm(bunches)):
+            matrix = np.zeros((4, 4))
+            matrix[0:2, 0:2] = rotation_matrix(2.0 * np.pi * self.eigtunes[0] * t)
+            matrix[2:4, 2:4] = rotation_matrix(2.0 * np.pi * self.eigtunes[1] * t)
+            bunches[t] = np.matmul(bunches[t], matrix.T)
 
-#         # Advance phases.
-#         for t, minipulse in enumerate(tqdm(minipulses)):
-#             matrix = np.zeros((4, 4))
-#             matrix[0:2, 0:2] = rotation_matrix(2.0 * np.pi * self.tune_x * t)
-#             matrix[2:4, 2:4] = rotation_matrix(2.0 * np.pi * self.tune_y * t)
-#             bunches[t] = np.matmul(bunches[t], matrix.T)
-
-#         # Combine minipulses.
-#         bunch = np.vstack(bunches)
-
-#         # Unnormalize coordinates
-#         bunch = np.matmul(bunch, self.V.T)
-
-#         return bunch
+        return np.vstack(bunches)
 
 
-# argparse.Namespace(
-#     turns=2800,
-#     stride=200,
-#     size=200,
-# )
+if __name__ == "__main__":
 
-# turns_list = list(range(0, args.nturns + args.stride, args.stride))
+    # Parse arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--turns", type=int, default=2800)
+    parser.add_argument("--stride", type=int, default=200)
+    parser.add_argument("--inj-size", type=int, default=200)
+    parser.add_argument("--inj-rms", type=float, default=0.10)
+    args = parser.parse_args()
+    
+    # Create output directory
+    path = pathlib.Path(__file__)
+    output_dir = os.path.join("outputs", path.stem)
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Load transfer matrix
+    M = np.loadtxt("data/matrix.txt")
+    v1, v2 = calc_eigvecs(M)
+    nu1, nu2 = calc_eigtunes(M)
+
+    # Create painter
+    painter = Painter(
+        tune_x=tune_x,
+        tune_y=tune_y,
+        n_turns=args.nturns,
+        n_inj=args.nparts,
+        inj_rms=args.inj_rms,
+    )
+
+    # Run simulation
+    turns_list = list(range(0, args.nturns + args.stride, args.stride))

@@ -1,5 +1,7 @@
+"""Illustrate eigenvector analysis of turn-by-turn data."""
 import argparse
 import os
+import pathlib
 
 import numpy as np
 import matplotlib.animation
@@ -103,7 +105,7 @@ def animate_corner(
                     )
                     
         grid.axs[0, 1].annotate(
-            "Period {}".format(frame),
+            "Turn {}".format(frame),
             xy=(0.5, 0.5),
             xycoords="axes fraction",
             horizontalalignment="center",
@@ -112,61 +114,64 @@ def animate_corner(
     return matplotlib.animation.FuncAnimation(grid.fig, update, frames=particles.shape[0])
 
 
-# Setup
-output_dir = "outputs"
-os.makedirs(output_dir, exist_ok=True)
-
-# Load transfer matrix.
-M = np.loadtxt("data/matrix.txt")
-
-# Calculate eigenvectors.
-v1, v2 = calc_eigvecs(M)
-nu1, nu2 = calc_eigtunes(M)
-
-
-# Plot particle orbits
-# --------------------------------------------------------------------------------------
-
-# Set initial particle coordinates.
-J1 = 0.5 * 25.0  # mode 1 amplitude
-J2 = 0.5 * 25.0  # mode 2 amplitude
-psi1 = np.pi * 0.00  # mode 1 phase
-psi2 = np.pi * 0.25  # mode 2 phase
-x1 = np.real(np.sqrt(2.0 * J1) * v1 * np.exp(1.0j * psi2))
-x2 = np.real(np.sqrt(2.0 * J2) * v2 * np.exp(1.0j * psi2))
-x = x1 + x2
-
-# Track particles 1000 turns and store turn-by-turn coordinates.
-turns = 1000
-coords1 = track(M, x1, turns)
-coords2 = track(M, x2, turns)
-coords = track(M, x, turns)
-
-# Calculate plot limits.
-xmax = 1.4 * np.max(coords, axis=0)
-xmax[0] = xmax[2] = max(xmax[0], xmax[2])
-xmax[1] = xmax[3] = max(xmax[1], xmax[3])
-limits = list(zip(-xmax, xmax))
-
-labels = ["x [mm]", "x' [mrad]", "y [mm]", "y' [mrad]"]
-
-# Plot corner
-grid = CornerGridNoDiag(ndim=4, figwidth=6.0, limits=limits, labels=labels)
-grid.plot_scatter(coords, marker=".", s=5, ec="none", color="black")
-plt.savefig(os.path.join(output_dir, "fig_corner.png"), dpi=250)
-plt.close()
-
-turns_plot = 45
-animation = animate_corner(coords[:turns_plot], limits=limits);
-animation.save(os.path.join(output_dir, "fig_corner.gif"), dpi=250)
-
-# Plot corner with eigenvectors
-grid = CornerGrid(ndim=4, figwidth=6.0, limits=limits, labels=labels)
-grid.plot_scatter(coords, marker=".", s=5, ec="none", color="lightgrey")
-grid.plot_scatter(coords1, marker=".", s=5, ec="none", color="red")
-grid.plot_scatter(coords2, marker=".", s=5, ec="none", color="blue")
-plt.savefig(os.path.join(output_dir, "fig_corner_eig_ellipse.png"), dpi=250)
-plt.close()
-
-animation = animate_corner(coords[:turns_plot], limits=limits, vectors=[coords1, coords2])
-animation.save(os.path.join(output_dir, "fig_corner_vec.gif"), dpi=250)
+if __name__ == "__main__":
+    
+    # Setup
+    path = pathlib.Path(__file__)
+    output_dir = os.path.join("outputs", path.stem)
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Load transfer matrix.
+    M = np.loadtxt("data/matrix.txt")
+    
+    # Calculate eigenvectors.
+    v1, v2 = calc_eigvecs(M)
+    nu1, nu2 = calc_eigtunes(M)
+    
+    
+    # Plot particle orbits
+    # --------------------------------------------------------------------------------------
+    
+    # Set initial particle coordinates.
+    J1 = 0.75 * 25.0  # mode 1 amplitude
+    J2 = 0.25 * 25.0  # mode 2 amplitude
+    psi1 = np.pi * 0.00  # mode 1 phase
+    psi2 = np.pi * 0.25  # mode 2 phase
+    x1 = np.real(np.sqrt(2.0 * J1) * v1 * np.exp(1.0j * psi2))
+    x2 = np.real(np.sqrt(2.0 * J2) * v2 * np.exp(1.0j * psi2))
+    x = x1 + x2
+    
+    # Track particles 1000 turns and store turn-by-turn coordinates.
+    turns = 1000
+    coords1 = track(M, x1, turns)
+    coords2 = track(M, x2, turns)
+    coords = track(M, x, turns)
+    
+    # Calculate plot limits.
+    xmax = 1.4 * np.max(coords, axis=0)
+    xmax[0] = xmax[2] = max(xmax[0], xmax[2])
+    xmax[1] = xmax[3] = max(xmax[1], xmax[3])
+    limits = list(zip(-xmax, xmax))
+    
+    labels = ["x [mm]", "x' [mrad]", "y [mm]", "y' [mrad]"]
+    
+    # Plot corner
+    grid = CornerGridNoDiag(ndim=4, figwidth=6.0, limits=limits, labels=labels)
+    grid.plot_scatter(coords, marker=".", s=5, ec="none", color="black")
+    plt.savefig(os.path.join(output_dir, "fig_corner.png"), dpi=250)
+    plt.close()
+    
+    turns_plot = 45
+    animation = animate_corner(coords[:turns_plot], limits=limits);
+    animation.save(os.path.join(output_dir, "fig_corner.gif"), dpi=250)
+    
+    # Plot corner with eigenvectors
+    grid = CornerGridNoDiag(ndim=4, figwidth=6.0, limits=limits, labels=labels)
+    grid.plot_scatter(coords, marker=".", s=5, ec="none", color="lightgrey")
+    grid.plot_scatter(coords1, marker=".", s=5, ec="none", color="red")
+    grid.plot_scatter(coords2 + coords1[0], marker=".", s=5, ec="none", color="blue")
+    plt.savefig(os.path.join(output_dir, "fig_corner_eig_ellipse.png"), dpi=250)
+    plt.close()
+    
+    animation = animate_corner(coords[:turns_plot], limits=limits, vectors=[coords1, coords2])
+    animation.save(os.path.join(output_dir, "fig_corner_vec.gif"), dpi=250)
