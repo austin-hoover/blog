@@ -55,12 +55,33 @@ turns_list = list(range(0, args.turns + args.stride, args.stride))
 data = {}
 for method in ["corr", "anticorr", "flat", "eigen"]:
     data[method] = {}
-    for key in ["bunch", "bunch_n", "inj", "inj_n"]:
+    for key in ["bunch", "bunch_n", "inj_point", "inj_point_n"]:
         data[method][key] = []
 
 
 # Run simulations
 # --------------------------------------------------------------------------------
+
+
+def run_sim(painter: NormalizedPainter, turns_list: list[int]) -> dict:
+    data = {}
+    for key in ["bunch", "bunch_n", "inj_point", "inj_point_n"]:
+        data[key] = []
+
+    for t in turns_list:
+        bunch_n = painter.paint(t)
+        bunch = np.matmul(bunch_n, V.T)
+
+        inj_point_n = painter.get_inj_point(t)
+        inj_point = np.matmul(V, inj_point_n)
+
+        data["bunch"].append(bunch)
+        data["bunch_n"].append(bunch_n)
+        data["inj_point"].append(inj_point)
+        data["inj_point_n"].append(inj_point_n)
+
+    return data
+
 
 # Set maximum amplitudes and phases.
 J1 = 25.0  # mode 1 amplitude
@@ -79,27 +100,22 @@ painter.set_umax(umax)
 
 # Run correlated painting simulation.
 painter.method = "corr"
-data["corr"]["bunch_n"] = [painter.paint(t) for t in turns_list]
-data["corr"]["inj_n"] = [painter.get_inj_point(t) for t in turns_list]
+data["corr"] = run_sim(painter, turns_list)
 
 # Run anti-correlated painting simulation.
-## ...
+painter.method = "anticorr"
+data["anticorr"] = run_sim(painter, turns_list)
 
 # Run eigenpainting simulation.
-## J2 = 0.0
-## ...
+J2 = 0.0
+umax[0] = np.sqrt(2.0 * J1) * np.cos(psi1)
+umax[1] = np.sqrt(2.0 * J1) * np.sin(psi1)
+umax[2] = np.sqrt(2.0 * J2) * np.cos(psi2)
+umax[3] = np.sqrt(2.0 * J2) * np.sin(psi2)
+painter.set_umax(umax)
+painter.method = "corr"
 
-# Unnormalize phase space coordinates
-for method in data:
-    data[method]["bunch"] = []
-    for bunch_n in data[method]["bunch_n"]:
-        bunch = np.matmul(bunch_n, V.T)
-        data[method]["bunch"].append(bunch)
-
-    data[method]["inj"] = []
-    for u in data[method]["inj_n"]:
-        x = np.matmul(V, u)
-        data[method]["inj"].append(x)
+data["eig"] = run_sim(painter, turns_list)
 
 
 # Plot data
