@@ -261,6 +261,7 @@ for method in data:
             bunch=bunch,
             inj_point=inj_point,
             limits=limits,
+            ymax=ymax,
             t=float(turn / args.turns),
             blur=blur,
         )
