@@ -44,34 +44,37 @@ class Painter:
         self.method = method
         self.umax = None
 
-    def set_inj_umax(self, umax: np.ndarray) -> None:
-        self.umax = umax
+    def set_umax(self, umax: np.ndarray) -> None:
+        self.umax = np.array(umax)
 
-    def set_inj_u(self, turn: int) -> np.ndarray:
+    def get_inj_u(self, turn: int) -> np.ndarray:
         t = self.times[turn]
-        if self.method == "correlated":
-            return np.multiply(self.inj_umax, np.sqrt(t))
-        elif self.method == "anti-correlated":
+        if self.method == "corr":
+            return np.multiply(self.umax, np.sqrt(t))
+        elif self.method == "anticorr":
             tau1 = np.sqrt(1.0 - t)
             tau2 = np.sqrt(t)
-            return np.multiply(self.inj_umax, [tau1, tau1, tau2, tau2])
+            return np.multiply(self.umax, [tau1, tau1, tau2, tau2])
         else:
             raise ValueError("Invalid method")
+
+    def get_inj_x(self, turn: int) -> np.ndarray:
+        return np.matmul(self.V, self.get_inj_u(turn))
 
     def gen_bunch(self) -> np.ndarray:
         u = scipy.stats.truncnorm.rvs(
             scale=self.inj_rms,
-            size=(self.n_inj, 4),
+            size=(self.inj_size, 4),
             a=-self.inj_cut,
             b=+self.inj_cut,
         )
         return u
 
-    def paint(self, turn: list[int]) -> np.ndarray:
-        bunches_n = [self.gen_bunch() for _ in range(nturns + 1)]
+    def paint(self, turns: list[int]) -> np.ndarray:
+        bunches = [self.gen_bunch() for _ in range(turns + 1)]
         
         for t in range(turns + 1):
-            bunches_n[t] += self.get_inj_coords(t)
+            bunches[t] += self.get_inj_u(t)
 
         for t, minipulse in enumerate(tqdm(bunches)):
             matrix = np.zeros((4, 4))
@@ -80,7 +83,7 @@ class Painter:
             bunches[t] = np.matmul(bunches[t], matrix.T)
 
         bunch = np.vstack(bunches)
-        bunch = np.matmul(bunch. self.V.T)
+        bunch = np.matmul(bunch, self.V.T)
         return bunch
 
 
@@ -112,5 +115,28 @@ if __name__ == "__main__":
         inj_rms=args.inj_rms,
     )
 
-    # Run simulation
+    # Run simulations
     turns_list = list(range(0, args.turns + args.stride, args.stride))
+
+    # Set max amplitude in normalized space.
+    J1 = J2 = 25.0
+    psi1 = np.pi * 0.00  # mode 1 phase
+    psi2 = np.pi * 0.25  # mode 2 phase
+
+    umax = np.zeros(4)
+    umax[0] = np.sqrt(2.0 * J1) * np.cos(psi1)
+    umax[1] = np.sqrt(2.0 * J1) * np.sin(psi1)
+    umax[2] = np.sqrt(2.0 * J2) * np.cos(psi2)
+    umax[3] = np.sqrt(2.0 * J2) * np.sin(psi2)
+    painter.set_umax(umax)
+    
+    data = {}
+    for method in ["corr", "anticorr", "flat", "eigen"]:
+        data[method] = {}
+        for key in ["bunch", "centroid"]:
+            data[method][key] = []
+
+    painter.method = "corr"
+    painter.set_umax([1.0, 0.0, 1.0, 0.0])
+    data["corr"]["bunch"] = [painter.paint(t) for t in turns_list]
+    data["corr"]["centroid"] = [painter.get_inj_x(t) for t in turns_list]
