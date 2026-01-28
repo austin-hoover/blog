@@ -7,7 +7,7 @@ csl: ./aps.csl
 categories:
   - accelerators
   - papers
-draft: true
+draft: false
 format:
   html:
     toc: true
@@ -132,6 +132,8 @@ The connection to vortex beams comes when we try to *paint* the KV distribution.
 
 ## Eigenpainting {#sec-eigenpainting}
 
+![](images/corner_eig_ellipse.png)
+
 *Eigenpainting* is a method to paint a high-intensity vortex distribution. The method utilizes the eigenvector analysis of linear motion in an accelerator ring. Suppose the phase space coordinates $\mathbf{x}$ evolve according to
 
 $$
@@ -176,7 +178,7 @@ Suppose we continuously inject particles at a fixed point in phase space. As the
 
 In the normalized phase space, the distribution will look like this:
 
-![](images/paint_flat.gif){#fig-paint-flat width=500px fig-align=left}
+![](images/paint_eig_n.gif){#fig-paint-eig-n width=500px fig-align=left}
 
 In the actual distribution will be a linear transformation of @fig-paint-flat. The specific form depends on the matrix $\mathbf{V}$. Here's one example:
 

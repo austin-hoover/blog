@@ -98,13 +98,13 @@ umax[3] = np.sqrt(2.0 * J2) * np.sin(psi2)
 painter.set_umax(umax)
 
 
-# Run correlated painting simulation.
-painter.method = "corr"
-data["corr"] = run_sim(painter, turns_list)
+# # Run correlated painting simulation.
+# painter.method = "corr"
+# data["corr"] = run_sim(painter, turns_list)
 
-# Run anti-correlated painting simulation.
-painter.method = "anticorr"
-data["anticorr"] = run_sim(painter, turns_list)
+# # Run anti-correlated painting simulation.
+# painter.method = "anticorr"
+# data["anticorr"] = run_sim(painter, turns_list)
 
 # Run eigenpainting simulation (correlated painting with J2=0).
 J2 = 0.0
