@@ -98,15 +98,15 @@ umax[3] = np.sqrt(2.0 * J2) * np.sin(psi2)
 painter.set_umax(umax)
 
 
-# # Run correlated painting simulation.
-# painter.method = "corr"
-# data["corr"] = run_sim(painter, turns_list)
+# Run correlated painting simulation.
+painter.method = "corr"
+data["corr"] = run_sim(painter, turns_list)
 
-# # Run anti-correlated painting simulation.
-# painter.method = "anticorr"
-# data["anticorr"] = run_sim(painter, turns_list)
+# Run anti-correlated painting simulation.
+painter.method = "anticorr"
+data["anticorr"] = run_sim(painter, turns_list)
 
-# Run eigenpainting simulation.
+# Run eigenpainting simulation (correlated painting with J2=0).
 J2 = 0.0
 umax[0] = np.sqrt(2.0 * J1) * np.cos(psi1)
 umax[1] = np.sqrt(2.0 * J1) * np.sin(psi1)
@@ -182,7 +182,7 @@ cmap = "gray_r"
 blur = args.blur
 
 # Plot phase space distribution
-last_bunch = data[data.keys()[0]]["bunch"][-1]
+last_bunch = data["corr"]["bunch"][-1]
 xmax = 3.5 * np.std(last_bunch, axis=0)
 xmax[0] = xmax[2] = max(xmax[0], xmax[2])
 xmax[1] = xmax[3] = max(xmax[1], xmax[3])
@@ -223,7 +223,7 @@ for method in data:
 
 # Plot phase space distribution (normalized coordinates)
 
-last_bunch = data[data.keys()[0]]["bunch_n"][-1]
+last_bunch = data["corr"]["bunch_n"][-1]
 xmax = 3.5 * np.std(last_bunch, axis=0)
 xmax[0] = xmax[2] = max(xmax[0], xmax[2])
 xmax[1] = xmax[3] = max(xmax[1], xmax[3])

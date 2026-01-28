@@ -7,7 +7,7 @@ def build_poisson_matrix(ndim: int = 4) -> None:
         U[i : i + 2, i : i + 2] = [[0.0, 1.0], [-1.0, 0.0]]
     return U
 
-    
+
 def normalize_eigvec(v: np.ndarray) -> np.ndarray:
     ndim = v.shape[0]
     U = build_poisson_matrix(ndim)
