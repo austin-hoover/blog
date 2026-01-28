@@ -7,7 +7,7 @@ csl: ./aps.csl
 categories:
   - accelerators
   - papers
-draft: false
+draft: true
 format:
   html:
     toc: true
