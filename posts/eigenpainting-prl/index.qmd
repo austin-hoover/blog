@@ -16,16 +16,16 @@ format:
     fig-align: left
 ---
 
-Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/b vwq-34jf), was recently accepted for publication in Physical Review Letters (PRL) @evans_2026_demonstration. Here's the [preprint](https://arxiv.org/pdf/2601.13517). The paper describes the first experimental test of a method that we call *eigenpainting*, originally proposed by Viatcheslav (Slava) Danilov twenty years ago @danilov_2003_self.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace.] This post expands on the paper, providing some additional background information and figures. 
+Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/b vwq-34jf), was recently accepted for publication in Physical Review Letters (PRL) @evans_2026_demonstration. Here's the [preprint](https://arxiv.org/pdf/2601.13517). The paper describes the first experimental test of a method that we call *eigenpainting*, originally proposed by Viatcheslav (Slava) Danilov twenty years ago @danilov_2003_self.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace.] This post provides some additional background information and figures to help interpret the results.
 
 
 ## Introduction  {#sec-intro}
 
 Accelerators such as the [SNS](https://neutrons.ornl.gov/sns) and [J-PARC](https://j-parc.jp/c/en/) use [*charge-exchange injection*](../2021-05-27_painting-a-particle-beam) to create intense proton beams for neutron scattering experiments. The injection is a three-step process: H- (negative hydrogren) ions are accelerated in a linac, converted to protons using a carbon foil or laser-magnet system, and then transfered to an accumulator ring. We call each batch of injected protons a *minipulse*. After the first minipulse completes one lap around the ring, a second is injected, and so on for hundreds or thousands of turns.
 
-Vanilla charge-exchange injection leads to charge pile-up at the injection point, leading to halo formation and beam loss. This motivates the technique of *phase space painting*: movement of the injection point in phase space (position-momentum space) during accumulation. At a basic level, painting lets us spread the charge over a larger area in the ring, reducing the peak density and associated space charge effects. Painting can also enable more detailed control of the distribution, although this is challenging because each injected minipulse changes the beam dynamics on the subsequent turn.
+Vanilla charge-exchange injection leads to charge pile-up at the injection point, leading to halo formation and beam loss. This motivates the technique of *phase space painting*: the movement of the injection point in phase space (position-momentum space) during accumulation. At a basic level, painting lets us spread the charge over a larger area, reducing the peak density and associated space charge effects. Painting can also enable more detailed control of the phase space distribution, although this is challenging because each injected minipulse changes the beam dynamics on the subsequent turn.
 
-Eigenpainting is a method to paint *stationary* four-dimensional phase space distributions, even in the presence of space charge. The method is derived from the eigenvector analysis of coupled motion, which I'll summarize in @sec-method. [...]
+Eigenpainting is proposed method to paint *stationary* four-dimensional phase space distributions, even in the presence of space charge. The method is derived from the eigenvector analysis of coupled motion, which I'll summarize in @sec-method. [...]
 
 
 
@@ -114,7 +114,7 @@ Suppose we inject particles at a fixed transverse position and momentum. The inj
 
 We define *eigenpainting* as injection into only one mode. In other words, we move only along $J_1$ or $J_2$.
 
-![UPDATE](images/paint_diag.png){#fig-paint-diag width=200}
+![](images/paint_diag.png){width=170px fig-align=center}
 
 We focus specifically on the choice 
 
