@@ -41,7 +41,7 @@ $${#eq-one-turn-map}
 
 where $\mathbf{M}$ is a symplectic matrix and $\rightarrow$ represents tracking through one lap. For example, @fig-track shows the coordinates of a particle tracked over 1000 turns in the SNS ring.
 
-![Turn-by-turn phase space coordinates over 1000 turns in a ring.](images/track.png){#fig-track width=450 fig-align=left}
+![Turn-by-turn phase space coordinates over 1000 turns in a ring.](images/track.png){#fig-track width=450 fig-align=center}
 
 We can simplify the the motion using the eigenvectors of the transfer matrix. The eigenvectors solve
 
@@ -71,7 +71,7 @@ The amplitudes $J_{1, 2}$ are therefore invariants of the motion.
 
 At a fixed point in the ring, the real component of eigenvector $\mathbf{v}_k$ traces a two-dimensional ellipse of area $2 J_k$ at frequency $\mu_k / 2\pi$. We can see this in @fig-track-ellipse, which plots the eigenvector paths on top of the tracking data. If there is no coupling in the lattice (block-diagonal transfer matrix), the first ellipse will align with the $x$-$x'$ axis and the second with the $y$-$y'$ axis; otherwise, the ellipses can have different orientations in the four-dimensional phase space.
 
-![Eigenvector paths (red/blue) plotted on top of turn-by-turn tracking data.](images/track_ellipse.png){#fig-track-ellipse width=450px fig-align=left}
+![Eigenvector paths (red/blue) plotted on top of turn-by-turn tracking data.](images/track_ellipse.png){#fig-track-ellipse width=450px fig-align=center}
 
 
 ### Normalized coordinates
@@ -110,7 +110,7 @@ $$
 \end{bmatrix}.
 $${#eq-label}
 
-![Normalized tracking data.](images/track_norm.png){#fig-track-norm fig-align=left width=450px}
+![Normalized tracking data.](images/track_norm.png){#fig-track-norm fig-align=center width=450px}
 
 
 ### Single-mode injection
@@ -124,7 +124,7 @@ $$
 J_1(t) &= \tilde{J}_1 t , \\
 J_2(t) &= 0 ,
 \end{aligned}
-$$
+$${#eq-eigpaint}
 
 where $\tilde{J}_1$ is a maximum value of $J_1$. We could also paint into the other mode by swapping $J_1$ and $J_2$. We can represent the painting path as a curve in the $J_1$-$J_2$ space:
 
@@ -132,32 +132,37 @@ where $\tilde{J}_1$ is a maximum value of $J_1$. We could also paint into the ot
 
 In normalized coordinates, the distribution will look like this:
 
-![Eigenpainting in normalized coordinates.](images/paint_eig_n.gif){#fig-paint-eig-n width=500px fig-align=left}
+![Eigenpainting in normalized coordinates.](images/paint_eig_n.gif){#fig-paint-eig-n width=500px fig-align=center}
 
 The linear scaling of the amplitude creates a uniform disk in the first phase plane, while particles in the second phase plane are concentrated at the origin. In reality, the injected minipulse will have a nonzero phase space volume, so we end up with a small blob.
 
 Note that this normalized distribution is always the same. The actual distribution will depend on $\mathbf{V}$, which encodes the structure of the accelerator lattice. For example, @fig-paint-eig shows the result of painting into the SNS ring.
 
-![Eigenpainting in the SNS ring (linear approximation, no space charge).](images/paint_eig.gif){#fig-paint-eig width=500px fig-align=left}
+![Eigenpainting in the SNS ring (linear approximation, no space charge).](images/paint_eig.gif){#fig-paint-eig width=500px fig-align=center}
 
 Space charge typically invalidates methods based on single-particle, linear dynamcs. Incredibly, eigenpainting works just fine. Notice that the painted distribution projects to a uniform density within an elliptical envelope. The charge distribution produces an electric field which has *linear* dependence on the $x$-$y$ coordinates. Therefore, space charge simply modifies the lattice transfer matrix $\mathbf{M}$ to a new effective transfer matrix $\hat{\mathbf{M}}$. We can then construct a new normalization matrix $\hat{\mathbf{V}}$ from $\hat{\mathbf{M}}$ and perform eigenpainting as before. 
 
 Another critical point is that the painted distribution is *stationary* with respect to turn number. The painted distribution is an equilibrium solution of the Vlasov-Poisson equations, known as the KV distribution @qin_2009_generalized. Equilibrium distributions are functions of invariants ($J_1$ in this case) and therefore preserve their functional form in phase space as they evolve. This ensures the space charge forces remains linear at all times, no matter the external forces, as long as the external forces are linear. Furthermore, the distribution is in equilibrium at all times $t$; the only change is a global scaling factor as particles are added to the edge of the beam ellipse.
 
 
+
+
+
+
+
 ## Applications of eigenpainting {#sec-app}
 
-Now that eigenpainting is defined, let's discuss what it could be used for. 
+Now that eigenpainting is defined, let's discuss what it could be used for. We'll focus on three features of the accumulated distribution: its small four-dimensional emittance, its strong cross-plane correlations, and its uniform density.
 
-A *vortex distribution* is characterized by a spiral pattern in its velocity field.
 
-![Examples of vortex distributions.](images/vortex.png){#fig-vortex fig-align=left width=400px}
+### Emittance as a measure of phase space volume
 
-We will characterize the distribution using the concept of *emittance*, a measure of phase space volume. Emittances are functions of the covariance matrix $\mathbf{\Sigma}$:
+Emittance is a measure of phase space volume calculated from the covariance matrix $\mathbf{\Sigma}$:
 
 $$
 \mathbf{\Sigma}
 =
+\langle \mathbf{x} \mathbf{x}^T \rangle
 \begin{bmatrix}
 \langle{xx}\rangle & \langle{xx'}\rangle & \langle{xy}\rangle & \langle{xy'}\rangle \\
 \langle{x'x}\rangle & \langle{x'x'}\rangle & \langle{x'y}\rangle & \langle{x'y'}\rangle \\
@@ -166,7 +171,7 @@ $$
 \end{bmatrix} ,
 $${#eq-cov}
 
-where $x$-$y$ are the transverse positions, $x'$-$y'$ are the velocities. The covariance matrix defines an ellipsoid from the expression $\mathbf{x}^T \mathbf{\Sigma}^{-1} \mathbf{x} = 1$. The four-dimensional emittance $\varepsilon_{4D}$ is the volume of the ellipsoid:
+where $x$-$y$ are the transverse positions, $x'$-$y'$ are the velocities, and $\langle \dots \rangle$ is an average over all particles. The covariance matrix defines an ellipsoid from the expression $\mathbf{x}^T \mathbf{\Sigma}^{-1} \mathbf{x} = 1$. The four-dimensional emittance $\varepsilon_{4D}$ is the volume of this ellipsoid:
 
 $$
 \varepsilon_{4D} = \sqrt{\det{\mathbf{\Sigma}}}.
@@ -193,7 +198,33 @@ $$
 \mathbf{V}^T ,
 $${#eq-cov-diag}
 
-where $\mathbf{V}$ is a symplectic matrix. Finally, there are the *projected* emittances $\varepsilon_{x, y}$:
+where $\mathbf{V}$ is a symplectic matrix. It's no coincidence that $\mathbf{V}$ was also the symbol used for the normalization matrix calculated from the lattice eignvectors. There's a close connection between the two. Both matrices define a symplectic transformation of the phase space coordinates into some "normalized" frame.
+The $\mathbf{V}$ in @eq-cov-diag is also constructed from a set of eigenvectors, but this time the eigenvectors solve
+
+$$
+\mathbf{\Sigma}\mathbf{U} \mathbf{v}_k = i \varepsilon_k \mathbf{v}_k ,
+$${#eq-sigma-eig}
+
+where $\mathbf{U}$ is the *Poisson matrix*:
+$$
+\mathbf{U} = 
+\begin{bmatrix}
+0 & +1 & 0 & 0 \\
+-1 & 0 & 0 & 0 \\
+0 & 0 & 0 & +1 \\
+0 & 0 & -1 & 0 \\
+\end{bmatrix} .
+$${#eq-poisson-matrix}
+
+These "beam eigenvectors" define a symplectic transformation that removes all linear cross-plane correlations in the beam while preserving the intrinsic emittances; for example, mapping @fig-paint-eig to @fig-paint-eig-n. Compare to the "lattice eigenvectors", which define a transformation that removes all cross-plane correlations in the *external focusing fields*. If the "beam eigenvectors" are the same as the "lattice eigenvectors", then the two $\mathbf{V}$ matrices are identical and the covariance matrix is invariant with respect to turn number:
+
+$$
+\mathbf{\Sigma} \rightarrow \mathbf{M} \mathbf{\Sigma} \mathbf{M}^T = \mathbf{\Sigma} .
+$${#eq-sigma-matched}
+
+Such a beam is *matched* to the lattice.^[If we know the covariance is matched to the lattice, but we don't know the transfer matrix, we can construct the covariance matrix from the eigenvectors in @eq-sigma-eig] In this case, the intrinsic emittances $\varepsilon_k$ calculate the spread of amplitudes $J_k$, or the rms area of the projected ellipse in the $u_k$-$u_k'$ plane (@fig-paint-eig-n). For this reason, the intrinsic emittances are also called the *eigenemittances* or *mode emittances*.
+
+In addition to the intrinsic emittances, we can define the *projected* emittances $\varepsilon_{x, y}$:
 
 $$
 \begin{aligned}
@@ -212,51 +243,71 @@ $$
 \end{bmatrix} .
 $${#eq-cov-uncoupled}
 
-The projected emittances define ellipse areas in the $x$-$x'$ and $y$-$y'$ planes. Thus, the projected emittance ratio $\varepsilon_x / \varepsilon_y$ tells us the fraction of particles that occupy the horizontal mode compared to the vertical mode of oscillation. The intrinsic emittances have a similar interpretation. The intrinsic emittance ratio $\varepsilon_1 / \varepsilon_2$ tells us the fraction of particles that occupy one mode compared to another mode of oscillation, where the modes are defined by the symplectic matrix $\mathbf{V}$ in @eq-cov-diag. For example, if $\mathbf{V}$ is the identity matrix, then the two modes correspond to $x$ and $y$. In general, the modes correspond to *elliptical* trajectories in the $x$-$y$ plane. For example, the particles in @fig-vortex predominantly occupy one elliptical mode.
-
-This brings us to the characterization of vortex distributions: *a vortex distribution has a large intrinsic emittance ratio: $\varepsilon_1 \gg \varepsilon_2$*. 
+The projected emittances define the rms ellipse areas in the $x$-$x'$ and $y$-$y'$ planes. Thus, the projected emittance ratio $\varepsilon_x / \varepsilon_y$ tells us the fraction of particles that occupy the horizontal mode compared to the vertical mode of oscillation. The intrinsic emittances have a similar interpretation. The intrinsic emittance ratio $\varepsilon_1 / \varepsilon_2$ tells us the fraction of particles that occupy one mode compared to another mode of oscillation, where the modes are defined by the symplectic matrix $\mathbf{V}$ in @eq-cov-diag. For example, if $\mathbf{V}$ is the identity matrix, then the two modes correspond to $x$ and $y$. In general, the modes correspond to *elliptical* trajectories in the $x$-$y$ plane. For example, the particles in @fig-vortex predominantly occupy one elliptical mode.
 
 
-::: {#fig-cov layout-ncol=2}
+### Vortex distributions for high-energy colliders
 
-![Phase space coordinates](images/cov.png){#fig-cov-a}
+The eigenpainted beam has a very large ratio of *intrinsic* emittances: $\varepsilon_1 \gg \varepsilon_2$; therefore, the particle motion is dominated by a single elliptical mode. I'll call this a *vortex distribution* referring to the spiral pattern of the velocity field.^[Vortex distributions have high [vorticity](https://en.wikipedia.org/wiki/Vorticity).] Note that a vortex distribution can have any distribution in the $x$-$y$ plane: the important part is the velocity. 
 
-![Normalized coordinates](images/cov_norm.png){#fig-cov-a}
+![Examples of vortex distributions.](images/vortex.png){#fig-vortex fig-align=center width=400px}
 
-Covariance ellipses before and after normalization (symplectic diagonalization of the covariance matrix). (Click to enlarge.)
-:::
-
-
-
-There are several possible applications of vortex distributions in high-intensity accelerators. First, vortex distributions could be used to increase the luminosity of a hadron collider @burov_2013_circular. To maximize the luminosity (the number of collisions per unit time per unit area), we want to maximize the particle density at the collision point. Unfortunately, the density is fundamentally limited by space charge forces in the low-energy stages of the accelerator. But we can play a trick: we can accumulate a round vortex beam, accelerate it to high energy, and then remove its angular momentum using a series of skew quadrupoles. The skew quadrupoles simply map the projected emittances to the intrinsic emittances, as in @fig-cov. Since the initial beam has a large intrinsic emittance ratio, the final beam has a large projected emittance ratio. This is the so-called round-to-flat (RTF) transformation @kim_2003_round shown in @fig-roundflat. Since inter-particle forces are negligble at higher energies, this scheme essentially bipasses the space charge limit on the beam density.
+Vortex distributions could be used to increase the luminosity of a hadron collider @burov_2013_circular. To maximize the luminosity (the number of collisions per unit time per unit area), we want to maximize the particle density at the collision point. Unfortunately, the density is fundamentally limited by space charge forces in the low-energy stages of acceleration. But we can play a trick: we can accumulate a round vortex beam, accelerate it to high energy, and then remove its angular momentum using a series of skew quadrupoles. The skew quadrupoles simply map the projected emittances $\varepsilon_{x, y}$ to the intrinsic emittances $\varepsilon_{1, 2}$. If the initial beam has a large intrinsic emittance ratio, the final beam will have a large projected emittance ratio. This is the so-called round-to-flat (RTF) transformation @kim_2003_round shown in @fig-roundflat. Since inter-particle forces are negligble at higher energies, this scheme essentially bipasses the space charge limit on the beam density.
 
 ![A round-to-flat transformation removes all cross-plane correlations, mapping the projected emittances $\varepsilon_{x, y}$ to the intrinsic emittances $\varepsilon_{1, 2}$. Since one of the intrinsic emittances is zero, the transformation maps a round, spinning beam to a flat beam. Source: [my talk](https://conference.sns.gov/event/335/contributions/528/attachments/892/8194/2022-10-26_Hoover_space_charge_workshop.pdf).](images/roundflat.png){#fig-roundflat }
 
 ![Concept of round-to-flat transformation in a collider. Phase space painting would be used to accumulate a low-energy beam with large angular momentum. The RTF transformation produces a flat beam at the collision point. [LHC diagram](https://cds.cern.ch/record/2693837/files/Poster-2019-858.pdf).](images/collider.png){#fig-collider}
 
 
+### Vortex distributions for space charge mitigation
 
 Vortex distributions could also be used to mitigate space charge effects. Consider a simplified model that represents the beam as a frozen background potential $\phi(x, y)$. In a Gaussian distribution, the potential contains terms proportional to $x^2$, $x^4$, and so on. These terms act as nonlinear driving forces which excite resonances at certain frequencies. These resonances are sometimes called *space charge structure resonances*. The classic example is the fourth-order resonance, which creates four islands in $x$-$x'$ phase space. Recently, Cheon et al. @cheon_2022_spinning showed that angular momentum can suppress the fourth-order resonance in linear accelerators (@fig-fourth), and I expect the same could hold in circular accelerators. A pure vortex beam with $\varepsilon_2 = 0$ is an extreme case in which there is absolutely no relative motion of particles in the beam.
 
 ![Fourth-order resonance suppression from angular momentum in a bunched beam. Particles in the spinning beam avoid direct passage through the oscillating beam core. Source: @cheon_2022_spinning.](images/fourth.png){#fig-fourth}
 
-Space charge can also excite [nonlinear resonances](../2021-03-28_nonlinear-resonances) driven by the accelerator lattice. Space charge shifts the particle tunes based on the location in the bunch. For example, @fig-tunespread shows the tune spread within a Gaussian distribution. As the intensity increases, the tune spread grows and more particles enter forbidden regions of tune space. Thus, space charge essentially broadens the resonance stop-bands in the lattice. 
 
-![Tune spreads in increasingly nonuniform distributions. Source: @franchetti_2017_space.](images/tunespread.png){#fig-tunespread fig-align=left}
+### Tune spread minimization
 
-It would be nice if we could generate a uniform-density bunch, which completely eliminates the tune spread.^[This is only true in the absence of coherent instabilities...] There is only one arangement of particles which projects to the desired density while maintaining a finite emittance: the KV distribution. The KV distribution is an equilibrium solution of the Vlasov-Poisson equations, which describe the self-consistent dynamics of the beam in response to external and self-generated forces. If we start with a KV distribution in the ring, it will maintain its functional form as it evolves. This is a remarkable fact that I don't have the space to discuss here. The point is that the KV distribution is an obvious target if we want to minimize the tune spread.
+The two applications above do not depend on the spatial density of the bunch; they only require a large intrinsic emittance ratio. We could generate such a beam with a nonlinear scaling of the injection amplitude in @eq-eigpaint (ignoring space charge, which will tend to pull the emittances together). There is an additional application if we can maintain a uniform beam density: the reduction of tune spread. Space charge shifts the particle tunes (frequencies) based on their location in the bunch. For example, @fig-tunespread shows the tune spread within a Gaussian distribution. As the intensity increases, the tune spread grows. The danger is that the tunes cross [nonlinear resonances](../2021-03-28_nonlinear-resonances) driven by nonlinearities in the accelerator lattice. So, at least in this simple model, a smaller tune spread is better.^[This is only true in the absence of coherent instabilities...] 
 
-The connection to vortex beams comes when we try to *paint* the KV distribution. It is *impossible* to paint a KV distribution in the presence of space charge. Well, not impossible: we can easily paint a completely *flat* KV distribution, i.e., a KV distribution with $\varepsilon_y = 0$ or $\varepsilon_x = 0$. But then we're back to the same problem: the flat beam will have enormous density and associate space charge forces. Again, we can play a trick: linearly map the flat KV distribution to a round, rotating distribution. It will turn out that we *can* paint the round, rotating distribution, which has zero four-dimensional emittance ($\varepsilon_2 \ll \varepsilon_1$) but still projects to a uniform density in the $x$-$y$ plane. I'll explain this more when defining the painting methods in the next section.
+The smallest possible tune spread is obtained in a uniform density bunch in which all particles oscillate at the same frequency (left side of @fig-tunespread).
 
+![Tune spreads in increasingly nonuniform distributions. Source: @franchetti_2017_space.](images/tunespread.png){#fig-tunespread fig-align=center}
 
-
-
+The KV distribution is the only arrangement of particles that gives the desired density. It turns out to be *impossible* to paint a KV distribution with finite emittance in both planes. However, we can paint a KV distribution with zero emittance in one of the planes @qin_2009_generalized. This is just what eigenpainting gives us in @fig-paint-eig. Note that the zero-emittance plane is *not* $x$ or $y$.
 
 
 
 ## Experimental implementation of eigenpainting  {#sec-exp}
 
-Test
+With all that background out of the way, I'll move on to our experiment at the SNS. 
+
+In @holmes_2018_injection, [Jeff Holmes](https://web.ornl.gov/~holmesja1/JHolmes/interests.html) ran simulations of the proposed method in the SNS ring.^[it wasn't labeled ask *eigenpainting* at that point. We made the explicit connection to eigenvectors later.] 
+
+![](images/sim_hb_2021.png){#fig-hb width=500px fig-align=center}
+
+
+The basic setup is shown in @fig-sns. Eight dipole "kicker" magnets control the phase space coordinates at the injection point. Our goal was to program these kicker magnets to trace the correct path in phase space during injection, then measure the accumulated distribution.
+
+![Overhead view of the SNS accelerator.](images/sns.png){#fig-sns fig-align=center}
+
+We directly control the kicker waveforms, not the injection point, so we needed a way to map kicker amplitudes (kV) to phase space coordinates. We measured the coordinates indirectly by injecting a single minipulse in the ring and using a set of beam position monitors (BPMs) to record its turn-by-turn centroid position, then fitting a linear model to the data. One complication is that each particle in the minipulse has a slightly different energy, and therefore slightly different tune. the effect of the energy spread is to smear the particles around each eigenvector ellipse (recall @fig-track-ellipse), eventually sending the *average* particle position to zero. This is called *chromatic damping*. The damping occurs over around 100 turns, and we have a pretty model of it, so we just add the damping time as a fit parameter and everything's fine.
+
+The next step is to calibrate the change in kicker voltage with a change in phase space coordinates.^[This works pretty well, but there is still some error after the calibration, so we have to a lot of fiddling around by hand to obtain a specified set of phase space coordinates. Future work should automate this process.] Once that's done, we can find the kicker amplitudes corresponding to the initial and final point of the injection. The initial BPM waveform is shown in the middle column of @fig-exp-bpm; the right column shows the final waveform. The initial coordinates 
+
+![](images/exp_bpm.png){#fig-exp-bpm fig-align=center}
+
+
+
+
+
+
+
+You can read more about the measurement in a separate paper @@hoover_2024_four.
+
+![](images/exp_dist.png){#fig-exp-dist width=400px fig-align=center}
+
+
 
 ## Questions and future work  {#sec-conclusion}
 
