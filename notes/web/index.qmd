@@ -1,7 +1,7 @@
 ---
 title: "Web"
 date: 2023-01-01
-date-modified: 2026-01-25
+date-modified: 2026-01-29
 ---
 
 * [What is it like to be a philosopher?](http://www.whatisitliketobeaphilosopher.com)
@@ -10,6 +10,7 @@ date-modified: 2026-01-25
 * [Little debates](https://www.routledge.com/Little-Debates-about-Big-Questions/book-series/LDABQ)
 * [Einstein papers](https://einsteinpapers.press.princeton.edu)
 * [Probability theory as extended logic](https://bayes.wustl.edu)
+* [Structured Procrastination](https://www.structuredprocrastination.com)
 * [US Muon Collider Collaboration](https://www.muoncollider.us)
 * Journals
     * [Chaos](https://pubs.aip.org/aip/cha)
@@ -29,9 +30,6 @@ date-modified: 2026-01-25
     * [ArXiv (history and philosophy of physics)](https://arxiv.org/list/physics.hist-ph/recent)
     * [PhilSci](https://philsci-archive.pitt.edu/cgi/latest_days2?n=30)
     * [philpeople.org](https://philpeople.org)
-
-
-Articles, blog posts, etc.
 
 * [Why academics stink at writing](https://www.chronicle.com/article/why-academics-stink-at-writing/)
 * [Zombie nouns](https://archive.nytimes.com/opinionator.blogs.nytimes.com/2012/07/23/zombie-nouns/)

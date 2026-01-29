@@ -1,16 +1,16 @@
 ---
 title: "Eigenpainting: a method to mitigate space charge in high-intensity hadron beams"
 author: Austin Hoover
-date: 2026-01-29
+date: 2026-01-30
 bibliography: references.bib
 csl: ./aps.csl
 categories:
   - accelerators
   - papers
-draft: true
+draft: false
 format:
   html:
-    toc: true
+    toc: false
     toc-expand: 1
     number-sections: true
     fig-align: left
@@ -25,11 +25,13 @@ Accelerators such as the [SNS](https://neutrons.ornl.gov/sns) and [J-PARC](https
 
 Vanilla charge-exchange injection leads to charge pile-up at the injection point, leading to halo formation and beam loss. This motivates the technique of *phase space painting*: the movement of the injection point in phase space (position-momentum space) during accumulation. At a basic level, painting lets us spread the charge over a larger area, reducing the peak density and associated space charge effects. Painting can also enable more detailed control of the phase space distribution, although this is challenging because each injected minipulse changes the beam dynamics on the subsequent turn.
 
-Eigenpainting is proposed method to paint *stationary* four-dimensional phase space distributions, even in the presence of space charge. The method is derived from the eigenvector analysis of coupled motion, which I'll summarize in @sec-method. [...]
-
+Eigenpainting is proposed method to paint *stationary* four-dimensional phase space distributions, even in the presence of space charge. The method is derived from the eigenvector analysis of coupled motion, which I'll summarize in @sec-method. In @sec-app, I'll describe several possible applications of eigenpainting. In the ideal case, eigenpainting generates a beam with zero volume in the four-dimensional phase space which could be used to increase luminosity in high-energy hadron colliders. The beam would also have a large angular momentum and a uniform density, both of which could mitigate nonlinear space charge forces. Finally, in @sec-exp, I'll describe our attempt to implement eigenpainting in the SNS and  our plans for follow-up experiments.
 
 
 ## Eigenvectors, eigenvalues, and eigenpainting {#sec-method}
+
+
+### Eigenvector analysis
 
 In the linear approximation, the phase space coordinates $\mathbf{x}$ in a ring evolve according to
 
@@ -65,11 +67,14 @@ $$
 \right\}.
 $${#eq-cvec_evolved}
 
-Thus, the amplitudes $J_{1, 2}$ are invariants of the motion.
+The amplitudes $J_{1, 2}$ are therefore invariants of the motion.
 
-The real component of eigenvector $\mathbf{v}_k$ traces a two-dimensional ellipse of area $2 J_k$ at frequency $\mu / 2\pi$. We can see this in @fig-track-ellipse, which plots the eigenvector paths on top of the tracking data. If there is no coupling in the lattice (block-diagonal transfer matrix), the first ellipse will align with the $x$-$x'$ axis and the second with the $y$-$y'$ axis; otherwise the ellipses can have different orientations.
+At a fixed point in the ring, the real component of eigenvector $\mathbf{v}_k$ traces a two-dimensional ellipse of area $2 J_k$ at frequency $\mu_k / 2\pi$. We can see this in @fig-track-ellipse, which plots the eigenvector paths on top of the tracking data. If there is no coupling in the lattice (block-diagonal transfer matrix), the first ellipse will align with the $x$-$x'$ axis and the second with the $y$-$y'$ axis; otherwise, the ellipses can have different orientations in the four-dimensional phase space.
 
 ![Eigenvector paths (red/blue) plotted on top of turn-by-turn tracking data.](images/track_ellipse.png){#fig-track-ellipse width=450px fig-align=left}
+
+
+### Normalized coordinates
 
 We can use the eigenvectors to construct a symplectic matrix $\mathbf{V}$,
 
@@ -91,10 +96,10 @@ $$\mathbf{V^{-1} M V} =
     -\sin{\mu_1} & \cos{\mu_1}  & 0 & 0 \\
     0 & 0 & \cos{\mu_2} & \sin{\mu_2} \\
     0 & 0 & -\sin{\mu_2} & \cos{\mu_2}
-\end{bmatrix}
+\end{bmatrix} .
 $${#eq-label}
 
-The evolution of the normalized coordinates $\mathbf{u} = \mathbf{V}^{-1} \mathbf{x}$ is [...]
+In the "normalized" coordinates $\mathbf{u} = \mathbf{V}^{-1} \mathbf{x}$ (also be called *action-angle* or *phase-amplitude* coordinates), the particle simply rotates in each phase plane with frequencies $\mu_k$.
 
 $$
 \mathbf{u} = \begin{bmatrix}
@@ -105,18 +110,14 @@ $$
 \end{bmatrix}.
 $${#eq-label}
 
-![](images/track_norm.png){#fig-track-norm fig-align=left width=450px}
+![Normalized tracking data.](images/track_norm.png){#fig-track-norm fig-align=left width=450px}
 
 
 ### Single-mode injection
 
-Suppose we inject particles at a fixed transverse position and momentum. The injected particles will advance in phase at a constant amplitude in each mode, eventually filling the ellipse with uniform density. The distribution therefore depends only on the injection amplitudes $J_{1, 2}, not the phases; our paint brush is an ellipse, rather than a point, in the four-dimensional phase space. By varying the amplitudes as a function of time, we can generate arbitrary elliptically symmetric distributions $f(J_1)$ and $f(J_2)$. The full distribution $f(J_1, J_2)$ depends on the path taken through $J_1$-$J_2$ space.
+The idea behind eigenpainting is to inject particles into only one mode, i.e., along only one of the eigenvectors. Suppose we continuously inject particles at a fixed amplitude $J_1$ and phase $\psi_1$. The injected particles will advance in phase, eventually filling the ellipse traced by the eigenvector. If we inject particles at a different amplitude, the particles will fill a larger or smaller ellipse. Thus, by varying the injection amplitude as a function of time, we can build any elliptically symmetric distribution $f(J_1)$.
 
-We define *eigenpainting* as injection into only one mode. In other words, we move only along $J_1$ or $J_2$.
-
-![](images/paint_diag.png){width=170px fig-align=center}
-
-We focus specifically on the choice 
+We'll focus on the specific choice of linearly increasing amplitude:
 
 $$
 \begin{aligned}
@@ -125,22 +126,28 @@ J_2(t) &= 0 ,
 \end{aligned}
 $$
 
-where $\tilde{J}_1$ is a maximum value of $J_1$. In normalized coordinates, the distribution will look like this:
+where $\tilde{J}_1$ is a maximum value of $J_1$. We could also paint into the other mode by swapping $J_1$ and $J_2$. We can represent the painting path as a curve in the $J_1$-$J_2$ space:
+
+![](images/paint_diag.png){width=170px fig-align=center}
+
+In normalized coordinates, the distribution will look like this:
 
 ![Eigenpainting in normalized coordinates.](images/paint_eig_n.gif){#fig-paint-eig-n width=500px fig-align=left}
 
-The actual distribution will depend on $\mathbf{V}$, which encodes the structure of the accelerator lattice. @fig-paint-eig shows the result of painting into the SNS ring.
+The linear scaling of the amplitude creates a uniform disk in the first phase plane, while particles in the second phase plane are concentrated at the origin. In reality, the injected minipulse will have a nonzero phase space volume, so we end up with a small blob.
 
-![Eigenpainting in unnormalized coordinates.](images/paint_eig.gif){#fig-paint-eig width=500px fig-align=left}
+Note that this normalized distribution is always the same. The actual distribution will depend on $\mathbf{V}$, which encodes the structure of the accelerator lattice. For example, @fig-paint-eig shows the result of painting into the SNS ring.
 
-Notice that the accumulated distribution is stationary with respect to turn number. The only change is a global scaling factor as particles are added to the edge of the beam ellipse.
+![Eigenpainting in the SNS ring (linear approximation, no space charge).](images/paint_eig.gif){#fig-paint-eig width=500px fig-align=left}
 
-Incredibly, this scheme works even if we include space charge forces in the dynamics.
+Space charge typically invalidates methods based on single-particle, linear dynamcs. Incredibly, eigenpainting works just fine. Notice that the painted distribution projects to a uniform density within an elliptical envelope. The charge distribution produces an electric field which has *linear* dependence on the $x$-$y$ coordinates. Therefore, space charge simply modifies the lattice transfer matrix $\mathbf{M}$ to a new effective transfer matrix $\hat{\mathbf{M}}$. We can then construct a new normalization matrix $\hat{\mathbf{V}}$ from $\hat{\mathbf{M}}$ and perform eigenpainting as before. 
 
-[Explain features of distribution.]
+Another critical point is that the painted distribution is *stationary* with respect to turn number. The painted distribution is an equilibrium solution of the Vlasov-Poisson equations, known as the KV distribution @qin_2009_generalized. Equilibrium distributions are functions of invariants ($J_1$ in this case) and therefore preserve their functional form in phase space as they evolve. This ensures the space charge forces remains linear at all times, no matter the external forces, as long as the external forces are linear. Furthermore, the distribution is in equilibrium at all times $t$; the only change is a global scaling factor as particles are added to the edge of the beam ellipse.
 
 
-## Vortex distributions for space charge mitigation {#sec-vortex}
+## Applications of eigenpainting {#sec-app}
+
+Now that eigenpainting is defined, let's discuss what it could be used for. 
 
 A *vortex distribution* is characterized by a spiral pattern in its velocity field.
 

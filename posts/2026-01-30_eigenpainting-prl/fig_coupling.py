@@ -155,8 +155,8 @@ if __name__ == "__main__":
 
     # Plot corner
     grid = CornerGridNoDiag(ndim=4, figwidth=6.0, limits=limits, labels=labels)
-    grid.plot_scatter(coords, marker=".", s=5, ec="none", color="black")
-    plt.savefig(os.path.join(output_dir, "fig_corner.png"), dpi=250)
+    grid.plot_scatter(coords, marker=".", s=5, ec="none", color="grey")
+    plt.savefig(os.path.join(output_dir, "corner.png"), dpi=250)
     plt.close()
 
     # Plot corner with eigenvectors
@@ -164,17 +164,17 @@ if __name__ == "__main__":
     grid.plot_scatter(coords, marker=".", s=5, ec="none", color="grey")
     grid.plot_scatter(coords1, marker=".", s=5, ec="none", color="red")
     grid.plot_scatter(coords2 + coords1[0], marker=".", s=5, ec="none", color="blue")
-    plt.savefig(os.path.join(output_dir, "fig_corner_ellipse.png"), dpi=250)
+    plt.savefig(os.path.join(output_dir, "corner_ellipse.png"), dpi=250)
     plt.close()
 
     # turns_plot = 45
     # animation = animate_corner(coords[:turns_plot], limits=limits)
-    # animation.save(os.path.join(output_dir, "fig_corner.gif"), dpi=250)
+    # animation.save(os.path.join(output_dir, "corner.gif"), dpi=250)
 
     # animation = animate_corner(
     #     coords[:turns_plot], limits=limits, vectors=[coords1, coords2]
     # )
-    # animation.save(os.path.join(output_dir, "fig_corner_vec.gif"), dpi=250)
+    # animation.save(os.path.join(output_dir, "corner_vec.gif"), dpi=250)
 
     
     # Normalized coordinates
@@ -193,8 +193,34 @@ if __name__ == "__main__":
 
     # Plot corner
     grid = CornerGridNoDiag(ndim=4, figwidth=6.0, limits=limits, labels=labels)
-    grid.plot_scatter(coords, marker=".", s=5, ec="none", color="black")
-    plt.savefig(os.path.join(output_dir, "fig_norm_corner.png"), dpi=250)
+    grid.plot_scatter(coords, marker=".", s=5, ec="none", color="grey")
+    grid.axs[0, 0].annotate(
+        "", 
+        xy=(np.sqrt(2.0 * J1), 0.0), 
+        xytext=(0.0, 0.0), 
+        arrowprops=dict(ec="none", color="red", width=1.0, headwidth=5.0, headlength=5.0)
+    )
+    grid.axs[2, 2].annotate(
+        "", 
+        xy=(np.sqrt(2.0 * J2), 0.0), 
+        xytext=(0.0, 0.0), 
+        arrowprops=dict(ec="none", color="blue", width=1.0, headwidth=5.0, headlength=5.0)
+    )
+    grid.axs[0, 0].annotate(
+        r"$\sqrt{2 J_1}$", 
+        xy=(np.sqrt(2.0 * J1) * 0.5, 0.75),
+        horizontalalignment="center",
+        fontsize="small",
+        color="red",
+    )
+    grid.axs[2, 2].annotate(
+        r"$\sqrt{2 J_2}$", 
+        xy=(np.sqrt(2.0 * J2) * 0.5, 0.75),
+        horizontalalignment="center",
+        fontsize="small",
+        color="blue",
+    )
+    plt.savefig(os.path.join(output_dir, "norm_corner.png"), dpi=250)
     plt.close()
 
     # Plot corner with eigenvectors
@@ -202,14 +228,14 @@ if __name__ == "__main__":
     grid.plot_scatter(coords, marker=".", s=5, ec="none", color="grey")
     grid.plot_scatter(coords1, marker=".", s=5, ec="none", color="red")
     grid.plot_scatter(coords2 + coords1[0], marker=".", s=5, ec="none", color="blue")
-    plt.savefig(os.path.join(output_dir, "fig_norm_corner_ellipse.png"), dpi=250)
+    plt.savefig(os.path.join(output_dir, "norm_corner_ellipse.png"), dpi=250)
     plt.close()
 
     # turns_plot = 45
     # animation = animate_corner(coords[:turns_plot], limits=limits)
-    # animation.save(os.path.join(output_dir, "fig_norm_corner.gif"), dpi=250)
+    # animation.save(os.path.join(output_dir, "norm_corner.gif"), dpi=250)
 
     # animation = animate_corner(
     #     coords[:turns_plot], limits=limits, vectors=[coords1, coords2]
     # )
-    # animation.save(os.path.join(output_dir, "fig_norm_corner_vec.gif"), dpi=250)
+    # animation.save(os.path.join(output_dir, "norm_corner_vec.gif"), dpi=250)
