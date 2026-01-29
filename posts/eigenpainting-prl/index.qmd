@@ -1,5 +1,5 @@
 ---
-title: "Eigenpainting: a novel method to mitigate space charge in high-intensity hadron beams"
+title: "Eigenpainting: a method to mitigate space charge in high-intensity hadron beams"
 author: Austin Hoover
 date: 2026-01-29
 bibliography: references.bib
@@ -25,14 +25,126 @@ Accelerators such as the [SNS](https://neutrons.ornl.gov/sns) and [J-PARC](https
 
 Vanilla charge-exchange injection leads to charge pile-up at the injection point, leading to halo formation and beam loss. This motivates the technique of *phase space painting*: movement of the injection point in phase space (position-momentum space) during accumulation. At a basic level, painting lets us spread the charge over a larger area in the ring, reducing the peak density and associated space charge effects. Painting can also enable more detailed control of the distribution, although this is challenging because each injected minipulse changes the beam dynamics on the subsequent turn.
 
-Our study focuses on two questions related to phase space painting. First, what is the target beam distribution? In @sec-vortex, I'll argue that *vortex distributions* are an attractive option for several applications of high-intensity beams. Second, suppose we've identified a target distribution: can we paint it? I'll address this question in @sec-eigenpainting, which introduces *eigenpainting* as a method to paint vortex distributions in the presence of space charge. Finally, in @sec-exp, I'll explain our attempt to implement this method in the SNS accumulator ring.
+Eigenpainting is a method to paint *stationary* four-dimensional phase space distributions, even in the presence of space charge. The method is derived from the eigenvector analysis of coupled motion, which I'll summarize in @sec-method. [...]
 
 
-## Vortex distributions {#sec-vortex}
+
+## Eigenvectors, eigenvalues, and eigenpainting {#sec-method}
+
+In the linear approximation, the phase space coordinates $\mathbf{x}$ in a ring evolve according to
+
+$$
+\mathbf{x} \rightarrow \mathbf{M} \mathbf{x} ,
+$${#eq-one-turn-map}
+
+where $\mathbf{M}$ is a symplectic matrix and $\rightarrow$ represents tracking through one lap. For example, @fig-track shows the coordinates of a particle tracked over 1000 turns in the SNS ring.
+
+![Turn-by-turn phase space coordinates over 1000 turns in a ring.](images/track.png){#fig-track width=450 fig-align=left}
+
+We can simplify the the motion using the eigenvectors of the transfer matrix. The eigenvectors solve
+
+$$
+\mathbf{Mv}_k = e^{-i\mu_k} \mathbf{v}_k ,
+$${#eq-label}
+
+where $k = 1, 2$. Since the eigenvectors form a basis, we can write the phase space coordinate vector as
+
+$$
+\mathbf{x} = \text{Re} \left\{ 
+    \sqrt{2 J_1} \mathbf{v}_1 e^{-i\psi_1} + 
+    \sqrt{2 J_2} \mathbf{v}_2 e^{-i\psi_2} 
+\right\} .
+$${#eq-cvec}
+
+Here, $J_{1, 2}$ are initial amplitudes, $\psi_{1, 2}$ are initial phases, and $\text{Re}\{\dots\}$ selects the non-imaginary component. The transfer matrix simply adds a phase to each eigenvector:
+
+$$
+\mathbf{Mx} = \text{Re} \left\{ 
+    \sqrt{2 J_1}\mathbf{v}_1 e^{-i\left(\psi_1 + \mu_1\right)} + 
+    \sqrt{2 J_2}\mathbf{v}_2 e^{-i(\psi_2 + \mu_2)}
+\right\}.
+$${#eq-cvec_evolved}
+
+Thus, the amplitudes $J_{1, 2}$ are invariants of the motion.
+
+The real component of eigenvector $\mathbf{v}_k$ traces a two-dimensional ellipse of area $2 J_k$ at frequency $\mu / 2\pi$. We can see this in @fig-track-ellipse, which plots the eigenvector paths on top of the tracking data. If there is no coupling in the lattice (block-diagonal transfer matrix), the first ellipse will align with the $x$-$x'$ axis and the second with the $y$-$y'$ axis; otherwise the ellipses can have different orientations.
+
+![Eigenvector paths (red/blue) plotted on top of turn-by-turn tracking data.](images/track_ellipse.png){#fig-track-ellipse width=450px fig-align=left}
+
+We can use the eigenvectors to construct a symplectic matrix $\mathbf{V}$,
+
+$$
+\mathbf{V} = 
+\left[ 
+    +\Re\{\mathbf{v}_1\} 
+    -\Im\{\mathbf{v}_1\} 
+    +\Re\{\mathbf{v}_2\} 
+    -\Im\{\mathbf{v}_2\} 
+\right] ,
+$${#eq-norm-matrix-constr}
+
+that converts $\mathbf{M}$ to block-diagonal form:
+
+$$\mathbf{V^{-1} M V} = 
+\begin{bmatrix}
+    \cos{\mu_1} & \sin{\mu_1}  & 0 & 0 \\
+    -\sin{\mu_1} & \cos{\mu_1}  & 0 & 0 \\
+    0 & 0 & \cos{\mu_2} & \sin{\mu_2} \\
+    0 & 0 & -\sin{\mu_2} & \cos{\mu_2}
+\end{bmatrix}
+$${#eq-label}
+
+The evolution of the normalized coordinates $\mathbf{u} = \mathbf{V}^{-1} \mathbf{x}$ is [...]
+
+$$
+\mathbf{u} = \begin{bmatrix}
+  +\sqrt{2J_1}\cos{(\psi_1 + \mu_1)} \\
+  -\sqrt{2J_1}\sin{(\psi_1 + \mu_1)} \\
+  +\sqrt{2J_2}\cos{(\psi_2 + \mu_2)} \\
+  -\sqrt{2J_2}\sin{(\psi_2 + \mu_2)}
+\end{bmatrix}.
+$${#eq-label}
+
+![](images/track_norm.png){#fig-track-norm fig-align=left width=450px}
+
+
+### Single-mode injection
+
+Suppose we inject particles at a fixed transverse position and momentum. The injected particles will advance in phase at a constant amplitude in each mode, eventually filling the ellipse with uniform density. The distribution therefore depends only on the injection amplitudes $J_{1, 2}, not the phases; our paint brush is an ellipse, rather than a point, in the four-dimensional phase space. By varying the amplitudes as a function of time, we can generate arbitrary elliptically symmetric distributions $f(J_1)$ and $f(J_2)$. The full distribution $f(J_1, J_2)$ depends on the path taken through $J_1$-$J_2$ space.
+
+We define *eigenpainting* as injection into only one mode. In other words, we move only along $J_1$ or $J_2$.
+
+![UPDATE](images/paint_diag.png){#fig-paint-diag width=200}
+
+We focus specifically on the choice 
+
+$$
+\begin{aligned}
+J_1(t) &= \tilde{J}_1 t , \\
+J_2(t) &= 0 ,
+\end{aligned}
+$$
+
+where $\tilde{J}_1$ is a maximum value of $J_1$. In normalized coordinates, the distribution will look like this:
+
+![Eigenpainting in normalized coordinates.](images/paint_eig_n.gif){#fig-paint-eig-n width=500px fig-align=left}
+
+The actual distribution will depend on $\mathbf{V}$, which encodes the structure of the accelerator lattice. @fig-paint-eig shows the result of painting into the SNS ring.
+
+![Eigenpainting in unnormalized coordinates.](images/paint_eig.gif){#fig-paint-eig width=500px fig-align=left}
+
+Notice that the accumulated distribution is stationary with respect to turn number. The only change is a global scaling factor as particles are added to the edge of the beam ellipse.
+
+Incredibly, this scheme works even if we include space charge forces in the dynamics.
+
+[Explain features of distribution.]
+
+
+## Vortex distributions for space charge mitigation {#sec-vortex}
 
 A *vortex distribution* is characterized by a spiral pattern in its velocity field.
 
-![Examples of vortex distributions.](images/vortex.png){#fig-vortex fig-align=center width=400px}
+![Examples of vortex distributions.](images/vortex.png){#fig-vortex fig-align=left width=400px}
 
 We will characterize the distribution using the concept of *emittance*, a measure of phase space volume. Emittances are functions of the covariance matrix $\mathbf{\Sigma}$:
 
@@ -123,66 +235,14 @@ Vortex distributions could also be used to mitigate space charge effects. Consid
 
 Space charge can also excite [nonlinear resonances](../2021-03-28_nonlinear-resonances) driven by the accelerator lattice. Space charge shifts the particle tunes based on the location in the bunch. For example, @fig-tunespread shows the tune spread within a Gaussian distribution. As the intensity increases, the tune spread grows and more particles enter forbidden regions of tune space. Thus, space charge essentially broadens the resonance stop-bands in the lattice. 
 
-![Tune spreads in increasingly nonuniform distributions. Source: @franchetti_2017_space.](images/tunespread.png){#fig-tunespread fig-align=center}
+![Tune spreads in increasingly nonuniform distributions. Source: @franchetti_2017_space.](images/tunespread.png){#fig-tunespread fig-align=left}
 
 It would be nice if we could generate a uniform-density bunch, which completely eliminates the tune spread.^[This is only true in the absence of coherent instabilities...] There is only one arangement of particles which projects to the desired density while maintaining a finite emittance: the KV distribution. The KV distribution is an equilibrium solution of the Vlasov-Poisson equations, which describe the self-consistent dynamics of the beam in response to external and self-generated forces. If we start with a KV distribution in the ring, it will maintain its functional form as it evolves. This is a remarkable fact that I don't have the space to discuss here. The point is that the KV distribution is an obvious target if we want to minimize the tune spread.
 
 The connection to vortex beams comes when we try to *paint* the KV distribution. It is *impossible* to paint a KV distribution in the presence of space charge. Well, not impossible: we can easily paint a completely *flat* KV distribution, i.e., a KV distribution with $\varepsilon_y = 0$ or $\varepsilon_x = 0$. But then we're back to the same problem: the flat beam will have enormous density and associate space charge forces. Again, we can play a trick: linearly map the flat KV distribution to a round, rotating distribution. It will turn out that we *can* paint the round, rotating distribution, which has zero four-dimensional emittance ($\varepsilon_2 \ll \varepsilon_1$) but still projects to a uniform density in the $x$-$y$ plane. I'll explain this more when defining the painting methods in the next section.
 
 
-## Eigenpainting {#sec-eigenpainting}
 
-![](images/corner_eig_ellipse.png)
-
-*Eigenpainting* is a method to paint a high-intensity vortex distribution. The method utilizes the eigenvector analysis of linear motion in an accelerator ring. Suppose the phase space coordinates $\mathbf{x}$ evolve according to
-
-$$
-\mathbf{x} \rightarrow \mathbf{Mx} ,
-$${#eq-one-turn-map}
-
-where $\rightarrow$ represents tracking through one period and $\mathbf{M}$ is a symplectic matrix. The eigenvectors of $\mathbf{M}$ solve
-
-$$
-\mathbf{Mv}_k = e^{-i\mu_k} \mathbf{v}_k ,
-$${#eq-label}
-
-where $k = 1, 2$. We can write the phase space coordinates as a linear combination of the eigenvectors:
-
-$$
-\mathbf{x} = \text{Re} \left\{ 
-    \sqrt{2 J_1}\mathbf{v}_1e^{-i\psi_1} + 
-    \sqrt{2 J_2}\mathbf{v}_2e^{-i\psi_2} 
-\right\},
-$${#eq-cvec}
-
-where $J_{1, 2}$ are initial amplitudes, $\psi_{1, 2}$ are initial phases, and $\text{Re}\{\dots\}$ selects the non-imaginary component. The transfer matrix simply adds a phase to each eigenvector.
-
-$$
-\mathbf{Mx} = \text{Re} \left\{ 
-    \sqrt{2 J_1}\mathbf{v}_1 e^{-i\left(\psi_1 + \mu_1\right)} + 
-    \sqrt{2 J_2}\mathbf{v}_2 e^{-i(\psi_2 + \mu_2)}
-\right\}.
-$${#eq-cvec_evolved}
-
-The real component of $\mathbf{v}_1$ traces an ellipse of area $2 J_1$. Similarly, the real component of $\mathbf{v}_2$ traces an ellipse of area $2 J_2$. If there is no coupling in the lattice (block-diagonal $\mathbf{M}$), the ellipses will be aligned with the $x$-$x'$ and $y$-$y'$ planes; otherwise the ellipses will have different orientations.
-
-Suppose we continuously inject particles at a fixed point in phase space. As the particles advance in phase, they become uniformly distributed on the ellipse traced by each eigenvector. Therefore, the final distribution depends only on the injection amplitudes, not the phases. By varying the amplitudes as a function of time, we can generate arbitrary elliptically symmetric distributions $f(J_1)$ and $f(J_2)$. The full four-dimensional distribution $f(J_1, J_2)$ will depend on the path taken through the $J_1$-$J_2$ space.
-
-*Eigenpainting* is the choice to inject along only one of the eigenvectors. In other words, we move only along $J_1$ or $J_2$.
-
-![UPDATE](images/paint_diag_abc.png){#fig-paint-diag}
-
-
-[Explain V matrix]
-
-
-In the normalized phase space, the distribution will look like this:
-
-![](images/paint_eig_n.gif){#fig-paint-eig-n width=500px fig-align=left}
-
-In the actual distribution will be a linear transformation of @fig-paint-flat. The specific form depends on the matrix $\mathbf{V}$. Here's one example:
-
-![](images/paint_eig.gif){#fig-paint-eig width=500px fig-align=left}
 
 
 
