@@ -1,0 +1,178 @@
+---
+title: "2025 ECRP abstracts"
+author: Austin Hoover
+date: 2026-01-29
+toc: false
+---
+
+The 2025 [ECRP](https://science.osti.gov/early-career) (Early Career Research Program) awards were just [announced](https://science.osti.gov/-/media/early-career/pdf/1ECRP-PubAbstracts-FY2025.pdf) by the DOE. A few accelerator- and plasma-related proposals:
+
+
+**Tailoring Phase Space Correlations for Future Accelerators** \
+Gwanghui Ha (Northern Illinois University)
+
+*Over the past several decades, phase space manipulation has been a key factor in advancing the
+performance of particle accelerators by enabling control over the spatial and momentum
+distributions of charged particle beams. Among various strategies, the control of correlations within
+phase space—such as between position and momentum or energy and time—has emerged as a
+critical tool for shaping beam properties to meet application-specific requirements. Most modern
+accelerator techniques rely on these correlations, yet existing methods are limited to linear or low-
+order polynomial forms. This constraint prevents access to more complex beam distributions that
+could significantly improve accelerators’ performance such as the luminosity of particle colliders or
+the efficiency of acceleration. The proposed project aims to establish a new framework for tailoring
+phase space correlations using cosine-basis approximations. This approach removes the
+limitations of traditional polynomial-based methods and enables precise control of nonlinear
+structures in phase space. The project will implement new modulation hardware and beamline
+configurations to realize these correlations experimentally, with demonstration goals that include
+improved wakefield acceleration efficiency, generation of high-brightness electron beams, and
+control of multidimensional phase space. These developments will address several priorities
+identified for particle colliders and in general accelerator R&D roadmaps and support future
+advances across a range of accelerator platforms.*
+
+
+**Maximizing Helium-3 Polarization at the Electron Ion Collider** \
+Kiel Hock (Brookhaven National Laboratory)
+
+*The Electron Ion Collider (EIC) at Brookhaven National Laboratory (BNL) will quantify the
+contribution of spin from quarks and gluons to the total angular momentum of nucleons. Polarized
+neutron beams and polarized proton beams are essential for this quantization. The most promising
+path to polarized neutron beams is the acceleration and storage of a polarized helium-3 beam.
+While polarized protons have been established at the Relativistic Heavy Ion Collider (RHIC) and its
+injectors for several decades, polarized helium-3 is undeveloped at RHIC or its injectors. The EIC
+will use the existing RHIC injectors, the Booster and Alternating Gradient Synchrotron (AGS), and
+repurpose the RHIC into the EIC’s Hadron Storage Ring (HSR). Due to properties of the helium-3
+nucleus relative to protons, helium-3 is more susceptible to polarization loss as it is accelerated.
+This project will investigate the polarization transmission of polarized helium-3 beams at the EIC
+hadron accelerator complex. Extensive simulations to optimize transmission in the Booster, the
+AGS, and the HSR will be performed, in addition to studies in the Booster and AGS. In the Booster
+and the AGS, the studies of polarized helium-3 will bring them to an energy that is three orders of
+magnitude higher than what has previously been achieved.*
+
+
+**Maximizing Electron Beam Intensity for High-Brightness Synchrotron Light Sources** \
+Aamna Khan (Brookhaven National Laboratory)
+
+*Next-generation synchrotron light sources promise unprecedented X-ray brightness, enabling
+transformative advances in materials, chemical, and biological sciences. However, achieving these
+brightness levels requires electron beams with particle densities significantly higher than in existing
+synchrotrons, leading to enhanced particle interactions within the beam and with accelerator
+surroundings, which can degrade beam quality and limit achievable X-ray brightness. To overcome
+these fundamental limits, this project advances the understanding of critical beam interactions—
+particularly intrabeam scattering and Touschek scattering—by using innovative theoretical
+approaches inspired by plasma physics. It further explores new techniques using multi-harmonic
+radiofrequency cavity systems designed to stretch electron bunches, thus reducing their particle
+density and enhancing stability. By integrating theory, advanced simulations, and experimental
+validation at Brookhaven National Laboratory’s National Synchrotron Light Source II (NSLS-II), in
+collaboration with other leading facilities, this research tackles critical limitations in beam
+intensity. The outcomes will support the Department of Energy’s goals, pushing forward the
+capabilities of future diffraction-limited synchrotron facilities and enabling groundbreaking
+scientific discoveries.*
+
+
+**Energy and Entropy in Nonthermal Turbulent Plasmas** \
+Vladimir Zhdankin (University of Wisconsin-Madison)
+
+*Energy and entropy are two of the most fundamental quantities in physics: energy is conserved but
+can be redistributed amongst different components of a system, while entropy (a measure of
+disorder) tends to increase according to the second law of thermodynamics. Together, these two
+quantities impose rigorous constraints on the possible dynamics of a complex system. However,
+their general relationship remains elusive in nonequilibrium systems such as collisionless plasmas,
+which do not relax to the expected thermal equilibrium (the state of maximum entropy). The
+proposed work attempts to quantify the relationship between energy and entropy in collisionless
+plasmas that experience turbulence, where conventional approaches from equilibrium statistical
+mechanics do not apply. Specifically, the project will use analytical theory and kinetic numerical
+simulations to address the following question: when energy is injected into a turbulent plasma,
+what happens to the entropy as the system relaxes to a nonthermal state? The research will explore
+generalizations to entropy and the laws of thermodynamics for magnetized, nonthermal plasmas.
+The kinetic turbulence simulations will incorporate: i) varying background magnetic fields, ii) weak
+Coulomb collisions, and iii) expanding/ compressing domains, to evaluate the generalized
+relationship between energy and entropy in a controlled setting. The results from this research will
+be applied to model nonthermal particle distributions arising from turbulent dissipation in several
+contexts, including laboratory experiments at the Wisconsin Plasma Physics Laboratory and space
+observation from NASA and other agency spacecraft missions.*
+
+
+**Structure-preserving data reduction and processing for particle representations** \
+Qi Tang (Georgia Institute of Technology)
+
+*Developing data reduction tools for large-scale particle datasets is essential to address the DOE
+Office of Science's network, storage, and computing needs in the exascale era. Unlike generic
+black-box compression methods, our proposed approach emphasizes preserving the intrinsic
+structures of particle data, thereby retaining critical kinetic physics with minimal information loss.
+We consider both static and dynamic particle datasets. The first thrust introduces a novel particle-
+based distribution representation that naturally bridges conventional particle representations and
+their moments, accompanied by a unique low-pass filter specifically designed for moment data.
+The second thrust addresses dynamic datasets through nonlinear, structure-preserving reduction
+techniques applicable to both dissipative and non-dissipative particle dynamics. Additionally, we
+will advance asymptotic-preserving model discovery by embedding multiscale structures explicitly
+into machine learning architectures, focusing especially on multiscale systems and closures for
+scale bridging. Our methodology will be validated using simulation and experimental datasets from
+DOE applications. Scalable deployment and open-source release of the resulting software
+packages are also critical objectives of this project. The outcomes of this project will broadly
+impact DOE mission areas, including fusion energy, accelerator physics, and nuclear physics.*
+
+
+
+**Precision Proton Tomography on a Euclidean Lattice** \
+Yong Zhao (Argonne National Laboratory)
+
+*A fundamental goal of nuclear physics is to uncover the origin of the proton's mass and spin, and to
+understand how the strong interaction governs the confined motion and spatial distribution of
+quarks and gluons within the nucleon. These questions can be profoundly informed by precise
+multi-dimensional imaging—tomography—of the proton, which lies at the heart of the scientific
+missions of the Thomas Jefferson National Accelerator Facility and the forthcoming Electron-Ion
+Collider at Brookhaven National Laboratory. The objectives of this research are to develop a novel
+theoretical framework for precise first-principles calculations of the nucleon’s multi-dimensional
+quark and gluon structure using lattice quantum chromodynamics (QCD), and to perform these
+calculations on high-performance supercomputers. Compared to existing methods, the new
+framework offers a key simplification that not only significantly improves numerical precision but
+also substantially reduces systematic uncertainties. By combining this framework with other
+recently developed precision-enhancing techniques in lattice QCD, this project will perform
+systematic calculations of multi-dimensional imaging observables that depend on the transverse
+momentum and spin of quarks and gluons. The results will enable the construction of precise
+three-dimensional images of the proton and reveal the contributions of quark and gluon spin, as
+well as orbital angular momentum, to the proton’s spin—thus providing essential theoretical
+guidance and support for current and future experiments.*
+
+
+**Chemical Vapor Deposited superconductors on Cu-based cavities for compact
+superconducting radio frequency accelerators**  \
+Shreyas Balachandran (Florida State University)
+
+*Superconducting radio frequency (SRF) technology enables the efficient conversion of radio
+frequency energy into beam energy, allowing for the production of high-power electron beams (e-
+beams). Currently, SRF technology, which uses pure niobium (Nb) with a superconducting
+transition temperature (Tc) of about 9.2 K, has been successfully developed for particle accelerators
+in nuclear and high-energy physics research. However, Nb-based accelerators operate at very low
+temperatures and require complex, large liquid helium (He) cooling systems, posing a significant
+barrier to the broader adoption of this superconducting technology. Using higher
+Tc superconductors in SRF accelerators, along with more accessible highly conducting copper-
+based materials, can eliminate the need for continuous liquid He cooling, resulting in more
+compact accelerator systems. A smaller SRF-based accelerator will revolutionize existing e-beam
+irradiation technologies, including applications in the food industry, medical device sterilization,
+wastewater treatment, and others.
+This project will develop techniques to deposit high-quality, high-Tc compound Nb3X (X = Sn, Ge,
+Al) superconducting films on copper-based cavities while addressing fundamental material defect
+limitations. Chemical vapor deposition (CVD), a scalable technique, will be used to deposit a high-
+temperature superconducting film (Tc > 18 K) less than 2 microns thick on high-conductivity copper
+substrates. This work will build on current advances and improve our understanding of the trade-
+offs and fundamental limits of thin film depositions for SRF applications. The project will actively
+involve industry stakeholders in translating basic research results and techniques into complex
+accelerator shapes for larger-scale commercial deployment.*
+
+
+**Discovery of new physics using electron scattering at JLab and EIC** \
+Ciprian Gal (Thomas Jefferson National Accelerator Facility)
+
+*Nuclear physics addresses fundamental questions about the universe, including how atomic nuclei
+can reveal physics beyond the Standard Model. This project advances research at two premier
+facilities: the Thomas Jefferson National Accelerator Facility (JLab) and the Electron-Ion Collider
+(EIC). At JLab, the MOLLER experiment will test electron interaction theory with unmatched
+precision. Secondly, the PREX puzzle, involving lead nuclei, will be investigated through
+measurements of transverse asymmetries in medium-Z nuclei. At the EIC, objectives involve
+enhancing capabilities and exploring new physics observables in collaboration with theoretical and
+experimental communities. Critical to achieving research goals at both facilities is the
+advancement of Compton polarimetry. This award supports the development of a new photon
+detector to enable a full three-dimensional understanding of high-energy electron beam
+polarization. The device will be the first in the world to offer this capability and will enhance the
+physics reach of JLab.*
