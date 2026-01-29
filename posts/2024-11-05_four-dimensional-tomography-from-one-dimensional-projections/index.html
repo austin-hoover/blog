@@ -46,9 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-aaa6d8e3e6106d34fab33260610a3c53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-b4535009f682d1529ee74e8fdbdc8aeb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-aaa6d8e3e6106d34fab33260610a3c53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-2cbeed5b9d3cb5b7b1f824a7ec2e5661.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-874c2a7d62fbe9259cf2ed69da126713.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-2cbeed5b9d3cb5b7b1f824a7ec2e5661.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -406,7 +406,7 @@ Figure&nbsp;1: (Click to enlarge.)
 <p>Each signal is a one-dimensional projection of the four-dimensional phase space distribution <span class="math inline">\(f(x, x', y, y')\)</span>, where <span class="math inline">\(x'\)</span> and <span class="math inline">\(y'\)</span> are the momentum coordinates. In an older <a href="https://arxiv.org/abs/2204.08303">study</a>, I found that we could use the variance of each signal to nail down the <span class="math inline">\(4 \times 4\)</span> covariance matrix <span class="math inline">\(\Sigma\)</span>. Reconstructing the full distribution is a natural next step.</p>
 <p>A key finding in that older study was that the nominal optics lead to an ill-conditioned least-squares problem when computing the covariance matrix. I solved this by adding another set of optics. There isn’t much wiggle room in the wire scanner region (due to shared quadrupole power supplies and beam size constraints), but I found another working point that led to a better-conditioned problem. In our experiment, we measured the beam with the nominal optics, modified optics, and one additional set of optics, generating 36 profiles.</p>
 <p>I started by fitting the covariance matrix to the measured signal variances (<span class="math inline">\(\langle xx \rangle, \langle yy \rangle, \langle uu \rangle\)</span>). <a href="#fig-cov" class="quarto-xref">Figure&nbsp;2</a> shows a tight fit to the data. Using standard least-squares error propagation, I estimated a low sensitivity to errors.</p>
-<div id="fig-cov" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" width="65%">
+<div id="fig-cov" class="quarto-float quarto-figure quarto-figure-left anchored" width="65%" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cov-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="images/fig_cov.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: "><img src="images/fig_cov.png" id="fig-cov" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:65.0%"></a>
@@ -418,7 +418,7 @@ Figure&nbsp;2
 </div>
 <p>Next, I used MENT to reconstruct the distribution. MENT updates a prior <span class="math inline">\(f_*(x, x', y, y')\)</span> to a posterior <span class="math inline">\(f(x, x', y, y')\)</span> by maximizing the entropy of <span class="math inline">\(f\)</span> relative to <span class="math inline">\(f_*\)</span>. This ensures the posterior is as simple as possible relative to the prior. A uniform prior often makes sense, but we’ve already estimated the covariance matrix from the least-squares fit, and we don’t want to ignore this information. One could imagine starting from a uniform prior and running MENT with the measured covariance matrix as a constraint. The result is a Gaussian distribution. So I used a Gaussian prior with the measured covariance matrix.</p>
 <p>Here are the reconstruction results. First, the measured profiles (black points) compared to the simulated/predicted profiles:</p>
-<div id="fig-profiles" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" width="75%">
+<div id="fig-profiles" class="quarto-float quarto-figure quarto-figure-left anchored" width="75%" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="images/fig_profiles.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: "><img src="images/fig_profiles.png" id="fig-profiles" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:75.0%"></a>
@@ -429,7 +429,7 @@ Figure&nbsp;3
 </figure>
 </div>
 <p>Perfect agreement. The log-scale plots show agreement in low-density regions as well:</p>
-<div id="fig-profiles-log" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" width="75%">
+<div id="fig-profiles-log" class="quarto-float quarto-figure quarto-figure-left anchored" width="75%" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-profiles-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="images/fig_profiles_log.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: "><img src="images/fig_profiles_log.png" id="fig-profiles-log" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:75.0%"></a>
@@ -441,7 +441,7 @@ Figure&nbsp;4
 </div>
 <p>I’m not sure what’s causing the shoulders in the vertical (<span class="math inline">\(y\)</span>) profiles; it might be cross-talk between wires. But this is an encouraging result. It means we might be able to study halo formation in the ring by improving the wire scanner dynamic range.</p>
 <p>Here are the 2D projections of the 4D distribution that generated those profiles:</p>
-<div id="fig-proj2d" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" width="75%">
+<div id="fig-proj2d" class="quarto-float quarto-figure quarto-figure-left anchored" width="75%" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-proj2d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="images/fig_proj2d.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: "><img src="images/fig_proj2d.png" id="fig-proj2d" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:75.0%"></a>
@@ -452,7 +452,7 @@ Figure&nbsp;5
 </figure>
 </div>
 <p>I didn’t say much about this figure in the paper because I was focused on the measurement, not the physics. But note that running the same measurement with a different injection painting scheme yields a much different result (<a href="#fig-exp02-proj2d" class="quarto-xref">Figure&nbsp;6</a>). In both cases, the reconstructed distribution is close to what we expected based on simulations.</p>
-<div id="fig-exp02-proj2d" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" width="75%">
+<div id="fig-exp02-proj2d" class="quarto-float quarto-figure quarto-figure-left anchored" width="75%" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-exp02-proj2d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="images/fig_exp02_proj2d.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: "><img src="images/fig_exp02_proj2d.png" id="fig-exp02-proj2d" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:75.0%"></a>
@@ -494,7 +494,7 @@ Figure&nbsp;6
 </div>
 <p>It looks like most 2D features are captured by the MENT distribution. That’s good news for our experiments: 2D features tell us a lot about the beam. There’s more uncertainty in the cross-plane projections, such as <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> and <span class="math inline">\(x'\)</span>-<span class="math inline">\(y'\)</span>, but the uncertainty isn’t enormous.</p>
 <p>A closer look shows that the internal 4D structure is incorrect for the Waterbag and Hollow distributions. See <a href="#fig-slice" class="quarto-xref">Figure&nbsp;7</a>, which shows the 1D projections within a 3D ball in the unplotted coordinates. As the ball shrinks, we approach a 1D slice through the 4D density. You can see that the MENT posterior is uniform, not hollow. Note that both distributions match the data <em>exactly</em>.</p>
-<div id="fig-slice" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" width="65%">
+<div id="fig-slice" class="quarto-float quarto-figure quarto-figure-left anchored" width="65%" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-slice-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="images/fig_sim_slice_sphere_all.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: "><img src="images/fig_sim_slice_sphere_all.png" id="fig-slice" class="img-fluid quarto-figure quarto-figure-left anchored figure-img" style="width:65.0%"></a>

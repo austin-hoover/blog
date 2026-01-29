@@ -26,6 +26,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2026-01-29_ecrp/index.html",
       "/posts/2025-12-11_stalin-waiting-for-hitler/index.html",
       "/posts/2025-12-07_stalin-paradoxes-of-power/index.html",
       "/posts/2025-09-27_coupled-tune-estimation/index.html",
@@ -159,31 +160,11 @@
     "items": []
   },
   {
-    "listing": "/posts/2024-11-13_keynote-break-apart/index.html",
+    "listing": "/posts/2026-01-29_ecrp/index.html",
     "items": []
   },
   {
-    "listing": "/posts/2025-03-20_applying-6d-ment-to-data/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2023-07-10_fine-tuning/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-10-30_n-dimensional-ment-particle-sampling/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-03-21_cross-validation-as-uncertainty-quantification/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-06-09_mentflow-part2/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/eigenpainting-prl/index.html",
+    "listing": "/posts/2024-10-13_impact/index.html",
     "items": []
   },
   {
@@ -191,7 +172,31 @@
     "items": []
   },
   {
-    "listing": "/posts/2024-10-13_impact/index.html",
+    "listing": "/posts/eigenpainting-prl/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-06-09_mentflow-part2/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-03-21_cross-validation-as-uncertainty-quantification/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-10-30_n-dimensional-ment-particle-sampling/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2023-07-10_fine-tuning/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-03-20_applying-6d-ment-to-data/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-11-13_keynote-break-apart/index.html",
     "items": []
   },
   {
