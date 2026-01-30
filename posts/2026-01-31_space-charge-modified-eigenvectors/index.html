@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Austin Hoover">
+<meta name="dcterms.date" content="2026-01-31">
 
-<title>Notes – Austin’s Blog</title>
+<title>Space-charge-modifed eigenvectors for improved eigenpainting? – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,30 +25,33 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2cbeed5b9d3cb5b7b1f824a7ec2e5661.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-874c2a7d62fbe9259cf2ed69da126713.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-2cbeed5b9d3cb5b7b1f824a7ec2e5661.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2cbeed5b9d3cb5b7b1f824a7ec2e5661.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-874c2a7d62fbe9259cf2ed69da126713.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-2cbeed5b9d3cb5b7b1f824a7ec2e5661.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,9 +89,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-date-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -314,7 +319,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Austin’s Blog</span>
     </a>
   </div>
@@ -325,15 +330,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"> 
+    <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../notes/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
@@ -355,14 +360,26 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Notes</h1>
-</div>
+<h1 class="title">Space-charge-modifed eigenvectors for improved eigenpainting?</h1>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Austin Hoover </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 31, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -372,117 +389,102 @@ window.Quarto = {
 </header>
 
 
+<p>In our <a href="../2026-01-30_eigenpainting-prl">eigenpainting experiment</a> at the SNS, we measured final intrinsic emittance <span class="math inline">\(\varepsilon_1 = 12.4\)</span> and <span class="math inline">\(\varepsilon_2 = 5.1\)</span> (mm mrad), giving a ratio <span class="math inline">\(\varepsilon_1 / \varepsilon_2 = 2.4\)</span>. The beam intensity was <span class="math inline">\(I = I_0 = 600\)</span> minipulses, with each minipulse containing around <span class="math inline">\(1.5 \times 10^{14}\)</span> protons within an emittance <span class="math inline">\(\varepsilon_1 = \varepsilon_2 \approx 0.25\)</span> [mm mrad]. Here are the simulated beam distributions and emittances as the intensity increases:</p>
+<div id="fig-scale-dist" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scale-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/scale_intensity_dist.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: 2D distributions in normalized phase space (top/bottom shows first/second mode). Intensity varies across columns."><img src="images/scale_intensity_dist.png" height="250" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scale-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: 2D distributions in normalized phase space (top/bottom shows first/second mode). Intensity varies across columns.
+</figcaption>
+</figure>
+</div>
+<div id="fig-scale-eps" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scale-eps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/scale_intensity_eps.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Intrinsic emittances \varepsilon_{1, 2} during accumulation."><img src="images/scale_intensity_eps.png" height="250" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scale-eps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Intrinsic emittances <span class="math inline">\(\varepsilon_{1, 2}\)</span> during accumulation.
+</figcaption>
+</figure>
+</div>
+<p>The simulation without space charge predicts <span class="math inline">\(\varepsilon_1 = 4.2\)</span> and <span class="math inline">\(\varepsilon_2 = 0.25\)</span>, or a ratio of 16. This means there was a large growth of the four-dimensional emittance <span class="math inline">\(\varepsilon_{4D} = \varepsilon_1 \varepsilon_2\)</span> in our experiment.</p>
+<p>I mentioned that we didn’t consider the effect of space charge on the eigenvectors. The linear component of the space charge force modifies the transfer matrix <span class="math inline">\(\mathbf{M}\)</span> to an effective transfer matrix <span class="math inline">\(\hat{\mathbf{M}}\)</span>. Tracking a particle through the linear lattice + linear space charge kicks is the same as just applying <span class="math inline">\(\hat{\mathbf{M}}\)</span> to the initial coordinates. For a special set of initial beam parameters, <span class="math inline">\(\hat{\mathbf{M}}\)</span> represents a periodic focusing system. This occurs when <span class="math inline">\(\mathbf{\Sigma} = \hat{\mathbf{M}} \mathbf{\Sigma} \hat{\mathbf{M}}^T\)</span>, where <span class="math inline">\(\mathbf{\Sigma}\)</span> is the beam covariance matrix. We want to paint along an eigenvector of <span class="math inline">\(\hat{\mathbf{M}}\)</span>, not <span class="math inline">\(\mathbf{M}\)</span>.</p>
+<p><a href="#fig-scale-env" class="quarto-xref">Figure&nbsp;3</a> plots the two-dimensional projections of the matched covariance matrix (“envelope”) as the beam intensity ramps from 0 to 200 minipulses. I had trouble finding a matched solution beyond 200 minipulses, which may indicate an envelope instability. The depressed tune crosses the integer already at 100 minipulses.</p>
+<div id="fig-scale-env" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scale-env-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/match_env_corner.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Matched envelope for varying beam intensities."><img src="images/match_env_corner.png" class="img-fluid figure-img" width="500"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scale-env-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Matched envelope for varying beam intensities.
+</figcaption>
+</figure>
+</div>
+<p>Each solution is calculated with a fixed intrinsic emittances <span class="math inline">\(\varepsilon_1 = 4.24\)</span> and <span class="math inline">\(\varepsilon_2 = 0\)</span>. It’s interesting that the <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> distribution doesn’t change much with intensity. That’s good news for us because our main limitation is the angular coordinate, which is limited to <span class="math inline">\(y' \approx 1\)</span> mrad. It looks like we could paint this matched solution.</p>
+<p>It’s not really necessary to calculate the modified eigenvectors, since <a href="#fig-scale-env" class="quarto-xref">Figure&nbsp;3</a> shows that the painting path is a line in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y'\)</span> plane. I ran a quick simulation, painting along the line <span class="math inline">\(\mathbf{x} = (20, 0, 0, 1.1)\)</span> and using a 2D PIC model for the transverse space charge kicks. Results are in <a href="#fig-new-eig" class="quarto-xref">Figure&nbsp;4</a>.</p>
+<div id="fig-new-eig" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-new-eig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-new-eig" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-new-eig-a" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-new-eig-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/sim_eig.png" class="lightbox" data-gallery="fig-new-eig" title="Figure&nbsp;4&nbsp;(a): Lattice eigenvector."><img src="images/sim_eig.png" class="img-fluid figure-img" data-ref-parent="fig-new-eig"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-new-eig-a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Lattice eigenvector.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-new-eig" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-new-eig-b" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-new-eig-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/sim_eig_mod.png" class="lightbox" data-gallery="fig-new-eig" title="Figure&nbsp;4&nbsp;(b): Space-charge-modified eigenvector."><img src="images/sim_eig_mod.png" class="img-fluid figure-img" data-ref-parent="fig-new-eig"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-new-eig-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Space-charge-modified eigenvector.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-eig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Eigenpainting simulation using lattice and space-charge-modified eigenvectors. 2D PIC space charge solver.
+</figcaption>
+</figure>
+</div>
+<p>The final emittance ratio is <span class="math inline">\(\varepsilon_1 / \varepsilon_2 \approx 4\)</span> using the lattice eigenvector and <span class="math inline">\(\varepsilon_1 / \varepsilon_2 \approx 12\)</span> using the modified eigenvector. <a href="#fig-new-eig-b" class="quarto-xref">Figure&nbsp;4 (b)</a> shows a beautiful, nearly uniform density in the first mode. I’ll need to rerun these simulations with a more realistic space charge solver and other effects included for a better estimate, but these are great results!</p>
+<p><a href="https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.132.205001">Luo et al.</a> recently “demonstrated a large transverse emittance ratio of 11∶1 with gold ion beams at a particle energy of 100 GeV per nucleon, thanks to stochastic cooling and fine decoupling” at RHIC. (The cooling takes hours.) <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.16.061002">Burov</a> writes,</p>
+<blockquote class="blockquote">
+<p>To have a high ratio of the emittances, the beam has to be injected predominantly into one of the circular modes, keeping another emittance as small as possible. This could be done by means of multiturn painting with a small-emittance beam from a linac: the emittance ratio is determined then by a number of injection turns. Most likely, emittance ratio &gt;10 would require the space charge to be taken into account at injection: otherwise a space charge related mismatch would heat the smaller emittance preventing having it that small. For a not so high emittance ratio, like 10 or so, this mismatch, probably can be ether neglected or compensated on average only. To inject into a truly space charge self-consistent state [8], allowing emittance ratio 20 or higher, the inductive synchrotron can be used [9].</p>
+</blockquote>
+<p>If a ratio of 10 is possible in the near future, there’s good reason to think we could reach 20 or higher with stronger kickers. The emittance ratio increases linearly with time, or equivalently with the maximum injection amplitude. So if we could just increase the <span class="math inline">\(y'\)</span> limit from 1 mrad to 2 mrad, we would double the emittance ratio. For some perspective, the projected emittances in these simulations are around 5 mm mrad, but the nominal emittance during SNS operations is like 25 mm mrad, so we’re nowhere near the beam size limit.</p>
+<p>I also compared my simulation to the simulation reported <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.124403">here</a>, which used a lower beam energy, different intensity, and larger painting amplitude. <a href="#fig-compare" class="quarto-xref">Figure&nbsp;5</a> looks pretty close to me. It looks like Jeff happened to land near the modified eigenvector without trying to.</p>
+<div id="fig-compare" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-compare-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/compare.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: Comparison between my simulation and the simulation from Holmes et al."><img src="images/compare.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-compare-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Comparison between my simulation and the simulation from <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.124403">Holmes et al.</a>
+</figcaption>
+</figure>
+</div>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table table-hover">
-<thead>
-<tr>
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
 
-<th>
-Title
-</th>
-
-<th>
-Date
-</th>
-
-<th>
-Modified
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-date-sort="1672549200000" data-listing-file-modified-sort="1769449593406" data-listing-date-modified-sort="1767243600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Books" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="../notes/books/index.html" class="title listing-title">Books</a>
-</td>
-<td>
-<span class="listing-date">2023‑01‑01</span>
-</td>
-<td>
-<span class="listing-date-modified">2026‑01‑01</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-date-sort="1767243600000" data-listing-file-modified-sort="1769451392348" data-listing-date-modified-sort="1768021200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="2" data-listing-title-sort="Blogs" data-listing-filename-sort="blogs.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="../notes/blogs.html" class="title listing-title">Blogs</a>
-</td>
-<td>
-<span class="listing-date">2026‑01‑01</span>
-</td>
-<td>
-<span class="listing-date-modified">2026‑01‑10</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-date-sort="1704085200000" data-listing-file-modified-sort="1769449641564" data-listing-date-modified-sort="1704085200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="54" data-listing-title-sort="People" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="../notes/people/index.html" class="title listing-title">People</a>
-</td>
-<td>
-<span class="listing-date">2024‑01‑01</span>
-</td>
-<td>
-<span class="listing-date-modified">2024‑01‑01</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-date-sort="1672549200000" data-listing-file-modified-sort="1769718874532" data-listing-date-modified-sort="1769662800000" data-listing-reading-time-sort="1" data-listing-word-count-sort="158" data-listing-title-sort="Web" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="../notes/web/index.html" class="title listing-title">Web</a>
-</td>
-<td>
-<span class="listing-date">2023‑01‑01</span>
-</td>
-<td>
-<span class="listing-date-modified">2026‑01‑29</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-date-sort="1672549200000" data-listing-file-modified-sort="1769449603899" data-listing-date-modified-sort="1704085200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Philosophy Papers" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="../notes/papers-philosophy/index.html" class="title listing-title">Philosophy Papers</a>
-</td>
-<td>
-<span class="listing-date">2023‑01‑01</span>
-</td>
-<td>
-<span class="listing-date-modified">2024‑01‑01</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-date-sort="1769403600000" data-listing-file-modified-sort="1769449619336" data-listing-date-modified-sort="1769403600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="2" data-listing-title-sort="STEM papers" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="../notes/papers-stem/index.html" class="title listing-title">STEM papers</a>
-</td>
-<td>
-<span class="listing-date">2026‑01‑26</span>
-</td>
-<td>
-<span class="listing-date-modified">2026‑01‑26</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
+</div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -898,7 +900,71 @@ Modified
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "austin-hoover/blog";
+    script.dataset.repoId = "R_kgDOLpju-A";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOLpju-M4C09wV";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
