@@ -4,20 +4,20 @@
     "items": []
   },
   {
-    "listing": "/notes/posts.html",
+    "listing": "/notes/people/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/collisionless-relaxation.html",
     "items": [
       "/notes/blogs.html",
       "/notes/books/index.html",
       "/notes/index.html",
-      "/notes/people/index.html",
       "/notes/papers-philosophy/index.html",
       "/notes/papers-stem/index.html",
+      "/notes/people/index.html",
       "/notes/web/index.html"
     ]
-  },
-  {
-    "listing": "/notes/blogs.html",
-    "items": []
   },
   {
     "listing": "/notes/books/index.html",
@@ -310,11 +310,12 @@
       "/notes/people/index.html",
       "/notes/web/index.html",
       "/notes/papers-philosophy/index.html",
-      "/notes/papers-stem/index.html"
+      "/notes/papers-stem/index.html",
+      "/notes/collisionless-relaxation.html"
     ]
   },
   {
-    "listing": "/notes/people/index.html",
+    "listing": "/notes/blogs.html",
     "items": []
   },
   {
