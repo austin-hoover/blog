@@ -1,5 +1,5 @@
 ---
-title: "Space-charge-modified eigenvectors for improved eigenpainting"
+title: "Space-charge-modifed eigenvectors for improved eigenpainting?"
 author: Austin Hoover
 date: 2026-01-31
 toc: false
