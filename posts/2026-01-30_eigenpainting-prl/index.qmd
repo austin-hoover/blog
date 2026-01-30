@@ -10,7 +10,7 @@ categories:
 draft: false
 format:
   html:
-    toc: false
+    toc: true
     toc-expand: 1
     number-sections: true
     fig-align: left
@@ -315,4 +315,6 @@ If I turn off space charge in the simulation, the final emittance ratio is nearl
 
 There were four major components of this work (i) establishing the connection between the proposed painting scheme and the eigenvector analysis of linear motion, which we now understand quite well; (ii) programming the kicker waveforms and measuring the injected phase space coordinates in the control room; and (iii) measuring the reconstructing the accumulated phase space distribution from one-dimensional measurements; (iv) comparing the simulated beam distribution to the reconstruction data. In hindsight, it was a lot of work, extending all the way back to my PhD a few years ago.
 
-Since writing the paper, we've been encouraged about the possibility of improving on our results. The emittance ratio $\varepsilon_1 / \varepsilon_2 = 2.4$ is a lot smaller than we hoped for based on previous simulation studies. What happened? I've learned a few things from looking at our PIC runs. First, the space charge tune shift in our experiment was *huge*.
+Since writing the paper, we've been encouraged about the possibility of improving on our results. The emittance ratio $\varepsilon_1 / \varepsilon_2 = 2.4$ is a lot smaller than we hoped for based on previous simulation studies. What happened? I've learned a few things from looking at our PIC runs. First, the space charge tune shift was *huge* in our experiment. Lowering the energy from 1.3 GeV to 0.8 GeV increases the tune shift by a factor of 2.5 based on the inverse scaling of space charge with energy. We also painted a very small beam because of our kicker limitations. I estimate that the tunes shifted well velow the integer resonance $\nu = 6.0$. Subsequent analysis has shown instability of the beam envelope above ~300 minipulse intensity for the targeted emittance. I believe this instability may have been excited during the early stages of injection, creating a major change in the beam density. In any case, the dynamics near the integer resonance could be complicated, and I need to spend more time analyzing the simulation to understand what's going on. The situation can probably improved by simply changing the lattice optics, which will require offline optimization. But the obvious next step is to lower the beam intensity to ~200 minipulses.
+
+Second, we didn't account for space charge's effect on the lattice eigenvectors. Since the experiment, I've found that space charge has a major but predictable effect, and that painting into this modified eigenvector, we could reach a much larger emittance ratio, perhaps up to $\varepsilon_1 / \varepsilon_2 \approx 12$. 
