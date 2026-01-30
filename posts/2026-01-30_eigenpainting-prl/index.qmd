@@ -110,10 +110,12 @@ $$
 \end{bmatrix}.
 $${#eq-label}
 
+The normalized phase space coordinates trace circles of area $2 J_k$. The cross-plane coordinates fill in a square because there is no coupling in the normalized frame and because they oscillate at different frequencies.
+
 ![Normalized tracking data.](images/track_norm.png){#fig-track-norm fig-align=center width=450px}
 
 
-### Single-mode injection
+### Single-mode injection painting
 
 The idea behind eigenpainting is to inject particles into only one mode, i.e., along only one of the eigenvectors. Suppose we continuously inject particles at a fixed amplitude $J_1$ and phase $\psi_1$. The injected particles will advance in phase, eventually filling the ellipse traced by the eigenvector. If we inject particles at a different amplitude, the particles will fill a larger or smaller ellipse. Thus, by varying the injection amplitude as a function of time, we can build any elliptically symmetric distribution $f(J_1)$.
 
@@ -246,7 +248,7 @@ $${#eq-cov-uncoupled}
 The projected emittances define the rms ellipse areas in the $x$-$x'$ and $y$-$y'$ planes. Thus, the projected emittance ratio $\varepsilon_x / \varepsilon_y$ tells us the fraction of particles that occupy the horizontal mode compared to the vertical mode of oscillation. The intrinsic emittances have a similar interpretation. The intrinsic emittance ratio $\varepsilon_1 / \varepsilon_2$ tells us the fraction of particles that occupy one mode compared to another mode of oscillation, where the modes are defined by the symplectic matrix $\mathbf{V}$ in @eq-cov-diag. For example, if $\mathbf{V}$ is the identity matrix, then the two modes correspond to $x$ and $y$. In general, the modes correspond to *elliptical* trajectories in the $x$-$y$ plane. For example, the particles in @fig-vortex predominantly occupy one elliptical mode.
 
 
-### Vortex distributions for high-energy colliders
+### Flat beams for high-energy colliders
 
 The eigenpainted beam has a very large ratio of *intrinsic* emittances: $\varepsilon_1 \gg \varepsilon_2$; therefore, the particle motion is dominated by a single elliptical mode. I'll call this a *vortex distribution* referring to the spiral pattern of the velocity field.^[Vortex distributions have high [vorticity](https://en.wikipedia.org/wiki/Vorticity).] Note that a vortex distribution can have any distribution in the $x$-$y$ plane: the important part is the velocity. 
 
@@ -266,7 +268,7 @@ Vortex distributions could also be used to mitigate space charge effects. Consid
 ![Fourth-order resonance suppression from angular momentum in a bunched beam. Particles in the spinning beam avoid direct passage through the oscillating beam core. Source: @cheon_2022_spinning.](images/fourth.png){#fig-fourth}
 
 
-### Tune spread minimization
+### Vlasov-Poisson equilibrium and tune spread minimization
 
 The two applications above do not depend on the spatial density of the bunch; they only require a large intrinsic emittance ratio. We could generate such a beam with a nonlinear scaling of the injection amplitude in @eq-eigpaint (ignoring space charge, which will tend to pull the emittances together). There is an additional application if we can maintain a uniform beam density: the reduction of tune spread. Space charge shifts the particle tunes (frequencies) based on their location in the bunch. For example, @fig-tunespread shows the tune spread within a Gaussian distribution. As the intensity increases, the tune spread grows. The danger is that the tunes cross [nonlinear resonances](../2021-03-28_nonlinear-resonances) driven by nonlinearities in the accelerator lattice. So, at least in this simple model, a smaller tune spread is better.^[This is only true in the absence of coherent instabilities...] 
 
@@ -278,38 +280,39 @@ The KV distribution is the only arrangement of particles that gives the desired 
 
 
 
-## Experimental implementation of eigenpainting  {#sec-exp}
+
+## Experimental test of eigenpainting at the SNS  {#sec-exp}
 
 With all that background out of the way, I'll move on to our experiment at the SNS. 
 
-In @holmes_2018_injection, [Jeff Holmes](https://web.ornl.gov/~holmesja1/JHolmes/interests.html) ran simulations of the proposed method in the SNS ring.^[it wasn't labeled ask *eigenpainting* at that point. We made the explicit connection to eigenvectors later.] 
-
-![](images/sim_hb_2021.png){#fig-hb width=500px fig-align=center}
-
+In @holmes_2018_injection, [Jeff Holmes](https://web.ornl.gov/~holmesja1/JHolmes/interests.html) ran simulations of the proposed method in the SNS ring.^[it wasn't labeled ask *eigenpainting* at that point. We made the explicit connection to eigenvectors later.] He found that even with nonlinearities included, eigenpainting generated a relatively uniform beam profile and strong cross-plane correlations. This motivated our experimental program to implement eigenpainting in real life ("in the control room").
 
 The basic setup is shown in @fig-sns. Eight dipole "kicker" magnets control the phase space coordinates at the injection point. Our goal was to program these kicker magnets to trace the correct path in phase space during injection, then measure the accumulated distribution.
 
 ![Overhead view of the SNS accelerator.](images/sns.png){#fig-sns fig-align=center}
 
-We directly control the kicker waveforms, not the injection point, so we needed a way to map kicker amplitudes (kV) to phase space coordinates. We measured the coordinates indirectly by injecting a single minipulse in the ring and using a set of beam position monitors (BPMs) to record its turn-by-turn centroid position, then fitting a linear model to the data. One complication is that each particle in the minipulse has a slightly different energy, and therefore slightly different tune. the effect of the energy spread is to smear the particles around each eigenvector ellipse (recall @fig-track-ellipse), eventually sending the *average* particle position to zero. This is called *chromatic damping*. The damping occurs over around 100 turns, and we have a pretty model of it, so we just add the damping time as a fit parameter and everything's fine.
+Real life is more complicated than simulations. One difficulty is that the SNS kickers aren't that strong; they can't deliver the large angular kicks required to paint along the eigenvector. Jeff played a trick by lowering the energy from 1 GeV to 600 MeV, greatly increasing the effective kicker strength in terms of radians per volt. In real life, we were only able to lower the energy to 800 MeV because of issue with the SNS timing system. That means we had to work with smaller angular kicks and, therefore, a smaller beam emittance. (When we derived eigenpainting, we assumed the minipulse was much smaller than the final beam.)
 
-The next step is to calibrate the change in kicker voltage with a change in phase space coordinates.^[This works pretty well, but there is still some error after the calibration, so we have to a lot of fiddling around by hand to obtain a specified set of phase space coordinates. Future work should automate this process.] Once that's done, we can find the kicker amplitudes corresponding to the initial and final point of the injection. The initial BPM waveform is shown in the middle column of @fig-exp-bpm; the right column shows the final waveform. The initial coordinates 
+Another difficulty is that we don't directly control the injection coordinates; we instead control the kicker waveforms. So we needed a way to map kicker amplitudes (V) to phase space coordinates (m, rad). We measured the coordinates indirectly by injecting a single minipulse in the ring and using a set of beam position monitors (BPMs) to record the turn-by-turn centroid position, then fitting a linear model to the data. Each particle in the minipulse has a slightly different energy, and therefore slightly different tune, causing the particles to spread around each eigenvector ellipse (recall @fig-track-ellipse) and eventually sending the *average* particle position to zero. This is called *chromatic damping*. The damping occurs over around 100 turns, and we have a pretty model of it, so we just add the damping time as a fit parameter and everything's fine. Repeating the measurement at different kicker amplitudes builds a map from kicker amplitudes to phase space coordinates. Once that's done, we try to find the kicker amplitudes corresponding to the initial and final injection points. 
+
+The measured BPM waveform at the initial kicker settings is shown in the middle column of @fig-exp-bpm; the right column shows the final settings. The grey curve is the linear model fit, with the blue curve showing the mode-1 component and the red curve showing the mode-2 component. In the initial waveform, the amplitude should be as close to zero as possible. You can see that it's not actually zero, but it's smaller than the final amplitude; this is something we want to correct in future experiments. In the final amplitude, notice that the mode-1 frequency dominates over mode-2, as expected if we inject mostly into a single mode. Compare to the left figure, where both modes are present.
 
 ![](images/exp_bpm.png){#fig-exp-bpm fig-align=center}
 
+After all this setup, we used a square-root waveform to connect the initial and final kicker voltages ran the full beam accumulation over 600 turns. Unlike the simulation, we can't directly measure the four-dimensional phase space distribution in the ring. I therefore applied the MENT algorithm to reconstruct the distribution from one-dimensional profiles of the extracted beam. The reconstruction is an inference from incomplete data, so there is some uncertainty in the results, but we're pretty confident in the major features of the reconstruction. (See @hoover_2024_four for details.) 
+
+@fig-exp-dist shows the reconstructed distrubtion in normalized coordinates (@eq-sigma-eig}, projected onto the two-dimensional phase planes. The second two rows show a simulated distribution.
+
+![Reconstructed distribution in normalized phase space coordinates.](images/exp_dist.png){#fig-exp-dist width=400px fig-align=center}
+
+Compare @fig-exp-dist to @fig-paint-eig-n. Ideally, the mode-1 projection would be a uniform disk and the mode-2 projection would be small Gaussian blob. These features are qualitatively reproduced in simulation (although there are definitely differences that should be resolved). While our beam deviates from this ideal case, we do see increased uniformity in the mode-1 projection. The mode-1 emittance is also larger than the mode-2 emittance; we measured an emittance ratio of around 2.4, close to the simulated value of 2.3. 
+
+If I turn off space charge in the simulation, the final emittance ratio is nearly 16. So there is a large emittance growth at some point during accumulation.
 
 
 
+## Conclusions and future work  {#sec-conclusion}
 
+There were four major components of this work (i) establishing the connection between the proposed painting scheme and the eigenvector analysis of linear motion, which we now understand quite well; (ii) programming the kicker waveforms and measuring the injected phase space coordinates in the control room; and (iii) measuring the reconstructing the accumulated phase space distribution from one-dimensional measurements; (iv) comparing the simulated beam distribution to the reconstruction data. In hindsight, it was a lot of work, extending all the way back to my PhD a few years ago.
 
-
-You can read more about the measurement in a separate paper @@hoover_2024_four.
-
-![](images/exp_dist.png){#fig-exp-dist width=400px fig-align=center}
-
-
-
-## Questions and future work  {#sec-conclusion}
-
-
-Test
+Since writing the paper, we've been encouraged about the possibility of improving on our results. The emittance ratio $\varepsilon_1 / \varepsilon_2 = 2.4$ is a lot smaller than we hoped for based on previous simulation studies. What happened? I've learned a few things from looking at our PIC runs. First, the space charge tune shift in our experiment was *huge*.
