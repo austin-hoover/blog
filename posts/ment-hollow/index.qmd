@@ -1,0 +1,24 @@
+---
+title: "Attempted reconstruction from noisy hollow-beam injection data"
+author: Austin Hoover
+date: 2026-02-01
+toc: false
+categories:
+  - tomography
+  - uncertainty
+format:
+  html: 
+    fig-align: center
+---
+
+We injected ten minipulses in the SNS ring at fixed point in phase space, then extracted the beam and measured 36 wire-scanner profiles. I attempted to fit a four-dimensional distribution to the data.
+
+![MENT: fit to data.](images/fig_ment_data.png){#fig-ment-data}
+
+![GPSR: fit to data.](images/fig_gpsr_data.png){#fig-gpsr-data}
+
+![MENT: reconstruction](images/fig_ment_rec.png){#fig-ment-rec}
+
+![GPSR: reconstruction](images/fig_gpsr_rec.png){#fig-ment-rec}
+
+You can see the donut shape in the $x$-$x'$ and $y$-$y'$ planes, which was discussed in [this post](../2026-01-30_eigenpainting-prl). The cross-plane projections definitely have uncertainty; this might be a good data set to use for UQ algorithm testing.
