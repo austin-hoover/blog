@@ -23,7 +23,7 @@ I mentioned that we didn't consider the effect of space charge on the eigenvecto
 
 @fig-scale-env plots the two-dimensional projections of the matched covariance matrix ("envelope") as the beam intensity ramps from 0 to 200 minipulses. I had trouble finding a matched solution beyond 200 minipulses, which may indicate an envelope instability. The depressed tune crosses the integer already at 100 minipulses.
 
-![Matched envelope for varying beam intensities.](images/fig_corner_overlay.png){#fig-scale-env width=500px}
+![Matched envelope for varying beam intensities.](images/match_env_corner.png){#fig-scale-env width=500px}
 
 Each solution is calculated with a fixed intrinsic emittances $\varepsilon_1 = 4.24$ and $\varepsilon_2 = 0$. It's interesting that the $y$-$y'$ distribution doesn't change much with intensity. That's good news for us because our main limitation is the angular coordinate, which is limited to $y' \approx 1$ mrad. It looks like we could paint this matched solution.
 
@@ -47,4 +47,4 @@ If a ratio of 10 is possible in the near future, there's good reason to think we
 
 I also compared my simulation to the simulation reported [here](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.124403), which used a lower beam energy, different intensity, and larger painting amplitude. @fig-compare looks pretty close to me. It looks like Jeff happened to land near the modified eigenvector without trying to.
 
-![Comparison between my simulation and the simulation from [Holmes et al.](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.124403)](images/fig_compare.png){#fig-compare}
+![Comparison between my simulation and the simulation from [Holmes et al.](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.124403)](images/compare.png){#fig-compare}
