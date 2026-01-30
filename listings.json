@@ -26,6 +26,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2026-01-30_eigenpainting-prl/index.html",
       "/posts/2026-01-29_ecrp/index.html",
       "/posts/2025-12-11_stalin-waiting-for-hitler/index.html",
       "/posts/2025-12-07_stalin-paradoxes-of-power/index.html",
@@ -144,71 +145,7 @@
     "items": []
   },
   {
-    "listing": "/posts/2025-03-23_flow-equilibrium/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-03-22_hdr-ment/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2022-03-22_leibnizian-cosmological-arguments/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-04-13_particle-based-beam-envelope-tracker/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2026-01-29_ecrp/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-10-13_impact/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-04-29_authorship-identification/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/eigenpainting-prl/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-06-09_mentflow-part2/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-03-21_cross-validation-as-uncertainty-quantification/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-10-30_n-dimensional-ment-particle-sampling/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2023-07-10_fine-tuning/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-03-20_applying-6d-ment-to-data/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-11-13_keynote-break-apart/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-01-21_parametric-oscillators/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-08-12_usmcc/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-09-27_coupled-tune-estimation/index.html",
+    "listing": "/posts/2021-02-22_pic/index.html",
     "items": []
   },
   {
@@ -216,7 +153,75 @@
     "items": []
   },
   {
-    "listing": "/posts/2021-02-22_pic/index.html",
+    "listing": "/posts/2025-09-27_coupled-tune-estimation/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-08-12_usmcc/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-01-21_parametric-oscillators/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-11-13_keynote-break-apart/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-03-20_applying-6d-ment-to-data/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/space-charge-modified-eigenvectors/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-10-30_n-dimensional-ment-particle-sampling/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-03-21_cross-validation-as-uncertainty-quantification/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-06-09_mentflow-part2/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2023-07-10_fine-tuning/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-04-29_authorship-identification/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-10-13_impact/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2026-01-29_ecrp/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-04-13_particle-based-beam-envelope-tracker/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2022-03-22_leibnizian-cosmological-arguments/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-03-22_hdr-ment/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-03-23_flow-equilibrium/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2026-01-30_eigenpainting-prl/index.html",
     "items": []
   },
   {

@@ -1,2 +1,1299 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Austin Hoover">
+<meta name="dcterms.date" content="2026-01-30">
+
+<title>Eigenpainting: a method to mitigate space charge in high-intensity hadron beams – Austin’s Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2cbeed5b9d3cb5b7b1f824a7ec2e5661.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-874c2a7d62fbe9259cf2ed69da126713.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-2cbeed5b9d3cb5b7b1f824a7ec2e5661.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DLC4C8LZFB"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Austin’s Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notes/index.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#sec-method" id="toc-sec-method" class="nav-link" data-scroll-target="#sec-method"><span class="header-section-number">2</span> Eigenvectors, eigenvalues, and eigenpainting</a>
+  <ul class="collapse">
+  <li><a href="#eigenvector-analysis" id="toc-eigenvector-analysis" class="nav-link" data-scroll-target="#eigenvector-analysis"><span class="header-section-number">2.1</span> Eigenvector analysis</a></li>
+  <li><a href="#normalized-coordinates" id="toc-normalized-coordinates" class="nav-link" data-scroll-target="#normalized-coordinates"><span class="header-section-number">2.2</span> Normalized coordinates</a></li>
+  <li><a href="#single-mode-injection-painting" id="toc-single-mode-injection-painting" class="nav-link" data-scroll-target="#single-mode-injection-painting"><span class="header-section-number">2.3</span> Single-mode injection painting</a></li>
+  </ul></li>
+  <li><a href="#sec-app" id="toc-sec-app" class="nav-link" data-scroll-target="#sec-app"><span class="header-section-number">3</span> Applications of eigenpainting</a>
+  <ul class="collapse">
+  <li><a href="#emittance-as-a-measure-of-phase-space-volume" id="toc-emittance-as-a-measure-of-phase-space-volume" class="nav-link" data-scroll-target="#emittance-as-a-measure-of-phase-space-volume"><span class="header-section-number">3.1</span> Emittance as a measure of phase space volume</a></li>
+  <li><a href="#flat-beams-for-high-energy-colliders" id="toc-flat-beams-for-high-energy-colliders" class="nav-link" data-scroll-target="#flat-beams-for-high-energy-colliders"><span class="header-section-number">3.2</span> Flat beams for high-energy colliders</a></li>
+  <li><a href="#vortex-distributions-for-space-charge-mitigation" id="toc-vortex-distributions-for-space-charge-mitigation" class="nav-link" data-scroll-target="#vortex-distributions-for-space-charge-mitigation"><span class="header-section-number">3.3</span> Vortex distributions for space charge mitigation</a></li>
+  <li><a href="#vlasov-poisson-equilibrium-and-tune-spread-minimization" id="toc-vlasov-poisson-equilibrium-and-tune-spread-minimization" class="nav-link" data-scroll-target="#vlasov-poisson-equilibrium-and-tune-spread-minimization"><span class="header-section-number">3.4</span> Vlasov-Poisson equilibrium and tune spread minimization</a></li>
+  </ul></li>
+  <li><a href="#sec-exp" id="toc-sec-exp" class="nav-link" data-scroll-target="#sec-exp"><span class="header-section-number">4</span> Experimental test of eigenpainting at the SNS</a></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">5</span> Conclusions and future work</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Eigenpainting: a method to mitigate space charge in high-intensity hadron beams</h1>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Austin Hoover </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 30, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Our paper, <a href="https://journals.aps.org/prl/accepted/10.1103/bvwq-34jf"><em>Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams</em></a>, was recently accepted by Physical Review Letters (PRL). Here’s the <a href="https://arxiv.org/pdf/2601.13517">preprint</a>. The paper presents the first experimental test of <em>eigenpainting</em>, a method proposed by Viatcheslav (Slava) Danilov in 2003 <span class="citation" data-cites="danilov_2003_self">&nbsp;[<a href="#ref-danilov_2003_self" role="doc-biblioref">1</a>]</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In this post, I’ll share some additional background and figures to help explain our results.</p>
+<section id="sec-intro" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="sec-intro"><span class="header-section-number">1</span> Introduction</h2>
+<p>Accelerators such as the <a href="https://neutrons.ornl.gov/sns">SNS</a> and <a href="https://j-parc.jp/c/en/">J-PARC</a> use <a href="../2021-05-27_painting-a-particle-beam"><em>charge-exchange injection</em></a> to create intense proton beams for neutron scattering experiments. The injection is a three-step process: H- (negative hydrogen) ions are accelerated in a linac, converted to protons using a carbon foil or laser-magnet system, and then transferred to an accumulator ring. We call each batch of injected protons a <em>minipulse</em>. After the first minipulse completes one lap around the ring, a second is injected, and so on for hundreds or thousands of turns.</p>
+<p>Vanilla charge-exchange injection leads to charge pile-up at the injection point, causing halo formation and beam loss. This motivates the technique of <em>phase space painting</em>: moving the injection point in phase space (position-momentum space) during accumulation. Painting spreads the charge over a larger area, reducing peak density and associated space charge effects. Painting can also enable more detailed control of the distribution, although this is challenging because each injected minipulse affects the beam dynamics on the next turn.</p>
+<p>Eigenpainting is a method to paint <em>stationary</em> phase space distributions. The method follows from the eigenvector analysis of coupled motion, which I’ll summarize in <a href="#sec-method" class="quarto-xref">Section&nbsp;2</a>. In <a href="#sec-app" class="quarto-xref">Section&nbsp;3</a>, I’ll describe several possible applications of eigenpainting. Finally, in <a href="#sec-exp" class="quarto-xref">Section&nbsp;4</a>, I’ll describe our attempt to implement eigenpainting in the SNS and our plans for follow-up experiments.</p>
+</section>
+<section id="sec-method" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sec-method"><span class="header-section-number">2</span> Eigenvectors, eigenvalues, and eigenpainting</h2>
+<section id="eigenvector-analysis" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="eigenvector-analysis"><span class="header-section-number">2.1</span> Eigenvector analysis</h3>
+<p>Assume the phase space coordinates <span class="math inline">\(\mathbf{x}\)</span> evolve according to</p>
+<p><span id="eq-one-turn-map"><span class="math display">\[
+\mathbf{x} \rightarrow \mathbf{M} \mathbf{x} ,
+\tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(\mathbf{M}\)</span> is a symplectic matrix and <span class="math inline">\(\rightarrow\)</span> represents tracking through one turn in the ring. For example, <a href="#fig-track" class="quarto-xref">Figure&nbsp;1</a> shows a particle’s coordinates over 1000 turns in the SNS ring.</p>
+<div id="fig-track" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-track-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/track.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Turn-by-turn phase space coordinates over 1000 turns in a ring."><img src="images/track.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="450"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-track-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Turn-by-turn phase space coordinates over 1000 turns in a ring.
+</figcaption>
+</figure>
+</div>
+<p>We can simplify the motion using the eigenvectors of the transfer matrix. The eigenvectors solve</p>
+<p><span id="eq-label"><span class="math display">\[
+\mathbf{Mv}_k = e^{-i\mu_k} \mathbf{v}_k ,
+\tag{2}\]</span></span></p>
+<p>where <span class="math inline">\(k = 1, 2\)</span>. Since the eigenvectors form a basis, we can write the phase space coordinate vector as</p>
+<p><span id="eq-cvec"><span class="math display">\[
+\mathbf{x} = \text{Re} \left\{
+    \sqrt{2 J_1} \mathbf{v}_1 e^{-i\psi_1} +
+    \sqrt{2 J_2} \mathbf{v}_2 e^{-i\psi_2}
+\right\} .
+\tag{3}\]</span></span></p>
+<p>Here, <span class="math inline">\(J_{1, 2}\)</span> are initial amplitudes, <span class="math inline">\(\psi_{1, 2}\)</span> are initial phases, and <span class="math inline">\(\text{Re}\{\dots\}\)</span> selects the non-imaginary component. The transfer matrix simply adds a phase to each eigenvector:</p>
+<p><span id="eq-cvec_evolved"><span class="math display">\[
+\mathbf{Mx} = \text{Re} \left\{
+    \sqrt{2 J_1}\mathbf{v}_1 e^{-i\left(\psi_1 + \mu_1\right)} +
+    \sqrt{2 J_2}\mathbf{v}_2 e^{-i(\psi_2 + \mu_2)}
+\right\}.
+\tag{4}\]</span></span></p>
+<p>The amplitudes <span class="math inline">\(J_{1, 2}\)</span> are therefore invariants of the motion.</p>
+<p>At a fixed point in the ring, the real component of <span class="math inline">\(\mathbf{v}_k\)</span> traces a two-dimensional ellipse of area <span class="math inline">\(2 J_k\)</span> at frequency <span class="math inline">\(\mu_k / 2\pi\)</span>. This is shown in <a href="#fig-track-ellipse" class="quarto-xref">Figure&nbsp;2</a>. If there is no coupling in the lattice, the first ellipse will align with the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> axis and the second with the <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> axis; otherwise, the ellipses can have different orientations in the four-dimensional phase space.</p>
+<div id="fig-track-ellipse" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-track-ellipse-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/track_ellipse.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Eigenvector paths (red/blue) plotted on top of turn-by-turn tracking data."><img src="images/track_ellipse.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="450"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-track-ellipse-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Eigenvector paths (red/blue) plotted on top of turn-by-turn tracking data.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="normalized-coordinates" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="normalized-coordinates"><span class="header-section-number">2.2</span> Normalized coordinates</h3>
+<p>We can use the eigenvectors to construct a symplectic matrix <span class="math inline">\(\mathbf{V}\)</span>,</p>
+<p><span id="eq-norm-matrix-constr"><span class="math display">\[
+\mathbf{V} =
+\left[
+    +\Re\{\mathbf{v}_1\}
+    -\Im\{\mathbf{v}_1\}
+    +\Re\{\mathbf{v}_2\}
+    -\Im\{\mathbf{v}_2\}
+\right] ,
+\tag{5}\]</span></span></p>
+<p>that converts <span class="math inline">\(\mathbf{M}\)</span> to block-diagonal form:</p>
+<p><span id="eq-label"><span class="math display">\[\mathbf{V^{-1} M V} =
+\begin{bmatrix}
+    \cos{\mu_1} &amp; \sin{\mu_1}  &amp; 0 &amp; 0 \\
+    -\sin{\mu_1} &amp; \cos{\mu_1}  &amp; 0 &amp; 0 \\
+    0 &amp; 0 &amp; \cos{\mu_2} &amp; \sin{\mu_2} \\
+    0 &amp; 0 &amp; -\sin{\mu_2} &amp; \cos{\mu_2}
+\end{bmatrix} .
+\tag{6}\]</span></span></p>
+<p>In the “normalized” coordinates <span class="math inline">\(\mathbf{u} = \mathbf{V}^{-1} \mathbf{x}\)</span>, the particle simply rotates in each phase plane, tracing circles of area <span class="math inline">\(2 J_k\)</span> at frequencies <span class="math inline">\(\mu_k\)</span>. The cross-plane projections are rectangular because there is no coupling in the normalized frame.</p>
+<p><span id="eq-label"><span class="math display">\[
+\mathbf{u} = \begin{bmatrix}
+  +\sqrt{2J_1}\cos{(\psi_1 + \mu_1)} \\
+  -\sqrt{2J_1}\sin{(\psi_1 + \mu_1)} \\
+  +\sqrt{2J_2}\cos{(\psi_2 + \mu_2)} \\
+  -\sqrt{2J_2}\sin{(\psi_2 + \mu_2)}
+\end{bmatrix}.
+\tag{7}\]</span></span></p>
+<div id="fig-track-norm" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-track-norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/track_norm.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Normalized tracking data."><img src="images/track_norm.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="450"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-track-norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Normalized tracking data.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="single-mode-injection-painting" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="single-mode-injection-painting"><span class="header-section-number">2.3</span> Single-mode injection painting</h3>
+<p>The idea behind eigenpainting is to inject particles into only one mode, i.e., along only one eigenvector. Suppose we continuously inject particles at a fixed amplitude <span class="math inline">\(J_1\)</span> and phase <span class="math inline">\(\psi_1\)</span>. The injected particles will advance in phase, eventually filling the ellipse traced by the eigenvector. If we inject particles at a different amplitude, they will form another ellipse. Thus, by varying the injection amplitude as a function of time, we can build any elliptically symmetric distribution <span class="math inline">\(f(J_1)\)</span>.</p>
+<p>We’ll focus on the specific choice of linearly increasing amplitude:</p>
+<p><span id="eq-eigpaint"><span class="math display">\[
+\begin{aligned}
+J_1(t) &amp;= \tilde{J}_1 t , \\
+J_2(t) &amp;= 0 ,
+\end{aligned}
+\tag{8}\]</span></span></p>
+<p>where <span class="math inline">\(t\)</span> is the time, scaled to the range [0, 1], and <span class="math inline">\(\tilde{J}_1\)</span> is a maximum value of <span class="math inline">\(J_1\)</span>. We could also paint into the other mode by swapping <span class="math inline">\(J_1\)</span> and <span class="math inline">\(J_2\)</span>. We can represent the painting path as a curve in the <span class="math inline">\(J_1\)</span>-<span class="math inline">\(J_2\)</span> space:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/paint_diag.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/paint_diag.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="170"></a></p>
+</figure>
+</div>
+<p>In normalized coordinates, the distribution will look like this:</p>
+<div id="fig-paint-eig-n" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-paint-eig-n-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/paint_eig_n.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: Eigenpainting in normalized coordinates."><img src="images/paint_eig_n.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-paint-eig-n-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Eigenpainting in normalized coordinates.
+</figcaption>
+</figure>
+</div>
+<p>The linear amplitude scaling forms a uniform disk in the first phase plane, while particles in the second phase plane are concentrated at the origin. In reality, the injected minipulse has a finite size, so we end up with a small blob.</p>
+<p>The actual distribution will depend on <span class="math inline">\(\mathbf{V}\)</span>, which encodes the structure of the accelerator lattice. For example, <a href="#fig-paint-eig" class="quarto-xref">Figure&nbsp;5</a> shows the result of painting into the SNS ring.</p>
+<div id="fig-paint-eig" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-paint-eig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/paint_eig.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: Eigenpainting in the SNS ring (linear approximation, no space charge)."><img src="images/paint_eig.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-paint-eig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Eigenpainting in the SNS ring (linear approximation, no space charge).
+</figcaption>
+</figure>
+</div>
+<p>Space charge typically invalidates methods based on single-particle, linear dynamics. Incredibly, eigenpainting still works. The painted distribution projects to a uniform density within an elliptical envelope, generating an electric field with <em>linear</em> space charge forces. Space charge simply modifies the transfer matrix <span class="math inline">\(\mathbf{M}\)</span> to a new effective transfer matrix <span class="math inline">\(\hat{\mathbf{M}}\)</span>. We can construct a normalization matrix <span class="math inline">\(\hat{\mathbf{V}}\)</span> from <span class="math inline">\(\hat{\mathbf{M}}\)</span> and run eigenpainting as before.</p>
+<p>Another critical point is that the painted distribution is <em>stationary</em> with respect to turn number. The painted distribution is an equilibrium solution of the Vlasov-Poisson equations, known as the KV distribution <span class="citation" data-cites="qin_2009_generalized">&nbsp;[<a href="#ref-qin_2009_generalized" role="doc-biblioref">4</a>]</span>. Equilibrium distributions are functions of invariants (<span class="math inline">\(J_1\)</span> in this case) and preserve their functional form in phase space as they evolve. This ensures the linearity of space charge forces throughout the ring. Furthermore, the distribution is in equilibrium at all times <span class="math inline">\(t\)</span>; the only change is a global scaling factor as particles are added to the edge of the beam ellipse.</p>
+</section>
+</section>
+<section id="sec-app" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-app"><span class="header-section-number">3</span> Applications of eigenpainting</h2>
+<p>Now that eigenpainting is defined, let’s discuss what it could be used for. We’ll focus on three features of the accumulated distribution: small four-dimensional emittance, strong cross-plane correlations, and uniform density.</p>
+<section id="emittance-as-a-measure-of-phase-space-volume" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="emittance-as-a-measure-of-phase-space-volume"><span class="header-section-number">3.1</span> Emittance as a measure of phase space volume</h3>
+<p>Emittance is a measure of phase space volume calculated from the covariance matrix <span class="math inline">\(\mathbf{\Sigma}\)</span>:</p>
+<p><span id="eq-cov"><span class="math display">\[
+\mathbf{\Sigma}
+=
+\langle \mathbf{x} \mathbf{x}^T \rangle
+\begin{bmatrix}
+\langle{xx}\rangle &amp; \langle{xx'}\rangle &amp; \langle{xy}\rangle &amp; \langle{xy'}\rangle \\
+\langle{x'x}\rangle &amp; \langle{x'x'}\rangle &amp; \langle{x'y}\rangle &amp; \langle{x'y'}\rangle \\
+\langle{yx}\rangle &amp; \langle{yx'}\rangle &amp; \langle{yy}\rangle &amp; \langle{yy'}\rangle \\
+\langle{y'x}\rangle &amp; \langle{y'x'}\rangle &amp; \langle{y'y}\rangle &amp; \langle{y'y'}\rangle
+\end{bmatrix} ,
+\tag{9}\]</span></span></p>
+<p>where <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> are the transverse positions, <span class="math inline">\(x'\)</span>-<span class="math inline">\(y'\)</span> are the velocities, and <span class="math inline">\(\langle \dots \rangle\)</span> is an average over all particles. The covariance matrix defines an ellipsoid from the expression <span class="math inline">\(\mathbf{x}^T \mathbf{\Sigma}^{-1} \mathbf{x} = 1\)</span>. The four-dimensional emittance <span class="math inline">\(\varepsilon_{4D}\)</span> is the volume of this ellipsoid:</p>
+<p><span id="eq-4d-emitt"><span class="math display">\[
+\varepsilon_{4D} = \sqrt{\det{\mathbf{\Sigma}}}.
+\tag{10}\]</span></span></p>
+<p>From Liouville’s Theorem, the four-dimensional emittance is conserved under linear symplectic transformations. We can also write the four-dimensional emittance as the product of the <em>intrinsic</em> emittances <span class="math inline">\(\varepsilon_{1, 2}\)</span>, which are individually conserved:</p>
+<p><span class="math display">\[
+\varepsilon_{4D} = \varepsilon_{1}\varepsilon_{2} .
+\]</span></p>
+<p>The intrinsic emittances are calculated from a symplectic diagonalization of <span class="math inline">\(\mathbf{\Sigma}\)</span>:</p>
+<p><span id="eq-cov-diag"><span class="math display">\[
+\mathbf{\Sigma}
+=
+\mathbf{V}
+\begin{bmatrix}
+\varepsilon_1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \varepsilon_1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \varepsilon_2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; \varepsilon_2
+\end{bmatrix}
+\mathbf{V}^T ,
+\tag{11}\]</span></span></p>
+<p>where <span class="math inline">\(\mathbf{V}\)</span> is a symplectic matrix. It’s no coincidence that <span class="math inline">\(\mathbf{V}\)</span> was also the symbol used for the normalization matrix calculated from the lattice eigenvectors. There’s a close connection between the two. Both matrices define a “normalized” coordinate system. The <span class="math inline">\(\mathbf{V}\)</span> in <a href="#eq-cov-diag" class="quarto-xref">Equation&nbsp;11</a> is also constructed from a set of eigenvectors, but this time the eigenvectors solve</p>
+<p><span id="eq-sigma-eig"><span class="math display">\[
+\mathbf{\Sigma}\mathbf{U} \mathbf{v}_k = i \varepsilon_k \mathbf{v}_k ,
+\tag{12}\]</span></span></p>
+<p>where <span class="math inline">\(\mathbf{U}\)</span> is the <em>Poisson matrix</em>: <span id="eq-poisson-matrix"><span class="math display">\[
+\mathbf{U} =
+\begin{bmatrix}
+0 &amp; +1 &amp; 0 &amp; 0 \\
+-1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; +1 \\
+0 &amp; 0 &amp; -1 &amp; 0 \\
+\end{bmatrix} .
+\tag{13}\]</span></span></p>
+<p>These “beam eigenvectors” define a symplectic transformation that removes all linear cross-plane correlations in the beam while preserving the intrinsic emittances; for example, mapping <a href="#fig-paint-eig" class="quarto-xref">Figure&nbsp;5</a> to <a href="#fig-paint-eig-n" class="quarto-xref">Figure&nbsp;4</a>. Compare to the “lattice eigenvectors”, which define a transformation that removes all cross-plane correlations in the <em>external focusing fields</em>. If the “beam eigenvectors” are the same as the “lattice eigenvectors”, then the two <span class="math inline">\(\mathbf{V}\)</span> matrices are identical, and the covariance matrix is invariant with respect to turn number:</p>
+<p><span id="eq-sigma-matched"><span class="math display">\[
+\mathbf{\Sigma} \rightarrow \mathbf{M} \mathbf{\Sigma} \mathbf{M}^T = \mathbf{\Sigma} .
+\tag{14}\]</span></span></p>
+<p>Such a beam is <em>matched</em> to the lattice.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> In this case, the intrinsic emittances <span class="math inline">\(\varepsilon_k\)</span> calculate the spread of amplitudes <span class="math inline">\(J_k\)</span>, or the rms area of the projected ellipse in the <span class="math inline">\(u_k\)</span>-<span class="math inline">\(u_k'\)</span> plane (<a href="#fig-paint-eig-n" class="quarto-xref">Figure&nbsp;4</a>). For this reason, the intrinsic emittances are also called the <em>eigenemittances</em> or <em>mode emittances</em>.</p>
+<p>In addition to the intrinsic emittances, we can define the <em>projected</em> emittances <span class="math inline">\(\varepsilon_{x, y}\)</span>:</p>
+<p><span id="eq-proj-emitt"><span class="math display">\[
+\begin{aligned}
+\varepsilon_x &amp;= \sqrt{\det{\mathbf{\Sigma}_{xx}}} , \\
+\varepsilon_y &amp;= \sqrt{\det{\mathbf{\Sigma}_{yy}}} , \\
+\end{aligned}
+\tag{15}\]</span></span></p>
+<p>where</p>
+<p><span id="eq-cov-uncoupled"><span class="math display">\[
+\mathbf{\Sigma} =
+\begin{bmatrix}
+    \mathbf{\Sigma}_{xx}   &amp; \mathbf{\Sigma}_{xy} \\
+    \mathbf{\Sigma}_{xy}^T &amp; \mathbf{\Sigma}_{yy}
+\end{bmatrix} .
+\tag{16}\]</span></span></p>
+<p>The projected emittances define the rms ellipse areas in the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> and <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> planes. Thus, the projected emittance ratio <span class="math inline">\(\varepsilon_x / \varepsilon_y\)</span> tells us the fraction of particles that occupy the horizontal mode compared to the vertical mode of oscillation. The intrinsic emittances have a similar interpretation. The intrinsic emittance ratio <span class="math inline">\(\varepsilon_1 / \varepsilon_2\)</span> tells us the fraction of particles that occupy one mode compared to another mode of oscillation, where the modes are defined by the symplectic matrix <span class="math inline">\(\mathbf{V}\)</span> in <a href="#eq-cov-diag" class="quarto-xref">Equation&nbsp;11</a>. For example, if <span class="math inline">\(\mathbf{V}\)</span> is the identity matrix, then the two modes correspond to <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. In general, the modes correspond to <em>elliptical</em> trajectories in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane.</p>
+</section>
+<section id="flat-beams-for-high-energy-colliders" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="flat-beams-for-high-energy-colliders"><span class="header-section-number">3.2</span> Flat beams for high-energy colliders</h3>
+<p>The eigenpainted beam has a very large ratio of <em>intrinsic</em> emittances: <span class="math inline">\(\varepsilon_1 \gg \varepsilon_2\)</span>; therefore, the particle motion is dominated by a single elliptical mode. I’ll call this a <em>vortex distribution</em> referring to the spiral pattern of the velocity field.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Note that a vortex distribution can have any distribution in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane; the important part is the velocity.</p>
+<div id="fig-vortex" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vortex-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/vortex.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: Examples of vortex distributions."><img src="images/vortex.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vortex-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Examples of vortex distributions.
+</figcaption>
+</figure>
+</div>
+<p>Vortex distributions could be used to increase luminosity in high-energy colliders <span class="citation" data-cites="burov_2013_circular">&nbsp;[<a href="#ref-burov_2013_circular" role="doc-biblioref">5</a>]</span>. To maximize the luminosity (the number of collisions per unit time per unit area), we want to maximize the particle density at the collision point. Unfortunately, the density is fundamentally limited by space charge forces during the low-energy stages of acceleration. But we can play a trick: we can accumulate a round vortex beam, accelerate it to high energy, and then remove its angular momentum using a series of skew quadrupoles. The skew quadrupoles simply map the projected emittances <span class="math inline">\(\varepsilon_{x, y}\)</span> to the intrinsic emittances <span class="math inline">\(\varepsilon_{1, 2}\)</span>. If the initial beam has a large intrinsic emittance ratio, the final beam will have a large projected emittance ratio. This is the so-called round-to-flat (RTF) transformation <span class="citation" data-cites="kim_2003_round">&nbsp;[<a href="#ref-kim_2003_round" role="doc-biblioref">6</a>]</span> shown in <a href="#fig-roundflat" class="quarto-xref">Figure&nbsp;7</a>. Since inter-particle forces are negligible at higher energies, this scheme essentially bypasses the space charge limit on the beam density.</p>
+<div id="fig-roundflat" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-roundflat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/roundflat.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: A round-to-flat transformation removes all cross-plane correlations, mapping the projected emittances \varepsilon_{x, y} to the intrinsic emittances \varepsilon_{1, 2}. Since one of the intrinsic emittances is zero, the transformation maps a round, spinning beam to a flat beam. Source: my talk."><img src="images/roundflat.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-roundflat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: A round-to-flat transformation removes all cross-plane correlations, mapping the projected emittances <span class="math inline">\(\varepsilon_{x, y}\)</span> to the intrinsic emittances <span class="math inline">\(\varepsilon_{1, 2}\)</span>. Since one of the intrinsic emittances is zero, the transformation maps a round, spinning beam to a flat beam. Source: <a href="https://conference.sns.gov/event/335/contributions/528/attachments/892/8194/2022-10-26_Hoover_space_charge_workshop.pdf">my talk</a>.
+</figcaption>
+</figure>
+</div>
+<div id="fig-collider" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-collider-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/collider.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: Concept of round-to-flat transformation in a collider. Phase space painting would be used to accumulate a low-energy beam with high angular momentum. The RTF transformation produces a flat beam at the collision point. LHC diagram."><img src="images/collider.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-collider-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Concept of round-to-flat transformation in a collider. Phase space painting would be used to accumulate a low-energy beam with high angular momentum. The RTF transformation produces a flat beam at the collision point. <a href="https://cds.cern.ch/record/2693837/files/Poster-2019-858.pdf">LHC diagram</a>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="vortex-distributions-for-space-charge-mitigation" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="vortex-distributions-for-space-charge-mitigation"><span class="header-section-number">3.3</span> Vortex distributions for space charge mitigation</h3>
+<p>Vortex distributions could also mitigate space charge effects. Consider a simplified model that represents the beam as a frozen background potential <span class="math inline">\(\phi(x, y)\)</span>. In a Gaussian distribution, the potential contains terms proportional to <span class="math inline">\(x^2\)</span>, <span class="math inline">\(x^4\)</span>, and so on. These terms act as periodic nonlinear driving forces, leading to resonance at certain frequencies. These resonances are sometimes called <em>space charge structure resonances</em>. The classic example is the fourth-order resonance, which creates four islands in <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> phase space. Recently, Cheon et al. <span class="citation" data-cites="cheon_2022_spinning">&nbsp;[<a href="#ref-cheon_2022_spinning" role="doc-biblioref">7</a>]</span> showed that angular momentum can suppress the fourth-order resonance in linear accelerators (<a href="#fig-fourth" class="quarto-xref">Figure&nbsp;9</a>), and I expect the same could hold in circular accelerators. A pure vortex beam with <span class="math inline">\(\varepsilon_2 = 0\)</span> is an extreme case of zero relative motion of particles in the beam.</p>
+<div id="fig-fourth" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fourth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/fourth.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;9: Fourth-order resonance suppression from angular momentum in a bunched beam. Particles in the spinning beam avoid direct passage through the oscillating beam core. Source: @cheon_2022_spinning."><img src="images/fourth.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fourth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Fourth-order resonance suppression from angular momentum in a bunched beam. Particles in the spinning beam avoid direct passage through the oscillating beam core. Source: <span class="citation" data-cites="cheon_2022_spinning">&nbsp;[<a href="#ref-cheon_2022_spinning" role="doc-biblioref">7</a>]</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="vlasov-poisson-equilibrium-and-tune-spread-minimization" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="vlasov-poisson-equilibrium-and-tune-spread-minimization"><span class="header-section-number">3.4</span> Vlasov-Poisson equilibrium and tune spread minimization</h3>
+<p>The two eigenpainting applications above do not depend on the spatial density of the bunch; they only require a large intrinsic emittance ratio. A third application that depends on the bunch density is the reduction of tune spread. Space charge shifts the particle tunes (frequencies) based on their location in the bunch. For example, <a href="#fig-tunespread" class="quarto-xref">Figure&nbsp;10</a> shows the tune spread within a Gaussian distribution. As the intensity increases, the tune spread grows. The danger is that the tunes cross <a href="../2021-03-28_nonlinear-resonances">nonlinear resonances</a> driven by nonlinearities in the accelerator lattice. So, at least in this simple model, a smaller tune spread is better.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>The smallest possible tune spread is obtained in a uniform density bunch in which all particles oscillate at the same frequency (left side of <a href="#fig-tunespread" class="quarto-xref">Figure&nbsp;10</a>). The KV distribution is the only arrangement of particles that gives the desired density. It turns out to be <em>impossible</em> to paint a KV distribution with finite emittance in both planes. However, we can paint a KV distribution with zero emittance in one of the planes <span class="citation" data-cites="qin_2009_generalized">&nbsp;[<a href="#ref-qin_2009_generalized" role="doc-biblioref">4</a>]</span>. This is just what eigenpainting gives us in <a href="#fig-paint-eig" class="quarto-xref">Figure&nbsp;5</a>. Note that the zero-emittance plane is <em>not</em> <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span>.</p>
+<div id="fig-tunespread" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tunespread-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/tunespread.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;10: Tune spreads in increasingly nonuniform distributions. Source: @franchetti_2017_space."><img src="images/tunespread.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tunespread-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Tune spreads in increasingly nonuniform distributions. Source: <span class="citation" data-cites="franchetti_2017_space">&nbsp;[<a href="#ref-franchetti_2017_space" role="doc-biblioref">8</a>]</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-exp" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="sec-exp"><span class="header-section-number">4</span> Experimental test of eigenpainting at the SNS</h2>
+<p>With the background out of the way, I’ll move on to our experiment at the SNS.</p>
+<p>In <span class="citation" data-cites="holmes_2018_injection">&nbsp;[<a href="#ref-holmes_2018_injection" role="doc-biblioref">9</a>]</span>, <a href="https://web.ornl.gov/~holmesja1/JHolmes/interests.html">Jeff Holmes</a> ran simulations of the proposed method in the SNS ring.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> He found that even with nonlinearities included, eigenpainting generated a fairly uniform charge density and strong cross-plane correlations. This motivated our experimental program to implement eigenpainting in real life (“in the control room”).</p>
+<p>The basic setup is shown in <a href="#fig-sns" class="quarto-xref">Figure&nbsp;11</a>. Eight dipole “kicker” magnets control the phase space coordinates at the injection point. Our goal was to program these kicker magnets to trace the correct path in phase space during injection, then measure the accumulated distribution.</p>
+<div id="fig-sns" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/sns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;11: Overhead view of the SNS accelerator."><img src="images/sns.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Overhead view of the SNS accelerator.
+</figcaption>
+</figure>
+</div>
+<p>One difficulty is that the SNS kicker magnets are fairly weak; they cannot deliver the large angular impulses required for the method. In his simulations, Jeff lowered the energy from 1 GeV to 600 MeV to increase the effective kicker strength (radians per volt). In our experiment, we were only able to lower the energy to 800 MeV.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> So we had to work with smaller angular kicks and, therefore, a smaller beam emittance.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+<p>Another difficulty is that we don’t directly control the injection coordinates — we control kicker waveforms. We needed a way to map kicker amplitudes (V) to phase space coordinates (m, rad). We measured the injection coordinates indirectly by injecting a single minipulse into the ring, recording the turn-by-turn centroid position, and then fitting a linear model to the data. The analysis is slightly complicated by the energy distribution in the minipulse, which causes particles to spread around each eigenvector ellipse (recall <a href="#fig-track-ellipse" class="quarto-xref">Figure&nbsp;2</a>) and eventually eliminates the centroid oscillations. This is called <em>chromatic damping</em>. The damping occurs over about 100 turns, and we have a good model of it, so we just add the damping time as a fit parameter. Repeating the measurement at different kicker amplitudes builds a map from kicker amplitudes to phase space coordinates. Once that’s done, we try to find the kicker amplitudes corresponding to the initial and final injection points.</p>
+<p><a href="#fig-exp-bpm" class="quarto-xref">Figure&nbsp;12</a> shows data from one of the many BPMs in the ring. In each figure, the grey curve shows the linear model fit, the blue curve shows the mode-1 component, and the red curve shows the mode-2 component. The left figure shows an initial machine state used for calibration. Notice that both modes contribute to the signal. The middle column shows the start of injection (<span class="math inline">\(t = 0\)</span>), when the amplitudes should be as small as possible. We did not actually reach zero amplitude, but the amplitudes are smaller than in the other figures; we want to correct this in future experiments. The right figure shows the end of injection (<span class="math inline">\(t = 1\)</span>). Notice that the first mode frequency dominates over the second, as expected for particles injected along an eigenvector.</p>
+<div id="fig-exp-bpm" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-exp-bpm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/exp_bpm.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;12: BPM data for different injection points. Left: initial point used for calibration. Center: start of painting. Right: end of painting."><img src="images/exp_bpm.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exp-bpm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: BPM data for different injection points. Left: initial point used for calibration. Center: start of painting. Right: end of painting.
+</figcaption>
+</figure>
+</div>
+<p>After this setup, we used a square-root waveform to connect the initial and final kicker voltages and ran the full beam accumulation over 600 turns. Unlike in the simulation, we can’t directly measure the four-dimensional phase space distribution in the ring. I therefore applied the MENT algorithm to reconstruct the distribution from one-dimensional profiles of the extracted beam. The reconstruction is an inference from incomplete data, so there is some uncertainty in the results, but we’re pretty confident in the major features. (See <span class="citation" data-cites="hoover_2024_four">&nbsp;[<a href="#ref-hoover_2024_four" role="doc-biblioref">10</a>]</span> for details.)</p>
+<p><a href="#fig-exp-dist" class="quarto-xref">Figure&nbsp;13</a> shows the reconstructed distribution in normalized coordinates (<a href="#eq-sigma-eig" class="quarto-xref">Equation&nbsp;12</a>}, projected onto the two-dimensional phase planes. The second two rows show a simulated distribution.</p>
+<div id="fig-exp-dist" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-exp-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/exp_dist.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;13: Reconstructed distribution in normalized phase space coordinates."><img src="images/exp_dist.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exp-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Reconstructed distribution in normalized phase space coordinates.
+</figcaption>
+</figure>
+</div>
+<p>Compare <a href="#fig-exp-dist" class="quarto-xref">Figure&nbsp;13</a> to <a href="#fig-paint-eig-n" class="quarto-xref">Figure&nbsp;4</a>. Ideally, the mode-1 projection would be a uniform disk, and the mode-2 projection would be a small Gaussian blob. While our beam deviates from this ideal case, we do see increased uniformity in the mode-1 projection. The mode-1 emittance is also larger than the mode-2 emittance, giving a ratio <span class="math inline">\(\varepsilon_1 / \varepsilon_2 = 2.4\)</span>. Based on the minipulse size and maximum painting amplitudes, we expected a maximum ratio of 16. We believe that space charge is the primary cause of four-dimensional emittance growth relative to the ideal case. But we also think the emittance growth can be largely reduced in future experiments. (More on that in a second.)</p>
+<p>The distribution’s features are qualitatively reproduced in our simulations, though some differences remain. The simulated emittance ratio is 2.3, close to the measured value.</p>
+</section>
+<section id="sec-conclusion" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="sec-conclusion"><span class="header-section-number">5</span> Conclusions and future work</h2>
+<p>This project had four main parts: (i) connecting the proposed painting scheme to the eigenvector analysis of linear motion, which we now understand well; (ii) programming the kicker waveforms and measuring the injected phase space coordinates; (iii) reconstructing the four-dimensional phase space distribution from one-dimensional measurements; and (iv) comparing the simulated distribution to the reconstruction. In hindsight, it was a lot of work.</p>
+<p>Since writing the paper, I’ve been encouraged about the potential to improve our results. I’ve learned a few things from our PIC runs. First, the space charge tune shift was <em>huge</em> in our experiment. Lowering the energy from 1.3 GeV to 0.8 GeV increases the tune shift by a factor of 2.5 based on the inverse scaling of space charge with energy. We also painted a very small beam because of our kicker limitations. I estimate that the tunes shifted well below the integer resonance <span class="math inline">\(\nu = 6.0\)</span>. Subsequent analysis has shown that the beam envelope becomes unstable above ~300 minipulse intensity at the targeted emittance. This instability may have been excited during the early stages of injection, leading to a significant change in beam density. In any case, the dynamics near the integer resonance may be complicated, and I need to spend more time analyzing the simulation to understand what’s going on. The situation can probably be improved by changing the lattice optics, but the immediate next step will be to lower the intensity from 600 to ~200 minipulses. Second, we didn’t account for the effect of space charge on the eigenvectors. Since the experiment, I’ve found that space charge has a strong but predictable effect, and that painting into this modified eigenvector could yield a much larger emittance ratio, perhaps up to <span class="math inline">\(\varepsilon_1 / \varepsilon_2 \approx 12\)</span>. I’ll follow up on this in a future post.</p>
+<p>On the simulation side of things, I hope to study the long-term stability of eigen-painted beams and to examine, more generally, four-dimensional phase-space painting as a method of space-charge mitigation.</p>
+
+
+
+
+</section>
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-danilov_2003_self" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">V. Danilov, S. Cousineau, S. Henderson, and J. Holmes, <em><a href="https://doi.org/10.1103/PhysRevSTAB.6.094202">Self-Consistent Time Dependent Two Dimensional and Three Dimensional Space Charge Distributions with Linear Force</a></em>, Phys. Rev. ST Accel. Beams <strong>6</strong>, 094202 (2003).</div>
+</div>
+<div id="ref-danilov_2010_nonlinear" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">V. Danilov and S. Nagaitsev, <em><a href="https://doi.org/10.1103/PhysRevSTAB.13.084002">Nonlinear Accelerator Lattices with One and Two Analytic Invariants</a></em>, Phys. Rev. ST Accel. Beams <strong>13</strong>, 084002 (2010).</div>
+</div>
+<div id="ref-danilov_2003_lace" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">V. Danilov et al., <em><a href="https://doi.org/10.1103/PhysRevSTAB.6.053501">Three-Step h- Charge Exchange Injection with a Narrow-Band Laser</a></em>, Phys. Rev. ST Accel. Beams <strong>6</strong>, 053501 (2003).</div>
+</div>
+<div id="ref-qin_2009_generalized" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">H. Qin, M. Chung, and R. C. Davidson, <em><a href="https://doi.org/10.1103/PhysRevLett.103.224802">Generalized Kapchinskij-Vladimirskij Distribution and Envelope Equation for High-Intensity Beams in a Coupled Transverse Focusing Lattice</a></em>, Phys. Rev. Lett. <strong>103</strong>, 224802 (2009).</div>
+</div>
+<div id="ref-burov_2013_circular" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">A. Burov, <em><a href="https://doi.org/10.1103/PhysRevSTAB.16.061002">Circular Modes for Flat Beams in the LHC</a></em>, Phys. Rev. ST Accel. Beams <strong>16</strong>, 061002 (2013).</div>
+</div>
+<div id="ref-kim_2003_round" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">K.-J. Kim, <em><a href="https://doi.org/10.1103/PhysRevSTAB.6.104002">Round-to-Flat Transformation of Angular-Momentum-Dominated Beams</a></em>, Phys. Rev. ST Accel. Beams <strong>6</strong>, 104002 (2003).</div>
+</div>
+<div id="ref-cheon_2022_spinning" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">Y.-L. Cheon, S.-H. Moon, M. Chung, and D.-O. Jeon, <em><a href="https://doi.org/10.1103/PhysRevAccelBeams.25.064002">Effects of Beam Spinning on the Fourth-Order Particle Resonance of 3D Bunched Beams in High-Intensity Linear Accelerators</a></em>, Phys. Rev. Accel. Beams <strong>25</strong>, 064002 (2022).</div>
+</div>
+<div id="ref-franchetti_2017_space" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">G. Franchetti, <em><a href="https://doi.org/10.23730/CYRSP-2017-003.353">Space Charge in Circular Machines</a></em>, CERN Yellow Reports: School Proceedings <strong>3</strong>, 353 (2017).</div>
+</div>
+<div id="ref-holmes_2018_injection" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">J. A. Holmes, T. Gorlov, N. J. Evans, M. Plum, and S. Cousineau, <em><a href="https://doi.org/10.1103/PhysRevAccelBeams.21.124403">Injection of a Self-Consistent Beam with Linear Space Charge Force into a Ring</a></em>, Phys. Rev. Accel. Beams <strong>21</strong>, 124403 (2018).</div>
+</div>
+<div id="ref-hoover_2024_four" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">A. Hoover, <em><a href="https://doi.org/10.1103/PhysRevAccelBeams.27.122802">Four-Dimensional Phase Space Tomography from One-Dimensional Measurements of a Hadron Beam</a></em>, Phys. Rev. Accel. Beams <strong>27</strong>, 122802 (2024).</div>
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Danilov also proposed Nonlinear Integrable Optics (NIO) <span class="citation" data-cites="danilov_2010_nonlinear">&nbsp;[<a href="#ref-danilov_2010_nonlinear" role="doc-biblioref">2</a>]</span> and Laser-Assisted Charge Exchange (LACE) <span class="citation" data-cites="danilov_2003_lace">&nbsp;[<a href="#ref-danilov_2003_lace" role="doc-biblioref">3</a>]</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>If we know the covariance is matched to the lattice, but we don’t know the transfer matrix, we can construct the covariance matrix from the eigenvectors in <a href="#eq-sigma-eig" class="quarto-xref">Equation&nbsp;12</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Vortex distributions have high <a href="https://en.wikipedia.org/wiki/Vorticity">vorticity</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>This is only true in the absence of coherent instabilities…<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>It wasn’t labeled ask <em>eigenpainting</em> at that point. We made the explicit connection to eigenvectors later.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>This is an issue with the SNS timing system.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>When we derived eigenpainting, we assumed that the minipulse was much smaller than the final beam. If the beams are comparable in size, the density will be nonuniform. To first order, we can think of the finite-size minipulse as a Gaussian filter which softens the sharp edges of the beam ellipse.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "austin-hoover/blog";
+    script.dataset.repoId = "R_kgDOLpju-A";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOLpju-M4C09wV";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
