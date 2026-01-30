@@ -7,7 +7,6 @@ csl: ./aps.csl
 categories:
   - accelerators
   - papers
-draft: false
 format:
   html:
     toc: true
@@ -16,7 +15,7 @@ format:
     fig-align: left
 ---
 
-Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/b vwq-34jf), was recently accepted for publication in Physical Review Letters (PRL) @evans_2026_demonstration. Here's the [preprint](https://arxiv.org/pdf/2601.13517). The paper describes the first experimental test of a method that we call *eigenpainting*, originally proposed by Viatcheslav (Slava) Danilov twenty years ago @danilov_2003_self.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace.] This post provides some additional background information and figures to help interpret the results.
+Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/bvwq-34jf), was recently accepted for publication in Physical Review Letters (PRL) @evans_2026_demonstration. Here's the [preprint](https://arxiv.org/pdf/2601.13517). The paper describes the first experimental test of a method that we call *eigenpainting*, originally proposed by Viatcheslav (Slava) Danilov twenty years ago @danilov_2003_self.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace.] This post provides some additional background information and figures to help interpret the results.
 
 
 ## Introduction  {#sec-intro}
@@ -297,7 +296,7 @@ Another difficulty is that we don't directly control the injection coordinates; 
 
 The measured BPM waveform at the initial kicker settings is shown in the middle column of @fig-exp-bpm; the right column shows the final settings. The grey curve is the linear model fit, with the blue curve showing the mode-1 component and the red curve showing the mode-2 component. In the initial waveform, the amplitude should be as close to zero as possible. You can see that it's not actually zero, but it's smaller than the final amplitude; this is something we want to correct in future experiments. In the final amplitude, notice that the mode-1 frequency dominates over mode-2, as expected if we inject mostly into a single mode. Compare to the left figure, where both modes are present.
 
-![](images/exp_bpm.png){#fig-exp-bpm fig-align=center}
+![BPM data for different injection points. Left: initial point used for calibration. Center: start of painting. Right: end of painting.](images/exp_bpm.png){#fig-exp-bpm fig-align=center}
 
 After all this setup, we used a square-root waveform to connect the initial and final kicker voltages ran the full beam accumulation over 600 turns. Unlike the simulation, we can't directly measure the four-dimensional phase space distribution in the ring. I therefore applied the MENT algorithm to reconstruct the distribution from one-dimensional profiles of the extracted beam. The reconstruction is an inference from incomplete data, so there is some uncertainty in the results, but we're pretty confident in the major features of the reconstruction. (See @hoover_2024_four for details.) 
 
