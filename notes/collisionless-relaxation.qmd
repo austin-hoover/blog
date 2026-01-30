@@ -1,0 +1,11 @@
+---
+title: "Collisionless Relaxation in Plasma Physics"
+date: 2026-01-30
+---
+
+
+To read:
+
+* [https://journals.aps.org/prx/pdf/10.1103/PhysRevX.12.031011](https://journals.aps.org/prx/pdf/10.1103/PhysRevX.12.031011)
+
+
