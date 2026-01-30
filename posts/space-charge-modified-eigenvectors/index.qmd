@@ -1,10 +1,41 @@
 ---
 title: "Space-charge-modified eigenvectors for improved eigenpainting"
-draft: true
+author: Austin Hoover
+date: 2026-01-31
+toc: false
+categories:
+  - accelerators
+  - research
+format:
+  html:
+    fig-align: left
 ---
 
+In our [eigenpainting experiment](../2026-01-30_eigenpainting-prl) at the SNS, we measured final intrinsic emittance $\varepsilon_1 = 12.4$ and $\varepsilon_2 = 5.1$ (mm mrad), giving a ratio $\varepsilon_1 / \varepsilon_2 = 2.4$. The beam intensity in the experiment was $I = I_0 = 600$ minipulses, with each minipulse containing around $1.5 \times 10^{14}$ protons within an emittance $\varepsilon_1 = \varepsilon_2 \approx 0.25$ [mm mrad]. Here are the simulated beam distributions and emittances as the intensity increases:
 
-In @holmes_2018_injection, [Jeff Holmes](https://web.ornl.gov/~holmesja1/JHolmes/interests.html) ran simulations of the proposed method in the SNS ring.^[it wasn't labeled ask *eigenpainting* at that point. We made the explicit connection to eigenvectors later.]
+![2D distributions in normalized phase space (top/bottom shows first/second mode). Intensity varies across columns.](images/scale_intensity_dist.png){height=250}
 
-![](images/sim_hb_2021.png){#fig-hb width=500px fig-align=center}
+![Intrinsic emittances $\varepsilon_{1, 2}$ during accumulation.](images/scale_intensity_eps2.png){height=250}
 
+The simulation without space charge predicts $\varepsilon_1 = 4.2$ and $\varepsilon_2 = 0.25$, or a ratio of 16. So there there was a large growth of the four-dimensional emittance $\varepsilon_{4D} = \varepsilon_1 \varepsilon_2$ in our experiment.
+
+I mentioned that we didn't consider the effect of space charge on the eigenvectors. The linear component of the space charge force modifies the transfer matrix $\mathbf{M}$ to an effective transfer matrix $\hat{\mathbf{M}}$. Tracking a particle through the linear lattice + linear space charge kicks is the same as just applying $\hat{\mathbf{M}}$ to the initial coordinates. For a special set of initial beam parameters, $\hat{\mathbf{M}}$ represents a periodic focusing system. This occurs when $\mathbf{\Sigma} = \hat{\mathbf{M}} \mathbf{\Sigma} \hat{\mathbf{M}}^T$, where $\mathbf{\Sigma}$ is the beam covariance matrix. We want to paint along an eigenvector of $\hat{\mathbf{M}}$, not $\mathbf{M}$.
+
+I calculated the matched covariance matrix ("envelope") for beam intensity ranging from 0 to 200 minipulses. 
+
+![Matched envelope for varying beam intensities.](images/fig_corner_overlay.png){}
+
+
+::: {layout-ncol=2}
+![](images/sim_eig.png)
+
+![](images/sim_eig_mod.png)
+:::
+
+![](images/match_env_rms.png)
+
+
+![](images/match_env_tunes.png){width=300px}
+
+
+![Comparison between my simulation and the simulation from [Holmes et al.](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.124403)](images/fig_compare.png)
