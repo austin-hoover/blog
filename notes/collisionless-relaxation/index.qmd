@@ -1,0 +1,9 @@
+---
+title: "Collisionless Relaxation"
+date: 2026-01-31
+date-modified: last-modified
+---
+
+To read:
+
+* [Generalized Entropy Production in Collisionless Plasma Flows and Turbulence](https://journals.aps.org/prx/pdf/10.1103/PhysRevX.12.031011)

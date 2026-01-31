@@ -1,6 +1,7 @@
 ---
 title: "Web"
 date: 2026-01-29
+date-modified: last-modified
 ---
 
 * [What is it like to be a philosopher?](http://www.whatisitliketobeaphilosopher.com)
@@ -11,13 +12,11 @@ date: 2026-01-29
 * [Probability theory as extended logic](https://bayes.wustl.edu)
 * [Structured Procrastination](https://www.structuredprocrastination.com)
 * [US Muon Collider Collaboration](https://www.muoncollider.us)
-
 * [Why academics stink at writing](https://www.chronicle.com/article/why-academics-stink-at-writing/)
 * [Zombie nouns](https://archive.nytimes.com/opinionator.blogs.nytimes.com/2012/07/23/zombie-nouns/)
 * [The preprint revolution](https://upstream.force11.org/the-preprint-revolution-implications-for-bibliographic-databases/)
 * [Runescape helps Venezuelans survive](https://www.polygon.com/features/2020/5/27/21265613/runescape-is-helping-venezuelans-survive)
 * [The False Promise of ChatGPT](https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html)
-
 * Journals
     * [Chaos](https://pubs.aip.org/aip/cha)
     * [Nature Physics](https://www.nature.com/nphys/)

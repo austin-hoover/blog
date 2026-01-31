@@ -191,7 +191,7 @@
 
 - title: "Contemporary Philosophical Perspectives on the Cosmological Constant"
   path: "https://arxiv.org/pdf/2212.04335"
-  author: Koberinski, Falck‡, Smeenk
+  author: Koberinski, Falck‡ and Smeenk
   categories:
     - cosmology
 
@@ -259,7 +259,7 @@
 
 - title: "New Omnivorism: a Novel Approach to Food and Animal Ethics"
   path: "https://doi.org/10.1007/s41055-022-00098-z"
-  author: Milburn, Bobier
+  author: Milburn and Bobier
   categories:
     - ethics
     - veganism
@@ -327,7 +327,7 @@
 
 - title: "Benardete Paradoxes, Causal Finitism, and the Unsatisfiable Pair Diagnosis"
   path: "https://philarchive.org/archive/SCHBPC"
-  author: Schmid, Malpass
+  author: Schmid and Malpass
   categories:
     - paradox
     - infinity
@@ -375,7 +375,7 @@
 
 - title: "Skepticism and the principle of sufficient reason"
   path: "https://link.springer.com/article/10.1007/s11098-020-01482-3"
-  author: Koons, Pruss
+  author: Koons and Pruss
   categories:
     - skepticism
     - principle of sufficient reason
@@ -413,7 +413,7 @@
 
 - title: "Why is There Anything?"
   path: "https://philpapers.org/rec/RASWIT-2"
-  author: Rasmussen, Weaver
+  author: Rasmussen and Weaver
   categories:
     - metaphysics
     - cosmological arguments
@@ -432,7 +432,7 @@
 
 - title: "The Multiverse Theodicy Meets Population Ethics"
   path: "https://journals.publishing.umich.edu/ergo/article/5193/galley/3155/view/"
-  author: Li, Saad
+  author: Li and Saad
   categories:
     - evil
     - multiverse
@@ -445,7 +445,7 @@
     
 - title: "Scepticism about the argument from divine hiddenness"
   path: "https://philpapers.org/archive/MCBSAT-2.pdf"
-  author: McBayer, Swenson
+  author: McBayer and Swenson
   categories:
     - hiddenness
 
@@ -484,7 +484,7 @@
 
 - title: "The problem of nomological harmony"
   path: "https://philpapers.org/archive/CUTTPO-9.pdf"
-  author: Cutter, Saad
+  author: Cutter and Saad
   categories:
     - laws
     - explanation
@@ -503,7 +503,7 @@
     
 - title: "The Nomological Argument for the Existence of God"
   path: "https://philarchive.org/archive/HILTNA-2"
-  author: Hildebrand, Metcalf
+  author: Hildebrand and Metcalf
   categories:
     - laws
     - theism

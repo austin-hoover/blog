@@ -1,6 +1,7 @@
 ---
 title: Books
 date: 2026-01-01
+date-modified: last-modified
 listing:
   fields: [title, author, score]
   field-display-names:

@@ -1,6 +1,7 @@
 ---
 title: "Papers: STEM"
 date: 2026-01-26
+date-modified: last-modified
 ---
 
 [Under construction]

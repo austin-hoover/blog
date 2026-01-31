@@ -1,7 +1,7 @@
 ---
 title: Notes
 listing:
-  fields: [title, date]
+  fields: [title, date, date-modified]
   date-format: YYYY‑MM‑DD
   table-hover: true
   type: table
@@ -9,12 +9,5 @@ listing:
   sort-ui: false
   filter-ui: false
   max-description-length: 50
-  contents: 
-    - books/index.qmd
-    - blogs.qmd
-    - people/index.qmd
-    - web/index.qmd
-    - papers-philosophy/index.qmd
-    - papers-stem/index.qmd
-    - collisionless-relaxation.qmd
+  feed: true
 ---

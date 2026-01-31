@@ -1,6 +1,7 @@
 ---
 title: "Papers: Philosophy"
 date: 2024-01-01
+date-modified: last-modified
 format:
   html:
     grid:
