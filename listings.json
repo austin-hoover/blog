@@ -1,26 +1,242 @@
 [
   {
-    "listing": "/notes/papers-philosophy/index.html",
+    "listing": "/notes/collisionless-relaxation/index.html",
     "items": []
   },
   {
-    "listing": "/notes/people/index.html",
+    "listing": "/notes/papers-stem/index.html",
     "items": []
   },
   {
-    "listing": "/notes/collisionless-relaxation.html",
-    "items": [
-      "/notes/blogs.html",
-      "/notes/books/index.html",
-      "/notes/index.html",
-      "/notes/papers-philosophy/index.html",
-      "/notes/papers-stem/index.html",
-      "/notes/people/index.html",
-      "/notes/web/index.html"
-    ]
+    "listing": "/notes/space-charge/index.html",
+    "items": []
   },
   {
     "listing": "/notes/books/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/blogs/index.html",
+    "items": []
+  },
+  {
+    "listing": "/about/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2022-02-11_injection-figures/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-09-15_kalam-cosmological-arguments/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/chao-02-wake-fields/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-06-12_arguing-about-gods/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-07-01_space-charge-instabilities/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/worst-figures-of-the-year/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2026-02-01_hollow-reconstruction/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/equilibrium/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-04-28_ment-sparse-ct/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-01-25_coupled-parametric-oscillators/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-05-16_why-maximize-entropy/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-04-01_muon/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-11-05_four-dimensional-tomography-from-one-dimensional-projections/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/how-the-laws-of-physics-lie/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-06-08_exact-solutions-phase-space-tomo/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-10-16_tomographic-reconstruction-in-four-dimensions/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-05-13_matched-envelope/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-02-22_pic/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2023-07-09_biological-design-arguments/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-09-27_coupled-tune-estimation/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-08-12_usmcc/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-01-21_parametric-oscillators/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-11-13_keynote-break-apart/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-03-20_applying-6d-ment-to-data/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2023-07-10_fine-tuning/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-06-09_mentflow-part2/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-03-21_cross-validation-as-uncertainty-quantification/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2026-01-31_space-charge-modified-eigenvectors/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-10-30_n-dimensional-ment-particle-sampling/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-04-29_authorship-identification/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-10-13_impact/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2026-01-29_ecrp/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-04-13_particle-based-beam-envelope-tracker/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2022-03-22_leibnizian-cosmological-arguments/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-03-22_hdr-ment/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-03-23_flow-equilibrium/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2026-01-30_eigenpainting-prl/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-07-05_ontological-arguments/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-11-10_the-sense-of-style/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-03-30_eichmann-in-jerusalem/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-12-26_high-dynamic-range-benchmark/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-06-06_mentflow-part1/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-12-07_stalin-paradoxes-of-power/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-09-29_ment-and-bayes/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-03-28_nonlinear-resonances/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-03-23_hb/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-06-10_rec4d-sns-ring/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-06-02_dragt-book/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-04-27_minerbo/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2025-12-11_stalin-waiting-for-hitler/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/dynamic-production/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2023-05-28_btf/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2021-05-27_painting-a-particle-beam/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/2024-12-27_phase-space-spirals/index.html",
     "items": []
   },
   {
@@ -79,247 +295,28 @@
     ]
   },
   {
-    "listing": "/posts/2024-12-27_phase-space-spirals/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-05-27_painting-a-particle-beam/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2023-05-28_btf/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/dynamic-production/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-12-11_stalin-waiting-for-hitler/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-04-27_minerbo/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-06-02_dragt-book/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-06-10_rec4d-sns-ring/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-03-23_hb/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-03-28_nonlinear-resonances/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-09-29_ment-and-bayes/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-12-07_stalin-paradoxes-of-power/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-06-06_mentflow-part1/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-12-26_high-dynamic-range-benchmark/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-03-30_eichmann-in-jerusalem/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-11-10_the-sense-of-style/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-07-05_ontological-arguments/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2026-01-30_eigenpainting-prl/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-03-23_flow-equilibrium/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-03-22_hdr-ment/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2022-03-22_leibnizian-cosmological-arguments/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-04-13_particle-based-beam-envelope-tracker/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2026-01-29_ecrp/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-10-13_impact/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-04-29_authorship-identification/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-10-30_n-dimensional-ment-particle-sampling/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2026-01-31_space-charge-modified-eigenvectors/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-03-21_cross-validation-as-uncertainty-quantification/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-06-09_mentflow-part2/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2023-07-10_fine-tuning/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-03-20_applying-6d-ment-to-data/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-11-13_keynote-break-apart/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-01-21_parametric-oscillators/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-08-12_usmcc/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-09-27_coupled-tune-estimation/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2023-07-09_biological-design-arguments/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-02-22_pic/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-05-13_matched-envelope/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-10-16_tomographic-reconstruction-in-four-dimensions/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-06-08_exact-solutions-phase-space-tomo/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/how-the-laws-of-physics-lie/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-11-05_four-dimensional-tomography-from-one-dimensional-projections/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-04-01_muon/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2024-05-16_why-maximize-entropy/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-01-25_coupled-parametric-oscillators/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2025-04-28_ment-sparse-ct/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/equilibrium/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2026-02-01_hollow-reconstruction/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/worst-figures-of-the-year/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-07-01_space-charge-instabilities/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-06-12_arguing-about-gods/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/chao-02-wake-fields/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2021-09-15_kalam-cosmological-arguments/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/2022-02-11_injection-figures/index.html",
-    "items": []
-  },
-  {
-    "listing": "/about/index.html",
-    "items": []
-  },
-  {
     "listing": "/notes/web/index.html",
     "items": []
   },
   {
     "listing": "/notes/index.html",
     "items": [
-      "/notes/books/index.html",
-      "/notes/blogs.html",
-      "/notes/people/index.html",
+      "/notes/blogs/index.html",
       "/notes/web/index.html",
-      "/notes/papers-philosophy/index.html",
+      "/notes/books/index.html",
+      "/notes/space-charge/index.html",
+      "/notes/people/index.html",
       "/notes/papers-stem/index.html",
-      "/notes/collisionless-relaxation.html"
+      "/notes/papers-philosophy/index.html",
+      "/notes/collisionless-relaxation/index.html"
     ]
   },
   {
-    "listing": "/notes/blogs.html",
+    "listing": "/notes/people/index.html",
     "items": []
   },
   {
-    "listing": "/notes/papers-stem/index.html",
+    "listing": "/notes/papers-philosophy/index.html",
     "items": []
   }
 ]
