@@ -1,0 +1,9 @@
+---
+title: "Sampling"
+date: 2026-01-31
+date-modified: last-modified
+---
+
+* [The No-U-Turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo](https://www.jmlr.org/papers/volume15/hoffman14a/hoffman14a.pdf). Hoffman and Gelman. (2014)
+* [The no-underrun sampler: A locally-adaptive, gradient-free mcmc method](https://arxiv.org/pdf/2501.18548). Bou-Rabee et al. (2025)
+* [Microcanonical langevin ensembles: Advancing the sampling of bayesian neural networks](https://arxiv.org/pdf/2502.06335). Sommer, et al. (2025)
