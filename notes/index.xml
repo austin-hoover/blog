@@ -12,6 +12,33 @@
 <generator>quarto-1.8.27</generator>
 <lastBuildDate>Sat, 31 Jan 2026 05:00:00 GMT</lastBuildDate>
 <item>
+  <title>Sampling</title>
+  <link>https://austin-hoover.github.io/blog/notes/sampling/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<ul>
+<li><a href="https://www.jmlr.org/papers/volume15/hoffman14a/hoffman14a.pdf">The No-U-Turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo</a>. Hoffman and Gelman. (2014)</li>
+<li><a href="https://arxiv.org/pdf/2501.18548">The no-underrun sampler: A locally-adaptive, gradient-free mcmc method</a>. Bou-Rabee et al.&nbsp;(2025)</li>
+<li><a href="https://arxiv.org/pdf/2502.06335">Microcanonical langevin ensembles: Advancing the sampling of bayesian neural networks</a>. Sommer, et al.&nbsp;(2025)</li>
+</ul>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div> ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/sampling/</guid>
+  <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Space Charge</title>
   <link>https://austin-hoover.github.io/blog/notes/space-charge/</link>
   <description><![CDATA[ 
@@ -20,6 +47,13 @@
 
 
 
+<ul>
+<li><a href="https://doi.org/10.1103/PhysRevLett.118.154801">Dispersion-Induced Beam Instability in Circular Accelerators</a>. Yuan, Boine-Frankenheim, Franchetti, and Hofmann (2017).</li>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201">Modeling of second order space charge driven coherent sum and difference instabilities</a>. Yuan, Boine-Frankenheim, and Hofmann. (2017)</li>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201">Intensity limitations due to space charge for bunch compression in synchrotrons</a>. Yuan, Boine-Frankenheim, and Hofmann. (2018)</li>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201">Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons</a>. Liu et al.&nbsp;(2025)</li>
+<li><a href="https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9">Modeling of beam envelope instabilities in high-intensity circular accelerators</a>. Yuan. (2025)</li>
+</ul>
 
 
 
@@ -42,9 +76,9 @@
 
 
 
-<p>To read:</p>
 <ul>
-<li><a href="https://journals.aps.org/prx/pdf/10.1103/PhysRevX.12.031011">Generalized Entropy Production in Collisionless Plasma Flows and Turbulence</a></li>
+<li><a href="https://doi.org/10.1103/PhysRevLett.100.040604">Collisionless Relaxation in Non-Neutral Plasmas</a>. Levin, Pakter, and Teles. (2008).</li>
+<li><a href="https://journals.aps.org/prx/pdf/10.1103/PhysRevX.12.031011">Generalized Entropy Production in Collisionless Plasma Flows and Turbulence</a>. Zhdankin. (2022)</li>
 </ul>
 
 
