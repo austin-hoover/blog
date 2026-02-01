@@ -4,6 +4,5 @@ date: 2026-01-31
 date-modified: last-modified
 ---
 
-To read:
-
-* [Generalized Entropy Production in Collisionless Plasma Flows and Turbulence](https://journals.aps.org/prx/pdf/10.1103/PhysRevX.12.031011)
+* [Collisionless Relaxation in Non-Neutral Plasmas](https://doi.org/10.1103/PhysRevLett.100.040604). Levin, Pakter, and Teles. (2008).
+* [Generalized Entropy Production in Collisionless Plasma Flows and Turbulence](https://journals.aps.org/prx/pdf/10.1103/PhysRevX.12.031011). Zhdankin. (2022)
