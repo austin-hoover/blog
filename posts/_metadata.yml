@@ -1,11 +1,9 @@
 cap-location: bottom  # figure caption {bottom, margin}
 citation: false
 comments:
-  # hypothesis:
-  #   theme: clean
-  #   openSidebar: false
   giscus:
     repo: austin-hoover/blog
+    reactions-enabled: false
 execute:
   echo: true
   enabled: false
