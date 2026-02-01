@@ -1,5 +1,5 @@
 ---
-title: "Ontological arguments"
+title: "*Arguing About Gods*: ontological arguments"
 author: Austin Hoover
 date: 2021-07-05
 categories: [Anselm, ontological arguments]

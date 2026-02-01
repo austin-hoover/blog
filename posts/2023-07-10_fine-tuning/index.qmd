@@ -1,5 +1,5 @@
 ---
-title: Fine-tuning arguments
+title: "*Arguing About Gods*: fine-tuning arguments"
 date: 2023-07-10
 author: Austin Hoover
 categories: [teleological arguments, fine-tuning, multiverse]

@@ -1,5 +1,5 @@
 ---
-title: "*Stalin: Paradoxes of Power* (Kotkin)"
+title: "*Stalin: Paradoxes of Power*"
 author: Austin Hoover
 date: 2025-12-07
 categories:

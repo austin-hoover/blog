@@ -1,5 +1,5 @@
 ---
-title: "Leibnizian cosmological arguments"
+title: "*Arguing About Gods*: Leibnizian cosmological arguments"
 date: 2022-03-22
 author: Austin Hoover
 categories: [cosmological arguments, Leibniz, infinity]
@@ -28,7 +28,7 @@ The PSR can be used to run an argument for the existence of a necessary being. H
 8. The universe, which is composed of only contingent beings, is contingent.
 9. Therefore, the necessary being is something other than the universe. 
 
-Premise 2 is the PSR. Oppy suggests that the PSR, as it is usually formulated, is unacceptably strong and that defensible versions of the PSR are “so weak that it is implausible to suppose that they possess serious metaphysical bite” [@Oppy2006-inf].[^1] In this section, I will discuss several points raised by Pruss in [@Craig2009] in defense of the PSR.
+Premise 2 is the PSR. Oppy suggests that the PSR, as it is usually formulated, is unacceptably strong and that defensible versions of the PSR are “so weak that it is implausible to suppose that they possess serious metaphysical bite” [@Oppy2006-inf].[^1] In this section, I'll discuss several points raised by Pruss in [@Craig2009] in defense of the PSR.
 
 
 ### 1.1. Support for the PSR
@@ -42,7 +42,7 @@ Surely, those who reject the PSR are doing so because they are skeptical of appl
 
 #### 1.2.1. Imagination
 
-Hume suggested that the PSR is false because one can imagine an exception to it. This objection is not so interesting to me, so I will move on.  
+Hume suggested that the PSR is false because one can imagine an exception to it. This objection is not so interesting to me, so I'll move on.  
 
 #### 1.2.2. Chance
 
@@ -117,7 +117,7 @@ The primary advantage of this argument is the weakening of the explanatory princ
 
 The second premise is more controversial. In support of this premise, Rasmussen & Pruss suggest three approaches. First, one might argue that contingent concrete reality began to exist; this is the task of the Kalam argument. Second, one might argue only that it is plausible that contingent concrete reality began to exist; for example, by finding a viable cosmological model in which time begins or by showing that causal finitism is possibly true. Third, one might argue that it is conceivable that contingent concrete reality began to exist, which provides defeasible evidence of possibility. 
 
-The primary critique of the second premise is that it is false if origin essentialism is true. On origin essentialism, if we look at *our* universe, the possible worlds shrink: in *our* universe, it is either true in all possible worlds, or false in all possible worlds, that contingent concrete reality began to exist. Thus, the word “can” should be removed from the second premise. The authors give several responses to this objection. The first response is a short argument against origin essentialism. The second response is a possible workaround, maintaining origin essentialism. Since origin essentialism is a new concept to me, I will have to return to this discussion some other time.
+The primary critique of the second premise is that it is false if origin essentialism is true. On origin essentialism, if we look at *our* universe, the possible worlds shrink: in *our* universe, it is either true in all possible worlds, or false in all possible worlds, that contingent concrete reality began to exist. Thus, the word “can” should be removed from the second premise. The authors give several responses to this objection. The first response is a short argument against origin essentialism. The second response is a possible workaround, maintaining origin essentialism. Since origin essentialism is a new concept to me, I'll have to return to this discussion some other time.
 
 The fourth premise follows from possibly necessary $\rightarrow$ necessary. Leon offers an alternative to a necessary being; he raises the possibility of *factually necessary* beings:
 

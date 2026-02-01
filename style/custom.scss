@@ -1,12 +1,5 @@
 /*-- scss:defaults --*/
 
-// $h1-font-size: 1.94em;
-// $h2-font-size: 1.45em;
-// $h3-font-size: 1.16em;
-// $h4-font-size: 1.0em;
-// $h5-font-size: 1.0em;
-// $h6-font-size: 0.9em;
-
 $h1-font-size: 2.00em;
 $h2-font-size: 1.50em;
 $h3-font-size: 1.20em;
@@ -19,16 +12,13 @@ $navbar-bg: rgb(50, 50, 50);
 
 // /*-- scss:rules --*/
 
-// Make all headers bold
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600 !important;
 }
 
-// Remove line and padding after h2 headers
-// h2, .h2 {
-//     border-bottom: none !important;
-//     padding-bottom: 0.0em !important;
-// }
+h1.title {
+    line-height: 1.1 !important;
+}
 
 // Use sans-serif font for website header
 .navbar {
@@ -49,9 +39,9 @@ pre, code {
     font-weight: 200 !important;
 }
 
-// Section numbers
+
 span.header-section-number::after {
-    // content: ".";  // add period after number
+    // content: ".";  // add period after section number
 }
 
 // Listing table titles
@@ -63,5 +53,4 @@ span.header-section-number::after {
 .quarto-listing-table td {
     padding-top: 4px !important;
     padding-bottom: 4px !important;
-    // line-height: 1.25;
 }

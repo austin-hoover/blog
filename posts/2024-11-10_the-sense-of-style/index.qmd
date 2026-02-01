@@ -1,5 +1,5 @@
 ---
-title: "*The Sense of Style* (Pinker)"
+title: "*The Sense of Style*"
 date: 2024-11-10
 author: Austin Hoover
 toc: false

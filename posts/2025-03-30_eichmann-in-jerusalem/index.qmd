@@ -1,5 +1,5 @@
 ---
-title: "*Eichmann in Jerusalem* (Arendt)"
+title: "*Eichmann in Jerusalem: A Report on the Banality of Evil*"
 date: 2025-03-30
 author: Austin Hoover
 toc: false

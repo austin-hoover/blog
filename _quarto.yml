@@ -24,7 +24,7 @@ format:
         body-width: 610px
     mainfont: "Latin Modern"
     fontsize: 16px
-    linestretch: 1.3
+    linestretch: 1.25
     html-math-method: mathjax
     highlight-style: github
     listing:
