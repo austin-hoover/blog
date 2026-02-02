@@ -1,12 +1,26 @@
 - title: "The Holdovers"
   director: "Payne"
   year: 2023
-  score: 8
+  score: 7.5
   path: "https://www.rottentomatoes.com/m/the_holdovers"
 
 - title: "The Grand Budapest Hotel"
   director: "Anderson"
   year: 2014
-  score: 9
+  score: 8.5
   path: "https://www.rottentomatoes.com/m/the_grand_budapest_hotel"
-  
+
+- title: "The Lord of the Rings: The Fellowship of the Ring"
+  director: "Jackson"
+  year: 2001
+  score: 9.5
+
+- title: "The Lord of the Rings: The Two Towers"
+  director: "Jackson"
+  year: 2002
+  score: 9.5
+
+- title: "The Lord of the Rings: The Return of the King"
+  director: "Jackson"
+  year: 2003
+  score: 9.5
