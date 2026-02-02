@@ -10,8 +10,4 @@ execute:
   cache: true
   freeze: true
 lightbox: true
-sidebar: false
 title-block-categories: false
-toc: true
-toc-depth: 3
-toc-expand: true

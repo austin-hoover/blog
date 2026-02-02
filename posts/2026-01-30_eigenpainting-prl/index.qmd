@@ -9,8 +9,6 @@ categories:
   - papers
 format:
   html:
-    toc: true
-    toc-expand: 1
     number-sections: true
     fig-align: left
 ---

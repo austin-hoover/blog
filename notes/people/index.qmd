@@ -1,7 +1,7 @@
 ---
 title: "People"
 date: 2024-01-01
-date-modified: last-modified
+date-modified: 2024-01-01
 ---
 
 * [Alexander Pruss](http://alexanderpruss.com)

@@ -1,7 +1,7 @@
 ---
 title: "Collisionless Relaxation"
 date: 2026-01-31
-date-modified: last-modified
+date-modified: 2026-02-01
 ---
 
 * [Collisionless Relaxation in Non-Neutral Plasmas](https://doi.org/10.1103/PhysRevLett.100.040604). Levin, Pakter, and Teles. (2008).

@@ -1,11 +1,12 @@
 ---
 title: Notes
 listing:
+  contents: .
   fields: [title, date, date-modified]
   date-format: YYYY‑MM‑DD
   table-hover: true
   type: table
-  sort: false
+  sort: date-modified desc
   sort-ui: false
   filter-ui: false
   max-description-length: 50

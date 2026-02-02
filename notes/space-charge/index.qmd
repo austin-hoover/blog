@@ -1,7 +1,7 @@
 ---
 title: "Space Charge"
 date: 2026-01-31
-date-modified: last-modified
+date-modified: 2026-01-31
 ---
 
 * [Dispersion-Induced Beam Instability in Circular Accelerators](https://doi.org/10.1103/PhysRevLett.118.154801). Yuan, Boine-Frankenheim, Franchetti, and Hofmann (2017).

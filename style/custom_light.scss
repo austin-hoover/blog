@@ -1,10 +1,6 @@
 @import "./custom.scss";
 
 
-/*-- scss:functions --*/
-
-
-
 /*-- scss:defaults --*/
 
 $primary: black;
@@ -13,25 +9,14 @@ $body-color: rgb(20, 20, 20);
 $code-color: $body-color;  // inline code text
 
 
+/*-- scss:functions --*/
+
+
 /*-- scss:rules --*/
 
 h1, h2, h3, h4, h5, h6, h7 {
-  color: black !important;
-}
-
-.header-section-number {
-    // color: black; 
-}
-
-.navbar {
-    // padding-bottom: 2.9px !important;
-    // padding-top: 2.9px !important;
-    // border-bottom-width: 0px !important;
-    // font-size: 12px;
-}
-
-.navbar-title {
-    // fontsize: 16px;
+    color: black !important;
+    hyphens: none;
 }
 
 .quarto-listing-table {
@@ -49,3 +34,4 @@ h1, h2, h3, h4, h5, h6, h7 {
     vertical-align: middle;
     color: black;
 }
+

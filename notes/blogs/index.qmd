@@ -1,7 +1,7 @@
 ---
 title: "Blogs"
 date: 2026-01-10
-date-modified: last-modified
+date-modified: 2026-01-10
 listing:
   id: sample-listings
   sort: false

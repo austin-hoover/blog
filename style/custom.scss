@@ -1,9 +1,9 @@
 /*-- scss:defaults --*/
 
-$h1-font-size: 2.00em;
-$h2-font-size: 1.50em;
-$h3-font-size: 1.20em;
-$h4-font-size: 1.0em;
+$h1-font-size: 1.90em;
+$h2-font-size: 1.40em;
+$h3-font-size: 1.15em;
+$h4-font-size: 1.02em;
 $h5-font-size: 1.0em;
 $h6-font-size: 0.9em;
 
@@ -20,28 +20,18 @@ h1.title {
     line-height: 1.1 !important;
 }
 
-// Use sans-serif font for website header
 .navbar {
-    // padding-bottom: 2.9px !important;
-    // padding-top: 2.9px !important;
-    // border-bottom-width: 0px !important;
     font-family: "Helvetica Neue";
 }
 
-// Smaller code font
+// Code
 pre, code {
     font-size: 12px !important;
 }
 
-// Subtitle
-.lead {
-    font-size: 1.05rem !important;
-    font-weight: 200 !important;
-}
-
-
+// Section numbers
 span.header-section-number::after {
-    // content: ".";  // add period after section number
+    // content: ".";
 }
 
 // Listing table titles
@@ -53,4 +43,12 @@ span.header-section-number::after {
 .quarto-listing-table td {
     padding-top: 4px !important;
     padding-bottom: 4px !important;
+}
+
+// Line breaking
+body {
+  hyphens: auto;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
 }

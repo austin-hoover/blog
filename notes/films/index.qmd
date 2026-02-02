@@ -1,14 +1,13 @@
 ---
-title: Books
+title: "Films"
 date: 2026-01-01
 date-modified: 2026-01-01
 listing:
-  fields: [title, author, score]
+  fields: [title, director, year, score]
   field-display-names:
     title: "Title"
-    author: "Author"
-    date: "Date"
-    categories: "Categories"
+    director: "Director"
+    year: "Year"
     score: "Score"
   type: table
   date-format: YYYY‑MM‑DD
