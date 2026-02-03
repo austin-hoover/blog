@@ -308,9 +308,9 @@
   {
     "listing": "/notes/index.html",
     "items": [
+      "/notes/space-charge/index.html",
       "/notes/sampling/index.html",
       "/notes/collisionless-relaxation/index.html",
-      "/notes/space-charge/index.html",
       "/notes/phase-space-reconstruction/index.html",
       "/notes/papers-stem/index.html",
       "/notes/blogs/index.html",

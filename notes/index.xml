@@ -12,6 +12,164 @@
 <generator>quarto-1.8.27</generator>
 <lastBuildDate>Sat, 31 Jan 2026 05:00:00 GMT</lastBuildDate>
 <item>
+  <title>Space Charge</title>
+  <link>https://austin-hoover.github.io/blog/notes/space-charge/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing-1">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div><div class="quarto-listing quarto-listing-container-table" id="listing-listing-2">
+<table class="quarto-listing-table table table-hover">
+<thead>
+<tr>
+
+<th>
+Title
+</th>
+
+<th>
+Author
+</th>
+
+<th>
+Year
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-title-sort="Limitations of proton beam current in a strong focusing linear accelerator associated with beam space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://s3.cern.ch/inspire-prod-files-5/526fe2f2ff6f05063bcb9a9b08da12f9" class="title listing-title">Limitations of proton beam current in a strong focusing linear accelerator associated with beam space charge</a>
+</td>
+<td>
+<span class="listing-author">Kapchinskij and Vladimirskij</span>
+</td>
+<td>
+<span class="listing-year">1959</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="Transverse space-charge effects in circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.osti.gov/servlets/purl/877342" class="title listing-title">Transverse space-charge effects in circular accelerators</a>
+</td>
+<td>
+<span class="listing-author">Sacherer</span>
+</td>
+<td>
+<span class="listing-year">1968</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-title-sort="RMS envelope equations with space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://cds.cern.ch/record/322516/files/SI-INT-DL-70-12.pdf" class="title listing-title">RMS envelope equations with space charge</a>
+</td>
+<td>
+<span class="listing-author">Sacherer</span>
+</td>
+<td>
+<span class="listing-year">1971</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-title-sort="Dispersion-Induced Beam Instability in Circular Accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://doi.org/10.1103/PhysRevLett.118.154801" class="title listing-title">Dispersion-Induced Beam Instability in Circular Accelerators</a>
+</td>
+<td>
+<span class="listing-author">Yuan, Boine-Frankenheim, Franchetti, and Hofmann</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-title-sort="Modeling of second order space charge driven coherent sum and difference instabilities" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201" class="title listing-title">Modeling of second order space charge driven coherent sum and difference instabilities</a>
+</td>
+<td>
+<span class="listing-author">Yuan, Boine-Frankenheim, and Hofmann</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-title-sort="Intensity limitations due to space charge for bunch compression in synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201" class="title listing-title">Intensity limitations due to space charge for bunch compression in synchrotrons</a>
+</td>
+<td>
+<span class="listing-author">Yuan, Boine-Frankenheim, and Hofmann</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201" class="title listing-title">Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons</a>
+</td>
+<td>
+<span class="listing-author">Liu et al.</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-title-sort="Modeling of beam envelope instabilities in high-intensity circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9" class="title listing-title">Modeling of beam envelope instabilities in high-intensity circular accelerators</a>
+</td>
+<td>
+<span class="listing-author">Yuan</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div> ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/space-charge/</guid>
+  <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Sampling</title>
   <link>https://austin-hoover.github.io/blog/notes/sampling/</link>
   <description><![CDATA[ 
@@ -74,35 +232,6 @@
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/collisionless-relaxation/</guid>
-  <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Space Charge</title>
-  <link>https://austin-hoover.github.io/blog/notes/space-charge/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<ul>
-<li><a href="https://doi.org/10.1103/PhysRevLett.118.154801">Dispersion-Induced Beam Instability in Circular Accelerators</a>. Yuan, Boine-Frankenheim, Franchetti, and Hofmann (2017).</li>
-<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201">Modeling of second order space charge driven coherent sum and difference instabilities</a>. Yuan, Boine-Frankenheim, and Hofmann. (2017)</li>
-<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201">Intensity limitations due to space charge for bunch compression in synchrotrons</a>. Yuan, Boine-Frankenheim, and Hofmann. (2018)</li>
-<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201">Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons</a>. Liu et al.&nbsp;(2025)</li>
-<li><a href="https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9">Modeling of beam envelope instabilities in high-intensity circular accelerators</a>. Yuan. (2025)</li>
-</ul>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div> ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/space-charge/</guid>
   <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
 </item>
 <item>

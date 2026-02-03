@@ -45,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-77f9e147f3e01278f2db7e3ae5d21b23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-27593320250504f9d6a614f2670f6035.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-77f9e147f3e01278f2db7e3ae5d21b23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-51891aa9dbe88a56424bc0da59bfa023.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0706d915ba4280998d50842fafe1d792.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-51891aa9dbe88a56424bc0da59bfa023.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing-1 .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -91,7 +91,35 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-listing-1'] = new List('listing-listing-1', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing-2 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-year',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-year"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing-2'] = new List('listing-listing-2', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -374,7 +402,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 31, 2026</p>
+      <p class="date-modified">February 2, 2026</p>
     </div>
   </div>
     
@@ -385,21 +413,150 @@ window.Quarto = {
 </header>
 
 
-<ul>
-<li><a href="https://doi.org/10.1103/PhysRevLett.118.154801">Dispersion-Induced Beam Instability in Circular Accelerators</a>. Yuan, Boine-Frankenheim, Franchetti, and Hofmann (2017).</li>
-<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201">Modeling of second order space charge driven coherent sum and difference instabilities</a>. Yuan, Boine-Frankenheim, and Hofmann. (2017)</li>
-<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201">Intensity limitations due to space charge for bunch compression in synchrotrons</a>. Yuan, Boine-Frankenheim, and Hofmann. (2018)</li>
-<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201">Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons</a>. Liu et al.&nbsp;(2025)</li>
-<li><a href="https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9">Modeling of beam envelope instabilities in high-intensity circular accelerators</a>. Yuan. (2025)</li>
-</ul>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing-1">
 <div class="list quarto-listing-default">
 
 </div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div><div class="quarto-listing quarto-listing-container-table" id="listing-listing-2">
+<table class="quarto-listing-table table table-hover">
+<thead>
+<tr>
+
+<th>
+Title
+</th>
+
+<th>
+Author
+</th>
+
+<th>
+Year
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-title-sort="Limitations of proton beam current in a strong focusing linear accelerator associated with beam space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://s3.cern.ch/inspire-prod-files-5/526fe2f2ff6f05063bcb9a9b08da12f9" class="title listing-title">Limitations of proton beam current in a strong focusing linear accelerator associated with beam space charge</a>
+</td>
+<td>
+<span class="listing-author">Kapchinskij and Vladimirskij</span>
+</td>
+<td>
+<span class="listing-year">1959</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="Transverse space-charge effects in circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.osti.gov/servlets/purl/877342" class="title listing-title">Transverse space-charge effects in circular accelerators</a>
+</td>
+<td>
+<span class="listing-author">Sacherer</span>
+</td>
+<td>
+<span class="listing-year">1968</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-title-sort="RMS envelope equations with space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://cds.cern.ch/record/322516/files/SI-INT-DL-70-12.pdf" class="title listing-title">RMS envelope equations with space charge</a>
+</td>
+<td>
+<span class="listing-author">Sacherer</span>
+</td>
+<td>
+<span class="listing-year">1971</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-title-sort="Dispersion-Induced Beam Instability in Circular Accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://doi.org/10.1103/PhysRevLett.118.154801" class="title listing-title">Dispersion-Induced Beam Instability in Circular Accelerators</a>
+</td>
+<td>
+<span class="listing-author">Yuan, Boine-Frankenheim, Franchetti, and Hofmann</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-title-sort="Modeling of second order space charge driven coherent sum and difference instabilities" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201" class="title listing-title">Modeling of second order space charge driven coherent sum and difference instabilities</a>
+</td>
+<td>
+<span class="listing-author">Yuan, Boine-Frankenheim, and Hofmann</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-title-sort="Intensity limitations due to space charge for bunch compression in synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201" class="title listing-title">Intensity limitations due to space charge for bunch compression in synchrotrons</a>
+</td>
+<td>
+<span class="listing-author">Yuan, Boine-Frankenheim, and Hofmann</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201" class="title listing-title">Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons</a>
+</td>
+<td>
+<span class="listing-author">Liu et al.</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-title-sort="Modeling of beam envelope instabilities in high-intensity circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9" class="title listing-title">Modeling of beam envelope instabilities in high-intensity circular accelerators</a>
+</td>
+<td>
+<span class="listing-author">Yuan</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
