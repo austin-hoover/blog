@@ -1,12 +1,21 @@
 ---
 title: "Space Charge"
 date: 2026-01-31
-date-modified: 2026-01-31
+date-modified: 2026-02-02
+format:
+  html:
+    grid:
+      body-width: 700px
+listing:
+  - contents: data.yml
+    type: table
+    sort-ui: false
+    filter-ui: false
+    table-hover: true
+    fields: [title, author, year]
+    field-display-names: 
+      title: "Title"
+      author: "Author"
+      year: "Year"
 ---
-
-* [Dispersion-Induced Beam Instability in Circular Accelerators](https://doi.org/10.1103/PhysRevLett.118.154801). Yuan, Boine-Frankenheim, Franchetti, and Hofmann (2017).
-* [Modeling of second order space charge driven coherent sum and difference instabilities](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201). Yuan, Boine-Frankenheim, and Hofmann. (2017)
-* [Intensity limitations due to space charge for bunch compression in synchrotrons](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201). Yuan, Boine-Frankenheim, and Hofmann. (2018)
-* [Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201). Liu et al. (2025)
-* [Modeling of beam envelope instabilities in high-intensity circular accelerators](https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9). Yuan. (2025)
 

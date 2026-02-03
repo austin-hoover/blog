@@ -1,0 +1,40 @@
+- title: "Limitations of proton beam current in a strong focusing linear accelerator associated with beam space charge"
+  author: "Kapchinskij and Vladimirskij"
+  year: 1959
+  path: "https://s3.cern.ch/inspire-prod-files-5/526fe2f2ff6f05063bcb9a9b08da12f9"
+
+- title: "Transverse space-charge effects in circular accelerators"
+  author: "Sacherer"
+  year: 1968
+  path: "https://www.osti.gov/servlets/purl/877342"
+
+- title: "RMS envelope equations with space charge"
+  author: "Sacherer"
+  year: 1971
+  path: "https://cds.cern.ch/record/322516/files/SI-INT-DL-70-12.pdf"
+
+- title: "Dispersion-Induced Beam Instability in Circular Accelerators"
+  path: "https://doi.org/10.1103/PhysRevLett.118.154801"
+  author: "Yuan, Boine-Frankenheim, Franchetti, and Hofmann"
+  year: 2017
+
+- title: "Modeling of second order space charge driven coherent sum and difference instabilities"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201"
+  author: "Yuan, Boine-Frankenheim, and Hofmann"
+  year: 2017
+  
+- title: "Intensity limitations due to space charge for bunch compression in synchrotrons"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201"
+  author: "Yuan, Boine-Frankenheim, and Hofmann"
+  year: 2018
+  
+- title: "Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201"
+  author: "Liu et al."
+  year: 2025
+  
+- title: "Modeling of beam envelope instabilities in high-intensity circular accelerators"
+  path: "https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9"
+  author: "Yuan"
+  year: 2025
+
