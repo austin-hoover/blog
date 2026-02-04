@@ -688,9 +688,25 @@ Year
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-title-sort="The Holdovers">
+<tr data-index="0" data-listing-title-sort="Small Things Like These">
 <td>
-<a href="https://www.rottentomatoes.com/m/the_holdovers" class="title listing-title">The Holdovers</a>
+<a href="https://en.wikipedia.org/wiki/Small_Things_like_These_(film)" class="title listing-title">Small Things Like These</a>
+</td>
+<td>
+<span class="listing-director">Mielants</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+<td>
+<span class="listing-score">8</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="The Holdovers">
+<td>
+<a href="https://en.wikipedia.org/wiki/The_Holdovers" class="title listing-title">The Holdovers</a>
 </td>
 <td>
 <span class="listing-director">Payne</span>
@@ -704,9 +720,9 @@ Year
 
 </tr>
 
-<tr data-index="1" data-listing-title-sort="The Grand Budapest Hotel">
+<tr data-index="2" data-listing-title-sort="The Grand Budapest Hotel">
 <td>
-<a href="https://www.rottentomatoes.com/m/the_grand_budapest_hotel" class="title listing-title">The Grand Budapest Hotel</a>
+<a href="https://en.wikipedia.org/wiki/The_Grand_Budapest_Hotel" class="title listing-title">The Grand Budapest Hotel</a>
 </td>
 <td>
 <span class="listing-director">Anderson</span>
@@ -720,9 +736,9 @@ Year
 
 </tr>
 
-<tr data-index="2" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring">
+<tr data-index="3" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring">
 <td>
-<span class="listing-title">The Lord of the Rings: The Fellowship of the Ring</span>
+<a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring" class="title listing-title">The Lord of the Rings: The Fellowship of the Ring</a>
 </td>
 <td>
 <span class="listing-director">Jackson</span>
@@ -736,9 +752,9 @@ Year
 
 </tr>
 
-<tr data-index="3" data-listing-title-sort="The Lord of the Rings: The Two Towers">
+<tr data-index="4" data-listing-title-sort="The Lord of the Rings: The Two Towers">
 <td>
-<span class="listing-title">The Lord of the Rings: The Two Towers</span>
+<a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Two_Towers" class="title listing-title">The Lord of the Rings: The Two Towers</a>
 </td>
 <td>
 <span class="listing-director">Jackson</span>
@@ -752,9 +768,9 @@ Year
 
 </tr>
 
-<tr data-index="4" data-listing-title-sort="The Lord of the Rings: The Return of the King">
+<tr data-index="5" data-listing-title-sort="The Lord of the Rings: The Return of the King">
 <td>
-<span class="listing-title">The Lord of the Rings: The Return of the King</span>
+<a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King" class="title listing-title">The Lord of the Rings: The Return of the King</a>
 </td>
 <td>
 <span class="listing-director">Jackson</span>
