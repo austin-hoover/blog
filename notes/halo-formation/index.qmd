@@ -1,0 +1,21 @@
+---
+title: "Halo Formation"
+date: 2026-02-03
+date-modified: 2026-02-03
+format:
+  html:
+    grid:
+      body-width: 700px
+listing:
+  contents: data.yml
+  type: table
+  sort-ui: false
+  filter-ui: false
+  table-hover: true
+  fields: [title, author, year]
+  field-display-names: 
+    title: "Title"
+    author: "Author"
+    year: "Year"
+---
+
