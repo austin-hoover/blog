@@ -1,26 +1,35 @@
+- title: "Small Things Like These"
+  director: Mielants
+  year: 2024
+  score: 8.0
+  path: "https://en.wikipedia.org/wiki/Small_Things_like_These_(film)"
+
 - title: "The Holdovers"
   director: "Payne"
   year: 2023
   score: 7.5
-  path: "https://www.rottentomatoes.com/m/the_holdovers"
+  path: "https://en.wikipedia.org/wiki/The_Holdovers"
 
 - title: "The Grand Budapest Hotel"
   director: "Anderson"
   year: 2014
   score: 8.5
-  path: "https://www.rottentomatoes.com/m/the_grand_budapest_hotel"
+  path: "https://en.wikipedia.org/wiki/The_Grand_Budapest_Hotel"
 
 - title: "The Lord of the Rings: The Fellowship of the Ring"
   director: "Jackson"
   year: 2001
   score: 9.5
+  path: "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring"
 
 - title: "The Lord of the Rings: The Two Towers"
   director: "Jackson"
   year: 2002
   score: 9.5
+  path: "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Two_Towers"
 
 - title: "The Lord of the Rings: The Return of the King"
   director: "Jackson"
   year: 2003
   score: 9.5
+  path: "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King"
