@@ -115,6 +115,34 @@ Year
 
 </tr>
 
+<tr data-index="5" data-listing-title-sort="Analytical treatment of particle-core interaction" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://arxiv.org/pdf/1002.2015" class="title listing-title">Analytical treatment of particle-core interaction</a>
+</td>
+<td>
+<span class="listing-author">Batygin</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="Chaotic Dynamics Driven by Particle-Core Interactions" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://arxiv.org/pdf/2111.09843" class="title listing-title">Chaotic Dynamics Driven by Particle-Core Interactions</a>
+</td>
+<td>
+<span class="listing-author">Batygin and Batygin</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
