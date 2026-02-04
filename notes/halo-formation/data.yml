@@ -23,4 +23,12 @@
   year: 1998
   path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.1.084201"
 
-  
+- title: "Analytical treatment of particle-core interaction"
+  author: "Batygin"
+  year: 2010
+  path: "https://arxiv.org/pdf/1002.2015"
+
+- title: "Chaotic Dynamics Driven by Particle-Core Interactions"
+  author: "Batygin and Batygin"
+  year: 2021
+  path: "https://arxiv.org/pdf/2111.09843"
