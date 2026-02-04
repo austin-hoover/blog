@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-02-03">
 
-<title>The Lord of the Rings: The Fellowship of the Ring – Austin’s Blog</title>
+<title>Halo Formation – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -44,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-77f9e147f3e01278f2db7e3ae5d21b23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-27593320250504f9d6a614f2670f6035.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-77f9e147f3e01278f2db7e3ae5d21b23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c934e3ee129ea13cc3002228fa3da9cd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0eb5c276ccd31ea4c2d3619e2abc0881.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-c934e3ee129ea13cc3002228fa3da9cd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-year',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-year"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -355,7 +356,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The Lord of the Rings: The Fellowship of the Ring</h1>
+<h1 class="title">Halo Formation</h1>
 </div>
 
 
@@ -363,7 +364,19 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 3, 2026</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">February 3, 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -372,42 +385,12 @@ window.Quarto = {
 </header>
 
 
-<p>Example text</p>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1767243600000" data-listing-file-modified-sort="1770013852670" data-listing-date-modified-sort="1767243600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail"><a href="../../notes/films/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../notes/films/index.html" class="no-external">Films</a>
-</h3>
-<div class="delink listing-description"><a href="../../notes/films/index.html" class="no-external">
-
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<table class="quarto-listing-table table table-hover">
 <thead>
 <tr>
 
@@ -416,35 +399,89 @@ Title
 </th>
 
 <th>
-Director
+Author
 </th>
 
 <th>
 Year
 </th>
 
-<th>
-Score
-</th>
-
 </tr>
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-file-modified-sort="1770013827380" data-listing-reading-time-sort="1" data-listing-word-count-sort="2" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring" data-listing-filename-sort="lotr.qmd">
+<tr data-index="0" data-listing-title-sort="Analytic Model for Halo Formation in High Current Ion Linacs" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
 <td>
-The Lord of the…</td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td></tr></tbody></table><div class="listing-no-matching d-none"></div>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../notes/films/index.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2026
-</div>
-</a>
-</div>
-</div>
-</div>
+<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.73.1247" class="title listing-title">Analytic Model for Halo Formation in High Current Ion Linacs</a>
+</td>
+<td>
+<span class="listing-author">Gluckstern</span>
+</td>
+<td>
+<span class="listing-year">1994</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="Stability of a Uniform-Density Breathing Beam with Circular Cross Section" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.2835" class="title listing-title">Stability of a Uniform-Density Breathing Beam with Circular Cross Section</a>
+</td>
+<td>
+<span class="listing-author">Gluckstern, Cheng, and Ye</span>
+</td>
+<td>
+<span class="listing-year">1995</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-title-sort="Stability and halo formation of a breathing axisymmetric uniform-density beam" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.54.6788" class="title listing-title">Stability and halo formation of a breathing axisymmetric uniform-density beam</a>
+</td>
+<td>
+<span class="listing-author">Gluckstern et al.</span>
+</td>
+<td>
+<span class="listing-year">1996</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-title-sort="Simulation study of halo formation in breathing round beams" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.55.4694" class="title listing-title">Simulation study of halo formation in breathing round beams</a>
+</td>
+<td>
+<span class="listing-author">Okamoto and Ikegami</span>
+</td>
+<td>
+<span class="listing-year">1997</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-title-sort="Particle-core model for transverse dynamics of beam halo" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.1.084201" class="title listing-title">Particle-core model for transverse dynamics of beam halo</a>
+</td>
+<td>
+<span class="listing-author">Wangler, et al.</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -533,7 +570,7 @@ Jan 1, 2026
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
