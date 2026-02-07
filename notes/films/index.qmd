@@ -1,9 +1,9 @@
 ---
 title: "Films"
 date: 2026-01-01
-date-modified: 2026-01-01
+date-modified: 2026-02-06
 listing:
-  fields: [title, director, year, score]
+  fields: [title, director, year]
   field-display-names:
     title: "Title"
     director: "Director"
@@ -15,8 +15,5 @@ listing:
   categories: true
   max-items: 99999999
   page-size: 99999999
-  contents:
-    - "*.qmd"
-    - "data.yml"
+  contents: data.yml
 ---
-

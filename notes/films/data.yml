@@ -1,35 +1,179 @@
+- title: "Belfast"
+  director: "Branagh"
+  year: 2021
+
 - title: "Small Things Like These"
-  director: Mielants
+  director: "Mielants"
   year: 2024
-  score: 8.0
-  path: "https://en.wikipedia.org/wiki/Small_Things_like_These_(film)"
+
+- title: "I'm Still Here"
+  director: "Salles"
+  year: 2024
+  
+- title: "How to Make Millions Before Grandma Dies"
+  director: "Boonnitipat"
+  year:  2024
+  
+- title: "Past Lives"
+  director: "Song"
+  year: 2023
+
+- title: "All We Imagine as Light"
+  director: "Kapadia"
+  year: 2024
 
 - title: "The Holdovers"
   director: "Payne"
   year: 2023
-  score: 7.5
-  path: "https://en.wikipedia.org/wiki/The_Holdovers"
 
 - title: "The Grand Budapest Hotel"
   director: "Anderson"
   year: 2014
-  score: 8.5
-  path: "https://en.wikipedia.org/wiki/The_Grand_Budapest_Hotel"
+
+- title: "Sicario"
+  director: 
+  year: 2015
+
+- title: "I'm No Longer Here"
+  director: "Frías de la Parra"
+  year: 2019
+
+- title: "The Florida Project"
+  director: "Baker"
+  year: 2017
+
+- title: "Dune"
+  director: "Villeneuve"
+  year: 2021
+  
+- title: "Dune: Part Two"
+  director: "Villeneuve"
+  year: 2024
+
+- title: "Arrival"
+  director: "Villeneuve"
+  year: 2016
+
+- title: "Blade Runner"
+  director: "Villeneuve"
+  year: 2017
+
+- title: "Blade Runner 2049"
+  director: "Villeneuve"
+  year: 2017
+
+- title: "The Big Sick"
+  director: "Showalter"
+  year: 2017
+
+- title: "The Way, Way Back"
+  director: "Faxon"
+  year: 2013
+
+- title: "Mud"
+  director: "Nichols"
+  year: 2012
 
 - title: "The Lord of the Rings: The Fellowship of the Ring"
   director: "Jackson"
   year: 2001
-  score: 9.5
-  path: "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring"
 
 - title: "The Lord of the Rings: The Two Towers"
   director: "Jackson"
   year: 2002
-  score: 9.5
-  path: "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Two_Towers"
 
 - title: "The Lord of the Rings: The Return of the King"
   director: "Jackson"
   year: 2003
-  score: 9.5
-  path: "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King"
+
+- title: "Mission: Impossible – Rogue Nation"
+  director: "McQuarrie"
+  year: 2015
+  
+- title: "Mission: Impossible – Fallout"
+  director: McQuarrie
+  year: 2018
+
+- title: "Schindler's List"
+  director: "Spielberg"
+  year: 1993
+
+- title: "Planet of the Apes"
+  director: "Schaffner"
+  year: 1963
+
+- title: "Halloween Is Grinch Night"
+  director: Baldwin
+  year: 1977
+
+- title: "How the Grinch Stole Christmas!"
+  director: "Jones"
+  year: 1966
+
+- title: "Rise of the Planet of the Apes"
+  director: "Wyatt"
+  year: 2011
+
+- title: "Dawn of the Planet of the Apes"
+  director: "Reeves"
+  year: 2014
+
+- title: "Jurrasic Park"
+  director: "Spielberg"
+  year: 1993
+
+- title: "Saving Private Ryan"
+  director: "Speilberg"
+  year: 1998
+
+- title: "Minority Report"
+  director: "Speilberg"
+  year: 2002
+
+- title: "War of the Worlds"
+  director: "Speilberg"
+  year: 2005
+
+- title: "Kiki's Delivery Service"
+  director: "Miyazaki"
+  year: 1989
+
+- title: "Princess Mononoke"
+  director: "Miyazaki"
+  year: 1987
+  
+- title: "Spirited Away"
+  director: "Miyazaki"
+  year: 2001
+
+- title: "Howl's Moving Castle"
+  director: "Miyazaki"
+  year: 2004
+
+- title: "The Wind Rises"
+  director: "Miyazaki"
+  year: 2014
+
+- title: "Silence"
+  director: "Scorsese"
+  year: 2016
+
+- title: "The Departed"
+  director: "Scorsese"
+  year: 2006
+
+- title: "Shutter Island"
+  director: "Scorsese"
+  year: 2010
+
+- title: "The Lion King"
+  director: "Allers"
+  year: 1994
+
+- title: "Finding Nemo"
+  director: "Stanton"
+  year: 2003
+
+- title: "Everything Everywhere All at Once"
+  director: "Kwan"
+  year: 2022
