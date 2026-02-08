@@ -4,20 +4,27 @@
     "items": []
   },
   {
-    "listing": "/notes/papers-philosophy/index.html",
+    "listing": "/notes/research-tools/index.html",
     "items": []
   },
   {
-    "listing": "/notes/phase-space-reconstruction/index.html",
+    "listing": "/notes/papers-stem/index.html",
     "items": []
   },
   {
-    "listing": "/notes/links/index.html",
+    "listing": "/notes/people/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/journals/index.html",
     "items": []
   },
   {
     "listing": "/notes/index.html",
     "items": [
+      "/notes/accelerators/index.html",
+      "/notes/journals/index.html",
+      "/notes/simulation-codes/index.html",
       "/notes/films/index.html",
       "/notes/halo-formation/index.html",
       "/notes/space-charge/index.html",
@@ -27,13 +34,18 @@
       "/notes/papers-stem/index.html",
       "/notes/blogs/index.html",
       "/notes/books/index.html",
-      "/notes/links/index.html",
+      "/notes/research-tools/index.html",
+      "/notes/web-links/index.html",
       "/notes/people/index.html",
       "/notes/papers-philosophy/index.html"
     ]
   },
   {
     "listing": "/notes/sampling/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/web-links/index.html",
     "items": []
   },
   {
@@ -315,6 +327,10 @@
     ]
   },
   {
+    "listing": "/notes/accelerators/index.html",
+    "items": []
+  },
+  {
     "listing": "/notes/films/index.html",
     "items": []
   },
@@ -327,11 +343,15 @@
     "items": []
   },
   {
-    "listing": "/notes/people/index.html",
+    "listing": "/notes/simulation-codes/index.html",
     "items": []
   },
   {
-    "listing": "/notes/papers-stem/index.html",
+    "listing": "/notes/phase-space-reconstruction/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/papers-philosophy/index.html",
     "items": []
   },
   {
