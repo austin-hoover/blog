@@ -1,0 +1,23 @@
+---
+title: "Journals"
+date: 2026-02-08
+date-modified: 2026-02-08
+---
+
+* [PRAB](https://journals.aps.org/prab/)
+* [PRE](https://journals.aps.org/pre/)
+* [PRL](https://journals.aps.org/prl/)
+* [Nature Physics](https://www.nature.com/nphys/)
+* [Science](https://www.science.org/journal/science)
+* [Chaos](https://pubs.aip.org/aip/cha)
+* [Web of Science Master Journal List](https://mjl.clarivate.com/home)
+
+* [ArXiv](https://arxiv.org)
+* [ArXiv (accelerator physics)](https://arxiv.org/list/physics.acc-ph/recent)
+* [ArXiv (astrophysics of galaxies)](https://arxiv.org/list/astro-ph.GA/recent)
+* [ArXiv (chaotic dynamics)](https://arxiv.org/list/nlin.CD/recent)
+* [ArXiv (computational physics)](https://arxiv.org/list/physics.comp-ph/recent)
+* [ArXiv (data analysis, statistics, and probability)](https://arxiv.org/list/physics.data-an/recent)
+* [ArXiv (history and philosophy of physics)](https://arxiv.org/list/physics.hist-ph/recent)
+* [PhilSci](https://philsci-archive.pitt.edu/cgi/latest_days2?n=30)
+* [philpeople.org](https://philpeople.org)
