@@ -1,0 +1,7 @@
+---
+title: "Research Tools"
+date: 2026-01-01
+date-modified: 2026-01-01
+---
+
+* [Notebook.link](https://notebook.link/public-link)
