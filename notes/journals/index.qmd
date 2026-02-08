@@ -1,5 +1,5 @@
 ---
-title: "Journals"
+title: "Journals and Preprint Servers"
 date: 2026-02-08
 date-modified: 2026-02-08
 ---
@@ -10,8 +10,8 @@ date-modified: 2026-02-08
 * [Nature Physics](https://www.nature.com/nphys/)
 * [Science](https://www.science.org/journal/science)
 * [Chaos](https://pubs.aip.org/aip/cha)
+* [NIM:A](https://www.sciencedirect.com/journal/nuclear-instruments-and-methods-in-physics-research-section-a-accelerators-spectrometers-detectors-and-associated-equipment/vol/1085/suppl/C)
 * [Web of Science Master Journal List](https://mjl.clarivate.com/home)
-
 * [ArXiv](https://arxiv.org)
 * [ArXiv (accelerator physics)](https://arxiv.org/list/physics.acc-ph/recent)
 * [ArXiv (astrophysics of galaxies)](https://arxiv.org/list/astro-ph.GA/recent)
