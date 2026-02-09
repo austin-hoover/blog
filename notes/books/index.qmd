@@ -1,15 +1,15 @@
 ---
 title: Books
 date: 2026-01-01
-date-modified: 2026-01-01
+date-modified: 2026-02-09
 listing:
-  fields: [title, author, score]
+  fields: [title, author, year]
   field-display-names:
     title: "Title"
     author: "Author"
     date: "Date"
     categories: "Categories"
-    score: "Score"
+    year: "Year"
   type: table
   date-format: YYYY‑MM‑DD
   table-hover: false

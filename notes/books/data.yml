@@ -1,546 +1,682 @@
 - title: "The Brothers Karamazov"
   author: Dostoevsky
-  score: "-"
+  year: 1879
   categories:
     - Fiction
     - Russia
+    - Morality
 
 - title: "The Covenant of Water"
   author: Verghese
-  score: "-"
+  year: 2023
   categories:
     - Fiction
     - India
     
 - title: "A Christmas Carol"
   author: Dickens
-  score: "-"
+  year: 1843
   categories:
     - Fiction
 
 - title: "The Chinese Question"
   author: Ngai
-  score: "-"
+  year: 2022
   categories:
     - History
     - China
 
 - title: "Knowledge and Decisions"
   author: Sowell
-  score: "-"
+  year: 1980
   categories:
     - Economics
+    - Society
 
 - title: "Breakneck"
   author: Wang
-  score: "-"
+  year: 2025
   categories:
     - China
 
 - title: "Numerical Recipes"
   author: Press
-  score: "-"
+  year: 1986
   categories:
+    - Physics
     - Computational Physics
-    - Computer Science
+    - Algorithms
 
 - title: "Ficciones"
   author: Borges
-  score: "-"
+  year: 1941
   categories:
     - Fiction
+
+- title: "An Introduction to Error Analysis"
+  author: "Taylor"
+  year: 1982
+  categories:
+    - Physics
+    - Statistics
+
+- title: "Mathematics for Physicists"
+  author: "Dennery"
+  year: 1967
+  categories:
+    - Physics
+    - Mathematics
+
+- title: "Unifying Physics of Accelerators, Lasers and Plasma"
+  author: Seryi
+  year: 2015
+  categories:
+    - Physics
+    - Accelerator Physics
+    - Plasma Physics
+
+- title: "Problems in quantum mechanics with solutions"
+  author: Squires
+  year: 1995
+  categories:
+    - Physics
+    - Quantum Physics
+
+- title: "Introduction to Optics"
+  author: Pedrotti
+  year: 2007
+  categories:
+    - Physics 
+    - Optics
     
+- title: "Practical Electronics for Inventors"
+  author: Scherz
+  year: 2000
+  categories:
+    - Physics
+    - Electrical Engineering
+
+- title: "Foundations and Applications of Statistics"
+  author: Pruim
+  year: 2011
+  categories:
+    - Mathematics
+    - Statistics
+
+- title: "Introduction to Quantum Mechanics"
+  author: Griffiths
+  year: 1995
+  categories:
+    - Physics
+    - Quantum Physics
+
+- title: "Physics of Nonneutral Plasmas"
+  author: Davidson
+  year: 2001
+  categories:
+    - Physics
+    - Plasma Physics
+
 - title: "The Book of Sand"
   author: Borges
-  score: "-"
+  year: 1975
   categories:
     - Fiction
 
 - title: "Shakespeare's Memory"
   author: Borges
-  score: "-"
+  year: 1983
   categories:
     - Fiction
 
 - title: "Introduction to Plasma Theory"
   author: Nicholson
-  score: "-"
+  year: 1983
   categories:
-    - Physics (Plasma)
+    - Physics
+    - Plasma Physics
 
 - title: "The Quiet American"
   author: Graham Greene
+  year: 1955
   categories:
     - Fiction
 
 - title: "Stalin: Waiting for Hitler, 1929–1941"
   author: Kotkin
-  score: "-"
+  year: 2017
   categories:
     - History
     - World War II
 
 - title: "Our National Parks"
-  author: Muir
-  score: "-"
+  author: "Muir"
+  year: 1901
   categories:
     - Nature
     - Travel
 
+- title: "Questions of Uniqueness and Resolution in Reconstruction from Projections"
+  author: "Katz"
+  year: 1978
+  categories:
+    - Mathematics
+    - Inverse Problems
+
+- title: "Handbook of Accelerator Physics and Engineering"
+  author: Chao et al.
+  year: 1999
+  categories:
+    - Physics
+    - Accelerator Physics
+
+- title: "Computer Simulation Using Particles"
+  author: "Hockney and Eastwood"
+  year: 1981
+  categories:
+    - Computational Physics
+    - Computer Science
+
 - title: "Probabilistic Artificial Intelligence"
-  author: Krause and Hubotter
-  score: "-"
+  author: "Krause and Hubotter"
+  year: 2025
   categories:
     - Mathematics
     - Probability
     - Machine Learning
 
 - title: "The Cultural Revolution"
-  author: Dikötter
-  score: "-"
+  author: "Dikötter"
+  year: 2016
   categories:
     - History
     - China
 
 - title: "Mao's Great Famine"
-  author: Dikötter
-  score: "-"
+  author: "Dikötter"
+  year: 2010
   categories:
     - History
     - China
 
 - title: "The Tragedy of Liberation"
-  author: Dikötter
-  score: "-"
+  author: "Dikötter"
+  year: 2013
   categories:
     - History
     - China
 
 - title: "Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics"
   author: Dragt
-  score: "-"
+  year: 2011
   categories:
-    - Physics (Accelerator)
+    - Physics
     - Mathematics
+    - Accelerator Physics
 
 - title: "White Nights"
   author: Dostoevsky
-  score: "-"
+  year: 1848
   categories:
     - Fiction
     - Russia
 
 - title: "The Human Condition"
   author: Arendt
-  score: "-"
+  year: 1958
   categories:
-    - Sociology
+    - Society
 
 - title: "How the Laws of Physics Lie"
   author: Cartwright
-  score: "-"
+  year: 1983
   categories:
     - Physics
     - Laws
 
 - title: "Eichmann in Jerusalem: A Report on the Banality of Evil"
   author: Arendt
-  score: "-"
+  year: 1963
   categories:
     - Morality
     - World War II
 
 - title: "Physics of Collective Beam Instabilities in High Energy Accelerators"
   author: Chao
-  score: "-"
+  year: 1993
   categories:
-    - Physics (Accelerator)
+    - Physics
+    - Accelerator Physics
 
 - title: "The Sense of Style"
   author: Pinker
-  score: "-"
+  year: 2014
   categories:
     - Writing
 
 - title: "Deep Learning: Foundations and Concepts"
   author: Bishop, and Bishop
-  score: "-"
+  year: 2023
   categories:
+    - Mathematics
     - Machine Learning
 
 - title: "Entropic Physics"
   author: Caticha
-  score: "-"
+  year: 2022
   categories:
     - Mathematics
     - Probability
 
 - title: "Probability Theory: The Logic of Science"
   author: Jaynes
-  score: "-"
+  year: 2003
   categories:
     - Mathematics
     - Probability
 
 - title: "The Ethics of Abortion"
   author: Kaczor
-  score: "-"
+  year: 2010
   categories:
     - Ethics
     - Abortion
 
 - title: "Data Analysis: A Bayesian Tutorial"
   author: Sivia and Skilling
-  score: "-"
+  year: 1996
   categories:
     - Mathematics
     - Probability
 
 - title: "Bayesian Data Analysis"
   author: Gelman, Carlin, Stern, and Rubin
-  score: "-"
+  year: 1995
   categories:
     - Mathematics
     - Probability
 
 - title: "Stalin: Paradoxes of Power, 1878-1928"
   author: Kotkin
-  score: "-"
+  year: 2014
   categories:
     - History
     - World War II
 
 - title: "The Character Gap"
   author: Miller
-  score: "-"
+  year: 2017
   categories:
+    - Society
     - Ethics
 
-- title: "Exhalation"
+- title: "Exhalation: Stories"
   author: Chiang
-  score: "-"
+  year: 2019
   categories:
-    - Science Fiction
+    - Fiction
 
 - title: "Wealth, Poverty, and Politics"
   author: Sowell
-  score: "-"
+  year: 2015
   categories:
-    - Sociology
+    - Society
+    - Economics
 
 - title: "The Disappearance of Childhood"
   author: Postman
-  score: "-"
+  year: 1982
   categories:
-    - Sociology
+    - Society
 
 - title: "Mere Christianity"
   author: Lewis
-  score: "-"
+  year: 1952
   categories:
     - Religion
-    - Christianity
 
 - title: "Statistical Physics of Particles"
   author: Kardar
-  score: "-"
+  year: 2007
   categories:
-    - Physics (Statistical Mechanics)
+    - Physics
+    - Statistical Physics
 
 - title: "Introduction to Thermal Physics"
   author: Schroeder
-  score: "-"
+  year: 1999
   categories:
-    - Physics (Statistical Mechanics)
+    - Physics
+    - Statistical Physics
+
+- title: "From Tracking Code to Analysis"
+  author: Forest
+  year: 2006
+  categories:
+    - Physics
+    - Accelerator Physics
 
 - title: "Optical Coherence and Quantum Optics"
   author: Mandel and Wolf
-  score: "-"
+  year: 1995
   categories:
-    - Physics (Quantum Optics)
+    - Physics
+    - Quantum Optics
 
 - title: "Quantum Mechanics: Concepts and Applications"
   author: Zettili
-  score: "-"
+  year: 2001
   categories:
-    - Physics (Quantum Mechanics)
+    - Quantum Physics
 
 - title: "Modern Quantum Mechanics"
   author: Sakurai
-  score: "-"
+  year: 1985
   categories:
-    - Physics (Quantum Mechanics)
+    - Physics
+    - Quantum Physics
 
 - title: "What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics"
   author: Becker
-  score: "-"
+  year: 2018
   categories:
     - Physics
     - History
 
 - title: "Modern Elementary Particle Physics"
   author: Kane
-  score: "-"
+  year: 1987
   categories:
-    - Physics (Particle)
+    - Particle Physics
 
 - title: "Introduction to High Energy Physics"
   author: Perkins
-  score: "-"
+  year: 1972
   categories:
-    - Physics (Particle)
+    - Physics
+    - Particle Physics
 
 - title: "Introduction to Elementary Particle Physics"
   author: Griffiths
-  score: "-"
+  year: 2008
   categories:
-    - Physics (Particle)
+    - Physics
+    - Particle Physics
 
 - title: "Classical Mechanics"
   author: Taylor
-  score: "-"
+  year: 2003
   categories:
-    - Physics (CM)
+    - Physics
+    - Classical Physics
 
 - title: "Classical Mechanics"
   author: Goldstein
-  score: "-"
+  year: 1950
   categories:
-    - Physics (CM)
+    - Physics
+    - Classical Physics
     
 - title: "Introduction to Electrodynamics"
   author: Griffiths
-  score: "-"
+  year: 1981
   categories:
-    - Physics (EM)
+    - Physics
+    - Electromagnetism
 
 - title: "Classical Electromagnetism"
   author: Franklin
-  score: "-"
+  year: 2005
   categories:
-    - Physics (EM)
+    - Physics
+    - Electromagnetism
 
 - title: "Classical Electrodynamics"
   author: Jackson
-  score: "-"
+  year: 1962
   categories:
-    - Physics (EM)
+    - Physics
+    - Electromagnetism
 
 - title: "Astrophysics in a Nutshell"
   author: Maoz
-  score: "-"
+  year: 2007
   categories:
-    - Physics (Astro)
+    - Physics
+    - Astrophysics
 
 - title: "Theory and Design of Charged Particle Beams"
   author: Reiser
-  score: "-"
+  year: 1994
   categories:
-    - Physics (Accelerator)
+    - Physics
+    - Accelerator Physics
 
 - title: "Space Charge Physics for Particle Accelerators"
   author: Hofmann
-  score: "-"
+  year: 2017
   categories:
-    - Physics (Accelerator)
-    - Physics (Plasma)
+    - Physics
+    - Accelerator Physics
+    - Plasma Physics
 
 - title: "RF Linear Accelerators"
   author: Wangler
-  score: "-"
+  year: 1998
   categories:
-    - Physics (Accelerator)
+    - Physics
+    - Accelerator Physics
 
 - title: "Particle Accelerator Physics"
   author: Wiedemann
-  score: "-"
+  year: 2015
   categories:
-    - Physics (Accelerator)
+    - Physics
+    - Accelerator Physics
 
 - title: "Measurement and Control of Charged Particle Beams"
   author: Minty and Zimmerman
-  score: "-"
+  year: 2003
   categories:
-    - Physics (Accelerator)
+    - Physics
+    - Accelerator Physics
 
 - title: "Introduction to the Physics of High Energy Accelerators"
   author: Edwards and Syphers
-  score: "-"
+  year: 1994
   categories:
-    - Physics (Accelerator)
+    - Physics
+    - Accelerator Physics
 
 - title: "Accelerator Physics"
   author: Lee
-  score: "-"
+  year: 2004
   categories:
-    - Physics (Accelerator)
+    - Physics
+    - Accelerator Physics
 
 - title: "Time and Chance"
   author: Albert
-  score: "-"
+  year: 2000
   categories:
-    - Philosophy (Science)
+    - Philosophy
+    - Philosophy of Science
 
 - title: "Philosophy of Physics: Space and Time"
   author: Maudlin
-  score: "-"
+  year: 2012
   categories:
-    - Philosophy (Science)
+    - Philosophy
+    - Philosophy of Science
 
 - title: "Philosophy of Physics: Quantum Theory"
   author: Maudlin
-  score: "-"
+  year: 2019
   categories:
-    - Philosophy (Science)
+    - Philosophy
+    - Philosophy of Science
 
 - title: "The Emergent Multiverse"
   author: Wallace
-  score: "-"
+  year: 2012
   categories:
-    - Philosophy (Science)
+    - Philosophy
+    - Philosophy of Science
 
 - title: "Taking Pascal's Wager"
   author: Rota
-  score: "-"
+  year: 2016
   categories:
-    - Philosophy (Religion)
+    - Philosophy
+    - Philosophy of Religion
 
 - title: "Five Proofs of the Existence of God"
   author: Feser
-  score: "-"
+  year: 2017
   categories:
-    - Philosophy (Religion)
+    - Philosophy
+    - Philosophy of Religion
 
 - title: "Is God the Best Explanation of Things? A Dialogue"
   author: Rasmussen and Leon
-  score: "-"
+  year: 2019
   categories:
-    - Philosophy (Religion)
+    - Philosophy
+    - Philosophy of Religion
 
 - title: "Arguing About Gods"
   author: Oppy
-  score: "-"
+  year: 2006
   categories:
-    - Philosophy (Religion)
+    - Philosophy
+    - Philosophy of Religion
 
 - title: "Necessary Existence"
   author: Pruss and Rasmussen
-  score: "-"
+  year: 2018
   categories:
-    - Philosophy (Religion)
-    - Philosophy (Metaphysics)
+    - Philosophy
+    - Philosophy of Religion
+    - Metaphysics
 
 - title: "Infinity, Causation, and Paradox"
   author: Pruss
-  score: "-"
+  year: 2018
   categories:
+    - Philosophy
     - Infinity
     - Paradox
 
 - title: "Knowledge and Christian Belief"
   author: Plantinga
-  score: "-"
+  year: 2015
   categories:
-    - Philosophy (Religion)
-    - Philosophy (Epistemology)
+    - Philosophy
+    - Philosophy of Religion
+    - Epistemology
 
 - title: "Change in View"
   author: Harman
-  score: "-"
+  year: 1986
   categories:
-    - Philosophy (Epistemology)
+    - Philosophy
+    - Epistemology
 
 - title: "Envisioning Information"
   author: Tufte
-  score: "-"
+  year: 1990
   categories:
     - Visualization
 
 - title: "Mathematics of Classical and Quantum Physics"
   author: Byron and Fuller
-  score: "-"
+  year: 1969
   categories:
     - Mathematics
+    - Physics
 
 - title: "Mathematical Methods for Physicists"
   author: Arfken, Weber, and Harris
-  score: "-"
+  year: 1966
   categories:
     - Mathematics
     - Physics
 
 - title: "Stories of Your Life and Others"
   author: Chiang
-  score: "-"
+  year: 2002
   categories:
     - Science Fiction
 
 - title: "The Road"
   author: McCarthy
-  score: "-"
+  year: 2006
   categories:
     - Fiction
 
 - title: "No Country for Old Men"
   author: McCarthy
-  score: "-"
+  year: 2005
   categories:
     - Fiction
 
 - title: "Moby Dick"
   author: Melville
-  score: "-"
+  year: 1851
   categories:
     - Fiction
 
 - title: "Fahrenheit 451"
   author: Bradbury
-  score: "-"
+  year: 1953
   categories:
     - Science Fiction
 
 - title: "Crime and Punishment"
   author: Dostoevsky
-  score: "-"
+  year: 1866
   categories:
     - Fiction
     - Russia
+    - Morality
 
 - title: "The Alchemist"
   author: Coelho
-  score: "-"
+  year: 1988
   categories:
     - Fiction
 
 - title: "Pattern Recognition and Machine Learning"
   author: Bishop
-  score: "-"
+  year: 2006
   categories:
     - Machine Learning
     - Probability
 
 - title: "Neural Networks and Deep Learning"
   author: Nielsen
-  score: "-"
+  year: 2015
   categories:
+    - Mathematics
     - Machine Learning
 
 - title: "Elements of Programming Interviews"
   author: Aziz, Lee, and Prakash
-  score: "-"
+  year: 2012
   categories:
-    - Computer Science
+    - Algorithms
+    - Career
 
 - title: "Cry, the Beloved Country"
   author: Paton
-  score: "-"
+  year: 1948
   categories:
     - Fiction
     - South Africa
 
 - title: "Algorithms"
   author: Sedgewick and Wayne
-  score: "-"
+  year: 2010
   categories:
-    - Computer Science
+    - Algorithms
 
