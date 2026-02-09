@@ -22,6 +22,7 @@
   {
     "listing": "/notes/index.html",
     "items": [
+      "/notes/books/index.html",
       "/notes/accelerators/index.html",
       "/notes/journals/index.html",
       "/notes/simulation-codes/index.html",
@@ -33,7 +34,6 @@
       "/notes/phase-space-reconstruction/index.html",
       "/notes/papers-stem/index.html",
       "/notes/blogs/index.html",
-      "/notes/books/index.html",
       "/notes/research-tools/index.html",
       "/notes/web-links/index.html",
       "/notes/people/index.html",
