@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-01-10">
+<meta name="dcterms.date" content="2025-01-01">
 
-<title>Blogs – Austin’s Blog</title>
+<title>Links – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -78,20 +78,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-sample-listings .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-sample-listings'] = new List('listing-sample-listings', options);
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -356,7 +356,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blogs</h1>
+<h1 class="title">Links</h1>
 </div>
 
 
@@ -367,14 +367,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 10, 2026</p>
+      <p class="date">January 1, 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 10, 2026</p>
+      <p class="date-modified">January 1, 2025</p>
     </div>
   </div>
     
@@ -385,372 +385,31 @@ window.Quarto = {
 </header>
 
 
-<div id="listing-sample-listings" class="quarto-listing quarto-listing-container-table">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-sample-listings-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-sample-listings'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<ul>
+<li><a href="http://www.whatisitliketobeaphilosopher.com">What is it like to be a philosopher?</a></li>
+<li><a href="https://docs.google.com/document/d/1dprquqrzQxJsmOArxEoBDaMx15T9T--P8dagUqX6kQI/edit#heading=h.x1uym8fk8fq3">Bibliography on the problem of evil</a></li>
+<li><a href="https://www.lesswrong.com">lesswrong</a></li>
+<li><a href="https://www.routledge.com/Little-Debates-about-Big-Questions/book-series/LDABQ">Little debates</a></li>
+<li><a href="https://einsteinpapers.press.princeton.edu">Einstein papers</a></li>
+<li><a href="https://bayes.wustl.edu">Probability theory as extended logic</a></li>
+<li><a href="https://www.structuredprocrastination.com">Structured Procrastination</a></li>
+<li><a href="https://www.muoncollider.us">US Muon Collider Collaboration</a></li>
+<li><a href="https://www.chronicle.com/article/why-academics-stink-at-writing/">Why academics stink at writing</a></li>
+<li><a href="https://archive.nytimes.com/opinionator.blogs.nytimes.com/2012/07/23/zombie-nouns/">Zombie nouns</a></li>
+<li><a href="https://upstream.force11.org/the-preprint-revolution-implications-for-bibliographic-databases/">The preprint revolution</a></li>
+<li><a href="https://www.polygon.com/features/2020/5/27/21265613/runescape-is-helping-venezuelans-survive">Runescape helps Venezuelans survive</a></li>
+<li><a href="https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html">The False Promise of ChatGPT</a></li>
+</ul>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
 </div>
-<table class="quarto-listing-table table table-hover">
-<thead>
-<tr>
-
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-title-sort="Statistical Modeling, Causal Inference, and Social Science" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://statmodeling.stat.columbia.edu" class="title listing-title">Statistical Modeling, Causal Inference, and Social Science</a>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-title-sort="Marginal Revolution" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://marginalrevolution.com" class="title listing-title">Marginal Revolution</a>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-title-sort="The Splintered Mind" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="http://schwitzsplinters.blogspot.com" class="title listing-title">The Splintered Mind</a>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-title-sort="Shtetl-Optimized" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://scottaaronson.blog" class="title listing-title">Shtetl-Optimized</a>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-title-sort="AI: A Guide for Thinking Humans" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://aiguide.substack.com" class="title listing-title">AI: A Guide for Thinking Humans</a>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="The Secure Transport of Light" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://danwang.co" class="title listing-title">The Secure Transport of Light</a>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="Big iff True" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://bigifftrue.substack.com/" class="title listing-title">Big iff True</a>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="Bold Reasoning with Peter Singer" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://boldreasoningwithpetersinger.substack.com/" class="title listing-title">Bold Reasoning with Peter Singer</a>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="Danny Yee's Book Reviews" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://dannyreviews.com" class="title listing-title">Danny Yee’s Book Reviews</a>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-title-sort="After Babel" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.afterbabel.com" class="title listing-title">After Babel</a>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-title-sort="Bentham's Bulldog" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://benthams.substack.com/" class="title listing-title">Bentham’s Bulldog</a>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-title-sort="Alexander Pruss" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="http://alexanderpruss.blogspot.com" class="title listing-title">Alexander Pruss</a>
-</td>
-
-</tr>
-
-<tr data-index="12" data-listing-title-sort="Edward Feser" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://edwardfeser.blogspot.com" class="title listing-title">Edward Feser</a>
-</td>
-
-</tr>
-
-<tr data-index="13" data-listing-title-sort="Notebooks" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="http://bactra.org/notebooks/" class="title listing-title">Notebooks</a>
-</td>
-
-</tr>
-
-<tr data-index="14" data-listing-title-sort="China Talk" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.chinatalk.media" class="title listing-title">China Talk</a>
-</td>
-
-</tr>
-
-<tr data-index="15" data-listing-title-sort="Going Awol" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://wollenblog.substack.com/" class="title listing-title">Going Awol</a>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-title-sort="Scott Hawley" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://drscotthawley.github.io/blog/" class="title listing-title">Scott Hawley</a>
-</td>
-
-</tr>
-
-<tr data-index="17" data-listing-title-sort="Condensed Concepts" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://condensedconcepts.blogspot.co" class="title listing-title">Condensed Concepts</a>
-</td>
-
-</tr>
-
-<tr data-index="18" data-listing-title-sort="Nanoscale Views" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="http://nanoscale.blogspot.com" class="title listing-title">Nanoscale Views</a>
-</td>
-
-</tr>
-
-<tr data-index="19" data-listing-title-sort="ex-apologist" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="http://exapologist.blogspot.com" class="title listing-title">ex-apologist</a>
-</td>
-
-</tr>
-
-<tr data-index="20" data-listing-title-sort="Fake Nous" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://fakenous.substack.com" class="title listing-title">Fake Nous</a>
-</td>
-
-</tr>
-
-<tr data-index="21" data-listing-title-sort="Lil'Log" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://lilianweng.github.io" class="title listing-title">Lil’Log</a>
-</td>
-
-</tr>
-
-<tr data-index="22" data-listing-title-sort="Why Philosophy?" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://celineleboeuf.substack.com/" class="title listing-title">Why Philosophy?</a>
-</td>
-
-</tr>
-
-<tr data-index="23" data-listing-title-sort="Not Even Wrong" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.math.columbia.edu/~woit/wordpress/" class="title listing-title">Not Even Wrong</a>
-</td>
-
-</tr>
-
-<tr data-index="24" data-listing-title-sort="Notes From a Data Witch" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://blog.djnavarro.net" class="title listing-title">Notes From a Data Witch</a>
-</td>
-
-</tr>
-
-<tr data-index="25" data-listing-title-sort="Of Particular Significance&quot;" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://profmattstrassler.com/blog/" class="title listing-title">Of Particular Significance”</a>
-</td>
-
-</tr>
-
-<tr data-index="26" data-listing-title-sort="Physics Matt" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="http://www.physicsmatt.com/blog/)" class="title listing-title">Physics Matt</a>
-</td>
-
-</tr>
-
-<tr data-index="27" data-listing-title-sort="Preposterous Universe" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.preposterousuniverse.com/blog/" class="title listing-title">Preposterous Universe</a>
-</td>
-
-</tr>
-
-<tr data-index="28" data-listing-title-sort="Asymptotia" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://asymptotia.com" class="title listing-title">Asymptotia</a>
-</td>
-
-</tr>
-
-<tr data-index="29" data-listing-title-sort="Coleman's Corner" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://colemanhughes.substack.com/" class="title listing-title">Coleman’s Corner</a>
-</td>
-
-</tr>
-
-<tr data-index="30" data-listing-title-sort="Commonplace Philosophy" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://jaredhenderson.substack.com/" class="title listing-title">Commonplace Philosophy</a>
-</td>
-
-</tr>
-
-<tr data-index="31" data-listing-title-sort="Future Doctrina" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://mickryan.substack.com" class="title listing-title">Future Doctrina</a>
-</td>
-
-</tr>
-
-<tr data-index="32" data-listing-title-sort="Gowing Awol" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://wollenblog.substack.com/" class="title listing-title">Gowing Awol</a>
-</td>
-
-</tr>
-
-<tr data-index="33" data-listing-title-sort="Greco and Wansley" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://grecowansley.substack.com/" class="title listing-title">Greco and Wansley</a>
-</td>
-
-</tr>
-
-<tr data-index="34" data-listing-title-sort="The Grumpy Economist" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.grumpy-economist.com/" class="title listing-title">The Grumpy Economist</a>
-</td>
-
-</tr>
-
-<tr data-index="35" data-listing-title-sort="Kareem Takes on the News" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://kareem.substack.com/" class="title listing-title">Kareem Takes on the News</a>
-</td>
-
-</tr>
-
-<tr data-index="36" data-listing-title-sort="The Motivated Skeptic" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://rbnmckenna86.substack.com/" class="title listing-title">The Motivated Skeptic</a>
-</td>
-
-</tr>
-
-<tr data-index="37" data-listing-title-sort="Pens and Poison" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.pensandpoison.org/" class="title listing-title">Pens and Poison</a>
-</td>
-
-</tr>
-
-<tr data-index="38" data-listing-title-sort="Reflections on What Matters" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://jpandrew.substack.com/" class="title listing-title">Reflections on What Matters</a>
-</td>
-
-</tr>
-
-<tr data-index="39" data-listing-title-sort="Sherman Alexie" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://shermanalexie.substack.com/" class="title listing-title">Sherman Alexie</a>
-</td>
-
-</tr>
-
-<tr data-index="40" data-listing-title-sort="Wondering Freely" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://helendecruz.substack.com/" class="title listing-title">Wondering Freely</a>
-</td>
-
-</tr>
-
-</tbody>
-</table>
 <div class="listing-no-matching d-none">No matching items</div>
-</div>
-
-
-
-
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -837,7 +496,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

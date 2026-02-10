@@ -602,159 +602,7 @@ Year
 
 </tr>
 
-<tr data-index="4" data-listing-title-sort="Alexander Pruss" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="http://alexanderpruss.blogspot.com" class="title listing-title">Alexander Pruss</a>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="Edward Feser" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://edwardfeser.blogspot.com" class="title listing-title">Edward Feser</a>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="Notebooks" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="http://bactra.org/notebooks/" class="title listing-title">Notebooks</a>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="China Talk" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.chinatalk.media" class="title listing-title">China Talk</a>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="Scott Hawley" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://drscotthawley.github.io/blog/" class="title listing-title">Scott Hawley</a>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-title-sort="Condensed Concepts" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://condensedconcepts.blogspot.co" class="title listing-title">Condensed Concepts</a>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-title-sort="Nanoscale Views" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="http://nanoscale.blogspot.com" class="title listing-title">Nanoscale Views</a>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-title-sort="ex-apologist" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="http://exapologist.blogspot.com" class="title listing-title">ex-apologist</a>
-</td>
-
-</tr>
-
-<tr data-index="12" data-listing-title-sort="Fake Nous" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://fakenous.substack.com" class="title listing-title">Fake Nous</a>
-</td>
-
-</tr>
-
-<tr data-index="13" data-listing-title-sort="Lil'Log" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://lilianweng.github.io" class="title listing-title">Lil’Log</a>
-</td>
-
-</tr>
-
-<tr data-index="14" data-listing-title-sort="Not Even Wrong" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.math.columbia.edu/~woit/wordpress/" class="title listing-title">Not Even Wrong</a>
-</td>
-
-</tr>
-
-<tr data-index="15" data-listing-title-sort="Notes From a Data Witch" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://blog.djnavarro.net" class="title listing-title">Notes From a Data Witch</a>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-title-sort="Of Particular Significance&quot;" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://profmattstrassler.com/blog/" class="title listing-title">Of Particular Significance”</a>
-</td>
-
-</tr>
-
-<tr data-index="17" data-listing-title-sort="Physics Matt" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="http://www.physicsmatt.com/blog/)" class="title listing-title">Physics Matt</a>
-</td>
-
-</tr>
-
-<tr data-index="18" data-listing-title-sort="Preposterous Universe" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.preposterousuniverse.com/blog/" class="title listing-title">Preposterous Universe</a>
-</td>
-
-</tr>
-
-<tr data-index="19" data-listing-title-sort="Asymptotia" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://asymptotia.com" class="title listing-title">Asymptotia</a>
-</td>
-
-</tr>
-
-<tr data-index="20" data-listing-title-sort="The Secure Transport of Light" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://danwang.co" class="title listing-title">The Secure Transport of Light</a>
-</td>
-
-</tr>
-
-<tr data-index="21" data-listing-title-sort="Danny Yee's Book Reviews" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://dannyreviews.com" class="title listing-title">Danny Yee’s Book Reviews</a>
-</td>
-
-</tr>
-
-<tr data-index="22" data-listing-title-sort="After Babel" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.afterbabel.com" class="title listing-title">After Babel</a>
-</td>
-
-</tr>
-
-<tr data-index="23" data-listing-title-sort="AI: A Guide for Thinking Humans" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="4" data-listing-title-sort="AI: A Guide for Thinking Humans" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://aiguide.substack.com" class="title listing-title">AI: A Guide for Thinking Humans</a>
@@ -762,7 +610,47 @@ Year
 
 </tr>
 
-<tr data-index="24" data-listing-title-sort="Bentham's Bulldog" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="5" data-listing-title-sort="The Secure Transport of Light" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://danwang.co" class="title listing-title">The Secure Transport of Light</a>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="Big iff True" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://bigifftrue.substack.com/" class="title listing-title">Big iff True</a>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-title-sort="Bold Reasoning with Peter Singer" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://boldreasoningwithpetersinger.substack.com/" class="title listing-title">Bold Reasoning with Peter Singer</a>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-title-sort="Danny Yee's Book Reviews" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://dannyreviews.com" class="title listing-title">Danny Yee’s Book Reviews</a>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-title-sort="After Babel" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.afterbabel.com" class="title listing-title">After Babel</a>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-title-sort="Bentham's Bulldog" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://benthams.substack.com/" class="title listing-title">Bentham’s Bulldog</a>
@@ -770,7 +658,151 @@ Year
 
 </tr>
 
-<tr data-index="25" data-listing-title-sort="Coleman's Corner" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="11" data-listing-title-sort="Alexander Pruss" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="http://alexanderpruss.blogspot.com" class="title listing-title">Alexander Pruss</a>
+</td>
+
+</tr>
+
+<tr data-index="12" data-listing-title-sort="Edward Feser" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://edwardfeser.blogspot.com" class="title listing-title">Edward Feser</a>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-title-sort="Notebooks" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="http://bactra.org/notebooks/" class="title listing-title">Notebooks</a>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-title-sort="China Talk" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.chinatalk.media" class="title listing-title">China Talk</a>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-title-sort="Going Awol" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://wollenblog.substack.com/" class="title listing-title">Going Awol</a>
+</td>
+
+</tr>
+
+<tr data-index="16" data-listing-title-sort="Scott Hawley" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://drscotthawley.github.io/blog/" class="title listing-title">Scott Hawley</a>
+</td>
+
+</tr>
+
+<tr data-index="17" data-listing-title-sort="Condensed Concepts" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://condensedconcepts.blogspot.co" class="title listing-title">Condensed Concepts</a>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-title-sort="Nanoscale Views" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="http://nanoscale.blogspot.com" class="title listing-title">Nanoscale Views</a>
+</td>
+
+</tr>
+
+<tr data-index="19" data-listing-title-sort="ex-apologist" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="http://exapologist.blogspot.com" class="title listing-title">ex-apologist</a>
+</td>
+
+</tr>
+
+<tr data-index="20" data-listing-title-sort="Fake Nous" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://fakenous.substack.com" class="title listing-title">Fake Nous</a>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-title-sort="Lil'Log" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://lilianweng.github.io" class="title listing-title">Lil’Log</a>
+</td>
+
+</tr>
+
+<tr data-index="22" data-listing-title-sort="Why Philosophy?" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://celineleboeuf.substack.com/" class="title listing-title">Why Philosophy?</a>
+</td>
+
+</tr>
+
+<tr data-index="23" data-listing-title-sort="Not Even Wrong" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.math.columbia.edu/~woit/wordpress/" class="title listing-title">Not Even Wrong</a>
+</td>
+
+</tr>
+
+<tr data-index="24" data-listing-title-sort="Notes From a Data Witch" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://blog.djnavarro.net" class="title listing-title">Notes From a Data Witch</a>
+</td>
+
+</tr>
+
+<tr data-index="25" data-listing-title-sort="Of Particular Significance&quot;" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://profmattstrassler.com/blog/" class="title listing-title">Of Particular Significance”</a>
+</td>
+
+</tr>
+
+<tr data-index="26" data-listing-title-sort="Physics Matt" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="http://www.physicsmatt.com/blog/)" class="title listing-title">Physics Matt</a>
+</td>
+
+</tr>
+
+<tr data-index="27" data-listing-title-sort="Preposterous Universe" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.preposterousuniverse.com/blog/" class="title listing-title">Preposterous Universe</a>
+</td>
+
+</tr>
+
+<tr data-index="28" data-listing-title-sort="Asymptotia" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://asymptotia.com" class="title listing-title">Asymptotia</a>
+</td>
+
+</tr>
+
+<tr data-index="29" data-listing-title-sort="Coleman's Corner" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://colemanhughes.substack.com/" class="title listing-title">Coleman’s Corner</a>
@@ -778,7 +810,7 @@ Year
 
 </tr>
 
-<tr data-index="26" data-listing-title-sort="Commonplace Philosophy" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="30" data-listing-title-sort="Commonplace Philosophy" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://jaredhenderson.substack.com/" class="title listing-title">Commonplace Philosophy</a>
@@ -786,7 +818,7 @@ Year
 
 </tr>
 
-<tr data-index="27" data-listing-title-sort="Future Doctrina" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="31" data-listing-title-sort="Future Doctrina" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://mickryan.substack.com" class="title listing-title">Future Doctrina</a>
@@ -794,7 +826,7 @@ Year
 
 </tr>
 
-<tr data-index="28" data-listing-title-sort="Gowing Awol" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="32" data-listing-title-sort="Gowing Awol" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://wollenblog.substack.com/" class="title listing-title">Gowing Awol</a>
@@ -802,7 +834,7 @@ Year
 
 </tr>
 
-<tr data-index="29" data-listing-title-sort="Greco and Wansley" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="33" data-listing-title-sort="Greco and Wansley" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://grecowansley.substack.com/" class="title listing-title">Greco and Wansley</a>
@@ -810,7 +842,7 @@ Year
 
 </tr>
 
-<tr data-index="30" data-listing-title-sort="The Grumpy Economist" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="34" data-listing-title-sort="The Grumpy Economist" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.grumpy-economist.com/" class="title listing-title">The Grumpy Economist</a>
@@ -818,7 +850,7 @@ Year
 
 </tr>
 
-<tr data-index="31" data-listing-title-sort="Kareem Takes on the News" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="35" data-listing-title-sort="Kareem Takes on the News" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://kareem.substack.com/" class="title listing-title">Kareem Takes on the News</a>
@@ -826,7 +858,7 @@ Year
 
 </tr>
 
-<tr data-index="32" data-listing-title-sort="The Motivated Skeptic" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="36" data-listing-title-sort="The Motivated Skeptic" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://rbnmckenna86.substack.com/" class="title listing-title">The Motivated Skeptic</a>
@@ -834,7 +866,7 @@ Year
 
 </tr>
 
-<tr data-index="33" data-listing-title-sort="Pens and Poison" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="37" data-listing-title-sort="Pens and Poison" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.pensandpoison.org/" class="title listing-title">Pens and Poison</a>
@@ -842,7 +874,7 @@ Year
 
 </tr>
 
-<tr data-index="34" data-listing-title-sort="Reflections on What Matters" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="38" data-listing-title-sort="Reflections on What Matters" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://jpandrew.substack.com/" class="title listing-title">Reflections on What Matters</a>
@@ -850,7 +882,7 @@ Year
 
 </tr>
 
-<tr data-index="35" data-listing-title-sort="Sherman Alexie" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="39" data-listing-title-sort="Sherman Alexie" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://shermanalexie.substack.com/" class="title listing-title">Sherman Alexie</a>
@@ -858,7 +890,7 @@ Year
 
 </tr>
 
-<tr data-index="36" data-listing-title-sort="Wondering Freely" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="40" data-listing-title-sort="Wondering Freely" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://helendecruz.substack.com/" class="title listing-title">Wondering Freely</a>
