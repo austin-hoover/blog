@@ -345,7 +345,217 @@ Year
 
 </tr>
 
-<tr data-index="3" data-listing-title-sort="Dispersion-Induced Beam Instability in Circular Accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="3" data-listing-title-sort="Stability of the Kapchinskij-Vladimirskij (K-V) distribution in long periodic transport systems" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://cds.cern.ch/record/140869/files/p145.pdf" class="title listing-title">Stability of the Kapchinskij-Vladimirskij (K-V) distribution in long periodic transport systems</a>
+</td>
+<td>
+<span class="listing-author">Hofmann, Laslett, Smith, and Haber</span>
+</td>
+<td>
+<span class="listing-year">1983</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-title-sort="Betatron resonances with space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.osti.gov/etdeweb/servlets/purl/382303#page=282" class="title listing-title">Betatron resonances with space charge</a>
+</td>
+<td>
+<span class="listing-author">Baartman</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-title-sort="Stability of anisotropic beams with space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.57.4713" class="title listing-title">Stability of anisotropic beams with space charge</a>
+</td>
+<td>
+<span class="listing-author">Hofmann</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="Warm-fluid description of intense beam equilibrium and electrostatic stability properties" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://nonneutral.pppl.gov/pdfpapers/PP.1998.5.3028.SL.pdf" class="title listing-title">Warm-fluid description of intense beam equilibrium and electrostatic stability properties</a>
+</td>
+<td>
+<span class="listing-author">Lund and Davidson</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-title-sort="Space charge dynamics in high intensity rings" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.2.114202" class="title listing-title">Space charge dynamics in high intensity rings</a>
+</td>
+<td>
+<span class="listing-author">Holmes et al.</span>
+</td>
+<td>
+<span class="listing-year">1999</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-title-sort="Comparison of simulated and observed beam profile broadening in the Proton Storage Ring and the role of space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.3.034201" class="title listing-title">Comparison of simulated and observed beam profile broadening in the Proton Storage Ring and the role of space charge</a>
+</td>
+<td>
+<span class="listing-author">Galambos et al.</span>
+</td>
+<td>
+<span class="listing-year">2000</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-title-sort="Macroparticle simulation studies of a proton beam halo experiment" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.5.124201" class="title listing-title">Macroparticle simulation studies of a proton beam halo experiment</a>
+</td>
+<td>
+<span class="listing-author">Qiang et al.</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-title-sort="Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://linkinghub.elsevier.com/retrieve/pii/S0168900201016849" class="title listing-title">Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel</a>
+</td>
+<td>
+<span class="listing-author">Okamoto and Yokoya</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-listing-title-sort="Macroparticle simulation studies of a proton beam halo experiment" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.5.124201" class="title listing-title">Macroparticle simulation studies of a proton beam halo experiment</a>
+</td>
+<td>
+<span class="listing-author">Qiang et al.</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-listing-title-sort="Resonant beam behavior studies in the Proton Storage Ring" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.6.074202" class="title listing-title">Resonant beam behavior studies in the Proton Storage Ring</a>
+</td>
+<td>
+<span class="listing-author">Cousineau et al.</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-title-sort="Space-charge transport limits of ion beams in periodic quadrupole focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://linkinghub.elsevier.com/retrieve/pii/S016890020600475X" class="title listing-title">Space-charge transport limits of ion beams in periodic quadrupole focusing channels</a>
+</td>
+<td>
+<span class="listing-author">Lund and Chawla</span>
+</td>
+<td>
+<span class="listing-year">2006</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-title-sort="A core-particle model for periodically focused ion beams with intense space-charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://linkinghub.elsevier.com/retrieve/pii/S0168900207003452" class="title listing-title">A core-particle model for periodically focused ion beams with intense space-charge</a>
+</td>
+<td>
+<span class="listing-author">Lund et al.</span>
+</td>
+<td>
+<span class="listing-year">2007</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-title-sort="Generation of initial kinetic distributions for simulation of long-pulse charged particle beams with high space-charge intensity" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.12.114801" class="title listing-title">Generation of initial kinetic distributions for simulation of long-pulse charged particle beams with high space-charge intensity</a>
+</td>
+<td>
+<span class="listing-author">Lund, Kikuchi, and Davidson</span>
+</td>
+<td>
+<span class="listing-year">2009</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-listing-title-sort="Envelope instability and the fourth order resonance" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.17.124202" class="title listing-title">Envelope instability and the fourth order resonance</a>
+</td>
+<td>
+<span class="listing-author">Li and Zhao</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-listing-title-sort="Structure resonances due to space charge in periodic focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.024204" class="title listing-title">Structure resonances due to space charge in periodic focusing channels</a>
+</td>
+<td>
+<span class="listing-author">Li and Jameson</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-title-sort="Dispersion-Induced Beam Instability in Circular Accelerators" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://doi.org/10.1103/PhysRevLett.118.154801" class="title listing-title">Dispersion-Induced Beam Instability in Circular Accelerators</a>
@@ -359,7 +569,7 @@ Year
 
 </tr>
 
-<tr data-index="4" data-listing-title-sort="Modeling of second order space charge driven coherent sum and difference instabilities" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="19" data-listing-title-sort="Modeling of second order space charge driven coherent sum and difference instabilities" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201" class="title listing-title">Modeling of second order space charge driven coherent sum and difference instabilities</a>
@@ -373,7 +583,7 @@ Year
 
 </tr>
 
-<tr data-index="5" data-listing-title-sort="Intensity limitations due to space charge for bunch compression in synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="20" data-listing-title-sort="Intensity limitations due to space charge for bunch compression in synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201" class="title listing-title">Intensity limitations due to space charge for bunch compression in synchrotrons</a>
@@ -387,7 +597,7 @@ Year
 
 </tr>
 
-<tr data-index="6" data-listing-title-sort="Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="21" data-listing-title-sort="Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201" class="title listing-title">Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons</a>
@@ -401,7 +611,7 @@ Year
 
 </tr>
 
-<tr data-index="7" data-listing-title-sort="Modeling of beam envelope instabilities in high-intensity circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="22" data-listing-title-sort="Modeling of beam envelope instabilities in high-intensity circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9" class="title listing-title">Modeling of beam envelope instabilities in high-intensity circular accelerators</a>
