@@ -1514,6 +1514,680 @@ Year
   <pubDate>Sat, 10 Jan 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Films</title>
+  <link>https://austin-hoover.github.io/blog/notes/films/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-director" data-direction="asc">
+        Director
+      </option>
+      <option value="listing-year" data-direction="asc">
+        Year
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-director" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Director</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-year" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Year</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-title-sort="About Time">
+<td>
+<span class="listing-title">About Time</span>
+</td>
+<td>
+<span class="listing-director">Curtis</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="Belfast">
+<td>
+<span class="listing-title">Belfast</span>
+</td>
+<td>
+<span class="listing-director">Branagh</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-title-sort="Small Things Like These">
+<td>
+<span class="listing-title">Small Things Like These</span>
+</td>
+<td>
+<span class="listing-director">Mielants</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-title-sort="I'm Still Here">
+<td>
+<span class="listing-title">I’m Still Here</span>
+</td>
+<td>
+<span class="listing-director">Salles</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-title-sort="How to Make Millions Before Grandma Dies">
+<td>
+<span class="listing-title">How to Make Millions Before Grandma Dies</span>
+</td>
+<td>
+<span class="listing-director">Boonnitipat</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-title-sort="Past Lives">
+<td>
+<span class="listing-title">Past Lives</span>
+</td>
+<td>
+<span class="listing-director">Song</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="All We Imagine as Light">
+<td>
+<span class="listing-title">All We Imagine as Light</span>
+</td>
+<td>
+<span class="listing-director">Kapadia</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-title-sort="The Holdovers">
+<td>
+<span class="listing-title">The Holdovers</span>
+</td>
+<td>
+<span class="listing-director">Payne</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-title-sort="The Grand Budapest Hotel">
+<td>
+<span class="listing-title">The Grand Budapest Hotel</span>
+</td>
+<td>
+<span class="listing-director">Anderson</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-title-sort="Sicario">
+<td>
+<span class="listing-title">Sicario</span>
+</td>
+<td>
+<span class="listing-director">&nbsp;</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-title-sort="I'm No Longer Here">
+<td>
+<span class="listing-title">I’m No Longer Here</span>
+</td>
+<td>
+<span class="listing-director">Frías de la Parra</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-listing-title-sort="The Florida Project">
+<td>
+<span class="listing-title">The Florida Project</span>
+</td>
+<td>
+<span class="listing-director">Baker</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-listing-title-sort="Dune">
+<td>
+<span class="listing-title">Dune</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-title-sort="Dune: Part Two">
+<td>
+<span class="listing-title">Dune: Part Two</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-title-sort="Arrival">
+<td>
+<span class="listing-title">Arrival</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-title-sort="Blade Runner">
+<td>
+<span class="listing-title">Blade Runner</span>
+</td>
+<td>
+<span class="listing-director">Scott</span>
+</td>
+<td>
+<span class="listing-year">1982</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-listing-title-sort="Blade Runner 2049">
+<td>
+<span class="listing-title">Blade Runner 2049</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-listing-title-sort="Baby Driver">
+<td>
+<span class="listing-title">Baby Driver</span>
+</td>
+<td>
+<span class="listing-director">Wright</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-title-sort="The Big Sick">
+<td>
+<span class="listing-title">The Big Sick</span>
+</td>
+<td>
+<span class="listing-director">Showalter</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-listing-title-sort="The Way, Way Back">
+<td>
+<span class="listing-title">The Way, Way Back</span>
+</td>
+<td>
+<span class="listing-director">Faxon</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-listing-title-sort="Mud">
+<td>
+<span class="listing-title">Mud</span>
+</td>
+<td>
+<span class="listing-director">Nichols</span>
+</td>
+<td>
+<span class="listing-year">2012</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring">
+<td>
+<span class="listing-title">The Lord of the Rings: The Fellowship of the Ring</span>
+</td>
+<td>
+<span class="listing-director">Jackson</span>
+</td>
+<td>
+<span class="listing-year">2001</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-listing-title-sort="The Lord of the Rings: The Two Towers">
+<td>
+<span class="listing-title">The Lord of the Rings: The Two Towers</span>
+</td>
+<td>
+<span class="listing-director">Jackson</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-listing-title-sort="The Lord of the Rings: The Return of the King">
+<td>
+<span class="listing-title">The Lord of the Rings: The Return of the King</span>
+</td>
+<td>
+<span class="listing-director">Jackson</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="24" data-listing-title-sort="Mission: Impossible – Rogue Nation">
+<td>
+<span class="listing-title">Mission: Impossible – Rogue Nation</span>
+</td>
+<td>
+<span class="listing-director">McQuarrie</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="25" data-listing-title-sort="Mission: Impossible – Fallout">
+<td>
+<span class="listing-title">Mission: Impossible – Fallout</span>
+</td>
+<td>
+<span class="listing-director">McQuarrie</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="26" data-listing-title-sort="Schindler's List">
+<td>
+<span class="listing-title">Schindler’s List</span>
+</td>
+<td>
+<span class="listing-director">Spielberg</span>
+</td>
+<td>
+<span class="listing-year">1993</span>
+</td>
+
+</tr>
+
+<tr data-index="27" data-listing-title-sort="Planet of the Apes">
+<td>
+<span class="listing-title">Planet of the Apes</span>
+</td>
+<td>
+<span class="listing-director">Schaffner</span>
+</td>
+<td>
+<span class="listing-year">1963</span>
+</td>
+
+</tr>
+
+<tr data-index="28" data-listing-title-sort="Halloween Is Grinch Night">
+<td>
+<span class="listing-title">Halloween Is Grinch Night</span>
+</td>
+<td>
+<span class="listing-director">Baldwin</span>
+</td>
+<td>
+<span class="listing-year">1977</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-listing-title-sort="How the Grinch Stole Christmas!">
+<td>
+<span class="listing-title">How the Grinch Stole Christmas!</span>
+</td>
+<td>
+<span class="listing-director">Jones</span>
+</td>
+<td>
+<span class="listing-year">1966</span>
+</td>
+
+</tr>
+
+<tr data-index="30" data-listing-title-sort="Rise of the Planet of the Apes">
+<td>
+<span class="listing-title">Rise of the Planet of the Apes</span>
+</td>
+<td>
+<span class="listing-director">Wyatt</span>
+</td>
+<td>
+<span class="listing-year">2011</span>
+</td>
+
+</tr>
+
+<tr data-index="31" data-listing-title-sort="Dawn of the Planet of the Apes">
+<td>
+<span class="listing-title">Dawn of the Planet of the Apes</span>
+</td>
+<td>
+<span class="listing-director">Reeves</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="32" data-listing-title-sort="Jurrasic Park">
+<td>
+<span class="listing-title">Jurrasic Park</span>
+</td>
+<td>
+<span class="listing-director">Spielberg</span>
+</td>
+<td>
+<span class="listing-year">1993</span>
+</td>
+
+</tr>
+
+<tr data-index="33" data-listing-title-sort="Saving Private Ryan">
+<td>
+<span class="listing-title">Saving Private Ryan</span>
+</td>
+<td>
+<span class="listing-director">Speilberg</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="34" data-listing-title-sort="Minority Report">
+<td>
+<span class="listing-title">Minority Report</span>
+</td>
+<td>
+<span class="listing-director">Speilberg</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="35" data-listing-title-sort="War of the Worlds">
+<td>
+<span class="listing-title">War of the Worlds</span>
+</td>
+<td>
+<span class="listing-director">Speilberg</span>
+</td>
+<td>
+<span class="listing-year">2005</span>
+</td>
+
+</tr>
+
+<tr data-index="36" data-listing-title-sort="Kiki's Delivery Service">
+<td>
+<span class="listing-title">Kiki’s Delivery Service</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">1989</span>
+</td>
+
+</tr>
+
+<tr data-index="37" data-listing-title-sort="Princess Mononoke">
+<td>
+<span class="listing-title">Princess Mononoke</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">1987</span>
+</td>
+
+</tr>
+
+<tr data-index="38" data-listing-title-sort="Spirited Away">
+<td>
+<span class="listing-title">Spirited Away</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">2001</span>
+</td>
+
+</tr>
+
+<tr data-index="39" data-listing-title-sort="Howl's Moving Castle">
+<td>
+<span class="listing-title">Howl’s Moving Castle</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">2004</span>
+</td>
+
+</tr>
+
+<tr data-index="40" data-listing-title-sort="The Wind Rises">
+<td>
+<span class="listing-title">The Wind Rises</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="41" data-listing-title-sort="Silence">
+<td>
+<span class="listing-title">Silence</span>
+</td>
+<td>
+<span class="listing-director">Scorsese</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="42" data-listing-title-sort="The Departed">
+<td>
+<span class="listing-title">The Departed</span>
+</td>
+<td>
+<span class="listing-director">Scorsese</span>
+</td>
+<td>
+<span class="listing-year">2006</span>
+</td>
+
+</tr>
+
+<tr data-index="43" data-listing-title-sort="Shutter Island">
+<td>
+<span class="listing-title">Shutter Island</span>
+</td>
+<td>
+<span class="listing-director">Scorsese</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="44" data-listing-title-sort="The Lion King">
+<td>
+<span class="listing-title">The Lion King</span>
+</td>
+<td>
+<span class="listing-director">Allers</span>
+</td>
+<td>
+<span class="listing-year">1994</span>
+</td>
+
+</tr>
+
+<tr data-index="45" data-listing-title-sort="Finding Nemo">
+<td>
+<span class="listing-title">Finding Nemo</span>
+</td>
+<td>
+<span class="listing-director">Stanton</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="46" data-listing-title-sort="Everything Everywhere All at Once">
+<td>
+<span class="listing-title">Everything Everywhere All at Once</span>
+</td>
+<td>
+<span class="listing-director">Kwan</span>
+</td>
+<td>
+<span class="listing-year">2022</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div> ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/films/</guid>
+  <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Books</title>
   <link>https://austin-hoover.github.io/blog/notes/books/</link>
   <description><![CDATA[ 
@@ -2861,667 +3535,6 @@ Year
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/books/</guid>
-  <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Films</title>
-  <link>https://austin-hoover.github.io/blog/notes/films/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-director" data-direction="asc">
-        Director
-      </option>
-      <option value="listing-year" data-direction="asc">
-        Year
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-
-<th>
-<a class="sort" data-sort="listing-director" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Director</a>
-</th>
-
-<th>
-<a class="sort" data-sort="listing-year" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Year</a>
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-title-sort="Belfast">
-<td>
-<span class="listing-title">Belfast</span>
-</td>
-<td>
-<span class="listing-director">Branagh</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-title-sort="Small Things Like These">
-<td>
-<span class="listing-title">Small Things Like These</span>
-</td>
-<td>
-<span class="listing-director">Mielants</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-title-sort="I'm Still Here">
-<td>
-<span class="listing-title">I’m Still Here</span>
-</td>
-<td>
-<span class="listing-director">Salles</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-title-sort="How to Make Millions Before Grandma Dies">
-<td>
-<span class="listing-title">How to Make Millions Before Grandma Dies</span>
-</td>
-<td>
-<span class="listing-director">Boonnitipat</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-title-sort="Past Lives">
-<td>
-<span class="listing-title">Past Lives</span>
-</td>
-<td>
-<span class="listing-director">Song</span>
-</td>
-<td>
-<span class="listing-year">2023</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="All We Imagine as Light">
-<td>
-<span class="listing-title">All We Imagine as Light</span>
-</td>
-<td>
-<span class="listing-director">Kapadia</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="The Holdovers">
-<td>
-<span class="listing-title">The Holdovers</span>
-</td>
-<td>
-<span class="listing-director">Payne</span>
-</td>
-<td>
-<span class="listing-year">2023</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="The Grand Budapest Hotel">
-<td>
-<span class="listing-title">The Grand Budapest Hotel</span>
-</td>
-<td>
-<span class="listing-director">Anderson</span>
-</td>
-<td>
-<span class="listing-year">2014</span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="Sicario">
-<td>
-<span class="listing-title">Sicario</span>
-</td>
-<td>
-<span class="listing-director">&nbsp;</span>
-</td>
-<td>
-<span class="listing-year">2015</span>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-title-sort="I'm No Longer Here">
-<td>
-<span class="listing-title">I’m No Longer Here</span>
-</td>
-<td>
-<span class="listing-director">Frías de la Parra</span>
-</td>
-<td>
-<span class="listing-year">2019</span>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-title-sort="The Florida Project">
-<td>
-<span class="listing-title">The Florida Project</span>
-</td>
-<td>
-<span class="listing-director">Baker</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-title-sort="Dune">
-<td>
-<span class="listing-title">Dune</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="12" data-listing-title-sort="Dune: Part Two">
-<td>
-<span class="listing-title">Dune: Part Two</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="13" data-listing-title-sort="Arrival">
-<td>
-<span class="listing-title">Arrival</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2016</span>
-</td>
-
-</tr>
-
-<tr data-index="14" data-listing-title-sort="Blade Runner">
-<td>
-<span class="listing-title">Blade Runner</span>
-</td>
-<td>
-<span class="listing-director">Scott</span>
-</td>
-<td>
-<span class="listing-year">1982</span>
-</td>
-
-</tr>
-
-<tr data-index="15" data-listing-title-sort="Blade Runner 2049">
-<td>
-<span class="listing-title">Blade Runner 2049</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-title-sort="Baby Driver">
-<td>
-<span class="listing-title">Baby Driver</span>
-</td>
-<td>
-<span class="listing-director">Wright</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="17" data-listing-title-sort="The Big Sick">
-<td>
-<span class="listing-title">The Big Sick</span>
-</td>
-<td>
-<span class="listing-director">Showalter</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="18" data-listing-title-sort="The Way, Way Back">
-<td>
-<span class="listing-title">The Way, Way Back</span>
-</td>
-<td>
-<span class="listing-director">Faxon</span>
-</td>
-<td>
-<span class="listing-year">2013</span>
-</td>
-
-</tr>
-
-<tr data-index="19" data-listing-title-sort="Mud">
-<td>
-<span class="listing-title">Mud</span>
-</td>
-<td>
-<span class="listing-director">Nichols</span>
-</td>
-<td>
-<span class="listing-year">2012</span>
-</td>
-
-</tr>
-
-<tr data-index="20" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring">
-<td>
-<span class="listing-title">The Lord of the Rings: The Fellowship of the Ring</span>
-</td>
-<td>
-<span class="listing-director">Jackson</span>
-</td>
-<td>
-<span class="listing-year">2001</span>
-</td>
-
-</tr>
-
-<tr data-index="21" data-listing-title-sort="The Lord of the Rings: The Two Towers">
-<td>
-<span class="listing-title">The Lord of the Rings: The Two Towers</span>
-</td>
-<td>
-<span class="listing-director">Jackson</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="22" data-listing-title-sort="The Lord of the Rings: The Return of the King">
-<td>
-<span class="listing-title">The Lord of the Rings: The Return of the King</span>
-</td>
-<td>
-<span class="listing-director">Jackson</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="23" data-listing-title-sort="Mission: Impossible – Rogue Nation">
-<td>
-<span class="listing-title">Mission: Impossible – Rogue Nation</span>
-</td>
-<td>
-<span class="listing-director">McQuarrie</span>
-</td>
-<td>
-<span class="listing-year">2015</span>
-</td>
-
-</tr>
-
-<tr data-index="24" data-listing-title-sort="Mission: Impossible – Fallout">
-<td>
-<span class="listing-title">Mission: Impossible – Fallout</span>
-</td>
-<td>
-<span class="listing-director">McQuarrie</span>
-</td>
-<td>
-<span class="listing-year">2018</span>
-</td>
-
-</tr>
-
-<tr data-index="25" data-listing-title-sort="Schindler's List">
-<td>
-<span class="listing-title">Schindler’s List</span>
-</td>
-<td>
-<span class="listing-director">Spielberg</span>
-</td>
-<td>
-<span class="listing-year">1993</span>
-</td>
-
-</tr>
-
-<tr data-index="26" data-listing-title-sort="Planet of the Apes">
-<td>
-<span class="listing-title">Planet of the Apes</span>
-</td>
-<td>
-<span class="listing-director">Schaffner</span>
-</td>
-<td>
-<span class="listing-year">1963</span>
-</td>
-
-</tr>
-
-<tr data-index="27" data-listing-title-sort="Halloween Is Grinch Night">
-<td>
-<span class="listing-title">Halloween Is Grinch Night</span>
-</td>
-<td>
-<span class="listing-director">Baldwin</span>
-</td>
-<td>
-<span class="listing-year">1977</span>
-</td>
-
-</tr>
-
-<tr data-index="28" data-listing-title-sort="How the Grinch Stole Christmas!">
-<td>
-<span class="listing-title">How the Grinch Stole Christmas!</span>
-</td>
-<td>
-<span class="listing-director">Jones</span>
-</td>
-<td>
-<span class="listing-year">1966</span>
-</td>
-
-</tr>
-
-<tr data-index="29" data-listing-title-sort="Rise of the Planet of the Apes">
-<td>
-<span class="listing-title">Rise of the Planet of the Apes</span>
-</td>
-<td>
-<span class="listing-director">Wyatt</span>
-</td>
-<td>
-<span class="listing-year">2011</span>
-</td>
-
-</tr>
-
-<tr data-index="30" data-listing-title-sort="Dawn of the Planet of the Apes">
-<td>
-<span class="listing-title">Dawn of the Planet of the Apes</span>
-</td>
-<td>
-<span class="listing-director">Reeves</span>
-</td>
-<td>
-<span class="listing-year">2014</span>
-</td>
-
-</tr>
-
-<tr data-index="31" data-listing-title-sort="Jurrasic Park">
-<td>
-<span class="listing-title">Jurrasic Park</span>
-</td>
-<td>
-<span class="listing-director">Spielberg</span>
-</td>
-<td>
-<span class="listing-year">1993</span>
-</td>
-
-</tr>
-
-<tr data-index="32" data-listing-title-sort="Saving Private Ryan">
-<td>
-<span class="listing-title">Saving Private Ryan</span>
-</td>
-<td>
-<span class="listing-director">Speilberg</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="33" data-listing-title-sort="Minority Report">
-<td>
-<span class="listing-title">Minority Report</span>
-</td>
-<td>
-<span class="listing-director">Speilberg</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="34" data-listing-title-sort="War of the Worlds">
-<td>
-<span class="listing-title">War of the Worlds</span>
-</td>
-<td>
-<span class="listing-director">Speilberg</span>
-</td>
-<td>
-<span class="listing-year">2005</span>
-</td>
-
-</tr>
-
-<tr data-index="35" data-listing-title-sort="Kiki's Delivery Service">
-<td>
-<span class="listing-title">Kiki’s Delivery Service</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">1989</span>
-</td>
-
-</tr>
-
-<tr data-index="36" data-listing-title-sort="Princess Mononoke">
-<td>
-<span class="listing-title">Princess Mononoke</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">1987</span>
-</td>
-
-</tr>
-
-<tr data-index="37" data-listing-title-sort="Spirited Away">
-<td>
-<span class="listing-title">Spirited Away</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">2001</span>
-</td>
-
-</tr>
-
-<tr data-index="38" data-listing-title-sort="Howl's Moving Castle">
-<td>
-<span class="listing-title">Howl’s Moving Castle</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">2004</span>
-</td>
-
-</tr>
-
-<tr data-index="39" data-listing-title-sort="The Wind Rises">
-<td>
-<span class="listing-title">The Wind Rises</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">2014</span>
-</td>
-
-</tr>
-
-<tr data-index="40" data-listing-title-sort="Silence">
-<td>
-<span class="listing-title">Silence</span>
-</td>
-<td>
-<span class="listing-director">Scorsese</span>
-</td>
-<td>
-<span class="listing-year">2016</span>
-</td>
-
-</tr>
-
-<tr data-index="41" data-listing-title-sort="The Departed">
-<td>
-<span class="listing-title">The Departed</span>
-</td>
-<td>
-<span class="listing-director">Scorsese</span>
-</td>
-<td>
-<span class="listing-year">2006</span>
-</td>
-
-</tr>
-
-<tr data-index="42" data-listing-title-sort="Shutter Island">
-<td>
-<span class="listing-title">Shutter Island</span>
-</td>
-<td>
-<span class="listing-director">Scorsese</span>
-</td>
-<td>
-<span class="listing-year">2010</span>
-</td>
-
-</tr>
-
-<tr data-index="43" data-listing-title-sort="The Lion King">
-<td>
-<span class="listing-title">The Lion King</span>
-</td>
-<td>
-<span class="listing-director">Allers</span>
-</td>
-<td>
-<span class="listing-year">1994</span>
-</td>
-
-</tr>
-
-<tr data-index="44" data-listing-title-sort="Finding Nemo">
-<td>
-<span class="listing-title">Finding Nemo</span>
-</td>
-<td>
-<span class="listing-director">Stanton</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="45" data-listing-title-sort="Everything Everywhere All at Once">
-<td>
-<span class="listing-title">Everything Everywhere All at Once</span>
-</td>
-<td>
-<span class="listing-director">Kwan</span>
-</td>
-<td>
-<span class="listing-year">2022</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div> ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/films/</guid>
   <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
