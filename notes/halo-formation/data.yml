@@ -1,3 +1,13 @@
+- title: "Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams"
+  author: "Bohn and Sideris"
+  year: 2003
+  path: "https://link.aps.org/doi/10.1103/PhysRevLett.91.264801"
+  
+- title: "Beam-Halo Measurements in High-Current Proton Beams"
+  author: Allen et al.
+  year: 2002
+  path: "https://link.aps.org/doi/10.1103/PhysRevLett.89.214802"
+  
 - title: "Analytic Model for Halo Formation in High Current Ion Linacs"
   author: "Gluckstern"
   year: 1994
@@ -22,6 +32,11 @@
   author: "Wangler, et al."
   year: 1998
   path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.1.084201"
+
+- title: "Halo formation in three-dimensional bunches"
+  author: "Gluckstern et al."
+  year: 1998
+  path: "https://link.aps.org/doi/10.1103/PhysRevE.58.4977"
 
 - title: "Analytical treatment of particle-core interaction"
   author: "Batygin"

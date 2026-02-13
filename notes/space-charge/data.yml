@@ -1,3 +1,28 @@
+- title: "Understanding beam distributions in hadron linacs in the presence of space charge"
+  author: "Aleksandrov, Ruisard, and Cousineau"
+  year: 2021
+  path: "https://iopscience.iop.org/article/10.1088/1748-0221/15/07/P07025"
+
+- title: "Benchmarking of measurement and simulation of transverse rms-emittance growth"
+  author: "Groening et al."
+  year: 2009
+  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.11.094201"
+
+- title: "Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams"
+  author: "Bohn and Sideris"
+  year: 2003
+  path: "https://link.aps.org/doi/10.1103/PhysRevLett.91.264801"
+
+- title: "Beam-Halo Measurements in High-Current Proton Beams"
+  author: Allen et al.
+  year: 2002
+  path: "https://link.aps.org/doi/10.1103/PhysRevLett.89.214802"
+  
+- title: "Halo formation in three-dimensional bunches"
+  author: "Gluckstern et al."
+  year: 1998
+  path: "https://link.aps.org/doi/10.1103/PhysRevE.58.4977"
+
 - title: "Limitations of proton beam current in a strong focusing linear accelerator associated with beam space charge"
   author: "Kapchinskij and Vladimirskij"
   year: 1959
@@ -18,6 +43,46 @@
   year: 1983 
   path: "https://cds.cern.ch/record/140869/files/p145.pdf"
 
+- title: "Theoretical studies of envelope oscillations and instabilities of mismatched intense charged-particle beams in periodic focusing channels"
+  author: "Struckmeier and Reiser"
+  year: 1983
+  path: "https://arxiv.org/pdf/2401.12171"
+
+- title: "On the stability and emittance growth of different particle phase-space distributions in a long magnetic quadrupole channel"
+  author: "Struckmeier, Klabunde, Reiser"
+  year: 1983
+  path: "https://arxiv.org/pdf/2401.12595"
+
+- title: "Evolution of RMS beam envelopes in transport systems with linear x-y coupling"
+  author: "Chernin"
+  year: 1988
+  path: "https://cds.cern.ch/record/1053510/files/p29.pdf"
+
+- title: "Analytic Model for Halo Formation in High Current Ion Linacs"
+  author: "Gluckstern"
+  year: 1994
+  path: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.73.1247"
+
+- title: "Stability of a Uniform-Density Breathing Beam with Circular Cross Section"
+  author: "Gluckstern, Cheng, and Ye"
+  year: 1995
+  path: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.2835"
+
+- title: "Stability and halo formation of a breathing axisymmetric uniform-density beam"
+  author: "Gluckstern et al."
+  year: 1996
+  path: "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.54.6788"
+
+- title: "Simulation study of halo formation in breathing round beams"
+  author: "Okamoto and Ikegami"
+  year: 1997
+  path: "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.55.4694"
+
+- title: "Rigid-Rotor Vlasov Equilibrium for an Intense Charged-Particle Beam Propagating through a Periodic Solenoidal Magnetic Field"
+  author: "Chen, Pakter, and Davidson"
+  year: 1997
+  path: "https://link.aps.org/doi/10.1103/PhysRevLett.79.225"
+  
 - title: "Betatron resonances with space charge"
   author: "Baartman"
   year: 1998
@@ -33,6 +98,11 @@
   year: 1998
   path: "https://nonneutral.pppl.gov/pdfpapers/PP.1998.5.3028.SL.pdf"
 
+- title: "Particle-core model for transverse dynamics of beam halo"
+  author: "Wangler, et al."
+  year: 1998
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.1.084201"
+
 - title: "Space charge dynamics in high intensity rings"
   author: "Holmes et al."
   year: 1999
@@ -42,6 +112,11 @@
   author: "Galambos et al."
   year: 2000
   path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.3.034201"
+
+- title: "Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel"
+  author: "Okamoto and Yokoya"
+  year: 2001
+  path: "https://www.sciencedirect.com/science/article/abs/pii/S0168900201016849"
 
 - title: "Macroparticle simulation studies of a proton beam halo experiment"
   author: "Qiang et al."
@@ -58,10 +133,25 @@
   year: 2002
   path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.5.124201"
 
+- title: "Self-consistent time dependent two dimensional and three dimensional space charge distributions with linear force"
+  author: "Danilov et al."
+  year: 2003
+  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.6.094202"
+
 - title: "Resonant beam behavior studies in the Proton Storage Ring"
   author: "Cousineau et al."
   year: 2003
   path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.6.074202"
+
+- title: "Stability properties of the transverse envelope equations describing intense ion beam transport"
+  author: "Lund and Bukh"
+  year: 2004
+  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.7.024801"
+
+- title: "Efficient computation of matched solutions of the Kapchinskij-Vladimirskij envelope equations for periodic focusing lattices"
+  author: "Lund, Chilton, and Lee"
+  year: 2006
+  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.9.064201"
   
 - title: "Space-charge transport limits of ion beams in periodic quadrupole focusing channels"
   author: "Lund and Chawla"
@@ -78,15 +168,30 @@
   year: 2009
   path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.12.114801"
 
+- title: "Generalized Kapchinskij-Vladimirskij Distribution and Envelope Equation for High-Intensity Beams in a Coupled Transverse Focusing Lattice"
+  author: "Qin, Chung, and Davidson"
+  year: 2009
+  path: "https://link.aps.org/doi/10.1103/PhysRevLett.103.224802"
+
+- title: "Analytical treatment of particle-core interaction"
+  author: "Batygin"
+  year: 2010
+  path: "https://arxiv.org/pdf/1002.2015"
+
+- title: "Class of Generalized Kapchinskij-Vladimirskij Solutions and Associated Envelope Equations for High-Intensity Charged-Particle Beams"
+  author: "Qin and Davidson"
+  year: 2013
+  path: "https://link.aps.org/doi/10.1103/PhysRevLett.110.064803"
+
 - title: "Envelope instability and the fourth order resonance"
   author: "Li and Zhao"
   year: 2014
   path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.17.124202"
 
-- title: "Structure resonances due to space charge in periodic focusing channels"
-  author: "Li and Jameson"
-  year: 2018
-  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.024204"
+- title: "Near equilibrium distributions for beams with space charge in linear and nonlinear periodic focusing systems"
+  author: "Sonnad and Cary"
+  year: 2015
+  path: "https://pubs.aip.org/pop/article/22/4/043120/594944/Near-equilibrium-distributions-for-beams-with"
 
 - title: "Dispersion-Induced Beam Instability in Circular Accelerators"
   path: "https://doi.org/10.1103/PhysRevLett.118.154801"
@@ -102,6 +207,26 @@
   path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201"
   author: "Yuan, Boine-Frankenheim, and Hofmann"
   year: 2018
+
+- title: "Structure resonances due to space charge in periodic focusing channels"
+  author: "Li and Jameson"
+  year: 2018
+  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.024204"
+
+- title: "Spectral Galerkin solver for intense beam Vlasov equilibria in nonlinear constant focusing channels"
+  author: "Mitchell"
+  year: 2019
+  path: "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.100.053308"
+  
+- title: "Kurth Vlasov-Poisson Solution for a Beam in the Presence of Time-Dependent Isotropic Focusing"
+  author: "Mitchell, Hwang and Ryne"
+  year: 2021
+  path: "https://jacow.org/ipac2021/doi/JACoW-IPAC2021-WEPAB248.html"
+
+- title: "Chaotic Dynamics Driven by Particle-Core Interactions"
+  author: "Batygin and Batygin"
+  year: 2021
+  path: "https://arxiv.org/pdf/2111.09843"
   
 - title: "Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons"
   path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201"
