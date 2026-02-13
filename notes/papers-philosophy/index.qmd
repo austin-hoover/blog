@@ -8,14 +8,16 @@ format:
       body-width: 700px
 listing:
     contents: data.yml
-    fields: [title, author]
+    fields: [title, author, year]
     field-display-names:
         title: "Title"
         author: "Author"
-        date: "Date"
+        year: "Year"
     sort: false
     type: table
     categories: true
     max-items: 99999999
     page-size: 99999999
 ---
+
+Mostly philosphy of religion right now...

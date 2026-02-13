@@ -16,15 +16,11 @@ format:
   html:
     theme:
       light: [default, style/custom_light.scss]
-      dark:  [default, style/custom_dark.scss]
     grid:
         body-width: 600px
-    mainfont: "Latin Modern"
-    fontsize: 16px
-    linestretch: 1.35
+    fontsize: 14px
+    # linestretch: 1.35
     toc: false
     toc-location: right
     html-math-method: mathjax
     highlight-style: github
-    listing:
-      table-hover: true

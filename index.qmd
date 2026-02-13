@@ -2,9 +2,9 @@
 listing:
     contents: posts
     sort: "date desc"
-    type: table
-    fields: [title, date]
-    date-format: YYYY‑MM‑DD
+    type: grid
+    grid-columns: 1
+    fields: [title, date, description]
     table-hover: true
     categories: true
     page-size: 200
