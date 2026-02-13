@@ -21,7 +21,7 @@ format:
         body-width: 600px
     mainfont: "Latin Modern"
     fontsize: 16px
-    linestretch: 1.25
+    linestretch: 1.35
     toc: false
     toc-location: right
     html-math-method: mathjax
