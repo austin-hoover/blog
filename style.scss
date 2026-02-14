@@ -55,9 +55,9 @@ span.header-section-number::after {
 
 // Listing table
 .quarto-listing-table td {
-    padding-top: 3px !important;
-    padding-bottom: 3px !important;
-    padding-left: 0 !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    // padding-left: 0 !important;
 }
 
 .quarto-listing-table {
@@ -69,8 +69,8 @@ span.header-section-number::after {
     border-bottom-width: 1px;
     border-top-color: black;
     border-top-width: 0px;
-    padding-left: 0 !important;
-    padding-bottom: 3px !important;
+    // padding-left: 0 !important;
+    padding-bottom: 4px !important;
 }
 
 // Line breaking
