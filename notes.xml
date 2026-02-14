@@ -1,0 +1,4324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Austin&#39;s Blog</title>
+<link>https://austin-hoover.github.io/blog/notes.html</link>
+<atom:link href="https://austin-hoover.github.io/blog/notes.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Sun, 08 Feb 2026 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Particle Accelerators</title>
+  <link>https://austin-hoover.github.io/blog/notes/accelerators/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Eventually turn into a database of particle accelerators since 1930, with links to papers or websites.</p>
+<ul>
+<li><a href="https://www.ornl.gov">Oak Ridge National Laboratory (ORNL)</a></li>
+<li><a href="https://www.lbl.gov">Lawrence Berkeley National Laboratoy (LBNL)</a></li>
+<li><a href="https://www.fnal.gov">Fermi National Accelerator Laboratory (FNAL)</a></li>
+<li><a href="https://www6.slac.stanford.edu">SLAC National Accelerator Laboratory (SLAC)</a></li>
+<li><a href="https://www.lanl.gov">Los Alamos National Laboratory (LANL)</a></li>
+<li><a href="https://neutrons.ornl.gov">Spallation Neutron Source (SNS)</a></li>
+<li><a href="https://home.cern">European Council for Nuclear Research (CERN)</a></li>
+<li><a href="https://www.psi.ch/en">Paul Scherrer Institute (PSI)</a></li>
+<li><a href="https://ess.eu">European Spallation Source (ESS)</a></li>
+<li><a href="https://www.isis.stfc.ac.uk/Pages/home.aspx">ISIS Neutron Source</a></li>
+<li><a href="https://www.bnl.gov/eic/">Electron Ion Collider (EIC)</a></li>
+<li><a href="https://www.bnl.gov/rhic/">Relativistic Heavy Ion Collider (RHIC)</a></li>
+<li><a href="https://home.cern/science/accelerators/future-circular-collider">Future Circular Collider (FCC)</a></li>
+<li><a href="https://muoncollider.web.cern.ch">International Muon Collider Collaboration (IMCC)</a></li>
+<li><a href="https://www.muoncollider.us">US Muon Collider Collaboration (USMCC)</a></li>
+<li><a href="https://j-parc.jp/c/en/">J-PARC</a></li>
+<li><a href="https://www.myrrha.be">MYRRHA</a></li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/accelerators/</guid>
+  <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Journals and Preprint Servers</title>
+  <link>https://austin-hoover.github.io/blog/notes/journals/</link>
+  <description><![CDATA[ 
+
+
+
+
+<ul>
+<li><a href="https://journals.aps.org/prab/">PRAB</a></li>
+<li><a href="https://journals.aps.org/pre/">PRE</a></li>
+<li><a href="https://journals.aps.org/prl/">PRL</a></li>
+<li><a href="https://www.nature.com/nphys/">Nature Physics</a></li>
+<li><a href="https://www.science.org/journal/science">Science</a></li>
+<li><a href="https://pubs.aip.org/aip/cha">Chaos</a></li>
+<li><a href="https://www.sciencedirect.com/journal/nuclear-instruments-and-methods-in-physics-research-section-a-accelerators-spectrometers-detectors-and-associated-equipment/vol/1085/suppl/C">NIM:A</a></li>
+<li><a href="https://mjl.clarivate.com/home">Web of Science Master Journal List</a></li>
+<li><a href="https://arxiv.org">ArXiv</a></li>
+<li><a href="https://arxiv.org/list/physics.acc-ph/recent">ArXiv (accelerator physics)</a></li>
+<li><a href="https://arxiv.org/list/astro-ph.GA/recent">ArXiv (astrophysics of galaxies)</a></li>
+<li><a href="https://arxiv.org/list/nlin.CD/recent">ArXiv (chaotic dynamics)</a></li>
+<li><a href="https://arxiv.org/list/physics.comp-ph/recent">ArXiv (computational physics)</a></li>
+<li><a href="https://arxiv.org/list/physics.data-an/recent">ArXiv (data analysis, statistics, and probability)</a></li>
+<li><a href="https://arxiv.org/list/physics.hist-ph/recent">ArXiv (history and philosophy of physics)</a></li>
+<li><a href="https://philsci-archive.pitt.edu/cgi/latest_days2?n=30">PhilSci</a></li>
+<li><a href="https://philpeople.org">philpeople.org</a></li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/journals/</guid>
+  <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Simulation Codes</title>
+  <link>https://austin-hoover.github.io/blog/notes/simulation-codes/</link>
+  <description><![CDATA[ 
+
+
+
+
+<ul>
+<li><a href="https://github.com/PyORBIT-Collaboration/PyORBIT3">PyORBIT</a></li>
+<li><a href="https://github.com/BLAST-ImpactX/impactx">ImpactX</a></li>
+<li><a href="https://github.com/xsuite/xsuite">Xsuite</a></li>
+<li><a href="https://abpcomputing.web.cern.ch/codes/codes_pages/MadX/">MADX</a></li>
+<li><a href="https://github.com/bmad-sim/bmad-ecosystem">Bmad</a></li>
+<li><a href="https://github.com/desy-ml/cheetah">Cheetah</a></li>
+<li><a href="https://github.com/MSU-Beam-Dynamics/JuTrack.jl">JuTrack</a></li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/simulation-codes/</guid>
+  <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Halo Formation</title>
+  <link>https://austin-hoover.github.io/blog/notes/halo-formation/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<table class="quarto-listing-table table table-hover">
+<thead>
+<tr>
+
+<th>
+Title
+</th>
+
+<th>
+Author
+</th>
+
+<th>
+Year
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-title-sort="Analytic Model for Halo Formation in High Current Ion Linacs" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.73.1247" class="title listing-title">Analytic Model for Halo Formation in High Current Ion Linacs</a>
+</td>
+<td>
+<span class="listing-author">Gluckstern</span>
+</td>
+<td>
+<span class="listing-year">1994</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="Stability of a Uniform-Density Breathing Beam with Circular Cross Section" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.2835" class="title listing-title">Stability of a Uniform-Density Breathing Beam with Circular Cross Section</a>
+</td>
+<td>
+<span class="listing-author">Gluckstern, Cheng, and Ye</span>
+</td>
+<td>
+<span class="listing-year">1995</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-title-sort="Stability and halo formation of a breathing axisymmetric uniform-density beam" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.54.6788" class="title listing-title">Stability and halo formation of a breathing axisymmetric uniform-density beam</a>
+</td>
+<td>
+<span class="listing-author">Gluckstern et al.</span>
+</td>
+<td>
+<span class="listing-year">1996</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-title-sort="Simulation study of halo formation in breathing round beams" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.55.4694" class="title listing-title">Simulation study of halo formation in breathing round beams</a>
+</td>
+<td>
+<span class="listing-author">Okamoto and Ikegami</span>
+</td>
+<td>
+<span class="listing-year">1997</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-title-sort="Particle-core model for transverse dynamics of beam halo" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.1.084201" class="title listing-title">Particle-core model for transverse dynamics of beam halo</a>
+</td>
+<td>
+<span class="listing-author">Wangler, et al.</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-title-sort="Halo formation in three-dimensional bunches" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevE.58.4977" class="title listing-title">Halo formation in three-dimensional bunches</a>
+</td>
+<td>
+<span class="listing-author">Gluckstern et al.</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="Beam-Halo Measurements in High-Current Proton Beams" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevLett.89.214802" class="title listing-title">Beam-Halo Measurements in High-Current Proton Beams</a>
+</td>
+<td>
+<span class="listing-author">Allen et al.</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-title-sort="Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevLett.91.264801" class="title listing-title">Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams</a>
+</td>
+<td>
+<span class="listing-author">Bohn and Sideris</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-title-sort="Analytical treatment of particle-core interaction" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://arxiv.org/pdf/1002.2015" class="title listing-title">Analytical treatment of particle-core interaction</a>
+</td>
+<td>
+<span class="listing-author">Batygin</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-title-sort="Chaotic Dynamics Driven by Particle-Core Interactions" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://arxiv.org/pdf/2111.09843" class="title listing-title">Chaotic Dynamics Driven by Particle-Core Interactions</a>
+</td>
+<td>
+<span class="listing-author">Batygin and Batygin</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div> ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/halo-formation/</guid>
+  <pubDate>Tue, 03 Feb 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Space Charge</title>
+  <link>https://austin-hoover.github.io/blog/notes/space-charge/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing-1">
+<table class="quarto-listing-table table table-hover">
+<thead>
+<tr>
+
+<th>
+Title
+</th>
+
+<th>
+Author
+</th>
+
+<th>
+Year
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-title-sort="Limitations of proton beam current in a strong focusing linear accelerator associated with beam space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://s3.cern.ch/inspire-prod-files-5/526fe2f2ff6f05063bcb9a9b08da12f9" class="title listing-title">Limitations of proton beam current in a strong focusing linear accelerator associated with beam space charge</a>
+</td>
+<td>
+<span class="listing-author">Kapchinskij and Vladimirskij</span>
+</td>
+<td>
+<span class="listing-year">1959</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="Transverse space-charge effects in circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.osti.gov/servlets/purl/877342" class="title listing-title">Transverse space-charge effects in circular accelerators</a>
+</td>
+<td>
+<span class="listing-author">Sacherer</span>
+</td>
+<td>
+<span class="listing-year">1968</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-title-sort="RMS envelope equations with space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://cds.cern.ch/record/322516/files/SI-INT-DL-70-12.pdf" class="title listing-title">RMS envelope equations with space charge</a>
+</td>
+<td>
+<span class="listing-author">Sacherer</span>
+</td>
+<td>
+<span class="listing-year">1971</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-title-sort="Stability of the Kapchinskij-Vladimirskij (K-V) distribution in long periodic transport systems" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://cds.cern.ch/record/140869/files/p145.pdf" class="title listing-title">Stability of the Kapchinskij-Vladimirskij (K-V) distribution in long periodic transport systems</a>
+</td>
+<td>
+<span class="listing-author">Hofmann, Laslett, Smith, and Haber</span>
+</td>
+<td>
+<span class="listing-year">1983</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-title-sort="Theoretical studies of envelope oscillations and instabilities of mismatched intense charged-particle beams in periodic focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://arxiv.org/pdf/2401.12171" class="title listing-title">Theoretical studies of envelope oscillations and instabilities of mismatched intense charged-particle beams in periodic focusing channels</a>
+</td>
+<td>
+<span class="listing-author">Struckmeier and Reiser</span>
+</td>
+<td>
+<span class="listing-year">1983</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-title-sort="On the stability and emittance growth of different particle phase-space distributions in a long magnetic quadrupole channel" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://arxiv.org/pdf/2401.12595" class="title listing-title">On the stability and emittance growth of different particle phase-space distributions in a long magnetic quadrupole channel</a>
+</td>
+<td>
+<span class="listing-author">Struckmeier, Klabunde, Reiser</span>
+</td>
+<td>
+<span class="listing-year">1983</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="Evolution of RMS beam envelopes in transport systems with linear x-y coupling" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://cds.cern.ch/record/1053510/files/p29.pdf" class="title listing-title">Evolution of RMS beam envelopes in transport systems with linear x-y coupling</a>
+</td>
+<td>
+<span class="listing-author">Chernin</span>
+</td>
+<td>
+<span class="listing-year">1988</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-title-sort="Analytic Model for Halo Formation in High Current Ion Linacs" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.73.1247" class="title listing-title">Analytic Model for Halo Formation in High Current Ion Linacs</a>
+</td>
+<td>
+<span class="listing-author">Gluckstern</span>
+</td>
+<td>
+<span class="listing-year">1994</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-title-sort="Stability of a Uniform-Density Breathing Beam with Circular Cross Section" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.2835" class="title listing-title">Stability of a Uniform-Density Breathing Beam with Circular Cross Section</a>
+</td>
+<td>
+<span class="listing-author">Gluckstern, Cheng, and Ye</span>
+</td>
+<td>
+<span class="listing-year">1995</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-title-sort="Stability and halo formation of a breathing axisymmetric uniform-density beam" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.54.6788" class="title listing-title">Stability and halo formation of a breathing axisymmetric uniform-density beam</a>
+</td>
+<td>
+<span class="listing-author">Gluckstern et al.</span>
+</td>
+<td>
+<span class="listing-year">1996</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-title-sort="Simulation study of halo formation in breathing round beams" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.55.4694" class="title listing-title">Simulation study of halo formation in breathing round beams</a>
+</td>
+<td>
+<span class="listing-author">Okamoto and Ikegami</span>
+</td>
+<td>
+<span class="listing-year">1997</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-listing-title-sort="Rigid-Rotor Vlasov Equilibrium for an Intense Charged-Particle Beam Propagating through a Periodic Solenoidal Magnetic Field" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevLett.79.225" class="title listing-title">Rigid-Rotor Vlasov Equilibrium for an Intense Charged-Particle Beam Propagating through a Periodic Solenoidal Magnetic Field</a>
+</td>
+<td>
+<span class="listing-author">Chen, Pakter, and Davidson</span>
+</td>
+<td>
+<span class="listing-year">1997</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-listing-title-sort="Halo formation in three-dimensional bunches" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevE.58.4977" class="title listing-title">Halo formation in three-dimensional bunches</a>
+</td>
+<td>
+<span class="listing-author">Gluckstern et al.</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-title-sort="Betatron resonances with space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.osti.gov/etdeweb/servlets/purl/382303#page=282" class="title listing-title">Betatron resonances with space charge</a>
+</td>
+<td>
+<span class="listing-author">Baartman</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-title-sort="Stability of anisotropic beams with space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.57.4713" class="title listing-title">Stability of anisotropic beams with space charge</a>
+</td>
+<td>
+<span class="listing-author">Hofmann</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-title-sort="Warm-fluid description of intense beam equilibrium and electrostatic stability properties" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://nonneutral.pppl.gov/pdfpapers/PP.1998.5.3028.SL.pdf" class="title listing-title">Warm-fluid description of intense beam equilibrium and electrostatic stability properties</a>
+</td>
+<td>
+<span class="listing-author">Lund and Davidson</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-listing-title-sort="Particle-core model for transverse dynamics of beam halo" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.1.084201" class="title listing-title">Particle-core model for transverse dynamics of beam halo</a>
+</td>
+<td>
+<span class="listing-author">Wangler, et al.</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-listing-title-sort="Space charge dynamics in high intensity rings" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.2.114202" class="title listing-title">Space charge dynamics in high intensity rings</a>
+</td>
+<td>
+<span class="listing-author">Holmes et al.</span>
+</td>
+<td>
+<span class="listing-year">1999</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-title-sort="Comparison of simulated and observed beam profile broadening in the Proton Storage Ring and the role of space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.3.034201" class="title listing-title">Comparison of simulated and observed beam profile broadening in the Proton Storage Ring and the role of space charge</a>
+</td>
+<td>
+<span class="listing-author">Galambos et al.</span>
+</td>
+<td>
+<span class="listing-year">2000</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-listing-title-sort="Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0168900201016849" class="title listing-title">Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel</a>
+</td>
+<td>
+<span class="listing-author">Okamoto and Yokoya</span>
+</td>
+<td>
+<span class="listing-year">2001</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-listing-title-sort="Beam-Halo Measurements in High-Current Proton Beams" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevLett.89.214802" class="title listing-title">Beam-Halo Measurements in High-Current Proton Beams</a>
+</td>
+<td>
+<span class="listing-author">Allen et al.</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-title-sort="Macroparticle simulation studies of a proton beam halo experiment" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.5.124201" class="title listing-title">Macroparticle simulation studies of a proton beam halo experiment</a>
+</td>
+<td>
+<span class="listing-author">Qiang et al.</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-listing-title-sort="Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://linkinghub.elsevier.com/retrieve/pii/S0168900201016849" class="title listing-title">Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel</a>
+</td>
+<td>
+<span class="listing-author">Okamoto and Yokoya</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-listing-title-sort="Macroparticle simulation studies of a proton beam halo experiment" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.5.124201" class="title listing-title">Macroparticle simulation studies of a proton beam halo experiment</a>
+</td>
+<td>
+<span class="listing-author">Qiang et al.</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="24" data-listing-title-sort="Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevLett.91.264801" class="title listing-title">Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams</a>
+</td>
+<td>
+<span class="listing-author">Bohn and Sideris</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="25" data-listing-title-sort="Self-consistent time dependent two dimensional and three dimensional space charge distributions with linear force" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.6.094202" class="title listing-title">Self-consistent time dependent two dimensional and three dimensional space charge distributions with linear force</a>
+</td>
+<td>
+<span class="listing-author">Danilov et al.</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="26" data-listing-title-sort="Resonant beam behavior studies in the Proton Storage Ring" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.6.074202" class="title listing-title">Resonant beam behavior studies in the Proton Storage Ring</a>
+</td>
+<td>
+<span class="listing-author">Cousineau et al.</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="27" data-listing-title-sort="Stability properties of the transverse envelope equations describing intense ion beam transport" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.7.024801" class="title listing-title">Stability properties of the transverse envelope equations describing intense ion beam transport</a>
+</td>
+<td>
+<span class="listing-author">Lund and Bukh</span>
+</td>
+<td>
+<span class="listing-year">2004</span>
+</td>
+
+</tr>
+
+<tr data-index="28" data-listing-title-sort="Efficient computation of matched solutions of the Kapchinskij-Vladimirskij envelope equations for periodic focusing lattices" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.9.064201" class="title listing-title">Efficient computation of matched solutions of the Kapchinskij-Vladimirskij envelope equations for periodic focusing lattices</a>
+</td>
+<td>
+<span class="listing-author">Lund, Chilton, and Lee</span>
+</td>
+<td>
+<span class="listing-year">2006</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-listing-title-sort="Space-charge transport limits of ion beams in periodic quadrupole focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://linkinghub.elsevier.com/retrieve/pii/S016890020600475X" class="title listing-title">Space-charge transport limits of ion beams in periodic quadrupole focusing channels</a>
+</td>
+<td>
+<span class="listing-author">Lund and Chawla</span>
+</td>
+<td>
+<span class="listing-year">2006</span>
+</td>
+
+</tr>
+
+<tr data-index="30" data-listing-title-sort="A core-particle model for periodically focused ion beams with intense space-charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://linkinghub.elsevier.com/retrieve/pii/S0168900207003452" class="title listing-title">A core-particle model for periodically focused ion beams with intense space-charge</a>
+</td>
+<td>
+<span class="listing-author">Lund et al.</span>
+</td>
+<td>
+<span class="listing-year">2007</span>
+</td>
+
+</tr>
+
+<tr data-index="31" data-listing-title-sort="Benchmarking of measurement and simulation of transverse rms-emittance growth" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.11.094201" class="title listing-title">Benchmarking of measurement and simulation of transverse rms-emittance growth</a>
+</td>
+<td>
+<span class="listing-author">Groening et al.</span>
+</td>
+<td>
+<span class="listing-year">2009</span>
+</td>
+
+</tr>
+
+<tr data-index="32" data-listing-title-sort="Generation of initial kinetic distributions for simulation of long-pulse charged particle beams with high space-charge intensity" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.12.114801" class="title listing-title">Generation of initial kinetic distributions for simulation of long-pulse charged particle beams with high space-charge intensity</a>
+</td>
+<td>
+<span class="listing-author">Lund, Kikuchi, and Davidson</span>
+</td>
+<td>
+<span class="listing-year">2009</span>
+</td>
+
+</tr>
+
+<tr data-index="33" data-listing-title-sort="Generalized Kapchinskij-Vladimirskij Distribution and Envelope Equation for High-Intensity Beams in a Coupled Transverse Focusing Lattice" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevLett.103.224802" class="title listing-title">Generalized Kapchinskij-Vladimirskij Distribution and Envelope Equation for High-Intensity Beams in a Coupled Transverse Focusing Lattice</a>
+</td>
+<td>
+<span class="listing-author">Qin, Chung, and Davidson</span>
+</td>
+<td>
+<span class="listing-year">2009</span>
+</td>
+
+</tr>
+
+<tr data-index="34" data-listing-title-sort="Analytical treatment of particle-core interaction" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://arxiv.org/pdf/1002.2015" class="title listing-title">Analytical treatment of particle-core interaction</a>
+</td>
+<td>
+<span class="listing-author">Batygin</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="35" data-listing-title-sort="Class of Generalized Kapchinskij-Vladimirskij Solutions and Associated Envelope Equations for High-Intensity Charged-Particle Beams" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevLett.110.064803" class="title listing-title">Class of Generalized Kapchinskij-Vladimirskij Solutions and Associated Envelope Equations for High-Intensity Charged-Particle Beams</a>
+</td>
+<td>
+<span class="listing-author">Qin and Davidson</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+
+</tr>
+
+<tr data-index="36" data-listing-title-sort="Envelope instability and the fourth order resonance" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.17.124202" class="title listing-title">Envelope instability and the fourth order resonance</a>
+</td>
+<td>
+<span class="listing-author">Li and Zhao</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="37" data-listing-title-sort="Near equilibrium distributions for beams with space charge in linear and nonlinear periodic focusing systems" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://pubs.aip.org/pop/article/22/4/043120/594944/Near-equilibrium-distributions-for-beams-with" class="title listing-title">Near equilibrium distributions for beams with space charge in linear and nonlinear periodic focusing systems</a>
+</td>
+<td>
+<span class="listing-author">Sonnad and Cary</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="38" data-listing-title-sort="Dispersion-Induced Beam Instability in Circular Accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://doi.org/10.1103/PhysRevLett.118.154801" class="title listing-title">Dispersion-Induced Beam Instability in Circular Accelerators</a>
+</td>
+<td>
+<span class="listing-author">Yuan, Boine-Frankenheim, Franchetti, and Hofmann</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="39" data-listing-title-sort="Modeling of second order space charge driven coherent sum and difference instabilities" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201" class="title listing-title">Modeling of second order space charge driven coherent sum and difference instabilities</a>
+</td>
+<td>
+<span class="listing-author">Yuan, Boine-Frankenheim, and Hofmann</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="40" data-listing-title-sort="Intensity limitations due to space charge for bunch compression in synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201" class="title listing-title">Intensity limitations due to space charge for bunch compression in synchrotrons</a>
+</td>
+<td>
+<span class="listing-author">Yuan, Boine-Frankenheim, and Hofmann</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="41" data-listing-title-sort="Structure resonances due to space charge in periodic focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.024204" class="title listing-title">Structure resonances due to space charge in periodic focusing channels</a>
+</td>
+<td>
+<span class="listing-author">Li and Jameson</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="42" data-listing-title-sort="Spectral Galerkin solver for intense beam Vlasov equilibria in nonlinear constant focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.100.053308" class="title listing-title">Spectral Galerkin solver for intense beam Vlasov equilibria in nonlinear constant focusing channels</a>
+</td>
+<td>
+<span class="listing-author">Mitchell</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="43" data-listing-title-sort="Understanding beam distributions in hadron linacs in the presence of space charge" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://iopscience.iop.org/article/10.1088/1748-0221/15/07/P07025" class="title listing-title">Understanding beam distributions in hadron linacs in the presence of space charge</a>
+</td>
+<td>
+<span class="listing-author">Aleksandrov, Ruisard, and Cousineau</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="44" data-listing-title-sort="Kurth Vlasov-Poisson Solution for a Beam in the Presence of Time-Dependent Isotropic Focusing" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://jacow.org/ipac2021/doi/JACoW-IPAC2021-WEPAB248.html" class="title listing-title">Kurth Vlasov-Poisson Solution for a Beam in the Presence of Time-Dependent Isotropic Focusing</a>
+</td>
+<td>
+<span class="listing-author">Mitchell, Hwang and Ryne</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="45" data-listing-title-sort="Chaotic Dynamics Driven by Particle-Core Interactions" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://arxiv.org/pdf/2111.09843" class="title listing-title">Chaotic Dynamics Driven by Particle-Core Interactions</a>
+</td>
+<td>
+<span class="listing-author">Batygin and Batygin</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="46" data-listing-title-sort="Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201" class="title listing-title">Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons</a>
+</td>
+<td>
+<span class="listing-author">Liu et al.</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+<tr data-index="47" data-listing-title-sort="Modeling of beam envelope instabilities in high-intensity circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9" class="title listing-title">Modeling of beam envelope instabilities in high-intensity circular accelerators</a>
+</td>
+<td>
+<span class="listing-author">Yuan</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+
+</div> ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/space-charge/</guid>
+  <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Sampling</title>
+  <link>https://austin-hoover.github.io/blog/notes/sampling/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="papers" class="level4">
+
+<ul>
+<li><a href="https://web.archive.org/web/20170812013959id_/http://bayes.wustl.edu/Manual/Metropolis.pdf">Equation of State Calculations by Fast Computing Machines</a>. Metropolis et al.&nbsp;(1953)</li>
+<li><a href="https://arxiv.org/pdf/1206.1901">MCMC using Hamiltonian dynamics</a>. Neal. (2011)</li>
+<li><a href="https://www.jmlr.org/papers/volume15/hoffman14a/hoffman14a.pdf">The No-U-Turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo</a>. Hoffman and Gelman. (2014)</li>
+<li><a href="https://arxiv.org/pdf/2501.18548">The no-underrun sampler: A locally-adaptive, gradient-free mcmc method</a>. Bou-Rabee et al.&nbsp;(2025)</li>
+<li><a href="https://arxiv.org/pdf/2502.06335">Microcanonical langevin ensembles: Advancing the sampling of bayesian neural networks</a>. Sommer, et al.&nbsp;(2025)</li>
+</ul>
+</section>
+<section id="books" class="level4">
+<h4 class="anchored" data-anchor-id="books">Books</h4>
+<ul>
+<li><a href="https://sites.stat.columbia.edu/gelman/book/BDA3.pdf">Bayesian Data Analysis</a>. Gelman et al.&nbsp;(1995)</li>
+<li><a href="https://www.google.com/books/edition/_/Kxx8CwAAQBAJ?hl=en&amp;newbks=1&amp;gbpv=1&amp;pg=PR9&amp;printsec=frontcover">Data analysis: a Bayesian tutorial</a>. Sivia and Skilling. (2006)</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/sampling/</guid>
+  <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Collisionless Relaxation</title>
+  <link>https://austin-hoover.github.io/blog/notes/collisionless-relaxation/</link>
+  <description><![CDATA[ 
+
+
+
+
+<ul>
+<li><a href="https://doi.org/10.1103/PhysRevLett.100.040604">Collisionless Relaxation in Non-Neutral Plasmas</a>. Levin, Pakter, and Teles. (2008).</li>
+<li><a href="https://journals.aps.org/prx/pdf/10.1103/PhysRevX.12.031011">Generalized Entropy Production in Collisionless Plasma Flows and Turbulence</a>. Zhdankin. (2022)</li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/collisionless-relaxation/</guid>
+  <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Phase Space Reconstruction</title>
+  <link>https://austin-hoover.github.io/blog/notes/phase-space-reconstruction/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/phase-space-reconstruction/</guid>
+  <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Papers: STEM</title>
+  <link>https://austin-hoover.github.io/blog/notes/papers-stem/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>[Under construction]</p>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/papers-stem/</guid>
+  <pubDate>Mon, 26 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Blogs</title>
+  <link>https://austin-hoover.github.io/blog/notes/blogs/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div id="listing-sample-listings" class="quarto-listing quarto-listing-container-table">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-sample-listings-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-sample-listings'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-title-sort="Statistical Modeling, Causal Inference, and Social Science">
+<td>
+<a href="https://statmodeling.stat.columbia.edu" class="title listing-title">Statistical Modeling, Causal Inference, and Social Science</a>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="Marginal Revolution">
+<td>
+<a href="https://marginalrevolution.com" class="title listing-title">Marginal Revolution</a>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-title-sort="The Splintered Mind">
+<td>
+<a href="http://schwitzsplinters.blogspot.com" class="title listing-title">The Splintered Mind</a>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-title-sort="Shtetl-Optimized">
+<td>
+<a href="https://scottaaronson.blog" class="title listing-title">Shtetl-Optimized</a>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-title-sort="AI: A Guide for Thinking Humans">
+<td>
+<a href="https://aiguide.substack.com" class="title listing-title">AI: A Guide for Thinking Humans</a>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-title-sort="The Secure Transport of Light">
+<td>
+<a href="https://danwang.co" class="title listing-title">The Secure Transport of Light</a>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="Big iff True">
+<td>
+<a href="https://bigifftrue.substack.com/" class="title listing-title">Big iff True</a>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-title-sort="Bold Reasoning with Peter Singer">
+<td>
+<a href="https://boldreasoningwithpetersinger.substack.com/" class="title listing-title">Bold Reasoning with Peter Singer</a>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-title-sort="Danny Yee's Book Reviews">
+<td>
+<a href="https://dannyreviews.com" class="title listing-title">Danny Yee’s Book Reviews</a>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-title-sort="After Babel">
+<td>
+<a href="https://www.afterbabel.com" class="title listing-title">After Babel</a>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-title-sort="Bentham's Bulldog">
+<td>
+<a href="https://benthams.substack.com/" class="title listing-title">Bentham’s Bulldog</a>
+</td>
+
+</tr>
+
+<tr data-index="11" data-listing-title-sort="Alexander Pruss">
+<td>
+<a href="http://alexanderpruss.blogspot.com" class="title listing-title">Alexander Pruss</a>
+</td>
+
+</tr>
+
+<tr data-index="12" data-listing-title-sort="Edward Feser">
+<td>
+<a href="https://edwardfeser.blogspot.com" class="title listing-title">Edward Feser</a>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-title-sort="Notebooks">
+<td>
+<a href="http://bactra.org/notebooks/" class="title listing-title">Notebooks</a>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-title-sort="China Talk">
+<td>
+<a href="https://www.chinatalk.media" class="title listing-title">China Talk</a>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-title-sort="Going Awol">
+<td>
+<a href="https://wollenblog.substack.com/" class="title listing-title">Going Awol</a>
+</td>
+
+</tr>
+
+<tr data-index="16" data-listing-title-sort="Scott Hawley">
+<td>
+<a href="https://drscotthawley.github.io/blog/" class="title listing-title">Scott Hawley</a>
+</td>
+
+</tr>
+
+<tr data-index="17" data-listing-title-sort="Condensed Concepts">
+<td>
+<a href="https://condensedconcepts.blogspot.co" class="title listing-title">Condensed Concepts</a>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-title-sort="Nanoscale Views">
+<td>
+<a href="http://nanoscale.blogspot.com" class="title listing-title">Nanoscale Views</a>
+</td>
+
+</tr>
+
+<tr data-index="19" data-listing-title-sort="ex-apologist">
+<td>
+<a href="http://exapologist.blogspot.com" class="title listing-title">ex-apologist</a>
+</td>
+
+</tr>
+
+<tr data-index="20" data-listing-title-sort="Fake Nous">
+<td>
+<a href="https://fakenous.substack.com" class="title listing-title">Fake Nous</a>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-title-sort="Lil'Log">
+<td>
+<a href="https://lilianweng.github.io" class="title listing-title">Lil’Log</a>
+</td>
+
+</tr>
+
+<tr data-index="22" data-listing-title-sort="Why Philosophy?">
+<td>
+<a href="https://celineleboeuf.substack.com/" class="title listing-title">Why Philosophy?</a>
+</td>
+
+</tr>
+
+<tr data-index="23" data-listing-title-sort="Not Even Wrong">
+<td>
+<a href="https://www.math.columbia.edu/~woit/wordpress/" class="title listing-title">Not Even Wrong</a>
+</td>
+
+</tr>
+
+<tr data-index="24" data-listing-title-sort="Notes From a Data Witch">
+<td>
+<a href="https://blog.djnavarro.net" class="title listing-title">Notes From a Data Witch</a>
+</td>
+
+</tr>
+
+<tr data-index="25" data-listing-title-sort="Of Particular Significance&quot;">
+<td>
+<a href="https://profmattstrassler.com/blog/" class="title listing-title">Of Particular Significance”</a>
+</td>
+
+</tr>
+
+<tr data-index="26" data-listing-title-sort="Physics Matt">
+<td>
+<a href="http://www.physicsmatt.com/blog/)" class="title listing-title">Physics Matt</a>
+</td>
+
+</tr>
+
+<tr data-index="27" data-listing-title-sort="Preposterous Universe">
+<td>
+<a href="https://www.preposterousuniverse.com/blog/" class="title listing-title">Preposterous Universe</a>
+</td>
+
+</tr>
+
+<tr data-index="28" data-listing-title-sort="Asymptotia">
+<td>
+<a href="https://asymptotia.com" class="title listing-title">Asymptotia</a>
+</td>
+
+</tr>
+
+<tr data-index="29" data-listing-title-sort="Coleman's Corner">
+<td>
+<a href="https://colemanhughes.substack.com/" class="title listing-title">Coleman’s Corner</a>
+</td>
+
+</tr>
+
+<tr data-index="30" data-listing-title-sort="Commonplace Philosophy">
+<td>
+<a href="https://jaredhenderson.substack.com/" class="title listing-title">Commonplace Philosophy</a>
+</td>
+
+</tr>
+
+<tr data-index="31" data-listing-title-sort="Future Doctrina">
+<td>
+<a href="https://mickryan.substack.com" class="title listing-title">Future Doctrina</a>
+</td>
+
+</tr>
+
+<tr data-index="32" data-listing-title-sort="Gowing Awol">
+<td>
+<a href="https://wollenblog.substack.com/" class="title listing-title">Gowing Awol</a>
+</td>
+
+</tr>
+
+<tr data-index="33" data-listing-title-sort="Greco and Wansley">
+<td>
+<a href="https://grecowansley.substack.com/" class="title listing-title">Greco and Wansley</a>
+</td>
+
+</tr>
+
+<tr data-index="34" data-listing-title-sort="The Grumpy Economist">
+<td>
+<a href="https://www.grumpy-economist.com/" class="title listing-title">The Grumpy Economist</a>
+</td>
+
+</tr>
+
+<tr data-index="35" data-listing-title-sort="Kareem Takes on the News">
+<td>
+<a href="https://kareem.substack.com/" class="title listing-title">Kareem Takes on the News</a>
+</td>
+
+</tr>
+
+<tr data-index="36" data-listing-title-sort="The Motivated Skeptic">
+<td>
+<a href="https://rbnmckenna86.substack.com/" class="title listing-title">The Motivated Skeptic</a>
+</td>
+
+</tr>
+
+<tr data-index="37" data-listing-title-sort="Pens and Poison">
+<td>
+<a href="https://www.pensandpoison.org/" class="title listing-title">Pens and Poison</a>
+</td>
+
+</tr>
+
+<tr data-index="38" data-listing-title-sort="Reflections on What Matters">
+<td>
+<a href="https://jpandrew.substack.com/" class="title listing-title">Reflections on What Matters</a>
+</td>
+
+</tr>
+
+<tr data-index="39" data-listing-title-sort="Sherman Alexie">
+<td>
+<a href="https://shermanalexie.substack.com/" class="title listing-title">Sherman Alexie</a>
+</td>
+
+</tr>
+
+<tr data-index="40" data-listing-title-sort="Wondering Freely">
+<td>
+<a href="https://helendecruz.substack.com/" class="title listing-title">Wondering Freely</a>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/blogs/</guid>
+  <pubDate>Sat, 10 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Films</title>
+  <link>https://austin-hoover.github.io/blog/notes/films/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-director" data-direction="asc">
+        Director
+      </option>
+      <option value="listing-year" data-direction="asc">
+        Year
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-director" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Director</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-year" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Year</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-title-sort="About Time">
+<td>
+<span class="listing-title">About Time</span>
+</td>
+<td>
+<span class="listing-director">Curtis</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="Belfast">
+<td>
+<span class="listing-title">Belfast</span>
+</td>
+<td>
+<span class="listing-director">Branagh</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-title-sort="Small Things Like These">
+<td>
+<span class="listing-title">Small Things Like These</span>
+</td>
+<td>
+<span class="listing-director">Mielants</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-title-sort="I'm Still Here">
+<td>
+<span class="listing-title">I’m Still Here</span>
+</td>
+<td>
+<span class="listing-director">Salles</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-title-sort="How to Make Millions Before Grandma Dies">
+<td>
+<span class="listing-title">How to Make Millions Before Grandma Dies</span>
+</td>
+<td>
+<span class="listing-director">Boonnitipat</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-title-sort="Past Lives">
+<td>
+<span class="listing-title">Past Lives</span>
+</td>
+<td>
+<span class="listing-director">Song</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="All We Imagine as Light">
+<td>
+<span class="listing-title">All We Imagine as Light</span>
+</td>
+<td>
+<span class="listing-director">Kapadia</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-title-sort="The Holdovers">
+<td>
+<span class="listing-title">The Holdovers</span>
+</td>
+<td>
+<span class="listing-director">Payne</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-title-sort="The Grand Budapest Hotel">
+<td>
+<span class="listing-title">The Grand Budapest Hotel</span>
+</td>
+<td>
+<span class="listing-director">Anderson</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-title-sort="Sicario">
+<td>
+<span class="listing-title">Sicario</span>
+</td>
+<td>
+<span class="listing-director">&nbsp;</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-title-sort="I'm No Longer Here">
+<td>
+<span class="listing-title">I’m No Longer Here</span>
+</td>
+<td>
+<span class="listing-director">Frías de la Parra</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-listing-title-sort="The Florida Project">
+<td>
+<span class="listing-title">The Florida Project</span>
+</td>
+<td>
+<span class="listing-director">Baker</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-listing-title-sort="Dune">
+<td>
+<span class="listing-title">Dune</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-title-sort="Dune: Part Two">
+<td>
+<span class="listing-title">Dune: Part Two</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-title-sort="Arrival">
+<td>
+<span class="listing-title">Arrival</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-title-sort="Blade Runner">
+<td>
+<span class="listing-title">Blade Runner</span>
+</td>
+<td>
+<span class="listing-director">Scott</span>
+</td>
+<td>
+<span class="listing-year">1982</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-listing-title-sort="Blade Runner 2049">
+<td>
+<span class="listing-title">Blade Runner 2049</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-listing-title-sort="Baby Driver">
+<td>
+<span class="listing-title">Baby Driver</span>
+</td>
+<td>
+<span class="listing-director">Wright</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-title-sort="The Big Sick">
+<td>
+<span class="listing-title">The Big Sick</span>
+</td>
+<td>
+<span class="listing-director">Showalter</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-listing-title-sort="The Way, Way Back">
+<td>
+<span class="listing-title">The Way, Way Back</span>
+</td>
+<td>
+<span class="listing-director">Faxon</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-listing-title-sort="Mud">
+<td>
+<span class="listing-title">Mud</span>
+</td>
+<td>
+<span class="listing-director">Nichols</span>
+</td>
+<td>
+<span class="listing-year">2012</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring">
+<td>
+<span class="listing-title">The Lord of the Rings: The Fellowship of the Ring</span>
+</td>
+<td>
+<span class="listing-director">Jackson</span>
+</td>
+<td>
+<span class="listing-year">2001</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-listing-title-sort="The Lord of the Rings: The Two Towers">
+<td>
+<span class="listing-title">The Lord of the Rings: The Two Towers</span>
+</td>
+<td>
+<span class="listing-director">Jackson</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-listing-title-sort="The Lord of the Rings: The Return of the King">
+<td>
+<span class="listing-title">The Lord of the Rings: The Return of the King</span>
+</td>
+<td>
+<span class="listing-director">Jackson</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="24" data-listing-title-sort="Mission: Impossible – Rogue Nation">
+<td>
+<span class="listing-title">Mission: Impossible – Rogue Nation</span>
+</td>
+<td>
+<span class="listing-director">McQuarrie</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="25" data-listing-title-sort="Mission: Impossible – Fallout">
+<td>
+<span class="listing-title">Mission: Impossible – Fallout</span>
+</td>
+<td>
+<span class="listing-director">McQuarrie</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="26" data-listing-title-sort="Schindler's List">
+<td>
+<span class="listing-title">Schindler’s List</span>
+</td>
+<td>
+<span class="listing-director">Spielberg</span>
+</td>
+<td>
+<span class="listing-year">1993</span>
+</td>
+
+</tr>
+
+<tr data-index="27" data-listing-title-sort="Planet of the Apes">
+<td>
+<span class="listing-title">Planet of the Apes</span>
+</td>
+<td>
+<span class="listing-director">Schaffner</span>
+</td>
+<td>
+<span class="listing-year">1963</span>
+</td>
+
+</tr>
+
+<tr data-index="28" data-listing-title-sort="Halloween Is Grinch Night">
+<td>
+<span class="listing-title">Halloween Is Grinch Night</span>
+</td>
+<td>
+<span class="listing-director">Baldwin</span>
+</td>
+<td>
+<span class="listing-year">1977</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-listing-title-sort="How the Grinch Stole Christmas!">
+<td>
+<span class="listing-title">How the Grinch Stole Christmas!</span>
+</td>
+<td>
+<span class="listing-director">Jones</span>
+</td>
+<td>
+<span class="listing-year">1966</span>
+</td>
+
+</tr>
+
+<tr data-index="30" data-listing-title-sort="Rise of the Planet of the Apes">
+<td>
+<span class="listing-title">Rise of the Planet of the Apes</span>
+</td>
+<td>
+<span class="listing-director">Wyatt</span>
+</td>
+<td>
+<span class="listing-year">2011</span>
+</td>
+
+</tr>
+
+<tr data-index="31" data-listing-title-sort="Dawn of the Planet of the Apes">
+<td>
+<span class="listing-title">Dawn of the Planet of the Apes</span>
+</td>
+<td>
+<span class="listing-director">Reeves</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="32" data-listing-title-sort="Jurrasic Park">
+<td>
+<span class="listing-title">Jurrasic Park</span>
+</td>
+<td>
+<span class="listing-director">Spielberg</span>
+</td>
+<td>
+<span class="listing-year">1993</span>
+</td>
+
+</tr>
+
+<tr data-index="33" data-listing-title-sort="Saving Private Ryan">
+<td>
+<span class="listing-title">Saving Private Ryan</span>
+</td>
+<td>
+<span class="listing-director">Speilberg</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="34" data-listing-title-sort="Minority Report">
+<td>
+<span class="listing-title">Minority Report</span>
+</td>
+<td>
+<span class="listing-director">Speilberg</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="35" data-listing-title-sort="War of the Worlds">
+<td>
+<span class="listing-title">War of the Worlds</span>
+</td>
+<td>
+<span class="listing-director">Speilberg</span>
+</td>
+<td>
+<span class="listing-year">2005</span>
+</td>
+
+</tr>
+
+<tr data-index="36" data-listing-title-sort="Kiki's Delivery Service">
+<td>
+<span class="listing-title">Kiki’s Delivery Service</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">1989</span>
+</td>
+
+</tr>
+
+<tr data-index="37" data-listing-title-sort="Princess Mononoke">
+<td>
+<span class="listing-title">Princess Mononoke</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">1987</span>
+</td>
+
+</tr>
+
+<tr data-index="38" data-listing-title-sort="Spirited Away">
+<td>
+<span class="listing-title">Spirited Away</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">2001</span>
+</td>
+
+</tr>
+
+<tr data-index="39" data-listing-title-sort="Howl's Moving Castle">
+<td>
+<span class="listing-title">Howl’s Moving Castle</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">2004</span>
+</td>
+
+</tr>
+
+<tr data-index="40" data-listing-title-sort="The Wind Rises">
+<td>
+<span class="listing-title">The Wind Rises</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="41" data-listing-title-sort="Silence">
+<td>
+<span class="listing-title">Silence</span>
+</td>
+<td>
+<span class="listing-director">Scorsese</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="42" data-listing-title-sort="The Departed">
+<td>
+<span class="listing-title">The Departed</span>
+</td>
+<td>
+<span class="listing-director">Scorsese</span>
+</td>
+<td>
+<span class="listing-year">2006</span>
+</td>
+
+</tr>
+
+<tr data-index="43" data-listing-title-sort="Shutter Island">
+<td>
+<span class="listing-title">Shutter Island</span>
+</td>
+<td>
+<span class="listing-director">Scorsese</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="44" data-listing-title-sort="The Lion King">
+<td>
+<span class="listing-title">The Lion King</span>
+</td>
+<td>
+<span class="listing-director">Allers</span>
+</td>
+<td>
+<span class="listing-year">1994</span>
+</td>
+
+</tr>
+
+<tr data-index="45" data-listing-title-sort="Finding Nemo">
+<td>
+<span class="listing-title">Finding Nemo</span>
+</td>
+<td>
+<span class="listing-director">Stanton</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="46" data-listing-title-sort="Everything Everywhere All at Once">
+<td>
+<span class="listing-title">Everything Everywhere All at Once</span>
+</td>
+<td>
+<span class="listing-director">Kwan</span>
+</td>
+<td>
+<span class="listing-year">2022</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div> ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/films/</guid>
+  <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Books</title>
+  <link>https://austin-hoover.github.io/blog/notes/books/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+      <option value="listing-year" data-direction="asc">
+        Year
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-year" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Year</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="The Brothers Karamazov">
+<td>
+<span class="listing-title">The Brothers Karamazov</span>
+</td>
+<td>
+<span class="listing-author">Dostoevsky</span>
+</td>
+<td>
+<span class="listing-year">1879</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="RmljdGlvbg==" data-listing-title-sort="A Christmas Carol">
+<td>
+<span class="listing-title">A Christmas Carol</span>
+</td>
+<td>
+<span class="listing-author">Dickens</span>
+</td>
+<td>
+<span class="listing-year">1843</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Chinese Question">
+<td>
+<span class="listing-title">The Chinese Question</span>
+</td>
+<td>
+<span class="listing-author">Ngai</span>
+</td>
+<td>
+<span class="listing-year">2022</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-categories="RWNvbm9taWNzJTJDU29jaWV0eQ==" data-listing-title-sort="Knowledge and Decisions">
+<td>
+<span class="listing-title">Knowledge and Decisions</span>
+</td>
+<td>
+<span class="listing-author">Sowell</span>
+</td>
+<td>
+<span class="listing-year">1980</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-categories="Q2hpbmE=" data-listing-title-sort="Breakneck">
+<td>
+<span class="listing-title">Breakneck</span>
+</td>
+<td>
+<span class="listing-author">Wang</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-categories="UGh5c2ljcyUyQ0NvbXB1dGF0aW9uYWwlMjBQaHlzaWNzJTJDQWxnb3JpdGhtcw==" data-listing-title-sort="Numerical Recipes">
+<td>
+<span class="listing-title">Numerical Recipes</span>
+</td>
+<td>
+<span class="listing-author">Press</span>
+</td>
+<td>
+<span class="listing-year">1986</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-categories="RmljdGlvbg==" data-listing-title-sort="Ficciones">
+<td>
+<span class="listing-title">Ficciones</span>
+</td>
+<td>
+<span class="listing-author">Borges</span>
+</td>
+<td>
+<span class="listing-year">1941</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY3M=" data-listing-title-sort="An Introduction to Error Analysis">
+<td>
+<span class="listing-title">An Introduction to Error Analysis</span>
+</td>
+<td>
+<span class="listing-author">Taylor</span>
+</td>
+<td>
+<span class="listing-year">1982</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-categories="UGh5c2ljcyUyQ01hdGhlbWF0aWNz" data-listing-title-sort="Mathematics for Physicists">
+<td>
+<span class="listing-title">Mathematics for Physicists</span>
+</td>
+<td>
+<span class="listing-author">Dennery</span>
+</td>
+<td>
+<span class="listing-year">1967</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Unifying Physics of Accelerators, Lasers and Plasma">
+<td>
+<span class="listing-title">Unifying Physics of Accelerators, Lasers and Plasma</span>
+</td>
+<td>
+<span class="listing-author">Seryi</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Problems in quantum mechanics with solutions">
+<td>
+<span class="listing-title">Problems in quantum mechanics with solutions</span>
+</td>
+<td>
+<span class="listing-author">Squires</span>
+</td>
+<td>
+<span class="listing-year">1995</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-categories="UGh5c2ljcyUyQ09wdGljcw==" data-listing-title-sort="Introduction to Optics">
+<td>
+<span class="listing-title">Introduction to Optics</span>
+</td>
+<td>
+<span class="listing-author">Pedrotti</span>
+</td>
+<td>
+<span class="listing-year">2007</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-categories="UGh5c2ljcyUyQ0VsZWN0cmljYWwlMjBFbmdpbmVlcmluZw==" data-listing-title-sort="Practical Electronics for Inventors">
+<td>
+<span class="listing-title">Practical Electronics for Inventors</span>
+</td>
+<td>
+<span class="listing-author">Scherz</span>
+</td>
+<td>
+<span class="listing-year">2000</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-categories="TWF0aGVtYXRpY3MlMkNTdGF0aXN0aWNz" data-listing-title-sort="Foundations and Applications of Statistics">
+<td>
+<span class="listing-title">Foundations and Applications of Statistics</span>
+</td>
+<td>
+<span class="listing-author">Pruim</span>
+</td>
+<td>
+<span class="listing-year">2011</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Introduction to Quantum Mechanics">
+<td>
+<span class="listing-title">Introduction to Quantum Mechanics</span>
+</td>
+<td>
+<span class="listing-author">Griffiths</span>
+</td>
+<td>
+<span class="listing-year">1995</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-categories="UGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Physics of Nonneutral Plasmas">
+<td>
+<span class="listing-title">Physics of Nonneutral Plasmas</span>
+</td>
+<td>
+<span class="listing-author">Davidson</span>
+</td>
+<td>
+<span class="listing-year">2001</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-categories="RmljdGlvbg==" data-listing-title-sort="The Book of Sand">
+<td>
+<span class="listing-title">The Book of Sand</span>
+</td>
+<td>
+<span class="listing-author">Borges</span>
+</td>
+<td>
+<span class="listing-year">1975</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-categories="RmljdGlvbg==" data-listing-title-sort="Shakespeare's Memory">
+<td>
+<span class="listing-title">Shakespeare’s Memory</span>
+</td>
+<td>
+<span class="listing-author">Borges</span>
+</td>
+<td>
+<span class="listing-year">1983</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-categories="UGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Introduction to Plasma Theory">
+<td>
+<span class="listing-title">Introduction to Plasma Theory</span>
+</td>
+<td>
+<span class="listing-author">Nicholson</span>
+</td>
+<td>
+<span class="listing-year">1983</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-categories="RmljdGlvbg==" data-listing-title-sort="The Quiet American">
+<td>
+<span class="listing-title">The Quiet American</span>
+</td>
+<td>
+<span class="listing-author">Graham Greene</span>
+</td>
+<td>
+<span class="listing-year">1955</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Waiting for Hitler, 1929–1941">
+<td>
+<span class="listing-title">Stalin: Waiting for Hitler, 1929–1941</span>
+</td>
+<td>
+<span class="listing-author">Kotkin</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-categories="TmF0dXJlJTJDVHJhdmVs" data-listing-title-sort="Our National Parks">
+<td>
+<span class="listing-title">Our National Parks</span>
+</td>
+<td>
+<span class="listing-author">Muir</span>
+</td>
+<td>
+<span class="listing-year">1901</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-categories="TWF0aGVtYXRpY3MlMkNJbnZlcnNlJTIwUHJvYmxlbXM=" data-listing-title-sort="Questions of Uniqueness and Resolution in Reconstruction from Projections">
+<td>
+<span class="listing-title">Questions of Uniqueness and Resolution in Reconstruction from Projections</span>
+</td>
+<td>
+<span class="listing-author">Katz</span>
+</td>
+<td>
+<span class="listing-year">1978</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Handbook of Accelerator Physics and Engineering">
+<td>
+<span class="listing-title">Handbook of Accelerator Physics and Engineering</span>
+</td>
+<td>
+<span class="listing-author">Chao et al.</span>
+</td>
+<td>
+<span class="listing-year">1999</span>
+</td>
+
+</tr>
+
+<tr data-index="24" data-categories="Q29tcHV0YXRpb25hbCUyMFBoeXNpY3MlMkNDb21wdXRlciUyMFNjaWVuY2U=" data-listing-title-sort="Computer Simulation Using Particles">
+<td>
+<span class="listing-title">Computer Simulation Using Particles</span>
+</td>
+<td>
+<span class="listing-author">Hockney and Eastwood</span>
+</td>
+<td>
+<span class="listing-year">1981</span>
+</td>
+
+</tr>
+
+<tr data-index="25" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eSUyQ01hY2hpbmUlMjBMZWFybmluZw==" data-listing-title-sort="Probabilistic Artificial Intelligence">
+<td>
+<span class="listing-title">Probabilistic Artificial Intelligence</span>
+</td>
+<td>
+<span class="listing-author">Krause and Hubotter</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+<tr data-index="26" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Cultural Revolution">
+<td>
+<span class="listing-title">The Cultural Revolution</span>
+</td>
+<td>
+<span class="listing-author">Dikötter</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="27" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="Mao's Great Famine">
+<td>
+<span class="listing-title">Mao’s Great Famine</span>
+</td>
+<td>
+<span class="listing-author">Dikötter</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="28" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Tragedy of Liberation">
+<td>
+<span class="listing-title">The Tragedy of Liberation</span>
+</td>
+<td>
+<span class="listing-author">Dikötter</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-categories="UGh5c2ljcyUyQ01hdGhlbWF0aWNzJTJDQWNjZWxlcmF0b3IlMjBQaHlzaWNz" data-listing-title-sort="Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics">
+<td>
+<span class="listing-title">Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics</span>
+</td>
+<td>
+<span class="listing-author">Dragt</span>
+</td>
+<td>
+<span class="listing-year">2011</span>
+</td>
+
+</tr>
+
+<tr data-index="30" data-categories="RmljdGlvbiUyQ1J1c3NpYQ==" data-listing-title-sort="White Nights">
+<td>
+<span class="listing-title">White Nights</span>
+</td>
+<td>
+<span class="listing-author">Dostoevsky</span>
+</td>
+<td>
+<span class="listing-year">1848</span>
+</td>
+
+</tr>
+
+<tr data-index="31" data-categories="U29jaWV0eQ==" data-listing-title-sort="The Human Condition">
+<td>
+<span class="listing-title">The Human Condition</span>
+</td>
+<td>
+<span class="listing-author">Arendt</span>
+</td>
+<td>
+<span class="listing-year">1958</span>
+</td>
+
+</tr>
+
+<tr data-index="32" data-categories="UGh5c2ljcyUyQ0xhd3M=" data-listing-title-sort="How the Laws of Physics Lie">
+<td>
+<span class="listing-title">How the Laws of Physics Lie</span>
+</td>
+<td>
+<span class="listing-author">Cartwright</span>
+</td>
+<td>
+<span class="listing-year">1983</span>
+</td>
+
+</tr>
+
+<tr data-index="33" data-categories="TW9yYWxpdHklMkNXb3JsZCUyMFdhciUyMElJ" data-listing-title-sort="Eichmann in Jerusalem: A Report on the Banality of Evil">
+<td>
+<span class="listing-title">Eichmann in Jerusalem: A Report on the Banality of Evil</span>
+</td>
+<td>
+<span class="listing-author">Arendt</span>
+</td>
+<td>
+<span class="listing-year">1963</span>
+</td>
+
+</tr>
+
+<tr data-index="34" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Physics of Collective Beam Instabilities in High Energy Accelerators">
+<td>
+<span class="listing-title">Physics of Collective Beam Instabilities in High Energy Accelerators</span>
+</td>
+<td>
+<span class="listing-author">Chao</span>
+</td>
+<td>
+<span class="listing-year">1993</span>
+</td>
+
+</tr>
+
+<tr data-index="35" data-categories="V3JpdGluZw==" data-listing-title-sort="The Sense of Style">
+<td>
+<span class="listing-title">The Sense of Style</span>
+</td>
+<td>
+<span class="listing-author">Pinker</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="36" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Deep Learning: Foundations and Concepts">
+<td>
+<span class="listing-title">Deep Learning: Foundations and Concepts</span>
+</td>
+<td>
+<span class="listing-author">Bishop, and Bishop</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="37" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Entropic Physics">
+<td>
+<span class="listing-title">Entropic Physics</span>
+</td>
+<td>
+<span class="listing-author">Caticha</span>
+</td>
+<td>
+<span class="listing-year">2022</span>
+</td>
+
+</tr>
+
+<tr data-index="38" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Probability Theory: The Logic of Science">
+<td>
+<span class="listing-title">Probability Theory: The Logic of Science</span>
+</td>
+<td>
+<span class="listing-author">Jaynes</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="39" data-categories="RXRoaWNzJTJDQWJvcnRpb24=" data-listing-title-sort="The Ethics of Abortion">
+<td>
+<span class="listing-title">The Ethics of Abortion</span>
+</td>
+<td>
+<span class="listing-author">Kaczor</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="40" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Data Analysis: A Bayesian Tutorial">
+<td>
+<span class="listing-title">Data Analysis: A Bayesian Tutorial</span>
+</td>
+<td>
+<span class="listing-author">Sivia and Skilling</span>
+</td>
+<td>
+<span class="listing-year">1996</span>
+</td>
+
+</tr>
+
+<tr data-index="41" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Bayesian Data Analysis">
+<td>
+<span class="listing-title">Bayesian Data Analysis</span>
+</td>
+<td>
+<span class="listing-author">Gelman, Carlin, Stern, and Rubin</span>
+</td>
+<td>
+<span class="listing-year">1995</span>
+</td>
+
+</tr>
+
+<tr data-index="42" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Paradoxes of Power, 1878-1928">
+<td>
+<span class="listing-title">Stalin: Paradoxes of Power, 1878-1928</span>
+</td>
+<td>
+<span class="listing-author">Kotkin</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="43" data-categories="U29jaWV0eSUyQ0V0aGljcw==" data-listing-title-sort="The Character Gap">
+<td>
+<span class="listing-title">The Character Gap</span>
+</td>
+<td>
+<span class="listing-author">Miller</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="44" data-categories="RmljdGlvbg==" data-listing-title-sort="Exhalation: Stories">
+<td>
+<span class="listing-title">Exhalation: Stories</span>
+</td>
+<td>
+<span class="listing-author">Chiang</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="45" data-categories="U29jaWV0eSUyQ0Vjb25vbWljcw==" data-listing-title-sort="Wealth, Poverty, and Politics">
+<td>
+<span class="listing-title">Wealth, Poverty, and Politics</span>
+</td>
+<td>
+<span class="listing-author">Sowell</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="46" data-categories="U29jaWV0eQ==" data-listing-title-sort="The Disappearance of Childhood">
+<td>
+<span class="listing-title">The Disappearance of Childhood</span>
+</td>
+<td>
+<span class="listing-author">Postman</span>
+</td>
+<td>
+<span class="listing-year">1982</span>
+</td>
+
+</tr>
+
+<tr data-index="47" data-categories="UmVsaWdpb24=" data-listing-title-sort="Mere Christianity">
+<td>
+<span class="listing-title">Mere Christianity</span>
+</td>
+<td>
+<span class="listing-author">Lewis</span>
+</td>
+<td>
+<span class="listing-year">1952</span>
+</td>
+
+</tr>
+
+<tr data-index="48" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY2FsJTIwUGh5c2ljcw==" data-listing-title-sort="Statistical Physics of Particles">
+<td>
+<span class="listing-title">Statistical Physics of Particles</span>
+</td>
+<td>
+<span class="listing-author">Kardar</span>
+</td>
+<td>
+<span class="listing-year">2007</span>
+</td>
+
+</tr>
+
+<tr data-index="49" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY2FsJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to Thermal Physics">
+<td>
+<span class="listing-title">Introduction to Thermal Physics</span>
+</td>
+<td>
+<span class="listing-author">Schroeder</span>
+</td>
+<td>
+<span class="listing-year">1999</span>
+</td>
+
+</tr>
+
+<tr data-index="50" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="From Tracking Code to Analysis">
+<td>
+<span class="listing-title">From Tracking Code to Analysis</span>
+</td>
+<td>
+<span class="listing-author">Forest</span>
+</td>
+<td>
+<span class="listing-year">2006</span>
+</td>
+
+</tr>
+
+<tr data-index="51" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBPcHRpY3M=" data-listing-title-sort="Optical Coherence and Quantum Optics">
+<td>
+<span class="listing-title">Optical Coherence and Quantum Optics</span>
+</td>
+<td>
+<span class="listing-author">Mandel and Wolf</span>
+</td>
+<td>
+<span class="listing-year">1995</span>
+</td>
+
+</tr>
+
+<tr data-index="52" data-categories="UXVhbnR1bSUyMFBoeXNpY3M=" data-listing-title-sort="Quantum Mechanics: Concepts and Applications">
+<td>
+<span class="listing-title">Quantum Mechanics: Concepts and Applications</span>
+</td>
+<td>
+<span class="listing-author">Zettili</span>
+</td>
+<td>
+<span class="listing-year">2001</span>
+</td>
+
+</tr>
+
+<tr data-index="53" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Modern Quantum Mechanics">
+<td>
+<span class="listing-title">Modern Quantum Mechanics</span>
+</td>
+<td>
+<span class="listing-author">Sakurai</span>
+</td>
+<td>
+<span class="listing-year">1985</span>
+</td>
+
+</tr>
+
+<tr data-index="54" data-categories="UGh5c2ljcyUyQ0hpc3Rvcnk=" data-listing-title-sort="What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics">
+<td>
+<span class="listing-title">What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics</span>
+</td>
+<td>
+<span class="listing-author">Becker</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="55" data-categories="UGFydGljbGUlMjBQaHlzaWNz" data-listing-title-sort="Modern Elementary Particle Physics">
+<td>
+<span class="listing-title">Modern Elementary Particle Physics</span>
+</td>
+<td>
+<span class="listing-author">Kane</span>
+</td>
+<td>
+<span class="listing-year">1987</span>
+</td>
+
+</tr>
+
+<tr data-index="56" data-categories="UGh5c2ljcyUyQ1BhcnRpY2xlJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to High Energy Physics">
+<td>
+<span class="listing-title">Introduction to High Energy Physics</span>
+</td>
+<td>
+<span class="listing-author">Perkins</span>
+</td>
+<td>
+<span class="listing-year">1972</span>
+</td>
+
+</tr>
+
+<tr data-index="57" data-categories="UGh5c2ljcyUyQ1BhcnRpY2xlJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to Elementary Particle Physics">
+<td>
+<span class="listing-title">Introduction to Elementary Particle Physics</span>
+</td>
+<td>
+<span class="listing-author">Griffiths</span>
+</td>
+<td>
+<span class="listing-year">2008</span>
+</td>
+
+</tr>
+
+<tr data-index="58" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyMFBoeXNpY3M=" data-listing-title-sort="Classical Mechanics">
+<td>
+<span class="listing-title">Classical Mechanics</span>
+</td>
+<td>
+<span class="listing-author">Taylor</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="59" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyMFBoeXNpY3M=" data-listing-title-sort="Classical Mechanics">
+<td>
+<span class="listing-title">Classical Mechanics</span>
+</td>
+<td>
+<span class="listing-author">Goldstein</span>
+</td>
+<td>
+<span class="listing-year">1950</span>
+</td>
+
+</tr>
+
+<tr data-index="60" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Introduction to Electrodynamics">
+<td>
+<span class="listing-title">Introduction to Electrodynamics</span>
+</td>
+<td>
+<span class="listing-author">Griffiths</span>
+</td>
+<td>
+<span class="listing-year">1981</span>
+</td>
+
+</tr>
+
+<tr data-index="61" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Classical Electromagnetism">
+<td>
+<span class="listing-title">Classical Electromagnetism</span>
+</td>
+<td>
+<span class="listing-author">Franklin</span>
+</td>
+<td>
+<span class="listing-year">2005</span>
+</td>
+
+</tr>
+
+<tr data-index="62" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Classical Electrodynamics">
+<td>
+<span class="listing-title">Classical Electrodynamics</span>
+</td>
+<td>
+<span class="listing-author">Jackson</span>
+</td>
+<td>
+<span class="listing-year">1962</span>
+</td>
+
+</tr>
+
+<tr data-index="63" data-categories="UGh5c2ljcyUyQ0FzdHJvcGh5c2ljcw==" data-listing-title-sort="Astrophysics in a Nutshell">
+<td>
+<span class="listing-title">Astrophysics in a Nutshell</span>
+</td>
+<td>
+<span class="listing-author">Maoz</span>
+</td>
+<td>
+<span class="listing-year">2007</span>
+</td>
+
+</tr>
+
+<tr data-index="64" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Theory and Design of Charged Particle Beams">
+<td>
+<span class="listing-title">Theory and Design of Charged Particle Beams</span>
+</td>
+<td>
+<span class="listing-author">Reiser</span>
+</td>
+<td>
+<span class="listing-year">1994</span>
+</td>
+
+</tr>
+
+<tr data-index="65" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Space Charge Physics for Particle Accelerators">
+<td>
+<span class="listing-title">Space Charge Physics for Particle Accelerators</span>
+</td>
+<td>
+<span class="listing-author">Hofmann</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="66" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="RF Linear Accelerators">
+<td>
+<span class="listing-title">RF Linear Accelerators</span>
+</td>
+<td>
+<span class="listing-author">Wangler</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="67" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Particle Accelerator Physics">
+<td>
+<span class="listing-title">Particle Accelerator Physics</span>
+</td>
+<td>
+<span class="listing-author">Wiedemann</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="68" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Measurement and Control of Charged Particle Beams">
+<td>
+<span class="listing-title">Measurement and Control of Charged Particle Beams</span>
+</td>
+<td>
+<span class="listing-author">Minty and Zimmerman</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="69" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to the Physics of High Energy Accelerators">
+<td>
+<span class="listing-title">Introduction to the Physics of High Energy Accelerators</span>
+</td>
+<td>
+<span class="listing-author">Edwards and Syphers</span>
+</td>
+<td>
+<span class="listing-year">1994</span>
+</td>
+
+</tr>
+
+<tr data-index="70" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Accelerator Physics">
+<td>
+<span class="listing-title">Accelerator Physics</span>
+</td>
+<td>
+<span class="listing-author">Lee</span>
+</td>
+<td>
+<span class="listing-year">2004</span>
+</td>
+
+</tr>
+
+<tr data-index="71" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Time and Chance">
+<td>
+<span class="listing-title">Time and Chance</span>
+</td>
+<td>
+<span class="listing-author">Albert</span>
+</td>
+<td>
+<span class="listing-year">2000</span>
+</td>
+
+</tr>
+
+<tr data-index="72" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Philosophy of Physics: Space and Time">
+<td>
+<span class="listing-title">Philosophy of Physics: Space and Time</span>
+</td>
+<td>
+<span class="listing-author">Maudlin</span>
+</td>
+<td>
+<span class="listing-year">2012</span>
+</td>
+
+</tr>
+
+<tr data-index="73" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Philosophy of Physics: Quantum Theory">
+<td>
+<span class="listing-title">Philosophy of Physics: Quantum Theory</span>
+</td>
+<td>
+<span class="listing-author">Maudlin</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="74" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="The Emergent Multiverse">
+<td>
+<span class="listing-title">The Emergent Multiverse</span>
+</td>
+<td>
+<span class="listing-author">Wallace</span>
+</td>
+<td>
+<span class="listing-year">2012</span>
+</td>
+
+</tr>
+
+<tr data-index="75" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Taking Pascal's Wager">
+<td>
+<span class="listing-title">Taking Pascal’s Wager</span>
+</td>
+<td>
+<span class="listing-author">Rota</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="76" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Five Proofs of the Existence of God">
+<td>
+<span class="listing-title">Five Proofs of the Existence of God</span>
+</td>
+<td>
+<span class="listing-author">Feser</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="77" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Is God the Best Explanation of Things? A Dialogue">
+<td>
+<span class="listing-title">Is God the Best Explanation of Things? A Dialogue</span>
+</td>
+<td>
+<span class="listing-author">Rasmussen and Leon</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="78" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Arguing About Gods">
+<td>
+<span class="listing-title">Arguing About Gods</span>
+</td>
+<td>
+<span class="listing-author">Oppy</span>
+</td>
+<td>
+<span class="listing-year">2006</span>
+</td>
+
+</tr>
+
+<tr data-index="79" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9uJTJDTWV0YXBoeXNpY3M=" data-listing-title-sort="Necessary Existence">
+<td>
+<span class="listing-title">Necessary Existence</span>
+</td>
+<td>
+<span class="listing-author">Pruss and Rasmussen</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="80" data-categories="UGhpbG9zb3BoeSUyQ0luZmluaXR5JTJDUGFyYWRveA==" data-listing-title-sort="Infinity, Causation, and Paradox">
+<td>
+<span class="listing-title">Infinity, Causation, and Paradox</span>
+</td>
+<td>
+<span class="listing-author">Pruss</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="81" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9uJTJDRXBpc3RlbW9sb2d5" data-listing-title-sort="Knowledge and Christian Belief">
+<td>
+<span class="listing-title">Knowledge and Christian Belief</span>
+</td>
+<td>
+<span class="listing-author">Plantinga</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="82" data-categories="UGhpbG9zb3BoeSUyQ0VwaXN0ZW1vbG9neQ==" data-listing-title-sort="Change in View">
+<td>
+<span class="listing-title">Change in View</span>
+</td>
+<td>
+<span class="listing-author">Harman</span>
+</td>
+<td>
+<span class="listing-year">1986</span>
+</td>
+
+</tr>
+
+<tr data-index="83" data-categories="VmlzdWFsaXphdGlvbg==" data-listing-title-sort="Envisioning Information">
+<td>
+<span class="listing-title">Envisioning Information</span>
+</td>
+<td>
+<span class="listing-author">Tufte</span>
+</td>
+<td>
+<span class="listing-year">1990</span>
+</td>
+
+</tr>
+
+<tr data-index="84" data-categories="TWF0aGVtYXRpY3MlMkNQaHlzaWNz" data-listing-title-sort="Mathematics of Classical and Quantum Physics">
+<td>
+<span class="listing-title">Mathematics of Classical and Quantum Physics</span>
+</td>
+<td>
+<span class="listing-author">Byron and Fuller</span>
+</td>
+<td>
+<span class="listing-year">1969</span>
+</td>
+
+</tr>
+
+<tr data-index="85" data-categories="TWF0aGVtYXRpY3MlMkNQaHlzaWNz" data-listing-title-sort="Mathematical Methods for Physicists">
+<td>
+<span class="listing-title">Mathematical Methods for Physicists</span>
+</td>
+<td>
+<span class="listing-author">Arfken, Weber, and Harris</span>
+</td>
+<td>
+<span class="listing-year">1966</span>
+</td>
+
+</tr>
+
+<tr data-index="86" data-categories="U2NpZW5jZSUyMEZpY3Rpb24=" data-listing-title-sort="Stories of Your Life and Others">
+<td>
+<span class="listing-title">Stories of Your Life and Others</span>
+</td>
+<td>
+<span class="listing-author">Chiang</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="87" data-categories="RmljdGlvbg==" data-listing-title-sort="The Road">
+<td>
+<span class="listing-title">The Road</span>
+</td>
+<td>
+<span class="listing-author">McCarthy</span>
+</td>
+<td>
+<span class="listing-year">2006</span>
+</td>
+
+</tr>
+
+<tr data-index="88" data-categories="RmljdGlvbg==" data-listing-title-sort="No Country for Old Men">
+<td>
+<span class="listing-title">No Country for Old Men</span>
+</td>
+<td>
+<span class="listing-author">McCarthy</span>
+</td>
+<td>
+<span class="listing-year">2005</span>
+</td>
+
+</tr>
+
+<tr data-index="89" data-categories="RmljdGlvbg==" data-listing-title-sort="Moby Dick">
+<td>
+<span class="listing-title">Moby Dick</span>
+</td>
+<td>
+<span class="listing-author">Melville</span>
+</td>
+<td>
+<span class="listing-year">1851</span>
+</td>
+
+</tr>
+
+<tr data-index="90" data-categories="U2NpZW5jZSUyMEZpY3Rpb24=" data-listing-title-sort="Fahrenheit 451">
+<td>
+<span class="listing-title">Fahrenheit 451</span>
+</td>
+<td>
+<span class="listing-author">Bradbury</span>
+</td>
+<td>
+<span class="listing-year">1953</span>
+</td>
+
+</tr>
+
+<tr data-index="91" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="Crime and Punishment">
+<td>
+<span class="listing-title">Crime and Punishment</span>
+</td>
+<td>
+<span class="listing-author">Dostoevsky</span>
+</td>
+<td>
+<span class="listing-year">1866</span>
+</td>
+
+</tr>
+
+<tr data-index="92" data-categories="RmljdGlvbg==" data-listing-title-sort="The Alchemist">
+<td>
+<span class="listing-title">The Alchemist</span>
+</td>
+<td>
+<span class="listing-author">Coelho</span>
+</td>
+<td>
+<span class="listing-year">1988</span>
+</td>
+
+</tr>
+
+<tr data-index="93" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHJvYmFiaWxpdHk=" data-listing-title-sort="Pattern Recognition and Machine Learning">
+<td>
+<span class="listing-title">Pattern Recognition and Machine Learning</span>
+</td>
+<td>
+<span class="listing-author">Bishop</span>
+</td>
+<td>
+<span class="listing-year">2006</span>
+</td>
+
+</tr>
+
+<tr data-index="94" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Neural Networks and Deep Learning">
+<td>
+<span class="listing-title">Neural Networks and Deep Learning</span>
+</td>
+<td>
+<span class="listing-author">Nielsen</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="95" data-categories="QWxnb3JpdGhtcyUyQ0NhcmVlcg==" data-listing-title-sort="Elements of Programming Interviews">
+<td>
+<span class="listing-title">Elements of Programming Interviews</span>
+</td>
+<td>
+<span class="listing-author">Aziz, Lee, and Prakash</span>
+</td>
+<td>
+<span class="listing-year">2012</span>
+</td>
+
+</tr>
+
+<tr data-index="96" data-categories="RmljdGlvbiUyQ1NvdXRoJTIwQWZyaWNh" data-listing-title-sort="Cry, the Beloved Country">
+<td>
+<span class="listing-title">Cry, the Beloved Country</span>
+</td>
+<td>
+<span class="listing-author">Paton</span>
+</td>
+<td>
+<span class="listing-year">1948</span>
+</td>
+
+</tr>
+
+<tr data-index="97" data-categories="QWxnb3JpdGhtcw==" data-listing-title-sort="Algorithms">
+<td>
+<span class="listing-title">Algorithms</span>
+</td>
+<td>
+<span class="listing-author">Sedgewick and Wayne</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div> ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/books/</guid>
+  <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Research Tools</title>
+  <link>https://austin-hoover.github.io/blog/notes/research-tools/</link>
+  <description><![CDATA[ 
+
+
+
+
+<ul>
+<li><a href="https://notebook.link/public-link">Notebook.link</a></li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/research-tools/</guid>
+  <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Web Links</title>
+  <link>https://austin-hoover.github.io/blog/notes/web-links/</link>
+  <description><![CDATA[ 
+
+
+
+
+<ul>
+<li><a href="http://www.whatisitliketobeaphilosopher.com">What is it like to be a philosopher?</a></li>
+<li><a href="https://docs.google.com/document/d/1dprquqrzQxJsmOArxEoBDaMx15T9T--P8dagUqX6kQI/edit#heading=h.x1uym8fk8fq3">Bibliography on the problem of evil</a></li>
+<li><a href="https://www.lesswrong.com">lesswrong</a></li>
+<li><a href="https://www.routledge.com/Little-Debates-about-Big-Questions/book-series/LDABQ">Little debates</a></li>
+<li><a href="https://einsteinpapers.press.princeton.edu">Einstein papers</a></li>
+<li><a href="https://bayes.wustl.edu">Probability theory as extended logic</a></li>
+<li><a href="https://www.structuredprocrastination.com">Structured Procrastination</a></li>
+<li><a href="https://www.muoncollider.us">US Muon Collider Collaboration</a></li>
+<li><a href="https://www.chronicle.com/article/why-academics-stink-at-writing/">Why academics stink at writing</a></li>
+<li><a href="https://archive.nytimes.com/opinionator.blogs.nytimes.com/2012/07/23/zombie-nouns/">Zombie nouns</a></li>
+<li><a href="https://upstream.force11.org/the-preprint-revolution-implications-for-bibliographic-databases/">The preprint revolution</a></li>
+<li><a href="https://www.polygon.com/features/2020/5/27/21265613/runescape-is-helping-venezuelans-survive">Runescape helps Venezuelans survive</a></li>
+<li><a href="https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html">The False Promise of ChatGPT</a></li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/web-links/</guid>
+  <pubDate>Wed, 01 Jan 2025 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>People</title>
+  <link>https://austin-hoover.github.io/blog/notes/people/</link>
+  <description><![CDATA[ 
+
+
+
+
+<ul>
+<li><a href="http://alexanderpruss.com">Alexander Pruss</a></li>
+<li><a href="http://www.oeftiger.net">Adrian Oeftiger</a></li>
+<li><a href="https://sites.google.com/site/cutterbc/home">Brian Cutter</a></li>
+<li><a href="https://sites.google.com/site/csebens/home">Charles Sebens</a></li>
+<li><a href="https://christophergregoryweaver.com/about-4">Christopher Gregory Weaver</a></li>
+<li><a href="http://davidkipping.co.uk">David Kipping</a></li>
+<li><a href="https://www.eddykemingchen.net">Eddie Chen</a></li>
+<li><a href="https://research.monash.edu/en/persons/graham-oppy">Graham Oppy</a></li>
+<li><a href="https://aicip.github.io/">Hairong Qi</a></li>
+<li><a href="https://ahc.leeds.ac.uk/philosophy/staff/1167/professor-helen-steward">Helen Seward</a></li>
+<li><a href="https://isaacwilhelm.com">Isaac Wilhelm</a></li>
+<li><a href="https://www.jacobbarandes.com">Jacob Barandes</a></li>
+<li><a href="https://web.ornl.gov/~holmesja1/JHolmes/interests.html">Jeff Holmes</a></li>
+<li><a href="https://sites.pitt.edu/~jdnorton/jdnorton.html">John Norton</a></li>
+<li><a href="https://josephschmid.com/research/">Joseph Schmidt</a></li>
+<li><a href="https://www.justinmooney.net">Justin Mooney</a></li>
+<li><a href="https://www.kerrymckenzie.org">Kerry McKenzie</a></li>
+<li><a href="https://melaniemitchell.me">Melanie Mitchell</a></li>
+<li><a href="https://spot.colorado.edu/~huemer/">Michael Heumer</a></li>
+<li><a href="https://nickbostrom.com">Nick Bostrom</a></li>
+<li><a href="https://philipgoffphilosophy.com">Philip Goff</a></li>
+<li><a href="https://simonfriederich.eu/publications.html">Simono Friedrich</a></li>
+<li><a href="https://taylorwcyr.com">Taylor Cyr</a></li>
+<li><a href="https://shc.academia.edu/ThomasMetcalf">Thomas Metcalf</a></li>
+<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tim Oconor</a></li>
+<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tyler Hildebrand</a></li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/people/</guid>
+  <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Papers: Philosophy</title>
+  <link>https://austin-hoover.github.io/blog/notes/papers-philosophy/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-categories="ZnJlZSUyMHdpbGwlMkN0aW1lJTIwdHJhdmVs" data-listing-title-sort="Dependence and the Freedom to Do Otherwise">
+<td>
+<a href="https://philpapers.org/archive/CYRDAT.pdf" class="title listing-title">Dependence and the Freedom to Do Otherwise</a>
+</td>
+<td>
+<span class="listing-author">Cyr</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="ZnJlZSUyMHdpbGwlMkNwcm9ibGVtJTIwb2YlMjBldmls" data-listing-title-sort="A Counterexample to Plantinga's Free Will Defense">
+<td>
+<a href="https://place.asburyseminary.edu/cgi/viewcontent.cgi?article=2174&amp;context=faithandphilosophy" class="title listing-title">A Counterexample to Plantinga’s Free Will Defense</a>
+</td>
+<td>
+<span class="listing-author">Pruss</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="ZnJlZSUyMHdpbGwlMkNwcm9ibGVtJTIwb2YlMjBldmls" data-listing-title-sort="Ability, Foreknowledge, and Explanatory Dependence">
+<td>
+<a href="https://philpapers.org/archive/SWEAFA.pdf" class="title listing-title">Ability, Foreknowledge, and Explanatory Dependence</a>
+</td>
+<td>
+<span class="listing-author">Swensen</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-categories="ZnJlZSUyMHdpbGwlMkNjb21wYXRpYmlsaXNt" data-listing-title-sort="A challenge for Frankfurt-style compatibilists">
+<td>
+<a href="https://philpapers.org/archive/SWEACF.pdf" class="title listing-title">A challenge for Frankfurt-style compatibilists</a>
+</td>
+<td>
+<span class="listing-author">Swensen</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-categories="bWF0aGVtYXRpY3M=" data-listing-title-sort="The Unreasonable Effectiveness of Mathematics in the Natural Sciences">
+<td>
+<a href="https://www.maths.ed.ac.uk/~v1ranick/papers/wigner.pdf" class="title listing-title">The Unreasonable Effectiveness of Mathematics in the Natural Sciences</a>
+</td>
+<td>
+<span class="listing-author">Wigner</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-categories="bWV0YXBoeXNpY3MlMkNncm91bmRpbmc=" data-listing-title-sort="On What Grounds What">
+<td>
+<a href="http://www.jonathanschaffer.org/grounds.pdf" class="title listing-title">On What Grounds What</a>
+</td>
+<td>
+<span class="listing-author">Schaffer</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-categories="bWluZCUyQ3F1YWxpYQ==" data-listing-title-sort="Should a Materialist Believe in Qualia?">
+<td>
+<a href="https://web.archive.org/web/20190430050827id_/https://place.asburyseminary.edu/cgi/viewcontent.cgi?article=1548&amp;context=faithandphilosophy" class="title listing-title">Should a Materialist Believe in Qualia?</a>
+</td>
+<td>
+<span class="listing-author">Lewis</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-categories="bWV0YXBoeXNpY3MlMkNtaW5k" data-listing-title-sort="Naturalistic Dualism and the Problem of the Physical Correlate">
+<td>
+<a href="http://www.jonathanschaffer.org/dualismcorrelate.pdf" class="title listing-title">Naturalistic Dualism and the Problem of the Physical Correlate</a>
+</td>
+<td>
+<span class="listing-author">Schaffer</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-categories="bWluZCUyQ2NvbnNjaW91c25lc3M=" data-listing-title-sort="Introspection in Group Minds, Disunities of Consciousness, and Indiscrete Persons">
+<td>
+<a href="http://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/GroupMindsIntrospection-230629.pdf" class="title listing-title">Introspection in Group Minds, Disunities of Consciousness, and Indiscrete Persons</a>
+</td>
+<td>
+<span class="listing-author">Schwitzgebel</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-categories="bWluZCUyQ2NvbnNjaW91c25lc3M=" data-listing-title-sort="If Materialism Is True, the United States Is Probably Conscious">
+<td>
+<a href="http://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/USAconscious-140721.pdf" class="title listing-title">If Materialism Is True, the United States Is Probably Conscious</a>
+</td>
+<td>
+<span class="listing-author">Schwitzgebel</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-categories="bWluZCUyQ3RoZWlzbQ==" data-listing-title-sort="Psychophysical Harmony: A New Argument for Theism">
+<td>
+<a href="https://philpapers.org/archive/CUTPHA.pdf" class="title listing-title">Psychophysical Harmony: A New Argument for Theism</a>
+</td>
+<td>
+<span class="listing-author">Cutter</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-categories="bWluZA==" data-listing-title-sort="The Mind-Body Problem and the Color-Body Problem">
+<td>
+<a href="https://drive.google.com/file/d/1I7Ee2p78c-kf57ApUiC-fFWbF111bddO/view" class="title listing-title">The Mind-Body Problem and the Color-Body Problem</a>
+</td>
+<td>
+<span class="listing-author">Cutter</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-categories="bWluZCUyQ2NvbnNjaW91c25lc3MlMkNhcml0aWZpY2FsJTIwaW50ZWxsaWdlbmNl" data-listing-title-sort="The AI ensoulment hypothesis">
+<td>
+<a href="https://drive.google.com/file/d/1XnHm8x3h8M6H4kXyKVvR86HHJBzcFgAB/view" class="title listing-title">The AI ensoulment hypothesis</a>
+</td>
+<td>
+<span class="listing-author">Cutter</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-categories="bWluZCUyQ2NvbnNjaW91c25lc3M=" data-listing-title-sort="Facing Up to the Problem of Consciousness">
+<td>
+<a href="https://consc.net/papers/facing.pdf" class="title listing-title">Facing Up to the Problem of Consciousness</a>
+</td>
+<td>
+<span class="listing-author">Chalmers</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-categories="bWluZCUyQ2NvbnNjaW91c25lc3M=" data-listing-title-sort="The Harder Problem of Consciousness">
+<td>
+<a href="https://www.jstor.org/stable/pdf/3655621.pdf?refreqid=fastly-default%3A7391a9ca2bcaf99e7f9e38338fc31f8f&amp;ab_segments=&amp;origin=&amp;initiator=&amp;acceptTC=1" class="title listing-title">The Harder Problem of Consciousness</a>
+</td>
+<td>
+<span class="listing-author">Ned Block</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-categories="aW5maW5pdHk=" data-listing-title-sort="Universal Library">
+<td>
+<a href="https://urbigenous.net/library/universal_library.html" class="title listing-title">Universal Library</a>
+</td>
+<td>
+<span class="listing-author">Quine</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-categories="c2NpZW5jZSUyQ2Z1bm55" data-listing-title-sort="Review of *A New Kind of Science*">
+<td>
+<a href="https://arxiv.org/pdf/quant-ph/0206089" class="title listing-title">Review of <em>A New Kind of Science</em></a>
+</td>
+<td>
+<span class="listing-author">Aaronson</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-categories="ZW1lcmdlbmNl" data-listing-title-sort="The reductionist blindspot">
+<td>
+<a href="http://philsci-archive.pitt.edu/4037/1/The_reductionist_blind_spot-08-05-01-2300.pdf" class="title listing-title">The reductionist blindspot</a>
+</td>
+<td>
+<span class="listing-author">Abbott</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-categories="cXVhbnR1bSUyMG1lY2hhbmljcyUyQ21lYXN1cmVtZW50JTIwcHJvYmxlbQ==" data-listing-title-sort="Do We Have Any Viable Solution to the Measurement Problem?">
+<td>
+<a href="https://arxiv.org/pdf/2301.06192" class="title listing-title">Do We Have Any Viable Solution to the Measurement Problem?</a>
+</td>
+<td>
+<span class="listing-author">Adlam</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-categories="Y2F1c2F0aW9uJTJDZXhwbGFuYXRpb24lMkNsYXdz" data-listing-title-sort="Spooky Action at a Temporal Distance">
+<td>
+<a href="https://www.mdpi.com/1099-4300/20/1/41" class="title listing-title">Spooky Action at a Temporal Distance</a>
+</td>
+<td>
+<span class="listing-author">Adlam</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-categories="bmF0dXJhbGlzbSUyQ21vcmFsaXR5JTJDZXZvbHV0aW9uYXJ5JTIwZGVidW5raW5nJTIwYXJndW1lbnRz" data-listing-title-sort="Only All Naturalists Should Worry About Only One Evolutionary Debunking Argument">
+<td>
+<a href="https://philpapers.org/archive/BOGOAN.pdf" class="title listing-title">Only All Naturalists Should Worry About Only One Evolutionary Debunking Argument</a>
+</td>
+<td>
+<span class="listing-author">Bogardus</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-categories="bGF3cyUyQ2V4cGxhbmF0aW9uJTJDc3RhdGlzdGljYWwlMjBtZWNoYW5pY3M=" data-listing-title-sort="The Past Hypothesis and the Nature of Physical Laws">
+<td>
+<a href="https://www.eddykemingchen.net/uploads/4/6/1/3/46137503/ph_and_nature_of_physical_laws.pdf" class="title listing-title">The Past Hypothesis and the Nature of Physical Laws</a>
+</td>
+<td>
+<span class="listing-author">Chen</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-categories="bGF3cyUyQ2V4cGxhbmF0aW9u" data-listing-title-sort="The Simplicity of Physical Laws">
+<td>
+<a href="https://arxiv.org/pdf/2210.08143" class="title listing-title">The Simplicity of Physical Laws</a>
+</td>
+<td>
+<span class="listing-author">Chen</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-categories="bGF3cyUyQ2V4cGxhbmF0aW9uJTJDc3RhdGlzdGljYWwlMjBtZWNoYW5pY3M=" data-listing-title-sort="The Past Hypothesis: Not even false">
+<td>
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S135521980600027X?via%3Dihub" class="title listing-title">The Past Hypothesis: Not even false</a>
+</td>
+<td>
+<span class="listing-author">Earman</span>
+</td>
+
+</tr>
+
+<tr data-index="24" data-categories="bWF0aGVtYXRpY3MlMkNwcm9iYWJpbGl0eQ==" data-listing-title-sort="Fifteen Arguments Against Hypothetical Frequentism">
+<td>
+<a href="https://joelvelasco.net/teaching/3865/hajek%20-%20fifteen%20arguments%20against%20hypothetical%20frequentism.pdf" class="title listing-title">Fifteen Arguments Against Hypothetical Frequentism</a>
+</td>
+<td>
+<span class="listing-author">Hájek</span>
+</td>
+
+</tr>
+
+<tr data-index="25" data-categories="cHJvYmFiaWxpdHklMkNzaW11bGF0aW9uJTIwYXJndW1lbnQ=" data-listing-title-sort="A Bayesian approach to the simulation argument">
+<td>
+<a href="https://arxiv.org/pdf/2008.12254" class="title listing-title">A Bayesian approach to the simulation argument</a>
+</td>
+<td>
+<span class="listing-author">Kipping</span>
+</td>
+
+</tr>
+
+<tr data-index="26" data-categories="cHJvYmFiaWxpdHklMkNleHRyYXRlcnJlc3RyaWFs" data-listing-title-sort="Contact inequality: first contact will likely be with an older civilization">
+<td>
+<a href="https://arxiv.org/pdf/2010.12358" class="title listing-title">Contact inequality: first contact will likely be with an older civilization</a>
+</td>
+<td>
+<span class="listing-author">Kipping</span>
+</td>
+
+</tr>
+
+<tr data-index="27" data-categories="Y29zbW9sb2d5" data-listing-title-sort="Contemporary Philosophical Perspectives on the Cosmological Constant">
+<td>
+<a href="https://arxiv.org/pdf/2212.04335" class="title listing-title">Contemporary Philosophical Perspectives on the Cosmological Constant</a>
+</td>
+<td>
+<span class="listing-author">Koberinski, Falck‡ and Smeenk</span>
+</td>
+
+</tr>
+
+<tr data-index="28" data-categories="cXVhbnR1bSUyMG1lY2hhbmljcyUyQ211bHRpdmVyc2U=" data-listing-title-sort="The Emergent Multiverse: Quantum Theory according to the Everett Interpretation">
+<td>
+<a href="https://ndpr.nd.edu/reviews/the-emergent-multiverse-quantum-theory-according-to-the-everett-interpretation/" class="title listing-title">The Emergent Multiverse: Quantum Theory according to the Everett Interpretation</a>
+</td>
+<td>
+<span class="listing-author">Lewis</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-categories="Y29zbW9sb2d5JTJDdGltZQ==" data-listing-title-sort="On the Boundary of the Cosmos">
+<td>
+<a href="https://arxiv.org/pdf/2308.13113" class="title listing-title">On the Boundary of the Cosmos</a>
+</td>
+<td>
+<span class="listing-author">Linford</span>
+</td>
+
+</tr>
+
+<tr data-index="30" data-categories="Ym9sdHptYW5uJTIwYnJhaW5zJTJDc3RhdGlzdGljYWwlMjBtZWNoYW5pY3M=" data-listing-title-sort="Boltzmannian Immortality">
+<td>
+<a href="https://philsci-archive.pitt.edu/14455/1/loew-boltzmann2.pdf" class="title listing-title">Boltzmannian Immortality</a>
+</td>
+<td>
+<span class="listing-author">Loew</span>
+</td>
+
+</tr>
+
+<tr data-index="31" data-categories="cXVhbnR1bSUyMG1lY2hhbmljcw==" data-listing-title-sort="What Bell did">
+<td>
+<a href="https://iopscience.iop.org/article/10.1088/1751-8113/47/42/424010/pdf" class="title listing-title">What Bell did</a>
+</td>
+<td>
+<span class="listing-author">Maudlin</span>
+</td>
+
+</tr>
+
+<tr data-index="32" data-categories="Y2F1c2F0aW9uJTJDZXhwbGFuYXRpb24=" data-listing-title-sort="Causation as Folk Science">
+<td>
+<a href="https://sites.pitt.edu/~jdnorton/papers/003004.pdf" class="title listing-title">Causation as Folk Science</a>
+</td>
+<td>
+<span class="listing-author">Norton</span>
+</td>
+
+</tr>
+
+<tr data-index="33" data-categories="cXVhbnR1bSUyMG1lY2hhbmljcyUyQ2ZpZWxkcw==" data-listing-title-sort="The Fundamentality of Fields">
+<td>
+<a href="https://arxiv.org/pdf/2202.09425" class="title listing-title">The Fundamentality of Fields</a>
+</td>
+<td>
+<span class="listing-author">Sebens</span>
+</td>
+
+</tr>
+
+<tr data-index="34" data-categories="ZW1lcmdlbmNl" data-listing-title-sort="Naturalness and Emergence">
+<td>
+<a href="https://philsci-archive.pitt.edu/15757/1/naturalness_emergence.pdf" class="title listing-title">Naturalness and Emergence</a>
+</td>
+<td>
+<span class="listing-author">Wallace</span>
+</td>
+
+</tr>
+
+<tr data-index="35" data-categories="bGF3cyUyQ2V4cGxhbmF0aW9uJTJDc3RhdGlzdGljYWwlMjBtZWNoYW5pY3M=" data-listing-title-sort="The Nature of the Past Hypothesis">
+<td>
+<a href="https://sites.pitt.edu/~dmw121/papers/wallace-tenerife.pdf" class="title listing-title">The Nature of the Past Hypothesis</a>
+</td>
+<td>
+<span class="listing-author">Wallace</span>
+</td>
+
+</tr>
+
+<tr data-index="36" data-categories="cXVhbnR1bSUyMG1lY2hhbmljcyUyQ211bHRpdmVyc2U=" data-listing-title-sort="Worlds in the Everett interpretation">
+<td>
+<a href="https://arxiv.org/pdf/quant-ph/0103092" class="title listing-title">Worlds in the Everett interpretation</a>
+</td>
+<td>
+<span class="listing-author">Wallace</span>
+</td>
+
+</tr>
+
+<tr data-index="37" data-categories="ZXRoaWNzJTJDdmVnYW5pc20=" data-listing-title-sort="New Omnivorism: a Novel Approach to Food and Animal Ethics">
+<td>
+<a href="https://doi.org/10.1007/s41055-022-00098-z" class="title listing-title">New Omnivorism: a Novel Approach to Food and Animal Ethics</a>
+</td>
+<td>
+<span class="listing-author">Milburn and Bobier</span>
+</td>
+
+</tr>
+
+<tr data-index="38" data-categories="ZXRoaWNzJTJDYWJvcnRpb24=" data-listing-title-sort="I Was Once a Fetus: That Is Why Abortion Is Wrong">
+<td>
+<a href="http://ndl.ethernet.edu.et/bitstream/123456789/8345/1/304.pdf#page=32" class="title listing-title">I Was Once a Fetus: That Is Why Abortion Is Wrong</a>
+</td>
+<td>
+<span class="listing-author">Pruss</span>
+</td>
+
+</tr>
+
+<tr data-index="39" data-categories="ZXRoaWNzJTJDYWJvcnRpb24=" data-listing-title-sort="A Defense of Abortion">
+<td>
+<a href="https://jdphilosophy.com/Thomson-DefenseAbortion-1971.pdf" class="title listing-title">A Defense of Abortion</a>
+</td>
+<td>
+<span class="listing-author">Thomson</span>
+</td>
+
+</tr>
+
+<tr data-index="40" data-categories="ZXRoaWNzJTJDYWJvcnRpb24=" data-listing-title-sort="Revisiting the argument from fetal potential">
+<td>
+<a href="https://link.springer.com/article/10.1186/1747-5341-2-7" class="title listing-title">Revisiting the argument from fetal potential</a>
+</td>
+<td>
+<span class="listing-author">Manninen</span>
+</td>
+
+</tr>
+
+<tr data-index="41" data-categories="aW5maW5pdHk=" data-listing-title-sort="Repetition and Value in an Infinite Universe">
+<td>
+<a href="http://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/Infinitude-230502.pdf" class="title listing-title">Repetition and Value in an Infinite Universe</a>
+</td>
+<td>
+<span class="listing-author">Schwitzgebel</span>
+</td>
+
+</tr>
+
+<tr data-index="42" data-categories="Y2xhc3NpY2FsJTIwbWVjaGFuaWNzJTJDcGFyYWRveA==" data-listing-title-sort="Losing energy in classical, relativistic and quantum mechanics">
+<td>
+<a href="https://philsci-archive.pitt.edu/2639/1/AJPZeno.pdf" class="title listing-title">Losing energy in classical, relativistic and quantum mechanics</a>
+</td>
+<td>
+<span class="listing-author">Atkinson</span>
+</td>
+
+</tr>
+
+<tr data-index="43" data-categories="aW5maW5pdHklMkNwYXJhZG94" data-listing-title-sort="Yablo’s Paradox and Beginningless Time">
+<td>
+<a href="https://intapi.sciendo.com/pdf/10.2478/disp-2009-0002" class="title listing-title">Yablo’s Paradox and Beginningless Time</a>
+</td>
+<td>
+<span class="listing-author">Luna</span>
+</td>
+
+</tr>
+
+<tr data-index="44" data-categories="aW5maW5pdHklMkNwYXJhZG94" data-listing-title-sort="Zeno's Paradoxes: A Timely Solution">
+<td>
+<a href="https://philsci-archive.pitt.edu/1197/1/Zeno_s_Paradoxes_-_A_Timely_Solution.pdf" class="title listing-title">Zeno’s Paradoxes: A Timely Solution</a>
+</td>
+<td>
+<span class="listing-author">Lynds</span>
+</td>
+
+</tr>
+
+<tr data-index="45" data-categories="aW5maW5pdHklMkNwcm9iYWJpbGl0eQ==" data-listing-title-sort="How not to build an infinite lottery machine">
+<td>
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S003936811830325X?via%3Dihub" class="title listing-title">How not to build an infinite lottery machine</a>
+</td>
+<td>
+<span class="listing-author">Norton</span>
+</td>
+
+</tr>
+
+<tr data-index="46" data-categories="cGFyYWRveA==" data-listing-title-sort="The Tristram Shandy Paradox">
+<td>
+<a href="https://philarchive.org/archive/OPPTTS-2" class="title listing-title">The Tristram Shandy Paradox</a>
+</td>
+<td>
+<span class="listing-author">Oppy</span>
+</td>
+
+</tr>
+
+<tr data-index="47" data-categories="cGFyYWRveCUyQ2luZmluaXR5" data-listing-title-sort="Benardete Paradoxes, Causal Finitism, and the Unsatisfiable Pair Diagnosis">
+<td>
+<a href="https://philarchive.org/archive/SCHBPC" class="title listing-title">Benardete Paradoxes, Causal Finitism, and the Unsatisfiable Pair Diagnosis</a>
+</td>
+<td>
+<span class="listing-author">Schmid and Malpass</span>
+</td>
+
+</tr>
+
+<tr data-index="48" data-categories="cGFyYWRveCUyQ2luZmluaXR5" data-listing-title-sort="The Form of the Benardete Dichotomy">
+<td>
+<a href="https://philpapers.org/archive/SHATFO.pdf" class="title listing-title">The Form of the Benardete Dichotomy</a>
+</td>
+<td>
+<span class="listing-author">Shackel</span>
+</td>
+
+</tr>
+
+<tr data-index="49" data-categories="cGFyYWRveCUyQ2luZmluaXR5" data-listing-title-sort="The Infinity from Nothing paradox and the Immovable Object meets the Irresistible Force">
+<td>
+<a href="https://link.springer.com/article/10.1007/s13194-017-0192-2" class="title listing-title">The Infinity from Nothing paradox and the Immovable Object meets the Irresistible Force</a>
+</td>
+<td>
+<span class="listing-author">Shackel</span>
+</td>
+
+</tr>
+
+<tr data-index="50" data-categories="dGhlaXNtJTJDZGl2aW5lJTIwYXR0cmlidXRlcw==" data-listing-title-sort="Divine Creative Freedom">
+<td>
+<a href="http://alexanderpruss.com/papers/DivineCreativeFreedom.pdf" class="title listing-title">Divine Creative Freedom</a>
+</td>
+<td>
+<span class="listing-author">Pruss</span>
+</td>
+
+</tr>
+
+<tr data-index="51" data-categories="dGhlaXNt" data-listing-title-sort="Review of *Arguing about Gods*">
+<td>
+<a href="https://ndpr.nd.edu/reviews/arguing-about-gods/" class="title listing-title">Review of <em>Arguing about Gods</em></a>
+</td>
+<td>
+<span class="listing-author">Pruss</span>
+</td>
+
+</tr>
+
+<tr data-index="52" data-categories="Y29zbW9sb2dpY2FsJTIwYXJndW1lbnRz" data-listing-title-sort="Oppy on Thomistic cosmological arguments">
+<td>
+<a href="https://www.cambridge.org/core/journals/religious-studies/article/abs/oppy-on-thomistic-cosmological-arguments/4F4FE32691906CF3303F33197F119FCB" class="title listing-title">Oppy on Thomistic cosmological arguments</a>
+</td>
+<td>
+<span class="listing-author">Feser</span>
+</td>
+
+</tr>
+
+<tr data-index="53" data-categories="Y29zbW9sb2dpY2FsJTIwYXJndW1lbnRzJTJDY2F1c2FsJTIwZmluaXRpc20=" data-listing-title-sort="The Grim Reaper Kalam Argument: From Temporal and Causal Finitism to God">
+<td>
+<a href="https://robkoons.net/uploads/1/3/5/2/135276253/grim_reaper_kalam_argument.pdf" class="title listing-title">The Grim Reaper Kalam Argument: From Temporal and Causal Finitism to God</a>
+</td>
+<td>
+<span class="listing-author">Koons</span>
+</td>
+
+</tr>
+
+<tr data-index="54" data-categories="c2tlcHRpY2lzbSUyQ3ByaW5jaXBsZSUyMG9mJTIwc3VmZmljaWVudCUyMHJlYXNvbg==" data-listing-title-sort="Skepticism and the principle of sufficient reason">
+<td>
+<a href="https://link.springer.com/article/10.1007/s11098-020-01482-3" class="title listing-title">Skepticism and the principle of sufficient reason</a>
+</td>
+<td>
+<span class="listing-author">Koons and Pruss</span>
+</td>
+
+</tr>
+
+<tr data-index="55" data-categories="dGhlaXNt" data-listing-title-sort="The Problem of Creation Ex Nihilo: A New Argument Against Classical Theism">
+<td>
+<a href="sourceurl" class="title listing-title">The Problem of Creation Ex Nihilo: A New Argument Against Classical Theism</a>
+</td>
+<td>
+<span class="listing-author">Leon</span>
+</td>
+
+</tr>
+
+<tr data-index="56" data-categories="aW5maW5pdHklMkNwYXJhZG94" data-listing-title-sort="Craig on the actual infinite">
+<td>
+<a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/815E2D63C50326202AC6AC837AF09AA9/S0034412502005978a.pdf/craig_on_the_actual_infinite.pdf" class="title listing-title">Craig on the actual infinite</a>
+</td>
+<td>
+<span class="listing-author">Morriston</span>
+</td>
+
+</tr>
+
+<tr data-index="57" data-categories="Y29zbW9sb2dpY2FsJTIwYXJndW1lbnRz" data-listing-title-sort="Cosmological Arguments">
+<td>
+<a href="https://philpapers.org/archive/OPPCA.pdf" class="title listing-title">Cosmological Arguments</a>
+</td>
+<td>
+<span class="listing-author">Oppy</span>
+</td>
+
+</tr>
+
+<tr data-index="58" data-categories="bWV0YXBoeXNpY3M=" data-listing-title-sort="Review of *Necessary Existence*">
+<td>
+<a href="https://philpapers.org/archive/OPPARP.pdf" class="title listing-title">Review of <em>Necessary Existence</em></a>
+</td>
+<td>
+<span class="listing-author">Oppy</span>
+</td>
+
+</tr>
+
+<tr data-index="59" data-categories="Y29zbW9sb2dpY2FsJTIwYXJndW1lbnRz" data-listing-title-sort="Leibnizian Cosmological Arguments">
+<td>
+<a href="http://alexanderpruss.com/papers/LCA.html" class="title listing-title">Leibnizian Cosmological Arguments</a>
+</td>
+<td>
+<span class="listing-author">Pruss</span>
+</td>
+
+</tr>
+
+<tr data-index="60" data-categories="bWV0YXBoeXNpY3MlMkNjb3Ntb2xvZ2ljYWwlMjBhcmd1bWVudHM=" data-listing-title-sort="Why is There Anything?">
+<td>
+<a href="https://philpapers.org/rec/RASWIT-2" class="title listing-title">Why is There Anything?</a>
+</td>
+<td>
+<span class="listing-author">Rasmussen and Weaver</span>
+</td>
+
+</tr>
+
+<tr data-index="61" data-categories="ZXZpbA==" data-listing-title-sort="Should atheists wish there were no gratuitous evils?">
+<td>
+<a href="https://www.pdcnet.org/collection/fshow?id=faithphil_2021_0038_0004_0460_0483&amp;pdfname=faithphil_2021_0038_0004_0054_0077.pdf&amp;file_type=pdf" class="title listing-title">Should atheists wish there were no gratuitous evils?</a>
+</td>
+<td>
+<span class="listing-author">Kahane</span>
+</td>
+
+</tr>
+
+<tr data-index="62" data-categories="ZXZpbA==" data-listing-title-sort="Was evolution worth it?">
+<td>
+<a href="https://link.springer.com/article/10.1007/s11098-022-01893-4" class="title listing-title">Was evolution worth it?</a>
+</td>
+<td>
+<span class="listing-author">Kahane</span>
+</td>
+
+</tr>
+
+<tr data-index="63" data-categories="ZXZpbCUyQ211bHRpdmVyc2U=" data-listing-title-sort="The Multiverse Theodicy Meets Population Ethics">
+<td>
+<a href="https://journals.publishing.umich.edu/ergo/article/5193/galley/3155/view/" class="title listing-title">The Multiverse Theodicy Meets Population Ethics</a>
+</td>
+<td>
+<span class="listing-author">Li and Saad</span>
+</td>
+
+</tr>
+
+<tr data-index="64" data-categories="ZXZpbA==" data-listing-title-sort="Skeptical Theism">
+<td>
+<a href="https://compass.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1747-9991.2010.00306.x?casa_token=XxzIWLVHr-wAAAAA:XGBTYfOu3k4zzGtCLEMqHKklsr2Zn-rOQr5NU4sFIGcoArpMNhANAh1uVr270Ss87nrNIAe6_u75DaZs" class="title listing-title">Skeptical Theism</a>
+</td>
+<td>
+<span class="listing-author">McBrayer</span>
+</td>
+
+</tr>
+
+<tr data-index="65" data-categories="aGlkZGVubmVzcw==" data-listing-title-sort="Scepticism about the argument from divine hiddenness">
+<td>
+<a href="https://philpapers.org/archive/MCBSAT-2.pdf" class="title listing-title">Scepticism about the argument from divine hiddenness</a>
+</td>
+<td>
+<span class="listing-author">McBayer and Swenson</span>
+</td>
+
+</tr>
+
+<tr data-index="66" data-categories="dGhlaXNtJTJDYWJzdHJhY3QlMjBvYmplY3Rz" data-listing-title-sort="A Priori (Atheism)">
+<td>
+<a href="https://philarchive.org/rec/LEOAPA-2" class="title listing-title">A Priori (Atheism)</a>
+</td>
+<td>
+<span class="listing-author">Leon</span>
+</td>
+
+</tr>
+
+<tr data-index="67" data-categories="aGVhdmVuJTJDZXZpbA==" data-listing-title-sort="Heaven and the Problem of Eternal Separation">
+<td>
+<span class="listing-title">Heaven and the Problem of Eternal Separation</span>
+</td>
+<td>
+<span class="listing-author">Yang</span>
+</td>
+
+</tr>
+
+<tr data-index="68" data-categories="ZmluZS10dW5pbmc=" data-listing-title-sort="The Fine-Tuning of the Universe for Intelligent Life">
+<td>
+<a href="https://arxiv.org/pdf/1112.4647" class="title listing-title">The Fine-Tuning of the Universe for Intelligent Life</a>
+</td>
+<td>
+<span class="listing-author">Barnes</span>
+</td>
+
+</tr>
+
+<tr data-index="69" data-categories="ZXhwbGFuYXRpb24lMkNuYXR1cmFsaXNt" data-listing-title-sort="If naturalism is true, then scientific explanation is impossible">
+<td>
+<a href="https://philpapers.org/archive/BOGINI.pdf" class="title listing-title">If naturalism is true, then scientific explanation is impossible</a>
+</td>
+<td>
+<span class="listing-author">Bogardus</span>
+</td>
+
+</tr>
+
+<tr data-index="70" data-categories="ZmluZS10dW5pbmc=" data-listing-title-sort="In What Sense Is the Early Universe Fine-Tuned?">
+<td>
+<a href="https://arxiv.org/pdf/1406.3057" class="title listing-title">In What Sense Is the Early Universe Fine-Tuned?</a>
+</td>
+<td>
+<span class="listing-author">Carroll</span>
+</td>
+
+</tr>
+
+<tr data-index="71" data-categories="bGF3cyUyQ2V4cGxhbmF0aW9u" data-listing-title-sort="The problem of nomological harmony">
+<td>
+<a href="https://philpapers.org/archive/CUTTPO-9.pdf" class="title listing-title">The problem of nomological harmony</a>
+</td>
+<td>
+<span class="listing-author">Cutter and Saad</span>
+</td>
+
+</tr>
+
+<tr data-index="72" data-categories="ZmluZS10dW5pbmc=" data-listing-title-sort="The Fine-Tuning Argument and the Requirement of Total Evidence">
+<td>
+<a href="https://philpapers.org/archive/EPSTFA.pdf" class="title listing-title">The Fine-Tuning Argument and the Requirement of Total Evidence</a>
+</td>
+<td>
+<span class="listing-author">Epstein</span>
+</td>
+
+</tr>
+
+<tr data-index="73" data-categories="ZmluZS10dW5pbmc=" data-listing-title-sort="Reconsidering the Inverse Gambler’s Fallacy Charge Against the Fine-Tuning Argument for the Multiverse">
+<td>
+<a href="https://philsci-archive.pitt.edu/16785/1/Friederich2019_Article_ReconsideringTheInverseGambler.pdf" class="title listing-title">Reconsidering the Inverse Gambler’s Fallacy Charge Against the Fine-Tuning Argument for the Multiverse</a>
+</td>
+<td>
+<span class="listing-author">Friederich</span>
+</td>
+
+</tr>
+
+<tr data-index="74" data-categories="bGF3cyUyQ3RoZWlzbSUyQ2ZpbmUtdHVuaW5nJTJDZXhwbGFuYXRpb24=" data-listing-title-sort="The Nomological Argument for the Existence of God">
+<td>
+<a href="https://philarchive.org/archive/HILTNA-2" class="title listing-title">The Nomological Argument for the Existence of God</a>
+</td>
+<td>
+<span class="listing-author">Hildebrand and Metcalf</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div> ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/papers-philosophy/</guid>
+  <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
