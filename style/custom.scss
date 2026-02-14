@@ -188,10 +188,14 @@ blockquote {
 //   font-size: $font-size-sm;
 // }
 
-.listing-container {
-    box-color: red;
+.listing-card {
+    border-color: red !important;
 }
 
+.listing-title {
+    text-decoration: none !important;
+    color: black !important;
+}
 
 .listing-description {
     color: rgba(black, 0.8) !important;

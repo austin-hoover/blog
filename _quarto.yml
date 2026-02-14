@@ -15,9 +15,9 @@ website:
 format:
   html:
     theme:
-      light: [default, style/custom.scss]
+      light: [litera, style/custom.scss]
     grid:
-        body-width: 600px
+        body-width: 530px
     fontsize: 14.5px
     # linestretch: 1.35
     toc: false

@@ -5,7 +5,7 @@ listing:
   type: table
   fields: [title, date]
   date-format: YYYY‑MM‑DD
-  table-hover: true
+  table-hover: false
   sort: date desc
   sort-ui: true
   filter-ui: true
