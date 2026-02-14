@@ -5,26 +5,25 @@ website:
   title: "Austin's Blog"
   navbar:
     right:
-      - href: about/index.qmd
+      - href: ./about.qmd
         text: "About"
-      - href: index.qmd
+      - href: ./index.qmd
         text: "Posts"
-      - href: notes/index.qmd
+      - href: ./notes.qmd
         text: "Notes"
   google-analytics: "G-DLC4C8LZFB"
+  
 format:
   html:
-    theme:
-      light: [default, style/custom_light.scss]
-      dark:  [default, style/custom_dark.scss]
+    theme: 
+      - default
+      - style.scss
     grid:
         body-width: 600px
-    mainfont: "Latin Modern"
+    mainfont: "Times"
     fontsize: 16px
     linestretch: 1.35
     toc: false
     toc-location: right
     html-math-method: mathjax
     highlight-style: github
-    listing:
-      table-hover: true

@@ -1,0 +1,82 @@
+/*-- scss:defaults --*/
+
+$h1-font-size: 2.00em;
+$h2-font-size: 1.50em;
+$h3-font-size: 1.17em;
+$h4-font-size: 1.0em;
+$h5-font-size: 1.0em;
+$h6-font-size: 0.9em;
+
+$navbar-bg: white;
+
+$body-color: black;
+$code-color: $body-color;  // inline code text
+
+$primary: rgb(18, 84, 127);  // darker
+// $primary: rgb(26, 94, 173);  // lighter
+
+
+// /*-- scss:rules --*/
+
+h1, h2, h3, h4, h5, h6 {
+  // font-weight: 600 !important;
+  // color: black !important;
+}
+
+h1.title {
+  line-height: 1.1 !important;
+}
+
+.navbar {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  a:hover {
+    text-decoration: none !important;
+  }
+}
+
+// // Hyperlinks
+a, a:link {
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: underline !important;
+}
+
+
+// Code
+pre, code {
+    font-size: 12px !important;
+}
+
+// Section numbers
+span.header-section-number::after {
+    // content: ".";
+}
+
+// Listing table
+.quarto-listing-table td {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    padding-left: 0 !important;
+}
+
+.quarto-listing-table {
+    border-color: rgb(20, 20, 20, 0) !important;
+}
+
+.quarto-listing-table th {
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    border-top-color: black;
+    border-top-width: 0px;
+    padding-left: 0 !important;
+    padding-bottom: 3px !important;
+}
+
+// Line breaking
+// body {
+//   hyphens: auto;
+//   overflow-wrap: break-word;
+//   text-rendering: optimizeLegibility;
+//   font-kerning: normal;
+// }
