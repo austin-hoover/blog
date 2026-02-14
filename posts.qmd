@@ -1,0 +1,12 @@
+---
+title: Posts
+listing:
+  contents: ./posts
+  type: table
+  fields: [title, date]
+  date-format: YYYY‑MM‑DD
+  table-hover: true
+  sort: date desc
+  sort-ui: true
+  filter-ui: true
+---

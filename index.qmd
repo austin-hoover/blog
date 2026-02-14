@@ -1,13 +1,13 @@
 ---
 listing:
-    contents: posts
+    contents: ./posts
     sort: "date desc"
     type: grid
     grid-columns: 1
     fields: [title, date, description]
     table-hover: true
     categories: true
-    page-size: 200
+    page-size: 50
     sort-ui: false
     filter-ui: false
 ---
