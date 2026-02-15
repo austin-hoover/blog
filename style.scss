@@ -18,11 +18,6 @@ $primary: rgb(18, 84, 127);  // darker
 
 // /*-- scss:rules --*/
 
-h1, h2, h3, h4, h5, h6 {
-  // font-weight: 600 !important;
-  // color: black !important;
-}
-
 h1.title {
   line-height: 1.1 !important;
 }
@@ -32,6 +27,10 @@ h1.title {
   a:hover {
     text-decoration: none !important;
   }
+  font-size: 0.95em;
+}
+.navbar-title {
+  font-size: 0.95em;
 }
 
 // // Hyperlinks
