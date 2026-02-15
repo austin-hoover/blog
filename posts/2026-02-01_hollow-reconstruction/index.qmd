@@ -1,5 +1,5 @@
 ---
-title: "Attempt to reconstruct phase space density from hollow-beam injection data"
+title: "Attempted phase space reconstruction from hollow-beam injection data"
 author: Austin Hoover
 date: 2026-02-01
 toc: false
