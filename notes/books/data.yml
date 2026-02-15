@@ -623,7 +623,25 @@
   author: Bradbury
   year: 1953
   categories:
-    - Science Fiction
+    - Fiction
+
+- title: "Paradise Lost"
+  author: Milton
+  year: 1667
+  categories:
+    - Fiction
+
+- title: "Odyssey"
+  author: "Homer"
+  year: 1616
+  categories:
+    - Fiction
+
+- title: "Divine Comedy"
+  author: "Alighieri"
+  year: 1321
+  categories:
+    - Fiction
 
 - title: "Crime and Punishment"
   author: Dostoevsky
