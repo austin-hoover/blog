@@ -154,8 +154,16 @@
   director: "Miyazaki"
   year: 2001
 
+- title: "The Dig"
+  director: "Stone"
+  year: 2021
+
 - title: "Howl's Moving Castle"
   director: "Miyazaki"
+  year: 2004
+
+- title: "The Incredibles"
+  dictor: "Bird"
   year: 2004
 
 - title: "The Wind Rises"
