@@ -3313,7 +3313,7 @@ Year
 
 </tr>
 
-<tr data-index="90" data-categories="U2NpZW5jZSUyMEZpY3Rpb24=" data-listing-title-sort="Fahrenheit 451">
+<tr data-index="90" data-categories="RmljdGlvbg==" data-listing-title-sort="Fahrenheit 451">
 <td>
 <span class="listing-title">Fahrenheit 451</span>
 </td>
@@ -3326,7 +3326,46 @@ Year
 
 </tr>
 
-<tr data-index="91" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="Crime and Punishment">
+<tr data-index="91" data-categories="RmljdGlvbg==" data-listing-title-sort="Paradise Lost">
+<td>
+<span class="listing-title">Paradise Lost</span>
+</td>
+<td>
+<span class="listing-author">Milton</span>
+</td>
+<td>
+<span class="listing-year">1667</span>
+</td>
+
+</tr>
+
+<tr data-index="92" data-categories="RmljdGlvbg==" data-listing-title-sort="Odyssey">
+<td>
+<span class="listing-title">Odyssey</span>
+</td>
+<td>
+<span class="listing-author">Homer</span>
+</td>
+<td>
+<span class="listing-year">1616</span>
+</td>
+
+</tr>
+
+<tr data-index="93" data-categories="RmljdGlvbg==" data-listing-title-sort="Divine Comedy">
+<td>
+<span class="listing-title">Divine Comedy</span>
+</td>
+<td>
+<span class="listing-author">Alighieri</span>
+</td>
+<td>
+<span class="listing-year">1321</span>
+</td>
+
+</tr>
+
+<tr data-index="94" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="Crime and Punishment">
 <td>
 <span class="listing-title">Crime and Punishment</span>
 </td>
@@ -3339,7 +3378,7 @@ Year
 
 </tr>
 
-<tr data-index="92" data-categories="RmljdGlvbg==" data-listing-title-sort="The Alchemist">
+<tr data-index="95" data-categories="RmljdGlvbg==" data-listing-title-sort="The Alchemist">
 <td>
 <span class="listing-title">The Alchemist</span>
 </td>
@@ -3352,7 +3391,7 @@ Year
 
 </tr>
 
-<tr data-index="93" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHJvYmFiaWxpdHk=" data-listing-title-sort="Pattern Recognition and Machine Learning">
+<tr data-index="96" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHJvYmFiaWxpdHk=" data-listing-title-sort="Pattern Recognition and Machine Learning">
 <td>
 <span class="listing-title">Pattern Recognition and Machine Learning</span>
 </td>
@@ -3365,7 +3404,7 @@ Year
 
 </tr>
 
-<tr data-index="94" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Neural Networks and Deep Learning">
+<tr data-index="97" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Neural Networks and Deep Learning">
 <td>
 <span class="listing-title">Neural Networks and Deep Learning</span>
 </td>
@@ -3378,7 +3417,7 @@ Year
 
 </tr>
 
-<tr data-index="95" data-categories="QWxnb3JpdGhtcyUyQ0NhcmVlcg==" data-listing-title-sort="Elements of Programming Interviews">
+<tr data-index="98" data-categories="QWxnb3JpdGhtcyUyQ0NhcmVlcg==" data-listing-title-sort="Elements of Programming Interviews">
 <td>
 <span class="listing-title">Elements of Programming Interviews</span>
 </td>
@@ -3391,7 +3430,7 @@ Year
 
 </tr>
 
-<tr data-index="96" data-categories="RmljdGlvbiUyQ1NvdXRoJTIwQWZyaWNh" data-listing-title-sort="Cry, the Beloved Country">
+<tr data-index="99" data-categories="RmljdGlvbiUyQ1NvdXRoJTIwQWZyaWNh" data-listing-title-sort="Cry, the Beloved Country">
 <td>
 <span class="listing-title">Cry, the Beloved Country</span>
 </td>
@@ -3404,7 +3443,7 @@ Year
 
 </tr>
 
-<tr data-index="97" data-categories="QWxnb3JpdGhtcw==" data-listing-title-sort="Algorithms">
+<tr data-index="100" data-categories="QWxnb3JpdGhtcw==" data-listing-title-sort="Algorithms">
 <td>
 <span class="listing-title">Algorithms</span>
 </td>
