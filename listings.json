@@ -28,8 +28,8 @@
       "/notes/papers-stem/index.html",
       "/notes/research-tools/index.html",
       "/notes/web-links/index.html",
-      "/notes/people/index.html",
-      "/notes/papers-philosophy/index.html"
+      "/notes/philosophy/index.html",
+      "/notes/people/index.html"
     ]
   },
   {
@@ -95,7 +95,7 @@
     "items": []
   },
   {
-    "listing": "/notes/papers-philosophy/index.html",
+    "listing": "/notes/philosophy/index.html",
     "items": []
   }
 ]

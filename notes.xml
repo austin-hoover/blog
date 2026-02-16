@@ -1470,7 +1470,20 @@ Year
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-title-sort="About Time">
+<tr data-index="0" data-listing-title-sort="Good Will Hunting">
+<td>
+<span class="listing-title">Good Will Hunting</span>
+</td>
+<td>
+<span class="listing-director">Van Sant</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="About Time">
 <td>
 <span class="listing-title">About Time</span>
 </td>
@@ -1483,7 +1496,7 @@ Year
 
 </tr>
 
-<tr data-index="1" data-listing-title-sort="Belfast">
+<tr data-index="2" data-listing-title-sort="Belfast">
 <td>
 <span class="listing-title">Belfast</span>
 </td>
@@ -1496,7 +1509,7 @@ Year
 
 </tr>
 
-<tr data-index="2" data-listing-title-sort="Small Things Like These">
+<tr data-index="3" data-listing-title-sort="Small Things Like These">
 <td>
 <span class="listing-title">Small Things Like These</span>
 </td>
@@ -1509,7 +1522,7 @@ Year
 
 </tr>
 
-<tr data-index="3" data-listing-title-sort="I'm Still Here">
+<tr data-index="4" data-listing-title-sort="I'm Still Here">
 <td>
 <span class="listing-title">I’m Still Here</span>
 </td>
@@ -1522,7 +1535,7 @@ Year
 
 </tr>
 
-<tr data-index="4" data-listing-title-sort="How to Make Millions Before Grandma Dies">
+<tr data-index="5" data-listing-title-sort="How to Make Millions Before Grandma Dies">
 <td>
 <span class="listing-title">How to Make Millions Before Grandma Dies</span>
 </td>
@@ -1535,7 +1548,7 @@ Year
 
 </tr>
 
-<tr data-index="5" data-listing-title-sort="Past Lives">
+<tr data-index="6" data-listing-title-sort="Past Lives">
 <td>
 <span class="listing-title">Past Lives</span>
 </td>
@@ -1548,7 +1561,7 @@ Year
 
 </tr>
 
-<tr data-index="6" data-listing-title-sort="All We Imagine as Light">
+<tr data-index="7" data-listing-title-sort="All We Imagine as Light">
 <td>
 <span class="listing-title">All We Imagine as Light</span>
 </td>
@@ -1561,7 +1574,7 @@ Year
 
 </tr>
 
-<tr data-index="7" data-listing-title-sort="The Holdovers">
+<tr data-index="8" data-listing-title-sort="The Holdovers">
 <td>
 <span class="listing-title">The Holdovers</span>
 </td>
@@ -1574,7 +1587,7 @@ Year
 
 </tr>
 
-<tr data-index="8" data-listing-title-sort="The Grand Budapest Hotel">
+<tr data-index="9" data-listing-title-sort="The Grand Budapest Hotel">
 <td>
 <span class="listing-title">The Grand Budapest Hotel</span>
 </td>
@@ -1587,7 +1600,7 @@ Year
 
 </tr>
 
-<tr data-index="9" data-listing-title-sort="Sicario">
+<tr data-index="10" data-listing-title-sort="Sicario">
 <td>
 <span class="listing-title">Sicario</span>
 </td>
@@ -1600,7 +1613,7 @@ Year
 
 </tr>
 
-<tr data-index="10" data-listing-title-sort="I'm No Longer Here">
+<tr data-index="11" data-listing-title-sort="I'm No Longer Here">
 <td>
 <span class="listing-title">I’m No Longer Here</span>
 </td>
@@ -1613,7 +1626,7 @@ Year
 
 </tr>
 
-<tr data-index="11" data-listing-title-sort="The Florida Project">
+<tr data-index="12" data-listing-title-sort="The Florida Project">
 <td>
 <span class="listing-title">The Florida Project</span>
 </td>
@@ -1626,7 +1639,7 @@ Year
 
 </tr>
 
-<tr data-index="12" data-listing-title-sort="Dune">
+<tr data-index="13" data-listing-title-sort="Dune">
 <td>
 <span class="listing-title">Dune</span>
 </td>
@@ -1639,7 +1652,7 @@ Year
 
 </tr>
 
-<tr data-index="13" data-listing-title-sort="Dune: Part Two">
+<tr data-index="14" data-listing-title-sort="Dune: Part Two">
 <td>
 <span class="listing-title">Dune: Part Two</span>
 </td>
@@ -1652,7 +1665,7 @@ Year
 
 </tr>
 
-<tr data-index="14" data-listing-title-sort="Arrival">
+<tr data-index="15" data-listing-title-sort="Arrival">
 <td>
 <span class="listing-title">Arrival</span>
 </td>
@@ -1665,7 +1678,7 @@ Year
 
 </tr>
 
-<tr data-index="15" data-listing-title-sort="Blade Runner">
+<tr data-index="16" data-listing-title-sort="Blade Runner">
 <td>
 <span class="listing-title">Blade Runner</span>
 </td>
@@ -1678,7 +1691,85 @@ Year
 
 </tr>
 
-<tr data-index="16" data-listing-title-sort="Blade Runner 2049">
+<tr data-index="17" data-listing-title-sort="Lion">
+<td>
+<span class="listing-title">Lion</span>
+</td>
+<td>
+<span class="listing-director">Davis</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-title-sort="Darkest Hour">
+<td>
+<span class="listing-title">Darkest Hour</span>
+</td>
+<td>
+<span class="listing-director">Wright</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-listing-title-sort="La La Land">
+<td>
+<span class="listing-title">La La Land</span>
+</td>
+<td>
+<span class="listing-director">Chazelle</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-listing-title-sort="Manchester By The Sea">
+<td>
+<span class="listing-title">Manchester By The Sea</span>
+</td>
+<td>
+<span class="listing-director">Lonergan</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-title-sort="Dunkirk">
+<td>
+<span class="listing-title">Dunkirk</span>
+</td>
+<td>
+<span class="listing-director">Nolan</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-listing-title-sort="The Revenant">
+<td>
+<span class="listing-title">The Revenant</span>
+</td>
+<td>
+<span class="listing-director">Iñárritu</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-listing-title-sort="Blade Runner 2049">
 <td>
 <span class="listing-title">Blade Runner 2049</span>
 </td>
@@ -1691,7 +1782,7 @@ Year
 
 </tr>
 
-<tr data-index="17" data-listing-title-sort="Baby Driver">
+<tr data-index="24" data-listing-title-sort="Baby Driver">
 <td>
 <span class="listing-title">Baby Driver</span>
 </td>
@@ -1704,7 +1795,7 @@ Year
 
 </tr>
 
-<tr data-index="18" data-listing-title-sort="The Big Sick">
+<tr data-index="25" data-listing-title-sort="The Big Sick">
 <td>
 <span class="listing-title">The Big Sick</span>
 </td>
@@ -1717,7 +1808,7 @@ Year
 
 </tr>
 
-<tr data-index="19" data-listing-title-sort="The Way, Way Back">
+<tr data-index="26" data-listing-title-sort="The Way, Way Back">
 <td>
 <span class="listing-title">The Way, Way Back</span>
 </td>
@@ -1730,7 +1821,7 @@ Year
 
 </tr>
 
-<tr data-index="20" data-listing-title-sort="Mud">
+<tr data-index="27" data-listing-title-sort="Mud">
 <td>
 <span class="listing-title">Mud</span>
 </td>
@@ -1743,7 +1834,7 @@ Year
 
 </tr>
 
-<tr data-index="21" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring">
+<tr data-index="28" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring">
 <td>
 <span class="listing-title">The Lord of the Rings: The Fellowship of the Ring</span>
 </td>
@@ -1756,7 +1847,7 @@ Year
 
 </tr>
 
-<tr data-index="22" data-listing-title-sort="The Lord of the Rings: The Two Towers">
+<tr data-index="29" data-listing-title-sort="The Lord of the Rings: The Two Towers">
 <td>
 <span class="listing-title">The Lord of the Rings: The Two Towers</span>
 </td>
@@ -1769,7 +1860,7 @@ Year
 
 </tr>
 
-<tr data-index="23" data-listing-title-sort="The Lord of the Rings: The Return of the King">
+<tr data-index="30" data-listing-title-sort="The Lord of the Rings: The Return of the King">
 <td>
 <span class="listing-title">The Lord of the Rings: The Return of the King</span>
 </td>
@@ -1782,7 +1873,7 @@ Year
 
 </tr>
 
-<tr data-index="24" data-listing-title-sort="Mission: Impossible – Rogue Nation">
+<tr data-index="31" data-listing-title-sort="Mission: Impossible – Rogue Nation">
 <td>
 <span class="listing-title">Mission: Impossible – Rogue Nation</span>
 </td>
@@ -1795,7 +1886,7 @@ Year
 
 </tr>
 
-<tr data-index="25" data-listing-title-sort="Mission: Impossible – Fallout">
+<tr data-index="32" data-listing-title-sort="Mission: Impossible – Fallout">
 <td>
 <span class="listing-title">Mission: Impossible – Fallout</span>
 </td>
@@ -1808,7 +1899,7 @@ Year
 
 </tr>
 
-<tr data-index="26" data-listing-title-sort="Schindler's List">
+<tr data-index="33" data-listing-title-sort="Schindler's List">
 <td>
 <span class="listing-title">Schindler’s List</span>
 </td>
@@ -1821,7 +1912,7 @@ Year
 
 </tr>
 
-<tr data-index="27" data-listing-title-sort="Planet of the Apes">
+<tr data-index="34" data-listing-title-sort="Planet of the Apes">
 <td>
 <span class="listing-title">Planet of the Apes</span>
 </td>
@@ -1834,7 +1925,7 @@ Year
 
 </tr>
 
-<tr data-index="28" data-listing-title-sort="Halloween Is Grinch Night">
+<tr data-index="35" data-listing-title-sort="Halloween Is Grinch Night">
 <td>
 <span class="listing-title">Halloween Is Grinch Night</span>
 </td>
@@ -1847,7 +1938,7 @@ Year
 
 </tr>
 
-<tr data-index="29" data-listing-title-sort="How the Grinch Stole Christmas!">
+<tr data-index="36" data-listing-title-sort="How the Grinch Stole Christmas!">
 <td>
 <span class="listing-title">How the Grinch Stole Christmas!</span>
 </td>
@@ -1860,7 +1951,7 @@ Year
 
 </tr>
 
-<tr data-index="30" data-listing-title-sort="Rise of the Planet of the Apes">
+<tr data-index="37" data-listing-title-sort="Rise of the Planet of the Apes">
 <td>
 <span class="listing-title">Rise of the Planet of the Apes</span>
 </td>
@@ -1873,7 +1964,7 @@ Year
 
 </tr>
 
-<tr data-index="31" data-listing-title-sort="Dawn of the Planet of the Apes">
+<tr data-index="38" data-listing-title-sort="Dawn of the Planet of the Apes">
 <td>
 <span class="listing-title">Dawn of the Planet of the Apes</span>
 </td>
@@ -1886,7 +1977,7 @@ Year
 
 </tr>
 
-<tr data-index="32" data-listing-title-sort="Jurrasic Park">
+<tr data-index="39" data-listing-title-sort="Jurrasic Park">
 <td>
 <span class="listing-title">Jurrasic Park</span>
 </td>
@@ -1899,7 +1990,7 @@ Year
 
 </tr>
 
-<tr data-index="33" data-listing-title-sort="Saving Private Ryan">
+<tr data-index="40" data-listing-title-sort="Saving Private Ryan">
 <td>
 <span class="listing-title">Saving Private Ryan</span>
 </td>
@@ -1912,7 +2003,7 @@ Year
 
 </tr>
 
-<tr data-index="34" data-listing-title-sort="Minority Report">
+<tr data-index="41" data-listing-title-sort="Minority Report">
 <td>
 <span class="listing-title">Minority Report</span>
 </td>
@@ -1925,7 +2016,7 @@ Year
 
 </tr>
 
-<tr data-index="35" data-listing-title-sort="War of the Worlds">
+<tr data-index="42" data-listing-title-sort="War of the Worlds">
 <td>
 <span class="listing-title">War of the Worlds</span>
 </td>
@@ -1938,7 +2029,7 @@ Year
 
 </tr>
 
-<tr data-index="36" data-listing-title-sort="Kiki's Delivery Service">
+<tr data-index="43" data-listing-title-sort="Kiki's Delivery Service">
 <td>
 <span class="listing-title">Kiki’s Delivery Service</span>
 </td>
@@ -1951,7 +2042,7 @@ Year
 
 </tr>
 
-<tr data-index="37" data-listing-title-sort="Princess Mononoke">
+<tr data-index="44" data-listing-title-sort="Princess Mononoke">
 <td>
 <span class="listing-title">Princess Mononoke</span>
 </td>
@@ -1964,7 +2055,7 @@ Year
 
 </tr>
 
-<tr data-index="38" data-listing-title-sort="Spirited Away">
+<tr data-index="45" data-listing-title-sort="Spirited Away">
 <td>
 <span class="listing-title">Spirited Away</span>
 </td>
@@ -1977,7 +2068,20 @@ Year
 
 </tr>
 
-<tr data-index="39" data-listing-title-sort="Howl's Moving Castle">
+<tr data-index="46" data-listing-title-sort="The Dig">
+<td>
+<span class="listing-title">The Dig</span>
+</td>
+<td>
+<span class="listing-director">Stone</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="47" data-listing-title-sort="Howl's Moving Castle">
 <td>
 <span class="listing-title">Howl’s Moving Castle</span>
 </td>
@@ -1990,7 +2094,20 @@ Year
 
 </tr>
 
-<tr data-index="40" data-listing-title-sort="The Wind Rises">
+<tr data-index="48" data-listing-title-sort="The Incredibles">
+<td>
+<span class="listing-title">The Incredibles</span>
+</td>
+<td>
+<span class="listing-director">&nbsp;</span>
+</td>
+<td>
+<span class="listing-year">2004</span>
+</td>
+
+</tr>
+
+<tr data-index="49" data-listing-title-sort="The Wind Rises">
 <td>
 <span class="listing-title">The Wind Rises</span>
 </td>
@@ -2003,7 +2120,7 @@ Year
 
 </tr>
 
-<tr data-index="41" data-listing-title-sort="Silence">
+<tr data-index="50" data-listing-title-sort="Silence">
 <td>
 <span class="listing-title">Silence</span>
 </td>
@@ -2016,7 +2133,7 @@ Year
 
 </tr>
 
-<tr data-index="42" data-listing-title-sort="The Departed">
+<tr data-index="51" data-listing-title-sort="The Departed">
 <td>
 <span class="listing-title">The Departed</span>
 </td>
@@ -2029,7 +2146,7 @@ Year
 
 </tr>
 
-<tr data-index="43" data-listing-title-sort="Shutter Island">
+<tr data-index="52" data-listing-title-sort="Shutter Island">
 <td>
 <span class="listing-title">Shutter Island</span>
 </td>
@@ -2042,7 +2159,7 @@ Year
 
 </tr>
 
-<tr data-index="44" data-listing-title-sort="The Lion King">
+<tr data-index="53" data-listing-title-sort="The Lion King">
 <td>
 <span class="listing-title">The Lion King</span>
 </td>
@@ -2055,7 +2172,7 @@ Year
 
 </tr>
 
-<tr data-index="45" data-listing-title-sort="Finding Nemo">
+<tr data-index="54" data-listing-title-sort="Finding Nemo">
 <td>
 <span class="listing-title">Finding Nemo</span>
 </td>
@@ -2068,7 +2185,7 @@ Year
 
 </tr>
 
-<tr data-index="46" data-listing-title-sort="Everything Everywhere All at Once">
+<tr data-index="55" data-listing-title-sort="Everything Everywhere All at Once">
 <td>
 <span class="listing-title">Everything Everywhere All at Once</span>
 </td>
@@ -3512,56 +3629,14 @@ Year
   <pubDate>Wed, 01 Jan 2025 05:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>People</title>
-  <link>https://austin-hoover.github.io/blog/notes/people/</link>
+  <title>Philosophy</title>
+  <link>https://austin-hoover.github.io/blog/notes/philosophy/</link>
   <description><![CDATA[ 
 
 
 
 
-<ul>
-<li><a href="http://alexanderpruss.com">Alexander Pruss</a></li>
-<li><a href="http://www.oeftiger.net">Adrian Oeftiger</a></li>
-<li><a href="https://sites.google.com/site/cutterbc/home">Brian Cutter</a></li>
-<li><a href="https://sites.google.com/site/csebens/home">Charles Sebens</a></li>
-<li><a href="https://christophergregoryweaver.com/about-4">Christopher Gregory Weaver</a></li>
-<li><a href="http://davidkipping.co.uk">David Kipping</a></li>
-<li><a href="https://www.eddykemingchen.net">Eddie Chen</a></li>
-<li><a href="https://research.monash.edu/en/persons/graham-oppy">Graham Oppy</a></li>
-<li><a href="https://aicip.github.io/">Hairong Qi</a></li>
-<li><a href="https://ahc.leeds.ac.uk/philosophy/staff/1167/professor-helen-steward">Helen Seward</a></li>
-<li><a href="https://isaacwilhelm.com">Isaac Wilhelm</a></li>
-<li><a href="https://www.jacobbarandes.com">Jacob Barandes</a></li>
-<li><a href="https://web.ornl.gov/~holmesja1/JHolmes/interests.html">Jeff Holmes</a></li>
-<li><a href="https://sites.pitt.edu/~jdnorton/jdnorton.html">John Norton</a></li>
-<li><a href="https://josephschmid.com/research/">Joseph Schmidt</a></li>
-<li><a href="https://www.justinmooney.net">Justin Mooney</a></li>
-<li><a href="https://www.kerrymckenzie.org">Kerry McKenzie</a></li>
-<li><a href="https://melaniemitchell.me">Melanie Mitchell</a></li>
-<li><a href="https://spot.colorado.edu/~huemer/">Michael Heumer</a></li>
-<li><a href="https://nickbostrom.com">Nick Bostrom</a></li>
-<li><a href="https://philipgoffphilosophy.com">Philip Goff</a></li>
-<li><a href="https://simonfriederich.eu/publications.html">Simono Friedrich</a></li>
-<li><a href="https://taylorwcyr.com">Taylor Cyr</a></li>
-<li><a href="https://shc.academia.edu/ThomasMetcalf">Thomas Metcalf</a></li>
-<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tim Oconor</a></li>
-<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tyler Hildebrand</a></li>
-</ul>
-
-
-
- ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/people/</guid>
-  <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Papers: Philosophy</title>
-  <link>https://austin-hoover.github.io/blog/notes/papers-philosophy/</link>
-  <description><![CDATA[ 
-
-
-
-
+<p>Mostly philosophy of religion right now. Eventually split into separate notes.</p>
 
 
 
@@ -4356,7 +4431,50 @@ Year
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/papers-philosophy/</guid>
+  <guid>https://austin-hoover.github.io/blog/notes/philosophy/</guid>
+  <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>People</title>
+  <link>https://austin-hoover.github.io/blog/notes/people/</link>
+  <description><![CDATA[ 
+
+
+
+
+<ul>
+<li><a href="http://alexanderpruss.com">Alexander Pruss</a></li>
+<li><a href="http://www.oeftiger.net">Adrian Oeftiger</a></li>
+<li><a href="https://sites.google.com/site/cutterbc/home">Brian Cutter</a></li>
+<li><a href="https://sites.google.com/site/csebens/home">Charles Sebens</a></li>
+<li><a href="https://christophergregoryweaver.com/about-4">Christopher Gregory Weaver</a></li>
+<li><a href="http://davidkipping.co.uk">David Kipping</a></li>
+<li><a href="https://www.eddykemingchen.net">Eddie Chen</a></li>
+<li><a href="https://research.monash.edu/en/persons/graham-oppy">Graham Oppy</a></li>
+<li><a href="https://aicip.github.io/">Hairong Qi</a></li>
+<li><a href="https://ahc.leeds.ac.uk/philosophy/staff/1167/professor-helen-steward">Helen Seward</a></li>
+<li><a href="https://isaacwilhelm.com">Isaac Wilhelm</a></li>
+<li><a href="https://www.jacobbarandes.com">Jacob Barandes</a></li>
+<li><a href="https://web.ornl.gov/~holmesja1/JHolmes/interests.html">Jeff Holmes</a></li>
+<li><a href="https://sites.pitt.edu/~jdnorton/jdnorton.html">John Norton</a></li>
+<li><a href="https://josephschmid.com/research/">Joseph Schmidt</a></li>
+<li><a href="https://www.justinmooney.net">Justin Mooney</a></li>
+<li><a href="https://www.kerrymckenzie.org">Kerry McKenzie</a></li>
+<li><a href="https://melaniemitchell.me">Melanie Mitchell</a></li>
+<li><a href="https://spot.colorado.edu/~huemer/">Michael Heumer</a></li>
+<li><a href="https://nickbostrom.com">Nick Bostrom</a></li>
+<li><a href="https://philipgoffphilosophy.com">Philip Goff</a></li>
+<li><a href="https://simonfriederich.eu/publications.html">Simono Friedrich</a></li>
+<li><a href="https://taylorwcyr.com">Taylor Cyr</a></li>
+<li><a href="https://shc.academia.edu/ThomasMetcalf">Thomas Metcalf</a></li>
+<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tim Oconor</a></li>
+<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tyler Hildebrand</a></li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/people/</guid>
   <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
 </item>
 </channel>
