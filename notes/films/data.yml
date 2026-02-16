@@ -1,3 +1,7 @@
+- title: "Good Will Hunting"
+  director: "Van Sant"
+  year: 1998
+
 - title: "About Time"
   director: Curtis
   year: 2013
@@ -61,6 +65,30 @@
 - title: "Blade Runner"
   director: "Scott"
   year: 1982
+
+- title: "Lion"
+  director: "Davis"
+  year: 2016
+
+- title: "Darkest Hour"
+  director: "Wright"
+  year: 2018
+
+- title: "La La Land"
+  director: "Chazelle"
+  year: 2016
+
+- title: "Manchester By The Sea"
+  director: "Lonergan"
+  year: 2016
+
+- title: "Dunkirk"
+  director: "Nolan"
+  year: 2017
+
+- title: "The Revenant"
+  director: "Iñárritu"
+  year: 2015
 
 - title: "Blade Runner 2049"
   director: "Villeneuve"
