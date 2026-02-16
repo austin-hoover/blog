@@ -1,5 +1,5 @@
 ---
-title: "Philosophy of Religion"
+title: "Philosophy"
 date: 2024-01-01
 date-modified: 2024-01-01
 format:
@@ -19,3 +19,5 @@ listing:
     max-items: 99999999
     page-size: 99999999
 ---
+
+Mostly philosophy of religion right now. Eventually split into separate notes.
