@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2025-04-27">
 
-<title>Gerald Minerbo – Austin’s Blog</title>
+<title>Test – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f2e851521be713e469fb22eb7844788c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-bde3b489de091785c5bb449dd5b57dfa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-f2e851521be713e469fb22eb7844788c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-00642c2b137ac6e3ec20b7d20d4eb455.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-1e8840e501d7cd8db4a88976937440b8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-00642c2b137ac6e3ec20b7d20d4eb455.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DLC4C8LZFB"></script>
 
 <script type="text/javascript">
@@ -84,6 +113,35 @@ gtag('js', new Date());
 gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -267,7 +325,7 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -275,7 +333,7 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../notes.html"> 
+    <a class="nav-link" href="../../notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
@@ -297,26 +355,14 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gerald Minerbo</h1>
-  </div>
+<h1 class="title">Test</h1>
+</div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Austin Hoover </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 27, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -326,22 +372,85 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 </header>
 
 
-<p>I found out that Gerald Minerbo, author of MENT, passed away recently. Here’s his <a href="https://jhvonline.com/dr-gerald-minerbo-p34697-124.htm">obituary</a>.</p>
-<blockquote class="blockquote">
-<p>Dr.&nbsp;Gerald Nelson Nessim Minerbo, a distinguished mathematician and physicist, passed away at his home on Tuesday, March 18, 2025, in Missouri City, Texas.</p>
-<p>Gerry, as he was called by those who loved him, was born in Alexandria, Egypt, to Salvator and Lily Minerbo (nee Farhi). His family fled Egypt in 1956 due to political uncertainty and religious persecution, landing in New York City.</p>
-<p>Gerald earned a B.S. in applied math from Brooklyn Polytechnic School of Engineering and earned his Ph.D.&nbsp;in applied mathematics and theoretical physics from the University of Cambridge in 1968 under the mentorship of Richard J. Eden.</p>
-<p>Gerald married Dr.&nbsp;Grace Moffat in August 1966. Together, they had two children, Julie and Geoffrey. They lived briefly in New York, Buenos Aires, Argentina and Los Alamos, New Mexico, before settling in Missouri City, Texas, in August 1981.</p>
-<p>During his career, Gerald worked at Brookhaven National Laboratory, Los Alamos National Laboratory and Schlumberger, for over 30 years, when he retired. Of his many patents, one of his most notable was The Periscope, which was very beneficial for drilling and exploration.</p>
-<p>He made significant advancements in the physical sciences, earning over 80 U.S. patents and publishing in countless academic journals. Most notably, his work on the Maximum Entropy (MENT) method has been influential in data analysis and modeling. Recent studies have built upon his foundational research applying N-dimensional MENT to experimental data, demonstrating the enduring impact of his work.</p>
-<p>In addition to his theoretical contributions, Dr.&nbsp;Minerbo was involved in the practical applications of his research. He co-authored studies on directional electromagnetic measurements for well placement and formation evaluation while drilling, showcasing his interdisciplinary expertise in both physics and engineering. He served as an independent consultant following his retirement from Schlumberger.</p>
-<p>Gerald was preceded in death by his wife, Dr.&nbsp;Grace Moffat Minerbo, who passed away in 2005, and sister, Claude Sasson, who passed away in 2022. He is survived by his daughter, Julie; and son, Geoffrey; his sister, Hedy; and several nieces and nephews who marvel at his genius and his love for his work.</p>
-<p>Dr.&nbsp;Minerbo’s legacy of intellectual rigor and dedication to science will be remembered by colleagues, friends and family. Gerry was incredibly brilliant, accomplished, passionate and knowledgeable on a vast array of topics. He was very generous, passionate about learning and had a wicked sense of humor.</p>
-</blockquote>
+<p>Example text</p>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1767243600000" data-listing-file-modified-sort="1770440904330" data-listing-date-modified-sort="1770354000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail"><a href="../../notes/films/index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../notes/films/index.html" class="no-external">Films</a>
+</h3>
+<div class="delink listing-description"><a href="../../notes/films/index.html" class="no-external">
+
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+Title
+</th>
+
+<th>
+Director
+</th>
+
+<th>
+Year
+</th>
+
+<th>
+Score
+</th>
+
+<th>
+notes
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-title-sort="How to Make Millions Before Grandma Dies">
+<td>
+<span class="listing-title">How to…</span></td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td><td><span class="listing-notes"></span></td></tr><tr data-index="1" data-listing-title-sort="Mud"><td><span class="listing-title"></span></td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td><td><span class="listing-notes"></span></td></tr><tr data-index="2" data-listing-title-sort="Past Lives"><td><span class="listing-title"></span></td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td><td><span class="listing-notes"></span></td></tr><tr data-index="3" data-listing-title-sort="Small Things Like These"><td><span class="listing-title"></span></td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td><td><span class="listing-notes"></span></td></tr><tr data-index="4" data-listing-file-modified-sort="1770440957935" data-listing-reading-time-sort="1" data-listing-word-count-sort="2" data-listing-title-sort="Test" data-listing-filename-sort="test.qmd"><td></td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td><td><span class="listing-notes"></span></td></tr><tr data-index="5" data-listing-title-sort="The Grand Budapest Hotel"><td><span class="listing-title"></span></td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td><td><span class="listing-notes"></span></td></tr><tr data-index="6" data-listing-title-sort="The Holdovers"><td><span class="listing-title"></span></td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td><td><span class="listing-notes"></span></td></tr><tr data-index="7" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring"><td><span class="listing-title"></span></td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td><td><span class="listing-notes"></span></td></tr><tr data-index="8" data-listing-title-sort="The Lord of the Rings: The Return of the King"><td><span class="listing-title"></span></td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td><td><span class="listing-notes"></span></td></tr><tr data-index="9" data-listing-title-sort="The Lord of the Rings: The Two Towers"><td><span class="listing-title"></span></td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td><td><span class="listing-notes"></span></td></tr><tr data-index="10" data-listing-title-sort="The Way, Way Back"><td><span class="listing-title"></span></td><td><span class="listing-director"></span></td><td><span class="listing-year"></span></td><td><span class="listing-score"></span></td><td><span class="listing-notes"></span></td></tr></tbody></table><div class="listing-no-matching d-none"></div>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../notes/films/index.html" class="no-external">
+<div class="listing-date">
+Jan 1, 2026
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -428,7 +537,7 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -755,38 +864,6 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
     }
   });
   </script>
-<input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="dark">
-<script>
-  function loadGiscus() {
-    // Function to get the theme based on body class
-    const getTheme = () => {
-      let baseTheme = document.getElementById('giscus-base-theme').value;
-      let altTheme = document.getElementById('giscus-alt-theme').value;
-      if (authorPrefersDark) {
-          [baseTheme, altTheme] = [altTheme, baseTheme];
-      }
-      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
-    };
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.dataset.repo = "austin-hoover/blog";
-    script.dataset.repoId = "R_kgDOLpju-A";
-    script.dataset.category = "General";
-    script.dataset.categoryId = "DIC_kwDOLpju-M4C09wV";
-    script.dataset.mapping = "title";
-    script.dataset.reactionsEnabled = "0";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-    script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
-    script.crossOrigin = "anonymous";
-    // Append the script to the desired div instead of at the end of the body
-    document.getElementById("quarto-content").appendChild(script);
-  }
-  loadGiscus();
-</script>
 </div> <!-- /content -->
 
 
