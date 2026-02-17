@@ -16,8 +16,9 @@ website:
 format:
   html:
     theme: 
-      - default
-      - style.scss
+      light: [default, style.scss]
+      dark: [default, style_dark.scss]
+    respect-user-color-scheme: false
     grid:
         body-width: 600px
     mainfont: "Times"
