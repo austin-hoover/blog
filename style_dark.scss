@@ -83,3 +83,10 @@ h2, .h2 {
     color: $body-color;
   }
 }
+
+// This wil invert image colors. It looks great for black/white but 
+// can give strange results for colorful images. In the future this
+// could be turned on for only certain posts.
+img {
+  // filter: invert(100%) hue-rotate(180deg);
+}
