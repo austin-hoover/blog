@@ -18,7 +18,7 @@ format:
     theme: 
       light: [default, style.scss]
       dark: [default, style_dark.scss]
-    respect-user-color-scheme: false
+    respect-user-color-scheme: true
     grid:
         body-width: 610px
     mainfont: "Georgia"

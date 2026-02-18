@@ -40,8 +40,8 @@ $link-color: $cyan;
 
 $light: rgb(32.4,32.4,34.2);
 
-$footer-bg: $gray-900;
-$navbar-bg: shade-color($gray-800, 10%);
+// $footer-bg: $gray-900;
+$navbar-bg: $body-bg;
  
 $code-block-bg-alpha: -.9;
 
