@@ -1,59 +1,85 @@
 @import "style.scss";
 
 
+/*-- scss:defaults --*/
+
+$blue: #447099;
+$red: #D44000;
+$orange: #EE6331;
+$yellow: #E7B10A;
+$green: #72994E;
+$teal: #419599;
+$cyan: #75A8D9;
+$black: #000;
+$white: #fff;
+$gray: #404041;
+$gray-dark: #343a40;
+$gray-100: #f8f8f8;
+$gray-200: #C2C2C4;
+$gray-300: #949494;
+$gray-400: #707073;
+$gray-500: #495057;
+$gray-600: #404041;
+$gray-700: #333333;
+$gray-800: #242426;
+$gray-900: #151515;
+$default: $gray-900;
+$primary: $cyan;
+$secondary: $gray-400;
+$success: $green;
+$info: $yellow;
+$warning: $orange;
+$danger: $red;
+
+$body-bg: black;
+$body-color: white;
+// $body-bg: $gray-900;
+// $body-color: $gray-100;
+
+$link-color: $cyan;
+
+$light: rgb(32.4,32.4,34.2);
+
+$footer-bg: $gray-900;
+$navbar-bg: shade-color($gray-800, 10%);
+ 
+$code-block-bg-alpha: -.9;
+
+$popover-bg: #242424;
+
+$input-bg: #242424;
+$dropdown-bg: $body-bg;
+$dropdown-color: $body-color;
+$dropdown-link-color: $body-color;
+$dropdown-link-hover-bg: $gray-600;
+$dropdown-link-hover-color: #eee;
+$nav-tabs-link-hover-border-color: rgb(80, 80, 80);
+
+$border-color: rgba($gray-800, 0.5);
+
+$mono-background-color: rgba(0,0,0,0);
+
+$mono-color: red;
+
+$code-color: rgb(192, 128, 216);
+$nav-tabs-link-active-color: $body-color;
+$toc-inactive-border: rgba($gray-800, 0.5);
+$input-text-background-color: $gray-800;
+$input-group-addon-bg: $gray-800;
+$carousel-dark-caption-color: $body-color;
+$pagination-disabled-bg: rgb(24,24,24);
+
+$text-muted: lighten(#6a737b, 20%);
+
+
 /*-- scss:rules --*/
 
-
-// https://ar.al/2021/08/24/implementing-dark-mode-in-a-handful-of-lines-of-css-with-css-filters/
-
-@media (prefers-color-scheme: dark) {
-  /* Invert all elements on the body while attempting to not alter the hue substantially. */
-  body {
-    filter: invert(100%) hue-rotate(180deg);
-  }
-
-  /* Workarounds and optical adjustments. */
-
-  /*
-     Firefox workaround: Set the background colour for the html
-     element separately because, unlike other browsers, Firefox
-     doesn’t apply the filter to the root element’s background.
-  */
-  html {
-    background-color: #111;
-  }
-
-  /* Do not invert media (revert the invert). */
-  img, video, iframe, svg {
-    filter: invert(100%) hue-rotate(180deg);
-  }
-
-  /*
-    Videos running fullscreen are no longer affected by the
-    filter on the body so we need to also unset the
-    revert we applied earlier so we’re left with no filter again.
-   */
-  video:fullscreen {
-    filter: none;
-  }
-
-  /* Improve contrast on icons. */
-  .icon {
-    filter: invert(15%) hue-rotate(180deg);
-  }
-
-  /* Re-enable code block backgrounds. */
-  pre {
-    filter: invert(6%);
-  }
-
-  /* Improve contrast on list item markers. */
-  li::marker {
-    color: #666;
-  }
+h2, .h2 {
+  border-bottom-color: #666;
 }
 
-h2 {
-  border-bottom-color: rgba(black, 0.3);
+.cell-output {
+  pre, code {
+    color: $body-color;
+  }
 }
-
