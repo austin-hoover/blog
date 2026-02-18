@@ -20,9 +20,9 @@ format:
       dark: [default, style_dark.scss]
     respect-user-color-scheme: true
     grid:
-        body-width: 610px
+        body-width: 570px
     mainfont: "Georgia"
-    fontsize: 15px
+    fontsize: 14.5px
     toc: false
     toc-location: right
     html-math-method: mathjax
