@@ -427,62 +427,63 @@ window.Quarto = {
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    delta <span class="op">=</span> np.diff(coords)[<span class="dv">0</span>]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.hstack([coords <span class="op">-</span> <span class="fl">0.5</span> <span class="op">*</span> delta, [coords[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> <span class="fl">0.5</span> <span class="op">*</span> delta]])</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_image(</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    values: np.ndarray, </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    coords: <span class="bu">list</span>[np.ndarray],</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    log: <span class="bu">bool</span> <span class="op">=</span> <span class="va">True</span>,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span><span class="va">None</span>,</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>kwargs</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Plot image in log scale."""</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    kwargs.setdefault(<span class="st">"colorbar"</span>, <span class="va">True</span>)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    kwargs.setdefault(<span class="st">"colorbar_kw"</span>, <span class="bu">dict</span>())    </span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> log:</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        kwargs[<span class="st">"colorbar_kw"</span>][<span class="st">"formatter"</span>] <span class="op">=</span> matplotlib.ticker.LogFormatterSciNotation()</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        kwargs[<span class="st">"norm"</span>] <span class="op">=</span> <span class="st">"log"</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    values <span class="op">=</span> values.copy()</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    values <span class="op">=</span> values <span class="op">+</span> np.<span class="bu">min</span>(values[values <span class="op">&gt;</span> <span class="fl">0.0</span>])</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    values <span class="op">=</span> values <span class="op">/</span> np.<span class="bu">max</span>(values)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    ax.pcolormesh(coords[<span class="dv">0</span>], coords[<span class="dv">1</span>], values.T, <span class="op">**</span>kwargs)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_points(x: np.ndarray, bins: <span class="bu">int</span>, limits: <span class="bu">list</span>[<span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>]], <span class="op">**</span>kwargs) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Plot histogram in log scale."""</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    values, edges <span class="op">=</span> np.histogramdd(x, bins<span class="op">=</span>bins, <span class="bu">range</span><span class="op">=</span>limits)</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    plot_image(values, edges, <span class="op">**</span>kwargs)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    values: np.ndarray, coords: <span class="bu">list</span>[np.ndarray], log: <span class="bu">bool</span> <span class="op">=</span> <span class="va">True</span>, ax<span class="op">=</span><span class="va">None</span>, <span class="op">**</span>kwargs</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Plot image in log scale."""</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    kwargs.setdefault(<span class="st">"colorbar"</span>, <span class="va">True</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    kwargs.setdefault(<span class="st">"colorbar_kw"</span>, <span class="bu">dict</span>())</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    kwargs[<span class="st">"colorbar_kw"</span>].setdefault(<span class="st">"space"</span>, <span class="st">"0.7em"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> log:</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        kwargs[<span class="st">"colorbar_kw"</span>][<span class="st">"formatter"</span>] <span class="op">=</span> matplotlib.ticker.LogFormatterSciNotation()</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        kwargs[<span class="st">"norm"</span>] <span class="op">=</span> <span class="st">"log"</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    values <span class="op">=</span> values.copy()</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    values <span class="op">=</span> values <span class="op">+</span> np.<span class="bu">min</span>(values[values <span class="op">&gt;</span> <span class="fl">0.0</span>])</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    values <span class="op">=</span> values <span class="op">/</span> np.<span class="bu">max</span>(values)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    ax.pcolormesh(coords[<span class="dv">0</span>], coords[<span class="dv">1</span>], values.T, <span class="op">**</span>kwargs)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_points(</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    x: np.ndarray, bins: <span class="bu">int</span>, limits: <span class="bu">list</span>[<span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>]], <span class="op">**</span>kwargs</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Plot histogram in log scale."""</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    values, edges <span class="op">=</span> np.histogramdd(x, bins<span class="op">=</span>bins, <span class="bu">range</span><span class="op">=</span>limits)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    plot_image(values, edges, <span class="op">**</span>kwargs)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sample_grid(values: np.ndarray, coords: <span class="bu">list</span>[np.ndarray], size: <span class="bu">int</span>, noise: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.0</span>) <span class="op">-&gt;</span> np.ndarray:</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Sample points from histogram."""</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    pdf <span class="op">=</span> np.ravel(values) <span class="op">/</span> np.<span class="bu">sum</span>(values)</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">=</span> np.arange(pdf.size)</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">=</span> np.random.choice(idx, size, replace<span class="op">=</span><span class="va">True</span>, p<span class="op">=</span>pdf)</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">=</span> np.unravel_index(idx, shape<span class="op">=</span>values.shape)</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    edges <span class="op">=</span> [coords_to_edges(c) <span class="cf">for</span> c <span class="kw">in</span> coords]</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">=</span> [edges[axis][idx[axis]    ] <span class="cf">for</span> axis <span class="kw">in</span> <span class="bu">range</span>(values.ndim)]</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    ub <span class="op">=</span> [edges[axis][idx[axis] <span class="op">+</span> <span class="dv">1</span>] <span class="cf">for</span> axis <span class="kw">in</span> <span class="bu">range</span>(values.ndim)]</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.zeros((size, values.ndim))</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> axis <span class="kw">in</span> <span class="bu">range</span>(x.shape[<span class="dv">1</span>]):</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        x[:, axis] <span class="op">=</span> np.random.uniform(lb[axis], ub[axis])</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> noise:</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>            delta <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> noise <span class="op">*</span> (ub[axis] <span class="op">-</span> lb[axis])</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>            x[:, axis] <span class="op">+=</span> np.random.uniform(<span class="op">-</span>delta, delta, size<span class="op">=</span>x.shape[<span class="dv">0</span>])</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sample_grid(</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    values: np.ndarray, coords: <span class="bu">list</span>[np.ndarray], size: <span class="bu">int</span>, noise: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Sample points from histogram."""</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    pdf <span class="op">=</span> np.ravel(values) <span class="op">/</span> np.<span class="bu">sum</span>(values)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">=</span> np.arange(pdf.size)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">=</span> np.random.choice(idx, size, replace<span class="op">=</span><span class="va">True</span>, p<span class="op">=</span>pdf)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">=</span> np.unravel_index(idx, shape<span class="op">=</span>values.shape)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    edges <span class="op">=</span> [coords_to_edges(c) <span class="cf">for</span> c <span class="kw">in</span> coords]</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    lb <span class="op">=</span> [edges[axis][idx[axis]] <span class="cf">for</span> axis <span class="kw">in</span> <span class="bu">range</span>(values.ndim)]</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    ub <span class="op">=</span> [edges[axis][idx[axis] <span class="op">+</span> <span class="dv">1</span>] <span class="cf">for</span> axis <span class="kw">in</span> <span class="bu">range</span>(values.ndim)]</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.zeros((size, values.ndim))</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> axis <span class="kw">in</span> <span class="bu">range</span>(x.shape[<span class="dv">1</span>]):</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        x[:, axis] <span class="op">=</span> np.random.uniform(lb[axis], ub[axis])</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> noise:</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>            delta <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> noise <span class="op">*</span> (ub[axis] <span class="op">-</span> lb[axis])</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>            x[:, axis] <span class="op">+=</span> np.random.uniform(<span class="op">-</span>delta, delta, size<span class="op">=</span>x.shape[<span class="dv">0</span>])</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
 <span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> norm_matrix_from_cov(cov_matrix: np.ndarray) <span class="op">-&gt;</span> np.ndarray:</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Symplectic matrix that diagonalizes covariance matrix."""</span></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    emittance <span class="op">=</span> np.sqrt(np.linalg.det(cov_matrix))</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    beta <span class="op">=</span> cov_matrix[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">/</span> emittance</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    alpha <span class="op">=</span> <span class="op">-</span>cov_matrix[<span class="dv">0</span>, <span class="dv">1</span>] <span class="op">/</span> emittance</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    V <span class="op">=</span> np.array([[beta, <span class="fl">0.0</span>], [<span class="op">-</span>alpha, <span class="fl">1.0</span>]]) <span class="op">*</span> np.sqrt(<span class="fl">1.0</span> <span class="op">/</span> beta)</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    A <span class="op">=</span> np.sqrt(np.diag([emittance, emittance]))</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    V <span class="op">=</span> np.matmul(V, A)</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.linalg.inv(V)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> norm_matrix_from_cov(cov_matrix: np.ndarray) <span class="op">-&gt;</span> np.ndarray:</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Symplectic matrix that diagonalizes covariance matrix."""</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    emittance <span class="op">=</span> np.sqrt(np.linalg.det(cov_matrix))</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    beta <span class="op">=</span> cov_matrix[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">/</span> emittance</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    alpha <span class="op">=</span> <span class="op">-</span>cov_matrix[<span class="dv">0</span>, <span class="dv">1</span>] <span class="op">/</span> emittance</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    V <span class="op">=</span> np.array([[beta, <span class="fl">0.0</span>], [<span class="op">-</span>alpha, <span class="fl">1.0</span>]]) <span class="op">*</span> np.sqrt(<span class="fl">1.0</span> <span class="op">/</span> beta)</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    A <span class="op">=</span> np.sqrt(np.diag([emittance, emittance]))</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    V <span class="op">=</span> np.matmul(V, A)</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.linalg.inv(V)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <section id="source-distribution" class="level2">
@@ -496,7 +497,7 @@ window.Quarto = {
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>grid_values <span class="op">=</span> grid.values</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>grid_coords <span class="op">=</span> [grid.coords[<span class="st">"x"</span>], grid.coords[<span class="st">"xp"</span>]]</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, figheight<span class="op">=</span><span class="fl">2.5</span>)</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axs):</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    plot_image(grid_values, grid_coords, ax<span class="op">=</span>ax, log<span class="op">=</span>i)</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>, ylabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">p_x</span><span class="dv">$</span><span class="vs">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -504,7 +505,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-5-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/cell-5-output-1.png" width="681" height="307" class="figure-img"></a></p>
+<p><a href="index_files/figure-html/cell-5-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/cell-5-output-1.png" width="564" height="250" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -515,27 +516,29 @@ window.Quarto = {
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample particles from the discrete distribution.</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x_true <span class="op">=</span> sample_grid(values<span class="op">=</span>grid.values, coords<span class="op">=</span>grid.coords.values(), size<span class="op">=</span><span class="dv">8_500_000</span>, noise<span class="op">=</span><span class="fl">1.0</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalize using symplectic matrix.</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>cov_matrix <span class="op">=</span> np.cov(x_true.T)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>norm_matrix <span class="op">=</span> norm_matrix_from_cov(cov_matrix)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>x_true <span class="op">=</span> np.matmul(x_true, norm_matrix.T)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the normalized coordinates.</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>xmax <span class="op">=</span> <span class="fl">6.0</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> <span class="dv">75</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>limits <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> [(<span class="op">-</span>xmax, xmax)]</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axs):</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    plot_points(x_true, bins<span class="op">=</span>bins, limits<span class="op">=</span>limits, ax<span class="op">=</span>ax, log<span class="op">=</span>i)</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>, ylabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x'</span><span class="dv">$</span><span class="vs">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x_true <span class="op">=</span> sample_grid(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    values<span class="op">=</span>grid.values, coords<span class="op">=</span>grid.coords.values(), size<span class="op">=</span><span class="dv">8_500_000</span>, noise<span class="op">=</span><span class="fl">1.0</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalize using symplectic matrix.</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>cov_matrix <span class="op">=</span> np.cov(x_true.T)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>norm_matrix <span class="op">=</span> norm_matrix_from_cov(cov_matrix)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>x_true <span class="op">=</span> np.matmul(x_true, norm_matrix.T)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the normalized coordinates.</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>xmax <span class="op">=</span> <span class="fl">6.0</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> <span class="dv">75</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>limits <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> [(<span class="op">-</span>xmax, xmax)]</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, figheight<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axs):</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    plot_points(x_true, bins<span class="op">=</span>bins, limits<span class="op">=</span>limits, ax<span class="op">=</span>ax, log<span class="op">=</span>i)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>axs.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>, ylabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x'</span><span class="dv">$</span><span class="vs">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-6-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/cell-6-output-1.png" width="684" height="307" class="figure-img"></a></p>
+<p><a href="index_files/figure-html/cell-6-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/cell-6-output-1.png" width="557" height="250" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -545,7 +548,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="forward-model">Forward model</h2>
 <p>Consider a simple forward model consisting of rotation matrices by angles uniformly spaced between <span class="math inline">\([0, \pi]\)</span>. (In typical measurement beamlines, a linear + uncoupled description of the dyanamics will be sufficient.) We’ll simulate 10 measurements.</p>
 <div id="5740e306-3c2b-4b37-b280-02a404201ebb" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nmeas <span class="op">=</span> <span class="dv">10</span> <span class="co"># number of projections</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nmeas <span class="op">=</span> <span class="dv">10</span>  <span class="co"># number of projections</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>nbins <span class="op">=</span> <span class="dv">75</span>  <span class="co"># number of bins in 1D histograms</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define rotation angles uniformly spanning [0, pi].</span></span>
@@ -565,35 +568,41 @@ window.Quarto = {
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    diagnostic <span class="op">=</span> ment.diag.Histogram1D(axis<span class="op">=</span><span class="dv">0</span>, edges<span class="op">=</span>bin_edges)</span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    diagnostics.append([diagnostic])</span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate training data from ground truth distribution. </span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate training data from ground truth distribution.</span></span>
 <span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>projections <span class="op">=</span> ment.simulate(x_true, transforms, diagnostics)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="c2bdc07a-0084-48b7-9021-bc5b1eb68a95" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> log <span class="kw">in</span> [<span class="va">False</span>, <span class="va">True</span>]:</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">5</span>, nrows<span class="op">=</span><span class="dv">2</span>, figheight<span class="op">=</span><span class="fl">3.75</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax, projection, phase_advance <span class="kw">in</span> <span class="bu">zip</span>(axs[:<span class="dv">10</span>], ment.unravel(projections), phase_advances):</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        ax.stairs(projection.values, projection.edges, color<span class="op">=</span><span class="st">"black"</span>, lw<span class="op">=</span><span class="fl">1.5</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        ax.annotate(<span class="vs">r"</span><span class="dv">$</span><span class="ch">\t</span><span class="vs">heta = {:0</span><span class="dv">.</span><span class="vs">0f}</span><span class="dv">\d</span><span class="vs">egree</span><span class="dv">$</span><span class="vs">"</span>.<span class="bu">format</span>(np.degrees(phase_advance)), xy<span class="op">=</span>(<span class="fl">0.025</span>, <span class="fl">0.9</span>), xycoords<span class="op">=</span><span class="st">"axes fraction"</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> log:</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        axs.<span class="bu">format</span>(yscale<span class="op">=</span><span class="st">"log"</span>, yformatter<span class="op">=</span><span class="st">"log"</span>)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> log:</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        axs.<span class="bu">format</span>(suptitle<span class="op">=</span><span class="st">"Data (log scale)"</span>)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        axs.<span class="bu">format</span>(suptitle<span class="op">=</span><span class="st">"Data (linear scale)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">5</span>, nrows<span class="op">=</span><span class="dv">2</span>, figheight<span class="op">=</span><span class="fl">3.75</span>, figwidth<span class="op">=</span><span class="fl">10.0</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ax, projection, phase_advance <span class="kw">in</span> <span class="bu">zip</span>(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        axs[:<span class="dv">10</span>], ment.unravel(projections), phase_advances</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    ):</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        ax.stairs(projection.values, projection.edges, color<span class="op">=</span><span class="st">"black"</span>, lw<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        ax.annotate(</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>            <span class="vs">r"</span><span class="dv">$</span><span class="ch">\t</span><span class="vs">heta = {:0</span><span class="dv">.</span><span class="vs">0f}</span><span class="dv">\d</span><span class="vs">egree</span><span class="dv">$</span><span class="vs">"</span>.<span class="bu">format</span>(np.degrees(phase_advance)),</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            xy<span class="op">=</span>(<span class="fl">0.025</span>, <span class="fl">0.9</span>),</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>            xycoords<span class="op">=</span><span class="st">"axes fraction"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> log:</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        axs.<span class="bu">format</span>(yscale<span class="op">=</span><span class="st">"log"</span>, yformatter<span class="op">=</span><span class="st">"log"</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> log:</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        axs.<span class="bu">format</span>(suptitle<span class="op">=</span><span class="st">"Data (log scale)"</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>        axs.<span class="bu">format</span>(suptitle<span class="op">=</span><span class="st">"Data (linear scale)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/cell-8-output-1.png" width="863" height="375" class="figure-img"></a></p>
+<p><a href="index_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/cell-8-output-1.png" width="1000" height="375" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-8-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="index_files/figure-html/cell-8-output-2.png" width="876" height="375" class="figure-img"></a></p>
+<p><a href="index_files/figure-html/cell-8-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="index_files/figure-html/cell-8-output-2.png" width="1000" height="375" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -602,7 +611,7 @@ window.Quarto = {
 <section id="reconstruction-model" class="level2">
 <h2 class="anchored" data-anchor-id="reconstruction-model">Reconstruction model</h2>
 <p>I’ll use the MENT algorithm linked above. It requires a list of transformation functions (<code>transforms</code>), which map the distribution from the reconstruction point to each measurement, as well as a list of measured projections (<code>projections</code>). It also requires a prior distribution, which I’ll take to be ~uniform over the phase space. I’ll use numerical integration to simulate the projections, which is quite fast in 2D.</p>
-<div id="ef80bea3-9b71-40c8-bc78-cb9ba6ffebe7" class="cell" data-execution_count="8">
+<div id="ef80bea3-9b71-40c8-bc78-cb9ba6ffebe7" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Defina a wide Gaussian prior (basically uniform).</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ndim <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>prior <span class="op">=</span> ment.GaussianPrior(ndim<span class="op">=</span>ndim, scale<span class="op">=</span><span class="fl">5.0</span>)</span>
@@ -610,7 +619,7 @@ window.Quarto = {
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create sampler to sample particles from the distribution (for plotting).</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>sampler <span class="op">=</span> ment.GridSampler(grid_limits<span class="op">=</span>limits, grid_shape<span class="op">=</span>(<span class="dv">200</span>, <span class="dv">200</span>))</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Define integration grid limits and resolution for each measurement. In this case </span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Define integration grid limits and resolution for each measurement. In this case</span></span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># the grid is one-dimenisonal.</span></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>integration_size <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>integration_limits <span class="op">=</span> [[limits,] <span class="cf">for</span> transform <span class="kw">in</span> transforms]</span>
@@ -633,60 +642,51 @@ window.Quarto = {
 <section id="training-loop" class="level2">
 <h2 class="anchored" data-anchor-id="training-loop">Training loop</h2>
 <p>We train MENT by Gauss-Seidel iterations. This is a relaxation method that gradually pushes the distribution from the prior to the posterior, i.e.&nbsp;from the unconstrained to constrained maximum-entropy distribution.</p>
-<div id="dbb83408-e6dc-4be0-9785-8ea7c9199d42" class="cell" data-execution_count="9">
+<div id="dbb83408-e6dc-4be0-9785-8ea7c9199d42" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Plotting functions</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_model_proj(x_pred: np.ndarray) <span class="op">-&gt;</span> <span class="bu">tuple</span>:</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Simulate data.</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    projections_pred <span class="op">=</span> ment.simulate(x_pred, model.transforms, model.diagnostics)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    projections_pred <span class="op">=</span> ment.unravel(projections_pred)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    projections_meas <span class="op">=</span> ment.unravel(model.projections)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">5</span>, nrows<span class="op">=</span><span class="dv">4</span>, figheight<span class="op">=</span><span class="fl">7.5</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    index <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(nmeas):</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>        projection_pred <span class="op">=</span> projections_pred[j]</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        projection_meas <span class="op">=</span> projections_meas[j]            </span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>        scale <span class="op">=</span> projection_meas.values.<span class="bu">max</span>()</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>            index <span class="op">=</span> j <span class="op">+</span> i <span class="op">*</span> nmeas</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>            ax <span class="op">=</span> axs[index]</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> k, projection <span class="kw">in</span> <span class="bu">enumerate</span>([projection_pred, projection_meas]):</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>                ax.plot(</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>                    projection.coords, </span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>                    projection.values <span class="op">/</span> scale,</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>                    color<span class="op">=</span><span class="st">"black"</span>,</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>                    alpha<span class="op">=</span>[<span class="fl">0.25</span>, <span class="fl">1.0</span>][k],</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>                    lw<span class="op">=</span>[<span class="fl">1.5</span>, <span class="fl">0.0</span>][k],</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>                    ms<span class="op">=</span>[<span class="fl">0.0</span>, <span class="fl">3.0</span>][k],</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>                    marker<span class="op">=</span>[<span class="va">None</span>, <span class="st">"."</span>][k],</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>                )</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>            ax.<span class="bu">format</span>(ymax<span class="op">=</span><span class="fl">1.25</span>)</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> i:</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>                ax.<span class="bu">format</span>(yscale<span class="op">=</span><span class="st">"log"</span>, ymax<span class="op">=</span><span class="fl">5.0</span>, ymin<span class="op">=</span><span class="fl">1.00e-06</span>, yformatter<span class="op">=</span><span class="st">"log"</span>)   </span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>            ax.annotate(<span class="ss">f"</span><span class="sc">{</span>j<span class="sc">:02.0f}</span><span class="ss">"</span>, xy<span class="op">=</span>(<span class="fl">0.02</span>, <span class="fl">0.92</span>), xycoords<span class="op">=</span><span class="st">"axes fraction"</span>)</span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    axs.<span class="bu">format</span>(xlabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>)</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig, axs</span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_model_dist(x_pred: np.ndarray) <span class="op">-&gt;</span> <span class="bu">tuple</span>:</span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, nrows<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j, x <span class="kw">in</span> <span class="bu">enumerate</span>([x_pred, x_true]):</span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>            plot_points(x, bins<span class="op">=</span><span class="dv">85</span>, limits<span class="op">=</span>limits, ax<span class="op">=</span>axs[i, j], log<span class="op">=</span>i)</span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>    axs.<span class="bu">format</span>(</span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>        toplabels<span class="op">=</span>[<span class="st">"MENT"</span>, <span class="st">"TRUE"</span>], </span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>        toplabels_kw<span class="op">=</span><span class="bu">dict</span>(weight<span class="op">=</span><span class="st">"normal"</span>, size<span class="op">=</span><span class="st">"medium"</span>), </span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>        xlabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>,</span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>        ylabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">p_x</span><span class="dv">$</span><span class="vs">"</span>,</span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig, axs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    projections_pred <span class="op">=</span> ment.simulate(x_pred, model.transforms, model.diagnostics)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    projections_pred <span class="op">=</span> ment.unravel(projections_pred)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    projections_meas <span class="op">=</span> ment.unravel(model.projections)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="bu">len</span>(projections_pred), figheight<span class="op">=</span><span class="fl">1.7</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axs):</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        projection_pred <span class="op">=</span> projections_pred[j]</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        projection_meas <span class="op">=</span> projections_meas[j]</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>        scale <span class="op">=</span> projection_meas.values.<span class="bu">max</span>()</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> k, projection <span class="kw">in</span> <span class="bu">enumerate</span>([projection_pred, projection_meas]):</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>            ax.plot(</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>                projection.coords,</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>                np.ma.log10(projection.values <span class="op">/</span> scale),</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>                color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>                alpha<span class="op">=</span>[<span class="fl">0.25</span>, <span class="fl">1.0</span>][k],</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>                lw<span class="op">=</span>[<span class="fl">1.5</span>, <span class="fl">0.0</span>][k],</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>                ms<span class="op">=</span>[<span class="fl">0.0</span>, <span class="fl">3.0</span>][k],</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>                marker<span class="op">=</span>[<span class="va">None</span>, <span class="st">"."</span>][k],</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        ax.<span class="bu">format</span>(ymax<span class="op">=</span><span class="fl">1.0</span>, ymin<span class="op">=-</span><span class="fl">6.0</span>)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>        ax.annotate(<span class="ss">f"</span><span class="sc">{</span>j<span class="sc">:02.0f}</span><span class="ss">"</span>, xy<span class="op">=</span>(<span class="fl">0.03</span>, <span class="fl">0.90</span>), xycoords<span class="op">=</span><span class="st">"axes fraction"</span>)</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig, axs</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_model_dist(x_pred: np.ndarray) <span class="op">-&gt;</span> <span class="bu">tuple</span>:</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, figheight<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j, x <span class="kw">in</span> <span class="bu">enumerate</span>([x_pred, x_true]):</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>        plot_points(x, bins<span class="op">=</span><span class="dv">85</span>, limits<span class="op">=</span>limits, ax<span class="op">=</span>axs[j], log<span class="op">=</span><span class="va">True</span>, colorbar<span class="op">=</span>j)</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    axs.<span class="bu">format</span>(</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># toplabels=["MENT", "TRUE"],</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>        toplabels_kw<span class="op">=</span><span class="bu">dict</span>(weight<span class="op">=</span><span class="st">"normal"</span>, size<span class="op">=</span><span class="st">"medium"</span>),</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>        xlabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">"</span>,</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>        ylabel<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">p_x</span><span class="dv">$</span><span class="vs">"</span>,</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig, axs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="32d5e2a9-93fa-474e-93e8-d8cde1cb5c06" class="cell" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">7</span>):</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"epoch = </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(epoch))</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<div id="32d5e2a9-93fa-474e-93e8-d8cde1cb5c06" class="cell" data-execution_count="23">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>n_iterations <span class="op">=</span> <span class="dv">6</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> iteration <span class="kw">in</span> <span class="bu">range</span>(n_iterations):</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Sample particles from the distribution.</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    x_pred <span class="op">=</span> model.sample(x_true.shape[<span class="dv">0</span>])</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
@@ -695,127 +695,58 @@ window.Quarto = {
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot the simulated vs. measured projections.</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    plot_model_proj(x_pred)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Update the model parameters (Lagrange multipliers).</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    model.gauss_seidel_step(learning_rate<span class="op">=</span><span class="fl">0.75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>epoch = 0</code></pre>
-</div>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> iteration <span class="op">==</span> n_iterations <span class="op">-</span> <span class="dv">1</span>:</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>        plot_model_proj(x_pred)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Update the model parameters (Lagrange multipliers).</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    model.gauss_seidel_step(learning_rate<span class="op">=</span><span class="fl">0.9</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="index_files/figure-html/cell-11-output-2.png" width="691" height="617" class="figure-img"></a></p>
+<p><a href="index_files/figure-html/cell-11-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="index_files/figure-html/cell-11-output-1.png" width="514" height="250" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="index_files/figure-html/cell-11-output-3.png" width="896" height="750" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>epoch = 1</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="index_files/figure-html/cell-11-output-5.png" width="691" height="617" class="figure-img"></a></p>
+<p><a href="index_files/figure-html/cell-11-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="index_files/figure-html/cell-11-output-2.png" width="514" height="250" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="index_files/figure-html/cell-11-output-6.png" width="896" height="750" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>epoch = 2</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="index_files/figure-html/cell-11-output-8.png" width="691" height="617" class="figure-img"></a></p>
+<p><a href="index_files/figure-html/cell-11-output-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="index_files/figure-html/cell-11-output-3.png" width="514" height="250" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="index_files/figure-html/cell-11-output-9.png" width="896" height="750" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>epoch = 3</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="index_files/figure-html/cell-11-output-11.png" width="691" height="617" class="figure-img"></a></p>
+<p><a href="index_files/figure-html/cell-11-output-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="index_files/figure-html/cell-11-output-4.png" width="514" height="250" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="index_files/figure-html/cell-11-output-12.png" width="896" height="750" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>epoch = 4</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="index_files/figure-html/cell-11-output-14.png" width="691" height="617" class="figure-img"></a></p>
+<p><a href="index_files/figure-html/cell-11-output-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="index_files/figure-html/cell-11-output-5.png" width="514" height="250" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="index_files/figure-html/cell-11-output-15.png" width="896" height="750" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>epoch = 5</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="index_files/figure-html/cell-11-output-17.png" width="691" height="617" class="figure-img"></a></p>
+<p><a href="index_files/figure-html/cell-11-output-6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="index_files/figure-html/cell-11-output-6.png" width="514" height="250" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="index_files/figure-html/cell-11-output-18.png" width="896" height="750" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>epoch = 6</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-20.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="index_files/figure-html/cell-11-output-20.png" width="691" height="617" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-11-output-21.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="index_files/figure-html/cell-11-output-21.png" width="896" height="750" class="figure-img"></a></p>
+<p><a href="index_files/figure-html/cell-11-output-7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="index_files/figure-html/cell-11-output-7.png" width="1610" height="170" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
