@@ -15,7 +15,7 @@ website:
   
 format:
   html:
-    theme: 
+    theme:
       light: [default, style.scss]
       dark: [default, style_dark.scss]
     respect-user-color-scheme: true
@@ -23,7 +23,7 @@ format:
         body-width: 600px
     mainfont: "Times"
     fontsize: 16px
-    linestretch: 1.35
+    linestretch: 1.25
     toc: false
     toc-location: right
     html-math-method: mathjax

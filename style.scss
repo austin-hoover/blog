@@ -1,10 +1,10 @@
 /*-- scss:defaults --*/
 
-$h1-font-size: 1.90em;
+$h1-font-size: 1.85em;
 $h2-font-size: 1.30em;
-$h3-font-size: 1.11em;
-$h4-font-size: 1.0em;
-$h5-font-size: 1.0em;
+$h3-font-size: 1.10em;
+$h4-font-size: 1.00em;
+$h5-font-size: 1.00em;
 
 $navbar-bg: white;
 $body-color: black;
@@ -19,7 +19,7 @@ $link-hover-decoration: underline;
 // /*-- scss:rules --*/
 
 h1.title {
-  line-height: 1.2 !important;
+  line-height: 1.15 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,15 +39,15 @@ span.header-section-number::after {
 }
 
 .quarto-listing-table td {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
     a {
-      text-decoration: none;
+      text-decoration: underline !important;
     }
     a:hover {
       text-decoration: underline;
     }
-    line-height: 1.2em !important;
+    // line-height: 1.2em !important;
 }
 
 .quarto-listing-table {

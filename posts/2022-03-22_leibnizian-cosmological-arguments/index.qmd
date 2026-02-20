@@ -88,7 +88,7 @@ However, it is difficult to imagine what an external cause — a reason why the 
 
 > Kant’s example of a metal ball continually causing a depression in a soft material shows that simultaneous causation is conceivable.  And apart from full or partial reductions of the notion of causation to something like Humean regularity and temporal precedence, I do not think there is much reason to suppose that the cause of a temporal effect must even be in time. [@Craig2009]
 
-(I am not sure exactly what is meant by the last line.) Thus, the cause would have to, in some way, “support” the chain such that if the cause did not exist, the chain would not exist. This is confusing and deserves more thought. 
+(I'm not sure exactly what is meant by the last line.) Thus, the cause would have to, in some way, “support” the chain such that if the cause did not exist, the chain would not exist. This is confusing and deserves more thought. 
 
 
 ## 2. Weaker explanatory principles
@@ -123,7 +123,7 @@ The fourth premise follows from possibly necessary $\rightarrow$ necessary. Leon
 
 > Perhaps matter-energy (or whatever matter-energy is ultimately composed) is a factually necessary being. According to such a scenario, the contingent dependent beings (e.g., rocks, trees, planets, you and I, etc.) come into being when two or more contingent independent beings (i.e., factually necessary beings) are combined, and the contingent dependent beings cease to exist when they decompose into their elements. However, the fundamental elements of which contingent dependent beings are composed (i.e., the contingent independent beings/factually necessary beings) cannot pass away, for they are at least de facto indestructible—i.e., nothing in the actual world has what it takes to knock them out of existence. Nor can they be created, for they are eternal, existentially independent, and (assuming origin essentialism and their being uncaused at the actual world) essentially uncaused. [@Oppy2019]
  
-I am not sure of the reason for this distinction. Why not just say that matter-energy is necessary? 
+I'm not sure of the reason for this distinction. Why not just say that matter-energy is necessary? 
 
 Another worry for any of these modal arguments is the existence of parody arguments.[^8] Oppy constructs a parody argument for every argument in *Necessary Existence* in his review of the book [@Oppy2019-OPPARP]. 
 
@@ -146,7 +146,7 @@ Non-theists can claim that there is a concrete necessary being (or beings); poss
 
 [^2]: Some interpretations of quantum mechanics are deterministic (such as the pilot wave theory) and others are indeterministic. The correct interpretation of quantum mechanics is unknown. (See Tim Maudlin [here](https://youtu.be/hC3ckLqsL5M)).
 
-[^3]: Many of those that do not accept the PSR also do not accept the libertarian account of free will, in which case this objection is irrelevant. Although I haven’t studied free will in any detail, I am open to the idea that my choices are not determined by the initial conditions of the universe. It is, of course, a difficult question.
+[^3]: Many of those that do not accept the PSR also do not accept the libertarian account of free will, in which case this objection is irrelevant. Although I haven’t studied free will in any detail, I'm open to the idea that my choices are not determined by the initial conditions of the universe. It is, of course, a difficult question.
 
 [^4]: My wife, who is not familiar with (or very interested in) this discussion, came up with essentially the same answer when I presented the dilemma to her.
 

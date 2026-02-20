@@ -1,14 +1,11 @@
 ---
-title: "High-dimensional phase space measurements"
+title: "Five-dimensional phase space measurements"
 date: 2023-05-28
 author: "Austin Hoover"
 categories: [particle accelerators, high-dimensional data, visualization]
 bibliography: references.bib
 csl: american-physics-society.csl
 ---
-
-
-## 1. Predicting halo formation
 
 Linear accelerators (linacs) generate powerful pulsed hadron beams for various applications. Increasing the beam power/intensity by orders of magnitude would benefit particle physics, nuclear physics, condensed matter physics, material science, biology, nuclear engineering, and other fields. Unfortunately, significantly increasing the beam intensity is not possible due to *beam loss* which occurs when particles hit the walls of the accelerator during their journey. The total lost beam power must be kept below 1 watt (W) per meter to avoid dangerous radiation levels. For a 1 MW beam, this limit corresponds to a fractional loss of $10^{-6}$. 
 
@@ -30,7 +27,7 @@ The LEDA (Low Energy Test Accelerator) experiment at Los Alamos National Laborat
 
 
 
-## 2. High-dimensional phase space measurements
+## High-dimensional phase space measurements
 
 We are continuing experimental work on halo prediction at the SNS Beam Test Facility (BTF), a recently commissioned replica of the front end of the SNS linac[@Zhang_2020]. A diagram of the BTF is below.
 
@@ -60,7 +57,7 @@ We cropped and downscaled the images to decrease the size of the data set from a
 
 
 
-## 3. High-dimensional data visualization
+## Direct five-dimensional measurements at the BTF
 
 We have spent significant time analyzing the measured initial phase space distribution[@Cathey_2018; @Ruisard_2020; @Ruisard_2021; @Hoover_2023_PRAB]. This task is straightforward in two dimensions: one simply looks at an image representing $f(x, p_x)$ and extracts features from it. High-dimensional data is exponentially more challenging to visualize and interpret.
 
@@ -82,7 +79,7 @@ The "slice matrix" plot in Fig. 8 is one way to visualize the effect of slicing 
 
 ![Fig. 8. A four-dimensional slice of a measured five-dimensional distribution. Three- and two-dimensional projections are shown on the side panels.](./figures/slice_xp-yp_view_y-w.png)
 
-Such figures render slowly and are limited to four-dimensional data. Complete slicing flexibility is available in an interactive widget shown in Fig. 9. This function takes one or more images or point clouds of any dimensionality as inputs. I use it extensively in my data analysis. It is available in the [psdist](https://github.com/austin-hoover/psdist) package.
+Such figures render slowly and are limited to four-dimensional data. Complete slicing flexibility is available in an interactive widget shown in Fig. 9. This function takes one or more images or point clouds of any dimensionality as inputs. I use it extensively in my data analysis. It's available in the [psdist](https://github.com/austin-hoover/psdist) package.
 
 ![Fig. 9. Interactive slicing widget from `psdist`.](./figures/slicing.mov){width=500px fig-align=center}
 
@@ -97,7 +94,7 @@ We could also define shells as the density contours of the distribution in the s
 Notice the drastic change in energy distribution --- unimodal to bimodal --- as we move from the outer to the inner core in the transverse phase space. This energy hollowing represents a five-dimensional correlation; it is also visible (although perhaps harder to see) in Fig. 8. I also plotted the transverse projections of the slice farthest from the core. Pretty bizarre-looking images result, but they make some sense; they select particles with large transverse amplitude. Some intuition is gained by considering the projections of hollow three-dimensional distribution.
 
 
-## 4. Ongoing work
+## Ongoing work
 
 We would like to explain the origin of all features we find in the distribution. From direct measurements at lower beam currents, we know the space charge drives the energy hollowing in Fig. 10.
 

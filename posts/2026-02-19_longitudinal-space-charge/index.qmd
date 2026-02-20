@@ -71,6 +71,11 @@ E_z(r, z) = - \frac{1}{\gamma^2} \frac{\partial}{\partial z} \int_{r}^{b} E_r(r,
 $${#eq-efield-final}
 
 
+
+
+
+
+
 ## Exact formula for uniform transverse density
 
 To calculate the longitudinal field $E_z(r, z)$ in @eq-efield-final, we first need to calculate the transverse field $E_r(r, z)$ and then average the field over the radial coordinate. We could do this numerically by solving the two-dimensional Poisson equation within each $z$ slice. But there's a special case that admits an exact solution.
@@ -116,16 +121,14 @@ $${#eq-x}
 The radial averaging gives
 
 $$
-E_z(r, z) = -\frac{1}{4 \pi \epsilon_0 \gamma^2} \left[ 1 - \frac{r^2}{a^2} + 2 \ln{(b / a)} \right] \frac{\partial \lambda_0(z)}{\partial z}.
+\begin{align}
+E_z(r, z) 
+&= -\frac{1}{4 \pi \epsilon_0 \gamma^2} \left[ 1 - \frac{r^2}{a^2} + 2 \ln{(b / a)} \right] \frac{\partial \lambda_0(z)}{\partial z} \\
+&= -\frac{g(r)}{4 \pi \epsilon_0 \gamma^2} \frac{\partial \lambda_0(z)}{\partial z},
+\end{align}
 $${#eq-x}
 
-Or
-
-$$
-E_z(r, z) = -\frac{g(r)}{4 \pi \epsilon_0 \gamma^2} \frac{\partial \lambda_0(z)}{\partial z},
-$${#eq-g}
-
-where $g(r; a, b)$ is called the *g factor*, which captures the dependence on the transverse distribution:
+where $g(r; a, b)$ captures the dependence on the transverse distribution:
 
 $$
 g(r; a, b) = 1 - \frac{r^2}{a^2} + 2 \ln{(b / a)}
