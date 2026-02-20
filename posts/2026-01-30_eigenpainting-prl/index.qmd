@@ -15,6 +15,7 @@ format:
 
 Our paper, [*Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams*](https://journals.aps.org/prl/accepted/10.1103/bvwq-34jf), was recently accepted by Physical Review Letters (PRL). Here's the [preprint](https://arxiv.org/pdf/2601.13517). The paper presents the first experimental test of *eigenpainting*, a method proposed by Viatcheslav (Slava) Danilov in 2003 @danilov_2003_self.^[Danilov also proposed Nonlinear Integrable Optics (NIO) @danilov_2010_nonlinear and Laser-Assisted Charge Exchange (LACE) @danilov_2003_lace.] In this post, I'll share some additional background and figures to help explain our results.
 
+
 ## Introduction  {#sec-intro}
 
 Accelerators such as the [SNS](https://neutrons.ornl.gov/sns) and [J-PARC](https://j-parc.jp/c/en/) use [*charge-exchange injection*](../2021-05-27_painting-a-particle-beam) to create intense proton beams for neutron scattering experiments. The injection is a three-step process: H- (negative hydrogen) ions are accelerated in a linac, converted to protons using a carbon foil or laser-magnet system, and then transferred to an accumulator ring. We call each batch of injected protons a *minipulse*. After the first minipulse completes one lap around the ring, a second is injected, and so on for hundreds or thousands of turns.

@@ -1,14 +1,11 @@
 ---
-title: "Attempted phase space reconstruction from hollow-beam injection data"
+title: "An attempt to reconstruct the phase space density of a hollow beam"
 author: Austin Hoover
 date: 2026-02-01
 toc: false
 categories:
   - tomography
   - uncertainty
-format:
-  html: 
-    fig-align: center
 ---
 
 We injected ten minipulses in the SNS ring at fixed point in phase space, then extracted the beam and measured 36 wire-scanner profiles. I attempted to fit a four-dimensional distribution to the data.

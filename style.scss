@@ -19,7 +19,7 @@ $link-hover-decoration: underline;
 // /*-- scss:rules --*/
 
 h1.title {
-  line-height: 1.1 !important;
+  line-height: 1.2 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,15 +39,15 @@ span.header-section-number::after {
 }
 
 .quarto-listing-table td {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
     a {
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-    line-height: 1.1em !important;
+    line-height: 1.2em !important;
 }
 
 .quarto-listing-table {

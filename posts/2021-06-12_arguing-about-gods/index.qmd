@@ -6,7 +6,6 @@ categories: [arguments, theism]
 image: arguing.jpg
 bibliography: references.bib
 csl: american-physics-society.csl
-
 ---
 
 I’ve started reading *Arguing About Gods* by Graham Oppy [@Oppy2006-gods]. Oppy’s main thesis is that there are no successful arguments for the existence of orthodoxly conceived monotheistic gods, where “orthodoxly conceived monotheistic god” refers to an omnipotent, omniscient, omnibenevolent creator of the world (I’ll take “God” to mean the same thing). The book is organized as follows: 
