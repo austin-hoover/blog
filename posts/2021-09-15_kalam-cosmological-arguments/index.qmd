@@ -6,11 +6,9 @@ categories: [cosmological arguments, Kalam, infinity]
 image: hubble_deep_field.jpg
 bibliography: references.bib
 csl: american-physics-society.csl
-
+number-sections: true
 ---
 
-
-## 1. Introduction
 
 These are my notes on chapter 3 of Oppy’s *Arguing About Gods*. This chapter is about cosmological arguments, which conclude that there is a cause or explanation of the existence of the universe. The first step in a cosmological argument is to assert a Causal Principle (CP) — that all things of a certain kind require a cause — or a Principle of Sufficient Reason (PSR) — that all things of a certain kind require an explanation. The next step is to show that the universe fits within the scope of the chosen CP or PSR. A bonus step is to identify the cause or explanation of the universe as God.
 
@@ -31,11 +29,11 @@ We’ll start with the Kalam, which is simply expressed:
 
 
 
-## 2. The universe began to exist
+## The universe began to exist
 
 Let’s say we’re undecided about whether the past had a beginning. We might ask modern physical theories for input on this question. We might also think “from the armchair” about whether a beginningless past is even possible. We’ll start with the former approach.
 
-### 2.1. Cosmology
+### Cosmology
 
 Consider the Standard Model (SM) of cosmology: with the assumption of an isotropic homogeneous mass distribution, general relativity produces an expanding universe solution. The solution diverges as $t \rightarrow 0$, where $t = 0$ is some finite time in the past. This implies that the universe expanded from a very dense state at a finite time in the past. The SM is empirically supported for times sufficiently far from $t = 0$. (The spectrum of leftover radiation from the early universe, the abundances of the light elements, and the measured Hubble Constant all agree with SM predictions.)
 
@@ -46,22 +44,22 @@ Still, we can speculate about which model of the early universe is most probable
 
 
 
-### 2.2. Finitism
+### Finitism
 
-#### 2.2.1. Hilbert’s Hotel
+#### Hilbert’s Hotel
 
 We now move to philosophical arguments against an infinite past. The first view to discuss is *finitism*, the idea that infinity never shows up in the real world. The benefit of finitism is that it rules out some oddities like Hilbert’s Hotel — a hotel with infinitely many rooms. Even if all the rooms are occupied, the hotel can always accept an additional guest. If all guests in odd-numbered rooms leave, of which there are an infinite number, then an infinite number of guests remain. If all guests in room numbers > 7 leave, of which there are an infinite number, then exactly 7 guests remain. 
 
 The question is whether this story precludes the existence of Hilbert’s Hotel. It’s not clear that it does; it might just describe the strange rules the hotel would obey if it existed. The key issue is that a subset of an infinite set is another infinite set. Since the operations done on Hilbert’s Hotel can be done on the natural numbers as well, while Hilbert’s Hotel might be strange, it’s not clear why the reasons for ruling out its possibility wouldn’t also apply to infinite mathematical sets. 
 
-#### 2.2.2. An endless future?
+#### An endless future?
 
 Showing that a completed infinite is impossible to instantiate is only helpful to the Kalam if the series of events in a beginningless past is a completed infinite. The answer to this question depends on the relationship between the past, present, and future. In my understanding, there are three main views: all times exist (four-dimensionalism), present times exist (presentism), or past and present times exist (growing block). The set of future events in an endless future would form an actual infinite on four-dimensionalism, which would then be ruled out by finitism, which is bad. The Kalam gains nothing on presentism since there is only ever one time that exists. I’m not sure which theory of time is correct, but I would initially lean toward presentism or four-dimensionalism. 
 
 There is a *causal* asymmetry between an infinite future and an infinite past. An infinite past allows an infinite number of past events to affect the state of the world at a given time, while there is no such problem in an infinite future. (This will be discussed in the next section on causal finitism.)
 
 
-#### 2.2.3. Counting to infinity
+#### Counting to infinity
 
 Suppose finitism is false. The following argument could then be run: (i) the collection of temporal events is formed by successive addition; (ii) a collection formed by successive addition cannot be an actual infinite; (iii) the temporal series of events cannot be an actual infinite.
 
@@ -72,11 +70,11 @@ These counting tasks assume there was a time at which I began counting, i.e., co
 
 
 
-### 2.3. Causal finitism
+### Causal finitism
 
 Causal finitism is the idea that every event has a finite causal history.{% fn 1 %} Causal finitism’s advantage over finitism is that it doesn’t touch abstract mathematical objects since they can’t cause anything. The case for causal finitism given by Pruss in *Infinity, Causation, and Paradox* is that causal finitism provides a unified way to kill a wide range of paradoxes; this section looks at a few of these. 
 
-#### 2.3.1. Grim Reapers
+#### Grim Reapers
 
 Thompson’s lamp is off at t = 0. I turn it on at t = ½, off at t = ¾, on at t = 7/8, and so on until t = 1. Is the lamp on or off at t = 1? It seems there is no way to answer this question. But although this situation is strange, it’s hard to get a real paradox without appealing to a PSR.
 
@@ -91,12 +89,12 @@ The best way to resolve the paradox without causal finitism is the Unsatisfiable
 The crucial question here is whether it’s possible to reach the GR scenario from nearby unparadoxical scenarios; this is known as *rearrangement*. For example, there is no problem if $t_n = 1 – 1 / 2^n$ since I would die at t = 0.5 and remain dead, and if the alarms could be set to these values, why not the original scenario? Or the original scenario could be modified by adding a GR at $t_0 \le 0$: I would be killed by GR 0 at $t_0$. In this case, we only need to remove GR 0 to get back to the paradox. The proponent of the UPD is going to have to call into question the possibility of rearrangement in these cases.  
 
 
-#### 2.3.2. Newtonian universes
+#### Newtonian universes
 
 Newtonian physics is false, but it seems there would be nothing inconsistent about a world that obeys Newtonian physics. For example, space could be infinite in extent and an infinite number of particles could collectively cause the motion of another particle, violating causal finitism. An example is a collection of particles spread evenly over an infinite plane. But variation of the initial conditions leads to bizarre results. Pruss uses the example of particles spread evenly over “half” of an infinite plane: the force on a particle on the edge of the distribution will be infinite, so it will be nowhere as soon as any time passes. There are other fun examples. Causal finitism kills these paradoxes. 
 
 
-#### 2.3.3. Infinite lotteries
+#### Infinite lotteries
 
 An infinite (fair) lottery is a lottery with an infinite number of tickets, each of which has zero or infinitesimal chance of winning. The claim is that infinite lotteries are absurd, but possible on causal infinitism.
 
@@ -110,15 +108,15 @@ The next claim to investigate is whether causal finitism can rule out infinite l
 
 The most promising way to kill the paradoxes without causal finitism is to note that human reasoning shouldn’t be expected to work with infinities; that’s fine, but causal finitism might be more attractive because it can also rule out paradoxes that don’t involve human reasoning. This whole discussion is pretty mathy and would take some time for me to understand it well. 
 	
-#### 2.3.4. Decisions 
+#### Decisions 
 
 Every minute in a beginningless past, a die is rolled. On each roll, I’m asked to guess whether the die landed on four. The penalty for a wrong answer is an electric shock. Obviously, I should always guess “no”. Now suppose I have access to the infinite number of previous rolls, that I know the game will end at some point, and that only finitely many non-fours have been rolled in the past. I now know *with certainty* that there will only be finitely many non-fours rolled for the rest of the game, so I can guess “yes” from now on and ensure a finite number of total shocks as opposed to the infinite number of total shocks I would normally receive. The paradox is that each roll is independent, so knowledge of previous rolls shouldn’t improve your future guesses. Causal finitism wouldn’t allow decisions to be made based on an infinite number of previous rolls. 
 
-#### 2.3.5. The Axiom of Choice
+#### The Axiom of Choice
 
 [There is a chapter in the book devoted to paradoxes involving the Axiom of Choice. I’ve avoided this chapter until now because it looks like it would take some time to digest, but maybe I will read it at some point and replace this bracketed text with a summary.]
 
-#### 2.3.6. Summary
+#### Summary
 
 There are several issues to resolve in relation to causal finitism. First, if it were true, it might raise the probability that spacetime is discrete. Second, its usefulness for killing paradoxes will depend on the nature of causation.
 
@@ -129,7 +127,7 @@ Okay, to my knowledge, those are some of the main arguments for the second premi
 
 
 
-## 3. Everything that begins to exist has a cause
+## Everything that begins to exist has a cause
 
 The first premise of the Kalam says that everything that begins to exist has a cause. I’d like to accept this Causal Principle (CP). It’s intuitive and seems to be supported by empirical evidence. Oppy pushes back in two ways. First, the intuitive support for the premise can be questioned. There is much debate about causation; some models take causation to be fundamental to physics, others see causation as a useful fiction, and others do away with it altogether. For example, while causation looks to be fundamental when billiard balls collide, it’s not so clear in the case of interacting quantum fields. (My intuition tells me that causation is fundamental to physics.)
 
@@ -141,7 +139,7 @@ Now, one might offer some reason why the collection of things (the universe) vio
 
 
 
-## 4. Conclusion
+## Conclusion
 
 There are difficult subjects at play in the Kalam cosmological argument like causation, infinity, and cosmology. I’m tempted to refuse to evaluate the argument I have a better handle on these subjects, but I should probably evaluate the premises to the best of my ability right now.  
 
@@ -164,7 +162,7 @@ There are difficult subjects at play in the Kalam cosmological argument like cau
 
 
 
-## 5. Some references 
+## Some references 
 
 * Causality
     * [Aristotle On Causality (SEP)](https://plato.stanford.edu/entries/aristotle-causality/)

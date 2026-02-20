@@ -1,12 +1,11 @@
 ---
-title: "Chao, Chapter 2: Wake Fields and Impedances"
-date: 2026-01-27
+title: "*Physics of Collective Beam Instabilities in High Energy Accelerators*: Wake Fields and Impedances (Draft)"
 author: Austin Hoover
 bibliography: references.bib
 csl: ./aps.csl
+number-sections: true
 draft: true
 ---
-
 
 Following @chao_1993_physics, Chapter 2, *Wake Fields and Impedances*. 
 
@@ -34,7 +33,7 @@ $$
 \end{aligned}
 $${#eq-ring-beam-moments}
 
-where $a$ is a radius, $\delta_{m0} = 1$ if $m = 0$ and $0$ otherwise, $I_m$ is the $m$th moment of the distribution, $c$ is the speed of light, and $t$ is time. @eq-moments describes a ring of radius $a$ with density proportional to $\cos(m\theta)$. The longitudinal density is a pancake, enforced by the $\delta(s - ct)$ term. 
+where $a$ is a radius, $\delta_{m0} = 1$ if $m = 0$ and $0$ otherwise, $I_m$ is the $m$th moment of the distribution, $c$ is the speed of light, and $t$ is time. @eq-ring-beam-moments describes a ring of radius $a$ with density proportional to $\cos(m\theta)$. The longitudinal density is a pancake, enforced by the $\delta(s - ct)$ term. 
 
 
 ## Wake functions
@@ -180,19 +179,26 @@ $$
 There can be no net energy gain from the pipe structure; therefore, $\text{Re} Z_{m}^{\parallel}(\omega) \ge 0$ for all $\omega$.
 
 
+
 ### Broad-band resonator model of cavity impedance
+
+[...]
+
+
 
 ### Diffraction model of cavity impedance
 
+[...]
 
 
 
 ## Calculation of wake fields and impedances
 
-Describes two approaches to impedance calculation.
+[...]
+
 
 
 
 ## Parasitic loss
 
-*Parasitic loss* refers to the transfer of energy from the beam to the wake fields. The reverse process is ultimately responsible for beam instabilities.
+*Parasitic loss* refers to the transfer of energy from the beam to the wake fields. The reverse process is ultimately responsible for beam instabilities. [...]

@@ -1,11 +1,10 @@
 /*-- scss:defaults --*/
 
-$h1-font-size: 1.81em;
-$h2-font-size: 1.35em;
-$h3-font-size: 1.12em;
+$h1-font-size: 1.90em;
+$h2-font-size: 1.30em;
+$h3-font-size: 1.11em;
 $h4-font-size: 1.0em;
-// $h5-font-size: 1.0em;
-// $h6-font-size: 0.9em;
+$h5-font-size: 1.0em;
 
 $navbar-bg: white;
 $body-color: black;
@@ -15,14 +14,14 @@ $primary: rgb(18, 84, 127);  // darker
 $code-font-size: 0.85em;
 $code-color: $primary;
 
-$link-decoration: none;
+$link-decoration: underline;
 $link-hover-decoration: underline;
 
 // /*-- scss:rules --*/
 
-// h1.title {
-//   line-height: 1.1 !important;
-// }
+h1.title {
+  line-height: 1.1 !important;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600 !important;
@@ -30,6 +29,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.95em;
+}
+.navbar-title {
+  font-size: 0.95em;
 }
 
 span.header-section-number::after {

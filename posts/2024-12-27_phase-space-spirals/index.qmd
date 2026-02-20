@@ -13,8 +13,8 @@ In the [previous post](../2024-12-26_high-dynamic-range-benchmark) I showed the 
 
 It's interesting to trace the development of these spirals within the accelerator. The following figures show the two-dimensional distributions on the $x$-$p_x$, $y$-$p_y$, and $x$-$y$ planes. The coordinates are normalized such that the covariance matrix $\mathbf{\Sigma} = \langle \mathbf{x} \mathbf{x}^T \rangle = \mathbf{I}$, where $\mathbf{I}$ is the identity matrix and $\mathbf{x} = (x, p_x, y, p_y)$. In these coordinates, linear forces leave the distribution invariant; all changes are due to nonlinear forces. Note that the density is in log-scale.
 
-![](images/figs_log.gif){width=100%}
+![](images/figs_log.gif){fig-align=center}
 
 The initially slow rotations occur before the FODO line, while the fast rotations occur in the FODO line, where the beam size oscillates rapidly. The following figure shows the root-mean-square (rms) beam size, i.e., the standard deviation of the transverse positions $x$ and $y$, as a function of position. The figure also shows the maximum $x$ and $y$ coordinates among all particles in the bunch. Notice that the rms beam size is periodic, i.e., *matched* to the lattice, while the maximum beam size is not matched.
 
-![](images/fig_beam_size.png){width=66%}
+![](images/fig_beam_size.png){width=450px fig-align=center}
