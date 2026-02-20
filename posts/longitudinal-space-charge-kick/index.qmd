@@ -1,0 +1,5 @@
+---
+title: "Three approaches to longitudinal space charge kicks"
+author: Austin Hoover
+draft: true
+---
