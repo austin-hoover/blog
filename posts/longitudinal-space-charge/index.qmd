@@ -1,0 +1,89 @@
+---
+title: "Longitudinal space charge forces in long bunches"
+author: Austin Hoover
+date: 2026-02-19
+categories:
+  - space charge
+---
+
+Following [Ferrario, Migliorati, and Palumbo](https://cds.cern.ch/record/1982426/files/331-356%20Ferrario.pdf) as well as notes from Andrei Shishlo (ORNL).
+
+Assume the bunch is infinitely long with line-charge density $\lambda(r, z) = \lambda(r)$, where $z$ is the distance along the bunch and $r$ is the distance from the origin in the transverse plane. [Gauss's Law](https://en.wikipedia.org/wiki/Gauss%27s_law) says that the electric flux through a closed surface is proportional to the charge enclosed by the surface:
+
+$$
+\oint \mathbf{E} \cdot d\mathbf{A} = Q_{enc} / \epsilon_0 .
+$${#eq-x}
+
+Choose the surface to be a cylinder of radius $r$ and length $\ell$. Since the bunch is infinitely long and has no variation along $z$, the electric field points along the radial direction. Application of Gauss's Law then gives:
+
+$$
+\begin{align}
+E_r \cdot 2 \pi r l &= \frac{\lambda(r) l}{\epsilon_0} , \\
+E_r &= \frac{\lambda(r)}{2 \pi \epsilon_0 r} . \\
+\end{align}
+$${#eq-x}
+
+Let's focus on the case of uniform transverse density within a hard edge at $r = a$:
+
+$$
+\lambda(r) = \lambda_0 (r / a)^2.
+$${#eq-x}
+
+The electric field inside and outside the beam edge is then:
+
+$$
+\begin{numcases} {E_r(r)=}
+  \dfrac{\lambda_0}{2 \pi \epsilon_0 a^2} r, & $r \le a$ \\\\
+  \dfrac{\lambda_0}{2 \pi \epsilon_0 r  }  , & $r \ge a$
+\end{numcases}
+$${#eq-x}
+
+We can apply the same model to bunches with slow-varying longitudinal density. At a fixed $z$, we approximate the transverse distribution as an infinite cylinder with local density $\lambda_0(z)$.
+
+$$
+\begin{numcases} {E_r(r, z)=}
+  \dfrac{\lambda_0(z)}{2 \pi \epsilon_0 a^2} r, & $r \le a$ \\\\
+  \dfrac{\lambda_0(z)}{2 \pi \epsilon_0 r  }  , & $r \ge a$
+\end{numcases}
+$${#eq-x}
+
+To calculate the longitudinal field, assume there is a perfectly conducting boundary (pipe) at radius $b > a$. Then apply [Faraday's Law](https://en.wikipedia.org/wiki/Faraday%27s_law_of_induction), which relates the curl of the electric field to the time-derivative of the magnetic field.
+
+$$
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}.
+$${#eq-x}
+
+In integral form, Faraday's law relates the "electromotive force" around a closed loop to the change in magnetic flux through the loop:
+
+$$
+\oint \mathbf{E} \cdot d\mathbf{l} = - \frac{\partial}{\partial t} \oint \mathbf{B} \cdot d\mathbf{A}.
+$${#eq-x}
+
+Choose a rectangular loop with one edge running parallel to the beam for a distance $\Delta z$ at radius $r$, and the opposite edge at radius $b$ (at the pipe boundary). Integration gives:
+
+$$
+\left( E_z(r, z) - E_z(b, z) \right) \Delta z
++ \int_{r}^{b} \left( E_r(r, z + \Delta z) - E_r(r, z) \right) dr
+= -\Delta z \frac{\partial}{\partial t} \int_{r}^{b} B_\phi(r) dr.
+$${#eq-integral}
+
+Taking the limit $\Delta z \rightarrow 0$, we can define
+
+$$
+\frac{\partial E_r(r, z)}{\partial z} = \frac{E_r(r, z + \Delta z) - E_r(r, z)}{\Delta z}.
+$${#eq-deriv}
+
+Substituting @eq-deriv into @eq-integral gives
+
+$$
+E_z(r, z) = E_z(b, z) - \int_{r}^{b} \left( \frac{\partial E_r(r, z)}{\partial z} + \frac{\partial B_\phi(r, z)}{\partial t} \right) dr .
+$${#eq-efield-long}
+
+
+@eq-efield-long relates the longitudinal electric field at radius $r$ to the longitudinal field at radius $b$ (the pipe boundary), as well as the averaged *transverse* electric and magnetic fields between $r$ and $b$.
+
+Let's do a bit more work to simplify this expression. First define $z = -\beta c t$, where $c$ is the speed of light, so that $\partial / \partial t = -\beta c \partial / \partial z$ and
+
+$$
+E_z(r, z) = E_z(b, z) - \frac{\partial}{\partial z} \int_{r}^{b} \left( E_r(r, z) - \beta c B_\phi(r, z) \right) dr .
+$${#eq-efield-z-deriv}
