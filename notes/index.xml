@@ -229,49 +229,7 @@ Year
 
 </tr>
 
-<tr data-index="5" data-listing-title-sort="Halo formation in three-dimensional bunches" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevE.58.4977" class="title listing-title">Halo formation in three-dimensional bunches</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern et al.</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="Beam-Halo Measurements in High-Current Proton Beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.89.214802" class="title listing-title">Beam-Halo Measurements in High-Current Proton Beams</a>
-</td>
-<td>
-<span class="listing-author">Allen et al.</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.91.264801" class="title listing-title">Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams</a>
-</td>
-<td>
-<span class="listing-author">Bohn and Sideris</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="Analytical treatment of particle-core interaction" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="5" data-listing-title-sort="Analytical treatment of particle-core interaction" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://arxiv.org/pdf/1002.2015" class="title listing-title">Analytical treatment of particle-core interaction</a>
@@ -285,7 +243,7 @@ Year
 
 </tr>
 
-<tr data-index="9" data-listing-title-sort="Chaotic Dynamics Driven by Particle-Core Interactions" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="6" data-listing-title-sort="Chaotic Dynamics Driven by Particle-Core Interactions" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://arxiv.org/pdf/2111.09843" class="title listing-title">Chaotic Dynamics Driven by Particle-Core Interactions</a>
@@ -387,497 +345,7 @@ Year
 
 </tr>
 
-<tr data-index="3" data-listing-title-sort="Stability of the Kapchinskij-Vladimirskij (K-V) distribution in long periodic transport systems" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://cds.cern.ch/record/140869/files/p145.pdf" class="title listing-title">Stability of the Kapchinskij-Vladimirskij (K-V) distribution in long periodic transport systems</a>
-</td>
-<td>
-<span class="listing-author">Hofmann, Laslett, Smith, and Haber</span>
-</td>
-<td>
-<span class="listing-year">1983</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-title-sort="Theoretical studies of envelope oscillations and instabilities of mismatched intense charged-particle beams in periodic focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://arxiv.org/pdf/2401.12171" class="title listing-title">Theoretical studies of envelope oscillations and instabilities of mismatched intense charged-particle beams in periodic focusing channels</a>
-</td>
-<td>
-<span class="listing-author">Struckmeier and Reiser</span>
-</td>
-<td>
-<span class="listing-year">1983</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="On the stability and emittance growth of different particle phase-space distributions in a long magnetic quadrupole channel" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://arxiv.org/pdf/2401.12595" class="title listing-title">On the stability and emittance growth of different particle phase-space distributions in a long magnetic quadrupole channel</a>
-</td>
-<td>
-<span class="listing-author">Struckmeier, Klabunde, Reiser</span>
-</td>
-<td>
-<span class="listing-year">1983</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="Evolution of RMS beam envelopes in transport systems with linear x-y coupling" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://cds.cern.ch/record/1053510/files/p29.pdf" class="title listing-title">Evolution of RMS beam envelopes in transport systems with linear x-y coupling</a>
-</td>
-<td>
-<span class="listing-author">Chernin</span>
-</td>
-<td>
-<span class="listing-year">1988</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="Analytic Model for Halo Formation in High Current Ion Linacs" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.73.1247" class="title listing-title">Analytic Model for Halo Formation in High Current Ion Linacs</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern</span>
-</td>
-<td>
-<span class="listing-year">1994</span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="Stability of a Uniform-Density Breathing Beam with Circular Cross Section" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.2835" class="title listing-title">Stability of a Uniform-Density Breathing Beam with Circular Cross Section</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern, Cheng, and Ye</span>
-</td>
-<td>
-<span class="listing-year">1995</span>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-title-sort="Stability and halo formation of a breathing axisymmetric uniform-density beam" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.54.6788" class="title listing-title">Stability and halo formation of a breathing axisymmetric uniform-density beam</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern et al.</span>
-</td>
-<td>
-<span class="listing-year">1996</span>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-title-sort="Simulation study of halo formation in breathing round beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.55.4694" class="title listing-title">Simulation study of halo formation in breathing round beams</a>
-</td>
-<td>
-<span class="listing-author">Okamoto and Ikegami</span>
-</td>
-<td>
-<span class="listing-year">1997</span>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-title-sort="Rigid-Rotor Vlasov Equilibrium for an Intense Charged-Particle Beam Propagating through a Periodic Solenoidal Magnetic Field" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.79.225" class="title listing-title">Rigid-Rotor Vlasov Equilibrium for an Intense Charged-Particle Beam Propagating through a Periodic Solenoidal Magnetic Field</a>
-</td>
-<td>
-<span class="listing-author">Chen, Pakter, and Davidson</span>
-</td>
-<td>
-<span class="listing-year">1997</span>
-</td>
-
-</tr>
-
-<tr data-index="12" data-listing-title-sort="Halo formation in three-dimensional bunches" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevE.58.4977" class="title listing-title">Halo formation in three-dimensional bunches</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern et al.</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="13" data-listing-title-sort="Betatron resonances with space charge" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.osti.gov/etdeweb/servlets/purl/382303#page=282" class="title listing-title">Betatron resonances with space charge</a>
-</td>
-<td>
-<span class="listing-author">Baartman</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="14" data-listing-title-sort="Stability of anisotropic beams with space charge" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.57.4713" class="title listing-title">Stability of anisotropic beams with space charge</a>
-</td>
-<td>
-<span class="listing-author">Hofmann</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="15" data-listing-title-sort="Warm-fluid description of intense beam equilibrium and electrostatic stability properties" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://nonneutral.pppl.gov/pdfpapers/PP.1998.5.3028.SL.pdf" class="title listing-title">Warm-fluid description of intense beam equilibrium and electrostatic stability properties</a>
-</td>
-<td>
-<span class="listing-author">Lund and Davidson</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-title-sort="Particle-core model for transverse dynamics of beam halo" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.1.084201" class="title listing-title">Particle-core model for transverse dynamics of beam halo</a>
-</td>
-<td>
-<span class="listing-author">Wangler, et al.</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="17" data-listing-title-sort="Space charge dynamics in high intensity rings" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.2.114202" class="title listing-title">Space charge dynamics in high intensity rings</a>
-</td>
-<td>
-<span class="listing-author">Holmes et al.</span>
-</td>
-<td>
-<span class="listing-year">1999</span>
-</td>
-
-</tr>
-
-<tr data-index="18" data-listing-title-sort="Comparison of simulated and observed beam profile broadening in the Proton Storage Ring and the role of space charge" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.3.034201" class="title listing-title">Comparison of simulated and observed beam profile broadening in the Proton Storage Ring and the role of space charge</a>
-</td>
-<td>
-<span class="listing-author">Galambos et al.</span>
-</td>
-<td>
-<span class="listing-year">2000</span>
-</td>
-
-</tr>
-
-<tr data-index="19" data-listing-title-sort="Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.sciencedirect.com/science/article/abs/pii/S0168900201016849" class="title listing-title">Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel</a>
-</td>
-<td>
-<span class="listing-author">Okamoto and Yokoya</span>
-</td>
-<td>
-<span class="listing-year">2001</span>
-</td>
-
-</tr>
-
-<tr data-index="20" data-listing-title-sort="Beam-Halo Measurements in High-Current Proton Beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.89.214802" class="title listing-title">Beam-Halo Measurements in High-Current Proton Beams</a>
-</td>
-<td>
-<span class="listing-author">Allen et al.</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="21" data-listing-title-sort="Macroparticle simulation studies of a proton beam halo experiment" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.5.124201" class="title listing-title">Macroparticle simulation studies of a proton beam halo experiment</a>
-</td>
-<td>
-<span class="listing-author">Qiang et al.</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="22" data-listing-title-sort="Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://linkinghub.elsevier.com/retrieve/pii/S0168900201016849" class="title listing-title">Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel</a>
-</td>
-<td>
-<span class="listing-author">Okamoto and Yokoya</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="23" data-listing-title-sort="Macroparticle simulation studies of a proton beam halo experiment" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.5.124201" class="title listing-title">Macroparticle simulation studies of a proton beam halo experiment</a>
-</td>
-<td>
-<span class="listing-author">Qiang et al.</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="24" data-listing-title-sort="Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.91.264801" class="title listing-title">Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams</a>
-</td>
-<td>
-<span class="listing-author">Bohn and Sideris</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="25" data-listing-title-sort="Self-consistent time dependent two dimensional and three dimensional space charge distributions with linear force" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.6.094202" class="title listing-title">Self-consistent time dependent two dimensional and three dimensional space charge distributions with linear force</a>
-</td>
-<td>
-<span class="listing-author">Danilov et al.</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="26" data-listing-title-sort="Resonant beam behavior studies in the Proton Storage Ring" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.6.074202" class="title listing-title">Resonant beam behavior studies in the Proton Storage Ring</a>
-</td>
-<td>
-<span class="listing-author">Cousineau et al.</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="27" data-listing-title-sort="Stability properties of the transverse envelope equations describing intense ion beam transport" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.7.024801" class="title listing-title">Stability properties of the transverse envelope equations describing intense ion beam transport</a>
-</td>
-<td>
-<span class="listing-author">Lund and Bukh</span>
-</td>
-<td>
-<span class="listing-year">2004</span>
-</td>
-
-</tr>
-
-<tr data-index="28" data-listing-title-sort="Efficient computation of matched solutions of the Kapchinskij-Vladimirskij envelope equations for periodic focusing lattices" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.9.064201" class="title listing-title">Efficient computation of matched solutions of the Kapchinskij-Vladimirskij envelope equations for periodic focusing lattices</a>
-</td>
-<td>
-<span class="listing-author">Lund, Chilton, and Lee</span>
-</td>
-<td>
-<span class="listing-year">2006</span>
-</td>
-
-</tr>
-
-<tr data-index="29" data-listing-title-sort="Space-charge transport limits of ion beams in periodic quadrupole focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://linkinghub.elsevier.com/retrieve/pii/S016890020600475X" class="title listing-title">Space-charge transport limits of ion beams in periodic quadrupole focusing channels</a>
-</td>
-<td>
-<span class="listing-author">Lund and Chawla</span>
-</td>
-<td>
-<span class="listing-year">2006</span>
-</td>
-
-</tr>
-
-<tr data-index="30" data-listing-title-sort="A core-particle model for periodically focused ion beams with intense space-charge" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://linkinghub.elsevier.com/retrieve/pii/S0168900207003452" class="title listing-title">A core-particle model for periodically focused ion beams with intense space-charge</a>
-</td>
-<td>
-<span class="listing-author">Lund et al.</span>
-</td>
-<td>
-<span class="listing-year">2007</span>
-</td>
-
-</tr>
-
-<tr data-index="31" data-listing-title-sort="Benchmarking of measurement and simulation of transverse rms-emittance growth" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.11.094201" class="title listing-title">Benchmarking of measurement and simulation of transverse rms-emittance growth</a>
-</td>
-<td>
-<span class="listing-author">Groening et al.</span>
-</td>
-<td>
-<span class="listing-year">2009</span>
-</td>
-
-</tr>
-
-<tr data-index="32" data-listing-title-sort="Generation of initial kinetic distributions for simulation of long-pulse charged particle beams with high space-charge intensity" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.12.114801" class="title listing-title">Generation of initial kinetic distributions for simulation of long-pulse charged particle beams with high space-charge intensity</a>
-</td>
-<td>
-<span class="listing-author">Lund, Kikuchi, and Davidson</span>
-</td>
-<td>
-<span class="listing-year">2009</span>
-</td>
-
-</tr>
-
-<tr data-index="33" data-listing-title-sort="Generalized Kapchinskij-Vladimirskij Distribution and Envelope Equation for High-Intensity Beams in a Coupled Transverse Focusing Lattice" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.103.224802" class="title listing-title">Generalized Kapchinskij-Vladimirskij Distribution and Envelope Equation for High-Intensity Beams in a Coupled Transverse Focusing Lattice</a>
-</td>
-<td>
-<span class="listing-author">Qin, Chung, and Davidson</span>
-</td>
-<td>
-<span class="listing-year">2009</span>
-</td>
-
-</tr>
-
-<tr data-index="34" data-listing-title-sort="Analytical treatment of particle-core interaction" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://arxiv.org/pdf/1002.2015" class="title listing-title">Analytical treatment of particle-core interaction</a>
-</td>
-<td>
-<span class="listing-author">Batygin</span>
-</td>
-<td>
-<span class="listing-year">2010</span>
-</td>
-
-</tr>
-
-<tr data-index="35" data-listing-title-sort="Class of Generalized Kapchinskij-Vladimirskij Solutions and Associated Envelope Equations for High-Intensity Charged-Particle Beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.110.064803" class="title listing-title">Class of Generalized Kapchinskij-Vladimirskij Solutions and Associated Envelope Equations for High-Intensity Charged-Particle Beams</a>
-</td>
-<td>
-<span class="listing-author">Qin and Davidson</span>
-</td>
-<td>
-<span class="listing-year">2013</span>
-</td>
-
-</tr>
-
-<tr data-index="36" data-listing-title-sort="Envelope instability and the fourth order resonance" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.17.124202" class="title listing-title">Envelope instability and the fourth order resonance</a>
-</td>
-<td>
-<span class="listing-author">Li and Zhao</span>
-</td>
-<td>
-<span class="listing-year">2014</span>
-</td>
-
-</tr>
-
-<tr data-index="37" data-listing-title-sort="Near equilibrium distributions for beams with space charge in linear and nonlinear periodic focusing systems" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://pubs.aip.org/pop/article/22/4/043120/594944/Near-equilibrium-distributions-for-beams-with" class="title listing-title">Near equilibrium distributions for beams with space charge in linear and nonlinear periodic focusing systems</a>
-</td>
-<td>
-<span class="listing-author">Sonnad and Cary</span>
-</td>
-<td>
-<span class="listing-year">2015</span>
-</td>
-
-</tr>
-
-<tr data-index="38" data-listing-title-sort="Dispersion-Induced Beam Instability in Circular Accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="3" data-listing-title-sort="Dispersion-Induced Beam Instability in Circular Accelerators" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://doi.org/10.1103/PhysRevLett.118.154801" class="title listing-title">Dispersion-Induced Beam Instability in Circular Accelerators</a>
@@ -891,7 +359,7 @@ Year
 
 </tr>
 
-<tr data-index="39" data-listing-title-sort="Modeling of second order space charge driven coherent sum and difference instabilities" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="4" data-listing-title-sort="Modeling of second order space charge driven coherent sum and difference instabilities" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201" class="title listing-title">Modeling of second order space charge driven coherent sum and difference instabilities</a>
@@ -905,7 +373,7 @@ Year
 
 </tr>
 
-<tr data-index="40" data-listing-title-sort="Intensity limitations due to space charge for bunch compression in synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="5" data-listing-title-sort="Intensity limitations due to space charge for bunch compression in synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201" class="title listing-title">Intensity limitations due to space charge for bunch compression in synchrotrons</a>
@@ -919,77 +387,7 @@ Year
 
 </tr>
 
-<tr data-index="41" data-listing-title-sort="Structure resonances due to space charge in periodic focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.024204" class="title listing-title">Structure resonances due to space charge in periodic focusing channels</a>
-</td>
-<td>
-<span class="listing-author">Li and Jameson</span>
-</td>
-<td>
-<span class="listing-year">2018</span>
-</td>
-
-</tr>
-
-<tr data-index="42" data-listing-title-sort="Spectral Galerkin solver for intense beam Vlasov equilibria in nonlinear constant focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.100.053308" class="title listing-title">Spectral Galerkin solver for intense beam Vlasov equilibria in nonlinear constant focusing channels</a>
-</td>
-<td>
-<span class="listing-author">Mitchell</span>
-</td>
-<td>
-<span class="listing-year">2019</span>
-</td>
-
-</tr>
-
-<tr data-index="43" data-listing-title-sort="Understanding beam distributions in hadron linacs in the presence of space charge" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://iopscience.iop.org/article/10.1088/1748-0221/15/07/P07025" class="title listing-title">Understanding beam distributions in hadron linacs in the presence of space charge</a>
-</td>
-<td>
-<span class="listing-author">Aleksandrov, Ruisard, and Cousineau</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="44" data-listing-title-sort="Kurth Vlasov-Poisson Solution for a Beam in the Presence of Time-Dependent Isotropic Focusing" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://jacow.org/ipac2021/doi/JACoW-IPAC2021-WEPAB248.html" class="title listing-title">Kurth Vlasov-Poisson Solution for a Beam in the Presence of Time-Dependent Isotropic Focusing</a>
-</td>
-<td>
-<span class="listing-author">Mitchell, Hwang and Ryne</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="45" data-listing-title-sort="Chaotic Dynamics Driven by Particle-Core Interactions" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://arxiv.org/pdf/2111.09843" class="title listing-title">Chaotic Dynamics Driven by Particle-Core Interactions</a>
-</td>
-<td>
-<span class="listing-author">Batygin and Batygin</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="46" data-listing-title-sort="Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="6" data-listing-title-sort="Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201" class="title listing-title">Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons</a>
@@ -1003,7 +401,7 @@ Year
 
 </tr>
 
-<tr data-index="47" data-listing-title-sort="Modeling of beam envelope instabilities in high-intensity circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="7" data-listing-title-sort="Modeling of beam envelope instabilities in high-intensity circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9" class="title listing-title">Modeling of beam envelope instabilities in high-intensity circular accelerators</a>
@@ -1020,7 +418,6 @@ Year
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
-
 </div> ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/space-charge/</guid>
   <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
@@ -1205,63 +602,7 @@ Year
 
 </tr>
 
-<tr data-index="4" data-listing-title-sort="AI: A Guide for Thinking Humans" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://aiguide.substack.com" class="title listing-title">AI: A Guide for Thinking Humans</a>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="The Secure Transport of Light" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://danwang.co" class="title listing-title">The Secure Transport of Light</a>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="Big iff True" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://bigifftrue.substack.com/" class="title listing-title">Big iff True</a>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="Bold Reasoning with Peter Singer" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://boldreasoningwithpetersinger.substack.com/" class="title listing-title">Bold Reasoning with Peter Singer</a>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="Danny Yee's Book Reviews" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://dannyreviews.com" class="title listing-title">Danny Yee’s Book Reviews</a>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-title-sort="After Babel" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.afterbabel.com" class="title listing-title">After Babel</a>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-title-sort="Bentham's Bulldog" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://benthams.substack.com/" class="title listing-title">Bentham’s Bulldog</a>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-title-sort="Alexander Pruss" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="4" data-listing-title-sort="Alexander Pruss" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="http://alexanderpruss.blogspot.com" class="title listing-title">Alexander Pruss</a>
@@ -1269,7 +610,7 @@ Year
 
 </tr>
 
-<tr data-index="12" data-listing-title-sort="Edward Feser" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="5" data-listing-title-sort="Edward Feser" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://edwardfeser.blogspot.com" class="title listing-title">Edward Feser</a>
@@ -1277,7 +618,7 @@ Year
 
 </tr>
 
-<tr data-index="13" data-listing-title-sort="Notebooks" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="6" data-listing-title-sort="Notebooks" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="http://bactra.org/notebooks/" class="title listing-title">Notebooks</a>
@@ -1285,7 +626,7 @@ Year
 
 </tr>
 
-<tr data-index="14" data-listing-title-sort="China Talk" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="7" data-listing-title-sort="China Talk" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.chinatalk.media" class="title listing-title">China Talk</a>
@@ -1293,15 +634,7 @@ Year
 
 </tr>
 
-<tr data-index="15" data-listing-title-sort="Going Awol" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://wollenblog.substack.com/" class="title listing-title">Going Awol</a>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-title-sort="Scott Hawley" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="8" data-listing-title-sort="Scott Hawley" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://drscotthawley.github.io/blog/" class="title listing-title">Scott Hawley</a>
@@ -1309,7 +642,7 @@ Year
 
 </tr>
 
-<tr data-index="17" data-listing-title-sort="Condensed Concepts" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="9" data-listing-title-sort="Condensed Concepts" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://condensedconcepts.blogspot.co" class="title listing-title">Condensed Concepts</a>
@@ -1317,7 +650,7 @@ Year
 
 </tr>
 
-<tr data-index="18" data-listing-title-sort="Nanoscale Views" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="10" data-listing-title-sort="Nanoscale Views" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="http://nanoscale.blogspot.com" class="title listing-title">Nanoscale Views</a>
@@ -1325,7 +658,7 @@ Year
 
 </tr>
 
-<tr data-index="19" data-listing-title-sort="ex-apologist" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="11" data-listing-title-sort="ex-apologist" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="http://exapologist.blogspot.com" class="title listing-title">ex-apologist</a>
@@ -1333,7 +666,7 @@ Year
 
 </tr>
 
-<tr data-index="20" data-listing-title-sort="Fake Nous" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="12" data-listing-title-sort="Fake Nous" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://fakenous.substack.com" class="title listing-title">Fake Nous</a>
@@ -1341,7 +674,7 @@ Year
 
 </tr>
 
-<tr data-index="21" data-listing-title-sort="Lil'Log" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="13" data-listing-title-sort="Lil'Log" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://lilianweng.github.io" class="title listing-title">Lil’Log</a>
@@ -1349,15 +682,7 @@ Year
 
 </tr>
 
-<tr data-index="22" data-listing-title-sort="Why Philosophy?" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://celineleboeuf.substack.com/" class="title listing-title">Why Philosophy?</a>
-</td>
-
-</tr>
-
-<tr data-index="23" data-listing-title-sort="Not Even Wrong" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="14" data-listing-title-sort="Not Even Wrong" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.math.columbia.edu/~woit/wordpress/" class="title listing-title">Not Even Wrong</a>
@@ -1365,7 +690,7 @@ Year
 
 </tr>
 
-<tr data-index="24" data-listing-title-sort="Notes From a Data Witch" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="15" data-listing-title-sort="Notes From a Data Witch" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://blog.djnavarro.net" class="title listing-title">Notes From a Data Witch</a>
@@ -1373,7 +698,7 @@ Year
 
 </tr>
 
-<tr data-index="25" data-listing-title-sort="Of Particular Significance&quot;" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="16" data-listing-title-sort="Of Particular Significance&quot;" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://profmattstrassler.com/blog/" class="title listing-title">Of Particular Significance”</a>
@@ -1381,7 +706,7 @@ Year
 
 </tr>
 
-<tr data-index="26" data-listing-title-sort="Physics Matt" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="17" data-listing-title-sort="Physics Matt" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="http://www.physicsmatt.com/blog/)" class="title listing-title">Physics Matt</a>
@@ -1389,7 +714,7 @@ Year
 
 </tr>
 
-<tr data-index="27" data-listing-title-sort="Preposterous Universe" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="18" data-listing-title-sort="Preposterous Universe" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.preposterousuniverse.com/blog/" class="title listing-title">Preposterous Universe</a>
@@ -1397,7 +722,7 @@ Year
 
 </tr>
 
-<tr data-index="28" data-listing-title-sort="Asymptotia" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="19" data-listing-title-sort="Asymptotia" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://asymptotia.com" class="title listing-title">Asymptotia</a>
@@ -1405,7 +730,47 @@ Year
 
 </tr>
 
-<tr data-index="29" data-listing-title-sort="Coleman's Corner" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="20" data-listing-title-sort="The Secure Transport of Light" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://danwang.co" class="title listing-title">The Secure Transport of Light</a>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-title-sort="Danny Yee's Book Reviews" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://dannyreviews.com" class="title listing-title">Danny Yee’s Book Reviews</a>
+</td>
+
+</tr>
+
+<tr data-index="22" data-listing-title-sort="After Babel" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.afterbabel.com" class="title listing-title">After Babel</a>
+</td>
+
+</tr>
+
+<tr data-index="23" data-listing-title-sort="AI: A Guide for Thinking Humans" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://aiguide.substack.com" class="title listing-title">AI: A Guide for Thinking Humans</a>
+</td>
+
+</tr>
+
+<tr data-index="24" data-listing-title-sort="Bentham's Bulldog" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://benthams.substack.com/" class="title listing-title">Bentham’s Bulldog</a>
+</td>
+
+</tr>
+
+<tr data-index="25" data-listing-title-sort="Coleman's Corner" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://colemanhughes.substack.com/" class="title listing-title">Coleman’s Corner</a>
@@ -1413,7 +778,7 @@ Year
 
 </tr>
 
-<tr data-index="30" data-listing-title-sort="Commonplace Philosophy" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="26" data-listing-title-sort="Commonplace Philosophy" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://jaredhenderson.substack.com/" class="title listing-title">Commonplace Philosophy</a>
@@ -1421,7 +786,7 @@ Year
 
 </tr>
 
-<tr data-index="31" data-listing-title-sort="Future Doctrina" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="27" data-listing-title-sort="Future Doctrina" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://mickryan.substack.com" class="title listing-title">Future Doctrina</a>
@@ -1429,7 +794,7 @@ Year
 
 </tr>
 
-<tr data-index="32" data-listing-title-sort="Gowing Awol" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="28" data-listing-title-sort="Gowing Awol" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://wollenblog.substack.com/" class="title listing-title">Gowing Awol</a>
@@ -1437,7 +802,7 @@ Year
 
 </tr>
 
-<tr data-index="33" data-listing-title-sort="Greco and Wansley" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="29" data-listing-title-sort="Greco and Wansley" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://grecowansley.substack.com/" class="title listing-title">Greco and Wansley</a>
@@ -1445,7 +810,7 @@ Year
 
 </tr>
 
-<tr data-index="34" data-listing-title-sort="The Grumpy Economist" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="30" data-listing-title-sort="The Grumpy Economist" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.grumpy-economist.com/" class="title listing-title">The Grumpy Economist</a>
@@ -1453,7 +818,7 @@ Year
 
 </tr>
 
-<tr data-index="35" data-listing-title-sort="Kareem Takes on the News" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="31" data-listing-title-sort="Kareem Takes on the News" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://kareem.substack.com/" class="title listing-title">Kareem Takes on the News</a>
@@ -1461,7 +826,7 @@ Year
 
 </tr>
 
-<tr data-index="36" data-listing-title-sort="The Motivated Skeptic" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="32" data-listing-title-sort="The Motivated Skeptic" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://rbnmckenna86.substack.com/" class="title listing-title">The Motivated Skeptic</a>
@@ -1469,7 +834,7 @@ Year
 
 </tr>
 
-<tr data-index="37" data-listing-title-sort="Pens and Poison" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="33" data-listing-title-sort="Pens and Poison" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.pensandpoison.org/" class="title listing-title">Pens and Poison</a>
@@ -1477,7 +842,7 @@ Year
 
 </tr>
 
-<tr data-index="38" data-listing-title-sort="Reflections on What Matters" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="34" data-listing-title-sort="Reflections on What Matters" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://jpandrew.substack.com/" class="title listing-title">Reflections on What Matters</a>
@@ -1485,7 +850,7 @@ Year
 
 </tr>
 
-<tr data-index="39" data-listing-title-sort="Sherman Alexie" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="35" data-listing-title-sort="Sherman Alexie" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://shermanalexie.substack.com/" class="title listing-title">Sherman Alexie</a>
@@ -1493,7 +858,7 @@ Year
 
 </tr>
 
-<tr data-index="40" data-listing-title-sort="Wondering Freely" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="36" data-listing-title-sort="Wondering Freely" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://helendecruz.substack.com/" class="title listing-title">Wondering Freely</a>
@@ -1512,680 +877,6 @@ Year
  ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/blogs/</guid>
   <pubDate>Sat, 10 Jan 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Films</title>
-  <link>https://austin-hoover.github.io/blog/notes/films/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-director" data-direction="asc">
-        Director
-      </option>
-      <option value="listing-year" data-direction="asc">
-        Year
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-
-<th>
-<a class="sort" data-sort="listing-director" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Director</a>
-</th>
-
-<th>
-<a class="sort" data-sort="listing-year" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Year</a>
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-title-sort="About Time">
-<td>
-<span class="listing-title">About Time</span>
-</td>
-<td>
-<span class="listing-director">Curtis</span>
-</td>
-<td>
-<span class="listing-year">2013</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-title-sort="Belfast">
-<td>
-<span class="listing-title">Belfast</span>
-</td>
-<td>
-<span class="listing-director">Branagh</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-title-sort="Small Things Like These">
-<td>
-<span class="listing-title">Small Things Like These</span>
-</td>
-<td>
-<span class="listing-director">Mielants</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-title-sort="I'm Still Here">
-<td>
-<span class="listing-title">I’m Still Here</span>
-</td>
-<td>
-<span class="listing-director">Salles</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-title-sort="How to Make Millions Before Grandma Dies">
-<td>
-<span class="listing-title">How to Make Millions Before Grandma Dies</span>
-</td>
-<td>
-<span class="listing-director">Boonnitipat</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="Past Lives">
-<td>
-<span class="listing-title">Past Lives</span>
-</td>
-<td>
-<span class="listing-director">Song</span>
-</td>
-<td>
-<span class="listing-year">2023</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="All We Imagine as Light">
-<td>
-<span class="listing-title">All We Imagine as Light</span>
-</td>
-<td>
-<span class="listing-director">Kapadia</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="The Holdovers">
-<td>
-<span class="listing-title">The Holdovers</span>
-</td>
-<td>
-<span class="listing-director">Payne</span>
-</td>
-<td>
-<span class="listing-year">2023</span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="The Grand Budapest Hotel">
-<td>
-<span class="listing-title">The Grand Budapest Hotel</span>
-</td>
-<td>
-<span class="listing-director">Anderson</span>
-</td>
-<td>
-<span class="listing-year">2014</span>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-title-sort="Sicario">
-<td>
-<span class="listing-title">Sicario</span>
-</td>
-<td>
-<span class="listing-director">&nbsp;</span>
-</td>
-<td>
-<span class="listing-year">2015</span>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-title-sort="I'm No Longer Here">
-<td>
-<span class="listing-title">I’m No Longer Here</span>
-</td>
-<td>
-<span class="listing-director">Frías de la Parra</span>
-</td>
-<td>
-<span class="listing-year">2019</span>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-title-sort="The Florida Project">
-<td>
-<span class="listing-title">The Florida Project</span>
-</td>
-<td>
-<span class="listing-director">Baker</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="12" data-listing-title-sort="Dune">
-<td>
-<span class="listing-title">Dune</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="13" data-listing-title-sort="Dune: Part Two">
-<td>
-<span class="listing-title">Dune: Part Two</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="14" data-listing-title-sort="Arrival">
-<td>
-<span class="listing-title">Arrival</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2016</span>
-</td>
-
-</tr>
-
-<tr data-index="15" data-listing-title-sort="Blade Runner">
-<td>
-<span class="listing-title">Blade Runner</span>
-</td>
-<td>
-<span class="listing-director">Scott</span>
-</td>
-<td>
-<span class="listing-year">1982</span>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-title-sort="Blade Runner 2049">
-<td>
-<span class="listing-title">Blade Runner 2049</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="17" data-listing-title-sort="Baby Driver">
-<td>
-<span class="listing-title">Baby Driver</span>
-</td>
-<td>
-<span class="listing-director">Wright</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="18" data-listing-title-sort="The Big Sick">
-<td>
-<span class="listing-title">The Big Sick</span>
-</td>
-<td>
-<span class="listing-director">Showalter</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="19" data-listing-title-sort="The Way, Way Back">
-<td>
-<span class="listing-title">The Way, Way Back</span>
-</td>
-<td>
-<span class="listing-director">Faxon</span>
-</td>
-<td>
-<span class="listing-year">2013</span>
-</td>
-
-</tr>
-
-<tr data-index="20" data-listing-title-sort="Mud">
-<td>
-<span class="listing-title">Mud</span>
-</td>
-<td>
-<span class="listing-director">Nichols</span>
-</td>
-<td>
-<span class="listing-year">2012</span>
-</td>
-
-</tr>
-
-<tr data-index="21" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring">
-<td>
-<span class="listing-title">The Lord of the Rings: The Fellowship of the Ring</span>
-</td>
-<td>
-<span class="listing-director">Jackson</span>
-</td>
-<td>
-<span class="listing-year">2001</span>
-</td>
-
-</tr>
-
-<tr data-index="22" data-listing-title-sort="The Lord of the Rings: The Two Towers">
-<td>
-<span class="listing-title">The Lord of the Rings: The Two Towers</span>
-</td>
-<td>
-<span class="listing-director">Jackson</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="23" data-listing-title-sort="The Lord of the Rings: The Return of the King">
-<td>
-<span class="listing-title">The Lord of the Rings: The Return of the King</span>
-</td>
-<td>
-<span class="listing-director">Jackson</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="24" data-listing-title-sort="Mission: Impossible – Rogue Nation">
-<td>
-<span class="listing-title">Mission: Impossible – Rogue Nation</span>
-</td>
-<td>
-<span class="listing-director">McQuarrie</span>
-</td>
-<td>
-<span class="listing-year">2015</span>
-</td>
-
-</tr>
-
-<tr data-index="25" data-listing-title-sort="Mission: Impossible – Fallout">
-<td>
-<span class="listing-title">Mission: Impossible – Fallout</span>
-</td>
-<td>
-<span class="listing-director">McQuarrie</span>
-</td>
-<td>
-<span class="listing-year">2018</span>
-</td>
-
-</tr>
-
-<tr data-index="26" data-listing-title-sort="Schindler's List">
-<td>
-<span class="listing-title">Schindler’s List</span>
-</td>
-<td>
-<span class="listing-director">Spielberg</span>
-</td>
-<td>
-<span class="listing-year">1993</span>
-</td>
-
-</tr>
-
-<tr data-index="27" data-listing-title-sort="Planet of the Apes">
-<td>
-<span class="listing-title">Planet of the Apes</span>
-</td>
-<td>
-<span class="listing-director">Schaffner</span>
-</td>
-<td>
-<span class="listing-year">1963</span>
-</td>
-
-</tr>
-
-<tr data-index="28" data-listing-title-sort="Halloween Is Grinch Night">
-<td>
-<span class="listing-title">Halloween Is Grinch Night</span>
-</td>
-<td>
-<span class="listing-director">Baldwin</span>
-</td>
-<td>
-<span class="listing-year">1977</span>
-</td>
-
-</tr>
-
-<tr data-index="29" data-listing-title-sort="How the Grinch Stole Christmas!">
-<td>
-<span class="listing-title">How the Grinch Stole Christmas!</span>
-</td>
-<td>
-<span class="listing-director">Jones</span>
-</td>
-<td>
-<span class="listing-year">1966</span>
-</td>
-
-</tr>
-
-<tr data-index="30" data-listing-title-sort="Rise of the Planet of the Apes">
-<td>
-<span class="listing-title">Rise of the Planet of the Apes</span>
-</td>
-<td>
-<span class="listing-director">Wyatt</span>
-</td>
-<td>
-<span class="listing-year">2011</span>
-</td>
-
-</tr>
-
-<tr data-index="31" data-listing-title-sort="Dawn of the Planet of the Apes">
-<td>
-<span class="listing-title">Dawn of the Planet of the Apes</span>
-</td>
-<td>
-<span class="listing-director">Reeves</span>
-</td>
-<td>
-<span class="listing-year">2014</span>
-</td>
-
-</tr>
-
-<tr data-index="32" data-listing-title-sort="Jurrasic Park">
-<td>
-<span class="listing-title">Jurrasic Park</span>
-</td>
-<td>
-<span class="listing-director">Spielberg</span>
-</td>
-<td>
-<span class="listing-year">1993</span>
-</td>
-
-</tr>
-
-<tr data-index="33" data-listing-title-sort="Saving Private Ryan">
-<td>
-<span class="listing-title">Saving Private Ryan</span>
-</td>
-<td>
-<span class="listing-director">Speilberg</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="34" data-listing-title-sort="Minority Report">
-<td>
-<span class="listing-title">Minority Report</span>
-</td>
-<td>
-<span class="listing-director">Speilberg</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="35" data-listing-title-sort="War of the Worlds">
-<td>
-<span class="listing-title">War of the Worlds</span>
-</td>
-<td>
-<span class="listing-director">Speilberg</span>
-</td>
-<td>
-<span class="listing-year">2005</span>
-</td>
-
-</tr>
-
-<tr data-index="36" data-listing-title-sort="Kiki's Delivery Service">
-<td>
-<span class="listing-title">Kiki’s Delivery Service</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">1989</span>
-</td>
-
-</tr>
-
-<tr data-index="37" data-listing-title-sort="Princess Mononoke">
-<td>
-<span class="listing-title">Princess Mononoke</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">1987</span>
-</td>
-
-</tr>
-
-<tr data-index="38" data-listing-title-sort="Spirited Away">
-<td>
-<span class="listing-title">Spirited Away</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">2001</span>
-</td>
-
-</tr>
-
-<tr data-index="39" data-listing-title-sort="Howl's Moving Castle">
-<td>
-<span class="listing-title">Howl’s Moving Castle</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">2004</span>
-</td>
-
-</tr>
-
-<tr data-index="40" data-listing-title-sort="The Wind Rises">
-<td>
-<span class="listing-title">The Wind Rises</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">2014</span>
-</td>
-
-</tr>
-
-<tr data-index="41" data-listing-title-sort="Silence">
-<td>
-<span class="listing-title">Silence</span>
-</td>
-<td>
-<span class="listing-director">Scorsese</span>
-</td>
-<td>
-<span class="listing-year">2016</span>
-</td>
-
-</tr>
-
-<tr data-index="42" data-listing-title-sort="The Departed">
-<td>
-<span class="listing-title">The Departed</span>
-</td>
-<td>
-<span class="listing-director">Scorsese</span>
-</td>
-<td>
-<span class="listing-year">2006</span>
-</td>
-
-</tr>
-
-<tr data-index="43" data-listing-title-sort="Shutter Island">
-<td>
-<span class="listing-title">Shutter Island</span>
-</td>
-<td>
-<span class="listing-director">Scorsese</span>
-</td>
-<td>
-<span class="listing-year">2010</span>
-</td>
-
-</tr>
-
-<tr data-index="44" data-listing-title-sort="The Lion King">
-<td>
-<span class="listing-title">The Lion King</span>
-</td>
-<td>
-<span class="listing-director">Allers</span>
-</td>
-<td>
-<span class="listing-year">1994</span>
-</td>
-
-</tr>
-
-<tr data-index="45" data-listing-title-sort="Finding Nemo">
-<td>
-<span class="listing-title">Finding Nemo</span>
-</td>
-<td>
-<span class="listing-director">Stanton</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="46" data-listing-title-sort="Everything Everywhere All at Once">
-<td>
-<span class="listing-title">Everything Everywhere All at Once</span>
-</td>
-<td>
-<span class="listing-director">Kwan</span>
-</td>
-<td>
-<span class="listing-year">2022</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div> ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/films/</guid>
-  <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Books</title>
@@ -3535,6 +2226,667 @@ Year
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/books/</guid>
+  <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Films</title>
+  <link>https://austin-hoover.github.io/blog/notes/films/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-director" data-direction="asc">
+        Director
+      </option>
+      <option value="listing-year" data-direction="asc">
+        Year
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-director" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Director</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-year" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Year</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-title-sort="Belfast">
+<td>
+<span class="listing-title">Belfast</span>
+</td>
+<td>
+<span class="listing-director">Branagh</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="Small Things Like These">
+<td>
+<span class="listing-title">Small Things Like These</span>
+</td>
+<td>
+<span class="listing-director">Mielants</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-title-sort="I'm Still Here">
+<td>
+<span class="listing-title">I’m Still Here</span>
+</td>
+<td>
+<span class="listing-director">Salles</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-title-sort="How to Make Millions Before Grandma Dies">
+<td>
+<span class="listing-title">How to Make Millions Before Grandma Dies</span>
+</td>
+<td>
+<span class="listing-director">Boonnitipat</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-title-sort="Past Lives">
+<td>
+<span class="listing-title">Past Lives</span>
+</td>
+<td>
+<span class="listing-director">Song</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-title-sort="All We Imagine as Light">
+<td>
+<span class="listing-title">All We Imagine as Light</span>
+</td>
+<td>
+<span class="listing-director">Kapadia</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="The Holdovers">
+<td>
+<span class="listing-title">The Holdovers</span>
+</td>
+<td>
+<span class="listing-director">Payne</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-title-sort="The Grand Budapest Hotel">
+<td>
+<span class="listing-title">The Grand Budapest Hotel</span>
+</td>
+<td>
+<span class="listing-director">Anderson</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-title-sort="Sicario">
+<td>
+<span class="listing-title">Sicario</span>
+</td>
+<td>
+<span class="listing-director">&nbsp;</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-title-sort="I'm No Longer Here">
+<td>
+<span class="listing-title">I’m No Longer Here</span>
+</td>
+<td>
+<span class="listing-director">Frías de la Parra</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-title-sort="The Florida Project">
+<td>
+<span class="listing-title">The Florida Project</span>
+</td>
+<td>
+<span class="listing-director">Baker</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-listing-title-sort="Dune">
+<td>
+<span class="listing-title">Dune</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-listing-title-sort="Dune: Part Two">
+<td>
+<span class="listing-title">Dune: Part Two</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-title-sort="Arrival">
+<td>
+<span class="listing-title">Arrival</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-title-sort="Blade Runner">
+<td>
+<span class="listing-title">Blade Runner</span>
+</td>
+<td>
+<span class="listing-director">Scott</span>
+</td>
+<td>
+<span class="listing-year">1982</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-title-sort="Blade Runner 2049">
+<td>
+<span class="listing-title">Blade Runner 2049</span>
+</td>
+<td>
+<span class="listing-director">Villeneuve</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-listing-title-sort="Baby Driver">
+<td>
+<span class="listing-title">Baby Driver</span>
+</td>
+<td>
+<span class="listing-director">Wright</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-listing-title-sort="The Big Sick">
+<td>
+<span class="listing-title">The Big Sick</span>
+</td>
+<td>
+<span class="listing-director">Showalter</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-title-sort="The Way, Way Back">
+<td>
+<span class="listing-title">The Way, Way Back</span>
+</td>
+<td>
+<span class="listing-director">Faxon</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-listing-title-sort="Mud">
+<td>
+<span class="listing-title">Mud</span>
+</td>
+<td>
+<span class="listing-director">Nichols</span>
+</td>
+<td>
+<span class="listing-year">2012</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring">
+<td>
+<span class="listing-title">The Lord of the Rings: The Fellowship of the Ring</span>
+</td>
+<td>
+<span class="listing-director">Jackson</span>
+</td>
+<td>
+<span class="listing-year">2001</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-title-sort="The Lord of the Rings: The Two Towers">
+<td>
+<span class="listing-title">The Lord of the Rings: The Two Towers</span>
+</td>
+<td>
+<span class="listing-director">Jackson</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-listing-title-sort="The Lord of the Rings: The Return of the King">
+<td>
+<span class="listing-title">The Lord of the Rings: The Return of the King</span>
+</td>
+<td>
+<span class="listing-director">Jackson</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-listing-title-sort="Mission: Impossible – Rogue Nation">
+<td>
+<span class="listing-title">Mission: Impossible – Rogue Nation</span>
+</td>
+<td>
+<span class="listing-director">McQuarrie</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="24" data-listing-title-sort="Mission: Impossible – Fallout">
+<td>
+<span class="listing-title">Mission: Impossible – Fallout</span>
+</td>
+<td>
+<span class="listing-director">McQuarrie</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="25" data-listing-title-sort="Schindler's List">
+<td>
+<span class="listing-title">Schindler’s List</span>
+</td>
+<td>
+<span class="listing-director">Spielberg</span>
+</td>
+<td>
+<span class="listing-year">1993</span>
+</td>
+
+</tr>
+
+<tr data-index="26" data-listing-title-sort="Planet of the Apes">
+<td>
+<span class="listing-title">Planet of the Apes</span>
+</td>
+<td>
+<span class="listing-director">Schaffner</span>
+</td>
+<td>
+<span class="listing-year">1963</span>
+</td>
+
+</tr>
+
+<tr data-index="27" data-listing-title-sort="Halloween Is Grinch Night">
+<td>
+<span class="listing-title">Halloween Is Grinch Night</span>
+</td>
+<td>
+<span class="listing-director">Baldwin</span>
+</td>
+<td>
+<span class="listing-year">1977</span>
+</td>
+
+</tr>
+
+<tr data-index="28" data-listing-title-sort="How the Grinch Stole Christmas!">
+<td>
+<span class="listing-title">How the Grinch Stole Christmas!</span>
+</td>
+<td>
+<span class="listing-director">Jones</span>
+</td>
+<td>
+<span class="listing-year">1966</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-listing-title-sort="Rise of the Planet of the Apes">
+<td>
+<span class="listing-title">Rise of the Planet of the Apes</span>
+</td>
+<td>
+<span class="listing-director">Wyatt</span>
+</td>
+<td>
+<span class="listing-year">2011</span>
+</td>
+
+</tr>
+
+<tr data-index="30" data-listing-title-sort="Dawn of the Planet of the Apes">
+<td>
+<span class="listing-title">Dawn of the Planet of the Apes</span>
+</td>
+<td>
+<span class="listing-director">Reeves</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="31" data-listing-title-sort="Jurrasic Park">
+<td>
+<span class="listing-title">Jurrasic Park</span>
+</td>
+<td>
+<span class="listing-director">Spielberg</span>
+</td>
+<td>
+<span class="listing-year">1993</span>
+</td>
+
+</tr>
+
+<tr data-index="32" data-listing-title-sort="Saving Private Ryan">
+<td>
+<span class="listing-title">Saving Private Ryan</span>
+</td>
+<td>
+<span class="listing-director">Speilberg</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="33" data-listing-title-sort="Minority Report">
+<td>
+<span class="listing-title">Minority Report</span>
+</td>
+<td>
+<span class="listing-director">Speilberg</span>
+</td>
+<td>
+<span class="listing-year">2002</span>
+</td>
+
+</tr>
+
+<tr data-index="34" data-listing-title-sort="War of the Worlds">
+<td>
+<span class="listing-title">War of the Worlds</span>
+</td>
+<td>
+<span class="listing-director">Speilberg</span>
+</td>
+<td>
+<span class="listing-year">2005</span>
+</td>
+
+</tr>
+
+<tr data-index="35" data-listing-title-sort="Kiki's Delivery Service">
+<td>
+<span class="listing-title">Kiki’s Delivery Service</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">1989</span>
+</td>
+
+</tr>
+
+<tr data-index="36" data-listing-title-sort="Princess Mononoke">
+<td>
+<span class="listing-title">Princess Mononoke</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">1987</span>
+</td>
+
+</tr>
+
+<tr data-index="37" data-listing-title-sort="Spirited Away">
+<td>
+<span class="listing-title">Spirited Away</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">2001</span>
+</td>
+
+</tr>
+
+<tr data-index="38" data-listing-title-sort="Howl's Moving Castle">
+<td>
+<span class="listing-title">Howl’s Moving Castle</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">2004</span>
+</td>
+
+</tr>
+
+<tr data-index="39" data-listing-title-sort="The Wind Rises">
+<td>
+<span class="listing-title">The Wind Rises</span>
+</td>
+<td>
+<span class="listing-director">Miyazaki</span>
+</td>
+<td>
+<span class="listing-year">2014</span>
+</td>
+
+</tr>
+
+<tr data-index="40" data-listing-title-sort="Silence">
+<td>
+<span class="listing-title">Silence</span>
+</td>
+<td>
+<span class="listing-director">Scorsese</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="41" data-listing-title-sort="The Departed">
+<td>
+<span class="listing-title">The Departed</span>
+</td>
+<td>
+<span class="listing-director">Scorsese</span>
+</td>
+<td>
+<span class="listing-year">2006</span>
+</td>
+
+</tr>
+
+<tr data-index="42" data-listing-title-sort="Shutter Island">
+<td>
+<span class="listing-title">Shutter Island</span>
+</td>
+<td>
+<span class="listing-director">Scorsese</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="43" data-listing-title-sort="The Lion King">
+<td>
+<span class="listing-title">The Lion King</span>
+</td>
+<td>
+<span class="listing-director">Allers</span>
+</td>
+<td>
+<span class="listing-year">1994</span>
+</td>
+
+</tr>
+
+<tr data-index="44" data-listing-title-sort="Finding Nemo">
+<td>
+<span class="listing-title">Finding Nemo</span>
+</td>
+<td>
+<span class="listing-director">Stanton</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="45" data-listing-title-sort="Everything Everywhere All at Once">
+<td>
+<span class="listing-title">Everything Everywhere All at Once</span>
+</td>
+<td>
+<span class="listing-director">Kwan</span>
+</td>
+<td>
+<span class="listing-year">2022</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div> ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/films/</guid>
   <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
