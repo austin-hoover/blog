@@ -634,7 +634,7 @@
     "href": "notes.html",
     "title": "Notes",
     "section": "",
-    "text": "Title\n\n\n\nDate\n\n\n\nModified\n\n\n\n\n\n\n\n\nFilms\n\n\n2026‑01‑01\n\n\n2026‑02‑15\n\n\n\n\n\n\nSpace Charge\n\n\n2026‑01‑31\n\n\n2026‑02‑12\n\n\n\n\n\n\nHalo Formation\n\n\n2026‑02‑03\n\n\n2026‑02‑12\n\n\n\n\n\n\nBlogs\n\n\n2026‑01‑10\n\n\n2026‑02‑10\n\n\n\n\n\n\nBooks\n\n\n2026‑01‑01\n\n\n2026‑02‑09\n\n\n\n\n\n\nParticle Accelerators\n\n\n2026‑02‑08\n\n\n2026‑02‑08\n\n\n\n\n\n\nJournals and Preprint Servers\n\n\n2026‑02‑08\n\n\n2026‑02‑08\n\n\n\n\n\n\nSimulation Codes\n\n\n2026‑02‑08\n\n\n2026‑02‑08\n\n\n\n\n\n\nSampling\n\n\n2026‑01‑31\n\n\n2026‑02‑01\n\n\n\n\n\n\nCollisionless Relaxation\n\n\n2026‑01‑31\n\n\n2026‑02‑01\n\n\n\n\n\n\nPhase Space Reconstruction\n\n\n2026‑01‑31\n\n\n2026‑01‑31\n\n\n\n\n\n\nPapers: STEM\n\n\n2026‑01‑26\n\n\n2026‑01‑26\n\n\n\n\n\n\nResearch Tools\n\n\n2026‑01‑01\n\n\n2026‑01‑01\n\n\n\n\n\n\nWeb Links\n\n\n2025‑01‑01\n\n\n2025‑01‑01\n\n\n\n\n\n\nPhilosophy\n\n\n2024‑01‑01\n\n\n2024‑01‑01\n\n\n\n\n\n\nPeople\n\n\n2024‑01‑01\n\n\n2024‑01‑01\n\n\n\n\n\n\nNo matching items"
+    "text": "Title\n\n\n\nDate\n\n\n\nModified\n\n\n\n\n\n\n\n\nCollisionless Relaxation\n\n\n2026‑01‑31\n\n\n2026‑02‑20\n\n\n\n\n\n\nFilms\n\n\n2026‑01‑01\n\n\n2026‑02‑15\n\n\n\n\n\n\nSpace Charge\n\n\n2026‑01‑31\n\n\n2026‑02‑12\n\n\n\n\n\n\nHalo Formation\n\n\n2026‑02‑03\n\n\n2026‑02‑12\n\n\n\n\n\n\nBlogs\n\n\n2026‑01‑10\n\n\n2026‑02‑10\n\n\n\n\n\n\nBooks\n\n\n2026‑01‑01\n\n\n2026‑02‑09\n\n\n\n\n\n\nParticle Accelerators\n\n\n2026‑02‑08\n\n\n2026‑02‑08\n\n\n\n\n\n\nJournals and Preprint Servers\n\n\n2026‑02‑08\n\n\n2026‑02‑08\n\n\n\n\n\n\nSimulation Codes\n\n\n2026‑02‑08\n\n\n2026‑02‑08\n\n\n\n\n\n\nSampling\n\n\n2026‑01‑31\n\n\n2026‑02‑01\n\n\n\n\n\n\nPhase Space Reconstruction\n\n\n2026‑01‑31\n\n\n2026‑01‑31\n\n\n\n\n\n\nPapers: STEM\n\n\n2026‑01‑26\n\n\n2026‑01‑26\n\n\n\n\n\n\nResearch Tools\n\n\n2026‑01‑01\n\n\n2026‑01‑01\n\n\n\n\n\n\nWeb Links\n\n\n2025‑01‑01\n\n\n2025‑01‑01\n\n\n\n\n\n\nPhilosophy\n\n\n2024‑01‑01\n\n\n2024‑01‑01\n\n\n\n\n\n\nPeople\n\n\n2024‑01‑01\n\n\n2024‑01‑01\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2026-01-31_space-charge-modified-eigenvectors/index.html",
@@ -1341,6 +1341,6 @@
     "href": "notes/collisionless-relaxation/index.html",
     "title": "Collisionless Relaxation",
     "section": "",
-    "text": "Collisionless Relaxation in Non-Neutral Plasmas. Levin, Pakter, and Teles. (2008).\nGeneralized Entropy Production in Collisionless Plasma Flows and Turbulence. Zhdankin. (2022)"
+    "text": "Collisionless Relaxation in Systems with Coulomb Interactions. Kadomtsev and Pogutse. (1970)\nCollisionless Relaxation in Non-Neutral Plasmas. Levin, Pakter, and Teles. (2008).\nCollisionless relaxation in gravitational systems: From violent relaxation to gravothermal collapse. Levin, Pakter, and Rizzato. (2008)\nCore-halo distribution in the Hamiltonian Mean-Field Model. Pakter and Levin. (2011)\nNon-equilibrium Statistical Mechanics of Two-dimensional Vortices. Pakter and Levin. (2018)\nWeak convergence to equilibrium of statistical ensembles in integrable Hamiltonian systems. Mitchell. (2019)\nGeneralized Entropy Production in Collisionless Plasma Flows and Turbulence. Zhdankin. (2022)"
   }
 ]
