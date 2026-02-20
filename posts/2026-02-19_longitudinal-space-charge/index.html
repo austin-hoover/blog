@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2024-09-29">
+<meta name="dcterms.date" content="2026-02-19">
 
-<title>Maximum Entropy and Bayesian Inference – Austin’s Blog</title>
+<title>Longitudinal space charge forces in long bunches – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +22,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -355,7 +335,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Maximum Entropy and Bayesian Inference</h1>
+<h1 class="title">Longitudinal space charge forces in long bunches</h1>
   </div>
 
 
@@ -372,7 +352,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 29, 2024</p>
+      <p class="date">February 19, 2026</p>
     </div>
   </div>
   
@@ -384,69 +364,96 @@ window.Quarto = {
 </header>
 
 
-<p>Caticha <span class="citation" data-cites="Caticha_2021">&nbsp;[<a href="#ref-Caticha_2021" role="doc-biblioref">1</a>]</span> argues that the principle of maximum relative entropy (ME) is a universal principle of inference from which Bayesian inference and conventional MaxEnt can be derived. Here’s the idea (paraphrased from <span class="citation" data-cites="Caticha_2021">&nbsp;[<a href="#ref-Caticha_2021" role="doc-biblioref">1</a>]</span>).</p>
-<p>Let <span class="math inline">\(q(x)\)</span> represent a probability distribution over <span class="math inline">\(x\)</span>. We wish to update <span class="math inline">\(q(x)\)</span> to a new distribution <span class="math inline">\(p(x)\)</span> in light of new information. This is equivalent to ranking all candidate distributions according to a functional <span class="math inline">\(S[p(x), q(x)]\)</span>, which we call the <em>entropy</em>, and selecting the highest ranked distribution. To determine the entropy functional, we use the following general principle:</p>
-<p><strong>Principle of Minimal Updating</strong>: <em>Beliefs should be updated only to the minimal extent required by new information.</em></p>
-<p>So, if no information is provided, <span class="math inline">\(p(x) = q(x)\)</span>. We then introduce a few specific requirements:</p>
-<ol type="1">
-<li><strong>Subset independence</strong>: Probabilities conditioned on one domain should not be affected by information about a different, non-overlapping domain. This is a locality assumption. It means the contribution to the entropy from an infinitesimal region <span class="math inline">\(x + dx\)</span> depends only on the distribution at <span class="math inline">\(x\)</span>. Consequently, the entropy must take the form:</li>
-</ol>
-<p><span id="eq-entropy-subset"><span class="math display">\[
-S[p(x), q(x)] = \int F(p(x), q(x)) dx,
+<p>These notes calculate the longitudinal electric field of a long bunch within a perfectly conducting cylindrical boundary. Following <a href="https://cds.cern.ch/record/1982426/files/331-356%20Ferrario.pdf">Ferrario, Migliorati, and Palumbo</a>.</p>
+<section id="general-expression-of-the-field" class="level2">
+<h2 class="anchored" data-anchor-id="general-expression-of-the-field">General expression of the field</h2>
+<p>Start by applying <a href="https://en.wikipedia.org/wiki/Faraday%27s_law_of_induction">Faraday’s Law</a>, which relates the curl of the electric field to the time derivative of the magnetic field.</p>
+<p><span id="eq-x"><span class="math display">\[
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}.
 \tag{1}\]</span></span></p>
-<p>where <span class="math inline">\(F(p(x), q(x))\)</span> is an undetermined function.</p>
-<ol start="2" type="1">
-<li><strong>System Independence</strong>: If we initially assume two variables are independent, and if we receive information about each variable separately, then we should not change our initial assumption. In other words, if we know <span class="math inline">\(p(v)\)</span> and <span class="math inline">\(p(w)\)</span> but don’t have any prior knowledge of the relationship between <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span>, the posterior should take the form <span class="math inline">\(p(v, w) = p(v)p(w)\)</span>. Enforcing this axiom determines the entropy functional:</li>
-</ol>
-<p><span id="eq-entropy"><span class="math display">\[
-S[p(x), q(x)] = -\int{p(x) \log\left( \frac{p(x)}{q(x)} \right) dx}.
+<p>In integral form, Faraday’s law relates the “electromotive force” around a closed loop to the change in magnetic flux through the loop:</p>
+<p><span id="eq-x"><span class="math display">\[
+\oint \mathbf{E} \cdot d\mathbf{l} = - \frac{\partial}{\partial t} \oint \mathbf{B} \cdot d\mathbf{A}.
 \tag{2}\]</span></span></p>
-<p>ME maximizes the entropy in <a href="#eq-entropy" class="quarto-xref">Equation&nbsp;2</a> subject to constraints. The constraints are typically written as integrals over the distribution; for example, the moments of the distribution can be written in this way:</p>
-<p><span class="math display">\[
-\langle x^n \rangle = \int x^n p(x) dx.
-\]</span></p>
-<p>This sounds like Bayesian updating if we call <span class="math inline">\(q(x)\)</span> a <em>prior</em> and <span class="math inline">\(p(x)\)</span> a <em>posterior</em>. Bayesian updating applies when we know a many-to-one map from <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span>, where <span class="math inline">\(y\)</span> is a measurable variable. Additionally, we introduce the <em>likelihood</em> <span class="math inline">\(p(y|x)\)</span>, which is the probability of the data <span class="math inline">\(y\)</span> given the unknown variables <span class="math inline">\(x\)</span>. Then Bayes rule gives:</p>
-<p><span id="eq-bayes-theorem"><span class="math display">\[
-p(x | y) = \frac{ p(y | x) p(x) } {p(y)},
+<p>Choose a rectangular loop with one edge running parallel to the beam for a distance <span class="math inline">\(\Delta z\)</span> at radius <span class="math inline">\(r\)</span>, and the opposite edge at radius <span class="math inline">\(b\)</span> (at the pipe boundary). For a long, axially symmetric charge distribution, Faraday’s law gives</p>
+<p><span id="eq-integral"><span class="math display">\[
+\left( E_z(r, z) - E_z(b, z) \right) \Delta z
++ \int_{r}^{b} \left( E_r(r, z + \Delta z) - E_r(r, z) \right) dr
+= -\Delta z \frac{\partial}{\partial t} \int_{r}^{b} B_\phi(r) dr.
 \tag{3}\]</span></span></p>
-<p>We typically call <span class="math inline">\(p(x | y)\)</span> the posterior. (Note that <span class="math inline">\(p(x | y)\)</span> becomes the prior if used in a subsequent calculation, in which case the conditionalization on <span class="math inline">\(y\)</span> would disappear.)</p>
-<p>Let’s see if we can connect Bayesian inference (BI) to ME. We start without any data. All we have is our prior <span class="math inline">\(q(x)\)</span> and a specified likelihood <span class="math inline">\(q(y | x)\)</span>. The likelihood is part of our model, just like the prior, so we have an initial joint distribution over <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>:</p>
-<p><span id="eq-dummy"><span class="math display">\[
-q(x, y) = q(x) q(y | x).
+<p>Taking the limit <span class="math inline">\(\Delta z \rightarrow 0\)</span>, we can define</p>
+<p><span id="eq-deriv"><span class="math display">\[
+\frac{\partial E_r(r, z)}{\partial z} = \frac{E_r(r, z + \Delta z) - E_r(r, z)}{\Delta z}.
 \tag{4}\]</span></span></p>
-<p>We then perform a measurement, finding that the variable <span class="math inline">\(y\)</span> takes the value <span class="math inline">\(y'\)</span>. Our task is to update <span class="math inline">\(q(x, y)\)</span> to a new distribution <span class="math inline">\(p(x, y)\)</span> in light of this new information. We know that</p>
-<p><span id="eq-bayes-constraints"><span class="math display">\[
-p(y) = \int p(x, y) dx = \delta(y - y'),
+<p>Substituting <a href="#eq-deriv" class="quarto-xref">Equation&nbsp;4</a> into <a href="#eq-integral" class="quarto-xref">Equation&nbsp;3</a> gives</p>
+<p><span id="eq-efield-long"><span class="math display">\[
+E_z(r, z) = E_z(b, z) - \int_{r}^{b} \left( \frac{\partial E_r(r, z)}{\partial z} + \frac{\partial B_\phi(r, z)}{\partial t} \right) dr .
 \tag{5}\]</span></span></p>
-<p>where <span class="math inline">\(\delta\)</span> is the Dirac delta function. <a href="#eq-bayes-constraints" class="quarto-xref">Equation&nbsp;5</a> represents an infinite number of constraints on the joint distribution <span class="math inline">\(p(x, y\)</span>)—one constraint for each value of <span class="math inline">\(y\)</span>. The constraints do not completely determine the joint distribution, which must be of the form</p>
-<p><span id="eq-dummy"><span class="math display">\[
-p(x, y) = p(y) p(x | y) = \delta(y - y') p(x | y').
+<p><a href="#eq-efield-long" class="quarto-xref">Equation&nbsp;5</a> relates the longitudinal electric field at radius <span class="math inline">\(r\)</span> to the longitudinal field at radius <span class="math inline">\(b\)</span> (the pipe boundary), as well as the averaged <em>transverse</em> electric and magnetic fields between <span class="math inline">\(r\)</span> and <span class="math inline">\(b\)</span>.</p>
+<p>Let’s do a bit more work to simplify this expression. First define <span class="math inline">\(z = -\beta c t\)</span>, where <span class="math inline">\(c\)</span> is the speed of light, so that <span class="math inline">\(\partial / \partial t = -\beta c \partial / \partial z\)</span> and</p>
+<p><span id="eq-efield-z-deriv"><span class="math display">\[
+E_z(r, z) = E_z(b, z) - \frac{\partial}{\partial z} \int_{r}^{b} \left( E_r(r, z) - \beta c B_\phi(r, z) \right) dr .
 \tag{6}\]</span></span></p>
-<p>The last term, <span class="math inline">\(p(x | y')\)</span>, is not yet determined. We now use the ME method to update <span class="math inline">\(q(x, y)\)</span> to <span class="math inline">\(p(x, y)\)</span>, maximizing the entropy</p>
-<p><span id="eq-joint-entropy"><span class="math display">\[
-S[p(x, y), q(x, y)] = -\int{ p(x, y) \log{ \left( \frac{p(x, y)}{q(x, y)} \right)} dxdy},
+<p>Next, relate <span class="math inline">\(B_\phi\)</span> to <span class="math inline">\(E_r\)</span>:</p>
+<p><span class="math display">\[
+B_\phi(r, z) = \frac{\beta}{c} E_r(r, z).
+\]</span></p>
+<p><a href="#eq-efield-z-deriv" class="quarto-xref">Equation&nbsp;6</a> simplifies to</p>
+<p><span id="eq-efield-almost-final"><span class="math display">\[
+E_z(r, z) = E_z(b, z) - \frac{1}{\gamma^2} \frac{\partial}{\partial z} \int_{r}^{b} E_r(r, z) dr ,
 \tag{7}\]</span></span></p>
-<p>subject to the constraints in <a href="#eq-bayes-constraints" class="quarto-xref">Equation&nbsp;5</a>. This calculation leads to</p>
-<p><span id="eq-dummy"><span class="math display">\[
-p(x, y) = \delta(y - y') q(x | y).
+<p>where <span class="math inline">\(\gamma = (1 - \beta^2)^{-1/2}\)</span> is the Lorentz factor. Finally, since the boundary at <span class="math inline">\(r = b\)</span> is perfectly conducting, <span class="math inline">\(E_z(b, z) = 0\)</span> and</p>
+<p><span id="eq-efield-final"><span class="math display">\[
+E_z(r, z) = - \frac{1}{\gamma^2} \frac{\partial}{\partial z} \int_{r}^{b} E_r(r, z) dr ,
 \tag{8}\]</span></span></p>
-<p>Therefore,</p>
-<p><span id="eq-dummy"><span class="math display">\[
-\begin{align}
-p(x) &amp;= \int p(x, y) dy = \int \delta(y - y') q(x, y) dy \\
-p(x) &amp;= q(x | y') = \frac{ q(y' | x) q(x) } {q(y')}
-\end{align}
+</section>
+<section id="exact-formula-for-uniform-transverse-density" class="level2">
+<h2 class="anchored" data-anchor-id="exact-formula-for-uniform-transverse-density">Exact formula for uniform transverse density</h2>
+<p>To calculate the longitudinal field <span class="math inline">\(E_z(r, z)\)</span> in <a href="#eq-efield-final" class="quarto-xref">Equation&nbsp;8</a>, we first need to calculate the transverse field <span class="math inline">\(E_r(r, z)\)</span> and then average the field over the radial coordinate. We could do this numerically by solving the two-dimensional Poisson equation within each <span class="math inline">\(z\)</span> slice. But there’s a special case that admits an exact solution.</p>
+<p>Assume the bunch has line-charge density <span class="math inline">\(\lambda(r, z)\)</span> [C / m]. As long as the density varies slowly along <span class="math inline">\(z\)</span>, we can approximate the transverse distribution at fixed <span class="math inline">\(z\)</span> as purely transverse, i.e., generated by a set of infinite line charges (threads). We’ll apply <a href="https://en.wikipedia.org/wiki/Gauss%27s_law">Gauss’s Law</a> to relate the charge density to the field. Gauss’s Law says that the electric flux through a closed surface is proportional to the charge enclosed by the surface:</p>
+<p><span id="eq-x"><span class="math display">\[
+\oint \mathbf{E} \cdot d\mathbf{A} = Q_{enc} / \epsilon_0 .
 \tag{9}\]</span></span></p>
-<p>Done!</p>
+<p>Choose the surface to be a cylinder of radius <span class="math inline">\(r\)</span> and length <span class="math inline">\(\ell\)</span>.</p>
+<p><span id="eq-x"><span class="math display">\[
+\begin{align}
+E_r(r, z) \cdot 2 \pi r l &amp;= \frac{\lambda(r, z) l}{\epsilon_0} , \\
+E_r(r, z) &amp;= \frac{\lambda(r, z)}{2 \pi \epsilon_0 r} . \\
+\end{align}
+\tag{10}\]</span></span></p>
+<p>Substituting into <a href="#eq-efield-final" class="quarto-xref">Equation&nbsp;8</a> gives <span id="eq-x1"><span class="math display">\[
+E_z(r, z) = - \frac{1}{\gamma^2} \frac{\partial}{\partial z} \int_{r}^{b} \frac{\lambda(r, z)}{2 \pi \epsilon_0 r} dr ,
+\tag{11}\]</span></span></p>
+<p>Note that the field scales inversely with <span class="math inline">\(\gamma^2\)</span>, so it vanishes at high energies. This is maybe less intuitive than the transverse case.</p>
+<p>The integral in <a href="#eq-x1" class="quarto-xref">Equation&nbsp;11</a> can be evaluated exactly if the transverse density is uniform within radius <span class="math inline">\(r\)</span> and zero outside:</p>
+<p><span id="eq-x"><span class="math display">\[
+\lambda(r, z) = \lambda_0(z) (r / a)^2.
+\tag{12}\]</span></span></p>
+<p>Note that <span class="math inline">\(\lambda\)</span> is the <em>line density</em>, which is nonzero at <span class="math inline">\(r &gt; a\)</span>. The transverse field becomes</p>
+<p><span id="eq-x"><span class="math display">\[
+\begin{numcases} {E_r(r, z)=}
+  \dfrac{\lambda_0(z)}{2 \pi \epsilon_0 a^2} r, &amp; $r \le a$ \\\\
+  \dfrac{\lambda_0(z)}{2 \pi \epsilon_0 r  }  , &amp; $r \ge a$.
+\end{numcases}
+\tag{13}\]</span></span></p>
+<p>The radial averaging gives</p>
+<p><span id="eq-x"><span class="math display">\[
+E_z(r, z) = -\frac{1}{4 \pi \epsilon_0 \gamma^2} \left[ 1 - \frac{r^2}{a^2} + 2 \ln{(b / a)} \right] \frac{\partial \lambda_0(z)}{\partial z}.
+\tag{14}\]</span></span></p>
+<p>Or</p>
+<p><span id="eq-g"><span class="math display">\[
+E_z(r, z) = -\frac{g(r)}{4 \pi \epsilon_0 \gamma^2} \frac{\partial \lambda_0(z)}{\partial z},
+\tag{15}\]</span></span></p>
+<p>where <span class="math inline">\(g(r; a, b)\)</span> is called the <em>g factor</em>, which captures the dependence on the transverse distribution:</p>
+<p><span class="math display">\[
+g(r; a, b) = 1 - \frac{r^2}{a^2} + 2 \ln{(b / a)}
+\]</span></p>
+<p>This model of longitudinal space charge is often called a <em>g-factor model</em>.</p>
 
 
+</section>
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
-<div id="ref-Caticha_2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">A. Caticha, <em>Entropy, Information, and the Updating of Probabilities</em>, Entropy <strong>23</strong>, 895 (2021).</div>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
