@@ -39,11 +39,15 @@ span.header-section-number::after {
 }
 
 .quarto-listing-table td {
-    padding-top: 3px !important;
-    padding-bottom: 3px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    a {
+      text-decoration: none;
+    }
     a:hover {
       text-decoration: underline;
     }
+    line-height: 1.1em !important;
 }
 
 .quarto-listing-table {
