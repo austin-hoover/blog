@@ -39,6 +39,9 @@ span.header-section-number::after {
 .quarto-listing-table td {
     padding-top: 3px !important;
     padding-bottom: 3px !important;
+    a:hover {
+      text-decoration: underline;
+    }
 }
 
 .quarto-listing-table {
