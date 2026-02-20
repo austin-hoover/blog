@@ -9,7 +9,7 @@
 <meta name="author" content="Austin Hoover">
 <meta name="dcterms.date" content="2023-05-28">
 
-<title>High-dimensional phase space measurements – Austin’s Blog</title>
+<title>Five-dimensional phase space measurements – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,9 +64,9 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3950a860e279a9d52ca3c677708fb4d2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-c0cb3c7d7c3d10526a6a6655890445af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-3950a860e279a9d52ca3c677708fb4d2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-bbf91b21c897ced8e17423d03f1e6f08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ef4ec727deca7e36450f57dec6b5fd28.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-bbf91b21c897ced8e17423d03f1e6f08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -358,7 +358,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">High-dimensional phase space measurements</h1>
+<h1 class="title">Five-dimensional phase space measurements</h1>
   </div>
 
 
@@ -387,8 +387,6 @@ window.Quarto = {
 </header>
 
 
-<section id="predicting-halo-formation" class="level2">
-<h2 class="anchored" data-anchor-id="predicting-halo-formation">1. Predicting halo formation</h2>
 <p>Linear accelerators (linacs) generate powerful pulsed hadron beams for various applications. Increasing the beam power/intensity by orders of magnitude would benefit particle physics, nuclear physics, condensed matter physics, material science, biology, nuclear engineering, and other fields. Unfortunately, significantly increasing the beam intensity is not possible due to <em>beam loss</em> which occurs when particles hit the walls of the accelerator during their journey. The total lost beam power must be kept below 1 watt (W) per meter to avoid dangerous radiation levels. For a 1 MW beam, this limit corresponds to a fractional loss of <span class="math inline">\(10^{-6}\)</span>.</p>
 <p>Simulations struggle to predict the number and location of lost particles. The dynamics in the accelerator are complex, but the situation is perhaps unsurprising for other reasons:</p>
 <ol type="1">
@@ -414,9 +412,8 @@ window.Quarto = {
 <figcaption>Fig. 2. Vertical beam profile measured in the LEDA experiment<span class="citation" data-cites="Qiang_2002">&nbsp;[<a href="#ref-Qiang_2002" role="doc-biblioref">3</a>]</span>.</figcaption>
 </figure>
 </div>
-</section>
 <section id="high-dimensional-phase-space-measurements" class="level2">
-<h2 class="anchored" data-anchor-id="high-dimensional-phase-space-measurements">2. High-dimensional phase space measurements</h2>
+<h2 class="anchored" data-anchor-id="high-dimensional-phase-space-measurements">High-dimensional phase space measurements</h2>
 <p>We are continuing experimental work on halo prediction at the SNS Beam Test Facility (BTF), a recently commissioned replica of the front end of the SNS linac<span class="citation" data-cites="Zhang_2020">&nbsp;[<a href="#ref-Zhang_2020" role="doc-biblioref">4</a>]</span>. A diagram of the BTF is below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -463,8 +460,8 @@ window.Quarto = {
 </div>
 <p>We cropped and downscaled the images to decrease the size of the data set from around 250 gigabytes to 20 gigabytes. Next, we interpolated the pixel intensities to obtain a <span class="math inline">\(69 \times 88 \times 69 \times 65 \times 55\)</span> image of the phase space distribution <span class="math inline">\(f(x, x', y, y', w)\)</span>. Here we use the energy <span class="math inline">\(w\)</span> instead of the momentum <span class="math inline">\(p_z\)</span>. (Also <span class="math inline">\(x'\)</span> and <span class="math inline">\(y'\)</span> are basically the same as <span class="math inline">\(p_x\)</span> and <span class="math inline">\(p_y\)</span>.)</p>
 </section>
-<section id="high-dimensional-data-visualization" class="level2">
-<h2 class="anchored" data-anchor-id="high-dimensional-data-visualization">3. High-dimensional data visualization</h2>
+<section id="direct-five-dimensional-measurements-at-the-btf" class="level2">
+<h2 class="anchored" data-anchor-id="direct-five-dimensional-measurements-at-the-btf">Direct five-dimensional measurements at the BTF</h2>
 <p>We have spent significant time analyzing the measured initial phase space distribution<span class="citation" data-cites="Cathey_2018 Ruisard_2020 Ruisard_2021 Hoover_2023_PRAB">&nbsp;[<a href="#ref-Cathey_2018" role="doc-biblioref">5</a>,<a href="#ref-Ruisard_2020" role="doc-biblioref">8</a>–<a href="#ref-Hoover_2023_PRAB" role="doc-biblioref">10</a>]</span>. This task is straightforward in two dimensions: one simply looks at an image representing <span class="math inline">\(f(x, p_x)\)</span> and extracts features from it. High-dimensional data is exponentially more challenging to visualize and interpret.</p>
 <p>Here it is helpful to distinguish <em>projections</em>, <em>slices</em>, and <em>partial projections</em>. A projection is an integral/sum that squashes the distribution onto a lower-dimensional space. For example: <span class="math display">\[
 f(x, p_x) = \iiiint_{-\infty}^{+\infty} {f(x, p_x, y, p_y, z, p_z) dy dp_y dz dp_z}.
@@ -485,7 +482,7 @@ f(x, p_x) = \iiiint_{-\infty}^{+\infty} {f(x, p_x, y, p_y, z, p_z) dy dp_y dz dp
 <figcaption>Fig. 8. A four-dimensional slice of a measured five-dimensional distribution. Three- and two-dimensional projections are shown on the side panels.</figcaption>
 </figure>
 </div>
-<p>Such figures render slowly and are limited to four-dimensional data. Complete slicing flexibility is available in an interactive widget shown in Fig. 9. This function takes one or more images or point clouds of any dimensionality as inputs. I use it extensively in my data analysis. It is available in the <a href="https://github.com/austin-hoover/psdist">psdist</a> package.</p>
+<p>Such figures render slowly and are limited to four-dimensional data. Complete slicing flexibility is available in an interactive widget shown in Fig. 9. This function takes one or more images or point clouds of any dimensionality as inputs. I use it extensively in my data analysis. It’s available in the <a href="https://github.com/austin-hoover/psdist">psdist</a> package.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <div class="quarto-figure quarto-figure-center">
@@ -521,7 +518,7 @@ f(x, p_x) = \iiiint_{-\infty}^{+\infty} {f(x, p_x, y, p_y, z, p_z) dy dp_y dz dp
 <p>Notice the drastic change in energy distribution — unimodal to bimodal — as we move from the outer to the inner core in the transverse phase space. This energy hollowing represents a five-dimensional correlation; it is also visible (although perhaps harder to see) in Fig. 8. I also plotted the transverse projections of the slice farthest from the core. Pretty bizarre-looking images result, but they make some sense; they select particles with large transverse amplitude. Some intuition is gained by considering the projections of hollow three-dimensional distribution.</p>
 </section>
 <section id="ongoing-work" class="level2">
-<h2 class="anchored" data-anchor-id="ongoing-work">4. Ongoing work</h2>
+<h2 class="anchored" data-anchor-id="ongoing-work">Ongoing work</h2>
 <p>We would like to explain the origin of all features we find in the distribution. From direct measurements at lower beam currents, we know the space charge drives the energy hollowing in Fig. 10.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
