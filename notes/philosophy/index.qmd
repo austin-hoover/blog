@@ -4,8 +4,7 @@ date: 2024-01-01
 date-modified: 2024-01-01
 format:
   html:
-    grid:
-      body-width: 700px
+    css: style.css
 listing:
     contents: data.yml
     fields: [title, author]

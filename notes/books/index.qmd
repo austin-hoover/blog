@@ -17,7 +17,9 @@ listing:
   max-items: 99999999
   page-size: 99999999
   contents:
-    - "*.qmd"
     - "data.yml"
+format:
+  html:
+    css: style.css
 ---
 

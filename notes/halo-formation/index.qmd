@@ -18,5 +18,8 @@ listing:
     title: "Title"
     author: "Author"
     year: "Year"
+format:
+  html:
+    css: style.css
 ---
 
