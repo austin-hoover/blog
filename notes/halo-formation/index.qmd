@@ -4,8 +4,7 @@ date: 2026-02-03
 date-modified: 2026-02-12
 format:
   html:
-    grid:
-      body-width: 700px
+    css: style.css
 listing:
   contents: data.yml
   type: table
@@ -18,8 +17,5 @@ listing:
     title: "Title"
     author: "Author"
     year: "Year"
-format:
-  html:
-    css: style.css
 ---
 
