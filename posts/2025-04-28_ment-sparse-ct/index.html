@@ -411,7 +411,7 @@ window.Quarto = {
 </figure>
 </div>
 <p>One way to solve the maximum entropy problem is the MENT algorithm, which uses the Lagrange Multiplier method and nonlinear Gass-Seidel iterations to solve the constrained optimization. I’ve recently worked on extending MENT to <a href="https://arxiv.org/pdf/2409.17915">high-dimensional</a> problems, but I don’t know if I’ve compared it to standard 2D CT solvers. The following is a quick comparison that uses evenly spaced projection angles to reconstruct an image of a tree. I use the <a href="https://github.com/austin-hoover/ment/tree/main/examples/image">MENT package on GitHub</a> and the Radon transform, FBP, and SART algorithms from <a href="https://scikit-image.org/docs/stable/auto_examples/transform/plot_radon_transform.html#sphx-glr-auto-examples-transform-plot-radon-transform-py">scikit-image</a>. The results below correspond to 6, 12, 25, 50, and 100 projections.</p>
-<div id="2ca3cbea" class="cell">
+<div id="d7969a54" class="cell">
 <details class="code-fold">
 <summary>utils.py</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -437,7 +437,7 @@ window.Quarto = {
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> image.T</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="98326779" class="cell">
+<div id="436a2832" class="cell">
 <details class="code-fold">
 <summary>train.py</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Test 2D MENT with high-resolution image."""</span></span>

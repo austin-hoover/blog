@@ -1516,6 +1516,8 @@ Year
 
 
 
+<section id="queue" class="level4">
+
 <ul>
 <li><a href="https://doi.org/10.1103/PhysRevLett.25.1155"><em>Collisionless Relaxation in Systems with Coulomb Interactions</em></a> — Kadomtsev and Pogutse (1970)</li>
 <li><a href="https://arxiv.org/pdf/0712.1921"><em>Collisionless Relaxation in Non-Neutral Plasmas</em></a> — Levin, Pakter, and Teles (2008)</li>
@@ -1527,6 +1529,7 @@ Year
 </ul>
 
 
+</section>
 
  ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/collisionless-relaxation/</guid>
