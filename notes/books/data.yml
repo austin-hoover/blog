@@ -39,6 +39,9 @@
   author: Wang
   year: 2025
   categories:
+    - Society
+    - History
+    - International Relations
     - China
 
 - title: "Numerical Recipes"
@@ -233,9 +236,9 @@
   author: Cartwright
   year: 1983
   categories:
-    - Physics
     - Philosophy
     - Philosophy of Science
+    - Physics
     - Laws
 
 - title: "Eichmann in Jerusalem: A Report on the Banality of Evil"

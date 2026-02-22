@@ -1,0 +1,27 @@
+---
+title: "Philosophy of Science"
+date: 2026-02-22
+date-modified: 2026-02-22
+---
+
+
+#### Books
+
+* [*Time and Chance*](https://www.amazon.com/Time-Chance-David-Z-Albert/dp/0674011325) --- David Albert (2000)
+* [*Philosophy of Physics: Space and Time*](https://press.princeton.edu/books/paperback/9780691165714/philosophy-of-physics?srsltid=AfmBOorCoLu2SPa7ft7FgJSQDu29a-ev4c_H8mxc25uvljXOsArPmN6Y) --- Tim Maudlin (2014)
+* [*Philosophy of Physics: Quantum Theory*](https://press.princeton.edu/books/hardcover/9780691183527/philosophy-of-physics?srsltid=AfmBOooKv1KtEpywYIo2ynkNdN5CmTamagt3Xk6C8WsmdVbywJL-tI8Y) --- Tim Maudlin (2019) 
+* [*The Emergent Multiverse: Quantum Theory according to the Everett Interpretation*](https://www.amazon.com/Emergent-Multiverse-Quantum-according-Interpretation/dp/0198707541) --- David Wallace (2014)
+* [*How the Laws of Physics Lie*](https://www.amazon.com/How-Laws-Physics-Nancy-Cartwright/dp/0198247044) --- Nancy Cartwright (1983)
+* [*Laws of Physics*](https://www.amazon.com/Laws-Physics-Elements-Philosophy/dp/100901272X) --- Eddie Chen (2024)
+
+
+#### Videos
+
+* [Timothy Williamson: Is Philosophy a Science?](https://www.youtube.com/watch?v=O3LXQJ31SG4)
+
+
+#### Queue
+
+* [*Studies in the Logic of Confirmation*](https://www.andrew.cmu.edu/user/kk3n/philsciclass/hempelconf.pdf) --- Carl Gustav Hempel (1945).
+* [*Two Dogmas of Empiricism*](https://www.theologie.uzh.ch/dam/jcr:ffffffff-fbd6-1538-0000-000070cf64bc/Quine51.pdf) --- Willard Van Orman Quine (1951).
+* [*Science: Conjectures and Refutations*](http://www.dpi.inpe.br/gilberto/cursos/cst-311/popper_conjectures_refutations.pdf) --- Karl Popper (1962).

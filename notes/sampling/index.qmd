@@ -6,14 +6,14 @@ date-modified: 2026-02-01
 
 #### Papers
 
-* [Equation of State Calculations by Fast Computing Machines](https://web.archive.org/web/20170812013959id_/http://bayes.wustl.edu/Manual/Metropolis.pdf). Metropolis et al. (1953)
-* [MCMC using Hamiltonian dynamics](https://arxiv.org/pdf/1206.1901). Neal. (2011)
-* [The No-U-Turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo](https://www.jmlr.org/papers/volume15/hoffman14a/hoffman14a.pdf). Hoffman and Gelman. (2014)
-* [The no-underrun sampler: A locally-adaptive, gradient-free mcmc method](https://arxiv.org/pdf/2501.18548). Bou-Rabee et al. (2025)
-* [Microcanonical langevin ensembles: Advancing the sampling of bayesian neural networks](https://arxiv.org/pdf/2502.06335). Sommer, et al. (2025)
+* [Equation of State Calculations by Fast Computing Machines](https://web.archive.org/web/20170812013959id_/http://bayes.wustl.edu/Manual/Metropolis.pdf) --- Metropolis et al. (1953)
+* [MCMC using Hamiltonian dynamics](https://arxiv.org/pdf/1206.1901) --- Neal (2011)
+* [The No-U-Turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo](https://www.jmlr.org/papers/volume15/hoffman14a/hoffman14a.pdf) --- Hoffman and Gelman (2014)
+* [The no-underrun sampler: A locally-adaptive, gradient-free mcmc method](https://arxiv.org/pdf/2501.18548) --- Bou-Rabee et al. (2025)
+* [Microcanonical langevin ensembles: Advancing the sampling of bayesian neural networks](https://arxiv.org/pdf/2502.06335) --- Sommer, et al. (2025)
 
 
 #### Books
 
-* [Bayesian Data Analysis](https://sites.stat.columbia.edu/gelman/book/BDA3.pdf). Gelman et al. (1995)
-* [Data analysis: a Bayesian tutorial](https://www.google.com/books/edition/_/Kxx8CwAAQBAJ?hl=en&newbks=1&gbpv=1&pg=PR9&printsec=frontcover). Sivia and Skilling. (2006)
+* [Bayesian Data Analysis](https://sites.stat.columbia.edu/gelman/book/BDA3.pdf) --- Gelman et al. (1995)
+* [Data analysis: a Bayesian tutorial](https://www.google.com/books/edition/_/Kxx8CwAAQBAJ?hl=en&newbks=1&gbpv=1&pg=PR9&printsec=frontcover) --- Sivia and Skilling (2006)
