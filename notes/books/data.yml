@@ -1,3 +1,12 @@
+- title: "Laws of Physics"
+  author: Chen
+  year: 2024
+  categories:
+    - Philosophy
+    - Philosophy of Science
+    - Physics
+    - Laws
+
 - title: "The Brothers Karamazov"
   author: Dostoevsky
   year: 1879
@@ -225,6 +234,8 @@
   year: 1983
   categories:
     - Physics
+    - Philosophy
+    - Philosophy of Science
     - Laws
 
 - title: "Eichmann in Jerusalem: A Report on the Banality of Evil"
