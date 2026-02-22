@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-02-21">
 
-<title>Links – Austin’s Blog</title>
+<title>Beam and Plasma Physics Simulations – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +24,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-74f98961e92e74a75c96fc3d43c56111.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-bc403557ff0181184a195437159ca2af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-74f98961e92e74a75c96fc3d43c56111.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-208826a45758e6765f5809a95a911cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-2557061e844e1ba9cf1a27f0c6c4ed04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-208826a45758e6765f5809a95a911cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -228,7 +229,8 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -241,6 +243,14 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -254,7 +264,7 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Austin’s Blog</span>
     </a>
   </div>
@@ -265,19 +275,15 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../links/index.html" aria-current="page"> 
-<span class="menu-text">Links</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../notes/index.html"> 
+    <a class="nav-link" href="../../notes.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
@@ -299,7 +305,7 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Links</h1>
+<h1 class="title">Beam and Plasma Physics Simulations</h1>
 </div>
 
 
@@ -307,7 +313,19 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 21, 2026</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">February 21, 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -317,103 +335,19 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 
 
 <ul>
-<li>Blogs<br>
-
-<ul>
-<li><a href="http://alexanderpruss.blogspot.com">Alexander Pruss</a></li>
-<li><a href="https://asymptotia.com/category/science/string-theory/">Asymptotia</a></li>
-<li><a href="http://backreaction.blogspot.com">Backreaction</a></li>
-<li><a href="http://bactra.org/notebooks/">Bactra</a></li>
-<li><a href="https://www.chinatalk.media">China Talk</a></li>
-<li><a href="https://condensedconcepts.blogspot.com">Condensed Concepts</a></li>
-<li><a href="https://edwardfeser.blogspot.com">Edward Feser</a></li>
-<li><a href="http://exapologist.blogspot.com">ex-apologist</a></li>
-<li><a href="https://fakenous.substack.com">Fake Nous</a></li>
-<li><a href="https://lilianweng.github.io">lillog</a></li>
-<li><a href="http://nanoscale.blogspot.com">Nanoscale Views</a></li>
-<li><a href="https://www.math.columbia.edu/~woit/wordpress/">Not Even Wrong</a></li>
-<li><a href="https://blog.djnavarro.net">Notes from a data witch</a></li>
-<li><a href="https://profmattstrassler.com/blog/">Of particular significance</a></li>
-<li><a href="http://www.physicsmatt.com/blog/">Physics Matt</a></li>
-<li><a href="https://www.preposterousuniverse.com/blog/">Preposteroous Universe</a></li>
-<li><a href="https://drscotthawley.github.io/blog/">Scott Hawley</a></li>
-<li><a href="https://scottaaronson.blog">Shtetl-Optimized</a></li>
-<li><a href="http://schwitzsplinters.blogspot.com">The Splintered Mind</a></li>
-<li><a href="https://statmodeling.stat.columbia.edu">Statistical Modeling</a></li>
-<li><a href="https://dannyreviews.com">Danny Yee’s Book Reviews</a></li>
-</ul></li>
-<li>Journals
-<ul>
-<li><a href="https://pubs.aip.org/aip/cha">Chaos</a></li>
-<li><a href="https://www.nature.com/nphys/">Nature Physics</a></li>
-<li><a href="https://journals.aps.org/prab/">PRAB</a></li>
-<li><a href="https://journals.aps.org/pre/">PRE</a></li>
-<li><a href="https://journals.aps.org/prl/">PRL</a></li>
-<li><a href="https://www.science.org/journal/science">Science</a></li>
-<li><a href="https://mjl.clarivate.com/home">Web of Science Master Journal List</a></li>
-</ul></li>
-<li>People
-<ul>
-<li><a href="http://alexanderpruss.com">Alexander Pruss</a></li>
-<li><a href="http://www.oeftiger.net">Adrian Oeftiger</a></li>
-<li><a href="https://sites.google.com/site/cutterbc/home">Brian Cutter</a></li>
-<li><a href="https://sites.google.com/site/csebens/home">Charles Sebens</a></li>
-<li><a href="https://christophergregoryweaver.com/about-4">Christopher Gregory Weaver</a></li>
-<li><a href="http://davidkipping.co.uk">David Kipping</a></li>
-<li><a href="https://www.eddykemingchen.net">Eddie Chen</a></li>
-<li><a href="https://research.monash.edu/en/persons/graham-oppy">Graham Oppy</a></li>
-<li><a href="https://aicip.github.io/">Hairong Qi</a></li>
-<li><a href="https://ahc.leeds.ac.uk/philosophy/staff/1167/professor-helen-steward">Helen Seward</a></li>
-<li><a href="https://isaacwilhelm.com">Isaac Wilhelm</a></li>
-<li><a href="https://www.jacobbarandes.com">Jacob Barandes</a></li>
-<li><a href="https://web.ornl.gov/~holmesja1/JHolmes/interests.html">Jeff Holmes</a></li>
-<li><a href="https://sites.pitt.edu/~jdnorton/jdnorton.html">John Norton</a></li>
-<li><a href="https://josephschmid.com/research/">Joseph Schmidt</a></li>
-<li><a href="https://www.justinmooney.net">Justin Mooney</a></li>
-<li><a href="https://www.kerrymckenzie.org">Kerry McKenzie</a></li>
-<li><a href="https://melaniemitchell.me">Melanie Mitchell</a></li>
-<li><a href="https://spot.colorado.edu/~huemer/">Michael Heumer</a></li>
-<li><a href="https://nickbostrom.com">Nick Bostrom</a></li>
-<li><a href="https://philipgoffphilosophy.com">Philip Goff</a></li>
-<li><a href="https://simonfriederich.eu/publications.html">Simono Friedrich</a></li>
-<li><a href="https://taylorwcyr.com">Taylor Cyr</a></li>
-<li><a href="https://shc.academia.edu/ThomasMetcalf">Thomas Metcalf</a></li>
-<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tim Oconor</a></li>
-<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tyler Hildebrand</a></li>
-</ul></li>
-<li>Places
-<ul>
-<li><a href="https://home.cern">CERN</a></li>
-<li><a href="https://www.ornl.gov">ORNL</a></li>
-<li><a href="https://neutrons.ornl.gov">SNS</a></li>
-<li><a href="https://physics.utk.edu">UTK physics</a></li>
-</ul></li>
-<li>Preprint servers
-<ul>
-<li><a href="https://arxiv.org">ArXiv</a></li>
-<li><a href="https://arxiv.org/list/physics.acc-ph/recent">ArXiv (accelerator physics)</a></li>
-<li><a href="https://arxiv.org/list/astro-ph.GA/recent">ArXiv (astrophysics of galaxies)</a></li>
-<li><a href="https://arxiv.org/list/nlin.CD/recent">ArXiv (chaotic dynamics)</a></li>
-<li><a href="https://arxiv.org/list/physics.comp-ph/recent">ArXiv (computational physics)</a></li>
-<li><a href="https://arxiv.org/list/physics.data-an/recent">ArXiv (data analysis, statistics, and probability)</a></li>
-<li><a href="https://arxiv.org/list/physics.hist-ph/recent">ArXiv (history and philosophy of physics)</a></li>
-<li><a href="https://philsci-archive.pitt.edu/cgi/latest_days2?n=30">PhilSci</a></li>
-<li><a href="https://philpeople.org">philpeople.org</a></li>
-</ul></li>
-<li><a href="https://docs.google.com/document/d/1dprquqrzQxJsmOArxEoBDaMx15T9T--P8dagUqX6kQI/edit#heading=h.x1uym8fk8fq3">Bibliography on the problem of evil</a></li>
-<li><a href="https://www.lesswrong.com">lesswrong</a></li>
-<li><a href="https://www.routledge.com/Little-Debates-about-Big-Questions/book-series/LDABQ">Little debates</a></li>
-<li><a href="https://einsteinpapers.press.princeton.edu">Einstein papers</a></li>
-<li><a href="https://bayes.wustl.edu">Probability theory as extended logic</a></li>
-<li><a href="https://www.muoncollider.us">US Muon Collider Collaboration</a></li>
-<li>Articles
-<ul>
-<li><a href="https://www.chronicle.com/article/why-academics-stink-at-writing/">Why academics stink at writing</a></li>
-<li><a href="https://upstream.force11.org/the-preprint-revolution-implications-for-bibliographic-databases/">The preprint revolution</a></li>
-<li><a href="https://www.polygon.com/features/2020/5/27/21265613/runescape-is-helping-venezuelans-survive">Runescape helps Venezuelans survive</a></li>
-<li><a href="https://archive.nytimes.com/opinionator.blogs.nytimes.com/2012/07/23/zombie-nouns/">Zombie nouns</a></li>
-<li><a href="http://www.whatisitliketobeaphilosopher.com">What is it like to be a philosopher?</a></li>
-</ul></li>
+<li><a href="https://www.osti.gov/servlets/purl/6733081/"><em>TEAPOT: A thin element accelerator program for optics and tracking</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/PhysRevLett.98.130405"><em>Noninvariance of Space- and Time-Scale Ranges under a Lorentz Transformation and the Implications for the Study of Relativistic Interactions</em></a></li>
+<li><a href="10.1103/PhysRevAccelBeams.20.014203"><em>Symplectic multiparticle tracking model for self-consistent space-charge simulation</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.054201"><em>Symplectic particle-in-cell model for space-charge beam dynamics simulation</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/bhpv-bcqk"><em>Symplectic machine learning model for fast simulation of space-charge effects</em></a></li>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.3.124201"><em>TOUTATIS: A radio frequency quadrupole code</em></a></li>
+<li><a href="https://www.physics.umd.edu/dsat/docs/Book12Nov2019.pdf"><em>Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics</em></a></li>
+<li><a href="https://arxiv.org/pdf/2006.09080"><em>Direct Vlasov solvers</em></a></li>
+<li><a href="http://arxiv.org/abs/2203.08335"><em>Snowmass21 Accelerator Modeling Community White Paper</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/PhysRevE.106.035208"><em>Quantum-inspired method for solving the Vlasov-Poisson equations</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/PhysRevAccelBeams.26.024601"><em>Differentiable self-consistent space-charge simulation for accelerator design</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/npx1-nclt"><em>Two-and-a-half dimensional symplectic space-charge solver</em></a></li>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.17.124201"><em>Grid dependent noise and entropy growth in anisotropic 3d particle-in-cell simulation of high intensity beams</em></a></li>
 </ul>
 
 
