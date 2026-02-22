@@ -11,4 +11,5 @@ listing:
   filter-ui: false
   max-description-length: 50
   feed: true
+  page-size: 999
 ---

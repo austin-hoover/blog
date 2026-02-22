@@ -12,7 +12,7 @@ listing:
     sort-ui: true
     filter-ui: true
     table-hover: true
-    sort: year
+    sort: "year desc"
     fields: [title, author, year]
     field-display-names: 
       title: "Title"
@@ -20,4 +20,6 @@ listing:
       year: "Year"
     page-size: 999
 ---
+
+To do: start adding category labels.
 

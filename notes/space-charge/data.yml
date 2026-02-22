@@ -74,14 +74,14 @@
   path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.9.054202"
 
 - title: "Experimental Evidence of the 90° Stop Band in the GSI UNILAC"
-  author: 'Groening et al."
+  author: "Groening et al."
   year: 2009
   path: "https://link.aps.org/doi/10.1103/PhysRevLett.102.234801"
 
 - title: "Experiment on space charge driven nonlinear resonance crossing in an ion synchrotron"
-  author: "Franchetti et al"
+  author: "Franchetti et al."
   year: 2010
-  path: 'https://link.aps.org/doi/10.1103/PhysRevSTAB.13.114203"
+  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.13.114203"
 
 - title: "Empirical condition of betatron resonances with space charge"
   author: "Kojima et al."
@@ -184,7 +184,7 @@
   path: "https://cds.cern.ch/record/322516/files/SI-INT-DL-70-12.pdf"
 
 - title: "Stability of the Kapchinskij-Vladimirskij (K-V) distribution in long periodic transport systems"
-  author: "Hofmann, Laslett, Smith, and Haber"
+  author: "Hofmann et al."
   year: 1983 
   path: "https://cds.cern.ch/record/140869/files/p145.pdf"
 
@@ -209,7 +209,7 @@
   path: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.73.1247"
 
 - title: "Stability of a Uniform-Density Breathing Beam with Circular Cross Section"
-  author: "Gluckstern, Cheng, and Ye"
+  author: "Gluckstern, et al."
   year: 1995
   path: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.2835"
 
@@ -289,7 +289,7 @@
   path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.7.024801"
 
 - title: "Efficient computation of matched solutions of the Kapchinskij-Vladimirskij envelope equations for periodic focusing lattices"
-  author: "Lund, Chilton, and Lee"
+  author: "Lund et al."
   year: 2006
   path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.9.064201"
   
@@ -304,7 +304,7 @@
   path: "https://linkinghub.elsevier.com/retrieve/pii/S0168900207003452"
 
 - title: "Generation of initial kinetic distributions for simulation of long-pulse charged particle beams with high space-charge intensity"
-  author: "Lund, Kikuchi, and Davidson"
+  author: "Lund et al."
   year: 2009
   path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.12.114801"
 
@@ -335,17 +335,17 @@
 
 - title: "Dispersion-Induced Beam Instability in Circular Accelerators"
   path: "https://doi.org/10.1103/PhysRevLett.118.154801"
-  author: "Yuan, Boine-Frankenheim, Franchetti, and Hofmann"
+  author: "Yuan et al."
   year: 2017
 
 - title: "Modeling of second order space charge driven coherent sum and difference instabilities"
   path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201"
-  author: "Yuan, Boine-Frankenheim, and Hofmann"
+  author: "Yuan, et al."
   year: 2017
   
 - title: "Intensity limitations due to space charge for bunch compression in synchrotrons"
   path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201"
-  author: "Yuan, Boine-Frankenheim, and Hofmann"
+  author: "Yuan, et al."
   year: 2018
 
 - title: "Structure resonances due to space charge in periodic focusing channels"
@@ -374,7 +374,6 @@
   year: 2025
   
 - title: "Modeling of beam envelope instabilities in high-intensity circular accelerators"
-  path: "https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9"
   author: "Yuan"
   year: 2025
-
+  path: "https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9"

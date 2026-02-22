@@ -118,7 +118,7 @@ $$
 \end{numcases}
 $${#eq-x}
 
-The radial averaging gives
+The radial averaging gives a field proportaionl to the density gradient: 
 
 $$
 \begin{align}
@@ -134,6 +134,4 @@ $$
 g(r; a, b) = 1 - \frac{r^2}{a^2} + 2 \ln{(b / a)}
 $$
 
-This model of longitudinal space charge is often called a *g-factor model*.
-
-
+This model of longitudinal space charge is often called a *g-factor model*. It can be a good model in accelerator rings, where bunches are typically very long compared to the transverse dimensions.

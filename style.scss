@@ -14,7 +14,7 @@ $primary: rgb(18, 84, 127);  // darker
 
 $code-font-size: 0.8em;
 
-$link-decoration: underline;
+$link-decoration: none;
 $link-hover-decoration: underline;
 
 // /*-- scss:rules --*/
@@ -39,33 +39,13 @@ span.header-section-number::after {
     // content: ".";
 }
 
-.quarto-listing-table td {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-    a {
-      text-decoration: underline !important;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    line-height: 1.2em !important;
-}
-
 .quarto-listing-table {
-    border-color: rgb(20, 20, 20, 0) !important;
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
-.quarto-listing-table th {
-    // border-bottom-color: black;
-    border-bottom-width: 1px;
-    // border-top-color: black;
-    border-top-width: 0px;
-    padding-bottom: 3px !important;
+.quarto-listing-table td {
+  // padding-top:    8px !important;
+  // padding-bottom: 8px !important;
 }
-
-// body {
-//   hyphens: auto;
-//   overflow-wrap: break-word;
-//   text-rendering: optimizeLegibility;
-//   font-kerning: normal;
-// }

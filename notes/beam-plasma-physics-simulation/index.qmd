@@ -1,0 +1,19 @@
+---
+title: "Beam and Plasma Physics Simulations"
+date: 2026-02-21
+date-modified: 2026-02-21
+---
+
+* [*TEAPOT: A thin element accelerator program for optics and tracking*](https://www.osti.gov/servlets/purl/6733081/)
+* [*Noninvariance of Space- and Time-Scale Ranges under a Lorentz Transformation and the Implications for the Study of Relativistic Interactions*](https://link.aps.org/doi/10.1103/PhysRevLett.98.130405)
+* [*Symplectic multiparticle tracking model for self-consistent space-charge simulation*](10.1103/PhysRevAccelBeams.20.014203)
+* [*Symplectic particle-in-cell model for space-charge beam dynamics simulation*](https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.054201)
+* [*Symplectic machine learning model for fast simulation of space-charge effects*](https://link.aps.org/doi/10.1103/bhpv-bcqk)
+* [*TOUTATIS: A radio frequency quadrupole code*](https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.3.124201)
+* [*Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics*](https://www.physics.umd.edu/dsat/docs/Book12Nov2019.pdf)
+* [*Direct Vlasov solvers*](https://arxiv.org/pdf/2006.09080)
+* [*Snowmass21 Accelerator Modeling Community White Paper*](http://arxiv.org/abs/2203.08335)
+* [*Quantum-inspired method for solving the Vlasov-Poisson equations*](https://link.aps.org/doi/10.1103/PhysRevE.106.035208)
+* [*Differentiable self-consistent space-charge simulation for accelerator design*](https://link.aps.org/doi/10.1103/PhysRevAccelBeams.26.024601)
+* [*Two-and-a-half dimensional symplectic space-charge solver*](https://link.aps.org/doi/10.1103/npx1-nclt)
+* [*Grid dependent noise and entropy growth in anisotropic 3d particle-in-cell simulation of high intensity beams*](https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.17.124201)

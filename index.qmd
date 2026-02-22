@@ -7,7 +7,7 @@ listing:
     date-format: YYYY‑MM‑DD
     table-hover: true
     categories: true
-    page-size: 200
+    page-size: 999
     sort-ui: true
     filter-ui: true
 ---
