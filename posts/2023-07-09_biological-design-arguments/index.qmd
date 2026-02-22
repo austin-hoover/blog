@@ -5,7 +5,6 @@ author: Austin Hoover
 categories: 
   - arguments
   - theism
-categories: [teleological arguments, biological design, Darwin]
 bibliography: references.bib
 csl: ./american-physics-society.csl
 draft: false
