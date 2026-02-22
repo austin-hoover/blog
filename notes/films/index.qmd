@@ -12,7 +12,7 @@ listing:
   type: table
   date-format: YYYY‑MM‑DD
   table-hover: false
-  categories: true
+  categories: false
   max-items: 99999999
   page-size: 99999999
   contents: data.yml

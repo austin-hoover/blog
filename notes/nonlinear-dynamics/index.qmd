@@ -1,0 +1,7 @@
+---
+title: "Nonlinear Dynamics"
+date: 2026-02-21
+date-modified: 2026-02-21
+---
+
+* [*Hamiltonian theory of the crossing of the 2Qx− 2Qy = 0*](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.104001). Bazzani, Capoani, and M. Giovannozzi. (2022)

@@ -1,3 +1,148 @@
+- title: "Simulation study of the space charge limit in heavy-ion synchrotrons"
+  author: "Oeftiger et al."
+  year: 2023
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.054402"
+
+- title: "Pulsed Electron Lenses for Space Charge Mitigation"
+  author: "Oeftiger and Boine-Frankenheim"
+  year: 2024
+  path: "https://arxiv.org/pdf/2310.02365"
+
+- title: "Modeling of second order space charge driven coherent sum and difference instabilities"
+  author: "Yuan et al."
+  year: 2017
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201"
+
+- title: "Revisiting the Longitudinal 90° Limit in High Intensity Linear Accelerators"
+  author: "Hofmann and Boine-Frankenheim"
+  year: 2017
+  path: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.118.114803"
+
+- title: "Modeling of beam envelope instabilities in high-intensity circular accelerators"
+  author: "Yuan"
+  year: 2025
+  path: "https://link.aps.org/doi/10.1103/c1dn-z4n9"
+
+- title: "Characterization of overlapping betatron resonances above the phase advance of 90° per cell"
+  author: "Kojima and Okamoto"
+  year: 2022
+  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.25.024201"
+
+- title: "Self-consistent long-term dynamics of space charge driven resonances in 2D and 3D"
+  author: "Hofmann et al."
+  year: 2022
+  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.24.024201"
+
+- title: "Space charge resonances in two and three dimensional anisotropic beams"
+  author: "Hofmann et al."
+  year: 2003
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.6.024202"
+
+- title: "Resonant Emittance Transfer Driven by Space Charge"
+  author: "Hofmann and Boine-Frankenheim"
+  year: 2001
+  path: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.87.034802"
+
+- title: "Space-Charge Structural Instabilities and Resonances in High-Intensity Beams"
+  author: "Hofmann and Boine-Frankenheim"
+  year: 2015
+  path: "https://doi.org/10.1103/PhysRevLett.115.204802"
+
+- title: "Parametric instabilities in 3D periodically focused beams with space charge"
+  author: "Hofmann and Boine-Frankenheim"
+  year: 2017
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.014202"
+  
+- title: "Compensating tune spread induced by space charge in bunched beams"
+  author: "Litvinenko and Wang"
+  year: 2014
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.17.114401"
+
+- title: "3D theory of microscopic instabilities driven by space-charge forces"
+  author: "Litvinenko et al."
+  year: 2023
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.26.054402"
+
+- title: "Fourth-order coupling resonance excited by space-charge forces in a synchrotron"
+  author: "Montague"
+  year: 1968
+  path: "https://cds.cern.ch/record/275769/files/CERN-68-38.pdf"
+
+- title: "Self-consistent study of space-charge-driven coupling resonances"
+  author: "Hofmann and Franchetti"
+  year: 2006
+  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.9.054202"
+
+- title: "Experimental Evidence of the 90° Stop Band in the GSI UNILAC"
+  author: 'Groening et al."
+  year: 2009
+  path: "https://link.aps.org/doi/10.1103/PhysRevLett.102.234801"
+
+- title: "Experiment on space charge driven nonlinear resonance crossing in an ion synchrotron"
+  author: "Franchetti et al"
+  year: 2010
+  path: 'https://link.aps.org/doi/10.1103/PhysRevSTAB.13.114203"
+
+- title: "Empirical condition of betatron resonances with space charge"
+  author: "Kojima et al."
+  year: 2019
+  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.22.074201"
+
+- title: "Effects of the Montague resonance on the formation of the beam distribution during multiturn injection painting in a high-intensity proton ring"
+  author: "Hotchi"
+  year: 2020
+  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.23.050401"
+
+- title: "Revisiting coherent and incoherent resonances with space charge"
+  author: "Hofmann"
+  year: 2020
+  path: "https://iopscience.iop.org/article/10.1088/1748-0221/15/07/P07016"
+
+- title: "Identification and characterization of high order incoherent space charge driven structure resonances in the CERN Proton Synchrotron"
+  author: "Asvesta et al."
+  year: 2020
+  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.23.091001"
+
+- title: "Effects of beam spinning on the fourth-order particle resonance of 3D bunched beams in high-intensity linear accelerators"
+  author: "Cheon et al."
+  year: 2022
+  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.25.064002"
+
+- title: "Observations and Simulations of Transverse Density Waves in a Collimated Space-Charge Dominated Electron Beam"
+  author: "Bernal et al."
+  year: 1999
+  path: "https://web.archive.org/web/20040105024953id_/http://www.ireap.umd.edu:80/UMER/Publications/pub1999-2.pdf"
+
+- title: "Simulations and experiments with space-charge-dominated beams"
+  author: "Kishek et al."
+  year: 2003
+  path: "https://pubs.aip.org/pop/article/10/5/2016/1070711/Simulations-and-experiments-with-space-charge"
+
+- title: "Space charge modeling of dense electron beams with large energy spreads"
+  author: "Fubiani et al."
+  year: 2006
+  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.9.064402"
+
+- title: "Coulomb explosion of uniformly charged spheroids"
+  author: "Grech et al."
+  year: 2011
+  path: "https://link.aps.org/doi/10.1103/PhysRevE.84.056404"
+
+- title: "Dynamical bunching and density peaks in expanding Coulomb clouds"
+  author: "Zerbe et al."
+  year: 2018
+  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.064201"
+
+- title: "Density shocks in the relativistic expansion of highly charged one component plasmas"
+  author: "Zerbe et al."
+  year: 2019
+  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.22.114402"
+
+- title: "Rapid charge redistribution leading to core hollowing in a high-intensity ion beam"
+  author: "Ruisard and Aleksandrov"
+  year: 2021
+  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.24.014201"
+
 - title: "Understanding beam distributions in hadron linacs in the presence of space charge"
   author: "Aleksandrov, Ruisard, and Cousineau"
   year: 2021
@@ -127,11 +272,6 @@
   author: "Okamoto and Yokoya"
   year: 2002
   path: "https://linkinghub.elsevier.com/retrieve/pii/S0168900201016849"
-
-- title: "Macroparticle simulation studies of a proton beam halo experiment"
-  author: "Qiang et al."
-  year: 2002
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.5.124201"
 
 - title: "Self-consistent time dependent two dimensional and three dimensional space charge distributions with linear force"
   author: "Danilov et al."

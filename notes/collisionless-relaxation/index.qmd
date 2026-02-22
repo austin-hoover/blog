@@ -4,10 +4,10 @@ date: 2026-01-31
 date-modified: 2026-02-20
 ---
 
-* [Collisionless Relaxation in Systems with Coulomb Interactions](https://doi.org/10.1103/PhysRevLett.25.1155). Kadomtsev and Pogutse. (1970)
-* [Collisionless Relaxation in Non-Neutral Plasmas](https://arxiv.org/pdf/0712.1921). Levin, Pakter, and Teles. (2008).
-* [Collisionless relaxation in gravitational systems: From violent relaxation to gravothermal collapse](https://arxiv.org/pdf/0808.3092). Levin, Pakter, and Rizzato. (2008)
-* [Core-halo distribution in the Hamiltonian Mean-Field Model](https://arxiv.org/pdf/1012.0035). Pakter and Levin. (2011)
-* [Non-equilibrium Statistical Mechanics of Two-dimensional Vortices](https://arxiv.org/pdf/1807.05945). Pakter and Levin. (2018)
-* [Weak convergence to equilibrium of statistical ensembles in integrable Hamiltonian systems](https://pubs.aip.org/aip/jmp/article/60/5/052702/234753). Mitchell. (2019)
-* [Generalized Entropy Production in Collisionless Plasma Flows and Turbulence](https://journals.aps.org/prx/pdf/10.1103/PhysRevX.12.031011). Zhdankin. (2022)
+* [*Collisionless Relaxation in Systems with Coulomb Interactions*](https://doi.org/10.1103/PhysRevLett.25.1155). Kadomtsev and Pogutse. (1970)
+* [*Collisionless Relaxation in Non-Neutral Plasmas*](https://arxiv.org/pdf/0712.1921). Levin, Pakter, and Teles. (2008).
+* [*Collisionless relaxation in gravitational systems: From violent relaxation to gravothermal collapse*](https://arxiv.org/pdf/0808.3092). Levin, Pakter, and Rizzato. (2008)
+* [*Core-halo distribution in the Hamiltonian Mean-Field Model*](https://arxiv.org/pdf/1012.0035). Pakter and Levin. (2011)
+* [*Non-equilibrium Statistical Mechanics of Two-dimensional Vortices*](https://arxiv.org/pdf/1807.05945). Pakter and Levin. (2018)
+* [*Weak convergence to equilibrium of statistical ensembles in integrable Hamiltonian systems*](https://pubs.aip.org/aip/jmp/article/60/5/052702/234753). Mitchell. (2019)
+* [*Generalized Entropy Production in Collisionless Plasma Flows and Turbulence*](https://journals.aps.org/prx/pdf/10.1103/PhysRevX.12.031011). Zhdankin. (2022)

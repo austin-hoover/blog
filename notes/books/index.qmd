@@ -21,5 +21,6 @@ listing:
 format:
   html:
     css: style.css
+    page-layout: full
 ---
 

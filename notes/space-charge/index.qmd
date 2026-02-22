@@ -1,15 +1,16 @@
 ---
 title: "Space Charge"
 date: 2026-01-31
-date-modified: 2026-02-12
+date-modified: 2026-02-21
 format:
   html:
     css: style.css
+    page-layout: full
 listing:
   - contents: data.yml
     type: table
-    sort-ui: false
-    filter-ui: false
+    sort-ui: true
+    filter-ui: true
     table-hover: true
     sort: year
     fields: [title, author, year]
@@ -17,5 +18,6 @@ listing:
       title: "Title"
       author: "Author"
       year: "Year"
+    page-size: 999
 ---
 
