@@ -21,17 +21,17 @@
 - title: "Modeling of beam envelope instabilities in high-intensity circular accelerators"
   author: "Yuan"
   year: 2025
-  path: "https://link.aps.org/doi/10.1103/c1dn-z4n9"
+  path: "https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9"
 
 - title: "Characterization of overlapping betatron resonances above the phase advance of 90° per cell"
   author: "Kojima and Okamoto"
   year: 2022
-  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.25.024201"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.024201"
 
 - title: "Self-consistent long-term dynamics of space charge driven resonances in 2D and 3D"
   author: "Hofmann et al."
   year: 2022
-  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.24.024201"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.24.024201"
 
 - title: "Space charge resonances in two and three dimensional anisotropic beams"
   author: "Hofmann et al."
@@ -71,7 +71,7 @@
 - title: "Self-consistent study of space-charge-driven coupling resonances"
   author: "Hofmann and Franchetti"
   year: 2006
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.9.054202"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.9.054202"
 
 - title: "Experimental Evidence of the 90° Stop Band in the GSI UNILAC"
   author: "Groening et al."
@@ -81,17 +81,17 @@
 - title: "Experiment on space charge driven nonlinear resonance crossing in an ion synchrotron"
   author: "Franchetti et al."
   year: 2010
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.13.114203"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.13.114203"
 
 - title: "Empirical condition of betatron resonances with space charge"
   author: "Kojima et al."
   year: 2019
-  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.22.074201"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.22.074201"
 
 - title: "Effects of the Montague resonance on the formation of the beam distribution during multiturn injection painting in a high-intensity proton ring"
   author: "Hotchi"
   year: 2020
-  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.23.050401"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.23.050401"
 
 - title: "Revisiting coherent and incoherent resonances with space charge"
   author: "Hofmann"
@@ -101,12 +101,12 @@
 - title: "Identification and characterization of high order incoherent space charge driven structure resonances in the CERN Proton Synchrotron"
   author: "Asvesta et al."
   year: 2020
-  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.23.091001"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.23.091001"
 
 - title: "Effects of beam spinning on the fourth-order particle resonance of 3D bunched beams in high-intensity linear accelerators"
   author: "Cheon et al."
   year: 2022
-  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.25.064002"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.064002"
 
 - title: "Observations and Simulations of Transverse Density Waves in a Collimated Space-Charge Dominated Electron Beam"
   author: "Bernal et al."
@@ -121,7 +121,7 @@
 - title: "Space charge modeling of dense electron beams with large energy spreads"
   author: "Fubiani et al."
   year: 2006
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.9.064402"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.9.064402"
 
 - title: "Coulomb explosion of uniformly charged spheroids"
   author: "Grech et al."
@@ -131,27 +131,27 @@
 - title: "Dynamical bunching and density peaks in expanding Coulomb clouds"
   author: "Zerbe et al."
   year: 2018
-  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.064201"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.064201"
 
 - title: "Density shocks in the relativistic expansion of highly charged one component plasmas"
   author: "Zerbe et al."
   year: 2019
-  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.22.114402"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.22.114402"
 
 - title: "Rapid charge redistribution leading to core hollowing in a high-intensity ion beam"
   author: "Ruisard and Aleksandrov"
   year: 2021
-  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.24.014201"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.24.014201"
 
 - title: "Understanding beam distributions in hadron linacs in the presence of space charge"
   author: "Aleksandrov, Ruisard, and Cousineau"
   year: 2021
-  path: "https://iopscience.iop.org/article/10.1088/1748-0221/15/07/P07025"
+  path: "https://iopscience.iop.org/article/10.1088/1748-0221/15/07/P07025/pdf"
 
 - title: "Benchmarking of measurement and simulation of transverse rms-emittance growth"
   author: "Groening et al."
   year: 2009
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.11.094201"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.11.094201"
 
 - title: "Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams"
   author: "Bohn and Sideris"
@@ -226,7 +226,7 @@
 - title: "Rigid-Rotor Vlasov Equilibrium for an Intense Charged-Particle Beam Propagating through a Periodic Solenoidal Magnetic Field"
   author: "Chen, Pakter, and Davidson"
   year: 1997
-  path: "https://link.aps.org/doi/10.1103/PhysRevLett.79.225"
+  path: "https://library.psfc.mit.edu/catalog/reports/1990/97ja/97ja005/97ja005_full.pdf"
   
 - title: "Betatron resonances with space charge"
   author: "Baartman"
@@ -256,7 +256,7 @@
 - title: "Comparison of simulated and observed beam profile broadening in the Proton Storage Ring and the role of space charge"
   author: "Galambos et al."
   year: 2000
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.3.034201"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.3.034201"
 
 - title: "Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel"
   author: "Okamoto and Yokoya"
@@ -266,7 +266,7 @@
 - title: "Macroparticle simulation studies of a proton beam halo experiment"
   author: "Qiang et al."
   year: 2002
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.5.124201"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.5.124201"
 
 - title: "Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel"
   author: "Okamoto and Yokoya"
@@ -276,22 +276,22 @@
 - title: "Self-consistent time dependent two dimensional and three dimensional space charge distributions with linear force"
   author: "Danilov et al."
   year: 2003
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.6.094202"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.6.094202"
 
 - title: "Resonant beam behavior studies in the Proton Storage Ring"
   author: "Cousineau et al."
   year: 2003
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.6.074202"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.6.074202"
 
 - title: "Stability properties of the transverse envelope equations describing intense ion beam transport"
   author: "Lund and Bukh"
   year: 2004
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.7.024801"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.7.024801"
 
 - title: "Efficient computation of matched solutions of the Kapchinskij-Vladimirskij envelope equations for periodic focusing lattices"
   author: "Lund et al."
   year: 2006
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.9.064201"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.9.064201"
   
 - title: "Space-charge transport limits of ion beams in periodic quadrupole focusing channels"
   author: "Lund and Chawla"
@@ -306,7 +306,7 @@
 - title: "Generation of initial kinetic distributions for simulation of long-pulse charged particle beams with high space-charge intensity"
   author: "Lund et al."
   year: 2009
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.12.114801"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.12.114801"
 
 - title: "Generalized Kapchinskij-Vladimirskij Distribution and Envelope Equation for High-Intensity Beams in a Coupled Transverse Focusing Lattice"
   author: "Qin, Chung, and Davidson"
@@ -326,7 +326,7 @@
 - title: "Envelope instability and the fourth order resonance"
   author: "Li and Zhao"
   year: 2014
-  path: "https://link.aps.org/doi/10.1103/PhysRevSTAB.17.124202"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.17.124202"
 
 - title: "Near equilibrium distributions for beams with space charge in linear and nonlinear periodic focusing systems"
   author: "Sonnad and Cary"
@@ -351,7 +351,7 @@
 - title: "Structure resonances due to space charge in periodic focusing channels"
   author: "Li and Jameson"
   year: 2018
-  path: "https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.024204"
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.024204"
 
 - title: "Spectral Galerkin solver for intense beam Vlasov equilibria in nonlinear constant focusing channels"
   author: "Mitchell"
