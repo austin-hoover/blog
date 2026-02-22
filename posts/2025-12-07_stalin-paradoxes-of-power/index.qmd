@@ -3,8 +3,8 @@ title: "*Stalin: Paradoxes of Power*"
 author: Austin Hoover
 date: 2025-12-07
 categories:
-    - books
-    - history
+  - books
+  - history
 ---
 
 *Stalin: Paradoxes of Power* is a history of Russia during Stalin's rise to power in the early 20th century. Part I describes the dramatic changes to the Russian tsarist autocracy in the lead-up to WWI. Stalin spends most of this time as a political exile in Siberia. Part II describes the sudden and violent rise of Lenin's Bolshevik government during the Russian revolution and civil war in 1917, during which Stalin positions himself as a key member of Lenin's inner circle. Part III describes Stalin's fight with Trotsky and others to consolidate power after Lenin's unexpected death. The book ends with Stalin's triumph over his political rivals and his unthinkable decision to force collectivization of the entire country in 1928.

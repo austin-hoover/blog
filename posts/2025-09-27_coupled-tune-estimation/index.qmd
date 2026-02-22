@@ -6,7 +6,6 @@ bibliography: references.bib
 csl: ./aps.csl
 categories:
   - accelerators
-  - coupling
 ---
 
 

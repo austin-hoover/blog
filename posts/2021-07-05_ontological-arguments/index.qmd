@@ -2,12 +2,12 @@
 title: "*Arguing About Gods*: ontological arguments"
 author: Austin Hoover
 date: 2021-07-05
-categories: [Anselm, ontological arguments]
-image: island2.png
+categories: 
+  - theism
+  - arguments
 toc-depth: 5
 bibliography: references.bib
 csl: american-physics-society.csl
-
 ---
 
 

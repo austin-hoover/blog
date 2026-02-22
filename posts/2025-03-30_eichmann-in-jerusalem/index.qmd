@@ -5,7 +5,7 @@ author: Austin Hoover
 toc: false
 categories:
   - books
-  - wwii
+  - history
 ---
 
 Some quotes from Hannah Arendt's *Eichmann in Jerusalem: A Report on the Banality of Evil*.

@@ -3,7 +3,7 @@ title: "Phase space spirals"
 author: Austin Hoover
 date: 2024-12-27
 categories:
-  - particle accelerators
+  - research
   - halo
   - nonlinear
 toc: false

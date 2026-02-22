@@ -3,8 +3,8 @@ title: "Inaugural US Muon Collider Collaboration meeting"
 date: 2024-08-12
 author: Austin Hoover
 categories:
+  - conferences
   - accelerators
-  - muon collider
 toc: false
 ---
 

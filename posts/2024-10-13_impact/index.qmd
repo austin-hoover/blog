@@ -3,9 +3,8 @@ title: "The impact of phase space correlations on the beam dynamics in linear ac
 date: 2024-10-13
 author: Austin Hoover
 categories:
-  - particle accelerators
-  - sns
-  - halo
+  - research
+  - papers
 bibliography: references.bib
 csl: ./american-physics-society.csl
 lightbox: true

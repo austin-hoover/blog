@@ -4,8 +4,7 @@ date: 2024-05-16
 author: Austin Hoover
 categories:
   - entropy
-  - statistical mechanics
-  - tomography
+  - probability
 bibliography: references.bib
 csl: ./american-physics-society.csl
 format:

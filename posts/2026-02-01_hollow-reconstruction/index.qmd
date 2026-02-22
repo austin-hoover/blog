@@ -5,7 +5,7 @@ date: 2026-02-01
 toc: false
 categories:
   - tomography
-  - uncertainty
+  - research
 ---
 
 We injected ten minipulses in the SNS ring at fixed point in phase space, then extracted the beam and measured 36 wire-scanner profiles. I attempted to fit a four-dimensional distribution to the data.

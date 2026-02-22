@@ -6,6 +6,7 @@ toc: false
 categories:
   - papers
   - tomography
+  - entropy
 ---
 
 Last year I submitted a paper called *N-dimensional maximum-entropy tomography via particle sampling*. (See [this post](../2024-10-30_n-dimensional-ment-particle-sampling).) The idea was to use Markov Chain Monte Carlo (MCMC) sampling techniques to approximate high-dimensional integrals that appear in the MENT algorithm. I demonstrated the method on a toy problem, reconstructing a 6D Gaussian Mixture (GM) distribution from its pairwise projections.

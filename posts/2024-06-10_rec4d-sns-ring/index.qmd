@@ -3,9 +3,9 @@ title: "Reconstructing the 4D phase space density of a high-power proton beam fr
 date: 2024-06-10
 author: Austin Hoover
 categories:
+  - papers
   - entropy
   - tomography
-  - sns
 bibliography: references.bib
 csl: ./american-physics-society.csl
 ---

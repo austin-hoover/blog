@@ -4,7 +4,6 @@ author: Austin Hoover
 date: 2026-01-31
 toc: false
 categories:
-  - accelerators
   - research
 format:
   html:

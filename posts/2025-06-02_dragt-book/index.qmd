@@ -3,8 +3,7 @@ title: "A 2700-page book on Lie methods in accelerator physics"
 author: Austin Hoover
 date: 2025-06-02
 categories:
-  - particle accelerators
-  - nonlinear
+  - dynamics
   - books
 ---
 

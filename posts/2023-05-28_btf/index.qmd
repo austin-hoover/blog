@@ -2,6 +2,10 @@
 title: "Five-dimensional phase space measurements"
 date: 2023-05-28
 author: "Austin Hoover"
+categories: 
+  - research
+  - papers
+  - graphics
 categories: [particle accelerators, high-dimensional data, visualization]
 bibliography: references.bib
 csl: american-physics-society.csl
