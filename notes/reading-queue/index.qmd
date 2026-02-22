@@ -1,0 +1,20 @@
+---
+title: "Reading Queue"
+date: 2026-02-20
+date-modified: 2026-02-20
+---
+
+#### Philosophy
+
+* [*On Bullshit*](https://www.amazon.com/Bullshit-Harry-G-Frankfurt/dp/0691122946) --- Frankfurt (2005)
+* [*Dialogues on Ethical Vegetarianism*](https://www.amazon.com/Dialogues-Ethical-Vegetarianism-Michael-Huemer/dp/1138328294) --- Huemer (2019)
+* [*Taking Morality Seriously: A Defense of Robust Realism*](https://www.amazon.com/dp/B005Z5A2JO?tag=oxacglobal-20&linkCode=osi&th=1&psc=1) --- Enoch (2011)
+* [*Ethical Theory (Puzzles, Paradoxes, and Thought Experiments in Philosophy)*](https://www.amazon.com/Ethical-Theory-Paradoxes-Experiments-Philosophy/dp/1032335165) --- Munoz and Stroud (2024)
+* [*Metaphysics*](https://www.amazon.com/Metaphysics-Peter-van-Inwagen/dp/0813343569) --- Van Inwagen (2008)
+* [*The Miracle of Theism: Arguments For and Against the Existence of God*](https://www.amazon.com/Miracle-Theism-Arguments-Against-Existence/dp/019824682X) --- Mackie (1982)
+
+
+#### Papers
+
+* [*The Use of Knowledge in Society*](https://statisticaleconomics.org/wp-content/uploads/2013/03/the_use_of_knowledge_in_society_-_hayek.pdf) --- Hayek (1945)
+* [*Minds, Brains, and Programs*](https://web-archive.southampton.ac.uk/cogprints.org/7150/1/10.1.1.83.5248.pdf) --- Searle (1980)
