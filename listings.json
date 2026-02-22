@@ -10,8 +10,8 @@
   {
     "listing": "/notes.html",
     "items": [
-      "/notes/beam-plasma-physics-simulation/index.html",
       "/notes/space-charge/index.html",
+      "/notes/beam-plasma-physics-simulation/index.html",
       "/notes/nonlinear-dynamics/index.html",
       "/notes/collisionless-relaxation/index.html",
       "/notes/films/index.html",
