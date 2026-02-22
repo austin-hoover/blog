@@ -4,6 +4,8 @@ date: 2026-01-31
 date-modified: 2026-02-20
 ---
 
+#### Queue
+
 * [*Collisionless Relaxation in Systems with Coulomb Interactions*](https://doi.org/10.1103/PhysRevLett.25.1155) --- Kadomtsev and Pogutse (1970)
 * [*Collisionless Relaxation in Non-Neutral Plasmas*](https://arxiv.org/pdf/0712.1921) --- Levin, Pakter, and Teles (2008)
 * [*Collisionless relaxation in gravitational systems: From violent relaxation to gravothermal collapse*](https://arxiv.org/pdf/0808.3092) --- Levin, Pakter, and Rizzato (2008)
