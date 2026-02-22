@@ -6,7 +6,6 @@ categories:
   - arguments
   - theism
   - fine-tuning
-categories: [teleological arguments, fine-tuning, multiverse]
 bibliography: references.bib
 csl: ./american-physics-society.csl
 ---
