@@ -12,7 +12,7 @@ $body-color: black;
 $primary: rgb(18, 84, 127);  // darker
 // $primary: rgb(26, 94, 173);  // lighter
 
-$code-font-size: 0.8em;
+$code-font-size: 0.78em;
 
 $link-decoration: none;
 $link-hover-decoration: underline;
@@ -46,6 +46,7 @@ span.header-section-number::after {
 }
 
 .quarto-listing-table td {
+  line-height: 1.15em;
   // padding-top:    8px !important;
   // padding-bottom: 8px !important;
 }

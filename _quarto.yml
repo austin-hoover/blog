@@ -21,10 +21,10 @@ format:
     respect-user-color-scheme: true
     
     grid:
-        body-width: 600px
+        body-width: 576px
     mainfont: "Times"
     fontsize: 16px
-    linestretch: 1.35
+    linestretch: 1.25
     
     toc: false
     toc-location: right
