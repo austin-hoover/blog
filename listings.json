@@ -4,31 +4,16 @@
     "items": []
   },
   {
-    "listing": "/notes/space-charge/index.html",
+    "listing": "/notes/books/index.html",
     "items": []
   },
   {
-    "listing": "/notes.html",
-    "items": [
-      "/notes/space-charge/index.html",
-      "/notes/beam-plasma-physics-simulation/index.html",
-      "/notes/nonlinear-dynamics/index.html",
-      "/notes/collisionless-relaxation/index.html",
-      "/notes/films/index.html",
-      "/notes/halo-formation/index.html",
-      "/notes/blogs/index.html",
-      "/notes/books/index.html",
-      "/notes/accelerators/index.html",
-      "/notes/journals/index.html",
-      "/notes/simulation-codes/index.html",
-      "/notes/sampling/index.html",
-      "/notes/phase-space-reconstruction/index.html",
-      "/notes/papers-stem/index.html",
-      "/notes/research-tools/index.html",
-      "/notes/web-links/index.html",
-      "/notes/philosophy/index.html",
-      "/notes/people/index.html"
-    ]
+    "listing": "/notes/films/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/blogs/index.html",
+    "items": []
   },
   {
     "listing": "/index.html",
@@ -87,15 +72,31 @@
     ]
   },
   {
-    "listing": "/notes/blogs/index.html",
-    "items": []
+    "listing": "/notes.html",
+    "items": [
+      "/notes/books/index.html",
+      "/notes/space-charge/index.html",
+      "/notes/philosophy-of-science/index.html",
+      "/notes/beam-plasma-physics-simulation/index.html",
+      "/notes/nonlinear-dynamics/index.html",
+      "/notes/collisionless-relaxation/index.html",
+      "/notes/films/index.html",
+      "/notes/halo-formation/index.html",
+      "/notes/blogs/index.html",
+      "/notes/accelerators/index.html",
+      "/notes/journals/index.html",
+      "/notes/simulation-codes/index.html",
+      "/notes/sampling/index.html",
+      "/notes/phase-space-reconstruction/index.html",
+      "/notes/papers-stem/index.html",
+      "/notes/research-tools/index.html",
+      "/notes/web-links/index.html",
+      "/notes/philosophy/index.html",
+      "/notes/people/index.html"
+    ]
   },
   {
-    "listing": "/notes/films/index.html",
-    "items": []
-  },
-  {
-    "listing": "/notes/books/index.html",
+    "listing": "/notes/space-charge/index.html",
     "items": []
   },
   {
