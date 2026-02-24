@@ -94,6 +94,8 @@ listing:
       path: "https://shermanalexie.substack.com/"
     - title: "Wondering Freely"
       path: "https://helendecruz.substack.com/"
+    - title: "Rob Nagler"
+      path: "https://www.robnagler.com"
 ---
 
 ::: {#sample-listings}
