@@ -22,6 +22,7 @@ date-modified: 2026-02-22
 
 #### Queue
 
-* [*Studies in the Logic of Confirmation*](https://www.andrew.cmu.edu/user/kk3n/philsciclass/hempelconf.pdf) --- Carl Gustav Hempel (1945).
-* [*Two Dogmas of Empiricism*](https://www.theologie.uzh.ch/dam/jcr:ffffffff-fbd6-1538-0000-000070cf64bc/Quine51.pdf) --- Willard Van Orman Quine (1951).
-* [*Science: Conjectures and Refutations*](http://www.dpi.inpe.br/gilberto/cursos/cst-311/popper_conjectures_refutations.pdf) --- Karl Popper (1962).
+* [*Studies in the Logic of Confirmation*](https://www.andrew.cmu.edu/user/kk3n/philsciclass/hempelconf.pdf) --- Carl Gustav Hempel (1945)
+* [*Two Dogmas of Empiricism*](https://www.theologie.uzh.ch/dam/jcr:ffffffff-fbd6-1538-0000-000070cf64bc/Quine51.pdf) --- Willard Van Orman Quine (1951)
+* [*Science: Conjectures and Refutations*](http://www.dpi.inpe.br/gilberto/cursos/cst-311/popper_conjectures_refutations.pdf) --- Karl Popper (1962)
+* [*The Structure of Scientific Revolutions*](https://www.lri.fr/~mbl/Stanford/CS477/papers/Kuhn-SSR-2ndEd.pdf) --- Thomas Kuhni (1962)
