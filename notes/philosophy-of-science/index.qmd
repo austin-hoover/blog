@@ -5,7 +5,7 @@ date-modified: 2026-02-24
 ---
 
 
-#### Books
+#### Books and Papers
 
 * [*Time and Chance*](https://www.amazon.com/Time-Chance-David-Z-Albert/dp/0674011325) --- David Albert (2000)
 * [*Philosophy of Physics: Space and Time*](https://press.princeton.edu/books/paperback/9780691165714/philosophy-of-physics?srsltid=AfmBOorCoLu2SPa7ft7FgJSQDu29a-ev4c_H8mxc25uvljXOsArPmN6Y) --- Tim Maudlin (2014)
@@ -13,6 +13,7 @@ date-modified: 2026-02-24
 * [*The Emergent Multiverse: Quantum Theory according to the Everett Interpretation*](https://www.amazon.com/Emergent-Multiverse-Quantum-according-Interpretation/dp/0198707541) --- David Wallace (2014)
 * [*How the Laws of Physics Lie*](https://www.amazon.com/How-Laws-Physics-Nancy-Cartwright/dp/0198247044) --- Nancy Cartwright (1983)
 * [*Laws of Physics*](https://www.amazon.com/Laws-Physics-Elements-Philosophy/dp/100901272X) --- Eddie Chen (2024)
+* [*Causation as Folk Science*](https://sites.pitt.edu/~jdnorton/papers/003004.pdf) --- John Norton (2003)
 
 
 #### Videos

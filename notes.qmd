@@ -2,7 +2,7 @@
 title: Notes
 listing:
   contents: ./notes
-  fields: [title, date, date-modified]
+  fields: [title, date-modified]
   date-format: YYYY‑MM‑DD
   table-hover: true
   type: table

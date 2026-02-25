@@ -1,7 +1,7 @@
 ---
 title: "Blogs"
 date: 2026-01-10
-date-modified: 2026-02-10
+date-modified: 2026-02-23
 listing:
   id: sample-listings
   sort: false
@@ -70,8 +70,6 @@ listing:
       path: "https://www.preposterousuniverse.com/blog/"
     - title: "Asymptotia"
       path: "https://asymptotia.com"
-    - title: "Coleman's Corner"
-      path: "https://colemanhughes.substack.com/"
     - title: "Commonplace Philosophy"
       path: "https://jaredhenderson.substack.com/"
     - title: "Future Doctrina"
@@ -96,6 +94,9 @@ listing:
       path: "https://helendecruz.substack.com/"
     - title: "Rob Nagler"
       path: "https://www.robnagler.com"
+    - title: "Kasparov on the Kremlin"
+      path: "https://www.thenextmove.org/s/kasparov-on-the-kremlin?utm_source=substack&utm_medium=menu"
+
 ---
 
 ::: {#sample-listings}
