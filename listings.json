@@ -75,6 +75,7 @@
     "listing": "/notes.html",
     "items": [
       "/notes/philosophy-of-science/index.html",
+      "/notes/blogs/index.html",
       "/notes/books/index.html",
       "/notes/space-charge/index.html",
       "/notes/beam-plasma-physics-simulation/index.html",
@@ -82,7 +83,6 @@
       "/notes/collisionless-relaxation/index.html",
       "/notes/films/index.html",
       "/notes/halo-formation/index.html",
-      "/notes/blogs/index.html",
       "/notes/accelerators/index.html",
       "/notes/journals/index.html",
       "/notes/simulation-codes/index.html",
@@ -91,8 +91,8 @@
       "/notes/papers-stem/index.html",
       "/notes/research-tools/index.html",
       "/notes/web-links/index.html",
-      "/notes/philosophy/index.html",
-      "/notes/people/index.html"
+      "/notes/people/index.html",
+      "/notes/philosophy/index.html"
     ]
   },
   {

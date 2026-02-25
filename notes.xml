@@ -20,7 +20,7 @@
 
 
 
-<section id="books" class="level4">
+<section id="books-and-papers" class="level4">
 
 <ul>
 <li><a href="https://www.amazon.com/Time-Chance-David-Z-Albert/dp/0674011325"><em>Time and Chance</em></a> — David Albert (2000)</li>
@@ -29,6 +29,7 @@
 <li><a href="https://www.amazon.com/Emergent-Multiverse-Quantum-according-Interpretation/dp/0198707541"><em>The Emergent Multiverse: Quantum Theory according to the Everett Interpretation</em></a> — David Wallace (2014)</li>
 <li><a href="https://www.amazon.com/How-Laws-Physics-Nancy-Cartwright/dp/0198247044"><em>How the Laws of Physics Lie</em></a> — Nancy Cartwright (1983)</li>
 <li><a href="https://www.amazon.com/Laws-Physics-Elements-Philosophy/dp/100901272X"><em>Laws of Physics</em></a> — Eddie Chen (2024)</li>
+<li><a href="https://sites.pitt.edu/~jdnorton/papers/003004.pdf"><em>Causation as Folk Science</em></a> — John Norton (2003)</li>
 </ul>
 </section>
 <section id="videos" class="level4">
@@ -1845,93 +1846,93 @@ Year
 
 </tr>
 
-<tr data-index="29" data-listing-title-sort="Coleman's Corner">
-<td>
-<a href="https://colemanhughes.substack.com/" class="title listing-title">Coleman’s Corner</a>
-</td>
-
-</tr>
-
-<tr data-index="30" data-listing-title-sort="Commonplace Philosophy">
+<tr data-index="29" data-listing-title-sort="Commonplace Philosophy">
 <td>
 <a href="https://jaredhenderson.substack.com/" class="title listing-title">Commonplace Philosophy</a>
 </td>
 
 </tr>
 
-<tr data-index="31" data-listing-title-sort="Future Doctrina">
+<tr data-index="30" data-listing-title-sort="Future Doctrina">
 <td>
 <a href="https://mickryan.substack.com" class="title listing-title">Future Doctrina</a>
 </td>
 
 </tr>
 
-<tr data-index="32" data-listing-title-sort="Gowing Awol">
+<tr data-index="31" data-listing-title-sort="Gowing Awol">
 <td>
 <a href="https://wollenblog.substack.com/" class="title listing-title">Gowing Awol</a>
 </td>
 
 </tr>
 
-<tr data-index="33" data-listing-title-sort="Greco and Wansley">
+<tr data-index="32" data-listing-title-sort="Greco and Wansley">
 <td>
 <a href="https://grecowansley.substack.com/" class="title listing-title">Greco and Wansley</a>
 </td>
 
 </tr>
 
-<tr data-index="34" data-listing-title-sort="The Grumpy Economist">
+<tr data-index="33" data-listing-title-sort="The Grumpy Economist">
 <td>
 <a href="https://www.grumpy-economist.com/" class="title listing-title">The Grumpy Economist</a>
 </td>
 
 </tr>
 
-<tr data-index="35" data-listing-title-sort="Kareem Takes on the News">
+<tr data-index="34" data-listing-title-sort="Kareem Takes on the News">
 <td>
 <a href="https://kareem.substack.com/" class="title listing-title">Kareem Takes on the News</a>
 </td>
 
 </tr>
 
-<tr data-index="36" data-listing-title-sort="The Motivated Skeptic">
+<tr data-index="35" data-listing-title-sort="The Motivated Skeptic">
 <td>
 <a href="https://rbnmckenna86.substack.com/" class="title listing-title">The Motivated Skeptic</a>
 </td>
 
 </tr>
 
-<tr data-index="37" data-listing-title-sort="Pens and Poison">
+<tr data-index="36" data-listing-title-sort="Pens and Poison">
 <td>
 <a href="https://www.pensandpoison.org/" class="title listing-title">Pens and Poison</a>
 </td>
 
 </tr>
 
-<tr data-index="38" data-listing-title-sort="Reflections on What Matters">
+<tr data-index="37" data-listing-title-sort="Reflections on What Matters">
 <td>
 <a href="https://jpandrew.substack.com/" class="title listing-title">Reflections on What Matters</a>
 </td>
 
 </tr>
 
-<tr data-index="39" data-listing-title-sort="Sherman Alexie">
+<tr data-index="38" data-listing-title-sort="Sherman Alexie">
 <td>
 <a href="https://shermanalexie.substack.com/" class="title listing-title">Sherman Alexie</a>
 </td>
 
 </tr>
 
-<tr data-index="40" data-listing-title-sort="Wondering Freely">
+<tr data-index="39" data-listing-title-sort="Wondering Freely">
 <td>
 <a href="https://helendecruz.substack.com/" class="title listing-title">Wondering Freely</a>
 </td>
 
 </tr>
 
-<tr data-index="41" data-listing-title-sort="Rob Nagler">
+<tr data-index="40" data-listing-title-sort="Rob Nagler">
 <td>
 <a href="https://www.robnagler.com" class="title listing-title">Rob Nagler</a>
+</td>
+
+</tr>
+
+<tr data-index="41" data-listing-title-sort="Kasparov on the Kremlin">
+<td>
+<a href="https://www.thenextmove.org/s/kasparov-on-the-kremlin?utm_source=substack&amp;utm_medium=menu" class="title listing-title">Kasparov on the Kremlin</a>
 </td>
 
 </tr>
@@ -4180,6 +4181,52 @@ Year
   <pubDate>Wed, 01 Jan 2025 05:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>People</title>
+  <link>https://austin-hoover.github.io/blog/notes/people/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<ul>
+<li><a href="https://consc.net">David Chalmers</a></li>
+<li><a href="https://www.philosophy.ox.ac.uk/people/timothy-williamson#tab-414611">Timothy Williamson</a></li>
+<li><a href="http://alexanderpruss.com">Alexander Pruss</a></li>
+<li><a href="http://www.oeftiger.net">Adrian Oeftiger</a></li>
+<li><a href="https://sites.google.com/site/cutterbc/home">Brian Cutter</a></li>
+<li><a href="https://sites.google.com/site/csebens/home">Charles Sebens</a></li>
+<li><a href="https://christophergregoryweaver.com/about-4">Christopher Gregory Weaver</a></li>
+<li><a href="http://davidkipping.co.uk">David Kipping</a></li>
+<li><a href="https://www.eddykemingchen.net">Eddie Chen</a></li>
+<li><a href="https://research.monash.edu/en/persons/graham-oppy">Graham Oppy</a></li>
+<li><a href="https://aicip.github.io/">Hairong Qi</a></li>
+<li><a href="https://ahc.leeds.ac.uk/philosophy/staff/1167/professor-helen-steward">Helen Seward</a></li>
+<li><a href="https://isaacwilhelm.com">Isaac Wilhelm</a></li>
+<li><a href="https://www.jacobbarandes.com">Jacob Barandes</a></li>
+<li><a href="https://web.ornl.gov/~holmesja1/JHolmes/interests.html">Jeff Holmes</a></li>
+<li><a href="https://sites.pitt.edu/~jdnorton/jdnorton.html">John Norton</a></li>
+<li><a href="https://josephschmid.com/research/">Joseph Schmidt</a></li>
+<li><a href="https://www.justinmooney.net">Justin Mooney</a></li>
+<li><a href="https://www.kerrymckenzie.org">Kerry McKenzie</a></li>
+<li><a href="https://melaniemitchell.me">Melanie Mitchell</a></li>
+<li><a href="https://spot.colorado.edu/~huemer/">Michael Heumer</a></li>
+<li><a href="https://nickbostrom.com">Nick Bostrom</a></li>
+<li><a href="https://philipgoffphilosophy.com">Philip Goff</a></li>
+<li><a href="https://simonfriederich.eu/publications.html">Simono Friedrich</a></li>
+<li><a href="https://taylorwcyr.com">Taylor Cyr</a></li>
+<li><a href="https://shc.academia.edu/ThomasMetcalf">Thomas Metcalf</a></li>
+<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tim Oconor</a></li>
+<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tyler Hildebrand</a></li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/people/</guid>
+  <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Philosophy</title>
   <link>https://austin-hoover.github.io/blog/notes/philosophy/</link>
   <description><![CDATA[ 
@@ -4984,50 +5031,6 @@ Year
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/philosophy/</guid>
-  <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>People</title>
-  <link>https://austin-hoover.github.io/blog/notes/people/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<ul>
-<li><a href="http://alexanderpruss.com">Alexander Pruss</a></li>
-<li><a href="http://www.oeftiger.net">Adrian Oeftiger</a></li>
-<li><a href="https://sites.google.com/site/cutterbc/home">Brian Cutter</a></li>
-<li><a href="https://sites.google.com/site/csebens/home">Charles Sebens</a></li>
-<li><a href="https://christophergregoryweaver.com/about-4">Christopher Gregory Weaver</a></li>
-<li><a href="http://davidkipping.co.uk">David Kipping</a></li>
-<li><a href="https://www.eddykemingchen.net">Eddie Chen</a></li>
-<li><a href="https://research.monash.edu/en/persons/graham-oppy">Graham Oppy</a></li>
-<li><a href="https://aicip.github.io/">Hairong Qi</a></li>
-<li><a href="https://ahc.leeds.ac.uk/philosophy/staff/1167/professor-helen-steward">Helen Seward</a></li>
-<li><a href="https://isaacwilhelm.com">Isaac Wilhelm</a></li>
-<li><a href="https://www.jacobbarandes.com">Jacob Barandes</a></li>
-<li><a href="https://web.ornl.gov/~holmesja1/JHolmes/interests.html">Jeff Holmes</a></li>
-<li><a href="https://sites.pitt.edu/~jdnorton/jdnorton.html">John Norton</a></li>
-<li><a href="https://josephschmid.com/research/">Joseph Schmidt</a></li>
-<li><a href="https://www.justinmooney.net">Justin Mooney</a></li>
-<li><a href="https://www.kerrymckenzie.org">Kerry McKenzie</a></li>
-<li><a href="https://melaniemitchell.me">Melanie Mitchell</a></li>
-<li><a href="https://spot.colorado.edu/~huemer/">Michael Heumer</a></li>
-<li><a href="https://nickbostrom.com">Nick Bostrom</a></li>
-<li><a href="https://philipgoffphilosophy.com">Philip Goff</a></li>
-<li><a href="https://simonfriederich.eu/publications.html">Simono Friedrich</a></li>
-<li><a href="https://taylorwcyr.com">Taylor Cyr</a></li>
-<li><a href="https://shc.academia.edu/ThomasMetcalf">Thomas Metcalf</a></li>
-<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tim Oconor</a></li>
-<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tyler Hildebrand</a></li>
-</ul>
-
-
-
- ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/people/</guid>
   <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
 </item>
 </channel>
