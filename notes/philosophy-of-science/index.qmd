@@ -1,7 +1,7 @@
 ---
 title: "Philosophy of Science"
 date: 2026-02-22
-date-modified: 2026-02-22
+date-modified: 2026-02-24
 ---
 
 
