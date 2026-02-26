@@ -22,9 +22,9 @@ format:
     
     grid:
         body-width: 576px
-    mainfont: "Times"
-    fontsize: 16px
-    linestretch: 1.25
+    mainfont: "Georgia"
+    fontsize: 14.5px
+    #linestretch: 1.25
     
     toc: false
     toc-location: right
