@@ -64,9 +64,9 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-749aa3d075cd7f4837f9b5c6285fffb8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7ca3469a10760b2af240ed1033018773.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-749aa3d075cd7f4837f9b5c6285fffb8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f0e28603281f01d59dd74e99199b23cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-3f5724f0af1f7b68a8c2596a2d91b1c0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-f0e28603281f01d59dd74e99199b23cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -388,16 +388,16 @@ window.Quarto = {
 
 
 <p>Our paper, <a href="https://journals.aps.org/prl/accepted/10.1103/bvwq-34jf"><em>Demonstration of a novel phase-space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams</em></a>, was recently accepted by Physical Review Letters (PRL). Here’s the <a href="https://arxiv.org/pdf/2601.13517">preprint</a>. The paper presents the first experimental test of <em>eigenpainting</em>, a method proposed by Viatcheslav (Slava) Danilov in 2003 <span class="citation" data-cites="danilov_2003_self">&nbsp;[<a href="#ref-danilov_2003_self" role="doc-biblioref">1</a>]</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In this post, I’ll share some additional background and figures to help explain our results.</p>
-<section id="sec-intro" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="sec-intro"><span class="header-section-number">1</span> Introduction</h2>
+<section id="sec-intro" class="level2">
+<h2 class="anchored" data-anchor-id="sec-intro">Introduction</h2>
 <p>Accelerators such as the <a href="https://neutrons.ornl.gov/sns">SNS</a> and <a href="https://j-parc.jp/c/en/">J-PARC</a> use <a href="../2021-05-27_painting-a-particle-beam"><em>charge-exchange injection</em></a> to create intense proton beams for neutron scattering experiments. The injection is a three-step process: H- (negative hydrogen) ions are accelerated in a linac, converted to protons using a carbon foil or laser-magnet system, and then transferred to an accumulator ring. We call each batch of injected protons a <em>minipulse</em>. After the first minipulse completes one lap around the ring, a second is injected, and so on for hundreds or thousands of turns.</p>
 <p>Vanilla charge-exchange injection leads to charge pile-up at the injection point, causing halo formation and beam loss. This motivates the technique of <em>phase space painting</em>: moving the injection point in phase space (position-momentum space) during accumulation. Painting spreads the charge over a larger area, reducing peak density and associated space charge effects. Painting can also enable more detailed control of the distribution, although this is challenging because each injected minipulse affects the beam dynamics on the next turn.</p>
 <p>Eigenpainting is a method to paint <em>stationary</em> phase space distributions. The method follows from the eigenvector analysis of coupled motion, which I’ll summarize in <a href="#sec-method" class="quarto-xref">Section&nbsp;2</a>. In <a href="#sec-app" class="quarto-xref">Section&nbsp;3</a>, I’ll describe several possible applications of eigenpainting. Finally, in <a href="#sec-exp" class="quarto-xref">Section&nbsp;4</a>, I’ll describe our attempt to implement eigenpainting in the SNS and our plans for follow-up experiments.</p>
 </section>
-<section id="sec-method" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-method"><span class="header-section-number">2</span> Eigenvectors, eigenvalues, and eigenpainting</h2>
-<section id="eigenvector-analysis" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="eigenvector-analysis"><span class="header-section-number">2.1</span> Eigenvector analysis</h3>
+<section id="sec-method" class="level2">
+<h2 class="anchored" data-anchor-id="sec-method">Eigenvectors, eigenvalues, and eigenpainting</h2>
+<section id="eigenvector-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="eigenvector-analysis">Eigenvector analysis</h3>
 <p>Assume the phase space coordinates <span class="math inline">\(\mathbf{x}\)</span> evolve according to</p>
 <p><span id="eq-one-turn-map"><span class="math display">\[
 \mathbf{x} \rightarrow \mathbf{M} \mathbf{x} ,
@@ -444,8 +444,8 @@ Figure&nbsp;2: Eigenvector paths (red/blue) plotted on top of turn-by-turn track
 </figure>
 </div>
 </section>
-<section id="normalized-coordinates" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="normalized-coordinates"><span class="header-section-number">2.2</span> Normalized coordinates</h3>
+<section id="normalized-coordinates" class="level3">
+<h3 class="anchored" data-anchor-id="normalized-coordinates">Normalized coordinates</h3>
 <p>We can use the eigenvectors to construct a symplectic matrix <span class="math inline">\(\mathbf{V}\)</span>,</p>
 <p><span id="eq-norm-matrix-constr"><span class="math display">\[
 \mathbf{V} =
@@ -485,8 +485,8 @@ Figure&nbsp;3: Normalized tracking data.
 </figure>
 </div>
 </section>
-<section id="single-mode-injection-painting" class="level3" data-number="2.3">
-<h3 data-number="2.3" class="anchored" data-anchor-id="single-mode-injection-painting"><span class="header-section-number">2.3</span> Single-mode injection painting</h3>
+<section id="single-mode-injection-painting" class="level3">
+<h3 class="anchored" data-anchor-id="single-mode-injection-painting">Single-mode injection painting</h3>
 <p>The idea behind eigenpainting is to inject particles into only one mode, i.e., along only one eigenvector. Suppose we continuously inject particles at a fixed amplitude <span class="math inline">\(J_1\)</span> and phase <span class="math inline">\(\psi_1\)</span>. The injected particles will advance in phase, eventually filling the ellipse traced by the eigenvector. If we inject particles at a different amplitude, they will form another ellipse. Thus, by varying the injection amplitude as a function of time, we can build any elliptically symmetric distribution <span class="math inline">\(f(J_1)\)</span>.</p>
 <p>We’ll focus on the specific choice of linearly increasing amplitude:</p>
 <p><span id="eq-eigpaint"><span class="math display">\[
@@ -528,11 +528,11 @@ Figure&nbsp;5: Eigenpainting in the SNS ring (linear approximation, no space cha
 <p>Another critical point is that the painted distribution is <em>stationary</em> with respect to turn number. The painted distribution is an equilibrium solution of the Vlasov-Poisson equations, known as the KV distribution <span class="citation" data-cites="qin_2009_generalized">&nbsp;[<a href="#ref-qin_2009_generalized" role="doc-biblioref">4</a>]</span>. Equilibrium distributions are functions of invariants (<span class="math inline">\(J_1\)</span> in this case) and preserve their functional form in phase space as they evolve. This ensures the linearity of space charge forces throughout the ring. Furthermore, the distribution is in equilibrium at all times <span class="math inline">\(t\)</span>; the only change is a global scaling factor as particles are added to the edge of the beam ellipse.</p>
 </section>
 </section>
-<section id="sec-app" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="sec-app"><span class="header-section-number">3</span> Applications of eigenpainting</h2>
+<section id="sec-app" class="level2">
+<h2 class="anchored" data-anchor-id="sec-app">Applications of eigenpainting</h2>
 <p>Now that eigenpainting is defined, let’s discuss what it could be used for. We’ll focus on three features of the accumulated distribution: small four-dimensional emittance, strong cross-plane correlations, and uniform density.</p>
-<section id="emittance-as-a-measure-of-phase-space-volume" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="emittance-as-a-measure-of-phase-space-volume"><span class="header-section-number">3.1</span> Emittance as a measure of phase space volume</h3>
+<section id="emittance-as-a-measure-of-phase-space-volume" class="level3">
+<h3 class="anchored" data-anchor-id="emittance-as-a-measure-of-phase-space-volume">Emittance as a measure of phase space volume</h3>
 <p>Emittance is a measure of phase space volume calculated from the covariance matrix <span class="math inline">\(\mathbf{\Sigma}\)</span>:</p>
 <p><span id="eq-cov"><span class="math display">\[
 \mathbf{\Sigma}
@@ -601,8 +601,8 @@ Figure&nbsp;5: Eigenpainting in the SNS ring (linear approximation, no space cha
 \tag{16}\]</span></span></p>
 <p>The projected emittances define the rms ellipse areas in the <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> and <span class="math inline">\(y\)</span>-<span class="math inline">\(y'\)</span> planes. Thus, the projected emittance ratio <span class="math inline">\(\varepsilon_x / \varepsilon_y\)</span> tells us the fraction of particles that occupy the horizontal mode compared to the vertical mode of oscillation. The intrinsic emittances have a similar interpretation. The intrinsic emittance ratio <span class="math inline">\(\varepsilon_1 / \varepsilon_2\)</span> tells us the fraction of particles that occupy one mode compared to another mode of oscillation, where the modes are defined by the symplectic matrix <span class="math inline">\(\mathbf{V}\)</span> in <a href="#eq-cov-diag" class="quarto-xref">Equation&nbsp;11</a>. For example, if <span class="math inline">\(\mathbf{V}\)</span> is the identity matrix, then the two modes correspond to <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. In general, the modes correspond to <em>elliptical</em> trajectories in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane.</p>
 </section>
-<section id="flat-beams-for-high-energy-colliders" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="flat-beams-for-high-energy-colliders"><span class="header-section-number">3.2</span> Flat beams for high-energy colliders</h3>
+<section id="flat-beams-for-high-energy-colliders" class="level3">
+<h3 class="anchored" data-anchor-id="flat-beams-for-high-energy-colliders">Flat beams for high-energy colliders</h3>
 <p>The eigenpainted beam has a very large ratio of <em>intrinsic</em> emittances: <span class="math inline">\(\varepsilon_1 \gg \varepsilon_2\)</span>; therefore, the particle motion is dominated by a single elliptical mode. I’ll call this a <em>vortex distribution</em> referring to the spiral pattern of the velocity field.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Note that a vortex distribution can have any distribution in the <span class="math inline">\(x\)</span>-<span class="math inline">\(y\)</span> plane; the important part is the velocity.</p>
 <div id="fig-vortex" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -636,8 +636,8 @@ Figure&nbsp;8: Concept of round-to-flat transformation in a collider. Phase spac
 </figure>
 </div>
 </section>
-<section id="vortex-distributions-for-space-charge-mitigation" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="vortex-distributions-for-space-charge-mitigation"><span class="header-section-number">3.3</span> Vortex distributions for space charge mitigation</h3>
+<section id="vortex-distributions-for-space-charge-mitigation" class="level3">
+<h3 class="anchored" data-anchor-id="vortex-distributions-for-space-charge-mitigation">Vortex distributions for space charge mitigation</h3>
 <p>Vortex distributions could also mitigate space charge effects. Consider a simplified model that represents the beam as a frozen background potential <span class="math inline">\(\phi(x, y)\)</span>. In a Gaussian distribution, the potential contains terms proportional to <span class="math inline">\(x^2\)</span>, <span class="math inline">\(x^4\)</span>, and so on. These terms act as periodic nonlinear driving forces, leading to resonance at certain frequencies. These resonances are sometimes called <em>space charge structure resonances</em>. The classic example is the fourth-order resonance, which creates four islands in <span class="math inline">\(x\)</span>-<span class="math inline">\(x'\)</span> phase space. Recently, Cheon et al. <span class="citation" data-cites="cheon_2022_spinning">&nbsp;[<a href="#ref-cheon_2022_spinning" role="doc-biblioref">7</a>]</span> showed that angular momentum can suppress the fourth-order resonance in linear accelerators (<a href="#fig-fourth" class="quarto-xref">Figure&nbsp;9</a>), and I expect the same could hold in circular accelerators. A pure vortex beam with <span class="math inline">\(\varepsilon_2 = 0\)</span> is an extreme case of zero relative motion of particles in the beam.</p>
 <div id="fig-fourth" class="quarto-float quarto-figure quarto-figure-left anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -650,8 +650,8 @@ Figure&nbsp;9: Fourth-order resonance suppression from angular momentum in a bun
 </figure>
 </div>
 </section>
-<section id="vlasov-poisson-equilibrium-and-tune-spread-minimization" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="vlasov-poisson-equilibrium-and-tune-spread-minimization"><span class="header-section-number">3.4</span> Vlasov-Poisson equilibrium and tune spread minimization</h3>
+<section id="vlasov-poisson-equilibrium-and-tune-spread-minimization" class="level3">
+<h3 class="anchored" data-anchor-id="vlasov-poisson-equilibrium-and-tune-spread-minimization">Vlasov-Poisson equilibrium and tune spread minimization</h3>
 <p>The two eigenpainting applications above do not depend on the spatial density of the bunch; they only require a large intrinsic emittance ratio. A third application that depends on the bunch density is the reduction of tune spread. Space charge shifts the particle tunes (frequencies) based on their location in the bunch. For example, <a href="#fig-tunespread" class="quarto-xref">Figure&nbsp;10</a> shows the tune spread within a Gaussian distribution. As the intensity increases, the tune spread grows. The danger is that the tunes cross <a href="../2021-03-28_nonlinear-resonances">nonlinear resonances</a> driven by nonlinearities in the accelerator lattice. So, at least in this simple model, a smaller tune spread is better.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 <p>The smallest possible tune spread is obtained in a uniform density bunch in which all particles oscillate at the same frequency (left side of <a href="#fig-tunespread" class="quarto-xref">Figure&nbsp;10</a>). The KV distribution is the only arrangement of particles that gives the desired density. It turns out to be <em>impossible</em> to paint a KV distribution with finite emittance in both planes. However, we can paint a KV distribution with zero emittance in one of the planes <span class="citation" data-cites="qin_2009_generalized">&nbsp;[<a href="#ref-qin_2009_generalized" role="doc-biblioref">4</a>]</span>. This is just what eigenpainting gives us in <a href="#fig-paint-eig" class="quarto-xref">Figure&nbsp;5</a>. Note that the zero-emittance plane is <em>not</em> <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span>.</p>
 <div id="fig-tunespread" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -666,8 +666,8 @@ Figure&nbsp;10: Tune spreads in increasingly nonuniform distributions. Source: <
 </div>
 </section>
 </section>
-<section id="sec-exp" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="sec-exp"><span class="header-section-number">4</span> Experimental test of eigenpainting at the SNS</h2>
+<section id="sec-exp" class="level2">
+<h2 class="anchored" data-anchor-id="sec-exp">Experimental test of eigenpainting at the SNS</h2>
 <p>With the background out of the way, I’ll move on to our experiment at the SNS.</p>
 <p>In <span class="citation" data-cites="holmes_2018_injection">&nbsp;[<a href="#ref-holmes_2018_injection" role="doc-biblioref">9</a>]</span>, <a href="https://web.ornl.gov/~holmesja1/JHolmes/interests.html">Jeff Holmes</a> ran simulations of the proposed method in the SNS ring.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> He found that even with nonlinearities included, eigenpainting generated a fairly uniform charge density and strong cross-plane correlations. This motivated our experimental program to implement eigenpainting in real life (“in the control room”).</p>
 <p>The basic setup is shown in <a href="#fig-sns" class="quarto-xref">Figure&nbsp;11</a>. Eight dipole “kicker” magnets control the phase space coordinates at the injection point. Our goal was to program these kicker magnets to trace the correct path in phase space during injection, then measure the accumulated distribution.</p>
@@ -709,8 +709,8 @@ Figure&nbsp;13: Reconstructed distribution in normalized phase space coordinates
 <p>Compare <a href="#fig-exp-dist" class="quarto-xref">Figure&nbsp;13</a> to <a href="#fig-paint-eig-n" class="quarto-xref">Figure&nbsp;4</a>. Ideally, the mode-1 projection would be a uniform disk, and the mode-2 projection would be a small Gaussian blob. While our beam deviates from this ideal case, we do see increased uniformity in the mode-1 projection. The mode-1 emittance is also larger than the mode-2 emittance, giving a ratio <span class="math inline">\(\varepsilon_1 / \varepsilon_2 = 2.4\)</span>. Based on the minipulse size and maximum painting amplitudes, we expected a maximum ratio of 16. We believe that space charge is the primary cause of four-dimensional emittance growth relative to the ideal case. But we also think the emittance growth can be largely reduced in future experiments. (More on that in a second.)</p>
 <p>The distribution’s features are qualitatively reproduced in our simulations, though some differences remain. The simulated emittance ratio is 2.3, close to the measured value.</p>
 </section>
-<section id="sec-conclusion" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="sec-conclusion"><span class="header-section-number">5</span> Conclusions and future work</h2>
+<section id="sec-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="sec-conclusion">Conclusions and future work</h2>
 <p>This project had four main parts: (i) connecting the proposed painting scheme to the eigenvector analysis of linear motion, which we now understand well; (ii) programming the kicker waveforms and measuring the injected phase space coordinates; (iii) reconstructing the four-dimensional phase space distribution from one-dimensional measurements; and (iv) comparing the simulated distribution to the reconstruction. In hindsight, it was a lot of work.</p>
 <p>Since writing the paper, I’ve been encouraged about the potential to improve our results. I’ve learned a few things from our PIC runs. First, the space charge tune shift was <em>huge</em> in our experiment. Lowering the energy from 1.3 GeV to 0.8 GeV increases the tune shift by a factor of 2.5 based on the inverse scaling of space charge with energy. We also painted a very small beam because of our kicker limitations. I estimate that the tunes shifted well below the integer resonance <span class="math inline">\(\nu = 6.0\)</span>. Subsequent analysis has shown that the beam envelope becomes unstable above ~300 minipulse intensity at the targeted emittance. This instability may have been excited during the early stages of injection, leading to a significant change in beam density. In any case, the dynamics near the integer resonance may be complicated, and I need to spend more time analyzing the simulation to understand what’s going on. The situation can probably be improved by changing the lattice optics, but the immediate next step will be to lower the intensity from 600 to ~200 minipulses. Second, we didn’t account for the effect of space charge on the eigenvectors. Since the experiment, I’ve found that space charge has a strong but predictable effect, and that painting into this modified eigenvector could yield a much larger emittance ratio, perhaps up to <span class="math inline">\(\varepsilon_1 / \varepsilon_2 \approx 12\)</span>. I’ll follow up on this in a future post.</p>
 <p>On the simulation side of things, I hope to study the long-term stability of eigen-painted beams and to examine, more generally, four-dimensional phase-space painting as a method of space-charge mitigation.</p>
