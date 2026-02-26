@@ -10,7 +10,7 @@ categories:
   - painting
 format:
   html:
-    number-sections: true
+    number-sections: false
     fig-align: left
 ---
 
