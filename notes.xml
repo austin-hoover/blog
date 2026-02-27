@@ -107,6 +107,32 @@
   <pubDate>Sat, 21 Feb 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Simulation Codes</title>
+  <link>https://austin-hoover.github.io/blog/notes/simulation-codes/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<ul>
+<li><a href="https://github.com/PyORBIT-Collaboration/PyORBIT3">PyORBIT</a></li>
+<li><a href="https://github.com/BLAST-ImpactX/impactx">ImpactX</a></li>
+<li><a href="https://github.com/xsuite/xsuite">Xsuite</a></li>
+<li><a href="https://abpcomputing.web.cern.ch/codes/codes_pages/MadX/">MADX</a></li>
+<li><a href="https://github.com/bmad-sim/bmad-ecosystem">Bmad</a></li>
+<li><a href="https://github.com/desy-ml/cheetah">Cheetah</a></li>
+<li><a href="https://github.com/MSU-Beam-Dynamics/JuTrack.jl">JuTrack</a></li>
+<li><a href="https://github.com/blond-admin/BLonD">BLonD</a></li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/simulation-codes/</guid>
+  <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Particle Accelerators</title>
   <link>https://austin-hoover.github.io/blog/notes/accelerators/</link>
   <description><![CDATA[ 
@@ -175,31 +201,6 @@
 
  ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/journals/</guid>
-  <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Simulation Codes</title>
-  <link>https://austin-hoover.github.io/blog/notes/simulation-codes/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<ul>
-<li><a href="https://github.com/PyORBIT-Collaboration/PyORBIT3">PyORBIT</a></li>
-<li><a href="https://github.com/BLAST-ImpactX/impactx">ImpactX</a></li>
-<li><a href="https://github.com/xsuite/xsuite">Xsuite</a></li>
-<li><a href="https://abpcomputing.web.cern.ch/codes/codes_pages/MadX/">MADX</a></li>
-<li><a href="https://github.com/bmad-sim/bmad-ecosystem">Bmad</a></li>
-<li><a href="https://github.com/desy-ml/cheetah">Cheetah</a></li>
-<li><a href="https://github.com/MSU-Beam-Dynamics/JuTrack.jl">JuTrack</a></li>
-</ul>
-
-
-
- ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/simulation-codes/</guid>
   <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
 </item>
 <item>

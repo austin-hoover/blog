@@ -74,6 +74,7 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/simulation-codes/index.html",
       "/notes/philosophy-of-science/index.html",
       "/notes/blogs/index.html",
       "/notes/books/index.html",
@@ -85,7 +86,6 @@
       "/notes/halo-formation/index.html",
       "/notes/accelerators/index.html",
       "/notes/journals/index.html",
-      "/notes/simulation-codes/index.html",
       "/notes/sampling/index.html",
       "/notes/phase-space-reconstruction/index.html",
       "/notes/papers-stem/index.html",
