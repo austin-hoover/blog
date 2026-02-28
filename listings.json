@@ -1,6 +1,10 @@
 [
   {
-    "listing": "/notes/shows/index.html",
+    "listing": "/notes/halo-formation/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/documentaries/index.html",
     "items": []
   },
   {
@@ -9,10 +13,6 @@
   },
   {
     "listing": "/notes/books/index.html",
-    "items": []
-  },
-  {
-    "listing": "/notes/films/index.html",
     "items": []
   },
   {
@@ -93,25 +93,25 @@
       "/notes/halo-formation/index.html",
       "/notes/accelerators/index.html",
       "/notes/journals/index.html",
+      "/notes/articles/index.html",
       "/notes/sampling/index.html",
       "/notes/phase-space-reconstruction/index.html",
-      "/notes/papers-stem/index.html",
       "/notes/research-tools/index.html",
-      "/notes/web-links/index.html",
+      "/notes/websites/index.html",
       "/notes/people/index.html",
       "/notes/philosophy/index.html"
     ]
+  },
+  {
+    "listing": "/notes/films/index.html",
+    "items": []
   },
   {
     "listing": "/notes/space-charge/index.html",
     "items": []
   },
   {
-    "listing": "/notes/documentaries/index.html",
-    "items": []
-  },
-  {
-    "listing": "/notes/halo-formation/index.html",
+    "listing": "/notes/shows/index.html",
     "items": []
   }
 ]
