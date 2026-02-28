@@ -1,0 +1,21 @@
+---
+title: "Shows"
+date: 2026-02-28
+date-modified: 2026-02-28
+format:
+  html:
+    css: style.css
+listing:
+  fields: [title, year]
+  field-display-names:
+    title: "Title"
+    year: "Year"
+  type: table
+  date-format: YYYY‑MM‑DD
+  table-hover: false
+  categories: false
+  max-items: 99999999
+  page-size: 99999999
+  contents: data.yml
+---
+
