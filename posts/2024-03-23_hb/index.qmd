@@ -11,7 +11,7 @@ categories:
 I spoke at the Workshop on High-Brightness and High-Intensity Hadron Beams (HB) at CERN a few months ago. The workshop drew around 200 attendees from the United States, United Kingdom, South Korea, China, Japan, Germany, Italy, France, and Switzerland. All slides are available [online](https://indico.cern.ch/event/1138716/timetable/#20231009.detailed). Here are some notes and highlights:
 
 
-## Operations and commissioning
+### Operations and commissioning
 
 * The SNS has reached 1.7 MW beam power and should reach 2.8 MW this summer.
 
@@ -24,7 +24,7 @@ I spoke at the Workshop on High-Brightness and High-Intensity Hadron Beams (HB) 
 * After operating for many years, the JPARC, Fermilab, ISIS, and LHC rings are being upgraded to higher energy/intensity. Most of these talks followed a similar pattern, reporting that small changes to the injection scheme, optics, etc., reduced losses.
 
 
-## Beam dynamics in rings
+### Beam dynamics in rings
 
 * Adrian Oeftiger (GSI) gave a fantastic talk on the space charge limit in the FAIR synchrotron. He compared three space charge models: a *fixed frozen* model that assumes the same Gaussian distribution on each turn, an *adaptive frozen* model that scales a Gaussian to the second-order moments on each turn, and a self-consistent *particle-in-cell* model. Despite its lack of self-consistency, the fixed frozen model predicts the loss-free regions of tune space over hundreds of thousands of turns. The beams' nonuniform charge distribution washes out low-order coherent instabilities through Landau damping, rendering the particle-in-cell approach unnecessary. Adrian's simulations also showed that pulsed electron lenses---small electron beam currents that partially cancel the beam's space charge force---could increase the beam intensity by almost 100%. What is the space charge limit in a machine like the SNS, which operates with many fewer turns and a noon-gaussian charge density.
 
@@ -39,7 +39,7 @@ I spoke at the Workshop on High-Brightness and High-Intensity Hadron Beams (HB) 
 * I need to study Chao's book on collective effects.
 
 
-## Beam dynamics in linacs
+### Beam dynamics in linacs
 
 * There was debate about 90-degree phase advance limits. Two different talks suggested that linacs could operate above this limit. For example, adding angular momentum to the beam appears to enhance stability.
 
@@ -50,7 +50,7 @@ I spoke at the Workshop on High-Brightness and High-Intensity Hadron Beams (HB) 
 * I presented our work on the impact of high-dimensional phase space correlations on linac beam dynamics.
 
 
-## Codes
+### Codes
 
 * CERN has developed Xsuite, an integrated beam dynamics simulation code based on a collection of CERN codes like MAD and SixTrackLib. The code can handle almost all effects in rings. It is open-source, well-documented, and GPU-accelerated.
 
@@ -59,7 +59,7 @@ I spoke at the Workshop on High-Brightness and High-Intensity Hadron Beams (HB) 
 * I'm currently focused on PyORBIT development because it contains many SNS-specific features and will eventually connect to the SNS control room as an online model. Still, I'm excited about these open-source beam dynamics codes.
 
 
-## Other things
+### Other things
 
 * I enjoyed the conference, but the packed schedule left little time to explore Geneva. I would rather have fewer talks and more poster sessions.
 
