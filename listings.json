@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/notes/shows/index.html",
+    "items": []
+  },
+  {
     "listing": "/notes/philosophy/index.html",
     "items": []
   },
@@ -75,6 +79,8 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/documentaries/index.html",
+      "/notes/shows/index.html",
       "/notes/simulation-codes/index.html",
       "/notes/philosophy-of-science/index.html",
       "/notes/blogs/index.html",
@@ -98,6 +104,10 @@
   },
   {
     "listing": "/notes/space-charge/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/documentaries/index.html",
     "items": []
   },
   {
