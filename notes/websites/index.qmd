@@ -1,0 +1,20 @@
+---
+title: "Websites"
+date: 2025-01-01
+date-modified: 2025-02-28
+---
+
+* [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu)
+* [PhilPapers](https://philpapers.org)
+* [PhilSci-Archive](https://philsci-archive.pitt.edu)
+* [Philosophy of Science Association](https://philsci.org)
+* [Project Gutenberg](https://www.gutenberg.org)
+* [Internet Archive](https://archive.org)
+* [What is it like to be a philosopher?](http://www.whatisitliketobeaphilosopher.com)
+* [Bibliography on the problem of evil](https://docs.google.com/document/d/1dprquqrzQxJsmOArxEoBDaMx15T9T--P8dagUqX6kQI/edit#heading=h.x1uym8fk8fq3)
+* [lesswrong](https://www.lesswrong.com)
+* [Little debates](https://www.routledge.com/Little-Debates-about-Big-Questions/book-series/LDABQ)
+* [Einstein papers](https://einsteinpapers.press.princeton.edu)
+* [Probability theory as extended logic](https://bayes.wustl.edu)
+* [Structured Procrastination](https://www.structuredprocrastination.com)
+* [US Muon Collider Collaboration](https://www.muoncollider.us)

@@ -1,9 +1,10 @@
 ---
 title: "People"
 date: 2024-01-01
-date-modified: 2024-02-20
+date-modified: 2024-02-28
 ---
 
+* [Mark Heimann](https://markheimann.github.io)
 * [David Chalmers](https://consc.net)
 * [Timothy Williamson](https://www.philosophy.ox.ac.uk/people/timothy-williamson#tab-414611)
 * [Alexander Pruss](http://alexanderpruss.com)
