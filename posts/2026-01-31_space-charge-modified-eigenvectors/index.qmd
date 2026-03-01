@@ -7,7 +7,7 @@ categories:
   - research
 format:
   html:
-    fig-align: left
+    fig-align: center
 ---
 
 In our [eigenpainting experiment](../2026-01-30_eigenpainting-prl) at the SNS, we measured final intrinsic emittance $\varepsilon_1 = 12.4$ and $\varepsilon_2 = 5.1$ (mm mrad), giving a ratio $\varepsilon_1 / \varepsilon_2 = 2.4$. The beam intensity was $I = I_0 = 600$ minipulses, with each minipulse containing around $1.5 \times 10^{14}$ protons within an emittance $\varepsilon_1 = \varepsilon_2 \approx 0.25$ [mm mrad]. Here are the simulated beam distributions and emittances as the intensity increases:
