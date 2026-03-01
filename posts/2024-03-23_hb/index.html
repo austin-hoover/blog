@@ -336,8 +336,8 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 
 
 <p>I spoke at the Workshop on High-Brightness and High-Intensity Hadron Beams (HB) at CERN a few months ago. The workshop drew around 200 attendees from the United States, United Kingdom, South Korea, China, Japan, Germany, Italy, France, and Switzerland. All slides are available <a href="https://indico.cern.ch/event/1138716/timetable/#20231009.detailed">online</a>. Here are some notes and highlights:</p>
-<section id="operations-and-commissioning" class="level2">
-<h2 class="anchored" data-anchor-id="operations-and-commissioning">Operations and commissioning</h2>
+<section id="operations-and-commissioning" class="level3">
+<h3 class="anchored" data-anchor-id="operations-and-commissioning">Operations and commissioning</h3>
 <ul>
 <li><p>The SNS has reached 1.7 MW beam power and should reach 2.8 MW this summer.</p></li>
 <li><p>FRIB has commissioned their accelerator and started generating <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.132.072501">data</a>. They have a fascinating research program studying rare isotopes near the nuclear drip line.</p></li>
@@ -346,8 +346,8 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 <li><p>After operating for many years, the JPARC, Fermilab, ISIS, and LHC rings are being upgraded to higher energy/intensity. Most of these talks followed a similar pattern, reporting that small changes to the injection scheme, optics, etc., reduced losses.</p></li>
 </ul>
 </section>
-<section id="beam-dynamics-in-rings" class="level2">
-<h2 class="anchored" data-anchor-id="beam-dynamics-in-rings">Beam dynamics in rings</h2>
+<section id="beam-dynamics-in-rings" class="level3">
+<h3 class="anchored" data-anchor-id="beam-dynamics-in-rings">Beam dynamics in rings</h3>
 <ul>
 <li><p>Adrian Oeftiger (GSI) gave a fantastic talk on the space charge limit in the FAIR synchrotron. He compared three space charge models: a <em>fixed frozen</em> model that assumes the same Gaussian distribution on each turn, an <em>adaptive frozen</em> model that scales a Gaussian to the second-order moments on each turn, and a self-consistent <em>particle-in-cell</em> model. Despite its lack of self-consistency, the fixed frozen model predicts the loss-free regions of tune space over hundreds of thousands of turns. The beams’ nonuniform charge distribution washes out low-order coherent instabilities through Landau damping, rendering the particle-in-cell approach unnecessary. Adrian’s simulations also showed that pulsed electron lenses—small electron beam currents that partially cancel the beam’s space charge force—could increase the beam intensity by almost 100%. What is the space charge limit in a machine like the SNS, which operates with many fewer turns and a noon-gaussian charge density.</p></li>
 <li><p>Cristhian Gonzalez-Ortiz (MSU) has done excellent work on resonance diagram measurements and correction schemes using sextupoles in the Fermilab booster ring.</p></li>
@@ -357,8 +357,8 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 <li><p>I need to study Chao’s book on collective effects.</p></li>
 </ul>
 </section>
-<section id="beam-dynamics-in-linacs" class="level2">
-<h2 class="anchored" data-anchor-id="beam-dynamics-in-linacs">Beam dynamics in linacs</h2>
+<section id="beam-dynamics-in-linacs" class="level3">
+<h3 class="anchored" data-anchor-id="beam-dynamics-in-linacs">Beam dynamics in linacs</h3>
 <ul>
 <li><p>There was debate about 90-degree phase advance limits. Two different talks suggested that linacs could operate above this limit. For example, adding angular momentum to the beam appears to enhance stability.</p></li>
 <li><p>Dong-O Jeon et al.&nbsp;tried to clarify the relationship between “parametric instabilities” and “particle resonances.” The field seems so small that people will continue to invent their own language. Perhaps we should adopt the language in Ingo Hofmann’s book “Space Charge Physics for Particle Accelerators.”</p></li>
@@ -366,16 +366,16 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 <li><p>I presented our work on the impact of high-dimensional phase space correlations on linac beam dynamics.</p></li>
 </ul>
 </section>
-<section id="codes" class="level2">
-<h2 class="anchored" data-anchor-id="codes">Codes</h2>
+<section id="codes" class="level3">
+<h3 class="anchored" data-anchor-id="codes">Codes</h3>
 <ul>
 <li><p>CERN has developed Xsuite, an integrated beam dynamics simulation code based on a collection of CERN codes like MAD and SixTrackLib. The code can handle almost all effects in rings. It is open-source, well-documented, and GPU-accelerated.</p></li>
 <li><p>LBNL has developed ImpactX in addition to their WarpX code. ImpactX is similar to PyORBIT, an s-based code used primarily for linacs. The code is well-documented and GPU-accelerated. I liked their figure illustrating the ultimate goal of simulating the entire accelerator chain. Such simulations will require modeling vastly different spatial and temporal scales by connecting the results of different simulation codes.</p></li>
 <li><p>I’m currently focused on PyORBIT development because it contains many SNS-specific features and will eventually connect to the SNS control room as an online model. Still, I’m excited about these open-source beam dynamics codes.</p></li>
 </ul>
 </section>
-<section id="other-things" class="level2">
-<h2 class="anchored" data-anchor-id="other-things">Other things</h2>
+<section id="other-things" class="level3">
+<h3 class="anchored" data-anchor-id="other-things">Other things</h3>
 <ul>
 <li><p>I enjoyed the conference, but the packed schedule left little time to explore Geneva. I would rather have fewer talks and more poster sessions.</p></li>
 <li><p>Some speakers covered their slides in tiny text and figures. These speakers rarely addressed anything on the slides. This is a problem at all conferences, but it was especially bad here.</p></li>
