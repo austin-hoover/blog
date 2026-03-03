@@ -10,302 +10,7 @@
 <atom:link href="https://austin-hoover.github.io/blog/notes/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sun, 08 Feb 2026 05:00:00 GMT</lastBuildDate>
-<item>
-  <title>Particle Accelerators</title>
-  <link>https://austin-hoover.github.io/blog/notes/accelerators/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Eventually turn into a database of particle accelerators since 1930, with links to papers or websites.</p>
-<ul>
-<li><a href="https://www.ornl.gov">Oak Ridge National Laboratory (ORNL)</a></li>
-<li><a href="https://www.lbl.gov">Lawrence Berkeley National Laboratoy (LBNL)</a></li>
-<li><a href="https://www.fnal.gov">Fermi National Accelerator Laboratory (FNAL)</a></li>
-<li><a href="https://www6.slac.stanford.edu">SLAC National Accelerator Laboratory (SLAC)</a></li>
-<li><a href="https://www.lanl.gov">Los Alamos National Laboratory (LANL)</a></li>
-<li><a href="https://neutrons.ornl.gov">Spallation Neutron Source (SNS)</a></li>
-<li><a href="https://home.cern">European Council for Nuclear Research (CERN)</a></li>
-<li><a href="https://www.psi.ch/en">Paul Scherrer Institute (PSI)</a></li>
-<li><a href="https://ess.eu">European Spallation Source (ESS)</a></li>
-<li><a href="https://www.isis.stfc.ac.uk/Pages/home.aspx">ISIS Neutron Source</a></li>
-<li><a href="https://www.bnl.gov/eic/">Electron Ion Collider (EIC)</a></li>
-<li><a href="https://www.bnl.gov/rhic/">Relativistic Heavy Ion Collider (RHIC)</a></li>
-<li><a href="https://home.cern/science/accelerators/future-circular-collider">Future Circular Collider (FCC)</a></li>
-<li><a href="https://muoncollider.web.cern.ch">International Muon Collider Collaboration (IMCC)</a></li>
-<li><a href="https://www.muoncollider.us">US Muon Collider Collaboration (USMCC)</a></li>
-<li><a href="https://j-parc.jp/c/en/">J-PARC</a></li>
-<li><a href="https://www.myrrha.be">MYRRHA</a></li>
-</ul>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div> ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/accelerators/</guid>
-  <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Journals and Preprint Servers</title>
-  <link>https://austin-hoover.github.io/blog/notes/journals/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<ul>
-<li><a href="https://journals.aps.org/prab/">PRAB</a></li>
-<li><a href="https://journals.aps.org/pre/">PRE</a></li>
-<li><a href="https://journals.aps.org/prl/">PRL</a></li>
-<li><a href="https://www.nature.com/nphys/">Nature Physics</a></li>
-<li><a href="https://www.science.org/journal/science">Science</a></li>
-<li><a href="https://pubs.aip.org/aip/cha">Chaos</a></li>
-<li><a href="https://www.sciencedirect.com/journal/nuclear-instruments-and-methods-in-physics-research-section-a-accelerators-spectrometers-detectors-and-associated-equipment/vol/1085/suppl/C">NIM:A</a></li>
-<li><a href="https://mjl.clarivate.com/home">Web of Science Master Journal List</a></li>
-<li><a href="https://arxiv.org">ArXiv</a></li>
-<li><a href="https://arxiv.org/list/physics.acc-ph/recent">ArXiv (accelerator physics)</a></li>
-<li><a href="https://arxiv.org/list/astro-ph.GA/recent">ArXiv (astrophysics of galaxies)</a></li>
-<li><a href="https://arxiv.org/list/nlin.CD/recent">ArXiv (chaotic dynamics)</a></li>
-<li><a href="https://arxiv.org/list/physics.comp-ph/recent">ArXiv (computational physics)</a></li>
-<li><a href="https://arxiv.org/list/physics.data-an/recent">ArXiv (data analysis, statistics, and probability)</a></li>
-<li><a href="https://arxiv.org/list/physics.hist-ph/recent">ArXiv (history and philosophy of physics)</a></li>
-<li><a href="https://philsci-archive.pitt.edu/cgi/latest_days2?n=30">PhilSci</a></li>
-<li><a href="https://philpeople.org">philpeople.org</a></li>
-</ul>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div> ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/journals/</guid>
-  <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Simulation Codes</title>
-  <link>https://austin-hoover.github.io/blog/notes/simulation-codes/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<ul>
-<li><a href="https://github.com/PyORBIT-Collaboration/PyORBIT3">PyORBIT</a></li>
-<li><a href="https://github.com/BLAST-ImpactX/impactx">ImpactX</a></li>
-<li><a href="https://github.com/xsuite/xsuite">Xsuite</a></li>
-<li><a href="https://abpcomputing.web.cern.ch/codes/codes_pages/MadX/">MADX</a></li>
-<li><a href="https://github.com/bmad-sim/bmad-ecosystem">Bmad</a></li>
-<li><a href="https://github.com/desy-ml/cheetah">Cheetah</a></li>
-<li><a href="https://github.com/MSU-Beam-Dynamics/JuTrack.jl">JuTrack</a></li>
-</ul>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div> ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/simulation-codes/</guid>
-  <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Halo Formation</title>
-  <link>https://austin-hoover.github.io/blog/notes/halo-formation/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table table-hover">
-<thead>
-<tr>
-
-<th>
-Title
-</th>
-
-<th>
-Author
-</th>
-
-<th>
-Year
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-title-sort="Analytic Model for Halo Formation in High Current Ion Linacs" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.73.1247" class="title listing-title">Analytic Model for Halo Formation in High Current Ion Linacs</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern</span>
-</td>
-<td>
-<span class="listing-year">1994</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-title-sort="Stability of a Uniform-Density Breathing Beam with Circular Cross Section" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.2835" class="title listing-title">Stability of a Uniform-Density Breathing Beam with Circular Cross Section</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern, Cheng, and Ye</span>
-</td>
-<td>
-<span class="listing-year">1995</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-title-sort="Stability and halo formation of a breathing axisymmetric uniform-density beam" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.54.6788" class="title listing-title">Stability and halo formation of a breathing axisymmetric uniform-density beam</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern et al.</span>
-</td>
-<td>
-<span class="listing-year">1996</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-title-sort="Simulation study of halo formation in breathing round beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.55.4694" class="title listing-title">Simulation study of halo formation in breathing round beams</a>
-</td>
-<td>
-<span class="listing-author">Okamoto and Ikegami</span>
-</td>
-<td>
-<span class="listing-year">1997</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-title-sort="Particle-core model for transverse dynamics of beam halo" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.1.084201" class="title listing-title">Particle-core model for transverse dynamics of beam halo</a>
-</td>
-<td>
-<span class="listing-author">Wangler, et al.</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="Halo formation in three-dimensional bunches" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevE.58.4977" class="title listing-title">Halo formation in three-dimensional bunches</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern et al.</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="Beam-Halo Measurements in High-Current Proton Beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.89.214802" class="title listing-title">Beam-Halo Measurements in High-Current Proton Beams</a>
-</td>
-<td>
-<span class="listing-author">Allen et al.</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.91.264801" class="title listing-title">Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams</a>
-</td>
-<td>
-<span class="listing-author">Bohn and Sideris</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="Analytical treatment of particle-core interaction" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://arxiv.org/pdf/1002.2015" class="title listing-title">Analytical treatment of particle-core interaction</a>
-</td>
-<td>
-<span class="listing-author">Batygin</span>
-</td>
-<td>
-<span class="listing-year">2010</span>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-title-sort="Chaotic Dynamics Driven by Particle-Core Interactions" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://arxiv.org/pdf/2111.09843" class="title listing-title">Chaotic Dynamics Driven by Particle-Core Interactions</a>
-</td>
-<td>
-<span class="listing-author">Batygin and Batygin</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div> ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/halo-formation/</guid>
-  <pubDate>Tue, 03 Feb 2026 05:00:00 GMT</pubDate>
-</item>
+<lastBuildDate>Sat, 31 Jan 2026 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Space Charge</title>
   <link>https://austin-hoover.github.io/blog/notes/space-charge/</link>
@@ -387,497 +92,7 @@ Year
 
 </tr>
 
-<tr data-index="3" data-listing-title-sort="Stability of the Kapchinskij-Vladimirskij (K-V) distribution in long periodic transport systems" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://cds.cern.ch/record/140869/files/p145.pdf" class="title listing-title">Stability of the Kapchinskij-Vladimirskij (K-V) distribution in long periodic transport systems</a>
-</td>
-<td>
-<span class="listing-author">Hofmann, Laslett, Smith, and Haber</span>
-</td>
-<td>
-<span class="listing-year">1983</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-title-sort="Theoretical studies of envelope oscillations and instabilities of mismatched intense charged-particle beams in periodic focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://arxiv.org/pdf/2401.12171" class="title listing-title">Theoretical studies of envelope oscillations and instabilities of mismatched intense charged-particle beams in periodic focusing channels</a>
-</td>
-<td>
-<span class="listing-author">Struckmeier and Reiser</span>
-</td>
-<td>
-<span class="listing-year">1983</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="On the stability and emittance growth of different particle phase-space distributions in a long magnetic quadrupole channel" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://arxiv.org/pdf/2401.12595" class="title listing-title">On the stability and emittance growth of different particle phase-space distributions in a long magnetic quadrupole channel</a>
-</td>
-<td>
-<span class="listing-author">Struckmeier, Klabunde, Reiser</span>
-</td>
-<td>
-<span class="listing-year">1983</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="Evolution of RMS beam envelopes in transport systems with linear x-y coupling" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://cds.cern.ch/record/1053510/files/p29.pdf" class="title listing-title">Evolution of RMS beam envelopes in transport systems with linear x-y coupling</a>
-</td>
-<td>
-<span class="listing-author">Chernin</span>
-</td>
-<td>
-<span class="listing-year">1988</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="Analytic Model for Halo Formation in High Current Ion Linacs" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.73.1247" class="title listing-title">Analytic Model for Halo Formation in High Current Ion Linacs</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern</span>
-</td>
-<td>
-<span class="listing-year">1994</span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="Stability of a Uniform-Density Breathing Beam with Circular Cross Section" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.2835" class="title listing-title">Stability of a Uniform-Density Breathing Beam with Circular Cross Section</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern, Cheng, and Ye</span>
-</td>
-<td>
-<span class="listing-year">1995</span>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-title-sort="Stability and halo formation of a breathing axisymmetric uniform-density beam" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.54.6788" class="title listing-title">Stability and halo formation of a breathing axisymmetric uniform-density beam</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern et al.</span>
-</td>
-<td>
-<span class="listing-year">1996</span>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-title-sort="Simulation study of halo formation in breathing round beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.55.4694" class="title listing-title">Simulation study of halo formation in breathing round beams</a>
-</td>
-<td>
-<span class="listing-author">Okamoto and Ikegami</span>
-</td>
-<td>
-<span class="listing-year">1997</span>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-title-sort="Rigid-Rotor Vlasov Equilibrium for an Intense Charged-Particle Beam Propagating through a Periodic Solenoidal Magnetic Field" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.79.225" class="title listing-title">Rigid-Rotor Vlasov Equilibrium for an Intense Charged-Particle Beam Propagating through a Periodic Solenoidal Magnetic Field</a>
-</td>
-<td>
-<span class="listing-author">Chen, Pakter, and Davidson</span>
-</td>
-<td>
-<span class="listing-year">1997</span>
-</td>
-
-</tr>
-
-<tr data-index="12" data-listing-title-sort="Halo formation in three-dimensional bunches" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevE.58.4977" class="title listing-title">Halo formation in three-dimensional bunches</a>
-</td>
-<td>
-<span class="listing-author">Gluckstern et al.</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="13" data-listing-title-sort="Betatron resonances with space charge" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.osti.gov/etdeweb/servlets/purl/382303#page=282" class="title listing-title">Betatron resonances with space charge</a>
-</td>
-<td>
-<span class="listing-author">Baartman</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="14" data-listing-title-sort="Stability of anisotropic beams with space charge" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.57.4713" class="title listing-title">Stability of anisotropic beams with space charge</a>
-</td>
-<td>
-<span class="listing-author">Hofmann</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="15" data-listing-title-sort="Warm-fluid description of intense beam equilibrium and electrostatic stability properties" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://nonneutral.pppl.gov/pdfpapers/PP.1998.5.3028.SL.pdf" class="title listing-title">Warm-fluid description of intense beam equilibrium and electrostatic stability properties</a>
-</td>
-<td>
-<span class="listing-author">Lund and Davidson</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-title-sort="Particle-core model for transverse dynamics of beam halo" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.1.084201" class="title listing-title">Particle-core model for transverse dynamics of beam halo</a>
-</td>
-<td>
-<span class="listing-author">Wangler, et al.</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="17" data-listing-title-sort="Space charge dynamics in high intensity rings" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.2.114202" class="title listing-title">Space charge dynamics in high intensity rings</a>
-</td>
-<td>
-<span class="listing-author">Holmes et al.</span>
-</td>
-<td>
-<span class="listing-year">1999</span>
-</td>
-
-</tr>
-
-<tr data-index="18" data-listing-title-sort="Comparison of simulated and observed beam profile broadening in the Proton Storage Ring and the role of space charge" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.3.034201" class="title listing-title">Comparison of simulated and observed beam profile broadening in the Proton Storage Ring and the role of space charge</a>
-</td>
-<td>
-<span class="listing-author">Galambos et al.</span>
-</td>
-<td>
-<span class="listing-year">2000</span>
-</td>
-
-</tr>
-
-<tr data-index="19" data-listing-title-sort="Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.sciencedirect.com/science/article/abs/pii/S0168900201016849" class="title listing-title">Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel</a>
-</td>
-<td>
-<span class="listing-author">Okamoto and Yokoya</span>
-</td>
-<td>
-<span class="listing-year">2001</span>
-</td>
-
-</tr>
-
-<tr data-index="20" data-listing-title-sort="Beam-Halo Measurements in High-Current Proton Beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.89.214802" class="title listing-title">Beam-Halo Measurements in High-Current Proton Beams</a>
-</td>
-<td>
-<span class="listing-author">Allen et al.</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="21" data-listing-title-sort="Macroparticle simulation studies of a proton beam halo experiment" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.5.124201" class="title listing-title">Macroparticle simulation studies of a proton beam halo experiment</a>
-</td>
-<td>
-<span class="listing-author">Qiang et al.</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="22" data-listing-title-sort="Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://linkinghub.elsevier.com/retrieve/pii/S0168900201016849" class="title listing-title">Parametric resonances in intense one-dimensional beams propagating through a periodic focusing channel</a>
-</td>
-<td>
-<span class="listing-author">Okamoto and Yokoya</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="23" data-listing-title-sort="Macroparticle simulation studies of a proton beam halo experiment" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.5.124201" class="title listing-title">Macroparticle simulation studies of a proton beam halo experiment</a>
-</td>
-<td>
-<span class="listing-author">Qiang et al.</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="24" data-listing-title-sort="Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.91.264801" class="title listing-title">Fluctuations Do Matter: Large Noise-Enhanced Halos in Charged-Particle Beams</a>
-</td>
-<td>
-<span class="listing-author">Bohn and Sideris</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="25" data-listing-title-sort="Self-consistent time dependent two dimensional and three dimensional space charge distributions with linear force" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.6.094202" class="title listing-title">Self-consistent time dependent two dimensional and three dimensional space charge distributions with linear force</a>
-</td>
-<td>
-<span class="listing-author">Danilov et al.</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="26" data-listing-title-sort="Resonant beam behavior studies in the Proton Storage Ring" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.6.074202" class="title listing-title">Resonant beam behavior studies in the Proton Storage Ring</a>
-</td>
-<td>
-<span class="listing-author">Cousineau et al.</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="27" data-listing-title-sort="Stability properties of the transverse envelope equations describing intense ion beam transport" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.7.024801" class="title listing-title">Stability properties of the transverse envelope equations describing intense ion beam transport</a>
-</td>
-<td>
-<span class="listing-author">Lund and Bukh</span>
-</td>
-<td>
-<span class="listing-year">2004</span>
-</td>
-
-</tr>
-
-<tr data-index="28" data-listing-title-sort="Efficient computation of matched solutions of the Kapchinskij-Vladimirskij envelope equations for periodic focusing lattices" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.9.064201" class="title listing-title">Efficient computation of matched solutions of the Kapchinskij-Vladimirskij envelope equations for periodic focusing lattices</a>
-</td>
-<td>
-<span class="listing-author">Lund, Chilton, and Lee</span>
-</td>
-<td>
-<span class="listing-year">2006</span>
-</td>
-
-</tr>
-
-<tr data-index="29" data-listing-title-sort="Space-charge transport limits of ion beams in periodic quadrupole focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://linkinghub.elsevier.com/retrieve/pii/S016890020600475X" class="title listing-title">Space-charge transport limits of ion beams in periodic quadrupole focusing channels</a>
-</td>
-<td>
-<span class="listing-author">Lund and Chawla</span>
-</td>
-<td>
-<span class="listing-year">2006</span>
-</td>
-
-</tr>
-
-<tr data-index="30" data-listing-title-sort="A core-particle model for periodically focused ion beams with intense space-charge" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://linkinghub.elsevier.com/retrieve/pii/S0168900207003452" class="title listing-title">A core-particle model for periodically focused ion beams with intense space-charge</a>
-</td>
-<td>
-<span class="listing-author">Lund et al.</span>
-</td>
-<td>
-<span class="listing-year">2007</span>
-</td>
-
-</tr>
-
-<tr data-index="31" data-listing-title-sort="Benchmarking of measurement and simulation of transverse rms-emittance growth" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.11.094201" class="title listing-title">Benchmarking of measurement and simulation of transverse rms-emittance growth</a>
-</td>
-<td>
-<span class="listing-author">Groening et al.</span>
-</td>
-<td>
-<span class="listing-year">2009</span>
-</td>
-
-</tr>
-
-<tr data-index="32" data-listing-title-sort="Generation of initial kinetic distributions for simulation of long-pulse charged particle beams with high space-charge intensity" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.12.114801" class="title listing-title">Generation of initial kinetic distributions for simulation of long-pulse charged particle beams with high space-charge intensity</a>
-</td>
-<td>
-<span class="listing-author">Lund, Kikuchi, and Davidson</span>
-</td>
-<td>
-<span class="listing-year">2009</span>
-</td>
-
-</tr>
-
-<tr data-index="33" data-listing-title-sort="Generalized Kapchinskij-Vladimirskij Distribution and Envelope Equation for High-Intensity Beams in a Coupled Transverse Focusing Lattice" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.103.224802" class="title listing-title">Generalized Kapchinskij-Vladimirskij Distribution and Envelope Equation for High-Intensity Beams in a Coupled Transverse Focusing Lattice</a>
-</td>
-<td>
-<span class="listing-author">Qin, Chung, and Davidson</span>
-</td>
-<td>
-<span class="listing-year">2009</span>
-</td>
-
-</tr>
-
-<tr data-index="34" data-listing-title-sort="Analytical treatment of particle-core interaction" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://arxiv.org/pdf/1002.2015" class="title listing-title">Analytical treatment of particle-core interaction</a>
-</td>
-<td>
-<span class="listing-author">Batygin</span>
-</td>
-<td>
-<span class="listing-year">2010</span>
-</td>
-
-</tr>
-
-<tr data-index="35" data-listing-title-sort="Class of Generalized Kapchinskij-Vladimirskij Solutions and Associated Envelope Equations for High-Intensity Charged-Particle Beams" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevLett.110.064803" class="title listing-title">Class of Generalized Kapchinskij-Vladimirskij Solutions and Associated Envelope Equations for High-Intensity Charged-Particle Beams</a>
-</td>
-<td>
-<span class="listing-author">Qin and Davidson</span>
-</td>
-<td>
-<span class="listing-year">2013</span>
-</td>
-
-</tr>
-
-<tr data-index="36" data-listing-title-sort="Envelope instability and the fourth order resonance" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevSTAB.17.124202" class="title listing-title">Envelope instability and the fourth order resonance</a>
-</td>
-<td>
-<span class="listing-author">Li and Zhao</span>
-</td>
-<td>
-<span class="listing-year">2014</span>
-</td>
-
-</tr>
-
-<tr data-index="37" data-listing-title-sort="Near equilibrium distributions for beams with space charge in linear and nonlinear periodic focusing systems" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://pubs.aip.org/pop/article/22/4/043120/594944/Near-equilibrium-distributions-for-beams-with" class="title listing-title">Near equilibrium distributions for beams with space charge in linear and nonlinear periodic focusing systems</a>
-</td>
-<td>
-<span class="listing-author">Sonnad and Cary</span>
-</td>
-<td>
-<span class="listing-year">2015</span>
-</td>
-
-</tr>
-
-<tr data-index="38" data-listing-title-sort="Dispersion-Induced Beam Instability in Circular Accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="3" data-listing-title-sort="Dispersion-Induced Beam Instability in Circular Accelerators" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://doi.org/10.1103/PhysRevLett.118.154801" class="title listing-title">Dispersion-Induced Beam Instability in Circular Accelerators</a>
@@ -891,7 +106,7 @@ Year
 
 </tr>
 
-<tr data-index="39" data-listing-title-sort="Modeling of second order space charge driven coherent sum and difference instabilities" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="4" data-listing-title-sort="Modeling of second order space charge driven coherent sum and difference instabilities" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.104201" class="title listing-title">Modeling of second order space charge driven coherent sum and difference instabilities</a>
@@ -905,7 +120,7 @@ Year
 
 </tr>
 
-<tr data-index="40" data-listing-title-sort="Intensity limitations due to space charge for bunch compression in synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="5" data-listing-title-sort="Intensity limitations due to space charge for bunch compression in synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.074201" class="title listing-title">Intensity limitations due to space charge for bunch compression in synchrotrons</a>
@@ -919,77 +134,7 @@ Year
 
 </tr>
 
-<tr data-index="41" data-listing-title-sort="Structure resonances due to space charge in periodic focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.024204" class="title listing-title">Structure resonances due to space charge in periodic focusing channels</a>
-</td>
-<td>
-<span class="listing-author">Li and Jameson</span>
-</td>
-<td>
-<span class="listing-year">2018</span>
-</td>
-
-</tr>
-
-<tr data-index="42" data-listing-title-sort="Spectral Galerkin solver for intense beam Vlasov equilibria in nonlinear constant focusing channels" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.100.053308" class="title listing-title">Spectral Galerkin solver for intense beam Vlasov equilibria in nonlinear constant focusing channels</a>
-</td>
-<td>
-<span class="listing-author">Mitchell</span>
-</td>
-<td>
-<span class="listing-year">2019</span>
-</td>
-
-</tr>
-
-<tr data-index="43" data-listing-title-sort="Understanding beam distributions in hadron linacs in the presence of space charge" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://iopscience.iop.org/article/10.1088/1748-0221/15/07/P07025" class="title listing-title">Understanding beam distributions in hadron linacs in the presence of space charge</a>
-</td>
-<td>
-<span class="listing-author">Aleksandrov, Ruisard, and Cousineau</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="44" data-listing-title-sort="Kurth Vlasov-Poisson Solution for a Beam in the Presence of Time-Dependent Isotropic Focusing" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://jacow.org/ipac2021/doi/JACoW-IPAC2021-WEPAB248.html" class="title listing-title">Kurth Vlasov-Poisson Solution for a Beam in the Presence of Time-Dependent Isotropic Focusing</a>
-</td>
-<td>
-<span class="listing-author">Mitchell, Hwang and Ryne</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="45" data-listing-title-sort="Chaotic Dynamics Driven by Particle-Core Interactions" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://arxiv.org/pdf/2111.09843" class="title listing-title">Chaotic Dynamics Driven by Particle-Core Interactions</a>
-</td>
-<td>
-<span class="listing-author">Batygin and Batygin</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="46" data-listing-title-sort="Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="6" data-listing-title-sort="Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.28.054201" class="title listing-title">Phase space analysis of incoherent space-charge-driven structural resonances in high-intensity hadron synchrotrons</a>
@@ -1003,7 +148,7 @@ Year
 
 </tr>
 
-<tr data-index="47" data-listing-title-sort="Modeling of beam envelope instabilities in high-intensity circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="7" data-listing-title-sort="Modeling of beam envelope instabilities in high-intensity circular accelerators" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://journals.aps.org/prresearch/pdf/10.1103/c1dn-z4n9" class="title listing-title">Modeling of beam envelope instabilities in high-intensity circular accelerators</a>
@@ -1020,7 +165,6 @@ Year
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
-
 </div> ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/space-charge/</guid>
   <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
@@ -1205,63 +349,7 @@ Year
 
 </tr>
 
-<tr data-index="4" data-listing-title-sort="AI: A Guide for Thinking Humans" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://aiguide.substack.com" class="title listing-title">AI: A Guide for Thinking Humans</a>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="The Secure Transport of Light" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://danwang.co" class="title listing-title">The Secure Transport of Light</a>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="Big iff True" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://bigifftrue.substack.com/" class="title listing-title">Big iff True</a>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="Bold Reasoning with Peter Singer" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://boldreasoningwithpetersinger.substack.com/" class="title listing-title">Bold Reasoning with Peter Singer</a>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="Danny Yee's Book Reviews" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://dannyreviews.com" class="title listing-title">Danny Yee’s Book Reviews</a>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-title-sort="After Babel" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://www.afterbabel.com" class="title listing-title">After Babel</a>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-title-sort="Bentham's Bulldog" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://benthams.substack.com/" class="title listing-title">Bentham’s Bulldog</a>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-title-sort="Alexander Pruss" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="4" data-listing-title-sort="Alexander Pruss" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="http://alexanderpruss.blogspot.com" class="title listing-title">Alexander Pruss</a>
@@ -1269,7 +357,7 @@ Year
 
 </tr>
 
-<tr data-index="12" data-listing-title-sort="Edward Feser" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="5" data-listing-title-sort="Edward Feser" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://edwardfeser.blogspot.com" class="title listing-title">Edward Feser</a>
@@ -1277,7 +365,7 @@ Year
 
 </tr>
 
-<tr data-index="13" data-listing-title-sort="Notebooks" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="6" data-listing-title-sort="Notebooks" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="http://bactra.org/notebooks/" class="title listing-title">Notebooks</a>
@@ -1285,7 +373,7 @@ Year
 
 </tr>
 
-<tr data-index="14" data-listing-title-sort="China Talk" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="7" data-listing-title-sort="China Talk" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.chinatalk.media" class="title listing-title">China Talk</a>
@@ -1293,15 +381,7 @@ Year
 
 </tr>
 
-<tr data-index="15" data-listing-title-sort="Going Awol" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://wollenblog.substack.com/" class="title listing-title">Going Awol</a>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-title-sort="Scott Hawley" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="8" data-listing-title-sort="Scott Hawley" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://drscotthawley.github.io/blog/" class="title listing-title">Scott Hawley</a>
@@ -1309,7 +389,7 @@ Year
 
 </tr>
 
-<tr data-index="17" data-listing-title-sort="Condensed Concepts" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="9" data-listing-title-sort="Condensed Concepts" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://condensedconcepts.blogspot.co" class="title listing-title">Condensed Concepts</a>
@@ -1317,7 +397,7 @@ Year
 
 </tr>
 
-<tr data-index="18" data-listing-title-sort="Nanoscale Views" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="10" data-listing-title-sort="Nanoscale Views" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="http://nanoscale.blogspot.com" class="title listing-title">Nanoscale Views</a>
@@ -1325,7 +405,7 @@ Year
 
 </tr>
 
-<tr data-index="19" data-listing-title-sort="ex-apologist" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="11" data-listing-title-sort="ex-apologist" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="http://exapologist.blogspot.com" class="title listing-title">ex-apologist</a>
@@ -1333,7 +413,7 @@ Year
 
 </tr>
 
-<tr data-index="20" data-listing-title-sort="Fake Nous" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="12" data-listing-title-sort="Fake Nous" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://fakenous.substack.com" class="title listing-title">Fake Nous</a>
@@ -1341,7 +421,7 @@ Year
 
 </tr>
 
-<tr data-index="21" data-listing-title-sort="Lil'Log" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="13" data-listing-title-sort="Lil'Log" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://lilianweng.github.io" class="title listing-title">Lil’Log</a>
@@ -1349,15 +429,7 @@ Year
 
 </tr>
 
-<tr data-index="22" data-listing-title-sort="Why Philosophy?" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="https://celineleboeuf.substack.com/" class="title listing-title">Why Philosophy?</a>
-</td>
-
-</tr>
-
-<tr data-index="23" data-listing-title-sort="Not Even Wrong" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="14" data-listing-title-sort="Not Even Wrong" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.math.columbia.edu/~woit/wordpress/" class="title listing-title">Not Even Wrong</a>
@@ -1365,7 +437,7 @@ Year
 
 </tr>
 
-<tr data-index="24" data-listing-title-sort="Notes From a Data Witch" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="15" data-listing-title-sort="Notes From a Data Witch" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://blog.djnavarro.net" class="title listing-title">Notes From a Data Witch</a>
@@ -1373,7 +445,7 @@ Year
 
 </tr>
 
-<tr data-index="25" data-listing-title-sort="Of Particular Significance&quot;" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="16" data-listing-title-sort="Of Particular Significance&quot;" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://profmattstrassler.com/blog/" class="title listing-title">Of Particular Significance”</a>
@@ -1381,7 +453,7 @@ Year
 
 </tr>
 
-<tr data-index="26" data-listing-title-sort="Physics Matt" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="17" data-listing-title-sort="Physics Matt" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="http://www.physicsmatt.com/blog/)" class="title listing-title">Physics Matt</a>
@@ -1389,7 +461,7 @@ Year
 
 </tr>
 
-<tr data-index="27" data-listing-title-sort="Preposterous Universe" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="18" data-listing-title-sort="Preposterous Universe" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.preposterousuniverse.com/blog/" class="title listing-title">Preposterous Universe</a>
@@ -1397,7 +469,7 @@ Year
 
 </tr>
 
-<tr data-index="28" data-listing-title-sort="Asymptotia" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="19" data-listing-title-sort="Asymptotia" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://asymptotia.com" class="title listing-title">Asymptotia</a>
@@ -1405,7 +477,47 @@ Year
 
 </tr>
 
-<tr data-index="29" data-listing-title-sort="Coleman's Corner" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="20" data-listing-title-sort="The Secure Transport of Light" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://danwang.co" class="title listing-title">The Secure Transport of Light</a>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-title-sort="Danny Yee's Book Reviews" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://dannyreviews.com" class="title listing-title">Danny Yee’s Book Reviews</a>
+</td>
+
+</tr>
+
+<tr data-index="22" data-listing-title-sort="After Babel" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://www.afterbabel.com" class="title listing-title">After Babel</a>
+</td>
+
+</tr>
+
+<tr data-index="23" data-listing-title-sort="AI: A Guide for Thinking Humans" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://aiguide.substack.com" class="title listing-title">AI: A Guide for Thinking Humans</a>
+</td>
+
+</tr>
+
+<tr data-index="24" data-listing-title-sort="Bentham's Bulldog" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="https://benthams.substack.com/" class="title listing-title">Bentham’s Bulldog</a>
+</td>
+
+</tr>
+
+<tr data-index="25" data-listing-title-sort="Coleman's Corner" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://colemanhughes.substack.com/" class="title listing-title">Coleman’s Corner</a>
@@ -1413,7 +525,7 @@ Year
 
 </tr>
 
-<tr data-index="30" data-listing-title-sort="Commonplace Philosophy" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="26" data-listing-title-sort="Commonplace Philosophy" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://jaredhenderson.substack.com/" class="title listing-title">Commonplace Philosophy</a>
@@ -1421,7 +533,7 @@ Year
 
 </tr>
 
-<tr data-index="31" data-listing-title-sort="Future Doctrina" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="27" data-listing-title-sort="Future Doctrina" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://mickryan.substack.com" class="title listing-title">Future Doctrina</a>
@@ -1429,7 +541,7 @@ Year
 
 </tr>
 
-<tr data-index="32" data-listing-title-sort="Gowing Awol" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="28" data-listing-title-sort="Gowing Awol" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://wollenblog.substack.com/" class="title listing-title">Gowing Awol</a>
@@ -1437,7 +549,7 @@ Year
 
 </tr>
 
-<tr data-index="33" data-listing-title-sort="Greco and Wansley" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="29" data-listing-title-sort="Greco and Wansley" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://grecowansley.substack.com/" class="title listing-title">Greco and Wansley</a>
@@ -1445,7 +557,7 @@ Year
 
 </tr>
 
-<tr data-index="34" data-listing-title-sort="The Grumpy Economist" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="30" data-listing-title-sort="The Grumpy Economist" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.grumpy-economist.com/" class="title listing-title">The Grumpy Economist</a>
@@ -1453,7 +565,7 @@ Year
 
 </tr>
 
-<tr data-index="35" data-listing-title-sort="Kareem Takes on the News" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="31" data-listing-title-sort="Kareem Takes on the News" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://kareem.substack.com/" class="title listing-title">Kareem Takes on the News</a>
@@ -1461,7 +573,7 @@ Year
 
 </tr>
 
-<tr data-index="36" data-listing-title-sort="The Motivated Skeptic" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="32" data-listing-title-sort="The Motivated Skeptic" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://rbnmckenna86.substack.com/" class="title listing-title">The Motivated Skeptic</a>
@@ -1469,7 +581,7 @@ Year
 
 </tr>
 
-<tr data-index="37" data-listing-title-sort="Pens and Poison" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="33" data-listing-title-sort="Pens and Poison" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://www.pensandpoison.org/" class="title listing-title">Pens and Poison</a>
@@ -1477,7 +589,7 @@ Year
 
 </tr>
 
-<tr data-index="38" data-listing-title-sort="Reflections on What Matters" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="34" data-listing-title-sort="Reflections on What Matters" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://jpandrew.substack.com/" class="title listing-title">Reflections on What Matters</a>
@@ -1485,7 +597,7 @@ Year
 
 </tr>
 
-<tr data-index="39" data-listing-title-sort="Sherman Alexie" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="35" data-listing-title-sort="Sherman Alexie" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://shermanalexie.substack.com/" class="title listing-title">Sherman Alexie</a>
@@ -1493,7 +605,7 @@ Year
 
 </tr>
 
-<tr data-index="40" data-listing-title-sort="Wondering Freely" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="36" data-listing-title-sort="Wondering Freely" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://helendecruz.substack.com/" class="title listing-title">Wondering Freely</a>
@@ -1542,6 +654,9 @@ Year
       <option value="listing-year" data-direction="asc">
         Year
       </option>
+      <option value="listing-score" data-direction="asc">
+        Score
+      </option>
     </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -1565,39 +680,17 @@ Year
 <a class="sort" data-sort="listing-year" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Year</a>
 </th>
 
+<th>
+<a class="sort" data-sort="listing-score" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Score</a>
+</th>
+
 </tr>
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-title-sort="About Time">
+<tr data-index="0" data-listing-title-sort="Small Things Like These">
 <td>
-<span class="listing-title">About Time</span>
-</td>
-<td>
-<span class="listing-director">Curtis</span>
-</td>
-<td>
-<span class="listing-year">2013</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-title-sort="Belfast">
-<td>
-<span class="listing-title">Belfast</span>
-</td>
-<td>
-<span class="listing-director">Branagh</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-title-sort="Small Things Like These">
-<td>
-<span class="listing-title">Small Things Like These</span>
+<a href="https://en.wikipedia.org/wiki/Small_Things_like_These_(film)" class="title listing-title">Small Things Like These</a>
 </td>
 <td>
 <span class="listing-director">Mielants</span>
@@ -1605,64 +698,15 @@ Year
 <td>
 <span class="listing-year">2024</span>
 </td>
-
-</tr>
-
-<tr data-index="3" data-listing-title-sort="I'm Still Here">
 <td>
-<span class="listing-title">I’m Still Here</span>
-</td>
-<td>
-<span class="listing-director">Salles</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
+<span class="listing-score">8</span>
 </td>
 
 </tr>
 
-<tr data-index="4" data-listing-title-sort="How to Make Millions Before Grandma Dies">
+<tr data-index="1" data-listing-title-sort="The Holdovers">
 <td>
-<span class="listing-title">How to Make Millions Before Grandma Dies</span>
-</td>
-<td>
-<span class="listing-director">Boonnitipat</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="Past Lives">
-<td>
-<span class="listing-title">Past Lives</span>
-</td>
-<td>
-<span class="listing-director">Song</span>
-</td>
-<td>
-<span class="listing-year">2023</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="All We Imagine as Light">
-<td>
-<span class="listing-title">All We Imagine as Light</span>
-</td>
-<td>
-<span class="listing-director">Kapadia</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="The Holdovers">
-<td>
-<span class="listing-title">The Holdovers</span>
+<a href="https://en.wikipedia.org/wiki/The_Holdovers" class="title listing-title">The Holdovers</a>
 </td>
 <td>
 <span class="listing-director">Payne</span>
@@ -1670,12 +714,15 @@ Year
 <td>
 <span class="listing-year">2023</span>
 </td>
+<td>
+<span class="listing-score">7.5</span>
+</td>
 
 </tr>
 
-<tr data-index="8" data-listing-title-sort="The Grand Budapest Hotel">
+<tr data-index="2" data-listing-title-sort="The Grand Budapest Hotel">
 <td>
-<span class="listing-title">The Grand Budapest Hotel</span>
+<a href="https://en.wikipedia.org/wiki/The_Grand_Budapest_Hotel" class="title listing-title">The Grand Budapest Hotel</a>
 </td>
 <td>
 <span class="listing-director">Anderson</span>
@@ -1683,168 +730,15 @@ Year
 <td>
 <span class="listing-year">2014</span>
 </td>
-
-</tr>
-
-<tr data-index="9" data-listing-title-sort="Sicario">
 <td>
-<span class="listing-title">Sicario</span>
-</td>
-<td>
-<span class="listing-director">&nbsp;</span>
-</td>
-<td>
-<span class="listing-year">2015</span>
+<span class="listing-score">8.5</span>
 </td>
 
 </tr>
 
-<tr data-index="10" data-listing-title-sort="I'm No Longer Here">
+<tr data-index="3" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring">
 <td>
-<span class="listing-title">I’m No Longer Here</span>
-</td>
-<td>
-<span class="listing-director">Frías de la Parra</span>
-</td>
-<td>
-<span class="listing-year">2019</span>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-title-sort="The Florida Project">
-<td>
-<span class="listing-title">The Florida Project</span>
-</td>
-<td>
-<span class="listing-director">Baker</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="12" data-listing-title-sort="Dune">
-<td>
-<span class="listing-title">Dune</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2021</span>
-</td>
-
-</tr>
-
-<tr data-index="13" data-listing-title-sort="Dune: Part Two">
-<td>
-<span class="listing-title">Dune: Part Two</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2024</span>
-</td>
-
-</tr>
-
-<tr data-index="14" data-listing-title-sort="Arrival">
-<td>
-<span class="listing-title">Arrival</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2016</span>
-</td>
-
-</tr>
-
-<tr data-index="15" data-listing-title-sort="Blade Runner">
-<td>
-<span class="listing-title">Blade Runner</span>
-</td>
-<td>
-<span class="listing-director">Scott</span>
-</td>
-<td>
-<span class="listing-year">1982</span>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-title-sort="Blade Runner 2049">
-<td>
-<span class="listing-title">Blade Runner 2049</span>
-</td>
-<td>
-<span class="listing-director">Villeneuve</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="17" data-listing-title-sort="Baby Driver">
-<td>
-<span class="listing-title">Baby Driver</span>
-</td>
-<td>
-<span class="listing-director">Wright</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="18" data-listing-title-sort="The Big Sick">
-<td>
-<span class="listing-title">The Big Sick</span>
-</td>
-<td>
-<span class="listing-director">Showalter</span>
-</td>
-<td>
-<span class="listing-year">2017</span>
-</td>
-
-</tr>
-
-<tr data-index="19" data-listing-title-sort="The Way, Way Back">
-<td>
-<span class="listing-title">The Way, Way Back</span>
-</td>
-<td>
-<span class="listing-director">Faxon</span>
-</td>
-<td>
-<span class="listing-year">2013</span>
-</td>
-
-</tr>
-
-<tr data-index="20" data-listing-title-sort="Mud">
-<td>
-<span class="listing-title">Mud</span>
-</td>
-<td>
-<span class="listing-director">Nichols</span>
-</td>
-<td>
-<span class="listing-year">2012</span>
-</td>
-
-</tr>
-
-<tr data-index="21" data-listing-title-sort="The Lord of the Rings: The Fellowship of the Ring">
-<td>
-<span class="listing-title">The Lord of the Rings: The Fellowship of the Ring</span>
+<a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring" class="title listing-title">The Lord of the Rings: The Fellowship of the Ring</a>
 </td>
 <td>
 <span class="listing-director">Jackson</span>
@@ -1852,12 +746,15 @@ Year
 <td>
 <span class="listing-year">2001</span>
 </td>
+<td>
+<span class="listing-score">9.5</span>
+</td>
 
 </tr>
 
-<tr data-index="22" data-listing-title-sort="The Lord of the Rings: The Two Towers">
+<tr data-index="4" data-listing-title-sort="The Lord of the Rings: The Two Towers">
 <td>
-<span class="listing-title">The Lord of the Rings: The Two Towers</span>
+<a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Two_Towers" class="title listing-title">The Lord of the Rings: The Two Towers</a>
 </td>
 <td>
 <span class="listing-director">Jackson</span>
@@ -1865,12 +762,15 @@ Year
 <td>
 <span class="listing-year">2002</span>
 </td>
+<td>
+<span class="listing-score">9.5</span>
+</td>
 
 </tr>
 
-<tr data-index="23" data-listing-title-sort="The Lord of the Rings: The Return of the King">
+<tr data-index="5" data-listing-title-sort="The Lord of the Rings: The Return of the King">
 <td>
-<span class="listing-title">The Lord of the Rings: The Return of the King</span>
+<a href="https://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King" class="title listing-title">The Lord of the Rings: The Return of the King</a>
 </td>
 <td>
 <span class="listing-director">Jackson</span>
@@ -1878,304 +778,8 @@ Year
 <td>
 <span class="listing-year">2003</span>
 </td>
-
-</tr>
-
-<tr data-index="24" data-listing-title-sort="Mission: Impossible – Rogue Nation">
 <td>
-<span class="listing-title">Mission: Impossible – Rogue Nation</span>
-</td>
-<td>
-<span class="listing-director">McQuarrie</span>
-</td>
-<td>
-<span class="listing-year">2015</span>
-</td>
-
-</tr>
-
-<tr data-index="25" data-listing-title-sort="Mission: Impossible – Fallout">
-<td>
-<span class="listing-title">Mission: Impossible – Fallout</span>
-</td>
-<td>
-<span class="listing-director">McQuarrie</span>
-</td>
-<td>
-<span class="listing-year">2018</span>
-</td>
-
-</tr>
-
-<tr data-index="26" data-listing-title-sort="Schindler's List">
-<td>
-<span class="listing-title">Schindler’s List</span>
-</td>
-<td>
-<span class="listing-director">Spielberg</span>
-</td>
-<td>
-<span class="listing-year">1993</span>
-</td>
-
-</tr>
-
-<tr data-index="27" data-listing-title-sort="Planet of the Apes">
-<td>
-<span class="listing-title">Planet of the Apes</span>
-</td>
-<td>
-<span class="listing-director">Schaffner</span>
-</td>
-<td>
-<span class="listing-year">1963</span>
-</td>
-
-</tr>
-
-<tr data-index="28" data-listing-title-sort="Halloween Is Grinch Night">
-<td>
-<span class="listing-title">Halloween Is Grinch Night</span>
-</td>
-<td>
-<span class="listing-director">Baldwin</span>
-</td>
-<td>
-<span class="listing-year">1977</span>
-</td>
-
-</tr>
-
-<tr data-index="29" data-listing-title-sort="How the Grinch Stole Christmas!">
-<td>
-<span class="listing-title">How the Grinch Stole Christmas!</span>
-</td>
-<td>
-<span class="listing-director">Jones</span>
-</td>
-<td>
-<span class="listing-year">1966</span>
-</td>
-
-</tr>
-
-<tr data-index="30" data-listing-title-sort="Rise of the Planet of the Apes">
-<td>
-<span class="listing-title">Rise of the Planet of the Apes</span>
-</td>
-<td>
-<span class="listing-director">Wyatt</span>
-</td>
-<td>
-<span class="listing-year">2011</span>
-</td>
-
-</tr>
-
-<tr data-index="31" data-listing-title-sort="Dawn of the Planet of the Apes">
-<td>
-<span class="listing-title">Dawn of the Planet of the Apes</span>
-</td>
-<td>
-<span class="listing-director">Reeves</span>
-</td>
-<td>
-<span class="listing-year">2014</span>
-</td>
-
-</tr>
-
-<tr data-index="32" data-listing-title-sort="Jurrasic Park">
-<td>
-<span class="listing-title">Jurrasic Park</span>
-</td>
-<td>
-<span class="listing-director">Spielberg</span>
-</td>
-<td>
-<span class="listing-year">1993</span>
-</td>
-
-</tr>
-
-<tr data-index="33" data-listing-title-sort="Saving Private Ryan">
-<td>
-<span class="listing-title">Saving Private Ryan</span>
-</td>
-<td>
-<span class="listing-director">Speilberg</span>
-</td>
-<td>
-<span class="listing-year">1998</span>
-</td>
-
-</tr>
-
-<tr data-index="34" data-listing-title-sort="Minority Report">
-<td>
-<span class="listing-title">Minority Report</span>
-</td>
-<td>
-<span class="listing-director">Speilberg</span>
-</td>
-<td>
-<span class="listing-year">2002</span>
-</td>
-
-</tr>
-
-<tr data-index="35" data-listing-title-sort="War of the Worlds">
-<td>
-<span class="listing-title">War of the Worlds</span>
-</td>
-<td>
-<span class="listing-director">Speilberg</span>
-</td>
-<td>
-<span class="listing-year">2005</span>
-</td>
-
-</tr>
-
-<tr data-index="36" data-listing-title-sort="Kiki's Delivery Service">
-<td>
-<span class="listing-title">Kiki’s Delivery Service</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">1989</span>
-</td>
-
-</tr>
-
-<tr data-index="37" data-listing-title-sort="Princess Mononoke">
-<td>
-<span class="listing-title">Princess Mononoke</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">1987</span>
-</td>
-
-</tr>
-
-<tr data-index="38" data-listing-title-sort="Spirited Away">
-<td>
-<span class="listing-title">Spirited Away</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">2001</span>
-</td>
-
-</tr>
-
-<tr data-index="39" data-listing-title-sort="Howl's Moving Castle">
-<td>
-<span class="listing-title">Howl’s Moving Castle</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">2004</span>
-</td>
-
-</tr>
-
-<tr data-index="40" data-listing-title-sort="The Wind Rises">
-<td>
-<span class="listing-title">The Wind Rises</span>
-</td>
-<td>
-<span class="listing-director">Miyazaki</span>
-</td>
-<td>
-<span class="listing-year">2014</span>
-</td>
-
-</tr>
-
-<tr data-index="41" data-listing-title-sort="Silence">
-<td>
-<span class="listing-title">Silence</span>
-</td>
-<td>
-<span class="listing-director">Scorsese</span>
-</td>
-<td>
-<span class="listing-year">2016</span>
-</td>
-
-</tr>
-
-<tr data-index="42" data-listing-title-sort="The Departed">
-<td>
-<span class="listing-title">The Departed</span>
-</td>
-<td>
-<span class="listing-director">Scorsese</span>
-</td>
-<td>
-<span class="listing-year">2006</span>
-</td>
-
-</tr>
-
-<tr data-index="43" data-listing-title-sort="Shutter Island">
-<td>
-<span class="listing-title">Shutter Island</span>
-</td>
-<td>
-<span class="listing-director">Scorsese</span>
-</td>
-<td>
-<span class="listing-year">2010</span>
-</td>
-
-</tr>
-
-<tr data-index="44" data-listing-title-sort="The Lion King">
-<td>
-<span class="listing-title">The Lion King</span>
-</td>
-<td>
-<span class="listing-director">Allers</span>
-</td>
-<td>
-<span class="listing-year">1994</span>
-</td>
-
-</tr>
-
-<tr data-index="45" data-listing-title-sort="Finding Nemo">
-<td>
-<span class="listing-title">Finding Nemo</span>
-</td>
-<td>
-<span class="listing-director">Stanton</span>
-</td>
-<td>
-<span class="listing-year">2003</span>
-</td>
-
-</tr>
-
-<tr data-index="46" data-listing-title-sort="Everything Everywhere All at Once">
-<td>
-<span class="listing-title">Everything Everywhere All at Once</span>
-</td>
-<td>
-<span class="listing-director">Kwan</span>
-</td>
-<td>
-<span class="listing-year">2022</span>
+<span class="listing-score">9.5</span>
 </td>
 
 </tr>
@@ -2213,8 +817,8 @@ Year
       <option value="listing-author" data-direction="asc">
         Author
       </option>
-      <option value="listing-year" data-direction="asc">
-        Year
+      <option value="listing-score" data-direction="asc">
+        Score
       </option>
     </select>
   </div>
@@ -2236,14 +840,14 @@ Year
 </th>
 
 <th>
-<a class="sort" data-sort="listing-year" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Year</a>
+<a class="sort" data-sort="listing-score" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Score</a>
 </th>
 
 </tr>
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="The Brothers Karamazov">
+<tr data-index="0" data-categories="RmljdGlvbiUyQ1J1c3NpYQ==" data-listing-title-sort="The Brothers Karamazov">
 <td>
 <span class="listing-title">The Brothers Karamazov</span>
 </td>
@@ -2251,7 +855,7 @@ Year
 <span class="listing-author">Dostoevsky</span>
 </td>
 <td>
-<span class="listing-year">1879</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
@@ -2264,7 +868,7 @@ Year
 <span class="listing-author">Verghese</span>
 </td>
 <td>
-<span class="listing-year">2023</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
@@ -2277,7 +881,7 @@ Year
 <span class="listing-author">Dickens</span>
 </td>
 <td>
-<span class="listing-year">1843</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
@@ -2290,12 +894,12 @@ Year
 <span class="listing-author">Ngai</span>
 </td>
 <td>
-<span class="listing-year">2022</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="4" data-categories="RWNvbm9taWNzJTJDU29jaWV0eQ==" data-listing-title-sort="Knowledge and Decisions">
+<tr data-index="4" data-categories="RWNvbm9taWNz" data-listing-title-sort="Knowledge and Decisions">
 <td>
 <span class="listing-title">Knowledge and Decisions</span>
 </td>
@@ -2303,7 +907,7 @@ Year
 <span class="listing-author">Sowell</span>
 </td>
 <td>
-<span class="listing-year">1980</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
@@ -2316,12 +920,12 @@ Year
 <span class="listing-author">Wang</span>
 </td>
 <td>
-<span class="listing-year">2025</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="6" data-categories="UGh5c2ljcyUyQ0NvbXB1dGF0aW9uYWwlMjBQaHlzaWNzJTJDQWxnb3JpdGhtcw==" data-listing-title-sort="Numerical Recipes">
+<tr data-index="6" data-categories="Q29tcHV0YXRpb25hbCUyMFBoeXNpY3MlMkNDb21wdXRlciUyMFNjaWVuY2U=" data-listing-title-sort="Numerical Recipes">
 <td>
 <span class="listing-title">Numerical Recipes</span>
 </td>
@@ -2329,7 +933,7 @@ Year
 <span class="listing-author">Press</span>
 </td>
 <td>
-<span class="listing-year">1986</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
@@ -2342,129 +946,12 @@ Year
 <span class="listing-author">Borges</span>
 </td>
 <td>
-<span class="listing-year">1941</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="8" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY3M=" data-listing-title-sort="An Introduction to Error Analysis">
-<td>
-<span class="listing-title">An Introduction to Error Analysis</span>
-</td>
-<td>
-<span class="listing-author">Taylor</span>
-</td>
-<td>
-<span class="listing-year">1982</span>
-</td>
-
-</tr>
-
-<tr data-index="9" data-categories="UGh5c2ljcyUyQ01hdGhlbWF0aWNz" data-listing-title-sort="Mathematics for Physicists">
-<td>
-<span class="listing-title">Mathematics for Physicists</span>
-</td>
-<td>
-<span class="listing-author">Dennery</span>
-</td>
-<td>
-<span class="listing-year">1967</span>
-</td>
-
-</tr>
-
-<tr data-index="10" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Unifying Physics of Accelerators, Lasers and Plasma">
-<td>
-<span class="listing-title">Unifying Physics of Accelerators, Lasers and Plasma</span>
-</td>
-<td>
-<span class="listing-author">Seryi</span>
-</td>
-<td>
-<span class="listing-year">2015</span>
-</td>
-
-</tr>
-
-<tr data-index="11" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Problems in quantum mechanics with solutions">
-<td>
-<span class="listing-title">Problems in quantum mechanics with solutions</span>
-</td>
-<td>
-<span class="listing-author">Squires</span>
-</td>
-<td>
-<span class="listing-year">1995</span>
-</td>
-
-</tr>
-
-<tr data-index="12" data-categories="UGh5c2ljcyUyQ09wdGljcw==" data-listing-title-sort="Introduction to Optics">
-<td>
-<span class="listing-title">Introduction to Optics</span>
-</td>
-<td>
-<span class="listing-author">Pedrotti</span>
-</td>
-<td>
-<span class="listing-year">2007</span>
-</td>
-
-</tr>
-
-<tr data-index="13" data-categories="UGh5c2ljcyUyQ0VsZWN0cmljYWwlMjBFbmdpbmVlcmluZw==" data-listing-title-sort="Practical Electronics for Inventors">
-<td>
-<span class="listing-title">Practical Electronics for Inventors</span>
-</td>
-<td>
-<span class="listing-author">Scherz</span>
-</td>
-<td>
-<span class="listing-year">2000</span>
-</td>
-
-</tr>
-
-<tr data-index="14" data-categories="TWF0aGVtYXRpY3MlMkNTdGF0aXN0aWNz" data-listing-title-sort="Foundations and Applications of Statistics">
-<td>
-<span class="listing-title">Foundations and Applications of Statistics</span>
-</td>
-<td>
-<span class="listing-author">Pruim</span>
-</td>
-<td>
-<span class="listing-year">2011</span>
-</td>
-
-</tr>
-
-<tr data-index="15" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Introduction to Quantum Mechanics">
-<td>
-<span class="listing-title">Introduction to Quantum Mechanics</span>
-</td>
-<td>
-<span class="listing-author">Griffiths</span>
-</td>
-<td>
-<span class="listing-year">1995</span>
-</td>
-
-</tr>
-
-<tr data-index="16" data-categories="UGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Physics of Nonneutral Plasmas">
-<td>
-<span class="listing-title">Physics of Nonneutral Plasmas</span>
-</td>
-<td>
-<span class="listing-author">Davidson</span>
-</td>
-<td>
-<span class="listing-year">2001</span>
-</td>
-
-</tr>
-
-<tr data-index="17" data-categories="RmljdGlvbg==" data-listing-title-sort="The Book of Sand">
+<tr data-index="8" data-categories="RmljdGlvbg==" data-listing-title-sort="The Book of Sand">
 <td>
 <span class="listing-title">The Book of Sand</span>
 </td>
@@ -2472,12 +959,12 @@ Year
 <span class="listing-author">Borges</span>
 </td>
 <td>
-<span class="listing-year">1975</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="18" data-categories="RmljdGlvbg==" data-listing-title-sort="Shakespeare's Memory">
+<tr data-index="9" data-categories="RmljdGlvbg==" data-listing-title-sort="Shakespeare's Memory">
 <td>
 <span class="listing-title">Shakespeare’s Memory</span>
 </td>
@@ -2485,12 +972,12 @@ Year
 <span class="listing-author">Borges</span>
 </td>
 <td>
-<span class="listing-year">1983</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="19" data-categories="UGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Introduction to Plasma Theory">
+<tr data-index="10" data-categories="UGh5c2ljcyUyMChQbGFzbWEp" data-listing-title-sort="Introduction to Plasma Theory">
 <td>
 <span class="listing-title">Introduction to Plasma Theory</span>
 </td>
@@ -2498,12 +985,12 @@ Year
 <span class="listing-author">Nicholson</span>
 </td>
 <td>
-<span class="listing-year">1983</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="20" data-categories="RmljdGlvbg==" data-listing-title-sort="The Quiet American">
+<tr data-index="11" data-categories="RmljdGlvbg==" data-listing-title-sort="The Quiet American">
 <td>
 <span class="listing-title">The Quiet American</span>
 </td>
@@ -2511,12 +998,12 @@ Year
 <span class="listing-author">Graham Greene</span>
 </td>
 <td>
-<span class="listing-year">1955</span>
+<span class="listing-score">&nbsp;</span>
 </td>
 
 </tr>
 
-<tr data-index="21" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Waiting for Hitler, 1929–1941">
+<tr data-index="12" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Waiting for Hitler, 1929–1941">
 <td>
 <span class="listing-title">Stalin: Waiting for Hitler, 1929–1941</span>
 </td>
@@ -2524,12 +1011,12 @@ Year
 <span class="listing-author">Kotkin</span>
 </td>
 <td>
-<span class="listing-year">2017</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="22" data-categories="TmF0dXJlJTJDVHJhdmVs" data-listing-title-sort="Our National Parks">
+<tr data-index="13" data-categories="TmF0dXJlJTJDVHJhdmVs" data-listing-title-sort="Our National Parks">
 <td>
 <span class="listing-title">Our National Parks</span>
 </td>
@@ -2537,51 +1024,12 @@ Year
 <span class="listing-author">Muir</span>
 </td>
 <td>
-<span class="listing-year">1901</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="23" data-categories="TWF0aGVtYXRpY3MlMkNJbnZlcnNlJTIwUHJvYmxlbXM=" data-listing-title-sort="Questions of Uniqueness and Resolution in Reconstruction from Projections">
-<td>
-<span class="listing-title">Questions of Uniqueness and Resolution in Reconstruction from Projections</span>
-</td>
-<td>
-<span class="listing-author">Katz</span>
-</td>
-<td>
-<span class="listing-year">1978</span>
-</td>
-
-</tr>
-
-<tr data-index="24" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Handbook of Accelerator Physics and Engineering">
-<td>
-<span class="listing-title">Handbook of Accelerator Physics and Engineering</span>
-</td>
-<td>
-<span class="listing-author">Chao et al.</span>
-</td>
-<td>
-<span class="listing-year">1999</span>
-</td>
-
-</tr>
-
-<tr data-index="25" data-categories="Q29tcHV0YXRpb25hbCUyMFBoeXNpY3MlMkNDb21wdXRlciUyMFNjaWVuY2U=" data-listing-title-sort="Computer Simulation Using Particles">
-<td>
-<span class="listing-title">Computer Simulation Using Particles</span>
-</td>
-<td>
-<span class="listing-author">Hockney and Eastwood</span>
-</td>
-<td>
-<span class="listing-year">1981</span>
-</td>
-
-</tr>
-
-<tr data-index="26" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eSUyQ01hY2hpbmUlMjBMZWFybmluZw==" data-listing-title-sort="Probabilistic Artificial Intelligence">
+<tr data-index="14" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eSUyQ01hY2hpbmUlMjBMZWFybmluZw==" data-listing-title-sort="Probabilistic Artificial Intelligence">
 <td>
 <span class="listing-title">Probabilistic Artificial Intelligence</span>
 </td>
@@ -2589,12 +1037,12 @@ Year
 <span class="listing-author">Krause and Hubotter</span>
 </td>
 <td>
-<span class="listing-year">2025</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="27" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Cultural Revolution">
+<tr data-index="15" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Cultural Revolution">
 <td>
 <span class="listing-title">The Cultural Revolution</span>
 </td>
@@ -2602,12 +1050,12 @@ Year
 <span class="listing-author">Dikötter</span>
 </td>
 <td>
-<span class="listing-year">2016</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="28" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="Mao's Great Famine">
+<tr data-index="16" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="Mao's Great Famine">
 <td>
 <span class="listing-title">Mao’s Great Famine</span>
 </td>
@@ -2615,12 +1063,12 @@ Year
 <span class="listing-author">Dikötter</span>
 </td>
 <td>
-<span class="listing-year">2010</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="29" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Tragedy of Liberation">
+<tr data-index="17" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Tragedy of Liberation">
 <td>
 <span class="listing-title">The Tragedy of Liberation</span>
 </td>
@@ -2628,12 +1076,12 @@ Year
 <span class="listing-author">Dikötter</span>
 </td>
 <td>
-<span class="listing-year">2013</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="30" data-categories="UGh5c2ljcyUyQ01hdGhlbWF0aWNzJTJDQWNjZWxlcmF0b3IlMjBQaHlzaWNz" data-listing-title-sort="Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics">
+<tr data-index="18" data-categories="UGh5c2ljcyUyMChBY2NlbGVyYXRvciklMkNNYXRoZW1hdGljcw==" data-listing-title-sort="Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics">
 <td>
 <span class="listing-title">Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics</span>
 </td>
@@ -2641,12 +1089,12 @@ Year
 <span class="listing-author">Dragt</span>
 </td>
 <td>
-<span class="listing-year">2011</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="31" data-categories="RmljdGlvbiUyQ1J1c3NpYQ==" data-listing-title-sort="White Nights">
+<tr data-index="19" data-categories="RmljdGlvbiUyQ1J1c3NpYQ==" data-listing-title-sort="White Nights">
 <td>
 <span class="listing-title">White Nights</span>
 </td>
@@ -2654,12 +1102,12 @@ Year
 <span class="listing-author">Dostoevsky</span>
 </td>
 <td>
-<span class="listing-year">1848</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="32" data-categories="U29jaWV0eQ==" data-listing-title-sort="The Human Condition">
+<tr data-index="20" data-categories="U29jaW9sb2d5" data-listing-title-sort="The Human Condition">
 <td>
 <span class="listing-title">The Human Condition</span>
 </td>
@@ -2667,12 +1115,12 @@ Year
 <span class="listing-author">Arendt</span>
 </td>
 <td>
-<span class="listing-year">1958</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="33" data-categories="UGh5c2ljcyUyQ0xhd3M=" data-listing-title-sort="How the Laws of Physics Lie">
+<tr data-index="21" data-categories="UGh5c2ljcyUyQ0xhd3M=" data-listing-title-sort="How the Laws of Physics Lie">
 <td>
 <span class="listing-title">How the Laws of Physics Lie</span>
 </td>
@@ -2680,12 +1128,12 @@ Year
 <span class="listing-author">Cartwright</span>
 </td>
 <td>
-<span class="listing-year">1983</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="34" data-categories="TW9yYWxpdHklMkNXb3JsZCUyMFdhciUyMElJ" data-listing-title-sort="Eichmann in Jerusalem: A Report on the Banality of Evil">
+<tr data-index="22" data-categories="TW9yYWxpdHklMkNXb3JsZCUyMFdhciUyMElJ" data-listing-title-sort="Eichmann in Jerusalem: A Report on the Banality of Evil">
 <td>
 <span class="listing-title">Eichmann in Jerusalem: A Report on the Banality of Evil</span>
 </td>
@@ -2693,12 +1141,12 @@ Year
 <span class="listing-author">Arendt</span>
 </td>
 <td>
-<span class="listing-year">1963</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="35" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Physics of Collective Beam Instabilities in High Energy Accelerators">
+<tr data-index="23" data-categories="UGh5c2ljcyUyMChBY2NlbGVyYXRvcik=" data-listing-title-sort="Physics of Collective Beam Instabilities in High Energy Accelerators">
 <td>
 <span class="listing-title">Physics of Collective Beam Instabilities in High Energy Accelerators</span>
 </td>
@@ -2706,12 +1154,12 @@ Year
 <span class="listing-author">Chao</span>
 </td>
 <td>
-<span class="listing-year">1993</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="36" data-categories="V3JpdGluZw==" data-listing-title-sort="The Sense of Style">
+<tr data-index="24" data-categories="V3JpdGluZw==" data-listing-title-sort="The Sense of Style">
 <td>
 <span class="listing-title">The Sense of Style</span>
 </td>
@@ -2719,12 +1167,12 @@ Year
 <span class="listing-author">Pinker</span>
 </td>
 <td>
-<span class="listing-year">2014</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="37" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Deep Learning: Foundations and Concepts">
+<tr data-index="25" data-categories="TWFjaGluZSUyMExlYXJuaW5n" data-listing-title-sort="Deep Learning: Foundations and Concepts">
 <td>
 <span class="listing-title">Deep Learning: Foundations and Concepts</span>
 </td>
@@ -2732,12 +1180,12 @@ Year
 <span class="listing-author">Bishop, and Bishop</span>
 </td>
 <td>
-<span class="listing-year">2023</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="38" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Entropic Physics">
+<tr data-index="26" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Entropic Physics">
 <td>
 <span class="listing-title">Entropic Physics</span>
 </td>
@@ -2745,12 +1193,12 @@ Year
 <span class="listing-author">Caticha</span>
 </td>
 <td>
-<span class="listing-year">2022</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="39" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Probability Theory: The Logic of Science">
+<tr data-index="27" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Probability Theory: The Logic of Science">
 <td>
 <span class="listing-title">Probability Theory: The Logic of Science</span>
 </td>
@@ -2758,12 +1206,12 @@ Year
 <span class="listing-author">Jaynes</span>
 </td>
 <td>
-<span class="listing-year">2003</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="40" data-categories="RXRoaWNzJTJDQWJvcnRpb24=" data-listing-title-sort="The Ethics of Abortion">
+<tr data-index="28" data-categories="RXRoaWNzJTJDQWJvcnRpb24=" data-listing-title-sort="The Ethics of Abortion">
 <td>
 <span class="listing-title">The Ethics of Abortion</span>
 </td>
@@ -2771,12 +1219,12 @@ Year
 <span class="listing-author">Kaczor</span>
 </td>
 <td>
-<span class="listing-year">2010</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="41" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Data Analysis: A Bayesian Tutorial">
+<tr data-index="29" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Data Analysis: A Bayesian Tutorial">
 <td>
 <span class="listing-title">Data Analysis: A Bayesian Tutorial</span>
 </td>
@@ -2784,12 +1232,12 @@ Year
 <span class="listing-author">Sivia and Skilling</span>
 </td>
 <td>
-<span class="listing-year">1996</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="42" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Bayesian Data Analysis">
+<tr data-index="30" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Bayesian Data Analysis">
 <td>
 <span class="listing-title">Bayesian Data Analysis</span>
 </td>
@@ -2797,12 +1245,12 @@ Year
 <span class="listing-author">Gelman, Carlin, Stern, and Rubin</span>
 </td>
 <td>
-<span class="listing-year">1995</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="43" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Paradoxes of Power, 1878-1928">
+<tr data-index="31" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Paradoxes of Power, 1878-1928">
 <td>
 <span class="listing-title">Stalin: Paradoxes of Power, 1878-1928</span>
 </td>
@@ -2810,12 +1258,12 @@ Year
 <span class="listing-author">Kotkin</span>
 </td>
 <td>
-<span class="listing-year">2014</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="44" data-categories="U29jaWV0eSUyQ0V0aGljcw==" data-listing-title-sort="The Character Gap">
+<tr data-index="32" data-categories="RXRoaWNz" data-listing-title-sort="The Character Gap">
 <td>
 <span class="listing-title">The Character Gap</span>
 </td>
@@ -2823,25 +1271,25 @@ Year
 <span class="listing-author">Miller</span>
 </td>
 <td>
-<span class="listing-year">2017</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="45" data-categories="RmljdGlvbg==" data-listing-title-sort="Exhalation: Stories">
+<tr data-index="33" data-categories="U2NpZW5jZSUyMEZpY3Rpb24=" data-listing-title-sort="Exhalation">
 <td>
-<span class="listing-title">Exhalation: Stories</span>
+<span class="listing-title">Exhalation</span>
 </td>
 <td>
 <span class="listing-author">Chiang</span>
 </td>
 <td>
-<span class="listing-year">2019</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="46" data-categories="U29jaWV0eSUyQ0Vjb25vbWljcw==" data-listing-title-sort="Wealth, Poverty, and Politics">
+<tr data-index="34" data-categories="U29jaW9sb2d5" data-listing-title-sort="Wealth, Poverty, and Politics">
 <td>
 <span class="listing-title">Wealth, Poverty, and Politics</span>
 </td>
@@ -2849,12 +1297,12 @@ Year
 <span class="listing-author">Sowell</span>
 </td>
 <td>
-<span class="listing-year">2015</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="47" data-categories="U29jaWV0eQ==" data-listing-title-sort="The Disappearance of Childhood">
+<tr data-index="35" data-categories="U29jaW9sb2d5" data-listing-title-sort="The Disappearance of Childhood">
 <td>
 <span class="listing-title">The Disappearance of Childhood</span>
 </td>
@@ -2862,12 +1310,12 @@ Year
 <span class="listing-author">Postman</span>
 </td>
 <td>
-<span class="listing-year">1982</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="48" data-categories="UmVsaWdpb24=" data-listing-title-sort="Mere Christianity">
+<tr data-index="36" data-categories="UmVsaWdpb24lMkNDaHJpc3RpYW5pdHk=" data-listing-title-sort="Mere Christianity">
 <td>
 <span class="listing-title">Mere Christianity</span>
 </td>
@@ -2875,12 +1323,12 @@ Year
 <span class="listing-author">Lewis</span>
 </td>
 <td>
-<span class="listing-year">1952</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="49" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY2FsJTIwUGh5c2ljcw==" data-listing-title-sort="Statistical Physics of Particles">
+<tr data-index="37" data-categories="UGh5c2ljcyUyMChTdGF0aXN0aWNhbCUyME1lY2hhbmljcyk=" data-listing-title-sort="Statistical Physics of Particles">
 <td>
 <span class="listing-title">Statistical Physics of Particles</span>
 </td>
@@ -2888,12 +1336,12 @@ Year
 <span class="listing-author">Kardar</span>
 </td>
 <td>
-<span class="listing-year">2007</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="50" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY2FsJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to Thermal Physics">
+<tr data-index="38" data-categories="UGh5c2ljcyUyMChTdGF0aXN0aWNhbCUyME1lY2hhbmljcyk=" data-listing-title-sort="Introduction to Thermal Physics">
 <td>
 <span class="listing-title">Introduction to Thermal Physics</span>
 </td>
@@ -2901,25 +1349,12 @@ Year
 <span class="listing-author">Schroeder</span>
 </td>
 <td>
-<span class="listing-year">1999</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="51" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="From Tracking Code to Analysis">
-<td>
-<span class="listing-title">From Tracking Code to Analysis</span>
-</td>
-<td>
-<span class="listing-author">Forest</span>
-</td>
-<td>
-<span class="listing-year">2006</span>
-</td>
-
-</tr>
-
-<tr data-index="52" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBPcHRpY3M=" data-listing-title-sort="Optical Coherence and Quantum Optics">
+<tr data-index="39" data-categories="UGh5c2ljcyUyMChRdWFudHVtJTIwT3B0aWNzKQ==" data-listing-title-sort="Optical Coherence and Quantum Optics">
 <td>
 <span class="listing-title">Optical Coherence and Quantum Optics</span>
 </td>
@@ -2927,12 +1362,12 @@ Year
 <span class="listing-author">Mandel and Wolf</span>
 </td>
 <td>
-<span class="listing-year">1995</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="53" data-categories="UXVhbnR1bSUyMFBoeXNpY3M=" data-listing-title-sort="Quantum Mechanics: Concepts and Applications">
+<tr data-index="40" data-categories="UGh5c2ljcyUyMChRdWFudHVtJTIwTWVjaGFuaWNzKQ==" data-listing-title-sort="Quantum Mechanics: Concepts and Applications">
 <td>
 <span class="listing-title">Quantum Mechanics: Concepts and Applications</span>
 </td>
@@ -2940,12 +1375,12 @@ Year
 <span class="listing-author">Zettili</span>
 </td>
 <td>
-<span class="listing-year">2001</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="54" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Modern Quantum Mechanics">
+<tr data-index="41" data-categories="UGh5c2ljcyUyMChRdWFudHVtJTIwTWVjaGFuaWNzKQ==" data-listing-title-sort="Modern Quantum Mechanics">
 <td>
 <span class="listing-title">Modern Quantum Mechanics</span>
 </td>
@@ -2953,12 +1388,12 @@ Year
 <span class="listing-author">Sakurai</span>
 </td>
 <td>
-<span class="listing-year">1985</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="55" data-categories="UGh5c2ljcyUyQ0hpc3Rvcnk=" data-listing-title-sort="What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics">
+<tr data-index="42" data-categories="UGh5c2ljcyUyQ0hpc3Rvcnk=" data-listing-title-sort="What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics">
 <td>
 <span class="listing-title">What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics</span>
 </td>
@@ -2966,12 +1401,12 @@ Year
 <span class="listing-author">Becker</span>
 </td>
 <td>
-<span class="listing-year">2018</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="56" data-categories="UGFydGljbGUlMjBQaHlzaWNz" data-listing-title-sort="Modern Elementary Particle Physics">
+<tr data-index="43" data-categories="UGh5c2ljcyUyMChQYXJ0aWNsZSk=" data-listing-title-sort="Modern Elementary Particle Physics">
 <td>
 <span class="listing-title">Modern Elementary Particle Physics</span>
 </td>
@@ -2979,12 +1414,12 @@ Year
 <span class="listing-author">Kane</span>
 </td>
 <td>
-<span class="listing-year">1987</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="57" data-categories="UGh5c2ljcyUyQ1BhcnRpY2xlJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to High Energy Physics">
+<tr data-index="44" data-categories="UGh5c2ljcyUyMChQYXJ0aWNsZSk=" data-listing-title-sort="Introduction to High Energy Physics">
 <td>
 <span class="listing-title">Introduction to High Energy Physics</span>
 </td>
@@ -2992,12 +1427,12 @@ Year
 <span class="listing-author">Perkins</span>
 </td>
 <td>
-<span class="listing-year">1972</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="58" data-categories="UGh5c2ljcyUyQ1BhcnRpY2xlJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to Elementary Particle Physics">
+<tr data-index="45" data-categories="UGh5c2ljcyUyMChQYXJ0aWNsZSk=" data-listing-title-sort="Introduction to Elementary Particle Physics">
 <td>
 <span class="listing-title">Introduction to Elementary Particle Physics</span>
 </td>
@@ -3005,12 +1440,12 @@ Year
 <span class="listing-author">Griffiths</span>
 </td>
 <td>
-<span class="listing-year">2008</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="59" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyMFBoeXNpY3M=" data-listing-title-sort="Classical Mechanics">
+<tr data-index="46" data-categories="UGh5c2ljcyUyMChDTSk=" data-listing-title-sort="Classical Mechanics">
 <td>
 <span class="listing-title">Classical Mechanics</span>
 </td>
@@ -3018,12 +1453,12 @@ Year
 <span class="listing-author">Taylor</span>
 </td>
 <td>
-<span class="listing-year">2003</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="60" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyMFBoeXNpY3M=" data-listing-title-sort="Classical Mechanics">
+<tr data-index="47" data-categories="UGh5c2ljcyUyMChDTSk=" data-listing-title-sort="Classical Mechanics">
 <td>
 <span class="listing-title">Classical Mechanics</span>
 </td>
@@ -3031,12 +1466,12 @@ Year
 <span class="listing-author">Goldstein</span>
 </td>
 <td>
-<span class="listing-year">1950</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="61" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Introduction to Electrodynamics">
+<tr data-index="48" data-categories="UGh5c2ljcyUyMChFTSk=" data-listing-title-sort="Introduction to Electrodynamics">
 <td>
 <span class="listing-title">Introduction to Electrodynamics</span>
 </td>
@@ -3044,12 +1479,12 @@ Year
 <span class="listing-author">Griffiths</span>
 </td>
 <td>
-<span class="listing-year">1981</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="62" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Classical Electromagnetism">
+<tr data-index="49" data-categories="UGh5c2ljcyUyMChFTSk=" data-listing-title-sort="Classical Electromagnetism">
 <td>
 <span class="listing-title">Classical Electromagnetism</span>
 </td>
@@ -3057,12 +1492,12 @@ Year
 <span class="listing-author">Franklin</span>
 </td>
 <td>
-<span class="listing-year">2005</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="63" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Classical Electrodynamics">
+<tr data-index="50" data-categories="UGh5c2ljcyUyMChFTSk=" data-listing-title-sort="Classical Electrodynamics">
 <td>
 <span class="listing-title">Classical Electrodynamics</span>
 </td>
@@ -3070,12 +1505,12 @@ Year
 <span class="listing-author">Jackson</span>
 </td>
 <td>
-<span class="listing-year">1962</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="64" data-categories="UGh5c2ljcyUyQ0FzdHJvcGh5c2ljcw==" data-listing-title-sort="Astrophysics in a Nutshell">
+<tr data-index="51" data-categories="UGh5c2ljcyUyMChBc3Rybyk=" data-listing-title-sort="Astrophysics in a Nutshell">
 <td>
 <span class="listing-title">Astrophysics in a Nutshell</span>
 </td>
@@ -3083,12 +1518,12 @@ Year
 <span class="listing-author">Maoz</span>
 </td>
 <td>
-<span class="listing-year">2007</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="65" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Theory and Design of Charged Particle Beams">
+<tr data-index="52" data-categories="UGh5c2ljcyUyMChBY2NlbGVyYXRvcik=" data-listing-title-sort="Theory and Design of Charged Particle Beams">
 <td>
 <span class="listing-title">Theory and Design of Charged Particle Beams</span>
 </td>
@@ -3096,12 +1531,12 @@ Year
 <span class="listing-author">Reiser</span>
 </td>
 <td>
-<span class="listing-year">1994</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="66" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Space Charge Physics for Particle Accelerators">
+<tr data-index="53" data-categories="UGh5c2ljcyUyMChBY2NlbGVyYXRvciklMkNQaHlzaWNzJTIwKFBsYXNtYSk=" data-listing-title-sort="Space Charge Physics for Particle Accelerators">
 <td>
 <span class="listing-title">Space Charge Physics for Particle Accelerators</span>
 </td>
@@ -3109,12 +1544,12 @@ Year
 <span class="listing-author">Hofmann</span>
 </td>
 <td>
-<span class="listing-year">2017</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="67" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="RF Linear Accelerators">
+<tr data-index="54" data-categories="UGh5c2ljcyUyMChBY2NlbGVyYXRvcik=" data-listing-title-sort="RF Linear Accelerators">
 <td>
 <span class="listing-title">RF Linear Accelerators</span>
 </td>
@@ -3122,12 +1557,12 @@ Year
 <span class="listing-author">Wangler</span>
 </td>
 <td>
-<span class="listing-year">1998</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="68" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Particle Accelerator Physics">
+<tr data-index="55" data-categories="UGh5c2ljcyUyMChBY2NlbGVyYXRvcik=" data-listing-title-sort="Particle Accelerator Physics">
 <td>
 <span class="listing-title">Particle Accelerator Physics</span>
 </td>
@@ -3135,12 +1570,12 @@ Year
 <span class="listing-author">Wiedemann</span>
 </td>
 <td>
-<span class="listing-year">2015</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="69" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Measurement and Control of Charged Particle Beams">
+<tr data-index="56" data-categories="UGh5c2ljcyUyMChBY2NlbGVyYXRvcik=" data-listing-title-sort="Measurement and Control of Charged Particle Beams">
 <td>
 <span class="listing-title">Measurement and Control of Charged Particle Beams</span>
 </td>
@@ -3148,12 +1583,12 @@ Year
 <span class="listing-author">Minty and Zimmerman</span>
 </td>
 <td>
-<span class="listing-year">2003</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="70" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to the Physics of High Energy Accelerators">
+<tr data-index="57" data-categories="UGh5c2ljcyUyMChBY2NlbGVyYXRvcik=" data-listing-title-sort="Introduction to the Physics of High Energy Accelerators">
 <td>
 <span class="listing-title">Introduction to the Physics of High Energy Accelerators</span>
 </td>
@@ -3161,12 +1596,12 @@ Year
 <span class="listing-author">Edwards and Syphers</span>
 </td>
 <td>
-<span class="listing-year">1994</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="71" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Accelerator Physics">
+<tr data-index="58" data-categories="UGh5c2ljcyUyMChBY2NlbGVyYXRvcik=" data-listing-title-sort="Accelerator Physics">
 <td>
 <span class="listing-title">Accelerator Physics</span>
 </td>
@@ -3174,12 +1609,12 @@ Year
 <span class="listing-author">Lee</span>
 </td>
 <td>
-<span class="listing-year">2004</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="72" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Time and Chance">
+<tr data-index="59" data-categories="UGhpbG9zb3BoeSUyMChTY2llbmNlKQ==" data-listing-title-sort="Time and Chance">
 <td>
 <span class="listing-title">Time and Chance</span>
 </td>
@@ -3187,12 +1622,12 @@ Year
 <span class="listing-author">Albert</span>
 </td>
 <td>
-<span class="listing-year">2000</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="73" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Philosophy of Physics: Space and Time">
+<tr data-index="60" data-categories="UGhpbG9zb3BoeSUyMChTY2llbmNlKQ==" data-listing-title-sort="Philosophy of Physics: Space and Time">
 <td>
 <span class="listing-title">Philosophy of Physics: Space and Time</span>
 </td>
@@ -3200,12 +1635,12 @@ Year
 <span class="listing-author">Maudlin</span>
 </td>
 <td>
-<span class="listing-year">2012</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="74" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Philosophy of Physics: Quantum Theory">
+<tr data-index="61" data-categories="UGhpbG9zb3BoeSUyMChTY2llbmNlKQ==" data-listing-title-sort="Philosophy of Physics: Quantum Theory">
 <td>
 <span class="listing-title">Philosophy of Physics: Quantum Theory</span>
 </td>
@@ -3213,12 +1648,12 @@ Year
 <span class="listing-author">Maudlin</span>
 </td>
 <td>
-<span class="listing-year">2019</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="75" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="The Emergent Multiverse">
+<tr data-index="62" data-categories="UGhpbG9zb3BoeSUyMChTY2llbmNlKQ==" data-listing-title-sort="The Emergent Multiverse">
 <td>
 <span class="listing-title">The Emergent Multiverse</span>
 </td>
@@ -3226,12 +1661,12 @@ Year
 <span class="listing-author">Wallace</span>
 </td>
 <td>
-<span class="listing-year">2012</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="76" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Taking Pascal's Wager">
+<tr data-index="63" data-categories="UGhpbG9zb3BoeSUyMChSZWxpZ2lvbik=" data-listing-title-sort="Taking Pascal's Wager">
 <td>
 <span class="listing-title">Taking Pascal’s Wager</span>
 </td>
@@ -3239,12 +1674,12 @@ Year
 <span class="listing-author">Rota</span>
 </td>
 <td>
-<span class="listing-year">2016</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="77" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Five Proofs of the Existence of God">
+<tr data-index="64" data-categories="UGhpbG9zb3BoeSUyMChSZWxpZ2lvbik=" data-listing-title-sort="Five Proofs of the Existence of God">
 <td>
 <span class="listing-title">Five Proofs of the Existence of God</span>
 </td>
@@ -3252,12 +1687,12 @@ Year
 <span class="listing-author">Feser</span>
 </td>
 <td>
-<span class="listing-year">2017</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="78" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Is God the Best Explanation of Things? A Dialogue">
+<tr data-index="65" data-categories="UGhpbG9zb3BoeSUyMChSZWxpZ2lvbik=" data-listing-title-sort="Is God the Best Explanation of Things? A Dialogue">
 <td>
 <span class="listing-title">Is God the Best Explanation of Things? A Dialogue</span>
 </td>
@@ -3265,12 +1700,12 @@ Year
 <span class="listing-author">Rasmussen and Leon</span>
 </td>
 <td>
-<span class="listing-year">2019</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="79" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Arguing About Gods">
+<tr data-index="66" data-categories="UGhpbG9zb3BoeSUyMChSZWxpZ2lvbik=" data-listing-title-sort="Arguing About Gods">
 <td>
 <span class="listing-title">Arguing About Gods</span>
 </td>
@@ -3278,12 +1713,12 @@ Year
 <span class="listing-author">Oppy</span>
 </td>
 <td>
-<span class="listing-year">2006</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="80" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9uJTJDTWV0YXBoeXNpY3M=" data-listing-title-sort="Necessary Existence">
+<tr data-index="67" data-categories="UGhpbG9zb3BoeSUyMChSZWxpZ2lvbiklMkNQaGlsb3NvcGh5JTIwKE1ldGFwaHlzaWNzKQ==" data-listing-title-sort="Necessary Existence">
 <td>
 <span class="listing-title">Necessary Existence</span>
 </td>
@@ -3291,12 +1726,12 @@ Year
 <span class="listing-author">Pruss and Rasmussen</span>
 </td>
 <td>
-<span class="listing-year">2018</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="81" data-categories="UGhpbG9zb3BoeSUyQ0luZmluaXR5JTJDUGFyYWRveA==" data-listing-title-sort="Infinity, Causation, and Paradox">
+<tr data-index="68" data-categories="SW5maW5pdHklMkNQYXJhZG94" data-listing-title-sort="Infinity, Causation, and Paradox">
 <td>
 <span class="listing-title">Infinity, Causation, and Paradox</span>
 </td>
@@ -3304,12 +1739,12 @@ Year
 <span class="listing-author">Pruss</span>
 </td>
 <td>
-<span class="listing-year">2018</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="82" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9uJTJDRXBpc3RlbW9sb2d5" data-listing-title-sort="Knowledge and Christian Belief">
+<tr data-index="69" data-categories="UGhpbG9zb3BoeSUyMChSZWxpZ2lvbiklMkNQaGlsb3NvcGh5JTIwKEVwaXN0ZW1vbG9neSk=" data-listing-title-sort="Knowledge and Christian Belief">
 <td>
 <span class="listing-title">Knowledge and Christian Belief</span>
 </td>
@@ -3317,12 +1752,12 @@ Year
 <span class="listing-author">Plantinga</span>
 </td>
 <td>
-<span class="listing-year">2015</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="83" data-categories="UGhpbG9zb3BoeSUyQ0VwaXN0ZW1vbG9neQ==" data-listing-title-sort="Change in View">
+<tr data-index="70" data-categories="UGhpbG9zb3BoeSUyMChFcGlzdGVtb2xvZ3kp" data-listing-title-sort="Change in View">
 <td>
 <span class="listing-title">Change in View</span>
 </td>
@@ -3330,12 +1765,12 @@ Year
 <span class="listing-author">Harman</span>
 </td>
 <td>
-<span class="listing-year">1986</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="84" data-categories="VmlzdWFsaXphdGlvbg==" data-listing-title-sort="Envisioning Information">
+<tr data-index="71" data-categories="VmlzdWFsaXphdGlvbg==" data-listing-title-sort="Envisioning Information">
 <td>
 <span class="listing-title">Envisioning Information</span>
 </td>
@@ -3343,12 +1778,12 @@ Year
 <span class="listing-author">Tufte</span>
 </td>
 <td>
-<span class="listing-year">1990</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="85" data-categories="TWF0aGVtYXRpY3MlMkNQaHlzaWNz" data-listing-title-sort="Mathematics of Classical and Quantum Physics">
+<tr data-index="72" data-categories="TWF0aGVtYXRpY3M=" data-listing-title-sort="Mathematics of Classical and Quantum Physics">
 <td>
 <span class="listing-title">Mathematics of Classical and Quantum Physics</span>
 </td>
@@ -3356,12 +1791,12 @@ Year
 <span class="listing-author">Byron and Fuller</span>
 </td>
 <td>
-<span class="listing-year">1969</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="86" data-categories="TWF0aGVtYXRpY3MlMkNQaHlzaWNz" data-listing-title-sort="Mathematical Methods for Physicists">
+<tr data-index="73" data-categories="TWF0aGVtYXRpY3MlMkNQaHlzaWNz" data-listing-title-sort="Mathematical Methods for Physicists">
 <td>
 <span class="listing-title">Mathematical Methods for Physicists</span>
 </td>
@@ -3369,12 +1804,12 @@ Year
 <span class="listing-author">Arfken, Weber, and Harris</span>
 </td>
 <td>
-<span class="listing-year">1966</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="87" data-categories="U2NpZW5jZSUyMEZpY3Rpb24=" data-listing-title-sort="Stories of Your Life and Others">
+<tr data-index="74" data-categories="U2NpZW5jZSUyMEZpY3Rpb24=" data-listing-title-sort="Stories of Your Life and Others">
 <td>
 <span class="listing-title">Stories of Your Life and Others</span>
 </td>
@@ -3382,12 +1817,12 @@ Year
 <span class="listing-author">Chiang</span>
 </td>
 <td>
-<span class="listing-year">2002</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="88" data-categories="RmljdGlvbg==" data-listing-title-sort="The Road">
+<tr data-index="75" data-categories="RmljdGlvbg==" data-listing-title-sort="The Road">
 <td>
 <span class="listing-title">The Road</span>
 </td>
@@ -3395,12 +1830,12 @@ Year
 <span class="listing-author">McCarthy</span>
 </td>
 <td>
-<span class="listing-year">2006</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="89" data-categories="RmljdGlvbg==" data-listing-title-sort="No Country for Old Men">
+<tr data-index="76" data-categories="RmljdGlvbg==" data-listing-title-sort="No Country for Old Men">
 <td>
 <span class="listing-title">No Country for Old Men</span>
 </td>
@@ -3408,12 +1843,12 @@ Year
 <span class="listing-author">McCarthy</span>
 </td>
 <td>
-<span class="listing-year">2005</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="90" data-categories="RmljdGlvbg==" data-listing-title-sort="Moby Dick">
+<tr data-index="77" data-categories="RmljdGlvbg==" data-listing-title-sort="Moby Dick">
 <td>
 <span class="listing-title">Moby Dick</span>
 </td>
@@ -3421,12 +1856,12 @@ Year
 <span class="listing-author">Melville</span>
 </td>
 <td>
-<span class="listing-year">1851</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="91" data-categories="U2NpZW5jZSUyMEZpY3Rpb24=" data-listing-title-sort="Fahrenheit 451">
+<tr data-index="78" data-categories="U2NpZW5jZSUyMEZpY3Rpb24=" data-listing-title-sort="Fahrenheit 451">
 <td>
 <span class="listing-title">Fahrenheit 451</span>
 </td>
@@ -3434,12 +1869,12 @@ Year
 <span class="listing-author">Bradbury</span>
 </td>
 <td>
-<span class="listing-year">1953</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="92" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="Crime and Punishment">
+<tr data-index="79" data-categories="RmljdGlvbiUyQ1J1c3NpYQ==" data-listing-title-sort="Crime and Punishment">
 <td>
 <span class="listing-title">Crime and Punishment</span>
 </td>
@@ -3447,12 +1882,12 @@ Year
 <span class="listing-author">Dostoevsky</span>
 </td>
 <td>
-<span class="listing-year">1866</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="93" data-categories="RmljdGlvbg==" data-listing-title-sort="The Alchemist">
+<tr data-index="80" data-categories="RmljdGlvbg==" data-listing-title-sort="The Alchemist">
 <td>
 <span class="listing-title">The Alchemist</span>
 </td>
@@ -3460,12 +1895,12 @@ Year
 <span class="listing-author">Coelho</span>
 </td>
 <td>
-<span class="listing-year">1988</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="94" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHJvYmFiaWxpdHk=" data-listing-title-sort="Pattern Recognition and Machine Learning">
+<tr data-index="81" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHJvYmFiaWxpdHk=" data-listing-title-sort="Pattern Recognition and Machine Learning">
 <td>
 <span class="listing-title">Pattern Recognition and Machine Learning</span>
 </td>
@@ -3473,12 +1908,12 @@ Year
 <span class="listing-author">Bishop</span>
 </td>
 <td>
-<span class="listing-year">2006</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="95" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Neural Networks and Deep Learning">
+<tr data-index="82" data-categories="TWFjaGluZSUyMExlYXJuaW5n" data-listing-title-sort="Neural Networks and Deep Learning">
 <td>
 <span class="listing-title">Neural Networks and Deep Learning</span>
 </td>
@@ -3486,12 +1921,12 @@ Year
 <span class="listing-author">Nielsen</span>
 </td>
 <td>
-<span class="listing-year">2015</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="96" data-categories="QWxnb3JpdGhtcyUyQ0NhcmVlcg==" data-listing-title-sort="Elements of Programming Interviews">
+<tr data-index="83" data-categories="Q29tcHV0ZXIlMjBTY2llbmNl" data-listing-title-sort="Elements of Programming Interviews">
 <td>
 <span class="listing-title">Elements of Programming Interviews</span>
 </td>
@@ -3499,12 +1934,12 @@ Year
 <span class="listing-author">Aziz, Lee, and Prakash</span>
 </td>
 <td>
-<span class="listing-year">2012</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="97" data-categories="RmljdGlvbiUyQ1NvdXRoJTIwQWZyaWNh" data-listing-title-sort="Cry, the Beloved Country">
+<tr data-index="84" data-categories="RmljdGlvbiUyQ1NvdXRoJTIwQWZyaWNh" data-listing-title-sort="Cry, the Beloved Country">
 <td>
 <span class="listing-title">Cry, the Beloved Country</span>
 </td>
@@ -3512,12 +1947,12 @@ Year
 <span class="listing-author">Paton</span>
 </td>
 <td>
-<span class="listing-year">1948</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
 
-<tr data-index="98" data-categories="QWxnb3JpdGhtcw==" data-listing-title-sort="Algorithms">
+<tr data-index="85" data-categories="Q29tcHV0ZXIlMjBTY2llbmNl" data-listing-title-sort="Algorithms">
 <td>
 <span class="listing-title">Algorithms</span>
 </td>
@@ -3525,7 +1960,7 @@ Year
 <span class="listing-author">Sedgewick and Wayne</span>
 </td>
 <td>
-<span class="listing-year">2010</span>
+<span class="listing-score">-</span>
 </td>
 
 </tr>
@@ -3538,33 +1973,8 @@ Year
   <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Research Tools</title>
-  <link>https://austin-hoover.github.io/blog/notes/research-tools/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<ul>
-<li><a href="https://notebook.link/public-link">Notebook.link</a></li>
-</ul>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div> ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/research-tools/</guid>
-  <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Web Links</title>
-  <link>https://austin-hoover.github.io/blog/notes/web-links/</link>
+  <title>Links</title>
+  <link>https://austin-hoover.github.io/blog/notes/links/</link>
   <description><![CDATA[ 
 
 
@@ -3585,6 +1995,28 @@ Year
 <li><a href="https://upstream.force11.org/the-preprint-revolution-implications-for-bibliographic-databases/">The preprint revolution</a></li>
 <li><a href="https://www.polygon.com/features/2020/5/27/21265613/runescape-is-helping-venezuelans-survive">Runescape helps Venezuelans survive</a></li>
 <li><a href="https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html">The False Promise of ChatGPT</a></li>
+<li>Journals
+<ul>
+<li><a href="https://pubs.aip.org/aip/cha">Chaos</a></li>
+<li><a href="https://www.nature.com/nphys/">Nature Physics</a></li>
+<li><a href="https://journals.aps.org/prab/">PRAB</a></li>
+<li><a href="https://journals.aps.org/pre/">PRE</a></li>
+<li><a href="https://journals.aps.org/prl/">PRL</a></li>
+<li><a href="https://www.science.org/journal/science">Science</a></li>
+<li><a href="https://mjl.clarivate.com/home">Web of Science Master Journal List</a></li>
+</ul></li>
+<li>Preprint servers
+<ul>
+<li><a href="https://arxiv.org">ArXiv</a></li>
+<li><a href="https://arxiv.org/list/physics.acc-ph/recent">ArXiv (accelerator physics)</a></li>
+<li><a href="https://arxiv.org/list/astro-ph.GA/recent">ArXiv (astrophysics of galaxies)</a></li>
+<li><a href="https://arxiv.org/list/nlin.CD/recent">ArXiv (chaotic dynamics)</a></li>
+<li><a href="https://arxiv.org/list/physics.comp-ph/recent">ArXiv (computational physics)</a></li>
+<li><a href="https://arxiv.org/list/physics.data-an/recent">ArXiv (data analysis, statistics, and probability)</a></li>
+<li><a href="https://arxiv.org/list/physics.hist-ph/recent">ArXiv (history and philosophy of physics)</a></li>
+<li><a href="https://philsci-archive.pitt.edu/cgi/latest_days2?n=30">PhilSci</a></li>
+<li><a href="https://philpeople.org">philpeople.org</a></li>
+</ul></li>
 </ul>
 
 
@@ -3596,7 +2028,7 @@ Year
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/web-links/</guid>
+  <guid>https://austin-hoover.github.io/blog/notes/links/</guid>
   <pubDate>Wed, 01 Jan 2025 05:00:00 GMT</pubDate>
 </item>
 <item>
