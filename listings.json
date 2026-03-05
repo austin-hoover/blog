@@ -8,11 +8,11 @@
     "items": []
   },
   {
-    "listing": "/notes/philosophy/index.html",
+    "listing": "/notes/books-to-read/index.html",
     "items": []
   },
   {
-    "listing": "/notes/books/index.html",
+    "listing": "/notes/space-charge/index.html",
     "items": []
   },
   {
@@ -22,8 +22,8 @@
   {
     "listing": "/notes.html",
     "items": [
-      "/notes/reading-list/index.html",
       "/notes/books/index.html",
+      "/notes/books-to-read/index.html",
       "/notes/electron-cloud/index.html",
       "/notes/documentaries/index.html",
       "/notes/shows/index.html",
@@ -108,11 +108,11 @@
     "items": []
   },
   {
-    "listing": "/notes/reading-list/index.html",
+    "listing": "/notes/books/index.html",
     "items": []
   },
   {
-    "listing": "/notes/space-charge/index.html",
+    "listing": "/notes/philosophy/index.html",
     "items": []
   },
   {
