@@ -1,5 +1,5 @@
 ---
-title: Books (To Read)
+title: Reading List
 date: 2026-03-05
 date-modified: 2026-03-05
 listing:
