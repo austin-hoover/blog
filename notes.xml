@@ -2366,7 +2366,33 @@ Year
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2UlMkNQaHlzaWNzJTJDTGF3cw==" data-listing-title-sort="Laws of Physics">
+<tr data-index="0" data-categories="RmljdGlvbg==" data-listing-title-sort="Auto-da-Fé">
+<td>
+<span class="listing-title">Auto-da-Fé</span>
+</td>
+<td>
+<span class="listing-author">Canetti</span>
+</td>
+<td>
+<span class="listing-year">1935</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="RmljdGlvbg==" data-listing-title-sort="Alice's Adventures in Wonderland">
+<td>
+<span class="listing-title">Alice’s Adventures in Wonderland</span>
+</td>
+<td>
+<span class="listing-author">Carroll</span>
+</td>
+<td>
+<span class="listing-year">1865</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2UlMkNQaHlzaWNzJTJDTGF3cw==" data-listing-title-sort="Laws of Physics">
 <td>
 <span class="listing-title">Laws of Physics</span>
 </td>
@@ -2379,7 +2405,7 @@ Year
 
 </tr>
 
-<tr data-index="1" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="The Brothers Karamazov">
+<tr data-index="3" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="The Brothers Karamazov">
 <td>
 <span class="listing-title">The Brothers Karamazov</span>
 </td>
@@ -2392,7 +2418,7 @@ Year
 
 </tr>
 
-<tr data-index="2" data-categories="RmljdGlvbg==" data-listing-title-sort="A Christmas Carol">
+<tr data-index="4" data-categories="RmljdGlvbg==" data-listing-title-sort="A Christmas Carol">
 <td>
 <span class="listing-title">A Christmas Carol</span>
 </td>
@@ -2405,7 +2431,7 @@ Year
 
 </tr>
 
-<tr data-index="3" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Chinese Question">
+<tr data-index="5" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Chinese Question">
 <td>
 <span class="listing-title">The Chinese Question</span>
 </td>
@@ -2418,7 +2444,7 @@ Year
 
 </tr>
 
-<tr data-index="4" data-categories="RWNvbm9taWNzJTJDU29jaWV0eQ==" data-listing-title-sort="Knowledge and Decisions">
+<tr data-index="6" data-categories="RWNvbm9taWNzJTJDU29jaWV0eQ==" data-listing-title-sort="Knowledge and Decisions">
 <td>
 <span class="listing-title">Knowledge and Decisions</span>
 </td>
@@ -2431,7 +2457,7 @@ Year
 
 </tr>
 
-<tr data-index="5" data-categories="U29jaWV0eSUyQ0hpc3RvcnklMkNJbnRlcm5hdGlvbmFsJTIwUmVsYXRpb25zJTJDQ2hpbmE=" data-listing-title-sort="Breakneck">
+<tr data-index="7" data-categories="U29jaWV0eSUyQ0hpc3RvcnklMkNJbnRlcm5hdGlvbmFsJTIwUmVsYXRpb25zJTJDQ2hpbmE=" data-listing-title-sort="Breakneck">
 <td>
 <span class="listing-title">Breakneck</span>
 </td>
@@ -2444,7 +2470,7 @@ Year
 
 </tr>
 
-<tr data-index="6" data-categories="UGh5c2ljcyUyQ0NvbXB1dGF0aW9uYWwlMjBQaHlzaWNzJTJDQWxnb3JpdGhtcw==" data-listing-title-sort="Numerical Recipes">
+<tr data-index="8" data-categories="UGh5c2ljcyUyQ0NvbXB1dGF0aW9uYWwlMjBQaHlzaWNzJTJDQWxnb3JpdGhtcw==" data-listing-title-sort="Numerical Recipes">
 <td>
 <span class="listing-title">Numerical Recipes</span>
 </td>
@@ -2457,7 +2483,7 @@ Year
 
 </tr>
 
-<tr data-index="7" data-categories="RmljdGlvbg==" data-listing-title-sort="Ficciones">
+<tr data-index="9" data-categories="RmljdGlvbg==" data-listing-title-sort="Ficciones">
 <td>
 <span class="listing-title">Ficciones</span>
 </td>
@@ -2470,7 +2496,7 @@ Year
 
 </tr>
 
-<tr data-index="8" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY3M=" data-listing-title-sort="An Introduction to Error Analysis">
+<tr data-index="10" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY3M=" data-listing-title-sort="An Introduction to Error Analysis">
 <td>
 <span class="listing-title">An Introduction to Error Analysis</span>
 </td>
@@ -2483,7 +2509,7 @@ Year
 
 </tr>
 
-<tr data-index="9" data-categories="UGh5c2ljcyUyQ01hdGhlbWF0aWNz" data-listing-title-sort="Mathematics for Physicists">
+<tr data-index="11" data-categories="UGh5c2ljcyUyQ01hdGhlbWF0aWNz" data-listing-title-sort="Mathematics for Physicists">
 <td>
 <span class="listing-title">Mathematics for Physicists</span>
 </td>
@@ -2496,7 +2522,7 @@ Year
 
 </tr>
 
-<tr data-index="10" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Unifying Physics of Accelerators, Lasers and Plasma">
+<tr data-index="12" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Unifying Physics of Accelerators, Lasers and Plasma">
 <td>
 <span class="listing-title">Unifying Physics of Accelerators, Lasers and Plasma</span>
 </td>
@@ -2509,7 +2535,7 @@ Year
 
 </tr>
 
-<tr data-index="11" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Problems in quantum mechanics with solutions">
+<tr data-index="13" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Problems in quantum mechanics with solutions">
 <td>
 <span class="listing-title">Problems in quantum mechanics with solutions</span>
 </td>
@@ -2522,7 +2548,7 @@ Year
 
 </tr>
 
-<tr data-index="12" data-categories="UGh5c2ljcyUyQ09wdGljcw==" data-listing-title-sort="Introduction to Optics">
+<tr data-index="14" data-categories="UGh5c2ljcyUyQ09wdGljcw==" data-listing-title-sort="Introduction to Optics">
 <td>
 <span class="listing-title">Introduction to Optics</span>
 </td>
@@ -2535,7 +2561,7 @@ Year
 
 </tr>
 
-<tr data-index="13" data-categories="UGh5c2ljcyUyQ0VsZWN0cmljYWwlMjBFbmdpbmVlcmluZw==" data-listing-title-sort="Practical Electronics for Inventors">
+<tr data-index="15" data-categories="UGh5c2ljcyUyQ0VsZWN0cmljYWwlMjBFbmdpbmVlcmluZw==" data-listing-title-sort="Practical Electronics for Inventors">
 <td>
 <span class="listing-title">Practical Electronics for Inventors</span>
 </td>
@@ -2548,7 +2574,7 @@ Year
 
 </tr>
 
-<tr data-index="14" data-categories="TWF0aGVtYXRpY3MlMkNTdGF0aXN0aWNz" data-listing-title-sort="Foundations and Applications of Statistics">
+<tr data-index="16" data-categories="TWF0aGVtYXRpY3MlMkNTdGF0aXN0aWNz" data-listing-title-sort="Foundations and Applications of Statistics">
 <td>
 <span class="listing-title">Foundations and Applications of Statistics</span>
 </td>
@@ -2561,7 +2587,7 @@ Year
 
 </tr>
 
-<tr data-index="15" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Introduction to Quantum Mechanics">
+<tr data-index="17" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Introduction to Quantum Mechanics">
 <td>
 <span class="listing-title">Introduction to Quantum Mechanics</span>
 </td>
@@ -2574,7 +2600,7 @@ Year
 
 </tr>
 
-<tr data-index="16" data-categories="UGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Physics of Nonneutral Plasmas">
+<tr data-index="18" data-categories="UGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Physics of Nonneutral Plasmas">
 <td>
 <span class="listing-title">Physics of Nonneutral Plasmas</span>
 </td>
@@ -2587,7 +2613,7 @@ Year
 
 </tr>
 
-<tr data-index="17" data-categories="RmljdGlvbg==" data-listing-title-sort="The Book of Sand">
+<tr data-index="19" data-categories="RmljdGlvbg==" data-listing-title-sort="The Book of Sand">
 <td>
 <span class="listing-title">The Book of Sand</span>
 </td>
@@ -2600,7 +2626,7 @@ Year
 
 </tr>
 
-<tr data-index="18" data-categories="RmljdGlvbg==" data-listing-title-sort="Shakespeare's Memory">
+<tr data-index="20" data-categories="RmljdGlvbg==" data-listing-title-sort="Shakespeare's Memory">
 <td>
 <span class="listing-title">Shakespeare’s Memory</span>
 </td>
@@ -2613,7 +2639,7 @@ Year
 
 </tr>
 
-<tr data-index="19" data-categories="UGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Introduction to Plasma Theory">
+<tr data-index="21" data-categories="UGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Introduction to Plasma Theory">
 <td>
 <span class="listing-title">Introduction to Plasma Theory</span>
 </td>
@@ -2626,7 +2652,7 @@ Year
 
 </tr>
 
-<tr data-index="20" data-categories="RmljdGlvbg==" data-listing-title-sort="The Quiet American">
+<tr data-index="22" data-categories="RmljdGlvbg==" data-listing-title-sort="The Quiet American">
 <td>
 <span class="listing-title">The Quiet American</span>
 </td>
@@ -2639,7 +2665,7 @@ Year
 
 </tr>
 
-<tr data-index="21" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Waiting for Hitler, 1929–1941">
+<tr data-index="23" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Waiting for Hitler, 1929–1941">
 <td>
 <span class="listing-title">Stalin: Waiting for Hitler, 1929–1941</span>
 </td>
@@ -2652,7 +2678,7 @@ Year
 
 </tr>
 
-<tr data-index="22" data-categories="TmF0dXJlJTJDVHJhdmVs" data-listing-title-sort="Our National Parks">
+<tr data-index="24" data-categories="TmF0dXJlJTJDVHJhdmVs" data-listing-title-sort="Our National Parks">
 <td>
 <span class="listing-title">Our National Parks</span>
 </td>
@@ -2665,7 +2691,7 @@ Year
 
 </tr>
 
-<tr data-index="23" data-categories="TWF0aGVtYXRpY3MlMkNJbnZlcnNlJTIwUHJvYmxlbXM=" data-listing-title-sort="Questions of Uniqueness and Resolution in Reconstruction from Projections">
+<tr data-index="25" data-categories="TWF0aGVtYXRpY3MlMkNJbnZlcnNlJTIwUHJvYmxlbXM=" data-listing-title-sort="Questions of Uniqueness and Resolution in Reconstruction from Projections">
 <td>
 <span class="listing-title">Questions of Uniqueness and Resolution in Reconstruction from Projections</span>
 </td>
@@ -2678,7 +2704,7 @@ Year
 
 </tr>
 
-<tr data-index="24" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Handbook of Accelerator Physics and Engineering">
+<tr data-index="26" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Handbook of Accelerator Physics and Engineering">
 <td>
 <span class="listing-title">Handbook of Accelerator Physics and Engineering</span>
 </td>
@@ -2691,7 +2717,7 @@ Year
 
 </tr>
 
-<tr data-index="25" data-categories="RmljdGlvbg==" data-listing-title-sort="The Last of the Mohicans: A Narrative of 1757">
+<tr data-index="27" data-categories="RmljdGlvbg==" data-listing-title-sort="The Last of the Mohicans: A Narrative of 1757">
 <td>
 <span class="listing-title">The Last of the Mohicans: A Narrative of 1757</span>
 </td>
@@ -2704,7 +2730,7 @@ Year
 
 </tr>
 
-<tr data-index="26" data-categories="Q29tcHV0YXRpb25hbCUyMFBoeXNpY3MlMkNDb21wdXRlciUyMFNjaWVuY2U=" data-listing-title-sort="Computer Simulation Using Particles">
+<tr data-index="28" data-categories="Q29tcHV0YXRpb25hbCUyMFBoeXNpY3MlMkNDb21wdXRlciUyMFNjaWVuY2U=" data-listing-title-sort="Computer Simulation Using Particles">
 <td>
 <span class="listing-title">Computer Simulation Using Particles</span>
 </td>
@@ -2717,7 +2743,7 @@ Year
 
 </tr>
 
-<tr data-index="27" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eSUyQ01hY2hpbmUlMjBMZWFybmluZw==" data-listing-title-sort="Probabilistic Artificial Intelligence">
+<tr data-index="29" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eSUyQ01hY2hpbmUlMjBMZWFybmluZw==" data-listing-title-sort="Probabilistic Artificial Intelligence">
 <td>
 <span class="listing-title">Probabilistic Artificial Intelligence</span>
 </td>
@@ -2730,7 +2756,7 @@ Year
 
 </tr>
 
-<tr data-index="28" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Cultural Revolution">
+<tr data-index="30" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Cultural Revolution">
 <td>
 <span class="listing-title">The Cultural Revolution</span>
 </td>
@@ -2743,7 +2769,7 @@ Year
 
 </tr>
 
-<tr data-index="29" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="Mao's Great Famine">
+<tr data-index="31" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="Mao's Great Famine">
 <td>
 <span class="listing-title">Mao’s Great Famine</span>
 </td>
@@ -2756,7 +2782,7 @@ Year
 
 </tr>
 
-<tr data-index="30" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Tragedy of Liberation">
+<tr data-index="32" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Tragedy of Liberation">
 <td>
 <span class="listing-title">The Tragedy of Liberation</span>
 </td>
@@ -2769,7 +2795,7 @@ Year
 
 </tr>
 
-<tr data-index="31" data-categories="UGh5c2ljcyUyQ01hdGhlbWF0aWNzJTJDQWNjZWxlcmF0b3IlMjBQaHlzaWNz" data-listing-title-sort="Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics">
+<tr data-index="33" data-categories="UGh5c2ljcyUyQ01hdGhlbWF0aWNzJTJDQWNjZWxlcmF0b3IlMjBQaHlzaWNz" data-listing-title-sort="Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics">
 <td>
 <span class="listing-title">Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics</span>
 </td>
@@ -2782,7 +2808,7 @@ Year
 
 </tr>
 
-<tr data-index="32" data-categories="RmljdGlvbiUyQ1J1c3NpYQ==" data-listing-title-sort="White Nights">
+<tr data-index="34" data-categories="RmljdGlvbiUyQ1J1c3NpYQ==" data-listing-title-sort="White Nights">
 <td>
 <span class="listing-title">White Nights</span>
 </td>
@@ -2795,7 +2821,7 @@ Year
 
 </tr>
 
-<tr data-index="33" data-categories="U29jaWV0eQ==" data-listing-title-sort="The Human Condition">
+<tr data-index="35" data-categories="U29jaWV0eQ==" data-listing-title-sort="The Human Condition">
 <td>
 <span class="listing-title">The Human Condition</span>
 </td>
@@ -2808,7 +2834,7 @@ Year
 
 </tr>
 
-<tr data-index="34" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2UlMkNQaHlzaWNzJTJDTGF3cw==" data-listing-title-sort="How the Laws of Physics Lie">
+<tr data-index="36" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2UlMkNQaHlzaWNzJTJDTGF3cw==" data-listing-title-sort="How the Laws of Physics Lie">
 <td>
 <span class="listing-title">How the Laws of Physics Lie</span>
 </td>
@@ -2821,7 +2847,7 @@ Year
 
 </tr>
 
-<tr data-index="35" data-categories="TW9yYWxpdHklMkNXb3JsZCUyMFdhciUyMElJ" data-listing-title-sort="Eichmann in Jerusalem: A Report on the Banality of Evil">
+<tr data-index="37" data-categories="TW9yYWxpdHklMkNXb3JsZCUyMFdhciUyMElJ" data-listing-title-sort="Eichmann in Jerusalem: A Report on the Banality of Evil">
 <td>
 <span class="listing-title">Eichmann in Jerusalem: A Report on the Banality of Evil</span>
 </td>
@@ -2834,7 +2860,7 @@ Year
 
 </tr>
 
-<tr data-index="36" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Physics of Collective Beam Instabilities in High Energy Accelerators">
+<tr data-index="38" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Physics of Collective Beam Instabilities in High Energy Accelerators">
 <td>
 <span class="listing-title">Physics of Collective Beam Instabilities in High Energy Accelerators</span>
 </td>
@@ -2847,7 +2873,7 @@ Year
 
 </tr>
 
-<tr data-index="37" data-categories="V3JpdGluZw==" data-listing-title-sort="The Sense of Style">
+<tr data-index="39" data-categories="V3JpdGluZw==" data-listing-title-sort="The Sense of Style">
 <td>
 <span class="listing-title">The Sense of Style</span>
 </td>
@@ -2860,7 +2886,7 @@ Year
 
 </tr>
 
-<tr data-index="38" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Deep Learning: Foundations and Concepts">
+<tr data-index="40" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Deep Learning: Foundations and Concepts">
 <td>
 <span class="listing-title">Deep Learning: Foundations and Concepts</span>
 </td>
@@ -2873,7 +2899,7 @@ Year
 
 </tr>
 
-<tr data-index="39" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Entropic Physics">
+<tr data-index="41" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Entropic Physics">
 <td>
 <span class="listing-title">Entropic Physics</span>
 </td>
@@ -2886,7 +2912,7 @@ Year
 
 </tr>
 
-<tr data-index="40" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Probability Theory: The Logic of Science">
+<tr data-index="42" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Probability Theory: The Logic of Science">
 <td>
 <span class="listing-title">Probability Theory: The Logic of Science</span>
 </td>
@@ -2899,7 +2925,7 @@ Year
 
 </tr>
 
-<tr data-index="41" data-categories="RXRoaWNzJTJDQWJvcnRpb24=" data-listing-title-sort="The Ethics of Abortion">
+<tr data-index="43" data-categories="RXRoaWNzJTJDQWJvcnRpb24=" data-listing-title-sort="The Ethics of Abortion">
 <td>
 <span class="listing-title">The Ethics of Abortion</span>
 </td>
@@ -2912,7 +2938,7 @@ Year
 
 </tr>
 
-<tr data-index="42" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Data Analysis: A Bayesian Tutorial">
+<tr data-index="44" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Data Analysis: A Bayesian Tutorial">
 <td>
 <span class="listing-title">Data Analysis: A Bayesian Tutorial</span>
 </td>
@@ -2925,7 +2951,7 @@ Year
 
 </tr>
 
-<tr data-index="43" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Bayesian Data Analysis">
+<tr data-index="45" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Bayesian Data Analysis">
 <td>
 <span class="listing-title">Bayesian Data Analysis</span>
 </td>
@@ -2938,7 +2964,7 @@ Year
 
 </tr>
 
-<tr data-index="44" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Paradoxes of Power, 1878-1928">
+<tr data-index="46" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Paradoxes of Power, 1878-1928">
 <td>
 <span class="listing-title">Stalin: Paradoxes of Power, 1878-1928</span>
 </td>
@@ -2951,7 +2977,7 @@ Year
 
 </tr>
 
-<tr data-index="45" data-categories="U29jaWV0eSUyQ0V0aGljcw==" data-listing-title-sort="The Character Gap">
+<tr data-index="47" data-categories="U29jaWV0eSUyQ0V0aGljcw==" data-listing-title-sort="The Character Gap">
 <td>
 <span class="listing-title">The Character Gap</span>
 </td>
@@ -2964,7 +2990,7 @@ Year
 
 </tr>
 
-<tr data-index="46" data-categories="RmljdGlvbg==" data-listing-title-sort="Exhalation: Stories">
+<tr data-index="48" data-categories="RmljdGlvbg==" data-listing-title-sort="Exhalation: Stories">
 <td>
 <span class="listing-title">Exhalation: Stories</span>
 </td>
@@ -2977,7 +3003,7 @@ Year
 
 </tr>
 
-<tr data-index="47" data-categories="U29jaWV0eSUyQ0Vjb25vbWljcw==" data-listing-title-sort="Wealth, Poverty, and Politics">
+<tr data-index="49" data-categories="U29jaWV0eSUyQ0Vjb25vbWljcw==" data-listing-title-sort="Wealth, Poverty, and Politics">
 <td>
 <span class="listing-title">Wealth, Poverty, and Politics</span>
 </td>
@@ -2990,7 +3016,7 @@ Year
 
 </tr>
 
-<tr data-index="48" data-categories="U29jaWV0eQ==" data-listing-title-sort="The Disappearance of Childhood">
+<tr data-index="50" data-categories="U29jaWV0eQ==" data-listing-title-sort="The Disappearance of Childhood">
 <td>
 <span class="listing-title">The Disappearance of Childhood</span>
 </td>
@@ -3003,7 +3029,7 @@ Year
 
 </tr>
 
-<tr data-index="49" data-categories="UmVsaWdpb24=" data-listing-title-sort="Mere Christianity">
+<tr data-index="51" data-categories="UmVsaWdpb24=" data-listing-title-sort="Mere Christianity">
 <td>
 <span class="listing-title">Mere Christianity</span>
 </td>
@@ -3016,7 +3042,7 @@ Year
 
 </tr>
 
-<tr data-index="50" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY2FsJTIwUGh5c2ljcw==" data-listing-title-sort="Statistical Physics of Particles">
+<tr data-index="52" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY2FsJTIwUGh5c2ljcw==" data-listing-title-sort="Statistical Physics of Particles">
 <td>
 <span class="listing-title">Statistical Physics of Particles</span>
 </td>
@@ -3029,7 +3055,7 @@ Year
 
 </tr>
 
-<tr data-index="51" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY2FsJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to Thermal Physics">
+<tr data-index="53" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY2FsJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to Thermal Physics">
 <td>
 <span class="listing-title">Introduction to Thermal Physics</span>
 </td>
@@ -3042,7 +3068,7 @@ Year
 
 </tr>
 
-<tr data-index="52" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="From Tracking Code to Analysis">
+<tr data-index="54" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="From Tracking Code to Analysis">
 <td>
 <span class="listing-title">From Tracking Code to Analysis</span>
 </td>
@@ -3055,7 +3081,7 @@ Year
 
 </tr>
 
-<tr data-index="53" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBPcHRpY3M=" data-listing-title-sort="Optical Coherence and Quantum Optics">
+<tr data-index="55" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBPcHRpY3M=" data-listing-title-sort="Optical Coherence and Quantum Optics">
 <td>
 <span class="listing-title">Optical Coherence and Quantum Optics</span>
 </td>
@@ -3068,7 +3094,7 @@ Year
 
 </tr>
 
-<tr data-index="54" data-categories="UXVhbnR1bSUyMFBoeXNpY3M=" data-listing-title-sort="Quantum Mechanics: Concepts and Applications">
+<tr data-index="56" data-categories="UXVhbnR1bSUyMFBoeXNpY3M=" data-listing-title-sort="Quantum Mechanics: Concepts and Applications">
 <td>
 <span class="listing-title">Quantum Mechanics: Concepts and Applications</span>
 </td>
@@ -3081,7 +3107,7 @@ Year
 
 </tr>
 
-<tr data-index="55" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Modern Quantum Mechanics">
+<tr data-index="57" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Modern Quantum Mechanics">
 <td>
 <span class="listing-title">Modern Quantum Mechanics</span>
 </td>
@@ -3094,7 +3120,7 @@ Year
 
 </tr>
 
-<tr data-index="56" data-categories="UGh5c2ljcyUyQ0hpc3Rvcnk=" data-listing-title-sort="What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics">
+<tr data-index="58" data-categories="UGh5c2ljcyUyQ0hpc3Rvcnk=" data-listing-title-sort="What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics">
 <td>
 <span class="listing-title">What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics</span>
 </td>
@@ -3107,7 +3133,7 @@ Year
 
 </tr>
 
-<tr data-index="57" data-categories="UGFydGljbGUlMjBQaHlzaWNz" data-listing-title-sort="Modern Elementary Particle Physics">
+<tr data-index="59" data-categories="UGFydGljbGUlMjBQaHlzaWNz" data-listing-title-sort="Modern Elementary Particle Physics">
 <td>
 <span class="listing-title">Modern Elementary Particle Physics</span>
 </td>
@@ -3120,7 +3146,7 @@ Year
 
 </tr>
 
-<tr data-index="58" data-categories="UGh5c2ljcyUyQ1BhcnRpY2xlJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to High Energy Physics">
+<tr data-index="60" data-categories="UGh5c2ljcyUyQ1BhcnRpY2xlJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to High Energy Physics">
 <td>
 <span class="listing-title">Introduction to High Energy Physics</span>
 </td>
@@ -3133,7 +3159,7 @@ Year
 
 </tr>
 
-<tr data-index="59" data-categories="UGh5c2ljcyUyQ1BhcnRpY2xlJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to Elementary Particle Physics">
+<tr data-index="61" data-categories="UGh5c2ljcyUyQ1BhcnRpY2xlJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to Elementary Particle Physics">
 <td>
 <span class="listing-title">Introduction to Elementary Particle Physics</span>
 </td>
@@ -3146,7 +3172,7 @@ Year
 
 </tr>
 
-<tr data-index="60" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyMFBoeXNpY3M=" data-listing-title-sort="Classical Mechanics">
+<tr data-index="62" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyMFBoeXNpY3M=" data-listing-title-sort="Classical Mechanics">
 <td>
 <span class="listing-title">Classical Mechanics</span>
 </td>
@@ -3159,7 +3185,7 @@ Year
 
 </tr>
 
-<tr data-index="61" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyMFBoeXNpY3M=" data-listing-title-sort="Classical Mechanics">
+<tr data-index="63" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyMFBoeXNpY3M=" data-listing-title-sort="Classical Mechanics">
 <td>
 <span class="listing-title">Classical Mechanics</span>
 </td>
@@ -3172,7 +3198,7 @@ Year
 
 </tr>
 
-<tr data-index="62" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Introduction to Electrodynamics">
+<tr data-index="64" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Introduction to Electrodynamics">
 <td>
 <span class="listing-title">Introduction to Electrodynamics</span>
 </td>
@@ -3185,7 +3211,7 @@ Year
 
 </tr>
 
-<tr data-index="63" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Classical Electromagnetism">
+<tr data-index="65" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Classical Electromagnetism">
 <td>
 <span class="listing-title">Classical Electromagnetism</span>
 </td>
@@ -3198,7 +3224,7 @@ Year
 
 </tr>
 
-<tr data-index="64" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Classical Electrodynamics">
+<tr data-index="66" data-categories="UGh5c2ljcyUyQ0VsZWN0cm9tYWduZXRpc20=" data-listing-title-sort="Classical Electrodynamics">
 <td>
 <span class="listing-title">Classical Electrodynamics</span>
 </td>
@@ -3211,7 +3237,7 @@ Year
 
 </tr>
 
-<tr data-index="65" data-categories="UGh5c2ljcyUyQ0FzdHJvcGh5c2ljcw==" data-listing-title-sort="Astrophysics in a Nutshell">
+<tr data-index="67" data-categories="UGh5c2ljcyUyQ0FzdHJvcGh5c2ljcw==" data-listing-title-sort="Astrophysics in a Nutshell">
 <td>
 <span class="listing-title">Astrophysics in a Nutshell</span>
 </td>
@@ -3224,7 +3250,7 @@ Year
 
 </tr>
 
-<tr data-index="66" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Theory and Design of Charged Particle Beams">
+<tr data-index="68" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Theory and Design of Charged Particle Beams">
 <td>
 <span class="listing-title">Theory and Design of Charged Particle Beams</span>
 </td>
@@ -3237,7 +3263,7 @@ Year
 
 </tr>
 
-<tr data-index="67" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Space Charge Physics for Particle Accelerators">
+<tr data-index="69" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcyUyQ1BsYXNtYSUyMFBoeXNpY3M=" data-listing-title-sort="Space Charge Physics for Particle Accelerators">
 <td>
 <span class="listing-title">Space Charge Physics for Particle Accelerators</span>
 </td>
@@ -3250,7 +3276,7 @@ Year
 
 </tr>
 
-<tr data-index="68" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="RF Linear Accelerators">
+<tr data-index="70" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="RF Linear Accelerators">
 <td>
 <span class="listing-title">RF Linear Accelerators</span>
 </td>
@@ -3263,7 +3289,7 @@ Year
 
 </tr>
 
-<tr data-index="69" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Particle Accelerator Physics">
+<tr data-index="71" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Particle Accelerator Physics">
 <td>
 <span class="listing-title">Particle Accelerator Physics</span>
 </td>
@@ -3276,7 +3302,7 @@ Year
 
 </tr>
 
-<tr data-index="70" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Measurement and Control of Charged Particle Beams">
+<tr data-index="72" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Measurement and Control of Charged Particle Beams">
 <td>
 <span class="listing-title">Measurement and Control of Charged Particle Beams</span>
 </td>
@@ -3289,7 +3315,7 @@ Year
 
 </tr>
 
-<tr data-index="71" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to the Physics of High Energy Accelerators">
+<tr data-index="73" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to the Physics of High Energy Accelerators">
 <td>
 <span class="listing-title">Introduction to the Physics of High Energy Accelerators</span>
 </td>
@@ -3302,7 +3328,7 @@ Year
 
 </tr>
 
-<tr data-index="72" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Accelerator Physics">
+<tr data-index="74" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Accelerator Physics">
 <td>
 <span class="listing-title">Accelerator Physics</span>
 </td>
@@ -3315,7 +3341,7 @@ Year
 
 </tr>
 
-<tr data-index="73" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Time and Chance">
+<tr data-index="75" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Time and Chance">
 <td>
 <span class="listing-title">Time and Chance</span>
 </td>
@@ -3328,7 +3354,7 @@ Year
 
 </tr>
 
-<tr data-index="74" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Philosophy of Physics: Space and Time">
+<tr data-index="76" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Philosophy of Physics: Space and Time">
 <td>
 <span class="listing-title">Philosophy of Physics: Space and Time</span>
 </td>
@@ -3341,7 +3367,7 @@ Year
 
 </tr>
 
-<tr data-index="75" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Philosophy of Physics: Quantum Theory">
+<tr data-index="77" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Philosophy of Physics: Quantum Theory">
 <td>
 <span class="listing-title">Philosophy of Physics: Quantum Theory</span>
 </td>
@@ -3354,7 +3380,7 @@ Year
 
 </tr>
 
-<tr data-index="76" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="The Emergent Multiverse">
+<tr data-index="78" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="The Emergent Multiverse">
 <td>
 <span class="listing-title">The Emergent Multiverse</span>
 </td>
@@ -3367,7 +3393,7 @@ Year
 
 </tr>
 
-<tr data-index="77" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Taking Pascal's Wager">
+<tr data-index="79" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Taking Pascal's Wager">
 <td>
 <span class="listing-title">Taking Pascal’s Wager</span>
 </td>
@@ -3380,7 +3406,7 @@ Year
 
 </tr>
 
-<tr data-index="78" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Five Proofs of the Existence of God">
+<tr data-index="80" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Five Proofs of the Existence of God">
 <td>
 <span class="listing-title">Five Proofs of the Existence of God</span>
 </td>
@@ -3393,7 +3419,7 @@ Year
 
 </tr>
 
-<tr data-index="79" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Is God the Best Explanation of Things? A Dialogue">
+<tr data-index="81" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Is God the Best Explanation of Things? A Dialogue">
 <td>
 <span class="listing-title">Is God the Best Explanation of Things? A Dialogue</span>
 </td>
@@ -3406,7 +3432,7 @@ Year
 
 </tr>
 
-<tr data-index="80" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Arguing About Gods">
+<tr data-index="82" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Arguing About Gods">
 <td>
 <span class="listing-title">Arguing About Gods</span>
 </td>
@@ -3419,7 +3445,7 @@ Year
 
 </tr>
 
-<tr data-index="81" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9uJTJDTWV0YXBoeXNpY3M=" data-listing-title-sort="Necessary Existence">
+<tr data-index="83" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9uJTJDTWV0YXBoeXNpY3M=" data-listing-title-sort="Necessary Existence">
 <td>
 <span class="listing-title">Necessary Existence</span>
 </td>
@@ -3432,7 +3458,7 @@ Year
 
 </tr>
 
-<tr data-index="82" data-categories="UGhpbG9zb3BoeSUyQ0luZmluaXR5JTJDUGFyYWRveA==" data-listing-title-sort="Infinity, Causation, and Paradox">
+<tr data-index="84" data-categories="UGhpbG9zb3BoeSUyQ0luZmluaXR5JTJDUGFyYWRveA==" data-listing-title-sort="Infinity, Causation, and Paradox">
 <td>
 <span class="listing-title">Infinity, Causation, and Paradox</span>
 </td>
@@ -3445,7 +3471,7 @@ Year
 
 </tr>
 
-<tr data-index="83" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9uJTJDRXBpc3RlbW9sb2d5" data-listing-title-sort="Knowledge and Christian Belief">
+<tr data-index="85" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9uJTJDRXBpc3RlbW9sb2d5" data-listing-title-sort="Knowledge and Christian Belief">
 <td>
 <span class="listing-title">Knowledge and Christian Belief</span>
 </td>
@@ -3458,7 +3484,7 @@ Year
 
 </tr>
 
-<tr data-index="84" data-categories="UGhpbG9zb3BoeSUyQ0VwaXN0ZW1vbG9neQ==" data-listing-title-sort="Change in View">
+<tr data-index="86" data-categories="UGhpbG9zb3BoeSUyQ0VwaXN0ZW1vbG9neQ==" data-listing-title-sort="Change in View">
 <td>
 <span class="listing-title">Change in View</span>
 </td>
@@ -3471,7 +3497,7 @@ Year
 
 </tr>
 
-<tr data-index="85" data-categories="VmlzdWFsaXphdGlvbg==" data-listing-title-sort="Envisioning Information">
+<tr data-index="87" data-categories="VmlzdWFsaXphdGlvbg==" data-listing-title-sort="Envisioning Information">
 <td>
 <span class="listing-title">Envisioning Information</span>
 </td>
@@ -3484,7 +3510,7 @@ Year
 
 </tr>
 
-<tr data-index="86" data-categories="TWF0aGVtYXRpY3MlMkNQaHlzaWNz" data-listing-title-sort="Mathematics of Classical and Quantum Physics">
+<tr data-index="88" data-categories="TWF0aGVtYXRpY3MlMkNQaHlzaWNz" data-listing-title-sort="Mathematics of Classical and Quantum Physics">
 <td>
 <span class="listing-title">Mathematics of Classical and Quantum Physics</span>
 </td>
@@ -3497,7 +3523,7 @@ Year
 
 </tr>
 
-<tr data-index="87" data-categories="TWF0aGVtYXRpY3MlMkNQaHlzaWNz" data-listing-title-sort="Mathematical Methods for Physicists">
+<tr data-index="89" data-categories="TWF0aGVtYXRpY3MlMkNQaHlzaWNz" data-listing-title-sort="Mathematical Methods for Physicists">
 <td>
 <span class="listing-title">Mathematical Methods for Physicists</span>
 </td>
@@ -3510,7 +3536,7 @@ Year
 
 </tr>
 
-<tr data-index="88" data-categories="U2NpZW5jZSUyMEZpY3Rpb24=" data-listing-title-sort="Stories of Your Life and Others">
+<tr data-index="90" data-categories="U2NpZW5jZSUyMEZpY3Rpb24=" data-listing-title-sort="Stories of Your Life and Others">
 <td>
 <span class="listing-title">Stories of Your Life and Others</span>
 </td>
@@ -3523,7 +3549,7 @@ Year
 
 </tr>
 
-<tr data-index="89" data-categories="RmljdGlvbg==" data-listing-title-sort="The Road">
+<tr data-index="91" data-categories="RmljdGlvbg==" data-listing-title-sort="The Road">
 <td>
 <span class="listing-title">The Road</span>
 </td>
@@ -3536,7 +3562,7 @@ Year
 
 </tr>
 
-<tr data-index="90" data-categories="RmljdGlvbg==" data-listing-title-sort="No Country for Old Men">
+<tr data-index="92" data-categories="RmljdGlvbg==" data-listing-title-sort="No Country for Old Men">
 <td>
 <span class="listing-title">No Country for Old Men</span>
 </td>
@@ -3549,7 +3575,7 @@ Year
 
 </tr>
 
-<tr data-index="91" data-categories="RmljdGlvbg==" data-listing-title-sort="Moby Dick">
+<tr data-index="93" data-categories="RmljdGlvbg==" data-listing-title-sort="Moby Dick">
 <td>
 <span class="listing-title">Moby Dick</span>
 </td>
@@ -3562,7 +3588,7 @@ Year
 
 </tr>
 
-<tr data-index="92" data-categories="RmljdGlvbg==" data-listing-title-sort="Fahrenheit 451">
+<tr data-index="94" data-categories="RmljdGlvbg==" data-listing-title-sort="Fahrenheit 451">
 <td>
 <span class="listing-title">Fahrenheit 451</span>
 </td>
@@ -3575,7 +3601,7 @@ Year
 
 </tr>
 
-<tr data-index="93" data-categories="RmljdGlvbg==" data-listing-title-sort="Paradise Lost">
+<tr data-index="95" data-categories="RmljdGlvbg==" data-listing-title-sort="Paradise Lost">
 <td>
 <span class="listing-title">Paradise Lost</span>
 </td>
@@ -3588,7 +3614,7 @@ Year
 
 </tr>
 
-<tr data-index="94" data-categories="RmljdGlvbg==" data-listing-title-sort="Odyssey">
+<tr data-index="96" data-categories="RmljdGlvbg==" data-listing-title-sort="Odyssey">
 <td>
 <span class="listing-title">Odyssey</span>
 </td>
@@ -3601,7 +3627,7 @@ Year
 
 </tr>
 
-<tr data-index="95" data-categories="RmljdGlvbg==" data-listing-title-sort="Divine Comedy">
+<tr data-index="97" data-categories="RmljdGlvbg==" data-listing-title-sort="Divine Comedy">
 <td>
 <span class="listing-title">Divine Comedy</span>
 </td>
@@ -3614,7 +3640,7 @@ Year
 
 </tr>
 
-<tr data-index="96" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="Crime and Punishment">
+<tr data-index="98" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="Crime and Punishment">
 <td>
 <span class="listing-title">Crime and Punishment</span>
 </td>
@@ -3627,7 +3653,7 @@ Year
 
 </tr>
 
-<tr data-index="97" data-categories="RmljdGlvbg==" data-listing-title-sort="The Alchemist">
+<tr data-index="99" data-categories="RmljdGlvbg==" data-listing-title-sort="The Alchemist">
 <td>
 <span class="listing-title">The Alchemist</span>
 </td>
@@ -3640,7 +3666,7 @@ Year
 
 </tr>
 
-<tr data-index="98" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHJvYmFiaWxpdHk=" data-listing-title-sort="Pattern Recognition and Machine Learning">
+<tr data-index="100" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHJvYmFiaWxpdHk=" data-listing-title-sort="Pattern Recognition and Machine Learning">
 <td>
 <span class="listing-title">Pattern Recognition and Machine Learning</span>
 </td>
@@ -3653,7 +3679,7 @@ Year
 
 </tr>
 
-<tr data-index="99" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Neural Networks and Deep Learning">
+<tr data-index="101" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Neural Networks and Deep Learning">
 <td>
 <span class="listing-title">Neural Networks and Deep Learning</span>
 </td>
@@ -3666,7 +3692,7 @@ Year
 
 </tr>
 
-<tr data-index="100" data-categories="QWxnb3JpdGhtcyUyQ0NhcmVlcg==" data-listing-title-sort="Elements of Programming Interviews">
+<tr data-index="102" data-categories="QWxnb3JpdGhtcyUyQ0NhcmVlcg==" data-listing-title-sort="Elements of Programming Interviews">
 <td>
 <span class="listing-title">Elements of Programming Interviews</span>
 </td>
@@ -3679,7 +3705,7 @@ Year
 
 </tr>
 
-<tr data-index="101" data-categories="RmljdGlvbiUyQ1NvdXRoJTIwQWZyaWNh" data-listing-title-sort="Cry, the Beloved Country">
+<tr data-index="103" data-categories="RmljdGlvbiUyQ1NvdXRoJTIwQWZyaWNh" data-listing-title-sort="Cry, the Beloved Country">
 <td>
 <span class="listing-title">Cry, the Beloved Country</span>
 </td>
@@ -3692,7 +3718,7 @@ Year
 
 </tr>
 
-<tr data-index="102" data-categories="QWxnb3JpdGhtcw==" data-listing-title-sort="Algorithms">
+<tr data-index="104" data-categories="QWxnb3JpdGhtcw==" data-listing-title-sort="Algorithms">
 <td>
 <span class="listing-title">Algorithms</span>
 </td>
