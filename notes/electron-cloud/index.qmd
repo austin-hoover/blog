@@ -1,0 +1,15 @@
+---
+title: "Electron Cloud Instability"
+date: 2026-03-05
+date-modified: 2026-03-05
+page-layout: full
+---
+
+* [*Linearized method for the study of transverse instabilities driven by electron cloud*](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.23.081002) --- Iadarola et al. (2020)
+* [*Mitigating the electron cloud effect in the SuperKEKB positron ring*](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.22.023201) --- Suetsugu et al. (2019)
+* [*ECLOUD’18: Proceedings of the Joint INFN-CERN-ARIES Workshop on Electron-Cloud Effects*](https://cds.cern.ch/record/2647774)
+* [*Electron cloud buildup driving spontaneous vertical instabilities of stored beams in the Large Hadron Collider*](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.061002) --- Romano et al. (2018)
+* [*First electron-cloud studies at the Large Hadron Collider*](https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.16.011003) --- Dominguez et al. (2013)
+* [*Electron cloud self-consistent simulations for the SNS ring*](https://proceedings.jacow.org/e06/PAPERS/THPCH025.pdf) --- Shishlo et al. (2006)
+* [*Simulation of E-cloud using ORBIT: benchmarks and first application*](https://cds.cern.ch/record/846801/files/p245.pdf) --- Sato et al. (2005)
+* [*Probabilistic model for the simulation of secondary electron emission*](https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.5.124404) --- Furman and Pivi (2002)
