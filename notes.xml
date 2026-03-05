@@ -1232,6 +1232,32 @@
   <pubDate>Thu, 05 Mar 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Electron Cloud Instability</title>
+  <link>https://austin-hoover.github.io/blog/notes/electron-cloud/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<ul>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.23.081002"><em>Linearized method for the study of transverse instabilities driven by electron cloud</em></a> — Iadarola et al.&nbsp;(2020)</li>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.22.023201"><em>Mitigating the electron cloud effect in the SuperKEKB positron ring</em></a> — Suetsugu et al.&nbsp;(2019)</li>
+<li><a href="https://cds.cern.ch/record/2647774"><em>ECLOUD’18: Proceedings of the Joint INFN-CERN-ARIES Workshop on Electron-Cloud Effects</em></a></li>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.21.061002"><em>Electron cloud buildup driving spontaneous vertical instabilities of stored beams in the Large Hadron Collider</em></a> — Romano et al.&nbsp;(2018)</li>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.16.011003"><em>First electron-cloud studies at the Large Hadron Collider</em></a> — Dominguez et al.&nbsp;(2013)</li>
+<li><a href="https://proceedings.jacow.org/e06/PAPERS/THPCH025.pdf"><em>Electron cloud self-consistent simulations for the SNS ring</em></a> — Shishlo et al.&nbsp;(2006)</li>
+<li><a href="https://cds.cern.ch/record/846801/files/p245.pdf"><em>Simulation of E-cloud using ORBIT: benchmarks and first application</em></a> — Sato et al.&nbsp;(2005)</li>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.5.124404"><em>Probabilistic model for the simulation of secondary electron emission</em></a> — Furman and Pivi (2002)</li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/electron-cloud/</guid>
+  <pubDate>Thu, 05 Mar 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Documentaries</title>
   <link>https://austin-hoover.github.io/blog/notes/documentaries/</link>
   <description><![CDATA[ 
@@ -5812,53 +5838,6 @@ Year
  ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/websites/</guid>
   <pubDate>Wed, 01 Jan 2025 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>People</title>
-  <link>https://austin-hoover.github.io/blog/notes/people/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<ul>
-<li><a href="https://markheimann.github.io">Mark Heimann</a></li>
-<li><a href="https://consc.net">David Chalmers</a></li>
-<li><a href="https://www.philosophy.ox.ac.uk/people/timothy-williamson#tab-414611">Timothy Williamson</a></li>
-<li><a href="http://alexanderpruss.com">Alexander Pruss</a></li>
-<li><a href="http://www.oeftiger.net">Adrian Oeftiger</a></li>
-<li><a href="https://sites.google.com/site/cutterbc/home">Brian Cutter</a></li>
-<li><a href="https://sites.google.com/site/csebens/home">Charles Sebens</a></li>
-<li><a href="https://christophergregoryweaver.com/about-4">Christopher Gregory Weaver</a></li>
-<li><a href="http://davidkipping.co.uk">David Kipping</a></li>
-<li><a href="https://www.eddykemingchen.net">Eddie Chen</a></li>
-<li><a href="https://research.monash.edu/en/persons/graham-oppy">Graham Oppy</a></li>
-<li><a href="https://aicip.github.io/">Hairong Qi</a></li>
-<li><a href="https://ahc.leeds.ac.uk/philosophy/staff/1167/professor-helen-steward">Helen Seward</a></li>
-<li><a href="https://isaacwilhelm.com">Isaac Wilhelm</a></li>
-<li><a href="https://www.jacobbarandes.com">Jacob Barandes</a></li>
-<li><a href="https://web.ornl.gov/~holmesja1/JHolmes/interests.html">Jeff Holmes</a></li>
-<li><a href="https://sites.pitt.edu/~jdnorton/jdnorton.html">John Norton</a></li>
-<li><a href="https://josephschmid.com/research/">Joseph Schmidt</a></li>
-<li><a href="https://www.justinmooney.net">Justin Mooney</a></li>
-<li><a href="https://www.kerrymckenzie.org">Kerry McKenzie</a></li>
-<li><a href="https://melaniemitchell.me">Melanie Mitchell</a></li>
-<li><a href="https://spot.colorado.edu/~huemer/">Michael Heumer</a></li>
-<li><a href="https://nickbostrom.com">Nick Bostrom</a></li>
-<li><a href="https://philipgoffphilosophy.com">Philip Goff</a></li>
-<li><a href="https://simonfriederich.eu/publications.html">Simono Friedrich</a></li>
-<li><a href="https://taylorwcyr.com">Taylor Cyr</a></li>
-<li><a href="https://shc.academia.edu/ThomasMetcalf">Thomas Metcalf</a></li>
-<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tim Oconor</a></li>
-<li><a href="https://sites.google.com/site/hildebtw/?pli=1">Tyler Hildebrand</a></li>
-</ul>
-
-
-
- ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/people/</guid>
-  <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
