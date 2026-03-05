@@ -10,7 +10,1227 @@
 <atom:link href="https://austin-hoover.github.io/blog/notes.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sat, 28 Feb 2026 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 05 Mar 2026 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Reading List</title>
+  <link>https://austin-hoover.github.io/blog/notes/reading-list/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-year" data-direction="asc">
+        Year
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-year" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Year</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="War and Peace">
+<td>
+<span class="listing-title">War and Peace</span>
+</td>
+<td>
+<span class="listing-author">Tolstoy</span>
+</td>
+<td>
+<span class="listing-year">1869</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="Anna Karenina">
+<td>
+<span class="listing-title">Anna Karenina</span>
+</td>
+<td>
+<span class="listing-author">Tolstoy</span>
+</td>
+<td>
+<span class="listing-year">1877</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="RmljdGlvbg==" data-listing-title-sort="The Radetzky March">
+<td>
+<span class="listing-title">The Radetzky March</span>
+</td>
+<td>
+<span class="listing-author">Roth</span>
+</td>
+<td>
+<span class="listing-year">1932</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-categories="RmljdGlvbg==" data-listing-title-sort="The School of Night">
+<td>
+<span class="listing-title">The School of Night</span>
+</td>
+<td>
+<span class="listing-author">Knausgard</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-categories="RmljdGlvbiUyQ0hpc3Rvcnk=" data-listing-title-sort="All Quiet on the Western Front">
+<td>
+<span class="listing-title">All Quiet on the Western Front</span>
+</td>
+<td>
+<span class="listing-author">Remarque</span>
+</td>
+<td>
+<span class="listing-year">1929</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-categories="RmljdGlvbiUyQ1NjaS1GaQ==" data-listing-title-sort="Do Androids Dream of Electric Sheep?">
+<td>
+<span class="listing-title">Do Androids Dream of Electric Sheep?</span>
+</td>
+<td>
+<span class="listing-author">Dick</span>
+</td>
+<td>
+<span class="listing-year">1968</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-categories="RmljdGlvbg==" data-listing-title-sort="Too Late the Phalarope">
+<td>
+<span class="listing-title">Too Late the Phalarope</span>
+</td>
+<td>
+<span class="listing-author">Paton</span>
+</td>
+<td>
+<span class="listing-year">1953</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="Ulysses">
+<td>
+<span class="listing-title">Ulysses</span>
+</td>
+<td>
+<span class="listing-author">Joyce</span>
+</td>
+<td>
+<span class="listing-year">1922</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="Dubliners">
+<td>
+<span class="listing-title">Dubliners</span>
+</td>
+<td>
+<span class="listing-author">Joyce</span>
+</td>
+<td>
+<span class="listing-year">1914</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="A Portrait of the Artist as a Young Man">
+<td>
+<span class="listing-title">A Portrait of the Artist as a Young Man</span>
+</td>
+<td>
+<span class="listing-author">Joyce</span>
+</td>
+<td>
+<span class="listing-year">1916</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="A Theory of Justice">
+<td>
+<span class="listing-title">A Theory of Justice</span>
+</td>
+<td>
+<span class="listing-author">Rawls</span>
+</td>
+<td>
+<span class="listing-year">1971</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Taking Morality Seriously: A Defense of Robust Realism">
+<td>
+<span class="listing-title">Taking Morality Seriously: A Defense of Robust Realism</span>
+</td>
+<td>
+<span class="listing-author">Enoch</span>
+</td>
+<td>
+<span class="listing-year">2011</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Moral Realism: A Defense">
+<td>
+<span class="listing-title">Moral Realism: A Defense</span>
+</td>
+<td>
+<span class="listing-author">Shafer-Landau</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Ethical Theory: 50 Puzzles, Paradoxes, and Thought Experiments">
+<td>
+<span class="listing-title">Ethical Theory: 50 Puzzles, Paradoxes, and Thought Experiments</span>
+</td>
+<td>
+<span class="listing-author">Munoz</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Dialogues on Minds, Machines, and AI">
+<td>
+<span class="listing-title">Dialogues on Minds, Machines, and AI</span>
+</td>
+<td>
+<span class="listing-author">Gennaro</span>
+</td>
+<td>
+<span class="listing-year">2026</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Dialogues on the Meaning of Life">
+<td>
+<span class="listing-title">Dialogues on the Meaning of Life</span>
+</td>
+<td>
+<span class="listing-author">Hauskeller</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-categories="UGhpbG9zb3BoeSUyQ0ZyZWUlMjBXaWxs" data-listing-title-sort="Dialogues on Free Will">
+<td>
+<span class="listing-title">Dialogues on Free Will</span>
+</td>
+<td>
+<span class="listing-author">Ekstrom</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Immigration and the Open Society">
+<td>
+<span class="listing-title">Dialogues on Immigration and the Open Society</span>
+</td>
+<td>
+<span class="listing-author">Kukathas</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Dialogues on Ethical Vegetarianism">
+<td>
+<span class="listing-title">Dialogues on Ethical Vegetarianism</span>
+</td>
+<td>
+<span class="listing-author">Huemer</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Democracy">
+<td>
+<span class="listing-title">Dialogues on Democracy</span>
+</td>
+<td>
+<span class="listing-author">Maskivker</span>
+</td>
+<td>
+<span class="listing-year">2024</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Dialogues on Human Enhancement">
+<td>
+<span class="listing-title">Dialogues on Human Enhancement</span>
+</td>
+<td>
+<span class="listing-author">Agar</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Gun Control">
+<td>
+<span class="listing-title">Dialogues on Gun Control</span>
+</td>
+<td>
+<span class="listing-author">DeGrazia</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Climate Justice">
+<td>
+<span class="listing-title">Dialogues on Climate Justice</span>
+</td>
+<td>
+<span class="listing-author">Gardiner</span>
+</td>
+<td>
+<span class="listing-year">2022</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Dialogues on the Ethics of Abortion">
+<td>
+<span class="listing-title">Dialogues on the Ethics of Abortion</span>
+</td>
+<td>
+<span class="listing-author">Manninen</span>
+</td>
+<td>
+<span class="listing-year">2022</span>
+</td>
+
+</tr>
+
+<tr data-index="24" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Animal Rights: Current Debates and New Directions">
+<td>
+<span class="listing-title">Animal Rights: Current Debates and New Directions</span>
+</td>
+<td>
+<span class="listing-author">Sunstein</span>
+</td>
+<td>
+<span class="listing-year">2004</span>
+</td>
+
+</tr>
+
+<tr data-index="25" data-categories="UGhpbG9zb3BoeSUyQ01ldGFwaHlzaWNz" data-listing-title-sort="Metaphysics">
+<td>
+<span class="listing-title">Metaphysics</span>
+</td>
+<td>
+<span class="listing-author">Van Inwagen</span>
+</td>
+<td>
+<span class="listing-year">1993</span>
+</td>
+
+</tr>
+
+<tr data-index="26" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="On Bullshit">
+<td>
+<span class="listing-title">On Bullshit</span>
+</td>
+<td>
+<span class="listing-author">Frankfurt</span>
+</td>
+<td>
+<span class="listing-year">2005</span>
+</td>
+
+</tr>
+
+<tr data-index="27" data-categories="UGhpbG9zb3BoeSUyQ1NvY2lvbG9neQ==" data-listing-title-sort="Crowds and Power">
+<td>
+<span class="listing-title">Crowds and Power</span>
+</td>
+<td>
+<span class="listing-author">Canetti</span>
+</td>
+<td>
+<span class="listing-year">1960</span>
+</td>
+
+</tr>
+
+<tr data-index="28" data-categories="UGhpbG9zb3BoeSUyQ1JlbGlnaW9u" data-listing-title-sort="The Miracle of Theism">
+<td>
+<span class="listing-title">The Miracle of Theism</span>
+</td>
+<td>
+<span class="listing-author">Mackie</span>
+</td>
+<td>
+<span class="listing-year">1982</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-categories="UGhpbG9zb3BoeSUyQ1JlbGlnaW9u" data-listing-title-sort="The Coherence of Theism">
+<td>
+<span class="listing-title">The Coherence of Theism</span>
+</td>
+<td>
+<span class="listing-author">Swinburne</span>
+</td>
+<td>
+<span class="listing-year">1977</span>
+</td>
+
+</tr>
+
+<tr data-index="30" data-categories="UGhpbG9zb3BoeSUyQ01ldGFwaHlzaWNz" data-listing-title-sort="An Essay on Free Will">
+<td>
+<span class="listing-title">An Essay on Free Will</span>
+</td>
+<td>
+<span class="listing-author">Van Inwagen</span>
+</td>
+<td>
+<span class="listing-year">1983</span>
+</td>
+
+</tr>
+
+<tr data-index="31" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Freedom, Responsibility, and Value">
+<td>
+<span class="listing-title">Freedom, Responsibility, and Value</span>
+</td>
+<td>
+<span class="listing-author">Cyr</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="32" data-categories="UGhpbG9zb3BoeSUyQ1NURU0=" data-listing-title-sort="The Scientific Image">
+<td>
+<span class="listing-title">The Scientific Image</span>
+</td>
+<td>
+<span class="listing-author">Van Fraassen</span>
+</td>
+<td>
+<span class="listing-year">1980</span>
+</td>
+
+</tr>
+
+<tr data-index="33" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Emergent Properties">
+<td>
+<span class="listing-title">Emergent Properties</span>
+</td>
+<td>
+<span class="listing-author">O’Connor</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="34" data-categories="UGhpbG9zb3BoeSUyQ1BzeWNob2xvZ3k=" data-listing-title-sort="What Would You Do Alone in a Cage with Nothing but Cocaine?">
+<td>
+<span class="listing-title">What Would You Do Alone in a Cage with Nothing but Cocaine?</span>
+</td>
+<td>
+<span class="listing-author">Pickard</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="35" data-categories="UGhpbG9zb3BoeSUyQ01pbmQ=" data-listing-title-sort="Mind as Metaphor: A Defence of Mental Fictionalism">
+<td>
+<span class="listing-title">Mind as Metaphor: A Defence of Mental Fictionalism</span>
+</td>
+<td>
+<span class="listing-author">Toon</span>
+</td>
+<td>
+<span class="listing-year">2016</span>
+</td>
+
+</tr>
+
+<tr data-index="36" data-categories="UGhpbG9zb3BoeSUyQ1JlbGlnaW9u" data-listing-title-sort="Can God Be Free?">
+<td>
+<span class="listing-title">Can God Be Free?</span>
+</td>
+<td>
+<span class="listing-author">Roe</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="37" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Western Philosophy">
+<td>
+<span class="listing-title">Western Philosophy</span>
+</td>
+<td>
+<span class="listing-author">Cottingham</span>
+</td>
+<td>
+<span class="listing-year">1996</span>
+</td>
+
+</tr>
+
+<tr data-index="38" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="The Prince">
+<td>
+<span class="listing-title">The Prince</span>
+</td>
+<td>
+<span class="listing-author">Machiavelli</span>
+</td>
+<td>
+<span class="listing-year">1532</span>
+</td>
+
+</tr>
+
+<tr data-index="39" data-categories="SGlzdG9yeSUyQ1BvbGl0aWNzJTJDUnVzc2lh" data-listing-title-sort="The Gulag Archipelago">
+<td>
+<span class="listing-title">The Gulag Archipelago</span>
+</td>
+<td>
+<span class="listing-author">Solzhenitsyn</span>
+</td>
+<td>
+<span class="listing-year">1973</span>
+</td>
+
+</tr>
+
+<tr data-index="40" data-categories="SGlzdG9yeSUyQ1BvbGl0aWNz" data-listing-title-sort="The Old Regime and the Revolution">
+<td>
+<span class="listing-title">The Old Regime and the Revolution</span>
+</td>
+<td>
+<span class="listing-author">Tocqueville</span>
+</td>
+<td>
+<span class="listing-year">1856</span>
+</td>
+
+</tr>
+
+<tr data-index="41" data-categories="SGlzdG9yeSUyQ01pbGl0YXJ5" data-listing-title-sort="Twilight of the Gods">
+<td>
+<span class="listing-title">Twilight of the Gods</span>
+</td>
+<td>
+<span class="listing-author">Toll</span>
+</td>
+<td>
+<span class="listing-year">2020</span>
+</td>
+
+</tr>
+
+<tr data-index="42" data-categories="SGlzdG9yeSUyQ01pbGl0YXJ5" data-listing-title-sort="Pacific Crucible">
+<td>
+<span class="listing-title">Pacific Crucible</span>
+</td>
+<td>
+<span class="listing-author">Toll</span>
+</td>
+<td>
+<span class="listing-year">2011</span>
+</td>
+
+</tr>
+
+<tr data-index="43" data-categories="SGlzdG9yeSUyQ01pbGl0YXJ5" data-listing-title-sort="The Conquering Tide">
+<td>
+<span class="listing-title">The Conquering Tide</span>
+</td>
+<td>
+<span class="listing-author">Toll</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="44" data-categories="SGlzdG9yeQ==" data-listing-title-sort="A Shameful Act">
+<td>
+<span class="listing-title">A Shameful Act</span>
+</td>
+<td>
+<span class="listing-author">Akçam</span>
+</td>
+<td>
+<span class="listing-year">2006</span>
+</td>
+
+</tr>
+
+<tr data-index="45" data-categories="SGlzdG9yeQ==" data-listing-title-sort="Undaunted Courage">
+<td>
+<span class="listing-title">Undaunted Courage</span>
+</td>
+<td>
+<span class="listing-author">Ambrose</span>
+</td>
+<td>
+<span class="listing-year">1996</span>
+</td>
+
+</tr>
+
+<tr data-index="46" data-categories="SGlzdG9yeSUyQ1BvbGl0aWNz" data-listing-title-sort="The Revolutionists">
+<td>
+<span class="listing-title">The Revolutionists</span>
+</td>
+<td>
+<span class="listing-author">Burke</span>
+</td>
+<td>
+<span class="listing-year">1790</span>
+</td>
+
+</tr>
+
+<tr data-index="47" data-categories="SGlzdG9yeSUyQ1NvY2lvbG9neQ==" data-listing-title-sort="Slavery and Social Death">
+<td>
+<span class="listing-title">Slavery and Social Death</span>
+</td>
+<td>
+<span class="listing-author">Patterson</span>
+</td>
+<td>
+<span class="listing-year">1982</span>
+</td>
+
+</tr>
+
+<tr data-index="48" data-categories="SGlzdG9yeQ==" data-listing-title-sort="The Internal Enemy">
+<td>
+<span class="listing-title">The Internal Enemy</span>
+</td>
+<td>
+<span class="listing-author">Taylor</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+
+</tr>
+
+<tr data-index="49" data-categories="SGlzdG9yeQ==" data-listing-title-sort="Slavery and Freedom on the Middle Ground">
+<td>
+<span class="listing-title">Slavery and Freedom on the Middle Ground</span>
+</td>
+<td>
+<span class="listing-author">Fields</span>
+</td>
+<td>
+<span class="listing-year">1985</span>
+</td>
+
+</tr>
+
+<tr data-index="50" data-categories="SGlzdG9yeSUyQ0Jpb2dyYXBoeQ==" data-listing-title-sort="Abraham Lincoln: A Life">
+<td>
+<span class="listing-title">Abraham Lincoln: A Life</span>
+</td>
+<td>
+<span class="listing-author">Burlingame</span>
+</td>
+<td>
+<span class="listing-year">2008</span>
+</td>
+
+</tr>
+
+<tr data-index="51" data-categories="SGlzdG9yeQ==" data-listing-title-sort="William Cooper’s Town">
+<td>
+<span class="listing-title">William Cooper’s Town</span>
+</td>
+<td>
+<span class="listing-author">Taylor</span>
+</td>
+<td>
+<span class="listing-year">1995</span>
+</td>
+
+</tr>
+
+<tr data-index="52" data-categories="SGlzdG9yeSUyQ0Jpb2dyYXBoeQ==" data-listing-title-sort="Washington: A Life">
+<td>
+<span class="listing-title">Washington: A Life</span>
+</td>
+<td>
+<span class="listing-author">Chernow</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="53" data-categories="SGlzdG9yeSUyQ1NURU0=" data-listing-title-sort="1491: New Revelations of the Americas Before Columbus">
+<td>
+<span class="listing-title">1491: New Revelations of the Americas Before Columbus</span>
+</td>
+<td>
+<span class="listing-author">Mann</span>
+</td>
+<td>
+<span class="listing-year">2005</span>
+</td>
+
+</tr>
+
+<tr data-index="54" data-categories="SGlzdG9yeSUyQ1JlbGlnaW9u" data-listing-title-sort="Dominion">
+<td>
+<span class="listing-title">Dominion</span>
+</td>
+<td>
+<span class="listing-author">Holland</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="55" data-categories="UG9saXRpY3MlMkNDaGluYQ==" data-listing-title-sort="The Rise and Fall of the EAST">
+<td>
+<span class="listing-title">The Rise and Fall of the EAST</span>
+</td>
+<td>
+<span class="listing-author">Huang</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="56" data-categories="UG9saXRpY3MlMkNDaGluYQ==" data-listing-title-sort="Wealth and Power">
+<td>
+<span class="listing-title">Wealth and Power</span>
+</td>
+<td>
+<span class="listing-author">Schell</span>
+</td>
+<td>
+<span class="listing-year">2013</span>
+</td>
+
+</tr>
+
+<tr data-index="57" data-categories="UG9saXRpY3MlMkNDaGluYQ==" data-listing-title-sort="Democracy in China">
+<td>
+<span class="listing-title">Democracy in China</span>
+</td>
+<td>
+<span class="listing-author">Ci</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="58" data-categories="U29jaW9sb2d5JTJDUG9saXRpY3M=" data-listing-title-sort="Power and Powerlessness">
+<td>
+<span class="listing-title">Power and Powerlessness</span>
+</td>
+<td>
+<span class="listing-author">Gaventa</span>
+</td>
+<td>
+<span class="listing-year">1980</span>
+</td>
+
+</tr>
+
+<tr data-index="59" data-categories="SGlzdG9yeSUyQ0lyZWxhbmQ=" data-listing-title-sort="Say Nothing">
+<td>
+<span class="listing-title">Say Nothing</span>
+</td>
+<td>
+<span class="listing-author">Keefe</span>
+</td>
+<td>
+<span class="listing-year">2018</span>
+</td>
+
+</tr>
+
+<tr data-index="60" data-categories="SGlzdG9yeSUyQ1dXSUk=" data-listing-title-sort="In the Sewers of Lvov">
+<td>
+<span class="listing-title">In the Sewers of Lvov</span>
+</td>
+<td>
+<span class="listing-author">Marshall</span>
+</td>
+<td>
+<span class="listing-year">1990</span>
+</td>
+
+</tr>
+
+<tr data-index="61" data-categories="SGlzdG9yeSUyQ01lbW9pciUyQ1dhcg==" data-listing-title-sort="With the Old Breed">
+<td>
+<span class="listing-title">With the Old Breed</span>
+</td>
+<td>
+<span class="listing-author">Sledge</span>
+</td>
+<td>
+<span class="listing-year">1981</span>
+</td>
+
+</tr>
+
+<tr data-index="62" data-categories="SGlzdG9yeSUyQ0Jpb2dyYXBoeSUyQ1NvdXRoJTIwQWZyaWNh" data-listing-title-sort="Winnie and Nelson">
+<td>
+<span class="listing-title">Winnie and Nelson</span>
+</td>
+<td>
+<span class="listing-author">Steinberg</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="63" data-categories="UG9saXRpY3MlMkNIaXN0b3J5" data-listing-title-sort="Common Sense">
+<td>
+<span class="listing-title">Common Sense</span>
+</td>
+<td>
+<span class="listing-author">Paine</span>
+</td>
+<td>
+<span class="listing-year">1776</span>
+</td>
+
+</tr>
+
+<tr data-index="64" data-categories="RWNvbm9taWNz" data-listing-title-sort="The Fiscal Theory of the Price Level">
+<td>
+<span class="listing-title">The Fiscal Theory of the Price Level</span>
+</td>
+<td>
+<span class="listing-author">Cochrane</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="65" data-categories="RWNvbm9taWNzJTJDU29jaW9sb2d5" data-listing-title-sort="Micromotives and Macrobehavior">
+<td>
+<span class="listing-title">Micromotives and Macrobehavior</span>
+</td>
+<td>
+<span class="listing-author">Schelling</span>
+</td>
+<td>
+<span class="listing-year">1978</span>
+</td>
+
+</tr>
+
+<tr data-index="66" data-categories="RWNvbm9taWNzJTJDUG9saXRpY3M=" data-listing-title-sort="Free to Choose">
+<td>
+<span class="listing-title">Free to Choose</span>
+</td>
+<td>
+<span class="listing-author">Friedman</span>
+</td>
+<td>
+<span class="listing-year">1980</span>
+</td>
+
+</tr>
+
+<tr data-index="67" data-categories="UG9saXRpY3MlMkNFY29ub21pY3M=" data-listing-title-sort="The Communist Manifesto">
+<td>
+<span class="listing-title">The Communist Manifesto</span>
+</td>
+<td>
+<span class="listing-author">Marx</span>
+</td>
+<td>
+<span class="listing-year">1848</span>
+</td>
+
+</tr>
+
+<tr data-index="68" data-categories="UG9saXRpY3M=" data-listing-title-sort="What Is To Be Done?">
+<td>
+<span class="listing-title">What Is To Be Done?</span>
+</td>
+<td>
+<span class="listing-author">Lenin</span>
+</td>
+<td>
+<span class="listing-year">1902</span>
+</td>
+
+</tr>
+
+<tr data-index="69" data-categories="RWNvbm9taWNzJTJDUG9saXRpY3M=" data-listing-title-sort="Socialism: The Failed Idea that Never Dies">
+<td>
+<span class="listing-title">Socialism: The Failed Idea that Never Dies</span>
+</td>
+<td>
+<span class="listing-author">Niemietz</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="70" data-categories="U29jaWFsJTIwU2NpZW5jZSUyQ1BoaWxvc29waHk=" data-listing-title-sort="The Rise and Triumph of the Modern Self">
+<td>
+<span class="listing-title">The Rise and Triumph of the Modern Self</span>
+</td>
+<td>
+<span class="listing-author">Trueman</span>
+</td>
+<td>
+<span class="listing-year">2020</span>
+</td>
+
+</tr>
+
+<tr data-index="71" data-categories="U29jaWFsJTIwU2NpZW5jZSUyQ0hpc3Rvcnk=" data-listing-title-sort="The Condemnation of Blackness">
+<td>
+<span class="listing-title">The Condemnation of Blackness</span>
+</td>
+<td>
+<span class="listing-author">Muhammad</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="72" data-categories="U29jaWFsJTIwU2NpZW5jZSUyQ1BvbGl0aWNz" data-listing-title-sort="The Canceling of the American Mind">
+<td>
+<span class="listing-title">The Canceling of the American Mind</span>
+</td>
+<td>
+<span class="listing-author">Lukianoff</span>
+</td>
+<td>
+<span class="listing-year">2023</span>
+</td>
+
+</tr>
+
+<tr data-index="73" data-categories="U29jaWFsJTIwU2NpZW5jZSUyQ1BvbGl0aWNz" data-listing-title-sort="A Conflict of Visions">
+<td>
+<span class="listing-title">A Conflict of Visions</span>
+</td>
+<td>
+<span class="listing-author">Sowell</span>
+</td>
+<td>
+<span class="listing-year">1987</span>
+</td>
+
+</tr>
+
+<tr data-index="74" data-categories="U29jaWFsJTIwU2NpZW5jZSUyQ0hpc3Rvcnk=" data-listing-title-sort="Race and Cultures">
+<td>
+<span class="listing-title">Race and Cultures</span>
+</td>
+<td>
+<span class="listing-author">Sowell</span>
+</td>
+<td>
+<span class="listing-year">1994</span>
+</td>
+
+</tr>
+
+<tr data-index="75" data-categories="RWNvbm9taWNzJTJDVGVjaA==" data-listing-title-sort="Abundance">
+<td>
+<span class="listing-title">Abundance</span>
+</td>
+<td>
+<span class="listing-author">Klein</span>
+</td>
+<td>
+<span class="listing-year">2012</span>
+</td>
+
+</tr>
+
+<tr data-index="76" data-categories="SG9iYmllcyUyQ0NoZXNz" data-listing-title-sort="Winning Chess Openings">
+<td>
+<span class="listing-title">Winning Chess Openings</span>
+</td>
+<td>
+<span class="listing-author">Seirawan</span>
+</td>
+<td>
+<span class="listing-year">1999</span>
+</td>
+
+</tr>
+
+<tr data-index="77" data-categories="SG9iYmllcyUyQ0NoZXNz" data-listing-title-sort="Winning Chess Brilliancies">
+<td>
+<span class="listing-title">Winning Chess Brilliancies</span>
+</td>
+<td>
+<span class="listing-author">Seirawan</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="78" data-categories="U1RFTSUyQ1BoeXNpY3M=" data-listing-title-sort="Gravitation">
+<td>
+<span class="listing-title">Gravitation</span>
+</td>
+<td>
+<span class="listing-author">Misner</span>
+</td>
+<td>
+<span class="listing-year">1973</span>
+</td>
+
+</tr>
+
+<tr data-index="79" data-categories="U1RFTSUyQ0Jpb2xvZ3k=" data-listing-title-sort="On the Origin of Species">
+<td>
+<span class="listing-title">On the Origin of Species</span>
+</td>
+<td>
+<span class="listing-author">Darwin</span>
+</td>
+<td>
+<span class="listing-year">1859</span>
+</td>
+
+</tr>
+
+<tr data-index="80" data-categories="U1RFTSUyQ0Jpb2xvZ3k=" data-listing-title-sort="Population Genetics: A Concise Guide">
+<td>
+<span class="listing-title">Population Genetics: A Concise Guide</span>
+</td>
+<td>
+<span class="listing-author">Gillespie</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="81" data-categories="U1RFTQ==" data-listing-title-sort="Data-Driven Science and Engineering">
+<td>
+<span class="listing-title">Data-Driven Science and Engineering</span>
+</td>
+<td>
+<span class="listing-author">Brunton</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="82" data-categories="U1RFTSUyQ01hdGg=" data-listing-title-sort="Averaging Methods in Nonlinear Dynamics Systems">
+<td>
+<span class="listing-title">Averaging Methods in Nonlinear Dynamics Systems</span>
+</td>
+<td>
+<span class="listing-author">Sanders</span>
+</td>
+<td>
+<span class="listing-year">1985</span>
+</td>
+
+</tr>
+
+<tr data-index="83" data-categories="U1RFTSUyQ01hdGg=" data-listing-title-sort="Mathematical Methods of Classical Mechanics">
+<td>
+<span class="listing-title">Mathematical Methods of Classical Mechanics</span>
+</td>
+<td>
+<span class="listing-author">Arnold</span>
+</td>
+<td>
+<span class="listing-year">1978</span>
+</td>
+
+</tr>
+
+<tr data-index="84" data-categories="U1RFTSUyQ1BoeXNpY3M=" data-listing-title-sort="Classical Dynamics: A Contemporary Approach">
+<td>
+<span class="listing-title">Classical Dynamics: A Contemporary Approach</span>
+</td>
+<td>
+<span class="listing-author">Jose</span>
+</td>
+<td>
+<span class="listing-year">1998</span>
+</td>
+
+</tr>
+
+<tr data-index="85" data-categories="U1RFTSUyQ1BoeXNpY3M=" data-listing-title-sort="Regular and Chaotic Dynamics">
+<td>
+<span class="listing-title">Regular and Chaotic Dynamics</span>
+</td>
+<td>
+<span class="listing-author">Lichtenberg</span>
+</td>
+<td>
+<span class="listing-year">1983</span>
+</td>
+
+</tr>
+
+<tr data-index="86" data-categories="U1RFTSUyQ1RlY2g=" data-listing-title-sort="Nanostructures and Nanotechnology">
+<td>
+<span class="listing-title">Nanostructures and Nanotechnology</span>
+</td>
+<td>
+<span class="listing-author">Natelson</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="87" data-categories="VGVjaCUyQ0NhcmVlcg==" data-listing-title-sort="The Staff Engineer's Path">
+<td>
+<span class="listing-title">The Staff Engineer’s Path</span>
+</td>
+<td>
+<span class="listing-author">Reilly</span>
+</td>
+<td>
+<span class="listing-year">2022</span>
+</td>
+
+</tr>
+
+<tr data-index="88" data-categories="U1RFTSUyQ1dyaXRpbmc=" data-listing-title-sort="Writing Science">
+<td>
+<span class="listing-title">Writing Science</span>
+</td>
+<td>
+<span class="listing-author">Schimel</span>
+</td>
+<td>
+<span class="listing-year">2011</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div> ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/reading-list/</guid>
+  <pubDate>Thu, 05 Mar 2026 05:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Documentaries</title>
   <link>https://austin-hoover.github.io/blog/notes/documentaries/</link>
@@ -2392,7 +3612,7 @@ Year
 
 </tr>
 
-<tr data-index="2" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2UlMkNQaHlzaWNzJTJDTGF3cw==" data-listing-title-sort="Laws of Physics">
+<tr data-index="2" data-categories="UGh5c2ljcyUyQ1BoaWxvc29waHklMkNQaGlsb3NvcGh5JTIwb2YlMjBTY2llbmNl" data-listing-title-sort="Laws of Physics">
 <td>
 <span class="listing-title">Laws of Physics</span>
 </td>
@@ -2405,7 +3625,7 @@ Year
 
 </tr>
 
-<tr data-index="3" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="The Brothers Karamazov">
+<tr data-index="3" data-categories="RmljdGlvbiUyQ1J1c3NpYW4lMjBMaXRlcmF0dXJlJTJDTW9yYWxpdHk=" data-listing-title-sort="The Brothers Karamazov">
 <td>
 <span class="listing-title">The Brothers Karamazov</span>
 </td>
@@ -2418,7 +3638,7 @@ Year
 
 </tr>
 
-<tr data-index="4" data-categories="RmljdGlvbg==" data-listing-title-sort="A Christmas Carol">
+<tr data-index="4" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="A Christmas Carol">
 <td>
 <span class="listing-title">A Christmas Carol</span>
 </td>
@@ -2431,7 +3651,7 @@ Year
 
 </tr>
 
-<tr data-index="5" data-categories="SGlzdG9yeSUyQ0NoaW5h" data-listing-title-sort="The Chinese Question">
+<tr data-index="5" data-categories="SGlzdG9yeSUyQ0dlb3BvbGl0aWNz" data-listing-title-sort="The Chinese Question">
 <td>
 <span class="listing-title">The Chinese Question</span>
 </td>
@@ -2444,7 +3664,7 @@ Year
 
 </tr>
 
-<tr data-index="6" data-categories="RWNvbm9taWNzJTJDU29jaWV0eQ==" data-listing-title-sort="Knowledge and Decisions">
+<tr data-index="6" data-categories="RWNvbm9taWNzJTJDU29jaWFsJTIwU2NpZW5jZQ==" data-listing-title-sort="Knowledge and Decisions">
 <td>
 <span class="listing-title">Knowledge and Decisions</span>
 </td>
@@ -2457,7 +3677,7 @@ Year
 
 </tr>
 
-<tr data-index="7" data-categories="U29jaWV0eSUyQ0hpc3RvcnklMkNJbnRlcm5hdGlvbmFsJTIwUmVsYXRpb25zJTJDQ2hpbmE=" data-listing-title-sort="Breakneck">
+<tr data-index="7" data-categories="R2VvcG9saXRpY3MlMkNDaGluYSUyQ0hpc3Rvcnk=" data-listing-title-sort="Breakneck">
 <td>
 <span class="listing-title">Breakneck</span>
 </td>
@@ -2470,7 +3690,7 @@ Year
 
 </tr>
 
-<tr data-index="8" data-categories="UGh5c2ljcyUyQ0NvbXB1dGF0aW9uYWwlMjBQaHlzaWNzJTJDQWxnb3JpdGhtcw==" data-listing-title-sort="Numerical Recipes">
+<tr data-index="8" data-categories="Q29tcHV0YXRpb25hbCUyMFBoeXNpY3MlMkNBbGdvcml0aG1z" data-listing-title-sort="Numerical Recipes">
 <td>
 <span class="listing-title">Numerical Recipes</span>
 </td>
@@ -2483,7 +3703,7 @@ Year
 
 </tr>
 
-<tr data-index="9" data-categories="RmljdGlvbg==" data-listing-title-sort="Ficciones">
+<tr data-index="9" data-categories="RmljdGlvbiUyQ1Nob3J0JTIwU3Rvcmllcw==" data-listing-title-sort="Ficciones">
 <td>
 <span class="listing-title">Ficciones</span>
 </td>
@@ -2535,7 +3755,7 @@ Year
 
 </tr>
 
-<tr data-index="13" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Problems in quantum mechanics with solutions">
+<tr data-index="13" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBNZWNoYW5pY3M=" data-listing-title-sort="Problems in quantum mechanics with solutions">
 <td>
 <span class="listing-title">Problems in quantum mechanics with solutions</span>
 </td>
@@ -2561,7 +3781,7 @@ Year
 
 </tr>
 
-<tr data-index="15" data-categories="UGh5c2ljcyUyQ0VsZWN0cmljYWwlMjBFbmdpbmVlcmluZw==" data-listing-title-sort="Practical Electronics for Inventors">
+<tr data-index="15" data-categories="UGh5c2ljcyUyQ0VsZWN0aWNhbCUyMEVuZ2luZWVyaW5n" data-listing-title-sort="Practical Electronics for Inventors">
 <td>
 <span class="listing-title">Practical Electronics for Inventors</span>
 </td>
@@ -2587,7 +3807,7 @@ Year
 
 </tr>
 
-<tr data-index="17" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Introduction to Quantum Mechanics">
+<tr data-index="17" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBNZWNoYW5pY3M=" data-listing-title-sort="Introduction to Quantum Mechanics">
 <td>
 <span class="listing-title">Introduction to Quantum Mechanics</span>
 </td>
@@ -2613,7 +3833,7 @@ Year
 
 </tr>
 
-<tr data-index="19" data-categories="RmljdGlvbg==" data-listing-title-sort="The Book of Sand">
+<tr data-index="19" data-categories="RmljdGlvbiUyQ1Nob3J0JTIwU3Rvcmllcw==" data-listing-title-sort="The Book of Sand">
 <td>
 <span class="listing-title">The Book of Sand</span>
 </td>
@@ -2626,7 +3846,7 @@ Year
 
 </tr>
 
-<tr data-index="20" data-categories="RmljdGlvbg==" data-listing-title-sort="Shakespeare's Memory">
+<tr data-index="20" data-categories="RmljdGlvbiUyQ1Nob3J0JTIwU3Rvcmllcw==" data-listing-title-sort="Shakespeare's Memory">
 <td>
 <span class="listing-title">Shakespeare’s Memory</span>
 </td>
@@ -2652,12 +3872,12 @@ Year
 
 </tr>
 
-<tr data-index="22" data-categories="RmljdGlvbg==" data-listing-title-sort="The Quiet American">
+<tr data-index="22" data-categories="RmljdGlvbiUyQ1dhcg==" data-listing-title-sort="The Quiet American">
 <td>
 <span class="listing-title">The Quiet American</span>
 </td>
 <td>
-<span class="listing-author">Graham Greene</span>
+<span class="listing-author">Greene</span>
 </td>
 <td>
 <span class="listing-year">1955</span>
@@ -2665,7 +3885,7 @@ Year
 
 </tr>
 
-<tr data-index="23" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Waiting for Hitler, 1929–1941">
+<tr data-index="23" data-categories="SGlzdG9yeSUyQ1J1c3NpYSUyQ1dXSUklMkNHZW9wb2xpdGljcw==" data-listing-title-sort="Stalin: Waiting for Hitler, 1929–1941">
 <td>
 <span class="listing-title">Stalin: Waiting for Hitler, 1929–1941</span>
 </td>
@@ -2678,7 +3898,7 @@ Year
 
 </tr>
 
-<tr data-index="24" data-categories="TmF0dXJlJTJDVHJhdmVs" data-listing-title-sort="Our National Parks">
+<tr data-index="24" data-categories="TmF0dXJl" data-listing-title-sort="Our National Parks">
 <td>
 <span class="listing-title">Our National Parks</span>
 </td>
@@ -2717,7 +3937,7 @@ Year
 
 </tr>
 
-<tr data-index="27" data-categories="RmljdGlvbg==" data-listing-title-sort="The Last of the Mohicans: A Narrative of 1757">
+<tr data-index="27" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="The Last of the Mohicans: A Narrative of 1757">
 <td>
 <span class="listing-title">The Last of the Mohicans: A Narrative of 1757</span>
 </td>
@@ -2730,7 +3950,7 @@ Year
 
 </tr>
 
-<tr data-index="28" data-categories="Q29tcHV0YXRpb25hbCUyMFBoeXNpY3MlMkNDb21wdXRlciUyMFNjaWVuY2U=" data-listing-title-sort="Computer Simulation Using Particles">
+<tr data-index="28" data-categories="UGh5c2ljcyUyQ0NvbXB1dGF0aW9uYWwlMjBQaHlzaWNz" data-listing-title-sort="Computer Simulation Using Particles">
 <td>
 <span class="listing-title">Computer Simulation Using Particles</span>
 </td>
@@ -2743,7 +3963,7 @@ Year
 
 </tr>
 
-<tr data-index="29" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eSUyQ01hY2hpbmUlMjBMZWFybmluZw==" data-listing-title-sort="Probabilistic Artificial Intelligence">
+<tr data-index="29" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHJvYmFiaWxpdHk=" data-listing-title-sort="Probabilistic Artificial Intelligence">
 <td>
 <span class="listing-title">Probabilistic Artificial Intelligence</span>
 </td>
@@ -2795,7 +4015,7 @@ Year
 
 </tr>
 
-<tr data-index="33" data-categories="UGh5c2ljcyUyQ01hdGhlbWF0aWNzJTJDQWNjZWxlcmF0b3IlMjBQaHlzaWNz" data-listing-title-sort="Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics">
+<tr data-index="33" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics">
 <td>
 <span class="listing-title">Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics</span>
 </td>
@@ -2808,7 +4028,7 @@ Year
 
 </tr>
 
-<tr data-index="34" data-categories="RmljdGlvbiUyQ1J1c3NpYQ==" data-listing-title-sort="White Nights">
+<tr data-index="34" data-categories="RmljdGlvbiUyQ1J1c3NpYW4lMjBMaXRlcmF0dXJl" data-listing-title-sort="White Nights">
 <td>
 <span class="listing-title">White Nights</span>
 </td>
@@ -2821,7 +4041,7 @@ Year
 
 </tr>
 
-<tr data-index="35" data-categories="U29jaWV0eQ==" data-listing-title-sort="The Human Condition">
+<tr data-index="35" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNhbCUyMFRoZW9yeQ==" data-listing-title-sort="The Human Condition">
 <td>
 <span class="listing-title">The Human Condition</span>
 </td>
@@ -2834,7 +4054,7 @@ Year
 
 </tr>
 
-<tr data-index="36" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2UlMkNQaHlzaWNzJTJDTGF3cw==" data-listing-title-sort="How the Laws of Physics Lie">
+<tr data-index="36" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2UlMkNQaHlzaWNz" data-listing-title-sort="How the Laws of Physics Lie">
 <td>
 <span class="listing-title">How the Laws of Physics Lie</span>
 </td>
@@ -2847,7 +4067,7 @@ Year
 
 </tr>
 
-<tr data-index="37" data-categories="TW9yYWxpdHklMkNXb3JsZCUyMFdhciUyMElJ" data-listing-title-sort="Eichmann in Jerusalem: A Report on the Banality of Evil">
+<tr data-index="37" data-categories="UGhpbG9zb3BoeSUyQ01vcmFsaXR5JTJDSGlzdG9yeQ==" data-listing-title-sort="Eichmann in Jerusalem: A Report on the Banality of Evil">
 <td>
 <span class="listing-title">Eichmann in Jerusalem: A Report on the Banality of Evil</span>
 </td>
@@ -2873,7 +4093,7 @@ Year
 
 </tr>
 
-<tr data-index="39" data-categories="V3JpdGluZw==" data-listing-title-sort="The Sense of Style">
+<tr data-index="39" data-categories="V3JpdGluZyUyQ0xpbmd1aXN0aWNz" data-listing-title-sort="The Sense of Style">
 <td>
 <span class="listing-title">The Sense of Style</span>
 </td>
@@ -2886,12 +4106,12 @@ Year
 
 </tr>
 
-<tr data-index="40" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Deep Learning: Foundations and Concepts">
+<tr data-index="40" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDTWF0aGVtYXRpY3M=" data-listing-title-sort="Deep Learning: Foundations and Concepts">
 <td>
 <span class="listing-title">Deep Learning: Foundations and Concepts</span>
 </td>
 <td>
-<span class="listing-author">Bishop, and Bishop</span>
+<span class="listing-author">Bishop and Bishop</span>
 </td>
 <td>
 <span class="listing-year">2023</span>
@@ -2899,7 +4119,7 @@ Year
 
 </tr>
 
-<tr data-index="41" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Entropic Physics">
+<tr data-index="41" data-categories="UGh5c2ljcyUyQ1Byb2JhYmlsaXR5" data-listing-title-sort="Entropic Physics">
 <td>
 <span class="listing-title">Entropic Physics</span>
 </td>
@@ -2925,7 +4145,7 @@ Year
 
 </tr>
 
-<tr data-index="43" data-categories="RXRoaWNzJTJDQWJvcnRpb24=" data-listing-title-sort="The Ethics of Abortion">
+<tr data-index="43" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="The Ethics of Abortion">
 <td>
 <span class="listing-title">The Ethics of Abortion</span>
 </td>
@@ -2938,7 +4158,7 @@ Year
 
 </tr>
 
-<tr data-index="44" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Data Analysis: A Bayesian Tutorial">
+<tr data-index="44" data-categories="U3RhdGlzdGljcyUyQ1Byb2JhYmlsaXR5" data-listing-title-sort="Data Analysis: A Bayesian Tutorial">
 <td>
 <span class="listing-title">Data Analysis: A Bayesian Tutorial</span>
 </td>
@@ -2951,7 +4171,7 @@ Year
 
 </tr>
 
-<tr data-index="45" data-categories="TWF0aGVtYXRpY3MlMkNQcm9iYWJpbGl0eQ==" data-listing-title-sort="Bayesian Data Analysis">
+<tr data-index="45" data-categories="U3RhdGlzdGljcyUyQ1Byb2JhYmlsaXR5" data-listing-title-sort="Bayesian Data Analysis">
 <td>
 <span class="listing-title">Bayesian Data Analysis</span>
 </td>
@@ -2964,7 +4184,7 @@ Year
 
 </tr>
 
-<tr data-index="46" data-categories="SGlzdG9yeSUyQ1dvcmxkJTIwV2FyJTIwSUk=" data-listing-title-sort="Stalin: Paradoxes of Power, 1878-1928">
+<tr data-index="46" data-categories="SGlzdG9yeSUyQ1J1c3NpYSUyQ0Jpb2dyYXBoeSUyQ0dlb3BvbGl0aWNz" data-listing-title-sort="Stalin: Paradoxes of Power, 1878-1928">
 <td>
 <span class="listing-title">Stalin: Paradoxes of Power, 1878-1928</span>
 </td>
@@ -2977,7 +4197,7 @@ Year
 
 </tr>
 
-<tr data-index="47" data-categories="U29jaWV0eSUyQ0V0aGljcw==" data-listing-title-sort="The Character Gap">
+<tr data-index="47" data-categories="RXRoaWNzJTJDUHN5Y2hvbG9neQ==" data-listing-title-sort="The Character Gap">
 <td>
 <span class="listing-title">The Character Gap</span>
 </td>
@@ -2990,7 +4210,7 @@ Year
 
 </tr>
 
-<tr data-index="48" data-categories="RmljdGlvbg==" data-listing-title-sort="Exhalation: Stories">
+<tr data-index="48" data-categories="RmljdGlvbiUyQ1NjaS1GaQ==" data-listing-title-sort="Exhalation: Stories">
 <td>
 <span class="listing-title">Exhalation: Stories</span>
 </td>
@@ -3003,7 +4223,7 @@ Year
 
 </tr>
 
-<tr data-index="49" data-categories="U29jaWV0eSUyQ0Vjb25vbWljcw==" data-listing-title-sort="Wealth, Poverty, and Politics">
+<tr data-index="49" data-categories="RWNvbm9taWNzJTJDU29jaWFsJTIwU2NpZW5jZQ==" data-listing-title-sort="Wealth, Poverty, and Politics">
 <td>
 <span class="listing-title">Wealth, Poverty, and Politics</span>
 </td>
@@ -3029,7 +4249,7 @@ Year
 
 </tr>
 
-<tr data-index="51" data-categories="UmVsaWdpb24=" data-listing-title-sort="Mere Christianity">
+<tr data-index="51" data-categories="UGhpbG9zb3BoeSUyQ1RoZWlzbSUyQ1JlbGlnaW9u" data-listing-title-sort="Mere Christianity">
 <td>
 <span class="listing-title">Mere Christianity</span>
 </td>
@@ -3042,7 +4262,7 @@ Year
 
 </tr>
 
-<tr data-index="52" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY2FsJTIwUGh5c2ljcw==" data-listing-title-sort="Statistical Physics of Particles">
+<tr data-index="52" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY2FsJTIwTWVjaGFuaWNz" data-listing-title-sort="Statistical Physics of Particles">
 <td>
 <span class="listing-title">Statistical Physics of Particles</span>
 </td>
@@ -3055,7 +4275,7 @@ Year
 
 </tr>
 
-<tr data-index="53" data-categories="UGh5c2ljcyUyQ1N0YXRpc3RpY2FsJTIwUGh5c2ljcw==" data-listing-title-sort="Introduction to Thermal Physics">
+<tr data-index="53" data-categories="VGhlcm1vZHluYW1pY3MlMkNQaHlzaWNz" data-listing-title-sort="Introduction to Thermal Physics">
 <td>
 <span class="listing-title">Introduction to Thermal Physics</span>
 </td>
@@ -3068,7 +4288,7 @@ Year
 
 </tr>
 
-<tr data-index="54" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcw==" data-listing-title-sort="From Tracking Code to Analysis">
+<tr data-index="54" data-categories="UGh5c2ljcyUyQ0FjY2VsZXJhdG9yJTIwUGh5c2ljcyUyQ0NvbXB1dGF0aW9uYWwlMjBQaHlzaWNz" data-listing-title-sort="From Tracking Code to Analysis">
 <td>
 <span class="listing-title">From Tracking Code to Analysis</span>
 </td>
@@ -3081,7 +4301,7 @@ Year
 
 </tr>
 
-<tr data-index="55" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBPcHRpY3M=" data-listing-title-sort="Optical Coherence and Quantum Optics">
+<tr data-index="55" data-categories="UGh5c2ljcyUyQ09wdGljcyUyQ1F1YW50dW0lMjBNZWNoYW5pY3M=" data-listing-title-sort="Optical Coherence and Quantum Optics">
 <td>
 <span class="listing-title">Optical Coherence and Quantum Optics</span>
 </td>
@@ -3094,7 +4314,7 @@ Year
 
 </tr>
 
-<tr data-index="56" data-categories="UXVhbnR1bSUyMFBoeXNpY3M=" data-listing-title-sort="Quantum Mechanics: Concepts and Applications">
+<tr data-index="56" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBNZWNoYW5pY3M=" data-listing-title-sort="Quantum Mechanics: Concepts and Applications">
 <td>
 <span class="listing-title">Quantum Mechanics: Concepts and Applications</span>
 </td>
@@ -3107,7 +4327,7 @@ Year
 
 </tr>
 
-<tr data-index="57" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBQaHlzaWNz" data-listing-title-sort="Modern Quantum Mechanics">
+<tr data-index="57" data-categories="UGh5c2ljcyUyQ1F1YW50dW0lMjBNZWNoYW5pY3M=" data-listing-title-sort="Modern Quantum Mechanics">
 <td>
 <span class="listing-title">Modern Quantum Mechanics</span>
 </td>
@@ -3120,7 +4340,7 @@ Year
 
 </tr>
 
-<tr data-index="58" data-categories="UGh5c2ljcyUyQ0hpc3Rvcnk=" data-listing-title-sort="What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics">
+<tr data-index="58" data-categories="UGh5c2ljcyUyQ0hpc3RvcnklMjBvZiUyMFNjaWVuY2UlMkNRdWFudHVtJTIwTWVjaGFuaWNz" data-listing-title-sort="What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics">
 <td>
 <span class="listing-title">What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics</span>
 </td>
@@ -3133,7 +4353,7 @@ Year
 
 </tr>
 
-<tr data-index="59" data-categories="UGFydGljbGUlMjBQaHlzaWNz" data-listing-title-sort="Modern Elementary Particle Physics">
+<tr data-index="59" data-categories="UGh5c2ljcyUyQ1BhcnRpY2xlJTIwUGh5c2ljcw==" data-listing-title-sort="Modern Elementary Particle Physics">
 <td>
 <span class="listing-title">Modern Elementary Particle Physics</span>
 </td>
@@ -3172,7 +4392,7 @@ Year
 
 </tr>
 
-<tr data-index="62" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyMFBoeXNpY3M=" data-listing-title-sort="Classical Mechanics">
+<tr data-index="62" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyME1lY2hhbmljcw==" data-listing-title-sort="Classical Mechanics">
 <td>
 <span class="listing-title">Classical Mechanics</span>
 </td>
@@ -3185,7 +4405,7 @@ Year
 
 </tr>
 
-<tr data-index="63" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyMFBoeXNpY3M=" data-listing-title-sort="Classical Mechanics">
+<tr data-index="63" data-categories="UGh5c2ljcyUyQ0NsYXNzaWNhbCUyME1lY2hhbmljcw==" data-listing-title-sort="Classical Mechanics">
 <td>
 <span class="listing-title">Classical Mechanics</span>
 </td>
@@ -3341,7 +4561,7 @@ Year
 
 </tr>
 
-<tr data-index="75" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Time and Chance">
+<tr data-index="75" data-categories="UGh5c2ljcyUyQ1BoaWxvc29waHklMkNQaGlsb3NvcGh5JTIwb2YlMjBTY2llbmNlJTJDU3RhdGlzdGljYWwlMjBNZWNoYW5pY3M=" data-listing-title-sort="Time and Chance">
 <td>
 <span class="listing-title">Time and Chance</span>
 </td>
@@ -3354,7 +4574,7 @@ Year
 
 </tr>
 
-<tr data-index="76" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Philosophy of Physics: Space and Time">
+<tr data-index="76" data-categories="UGh5c2ljcyUyQ1BoaWxvc29waHklMkNQaGlsb3NvcGh5JTIwb2YlMjBTY2llbmNlJTJDU3BlY2lhbCUyMFJlbGF0aXZpdHk=" data-listing-title-sort="Philosophy of Physics: Space and Time">
 <td>
 <span class="listing-title">Philosophy of Physics: Space and Time</span>
 </td>
@@ -3367,7 +4587,7 @@ Year
 
 </tr>
 
-<tr data-index="77" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="Philosophy of Physics: Quantum Theory">
+<tr data-index="77" data-categories="UGh5c2ljcyUyQ1BoaWxvc29waHklMkNQaGlsb3NvcGh5JTIwb2YlMjBTY2llbmNlJTJDUXVhbnR1bSUyME1lY2hhbmljcw==" data-listing-title-sort="Philosophy of Physics: Quantum Theory">
 <td>
 <span class="listing-title">Philosophy of Physics: Quantum Theory</span>
 </td>
@@ -3380,7 +4600,7 @@ Year
 
 </tr>
 
-<tr data-index="78" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFNjaWVuY2U=" data-listing-title-sort="The Emergent Multiverse">
+<tr data-index="78" data-categories="UGh5c2ljcyUyQ1BoaWxvc29waHklMkNQaGlsb3NvcGh5JTIwb2YlMjBTY2llbmNlJTJDUXVhbnR1bSUyME1lY2hhbmljcw==" data-listing-title-sort="The Emergent Multiverse">
 <td>
 <span class="listing-title">The Emergent Multiverse</span>
 </td>
@@ -3393,7 +4613,7 @@ Year
 
 </tr>
 
-<tr data-index="79" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Taking Pascal's Wager">
+<tr data-index="79" data-categories="UGhpbG9zb3BoeSUyQ1JlbGlnaW9u" data-listing-title-sort="Taking Pascal's Wager">
 <td>
 <span class="listing-title">Taking Pascal’s Wager</span>
 </td>
@@ -3406,7 +4626,7 @@ Year
 
 </tr>
 
-<tr data-index="80" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Five Proofs of the Existence of God">
+<tr data-index="80" data-categories="VGhlaXNt" data-listing-title-sort="Five Proofs of the Existence of God">
 <td>
 <span class="listing-title">Five Proofs of the Existence of God</span>
 </td>
@@ -3419,7 +4639,7 @@ Year
 
 </tr>
 
-<tr data-index="81" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Is God the Best Explanation of Things? A Dialogue">
+<tr data-index="81" data-categories="UGhpbG9zb3BoeSUyQ1RoZWlzbQ==" data-listing-title-sort="Is God the Best Explanation of Things? A Dialogue">
 <td>
 <span class="listing-title">Is God the Best Explanation of Things? A Dialogue</span>
 </td>
@@ -3432,7 +4652,7 @@ Year
 
 </tr>
 
-<tr data-index="82" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9u" data-listing-title-sort="Arguing About Gods">
+<tr data-index="82" data-categories="UGhpbG9zb3BoeSUyQ1RoZWlzbQ==" data-listing-title-sort="Arguing About Gods">
 <td>
 <span class="listing-title">Arguing About Gods</span>
 </td>
@@ -3445,7 +4665,7 @@ Year
 
 </tr>
 
-<tr data-index="83" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9uJTJDTWV0YXBoeXNpY3M=" data-listing-title-sort="Necessary Existence">
+<tr data-index="83" data-categories="UGhpbG9zb3BoeSUyQ01ldGFwaHlzaWNz" data-listing-title-sort="Necessary Existence">
 <td>
 <span class="listing-title">Necessary Existence</span>
 </td>
@@ -3458,7 +4678,7 @@ Year
 
 </tr>
 
-<tr data-index="84" data-categories="UGhpbG9zb3BoeSUyQ0luZmluaXR5JTJDUGFyYWRveA==" data-listing-title-sort="Infinity, Causation, and Paradox">
+<tr data-index="84" data-categories="UGhpbG9zb3BoeSUyQ01ldGFwaHlzaWNz" data-listing-title-sort="Infinity, Causation, and Paradox">
 <td>
 <span class="listing-title">Infinity, Causation, and Paradox</span>
 </td>
@@ -3471,7 +4691,7 @@ Year
 
 </tr>
 
-<tr data-index="85" data-categories="UGhpbG9zb3BoeSUyQ1BoaWxvc29waHklMjBvZiUyMFJlbGlnaW9uJTJDRXBpc3RlbW9sb2d5" data-listing-title-sort="Knowledge and Christian Belief">
+<tr data-index="85" data-categories="UGhpbG9zb3BoeSUyQ0VwaXN0ZW1vbG9neSUyQ1RoZWlzbQ==" data-listing-title-sort="Knowledge and Christian Belief">
 <td>
 <span class="listing-title">Knowledge and Christian Belief</span>
 </td>
@@ -3510,7 +4730,7 @@ Year
 
 </tr>
 
-<tr data-index="88" data-categories="TWF0aGVtYXRpY3MlMkNQaHlzaWNz" data-listing-title-sort="Mathematics of Classical and Quantum Physics">
+<tr data-index="88" data-categories="UGh5c2ljcyUyQ01hdGhlbWF0aWNz" data-listing-title-sort="Mathematics of Classical and Quantum Physics">
 <td>
 <span class="listing-title">Mathematics of Classical and Quantum Physics</span>
 </td>
@@ -3523,7 +4743,7 @@ Year
 
 </tr>
 
-<tr data-index="89" data-categories="TWF0aGVtYXRpY3MlMkNQaHlzaWNz" data-listing-title-sort="Mathematical Methods for Physicists">
+<tr data-index="89" data-categories="UGh5c2ljcyUyQ01hdGhlbWF0aWNz" data-listing-title-sort="Mathematical Methods for Physicists">
 <td>
 <span class="listing-title">Mathematical Methods for Physicists</span>
 </td>
@@ -3536,7 +4756,7 @@ Year
 
 </tr>
 
-<tr data-index="90" data-categories="U2NpZW5jZSUyMEZpY3Rpb24=" data-listing-title-sort="Stories of Your Life and Others">
+<tr data-index="90" data-categories="RmljdGlvbiUyQ1NjaS1GaQ==" data-listing-title-sort="Stories of Your Life and Others">
 <td>
 <span class="listing-title">Stories of Your Life and Others</span>
 </td>
@@ -3575,7 +4795,7 @@ Year
 
 </tr>
 
-<tr data-index="93" data-categories="RmljdGlvbg==" data-listing-title-sort="Moby Dick">
+<tr data-index="93" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="Moby Dick">
 <td>
 <span class="listing-title">Moby Dick</span>
 </td>
@@ -3588,7 +4808,7 @@ Year
 
 </tr>
 
-<tr data-index="94" data-categories="RmljdGlvbg==" data-listing-title-sort="Fahrenheit 451">
+<tr data-index="94" data-categories="RmljdGlvbiUyQ1NjaS1GaQ==" data-listing-title-sort="Fahrenheit 451">
 <td>
 <span class="listing-title">Fahrenheit 451</span>
 </td>
@@ -3601,7 +4821,7 @@ Year
 
 </tr>
 
-<tr data-index="95" data-categories="RmljdGlvbg==" data-listing-title-sort="Paradise Lost">
+<tr data-index="95" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="Paradise Lost">
 <td>
 <span class="listing-title">Paradise Lost</span>
 </td>
@@ -3614,7 +4834,7 @@ Year
 
 </tr>
 
-<tr data-index="96" data-categories="RmljdGlvbg==" data-listing-title-sort="Odyssey">
+<tr data-index="96" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="Odyssey">
 <td>
 <span class="listing-title">Odyssey</span>
 </td>
@@ -3627,7 +4847,7 @@ Year
 
 </tr>
 
-<tr data-index="97" data-categories="RmljdGlvbg==" data-listing-title-sort="Divine Comedy">
+<tr data-index="97" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="Divine Comedy">
 <td>
 <span class="listing-title">Divine Comedy</span>
 </td>
@@ -3640,7 +4860,7 @@ Year
 
 </tr>
 
-<tr data-index="98" data-categories="RmljdGlvbiUyQ1J1c3NpYSUyQ01vcmFsaXR5" data-listing-title-sort="Crime and Punishment">
+<tr data-index="98" data-categories="RmljdGlvbiUyQ1J1c3NpYW4lMjBMaXRlcmF0dXJlJTJDTW9yYWxpdHk=" data-listing-title-sort="Crime and Punishment">
 <td>
 <span class="listing-title">Crime and Punishment</span>
 </td>
@@ -3666,7 +4886,7 @@ Year
 
 </tr>
 
-<tr data-index="100" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHJvYmFiaWxpdHk=" data-listing-title-sort="Pattern Recognition and Machine Learning">
+<tr data-index="100" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDU3RhdGlzdGljcw==" data-listing-title-sort="Pattern Recognition and Machine Learning">
 <td>
 <span class="listing-title">Pattern Recognition and Machine Learning</span>
 </td>
@@ -3679,7 +4899,7 @@ Year
 
 </tr>
 
-<tr data-index="101" data-categories="TWF0aGVtYXRpY3MlMkNNYWNoaW5lJTIwTGVhcm5pbmc=" data-listing-title-sort="Neural Networks and Deep Learning">
+<tr data-index="101" data-categories="TWFjaGluZSUyMExlYXJuaW5n" data-listing-title-sort="Neural Networks and Deep Learning">
 <td>
 <span class="listing-title">Neural Networks and Deep Learning</span>
 </td>
@@ -3692,7 +4912,7 @@ Year
 
 </tr>
 
-<tr data-index="102" data-categories="QWxnb3JpdGhtcyUyQ0NhcmVlcg==" data-listing-title-sort="Elements of Programming Interviews">
+<tr data-index="102" data-categories="QWxnb3JpdGhtcw==" data-listing-title-sort="Elements of Programming Interviews">
 <td>
 <span class="listing-title">Elements of Programming Interviews</span>
 </td>
@@ -3705,7 +4925,7 @@ Year
 
 </tr>
 
-<tr data-index="103" data-categories="RmljdGlvbiUyQ1NvdXRoJTIwQWZyaWNh" data-listing-title-sort="Cry, the Beloved Country">
+<tr data-index="103" data-categories="RmljdGlvbiUyQ0NsYXNzaWNzJTJDU291dGglMjBBZnJpY2E=" data-listing-title-sort="Cry, the Beloved Country">
 <td>
 <span class="listing-title">Cry, the Beloved Country</span>
 </td>
@@ -4638,813 +5858,6 @@ Year
 
  ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/people/</guid>
-  <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Philosophy</title>
-  <link>https://austin-hoover.github.io/blog/notes/philosophy/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Mostly philosophy of religion right now. Eventually split into separate notes.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-
-<th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="ZnJlZSUyMHdpbGwlMkN0aW1lJTIwdHJhdmVs" data-listing-title-sort="Dependence and the Freedom to Do Otherwise">
-<td>
-<a href="https://philpapers.org/archive/CYRDAT.pdf" class="title listing-title">Dependence and the Freedom to Do Otherwise</a>
-</td>
-<td>
-<span class="listing-author">Cyr</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="ZnJlZSUyMHdpbGwlMkNwcm9ibGVtJTIwb2YlMjBldmls" data-listing-title-sort="A Counterexample to Plantinga's Free Will Defense">
-<td>
-<a href="https://place.asburyseminary.edu/cgi/viewcontent.cgi?article=2174&amp;context=faithandphilosophy" class="title listing-title">A Counterexample to Plantinga’s Free Will Defense</a>
-</td>
-<td>
-<span class="listing-author">Pruss</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-categories="ZnJlZSUyMHdpbGwlMkNwcm9ibGVtJTIwb2YlMjBldmls" data-listing-title-sort="Ability, Foreknowledge, and Explanatory Dependence">
-<td>
-<a href="https://philpapers.org/archive/SWEAFA.pdf" class="title listing-title">Ability, Foreknowledge, and Explanatory Dependence</a>
-</td>
-<td>
-<span class="listing-author">Swensen</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-categories="ZnJlZSUyMHdpbGwlMkNjb21wYXRpYmlsaXNt" data-listing-title-sort="A challenge for Frankfurt-style compatibilists">
-<td>
-<a href="https://philpapers.org/archive/SWEACF.pdf" class="title listing-title">A challenge for Frankfurt-style compatibilists</a>
-</td>
-<td>
-<span class="listing-author">Swensen</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-categories="bWF0aGVtYXRpY3M=" data-listing-title-sort="The Unreasonable Effectiveness of Mathematics in the Natural Sciences">
-<td>
-<a href="https://www.maths.ed.ac.uk/~v1ranick/papers/wigner.pdf" class="title listing-title">The Unreasonable Effectiveness of Mathematics in the Natural Sciences</a>
-</td>
-<td>
-<span class="listing-author">Wigner</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-categories="bWV0YXBoeXNpY3MlMkNncm91bmRpbmc=" data-listing-title-sort="On What Grounds What">
-<td>
-<a href="http://www.jonathanschaffer.org/grounds.pdf" class="title listing-title">On What Grounds What</a>
-</td>
-<td>
-<span class="listing-author">Schaffer</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-categories="bWluZCUyQ3F1YWxpYQ==" data-listing-title-sort="Should a Materialist Believe in Qualia?">
-<td>
-<a href="https://web.archive.org/web/20190430050827id_/https://place.asburyseminary.edu/cgi/viewcontent.cgi?article=1548&amp;context=faithandphilosophy" class="title listing-title">Should a Materialist Believe in Qualia?</a>
-</td>
-<td>
-<span class="listing-author">Lewis</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-categories="bWV0YXBoeXNpY3MlMkNtaW5k" data-listing-title-sort="Naturalistic Dualism and the Problem of the Physical Correlate">
-<td>
-<a href="http://www.jonathanschaffer.org/dualismcorrelate.pdf" class="title listing-title">Naturalistic Dualism and the Problem of the Physical Correlate</a>
-</td>
-<td>
-<span class="listing-author">Schaffer</span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-categories="bWluZCUyQ2NvbnNjaW91c25lc3M=" data-listing-title-sort="Introspection in Group Minds, Disunities of Consciousness, and Indiscrete Persons">
-<td>
-<a href="http://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/GroupMindsIntrospection-230629.pdf" class="title listing-title">Introspection in Group Minds, Disunities of Consciousness, and Indiscrete Persons</a>
-</td>
-<td>
-<span class="listing-author">Schwitzgebel</span>
-</td>
-
-</tr>
-
-<tr data-index="9" data-categories="bWluZCUyQ2NvbnNjaW91c25lc3M=" data-listing-title-sort="If Materialism Is True, the United States Is Probably Conscious">
-<td>
-<a href="http://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/USAconscious-140721.pdf" class="title listing-title">If Materialism Is True, the United States Is Probably Conscious</a>
-</td>
-<td>
-<span class="listing-author">Schwitzgebel</span>
-</td>
-
-</tr>
-
-<tr data-index="10" data-categories="bWluZCUyQ3RoZWlzbQ==" data-listing-title-sort="Psychophysical Harmony: A New Argument for Theism">
-<td>
-<a href="https://philpapers.org/archive/CUTPHA.pdf" class="title listing-title">Psychophysical Harmony: A New Argument for Theism</a>
-</td>
-<td>
-<span class="listing-author">Cutter</span>
-</td>
-
-</tr>
-
-<tr data-index="11" data-categories="bWluZA==" data-listing-title-sort="The Mind-Body Problem and the Color-Body Problem">
-<td>
-<a href="https://drive.google.com/file/d/1I7Ee2p78c-kf57ApUiC-fFWbF111bddO/view" class="title listing-title">The Mind-Body Problem and the Color-Body Problem</a>
-</td>
-<td>
-<span class="listing-author">Cutter</span>
-</td>
-
-</tr>
-
-<tr data-index="12" data-categories="bWluZCUyQ2NvbnNjaW91c25lc3MlMkNhcml0aWZpY2FsJTIwaW50ZWxsaWdlbmNl" data-listing-title-sort="The AI ensoulment hypothesis">
-<td>
-<a href="https://drive.google.com/file/d/1XnHm8x3h8M6H4kXyKVvR86HHJBzcFgAB/view" class="title listing-title">The AI ensoulment hypothesis</a>
-</td>
-<td>
-<span class="listing-author">Cutter</span>
-</td>
-
-</tr>
-
-<tr data-index="13" data-categories="bWluZCUyQ2NvbnNjaW91c25lc3M=" data-listing-title-sort="Facing Up to the Problem of Consciousness">
-<td>
-<a href="https://consc.net/papers/facing.pdf" class="title listing-title">Facing Up to the Problem of Consciousness</a>
-</td>
-<td>
-<span class="listing-author">Chalmers</span>
-</td>
-
-</tr>
-
-<tr data-index="14" data-categories="bWluZCUyQ2NvbnNjaW91c25lc3M=" data-listing-title-sort="The Harder Problem of Consciousness">
-<td>
-<a href="https://www.jstor.org/stable/pdf/3655621.pdf?refreqid=fastly-default%3A7391a9ca2bcaf99e7f9e38338fc31f8f&amp;ab_segments=&amp;origin=&amp;initiator=&amp;acceptTC=1" class="title listing-title">The Harder Problem of Consciousness</a>
-</td>
-<td>
-<span class="listing-author">Ned Block</span>
-</td>
-
-</tr>
-
-<tr data-index="15" data-categories="aW5maW5pdHk=" data-listing-title-sort="Universal Library">
-<td>
-<a href="https://urbigenous.net/library/universal_library.html" class="title listing-title">Universal Library</a>
-</td>
-<td>
-<span class="listing-author">Quine</span>
-</td>
-
-</tr>
-
-<tr data-index="16" data-categories="c2NpZW5jZSUyQ2Z1bm55" data-listing-title-sort="Review of *A New Kind of Science*">
-<td>
-<a href="https://arxiv.org/pdf/quant-ph/0206089" class="title listing-title">Review of <em>A New Kind of Science</em></a>
-</td>
-<td>
-<span class="listing-author">Aaronson</span>
-</td>
-
-</tr>
-
-<tr data-index="17" data-categories="ZW1lcmdlbmNl" data-listing-title-sort="The reductionist blindspot">
-<td>
-<a href="http://philsci-archive.pitt.edu/4037/1/The_reductionist_blind_spot-08-05-01-2300.pdf" class="title listing-title">The reductionist blindspot</a>
-</td>
-<td>
-<span class="listing-author">Abbott</span>
-</td>
-
-</tr>
-
-<tr data-index="18" data-categories="cXVhbnR1bSUyMG1lY2hhbmljcyUyQ21lYXN1cmVtZW50JTIwcHJvYmxlbQ==" data-listing-title-sort="Do We Have Any Viable Solution to the Measurement Problem?">
-<td>
-<a href="https://arxiv.org/pdf/2301.06192" class="title listing-title">Do We Have Any Viable Solution to the Measurement Problem?</a>
-</td>
-<td>
-<span class="listing-author">Adlam</span>
-</td>
-
-</tr>
-
-<tr data-index="19" data-categories="Y2F1c2F0aW9uJTJDZXhwbGFuYXRpb24lMkNsYXdz" data-listing-title-sort="Spooky Action at a Temporal Distance">
-<td>
-<a href="https://www.mdpi.com/1099-4300/20/1/41" class="title listing-title">Spooky Action at a Temporal Distance</a>
-</td>
-<td>
-<span class="listing-author">Adlam</span>
-</td>
-
-</tr>
-
-<tr data-index="20" data-categories="bmF0dXJhbGlzbSUyQ21vcmFsaXR5JTJDZXZvbHV0aW9uYXJ5JTIwZGVidW5raW5nJTIwYXJndW1lbnRz" data-listing-title-sort="Only All Naturalists Should Worry About Only One Evolutionary Debunking Argument">
-<td>
-<a href="https://philpapers.org/archive/BOGOAN.pdf" class="title listing-title">Only All Naturalists Should Worry About Only One Evolutionary Debunking Argument</a>
-</td>
-<td>
-<span class="listing-author">Bogardus</span>
-</td>
-
-</tr>
-
-<tr data-index="21" data-categories="bGF3cyUyQ2V4cGxhbmF0aW9uJTJDc3RhdGlzdGljYWwlMjBtZWNoYW5pY3M=" data-listing-title-sort="The Past Hypothesis and the Nature of Physical Laws">
-<td>
-<a href="https://www.eddykemingchen.net/uploads/4/6/1/3/46137503/ph_and_nature_of_physical_laws.pdf" class="title listing-title">The Past Hypothesis and the Nature of Physical Laws</a>
-</td>
-<td>
-<span class="listing-author">Chen</span>
-</td>
-
-</tr>
-
-<tr data-index="22" data-categories="bGF3cyUyQ2V4cGxhbmF0aW9u" data-listing-title-sort="The Simplicity of Physical Laws">
-<td>
-<a href="https://arxiv.org/pdf/2210.08143" class="title listing-title">The Simplicity of Physical Laws</a>
-</td>
-<td>
-<span class="listing-author">Chen</span>
-</td>
-
-</tr>
-
-<tr data-index="23" data-categories="bGF3cyUyQ2V4cGxhbmF0aW9uJTJDc3RhdGlzdGljYWwlMjBtZWNoYW5pY3M=" data-listing-title-sort="The Past Hypothesis: Not even false">
-<td>
-<a href="https://www.sciencedirect.com/science/article/abs/pii/S135521980600027X?via%3Dihub" class="title listing-title">The Past Hypothesis: Not even false</a>
-</td>
-<td>
-<span class="listing-author">Earman</span>
-</td>
-
-</tr>
-
-<tr data-index="24" data-categories="bWF0aGVtYXRpY3MlMkNwcm9iYWJpbGl0eQ==" data-listing-title-sort="Fifteen Arguments Against Hypothetical Frequentism">
-<td>
-<a href="https://joelvelasco.net/teaching/3865/hajek%20-%20fifteen%20arguments%20against%20hypothetical%20frequentism.pdf" class="title listing-title">Fifteen Arguments Against Hypothetical Frequentism</a>
-</td>
-<td>
-<span class="listing-author">Hájek</span>
-</td>
-
-</tr>
-
-<tr data-index="25" data-categories="cHJvYmFiaWxpdHklMkNzaW11bGF0aW9uJTIwYXJndW1lbnQ=" data-listing-title-sort="A Bayesian approach to the simulation argument">
-<td>
-<a href="https://arxiv.org/pdf/2008.12254" class="title listing-title">A Bayesian approach to the simulation argument</a>
-</td>
-<td>
-<span class="listing-author">Kipping</span>
-</td>
-
-</tr>
-
-<tr data-index="26" data-categories="cHJvYmFiaWxpdHklMkNleHRyYXRlcnJlc3RyaWFs" data-listing-title-sort="Contact inequality: first contact will likely be with an older civilization">
-<td>
-<a href="https://arxiv.org/pdf/2010.12358" class="title listing-title">Contact inequality: first contact will likely be with an older civilization</a>
-</td>
-<td>
-<span class="listing-author">Kipping</span>
-</td>
-
-</tr>
-
-<tr data-index="27" data-categories="Y29zbW9sb2d5" data-listing-title-sort="Contemporary Philosophical Perspectives on the Cosmological Constant">
-<td>
-<a href="https://arxiv.org/pdf/2212.04335" class="title listing-title">Contemporary Philosophical Perspectives on the Cosmological Constant</a>
-</td>
-<td>
-<span class="listing-author">Koberinski, Falck‡ and Smeenk</span>
-</td>
-
-</tr>
-
-<tr data-index="28" data-categories="cXVhbnR1bSUyMG1lY2hhbmljcyUyQ211bHRpdmVyc2U=" data-listing-title-sort="The Emergent Multiverse: Quantum Theory according to the Everett Interpretation">
-<td>
-<a href="https://ndpr.nd.edu/reviews/the-emergent-multiverse-quantum-theory-according-to-the-everett-interpretation/" class="title listing-title">The Emergent Multiverse: Quantum Theory according to the Everett Interpretation</a>
-</td>
-<td>
-<span class="listing-author">Lewis</span>
-</td>
-
-</tr>
-
-<tr data-index="29" data-categories="Y29zbW9sb2d5JTJDdGltZQ==" data-listing-title-sort="On the Boundary of the Cosmos">
-<td>
-<a href="https://arxiv.org/pdf/2308.13113" class="title listing-title">On the Boundary of the Cosmos</a>
-</td>
-<td>
-<span class="listing-author">Linford</span>
-</td>
-
-</tr>
-
-<tr data-index="30" data-categories="Ym9sdHptYW5uJTIwYnJhaW5zJTJDc3RhdGlzdGljYWwlMjBtZWNoYW5pY3M=" data-listing-title-sort="Boltzmannian Immortality">
-<td>
-<a href="https://philsci-archive.pitt.edu/14455/1/loew-boltzmann2.pdf" class="title listing-title">Boltzmannian Immortality</a>
-</td>
-<td>
-<span class="listing-author">Loew</span>
-</td>
-
-</tr>
-
-<tr data-index="31" data-categories="cXVhbnR1bSUyMG1lY2hhbmljcw==" data-listing-title-sort="What Bell did">
-<td>
-<a href="https://iopscience.iop.org/article/10.1088/1751-8113/47/42/424010/pdf" class="title listing-title">What Bell did</a>
-</td>
-<td>
-<span class="listing-author">Maudlin</span>
-</td>
-
-</tr>
-
-<tr data-index="32" data-categories="Y2F1c2F0aW9uJTJDZXhwbGFuYXRpb24=" data-listing-title-sort="Causation as Folk Science">
-<td>
-<a href="https://sites.pitt.edu/~jdnorton/papers/003004.pdf" class="title listing-title">Causation as Folk Science</a>
-</td>
-<td>
-<span class="listing-author">Norton</span>
-</td>
-
-</tr>
-
-<tr data-index="33" data-categories="cXVhbnR1bSUyMG1lY2hhbmljcyUyQ2ZpZWxkcw==" data-listing-title-sort="The Fundamentality of Fields">
-<td>
-<a href="https://arxiv.org/pdf/2202.09425" class="title listing-title">The Fundamentality of Fields</a>
-</td>
-<td>
-<span class="listing-author">Sebens</span>
-</td>
-
-</tr>
-
-<tr data-index="34" data-categories="ZW1lcmdlbmNl" data-listing-title-sort="Naturalness and Emergence">
-<td>
-<a href="https://philsci-archive.pitt.edu/15757/1/naturalness_emergence.pdf" class="title listing-title">Naturalness and Emergence</a>
-</td>
-<td>
-<span class="listing-author">Wallace</span>
-</td>
-
-</tr>
-
-<tr data-index="35" data-categories="bGF3cyUyQ2V4cGxhbmF0aW9uJTJDc3RhdGlzdGljYWwlMjBtZWNoYW5pY3M=" data-listing-title-sort="The Nature of the Past Hypothesis">
-<td>
-<a href="https://sites.pitt.edu/~dmw121/papers/wallace-tenerife.pdf" class="title listing-title">The Nature of the Past Hypothesis</a>
-</td>
-<td>
-<span class="listing-author">Wallace</span>
-</td>
-
-</tr>
-
-<tr data-index="36" data-categories="cXVhbnR1bSUyMG1lY2hhbmljcyUyQ211bHRpdmVyc2U=" data-listing-title-sort="Worlds in the Everett interpretation">
-<td>
-<a href="https://arxiv.org/pdf/quant-ph/0103092" class="title listing-title">Worlds in the Everett interpretation</a>
-</td>
-<td>
-<span class="listing-author">Wallace</span>
-</td>
-
-</tr>
-
-<tr data-index="37" data-categories="ZXRoaWNzJTJDdmVnYW5pc20=" data-listing-title-sort="New Omnivorism: a Novel Approach to Food and Animal Ethics">
-<td>
-<a href="https://doi.org/10.1007/s41055-022-00098-z" class="title listing-title">New Omnivorism: a Novel Approach to Food and Animal Ethics</a>
-</td>
-<td>
-<span class="listing-author">Milburn and Bobier</span>
-</td>
-
-</tr>
-
-<tr data-index="38" data-categories="ZXRoaWNzJTJDYWJvcnRpb24=" data-listing-title-sort="I Was Once a Fetus: That Is Why Abortion Is Wrong">
-<td>
-<a href="http://ndl.ethernet.edu.et/bitstream/123456789/8345/1/304.pdf#page=32" class="title listing-title">I Was Once a Fetus: That Is Why Abortion Is Wrong</a>
-</td>
-<td>
-<span class="listing-author">Pruss</span>
-</td>
-
-</tr>
-
-<tr data-index="39" data-categories="ZXRoaWNzJTJDYWJvcnRpb24=" data-listing-title-sort="A Defense of Abortion">
-<td>
-<a href="https://jdphilosophy.com/Thomson-DefenseAbortion-1971.pdf" class="title listing-title">A Defense of Abortion</a>
-</td>
-<td>
-<span class="listing-author">Thomson</span>
-</td>
-
-</tr>
-
-<tr data-index="40" data-categories="ZXRoaWNzJTJDYWJvcnRpb24=" data-listing-title-sort="Revisiting the argument from fetal potential">
-<td>
-<a href="https://link.springer.com/article/10.1186/1747-5341-2-7" class="title listing-title">Revisiting the argument from fetal potential</a>
-</td>
-<td>
-<span class="listing-author">Manninen</span>
-</td>
-
-</tr>
-
-<tr data-index="41" data-categories="aW5maW5pdHk=" data-listing-title-sort="Repetition and Value in an Infinite Universe">
-<td>
-<a href="http://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/Infinitude-230502.pdf" class="title listing-title">Repetition and Value in an Infinite Universe</a>
-</td>
-<td>
-<span class="listing-author">Schwitzgebel</span>
-</td>
-
-</tr>
-
-<tr data-index="42" data-categories="Y2xhc3NpY2FsJTIwbWVjaGFuaWNzJTJDcGFyYWRveA==" data-listing-title-sort="Losing energy in classical, relativistic and quantum mechanics">
-<td>
-<a href="https://philsci-archive.pitt.edu/2639/1/AJPZeno.pdf" class="title listing-title">Losing energy in classical, relativistic and quantum mechanics</a>
-</td>
-<td>
-<span class="listing-author">Atkinson</span>
-</td>
-
-</tr>
-
-<tr data-index="43" data-categories="aW5maW5pdHklMkNwYXJhZG94" data-listing-title-sort="Yablo’s Paradox and Beginningless Time">
-<td>
-<a href="https://intapi.sciendo.com/pdf/10.2478/disp-2009-0002" class="title listing-title">Yablo’s Paradox and Beginningless Time</a>
-</td>
-<td>
-<span class="listing-author">Luna</span>
-</td>
-
-</tr>
-
-<tr data-index="44" data-categories="aW5maW5pdHklMkNwYXJhZG94" data-listing-title-sort="Zeno's Paradoxes: A Timely Solution">
-<td>
-<a href="https://philsci-archive.pitt.edu/1197/1/Zeno_s_Paradoxes_-_A_Timely_Solution.pdf" class="title listing-title">Zeno’s Paradoxes: A Timely Solution</a>
-</td>
-<td>
-<span class="listing-author">Lynds</span>
-</td>
-
-</tr>
-
-<tr data-index="45" data-categories="aW5maW5pdHklMkNwcm9iYWJpbGl0eQ==" data-listing-title-sort="How not to build an infinite lottery machine">
-<td>
-<a href="https://www.sciencedirect.com/science/article/abs/pii/S003936811830325X?via%3Dihub" class="title listing-title">How not to build an infinite lottery machine</a>
-</td>
-<td>
-<span class="listing-author">Norton</span>
-</td>
-
-</tr>
-
-<tr data-index="46" data-categories="cGFyYWRveA==" data-listing-title-sort="The Tristram Shandy Paradox">
-<td>
-<a href="https://philarchive.org/archive/OPPTTS-2" class="title listing-title">The Tristram Shandy Paradox</a>
-</td>
-<td>
-<span class="listing-author">Oppy</span>
-</td>
-
-</tr>
-
-<tr data-index="47" data-categories="cGFyYWRveCUyQ2luZmluaXR5" data-listing-title-sort="Benardete Paradoxes, Causal Finitism, and the Unsatisfiable Pair Diagnosis">
-<td>
-<a href="https://philarchive.org/archive/SCHBPC" class="title listing-title">Benardete Paradoxes, Causal Finitism, and the Unsatisfiable Pair Diagnosis</a>
-</td>
-<td>
-<span class="listing-author">Schmid and Malpass</span>
-</td>
-
-</tr>
-
-<tr data-index="48" data-categories="cGFyYWRveCUyQ2luZmluaXR5" data-listing-title-sort="The Form of the Benardete Dichotomy">
-<td>
-<a href="https://philpapers.org/archive/SHATFO.pdf" class="title listing-title">The Form of the Benardete Dichotomy</a>
-</td>
-<td>
-<span class="listing-author">Shackel</span>
-</td>
-
-</tr>
-
-<tr data-index="49" data-categories="cGFyYWRveCUyQ2luZmluaXR5" data-listing-title-sort="The Infinity from Nothing paradox and the Immovable Object meets the Irresistible Force">
-<td>
-<a href="https://link.springer.com/article/10.1007/s13194-017-0192-2" class="title listing-title">The Infinity from Nothing paradox and the Immovable Object meets the Irresistible Force</a>
-</td>
-<td>
-<span class="listing-author">Shackel</span>
-</td>
-
-</tr>
-
-<tr data-index="50" data-categories="dGhlaXNtJTJDZGl2aW5lJTIwYXR0cmlidXRlcw==" data-listing-title-sort="Divine Creative Freedom">
-<td>
-<a href="http://alexanderpruss.com/papers/DivineCreativeFreedom.pdf" class="title listing-title">Divine Creative Freedom</a>
-</td>
-<td>
-<span class="listing-author">Pruss</span>
-</td>
-
-</tr>
-
-<tr data-index="51" data-categories="dGhlaXNt" data-listing-title-sort="Review of *Arguing about Gods*">
-<td>
-<a href="https://ndpr.nd.edu/reviews/arguing-about-gods/" class="title listing-title">Review of <em>Arguing about Gods</em></a>
-</td>
-<td>
-<span class="listing-author">Pruss</span>
-</td>
-
-</tr>
-
-<tr data-index="52" data-categories="Y29zbW9sb2dpY2FsJTIwYXJndW1lbnRz" data-listing-title-sort="Oppy on Thomistic cosmological arguments">
-<td>
-<a href="https://www.cambridge.org/core/journals/religious-studies/article/abs/oppy-on-thomistic-cosmological-arguments/4F4FE32691906CF3303F33197F119FCB" class="title listing-title">Oppy on Thomistic cosmological arguments</a>
-</td>
-<td>
-<span class="listing-author">Feser</span>
-</td>
-
-</tr>
-
-<tr data-index="53" data-categories="Y29zbW9sb2dpY2FsJTIwYXJndW1lbnRzJTJDY2F1c2FsJTIwZmluaXRpc20=" data-listing-title-sort="The Grim Reaper Kalam Argument: From Temporal and Causal Finitism to God">
-<td>
-<a href="https://robkoons.net/uploads/1/3/5/2/135276253/grim_reaper_kalam_argument.pdf" class="title listing-title">The Grim Reaper Kalam Argument: From Temporal and Causal Finitism to God</a>
-</td>
-<td>
-<span class="listing-author">Koons</span>
-</td>
-
-</tr>
-
-<tr data-index="54" data-categories="c2tlcHRpY2lzbSUyQ3ByaW5jaXBsZSUyMG9mJTIwc3VmZmljaWVudCUyMHJlYXNvbg==" data-listing-title-sort="Skepticism and the principle of sufficient reason">
-<td>
-<a href="https://link.springer.com/article/10.1007/s11098-020-01482-3" class="title listing-title">Skepticism and the principle of sufficient reason</a>
-</td>
-<td>
-<span class="listing-author">Koons and Pruss</span>
-</td>
-
-</tr>
-
-<tr data-index="55" data-categories="dGhlaXNt" data-listing-title-sort="The Problem of Creation Ex Nihilo: A New Argument Against Classical Theism">
-<td>
-<a href="sourceurl" class="title listing-title">The Problem of Creation Ex Nihilo: A New Argument Against Classical Theism</a>
-</td>
-<td>
-<span class="listing-author">Leon</span>
-</td>
-
-</tr>
-
-<tr data-index="56" data-categories="aW5maW5pdHklMkNwYXJhZG94" data-listing-title-sort="Craig on the actual infinite">
-<td>
-<a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/815E2D63C50326202AC6AC837AF09AA9/S0034412502005978a.pdf/craig_on_the_actual_infinite.pdf" class="title listing-title">Craig on the actual infinite</a>
-</td>
-<td>
-<span class="listing-author">Morriston</span>
-</td>
-
-</tr>
-
-<tr data-index="57" data-categories="Y29zbW9sb2dpY2FsJTIwYXJndW1lbnRz" data-listing-title-sort="Cosmological Arguments">
-<td>
-<a href="https://philpapers.org/archive/OPPCA.pdf" class="title listing-title">Cosmological Arguments</a>
-</td>
-<td>
-<span class="listing-author">Oppy</span>
-</td>
-
-</tr>
-
-<tr data-index="58" data-categories="bWV0YXBoeXNpY3M=" data-listing-title-sort="Review of *Necessary Existence*">
-<td>
-<a href="https://philpapers.org/archive/OPPARP.pdf" class="title listing-title">Review of <em>Necessary Existence</em></a>
-</td>
-<td>
-<span class="listing-author">Oppy</span>
-</td>
-
-</tr>
-
-<tr data-index="59" data-categories="Y29zbW9sb2dpY2FsJTIwYXJndW1lbnRz" data-listing-title-sort="Leibnizian Cosmological Arguments">
-<td>
-<a href="http://alexanderpruss.com/papers/LCA.html" class="title listing-title">Leibnizian Cosmological Arguments</a>
-</td>
-<td>
-<span class="listing-author">Pruss</span>
-</td>
-
-</tr>
-
-<tr data-index="60" data-categories="bWV0YXBoeXNpY3MlMkNjb3Ntb2xvZ2ljYWwlMjBhcmd1bWVudHM=" data-listing-title-sort="Why is There Anything?">
-<td>
-<a href="https://philpapers.org/rec/RASWIT-2" class="title listing-title">Why is There Anything?</a>
-</td>
-<td>
-<span class="listing-author">Rasmussen and Weaver</span>
-</td>
-
-</tr>
-
-<tr data-index="61" data-categories="ZXZpbA==" data-listing-title-sort="Should atheists wish there were no gratuitous evils?">
-<td>
-<a href="https://www.pdcnet.org/collection/fshow?id=faithphil_2021_0038_0004_0460_0483&amp;pdfname=faithphil_2021_0038_0004_0054_0077.pdf&amp;file_type=pdf" class="title listing-title">Should atheists wish there were no gratuitous evils?</a>
-</td>
-<td>
-<span class="listing-author">Kahane</span>
-</td>
-
-</tr>
-
-<tr data-index="62" data-categories="ZXZpbA==" data-listing-title-sort="Was evolution worth it?">
-<td>
-<a href="https://link.springer.com/article/10.1007/s11098-022-01893-4" class="title listing-title">Was evolution worth it?</a>
-</td>
-<td>
-<span class="listing-author">Kahane</span>
-</td>
-
-</tr>
-
-<tr data-index="63" data-categories="ZXZpbCUyQ211bHRpdmVyc2U=" data-listing-title-sort="The Multiverse Theodicy Meets Population Ethics">
-<td>
-<a href="https://journals.publishing.umich.edu/ergo/article/5193/galley/3155/view/" class="title listing-title">The Multiverse Theodicy Meets Population Ethics</a>
-</td>
-<td>
-<span class="listing-author">Li and Saad</span>
-</td>
-
-</tr>
-
-<tr data-index="64" data-categories="ZXZpbA==" data-listing-title-sort="Skeptical Theism">
-<td>
-<a href="https://compass.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1747-9991.2010.00306.x?casa_token=XxzIWLVHr-wAAAAA:XGBTYfOu3k4zzGtCLEMqHKklsr2Zn-rOQr5NU4sFIGcoArpMNhANAh1uVr270Ss87nrNIAe6_u75DaZs" class="title listing-title">Skeptical Theism</a>
-</td>
-<td>
-<span class="listing-author">McBrayer</span>
-</td>
-
-</tr>
-
-<tr data-index="65" data-categories="aGlkZGVubmVzcw==" data-listing-title-sort="Scepticism about the argument from divine hiddenness">
-<td>
-<a href="https://philpapers.org/archive/MCBSAT-2.pdf" class="title listing-title">Scepticism about the argument from divine hiddenness</a>
-</td>
-<td>
-<span class="listing-author">McBayer and Swenson</span>
-</td>
-
-</tr>
-
-<tr data-index="66" data-categories="dGhlaXNtJTJDYWJzdHJhY3QlMjBvYmplY3Rz" data-listing-title-sort="A Priori (Atheism)">
-<td>
-<a href="https://philarchive.org/rec/LEOAPA-2" class="title listing-title">A Priori (Atheism)</a>
-</td>
-<td>
-<span class="listing-author">Leon</span>
-</td>
-
-</tr>
-
-<tr data-index="67" data-categories="aGVhdmVuJTJDZXZpbA==" data-listing-title-sort="Heaven and the Problem of Eternal Separation">
-<td>
-<span class="listing-title">Heaven and the Problem of Eternal Separation</span>
-</td>
-<td>
-<span class="listing-author">Yang</span>
-</td>
-
-</tr>
-
-<tr data-index="68" data-categories="ZmluZS10dW5pbmc=" data-listing-title-sort="The Fine-Tuning of the Universe for Intelligent Life">
-<td>
-<a href="https://arxiv.org/pdf/1112.4647" class="title listing-title">The Fine-Tuning of the Universe for Intelligent Life</a>
-</td>
-<td>
-<span class="listing-author">Barnes</span>
-</td>
-
-</tr>
-
-<tr data-index="69" data-categories="ZXhwbGFuYXRpb24lMkNuYXR1cmFsaXNt" data-listing-title-sort="If naturalism is true, then scientific explanation is impossible">
-<td>
-<a href="https://philpapers.org/archive/BOGINI.pdf" class="title listing-title">If naturalism is true, then scientific explanation is impossible</a>
-</td>
-<td>
-<span class="listing-author">Bogardus</span>
-</td>
-
-</tr>
-
-<tr data-index="70" data-categories="ZmluZS10dW5pbmc=" data-listing-title-sort="In What Sense Is the Early Universe Fine-Tuned?">
-<td>
-<a href="https://arxiv.org/pdf/1406.3057" class="title listing-title">In What Sense Is the Early Universe Fine-Tuned?</a>
-</td>
-<td>
-<span class="listing-author">Carroll</span>
-</td>
-
-</tr>
-
-<tr data-index="71" data-categories="bGF3cyUyQ2V4cGxhbmF0aW9u" data-listing-title-sort="The problem of nomological harmony">
-<td>
-<a href="https://philpapers.org/archive/CUTTPO-9.pdf" class="title listing-title">The problem of nomological harmony</a>
-</td>
-<td>
-<span class="listing-author">Cutter and Saad</span>
-</td>
-
-</tr>
-
-<tr data-index="72" data-categories="ZmluZS10dW5pbmc=" data-listing-title-sort="The Fine-Tuning Argument and the Requirement of Total Evidence">
-<td>
-<a href="https://philpapers.org/archive/EPSTFA.pdf" class="title listing-title">The Fine-Tuning Argument and the Requirement of Total Evidence</a>
-</td>
-<td>
-<span class="listing-author">Epstein</span>
-</td>
-
-</tr>
-
-<tr data-index="73" data-categories="ZmluZS10dW5pbmc=" data-listing-title-sort="Reconsidering the Inverse Gambler’s Fallacy Charge Against the Fine-Tuning Argument for the Multiverse">
-<td>
-<a href="https://philsci-archive.pitt.edu/16785/1/Friederich2019_Article_ReconsideringTheInverseGambler.pdf" class="title listing-title">Reconsidering the Inverse Gambler’s Fallacy Charge Against the Fine-Tuning Argument for the Multiverse</a>
-</td>
-<td>
-<span class="listing-author">Friederich</span>
-</td>
-
-</tr>
-
-<tr data-index="74" data-categories="bGF3cyUyQ3RoZWlzbSUyQ2ZpbmUtdHVuaW5nJTJDZXhwbGFuYXRpb24=" data-listing-title-sort="The Nomological Argument for the Existence of God">
-<td>
-<a href="https://philarchive.org/archive/HILTNA-2" class="title listing-title">The Nomological Argument for the Existence of God</a>
-</td>
-<td>
-<span class="listing-author">Hildebrand and Metcalf</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div> ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/philosophy/</guid>
   <pubDate>Mon, 01 Jan 2024 05:00:00 GMT</pubDate>
 </item>
 </channel>
