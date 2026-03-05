@@ -1,725 +1,748 @@
 - title: "Auto-da-Fé"
-  author: Canetti
-  year: 1935
+  author: "Canetti"
+  year: "1935"
   categories:
     - Fiction
 
 - title: "Alice's Adventures in Wonderland"
-  author: Carroll
-  year: 1865
+  author: "Carroll"
+  year: "1865"
   categories:
     - Fiction
 
 - title: "Laws of Physics"
-  author: Chen
-  year: 2024
+  author: "Chen"
+  year: "2024"
   categories:
+    - Physics
     - Philosophy
     - Philosophy of Science
-    - Physics
-    - Laws
 
 - title: "The Brothers Karamazov"
-  author: Dostoevsky
-  year: 1879
+  author: "Dostoevsky"
+  year: "1879"
   categories:
     - Fiction
-    - Russia
+    - Russian Literature
     - Morality
 
 - title: "A Christmas Carol"
-  author: Dickens
-  year: 1843
+  author: "Dickens"
+  year: "1843"
   categories:
     - Fiction
+    - Classics
 
 - title: "The Chinese Question"
-  author: Ngai
-  year: 2022
+  author: "Ngai"
+  year: "2022"
   categories:
     - History
-    - China
+    - Geopolitics
 
 - title: "Knowledge and Decisions"
-  author: Sowell
-  year: 1980
+  author: "Sowell"
+  year: "1980"
   categories:
     - Economics
-    - Society
+    - Social Science
 
 - title: "Breakneck"
-  author: Wang
-  year: 2025
+  author: "Wang"
+  year: "2025"
   categories:
-    - Society
-    - History
-    - International Relations
+    - Geopolitics
     - China
+    - History
 
 - title: "Numerical Recipes"
-  author: Press
-  year: 1986
+  author: "Press"
+  year: "1986"
   categories:
-    - Physics
     - Computational Physics
     - Algorithms
 
 - title: "Ficciones"
-  author: Borges
-  year: 1941
+  author: "Borges"
+  year: "1941"
   categories:
     - Fiction
+    - Short Stories
 
 - title: "An Introduction to Error Analysis"
   author: "Taylor"
-  year: 1982
+  year: "1982"
   categories:
     - Physics
     - Statistics
 
 - title: "Mathematics for Physicists"
   author: "Dennery"
-  year: 1967
+  year: "1967"
   categories:
     - Physics
     - Mathematics
 
 - title: "Unifying Physics of Accelerators, Lasers and Plasma"
-  author: Seryi
-  year: 2015
+  author: "Seryi"
+  year: "2015"
   categories:
     - Physics
     - Accelerator Physics
     - Plasma Physics
 
 - title: "Problems in quantum mechanics with solutions"
-  author: Squires
-  year: 1995
+  author: "Squires"
+  year: "1995"
   categories:
     - Physics
-    - Quantum Physics
+    - Quantum Mechanics
 
 - title: "Introduction to Optics"
-  author: Pedrotti
-  year: 2007
-  categories:
-    - Physics 
-    - Optics
-    
-- title: "Practical Electronics for Inventors"
-  author: Scherz
-  year: 2000
+  author: "Pedrotti"
+  year: "2007"
   categories:
     - Physics
-    - Electrical Engineering
+    - Optics
+
+- title: "Practical Electronics for Inventors"
+  author: "Scherz"
+  year: "2000"
+  categories:
+    - Physics
+    - Electical Engineering
 
 - title: "Foundations and Applications of Statistics"
-  author: Pruim
-  year: 2011
+  author: "Pruim"
+  year: "2011"
   categories:
     - Mathematics
     - Statistics
 
 - title: "Introduction to Quantum Mechanics"
-  author: Griffiths
-  year: 1995
+  author: "Griffiths"
+  year: "1995"
   categories:
     - Physics
-    - Quantum Physics
+    - Quantum Mechanics
 
 - title: "Physics of Nonneutral Plasmas"
-  author: Davidson
-  year: 2001
+  author: "Davidson"
+  year: "2001"
   categories:
     - Physics
     - Plasma Physics
 
 - title: "The Book of Sand"
-  author: Borges
-  year: 1975
+  author: "Borges"
+  year: "1975"
   categories:
     - Fiction
+    - Short Stories
 
 - title: "Shakespeare's Memory"
-  author: Borges
-  year: 1983
+  author: "Borges"
+  year: "1983"
   categories:
     - Fiction
+    - Short Stories
 
 - title: "Introduction to Plasma Theory"
-  author: Nicholson
-  year: 1983
+  author: "Nicholson"
+  year: "1983"
   categories:
     - Physics
     - Plasma Physics
 
 - title: "The Quiet American"
-  author: Graham Greene
-  year: 1955
+  author: "Greene"
+  year: "1955"
   categories:
     - Fiction
+    - War
 
 - title: "Stalin: Waiting for Hitler, 1929–1941"
-  author: Kotkin
-  year: 2017
+  author: "Kotkin"
+  year: "2017"
   categories:
     - History
-    - World War II
+    - Russia
+    - WWII
+    - Geopolitics
 
 - title: "Our National Parks"
   author: "Muir"
-  year: 1901
+  year: "1901"
   categories:
     - Nature
-    - Travel
 
 - title: "Questions of Uniqueness and Resolution in Reconstruction from Projections"
   author: "Katz"
-  year: 1978
+  year: "1978"
   categories:
     - Mathematics
     - Inverse Problems
 
 - title: "Handbook of Accelerator Physics and Engineering"
-  author: Chao et al.
-  year: 1999
+  author: "Chao et al."
+  year: "1999"
   categories:
     - Physics
     - Accelerator Physics
 
 - title: "The Last of the Mohicans: A Narrative of 1757"
-  author: Cooper
-  year: 1826
+  author: "Cooper"
+  year: "1826"
   categories:
     - Fiction
+    - Classics
 
 - title: "Computer Simulation Using Particles"
   author: "Hockney and Eastwood"
-  year: 1981
+  year: "1981"
   categories:
+    - Physics
     - Computational Physics
-    - Computer Science
 
 - title: "Probabilistic Artificial Intelligence"
   author: "Krause and Hubotter"
-  year: 2025
+  year: "2025"
   categories:
-    - Mathematics
-    - Probability
     - Machine Learning
+    - Probability
 
 - title: "The Cultural Revolution"
   author: "Dikötter"
-  year: 2016
+  year: "2016"
   categories:
     - History
     - China
 
 - title: "Mao's Great Famine"
   author: "Dikötter"
-  year: 2010
+  year: "2010"
   categories:
     - History
     - China
 
 - title: "The Tragedy of Liberation"
   author: "Dikötter"
-  year: 2013
+  year: "2013"
   categories:
     - History
     - China
 
 - title: "Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics"
-  author: Dragt
-  year: 2011
+  author: "Dragt"
+  year: "2011"
   categories:
     - Physics
-    - Mathematics
     - Accelerator Physics
 
 - title: "White Nights"
-  author: Dostoevsky
-  year: 1848
+  author: "Dostoevsky"
+  year: "1848"
   categories:
     - Fiction
-    - Russia
+    - Russian Literature
 
 - title: "The Human Condition"
-  author: Arendt
-  year: 1958
+  author: "Arendt"
+  year: "1958"
   categories:
-    - Society
+    - Philosophy
+    - Political Theory
 
 - title: "How the Laws of Physics Lie"
-  author: Cartwright
-  year: 1983
+  author: "Cartwright"
+  year: "1983"
   categories:
     - Philosophy
     - Philosophy of Science
     - Physics
-    - Laws
 
 - title: "Eichmann in Jerusalem: A Report on the Banality of Evil"
-  author: Arendt
-  year: 1963
+  author: "Arendt"
+  year: "1963"
   categories:
+    - Philosophy
     - Morality
-    - World War II
+    - History
 
 - title: "Physics of Collective Beam Instabilities in High Energy Accelerators"
-  author: Chao
-  year: 1993
+  author: "Chao"
+  year: "1993"
   categories:
     - Physics
     - Accelerator Physics
 
 - title: "The Sense of Style"
-  author: Pinker
-  year: 2014
+  author: "Pinker"
+  year: "2014"
   categories:
     - Writing
+    - Linguistics
 
 - title: "Deep Learning: Foundations and Concepts"
-  author: Bishop, and Bishop
-  year: 2023
+  author: "Bishop and Bishop"
+  year: "2023"
   categories:
-    - Mathematics
     - Machine Learning
+    - Mathematics
 
 - title: "Entropic Physics"
-  author: Caticha
-  year: 2022
+  author: "Caticha"
+  year: "2022"
   categories:
-    - Mathematics
+    - Physics
     - Probability
 
 - title: "Probability Theory: The Logic of Science"
-  author: Jaynes
-  year: 2003
+  author: "Jaynes"
+  year: "2003"
   categories:
     - Mathematics
     - Probability
 
 - title: "The Ethics of Abortion"
-  author: Kaczor
-  year: 2010
+  author: "Kaczor"
+  year: "2010"
   categories:
+    - Philosophy
     - Ethics
-    - Abortion
 
 - title: "Data Analysis: A Bayesian Tutorial"
-  author: Sivia and Skilling
-  year: 1996
+  author: "Sivia and Skilling"
+  year: "1996"
   categories:
-    - Mathematics
+    - Statistics
     - Probability
 
 - title: "Bayesian Data Analysis"
-  author: Gelman, Carlin, Stern, and Rubin
-  year: 1995
+  author: "Gelman, Carlin, Stern, and Rubin"
+  year: "1995"
   categories:
-    - Mathematics
+    - Statistics
     - Probability
 
 - title: "Stalin: Paradoxes of Power, 1878-1928"
-  author: Kotkin
-  year: 2014
+  author: "Kotkin"
+  year: "2014"
   categories:
     - History
-    - World War II
+    - Russia
+    - Biography
+    - Geopolitics
 
 - title: "The Character Gap"
-  author: Miller
-  year: 2017
+  author: "Miller"
+  year: "2017"
   categories:
-    - Society
     - Ethics
+    - Psychology
 
 - title: "Exhalation: Stories"
-  author: Chiang
-  year: 2019
+  author: "Chiang"
+  year: "2019"
   categories:
     - Fiction
+    - Sci-Fi
 
 - title: "Wealth, Poverty, and Politics"
-  author: Sowell
-  year: 2015
+  author: "Sowell"
+  year: "2015"
   categories:
-    - Society
     - Economics
+    - Social Science
 
 - title: "The Disappearance of Childhood"
-  author: Postman
-  year: 1982
+  author: "Postman"
+  year: "1982"
   categories:
     - Society
 
 - title: "Mere Christianity"
-  author: Lewis
-  year: 1952
+  author: "Lewis"
+  year: "1952"
   categories:
+    - Philosophy
+    - Theism
     - Religion
 
 - title: "Statistical Physics of Particles"
-  author: Kardar
-  year: 2007
+  author: "Kardar"
+  year: "2007"
   categories:
     - Physics
-    - Statistical Physics
+    - Statistical Mechanics
 
 - title: "Introduction to Thermal Physics"
-  author: Schroeder
-  year: 1999
+  author: "Schroeder"
+  year: "1999"
   categories:
+    - Thermodynamics
     - Physics
-    - Statistical Physics
 
 - title: "From Tracking Code to Analysis"
-  author: Forest
-  year: 2006
+  author: "Forest"
+  year: "2006"
   categories:
     - Physics
     - Accelerator Physics
+    - Computational Physics
 
 - title: "Optical Coherence and Quantum Optics"
-  author: Mandel and Wolf
-  year: 1995
+  author: "Mandel and Wolf"
+  year: "1995"
   categories:
     - Physics
-    - Quantum Optics
+    - Optics
+    - Quantum Mechanics
 
 - title: "Quantum Mechanics: Concepts and Applications"
-  author: Zettili
-  year: 2001
+  author: "Zettili"
+  year: "2001"
   categories:
-    - Quantum Physics
+    - Physics
+    - Quantum Mechanics
 
 - title: "Modern Quantum Mechanics"
-  author: Sakurai
-  year: 1985
+  author: "Sakurai"
+  year: "1985"
   categories:
     - Physics
-    - Quantum Physics
+    - Quantum Mechanics
 
 - title: "What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics"
-  author: Becker
-  year: 2018
+  author: "Becker"
+  year: "2018"
   categories:
     - Physics
-    - History
+    - History of Science
+    - Quantum Mechanics
 
 - title: "Modern Elementary Particle Physics"
-  author: Kane
-  year: 1987
+  author: "Kane"
+  year: "1987"
   categories:
+    - Physics
     - Particle Physics
 
 - title: "Introduction to High Energy Physics"
-  author: Perkins
-  year: 1972
+  author: "Perkins"
+  year: "1972"
   categories:
     - Physics
     - Particle Physics
 
 - title: "Introduction to Elementary Particle Physics"
-  author: Griffiths
-  year: 2008
+  author: "Griffiths"
+  year: "2008"
   categories:
     - Physics
     - Particle Physics
 
 - title: "Classical Mechanics"
-  author: Taylor
-  year: 2003
+  author: "Taylor"
+  year: "2003"
   categories:
     - Physics
-    - Classical Physics
+    - Classical Mechanics
 
 - title: "Classical Mechanics"
-  author: Goldstein
-  year: 1950
+  author: "Goldstein"
+  year: "1950"
   categories:
     - Physics
-    - Classical Physics
-    
+    - Classical Mechanics
+
 - title: "Introduction to Electrodynamics"
-  author: Griffiths
-  year: 1981
+  author: "Griffiths"
+  year: "1981"
   categories:
     - Physics
     - Electromagnetism
 
 - title: "Classical Electromagnetism"
-  author: Franklin
-  year: 2005
+  author: "Franklin"
+  year: "2005"
   categories:
     - Physics
     - Electromagnetism
 
 - title: "Classical Electrodynamics"
-  author: Jackson
-  year: 1962
+  author: "Jackson"
+  year: "1962"
   categories:
     - Physics
     - Electromagnetism
 
 - title: "Astrophysics in a Nutshell"
-  author: Maoz
-  year: 2007
+  author: "Maoz"
+  year: "2007"
   categories:
     - Physics
     - Astrophysics
 
 - title: "Theory and Design of Charged Particle Beams"
-  author: Reiser
-  year: 1994
+  author: "Reiser"
+  year: "1994"
   categories:
     - Physics
     - Accelerator Physics
 
 - title: "Space Charge Physics for Particle Accelerators"
-  author: Hofmann
-  year: 2017
+  author: "Hofmann"
+  year: "2017"
   categories:
     - Physics
     - Accelerator Physics
     - Plasma Physics
 
 - title: "RF Linear Accelerators"
-  author: Wangler
-  year: 1998
+  author: "Wangler"
+  year: "1998"
   categories:
     - Physics
     - Accelerator Physics
 
 - title: "Particle Accelerator Physics"
-  author: Wiedemann
-  year: 2015
+  author: "Wiedemann"
+  year: "2015"
   categories:
     - Physics
     - Accelerator Physics
 
 - title: "Measurement and Control of Charged Particle Beams"
-  author: Minty and Zimmerman
-  year: 2003
+  author: "Minty and Zimmerman"
+  year: "2003"
   categories:
     - Physics
     - Accelerator Physics
 
 - title: "Introduction to the Physics of High Energy Accelerators"
-  author: Edwards and Syphers
-  year: 1994
+  author: "Edwards and Syphers"
+  year: "1994"
   categories:
     - Physics
     - Accelerator Physics
 
 - title: "Accelerator Physics"
-  author: Lee
-  year: 2004
+  author: "Lee"
+  year: "2004"
   categories:
     - Physics
     - Accelerator Physics
 
 - title: "Time and Chance"
-  author: Albert
-  year: 2000
+  author: "Albert"
+  year: "2000"
   categories:
+    - Physics
     - Philosophy
     - Philosophy of Science
+    - Statistical Mechanics
 
 - title: "Philosophy of Physics: Space and Time"
-  author: Maudlin
-  year: 2012
+  author: "Maudlin"
+  year: "2012"
   categories:
+    - Physics
     - Philosophy
     - Philosophy of Science
+    - Special Relativity
 
 - title: "Philosophy of Physics: Quantum Theory"
-  author: Maudlin
-  year: 2019
+  author: "Maudlin"
+  year: "2019"
   categories:
+    - Physics
     - Philosophy
     - Philosophy of Science
+    - Quantum Mechanics
 
 - title: "The Emergent Multiverse"
-  author: Wallace
-  year: 2012
+  author: "Wallace"
+  year: "2012"
   categories:
+    - Physics
     - Philosophy
     - Philosophy of Science
+    - Quantum Mechanics
 
 - title: "Taking Pascal's Wager"
-  author: Rota
-  year: 2016
+  author: "Rota"
+  year: "2016"
   categories:
     - Philosophy
-    - Philosophy of Religion
+    - Religion
 
 - title: "Five Proofs of the Existence of God"
-  author: Feser
-  year: 2017
+  author: "Feser"
+  year: "2017"
   categories:
-    - Philosophy
-    - Philosophy of Religion
+    - Theism
 
 - title: "Is God the Best Explanation of Things? A Dialogue"
-  author: Rasmussen and Leon
-  year: 2019
+  author: "Rasmussen and Leon"
+  year: "2019"
   categories:
     - Philosophy
-    - Philosophy of Religion
+    - Theism
 
 - title: "Arguing About Gods"
-  author: Oppy
-  year: 2006
+  author: "Oppy"
+  year: "2006"
   categories:
     - Philosophy
-    - Philosophy of Religion
+    - Theism
 
 - title: "Necessary Existence"
-  author: Pruss and Rasmussen
-  year: 2018
+  author: "Pruss and Rasmussen"
+  year: "2018"
   categories:
     - Philosophy
-    - Philosophy of Religion
     - Metaphysics
 
 - title: "Infinity, Causation, and Paradox"
-  author: Pruss
-  year: 2018
+  author: "Pruss"
+  year: "2018"
   categories:
     - Philosophy
-    - Infinity
-    - Paradox
+    - Metaphysics
 
 - title: "Knowledge and Christian Belief"
-  author: Plantinga
-  year: 2015
+  author: "Plantinga"
+  year: "2015"
   categories:
     - Philosophy
-    - Philosophy of Religion
     - Epistemology
+    - Theism
 
 - title: "Change in View"
-  author: Harman
-  year: 1986
+  author: "Harman"
+  year: "1986"
   categories:
     - Philosophy
     - Epistemology
 
 - title: "Envisioning Information"
-  author: Tufte
-  year: 1990
+  author: "Tufte"
+  year: "1990"
   categories:
     - Visualization
 
 - title: "Mathematics of Classical and Quantum Physics"
-  author: Byron and Fuller
-  year: 1969
+  author: "Byron and Fuller"
+  year: "1969"
   categories:
-    - Mathematics
     - Physics
+    - Mathematics
 
 - title: "Mathematical Methods for Physicists"
-  author: Arfken, Weber, and Harris
-  year: 1966
+  author: "Arfken, Weber, and Harris"
+  year: "1966"
   categories:
-    - Mathematics
     - Physics
+    - Mathematics
 
 - title: "Stories of Your Life and Others"
-  author: Chiang
-  year: 2002
+  author: "Chiang"
+  year: "2002"
   categories:
-    - Science Fiction
+    - Fiction
+    - Sci-Fi
 
 - title: "The Road"
-  author: McCarthy
-  year: 2006
+  author: "McCarthy"
+  year: "2006"
   categories:
     - Fiction
 
 - title: "No Country for Old Men"
-  author: McCarthy
-  year: 2005
+  author: "McCarthy"
+  year: "2005"
   categories:
     - Fiction
 
 - title: "Moby Dick"
-  author: Melville
-  year: 1851
+  author: "Melville"
+  year: "1851"
   categories:
     - Fiction
+    - Classics
 
 - title: "Fahrenheit 451"
-  author: Bradbury
-  year: 1953
+  author: "Bradbury"
+  year: "1953"
   categories:
     - Fiction
+    - Sci-Fi
 
 - title: "Paradise Lost"
-  author: Milton
-  year: 1667
+  author: "Milton"
+  year: "1667"
   categories:
     - Fiction
+    - Classics
 
 - title: "Odyssey"
   author: "Homer"
-  year: 1616
+  year: "1616"
   categories:
     - Fiction
+    - Classics
 
 - title: "Divine Comedy"
   author: "Alighieri"
-  year: 1321
+  year: "1321"
   categories:
     - Fiction
+    - Classics
 
 - title: "Crime and Punishment"
-  author: Dostoevsky
-  year: 1866
+  author: "Dostoevsky"
+  year: "1866"
   categories:
     - Fiction
-    - Russia
+    - Russian Literature
     - Morality
 
 - title: "The Alchemist"
-  author: Coelho
-  year: 1988
+  author: "Coelho"
+  year: "1988"
   categories:
     - Fiction
 
 - title: "Pattern Recognition and Machine Learning"
-  author: Bishop
-  year: 2006
+  author: "Bishop"
+  year: "2006"
   categories:
     - Machine Learning
-    - Probability
+    - Statistics
 
 - title: "Neural Networks and Deep Learning"
-  author: Nielsen
-  year: 2015
+  author: "Nielsen"
+  year: "2015"
   categories:
-    - Mathematics
     - Machine Learning
 
 - title: "Elements of Programming Interviews"
-  author: Aziz, Lee, and Prakash
-  year: 2012
+  author: "Aziz, Lee, and Prakash"
+  year: "2012"
   categories:
     - Algorithms
-    - Career
 
 - title: "Cry, the Beloved Country"
-  author: Paton
-  year: 1948
+  author: "Paton"
+  year: "1948"
   categories:
     - Fiction
+    - Classics
     - South Africa
 
 - title: "Algorithms"
-  author: Sedgewick and Wayne
-  year: 2010
+  author: "Sedgewick and Wayne"
+  year: "2010"
   categories:
     - Algorithms
-
