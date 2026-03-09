@@ -10,7 +10,26 @@
 <atom:link href="https://austin-hoover.github.io/blog/notes.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Thu, 05 Mar 2026 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 08 Mar 2026 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Conference Proceedings</title>
+  <link>https://austin-hoover.github.io/blog/notes/conference-proceedings/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<ul>
+<li><a href="https://meow.elettra.eu/83/">HB 2025</a></li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/conference-proceedings/</guid>
+  <pubDate>Sun, 08 Mar 2026 05:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Reading List</title>
   <link>https://austin-hoover.github.io/blog/notes/reading-list/</link>
@@ -5899,38 +5918,6 @@ Year
  ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/research-tools/</guid>
   <pubDate>Thu, 01 Jan 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Websites</title>
-  <link>https://austin-hoover.github.io/blog/notes/websites/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<ul>
-<li><a href="https://plato.stanford.edu">Stanford Encyclopedia of Philosophy</a></li>
-<li><a href="https://philpapers.org">PhilPapers</a></li>
-<li><a href="https://philsci-archive.pitt.edu">PhilSci-Archive</a></li>
-<li><a href="https://philsci.org">Philosophy of Science Association</a></li>
-<li><a href="https://www.gutenberg.org">Project Gutenberg</a></li>
-<li><a href="https://archive.org">Internet Archive</a></li>
-<li><a href="http://www.whatisitliketobeaphilosopher.com">What is it like to be a philosopher?</a></li>
-<li><a href="https://docs.google.com/document/d/1dprquqrzQxJsmOArxEoBDaMx15T9T--P8dagUqX6kQI/edit#heading=h.x1uym8fk8fq3">Bibliography on the problem of evil</a></li>
-<li><a href="https://www.lesswrong.com">lesswrong</a></li>
-<li><a href="https://www.routledge.com/Little-Debates-about-Big-Questions/book-series/LDABQ">Little debates</a></li>
-<li><a href="https://einsteinpapers.press.princeton.edu">Einstein papers</a></li>
-<li><a href="https://bayes.wustl.edu">Probability theory as extended logic</a></li>
-<li><a href="https://www.structuredprocrastination.com">Structured Procrastination</a></li>
-<li><a href="https://www.muoncollider.us">US Muon Collider Collaboration</a></li>
-</ul>
-
-
-
- ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/websites/</guid>
-  <pubDate>Wed, 01 Jan 2025 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
