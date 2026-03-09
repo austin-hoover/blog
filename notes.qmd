@@ -7,9 +7,8 @@ listing:
   table-hover: true
   type: table
   sort: date-modified desc
-  sort-ui: false
-  filter-ui: false
-  max-description-length: 50
+  sort-ui: true
+  filter-ui: true
   feed: true
   page-size: 999
 ---

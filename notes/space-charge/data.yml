@@ -1,12 +1,17 @@
-- title: "Simulation study of the space charge limit in heavy-ion synchrotrons"
-  author: "Oeftiger et al."
-  year: 2023
-  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.054402"
+- title: "Space-Charge Effects During Half-Integer Resonance Crossing in the CERN PSB"
+  author: "Prebibaj et al."
+  year: 2025
+  path: "https://arxiv.org/pdf/2511.18044"
 
 - title: "Pulsed Electron Lenses for Space Charge Mitigation"
   author: "Oeftiger and Boine-Frankenheim"
   year: 2024
   path: "https://arxiv.org/pdf/2310.02365"
+
+- title: "Simulation study of the space charge limit in heavy-ion synchrotrons"
+  author: "Oeftiger et al."
+  year: 2023
+  path: "https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.054402"
 
 - title: "Modeling of second order space charge driven coherent sum and difference instabilities"
   author: "Yuan et al."

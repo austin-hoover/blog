@@ -1,7 +1,7 @@
 ---
 title: "Space Charge"
 date: 2026-01-31
-date-modified: 2026-02-22
+date-modified: 2026-03-09
 format:
   html:
     css: style.css
