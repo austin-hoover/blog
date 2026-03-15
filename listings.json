@@ -71,9 +71,10 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/films/index.html",
+      "/notes/reading-list/index.html",
       "/notes/space-charge/index.html",
       "/notes/conference-proceedings/index.html",
-      "/notes/reading-list/index.html",
       "/notes/books/index.html",
       "/notes/electron-cloud/index.html",
       "/notes/documentaries/index.html",
@@ -83,7 +84,6 @@
       "/notes/beam-plasma-physics-simulation/index.html",
       "/notes/nonlinear-dynamics/index.html",
       "/notes/collisionless-relaxation/index.html",
-      "/notes/films/index.html",
       "/notes/halo-formation/index.html",
       "/notes/accelerators/index.html",
       "/notes/journals/index.html",
