@@ -71,11 +71,11 @@
   {
     "listing": "/notes.html",
     "items": [
-      "/notes/films/index.html",
       "/notes/reading-list/index.html",
+      "/notes/books/index.html",
+      "/notes/films/index.html",
       "/notes/space-charge/index.html",
       "/notes/conference-proceedings/index.html",
-      "/notes/books/index.html",
       "/notes/electron-cloud/index.html",
       "/notes/documentaries/index.html",
       "/notes/shows/index.html",
