@@ -1,7 +1,7 @@
 ---
 title: "Journals and Preprint Servers"
 date: 2026-02-08
-date-modified: 2026-02-08
+date-modified: 2026-03-18
 ---
 
 * [PRAB](https://journals.aps.org/prab/)
@@ -21,3 +21,6 @@ date-modified: 2026-02-08
 * [ArXiv (history and philosophy of physics)](https://arxiv.org/list/physics.hist-ph/recent)
 * [PhilSci](https://philsci-archive.pitt.edu/cgi/latest_days2?n=30)
 * [philpeople.org](https://philpeople.org)
+* [Physics of Plasmas](https://pubs.aip.org/aip/pop)
+* [Journal of Plasma Physics](https://www.cambridge.org/core/journals/journal-of-plasma-physics)
+* [The Astrophysical Journal](https://iopscience.iop.org/journal/0004-637X)
