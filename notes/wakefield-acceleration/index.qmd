@@ -1,0 +1,12 @@
+---
+title: "Wakefield Acceleration"
+date: 2026-03-18
+date-modified: 2026-03-18
+---
+
+#### Queue
+
+* [*Efficiency versus instability in plasma accelerators*](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.20.121301) --- Lebedev et al. (2017)
+* [*Acceleration of a trailing positron bunch in a plasma wakefield accelerator*](https://www.nature.com/articles/s41598-017-14524-4) --- Doche et al. (2017)
+* [*Multi-gigaelectronvolt acceleration of positrons in a self-loaded plasma wakefield*](https://www.nature.com/articles/nature14890) --- Corde et al. (2015)
+* [*Plasma-wakefield acceleration of a positron beam*](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.64.045501) --- Lee et al. (2001)
