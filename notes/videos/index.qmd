@@ -1,1 +1,9 @@
+---
+title: "Videos"
+date: 2026-03-20
+date-modified: 2026-03-20
+---
+
+* [Social Equality: Then And Now, Professor Jonathan Wolff](https://www.youtube.com/watch?v=9xL1gyM4f3Q)
+* [Timothy Williamson: Is Philosophy a Science?](https://www.youtube.com/watch?v=O3LXQJ31SG4)
 * [Alex Honnold Interviews Jimmy Chin](https://www.youtube.com/watch?v=0z_xNFUBRqo)
