@@ -13,4 +13,5 @@ date-modified: 2026-03-20
 * [*The Idea of Equality*](https://www.cambridge.org/core/books/abs/problems-of-the-self/idea-of-equality/7554AB287A3C7B1AD783B8CE4C3392A2) --- Bernard Williams (1973)
 * [*Distributive Justice*](https://users.manchester.edu/Facstaff/SSNaragon/Online/texts/425/Nozick,%20DistributiveJustice.pdf) --- Robert Nozick (1973)
 * [*Anarchy, State, and Utopia*](https://archive.org/details/robert-nozick-anarchy-state-and-utopia) --- Robert Nozick (1974)
+* [*What is Equality? Part 1: Equality of Welfare*](https://www.jstor.org/stable/2264894) --- Ronald Dworkin (1981)
 * [*Equality: The recent history of an idea*](https://web.archive.org/web/20170809183527id_/http://discovery.ucl.ac.uk/1356647/1/Equality_TEMPLATE.pdf) --- Jonathan Wolff (2007)
