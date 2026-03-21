@@ -4,6 +4,7 @@ date: 2026-02-01
 date-modified: 2026-02-01
 ---
 
+* [David Stove: Living Retired](https://web.maths.unsw.edu.au/~jim/retired.html)
 * [Frank-Sacherer](http://www.supertopo.com/climbers-forum/268647/Frank-Sacherer-1940-1978)
 * [An AI agent published a hit piece on me](https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/)
 * [Why academics stink at writing](https://www.chronicle.com/article/why-academics-stink-at-writing/)
