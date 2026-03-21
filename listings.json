@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/2026-03-21_wolff-social-egalitarianism/index.html",
       "/posts/2026-02-27_progress-on-bunch-compression-experiments-feedback-and-feedforward/index.html",
       "/posts/chao-wake-fields/index.html",
       "/posts/2026-02-19_longitudinal-space-charge/index.html",
@@ -75,6 +76,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2026-03-21_wolff-social-egalitarianism/index.html",
       "/posts/2026-02-27_progress-on-bunch-compression-experiments-feedback-and-feedforward/index.html",
       "/posts/chao-wake-fields/index.html",
       "/posts/2026-02-19_longitudinal-space-charge/index.html",
@@ -132,10 +134,10 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/equality/index.html",
       "/notes/reading-list/index.html",
       "/notes/books/index.html",
       "/notes/videos/index.html",
-      "/notes/equality/index.html",
       "/notes/journals/index.html",
       "/notes/wakefield-acceleration/index.html",
       "/notes/films/index.html",
