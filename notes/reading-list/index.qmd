@@ -1,10 +1,8 @@
 ---
-title: Books
-date: 2026-01-01
+title: Reading List
+date: 2026-03-05
 date-modified: 2026-03-16
 listing:
-  contents:
-    - "data.yml"
   fields: [title, author, year]
   field-display-names:
     title: "Title"
@@ -18,9 +16,10 @@ listing:
   categories: true
   max-items: 99999999
   page-size: 99999999
+  contents:
+    - "data.yml"
 format:
   html:
     css: style.css
     page-layout: full
 ---
-

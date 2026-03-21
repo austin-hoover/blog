@@ -1,0 +1,615 @@
+- title: "War and Peace"
+  year: "1869"
+  author: "Tolstoy"
+  categories:
+    - Fiction
+    - Classics
+
+- title: "Anna Karenina"
+  year: "1877"
+  author: "Tolstoy"
+  categories:
+    - Fiction
+    - Classics
+
+- title: "The Radetzky March"
+  year: "1932"
+  author: "Roth"
+  categories:
+    - Fiction
+
+- title: "The School of Night"
+  year: "2023"
+  author: "Knausgard"
+  categories:
+    - Fiction
+
+- title: "All Quiet on the Western Front"
+  year: "1929"
+  author: "Remarque"
+  categories:
+    - Fiction
+    - History
+
+- title: "Do Androids Dream of Electric Sheep?"
+  year: "1968"
+  author: "Dick"
+  categories:
+    - Fiction
+    - Sci-Fi
+
+- title: "Too Late the Phalarope"
+  year: "1953"
+  author: "Paton"
+  categories:
+    - Fiction
+
+- title: "Ulysses"
+  year: "1922"
+  author: "Joyce"
+  categories:
+    - Fiction
+    - Classics
+
+- title: "Dubliners"
+  year: "1914"
+  author: "Joyce"
+  categories:
+    - Fiction
+    - Classics
+
+- title: "A Portrait of the Artist as a Young Man"
+  year: "1916"
+  author: "Joyce"
+  categories:
+    - Fiction
+    - Classics
+
+- title: "A Theory of Justice"
+  year: "1971"
+  author: "Rawls"
+  categories:
+    - Philosophy
+    - Politics
+
+- title: "Taking Morality Seriously: A Defense of Robust Realism"
+  year: "2011"
+  author: "Enoch"
+  categories:
+    - Philosophy
+    - Ethics
+
+- title: "Moral Realism: A Defense"
+  year: "2003"
+  author: "Shafer-Landau"
+  categories:
+    - Philosophy
+    - Ethics
+
+- title: "Ethical Theory: 50 Puzzles, Paradoxes, and Thought Experiments"
+  year: "2024"
+  author: "Munoz"
+  categories:
+    - Philosophy
+    - Ethics
+
+- title: "Dialogues on Minds, Machines, and AI"
+  year: 2026
+  author: Gennaro
+  categories:
+    - Philosophy
+    - Ethics
+
+- title: "Dialogues on the Meaning of Life"
+  year: 2025
+  author: Hauskeller
+  categories:
+    - Philosophy
+
+- title: "Dialogues on Free Will"
+  year: 2025
+  author: Ekstrom
+  categories:
+    - Philosophy
+    - Free Will
+
+- title: "Dialogues on Immigration and the Open Society"
+  year: 2025
+  author: Kukathas
+  categories:
+    - Philosophy
+    - Politics
+
+- title: "Dialogues on Ethical Vegetarianism"
+  year: 2025
+  author: Huemer
+  categories:
+    - Philosophy
+    - Ethics
+
+- title: "Dialogues on Democracy"
+  year: 2024
+  author: Maskivker
+  categories:
+    - Philosophy
+    - Politics
+
+- title: "Dialogues on Human Enhancement"
+  year: 2023
+  author: Agar
+  categories:
+    - Philosophy
+    - Ethics
+
+- title: "Dialogues on Gun Control"
+  year: 2023
+  author: DeGrazia
+  categories:
+    - Philosophy
+    - Politics
+    
+- title: "Dialogues on Climate Justice"
+  year: 2022
+  author: Gardiner
+  categories:
+    - Philosophy
+    - Politics
+
+- title: "Dialogues on the Ethics of Abortion"
+  year: 2022
+  author: Manninen
+  categories:
+    - Philosophy
+    - Ethics
+  
+- title: "Animal Rights: Current Debates and New Directions"
+  year: "2004"
+  author: "Sunstein"
+  categories:
+    - Philosophy
+    - Ethics
+
+- title: "Metaphysics"
+  year: "1993"
+  author: "Van Inwagen"
+  categories:
+    - Philosophy
+    - Metaphysics
+
+- title: "On Bullshit"
+  year: "2005"
+  author: "Frankfurt"
+  categories:
+    - Philosophy
+
+- title: "Crowds and Power"
+  year: "1960"
+  author: "Canetti"
+  categories:
+    - Philosophy
+    - Sociology
+
+- title: "The Miracle of Theism"
+  year: "1982"
+  author: "Mackie"
+  categories:
+    - Philosophy
+    - Religion
+
+- title: "The Coherence of Theism"
+  year: "1977"
+  author: "Swinburne"
+  categories:
+    - Philosophy
+    - Religion
+
+- title: "An Essay on Free Will"
+  year: "1983"
+  author: "Van Inwagen"
+  categories:
+    - Philosophy
+    - Metaphysics
+
+- title: "Freedom, Responsibility, and Value"
+  year: "2023"
+  author: "Cyr"
+  categories:
+    - Philosophy
+
+- title: "The Scientific Image"
+  year: "1980"
+  author: "Van Fraassen"
+  categories:
+    - Philosophy
+    - STEM
+
+- title: "Emergent Properties"
+  year: "2010"
+  author: "O’Connor"
+  categories:
+    - Philosophy
+
+- title: "What Would You Do Alone in a Cage with Nothing but Cocaine?"
+  year: "2023"
+  author: "Pickard"
+  categories:
+    - Philosophy
+    - Psychology
+
+- title: "Mind as Metaphor: A Defence of Mental Fictionalism"
+  year: "2016"
+  author: "Toon"
+  categories:
+    - Philosophy
+    - Mind
+
+- title: "Can God Be Free?"
+  year: "2021"
+  author: "Roe"
+  categories:
+    - Philosophy
+    - Religion
+
+- title: "Western Philosophy"
+  year: "1996"
+  author: "Cottingham"
+  categories:
+    - Philosophy
+
+- title: "The Prince"
+  year: "1532"
+  author: "Machiavelli"
+  categories:
+    - Philosophy
+    - Politics
+
+- title: "The Gulag Archipelago"
+  year: "1973"
+  author: "Solzhenitsyn"
+  categories:
+    - History
+    - Politics
+    - Russia
+
+- title: "The Old Regime and the Revolution"
+  year: "1856"
+  author: "Tocqueville"
+  categories:
+    - History
+    - Politics
+
+- title: "Twilight of the Gods"
+  year: "2020"
+  author: "Toll"
+  categories:
+    - History
+    - Military
+
+- title: "Pacific Crucible"
+  year: "2011"
+  author: "Toll"
+  categories:
+    - History
+    - Military
+
+- title: "The Conquering Tide"
+  year: "2015"
+  author: "Toll"
+  categories:
+    - History
+    - Military
+
+- title: "A Shameful Act"
+  year: "2006"
+  author: "Akçam"
+  categories:
+    - History
+
+- title: "Undaunted Courage"
+  year: "1996"
+  author: "Ambrose"
+  categories:
+    - History
+
+- title: "The Revolutionists"
+  year: "1790"
+  author: "Burke"
+  categories:
+    - History
+    - Politics
+
+- title: "Slavery and Social Death"
+  year: "1982"
+  author: "Patterson"
+  categories:
+    - History
+    - Sociology
+
+- title: "The Internal Enemy"
+  year: "2013"
+  author: "Taylor"
+  categories:
+    - History
+
+- title: "Slavery and Freedom on the Middle Ground"
+  year: "1985"
+  author: "Fields"
+  categories:
+    - History
+
+- title: "Abraham Lincoln: A Life"
+  year: "2008"
+  author: "Burlingame"
+  categories:
+    - History
+    - Biography
+
+- title: "William Cooper’s Town"
+  year: "1995"
+  author: "Taylor"
+  categories:
+    - History
+
+- title: "Washington: A Life"
+  year: "2010"
+  author: "Chernow"
+  categories:
+    - History
+    - Biography
+
+- title: "1491: New Revelations of the Americas Before Columbus"
+  year: "2005"
+  author: "Mann"
+  categories:
+    - History
+    - STEM
+
+- title: "Dominion"
+  year: "2019"
+  author: "Holland"
+  categories:
+    - History
+    - Religion
+
+- title: "The Rise and Fall of the EAST"
+  year: "2023"
+  author: "Huang"
+  categories:
+    - Politics
+    - China
+
+- title: "Wealth and Power"
+  year: "2013"
+  author: "Schell"
+  categories:
+    - Politics
+    - China
+
+- title: "Democracy in China"
+  year: "2019"
+  author: "Ci"
+  categories:
+    - Politics
+    - China
+
+- title: "Power and Powerlessness"
+  year: "1980"
+  author: "Gaventa"
+  categories:
+    - Sociology
+    - Politics
+
+- title: "Say Nothing"
+  year: "2018"
+  author: "Keefe"
+  categories:
+    - History
+    - Ireland
+
+- title: "In the Sewers of Lvov"
+  year: "1990"
+  author: "Marshall"
+  categories:
+    - History
+    - WWII
+
+- title: "With the Old Breed"
+  year: "1981"
+  author: "Sledge"
+  categories:
+    - History
+    - Memoir
+    - War
+
+- title: "Winnie and Nelson"
+  year: "2023"
+  author: "Steinberg"
+  categories:
+    - History
+    - Biography
+    - South Africa
+
+- title: "Common Sense"
+  year: "1776"
+  author: "Paine"
+  categories:
+    - Politics
+    - History
+
+- title: "The Fiscal Theory of the Price Level"
+  year: "2023"
+  author: "Cochrane"
+  categories:
+    - Economics
+
+- title: "Micromotives and Macrobehavior"
+  year: "1978"
+  author: "Schelling"
+  categories:
+    - Economics
+    - Sociology
+
+- title: "Free to Choose"
+  year: "1980"
+  author: "Friedman"
+  categories:
+    - Economics
+    - Politics
+
+- title: "The Communist Manifesto"
+  year: "1848"
+  author: "Marx"
+  categories:
+    - Politics
+    - Economics
+
+- title: "What Is To Be Done?"
+  year: "1902"
+  author: "Lenin"
+  categories:
+    - Politics
+
+- title: "Socialism: The Failed Idea that Never Dies"
+  year: "2019"
+  author: "Niemietz"
+  categories:
+    - Economics
+    - Politics
+
+- title: "The Rise and Triumph of the Modern Self"
+  year: "2020"
+  author: "Trueman"
+  categories:
+    - Social Science
+    - Philosophy
+
+- title: "The Condemnation of Blackness"
+  year: "2010"
+  author: "Muhammad"
+  categories:
+    - Social Science
+    - History
+
+- title: "The Canceling of the American Mind"
+  year: "2023"
+  author: "Lukianoff"
+  categories:
+    - Social Science
+    - Politics
+
+- title: "A Conflict of Visions"
+  year: "1987"
+  author: "Sowell"
+  categories:
+    - Social Science
+    - Politics
+
+- title: "Race and Cultures"
+  year: "1994"
+  author: "Sowell"
+  categories:
+    - Social Science
+    - History
+
+- title: "Abundance"
+  year: "2012"
+  author: "Klein"
+  categories:
+    - Economics
+    - Tech
+
+- title: "Winning Chess Openings"
+  year: "1999"
+  author: "Seirawan"
+  categories:
+    - Hobbies
+    - Chess
+
+- title: "Winning Chess Brilliancies"
+  year: "2003"
+  author: "Seirawan"
+  categories:
+    - Hobbies
+    - Chess
+
+- title: "Gravitation"
+  year: "1973"
+  author: "Misner"
+  categories:
+    - STEM
+    - Physics
+
+- title: "On the Origin of Species"
+  year: "1859"
+  author: "Darwin"
+  categories:
+    - STEM
+    - Biology
+
+- title: "Population Genetics: A Concise Guide"
+  year: 1998
+  author: Gillespie
+  categories:
+    - STEM
+    - Biology
+
+- title: "Data-Driven Science and Engineering"
+  year: "2019"
+  author: "Brunton"
+  categories:
+    - STEM
+
+- title: "Averaging Methods in Nonlinear Dynamics Systems"
+  year: "1985"
+  author: "Sanders"
+  categories:
+    - STEM
+    - Math
+
+- title: "Mathematical Methods of Classical Mechanics"
+  year: "1978"
+  author: "Arnold"
+  categories:
+    - STEM
+    - Math
+
+- title: "Classical Dynamics: A Contemporary Approach"
+  year: "1998"
+  author: "Jose"
+  categories:
+    - STEM
+    - Physics
+
+- title: "Regular and Chaotic Dynamics"
+  year: "1983"
+  author: "Lichtenberg"
+  categories:
+    - STEM
+    - Physics
+
+- title: "Nanostructures and Nanotechnology"
+  year: "2015"
+  author: "Natelson"
+  categories:
+    - STEM
+    - Tech
+
+- title: "The Staff Engineer's Path"
+  year: "2022"
+  author: "Reilly"
+  categories:
+    - Tech
+    - Career
+
+- title: "Writing Science"
+  year: "2011"
+  author: "Schimel"
+  categories:
+    - STEM
+    - Writing
+
+- title: "Beamtimes and Lifetimes"
+  year: 1992
+  author: Traweek
+  categories:
+    - Science

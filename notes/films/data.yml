@@ -1,9 +1,37 @@
+- title: "Train Dreams"
+  director: Bentley
+  year: 2025
+
+- title: "There Will Be Blood"
+  director: Anderson
+  year: 2007
+
+- title: "Silence"
+  director: "Scorsese"
+  year: 2016
+
+- title: "Her"
+  director: "Jonze"
+  year: 2013
+
+- title: "Memento"
+  director: "Nolan"
+  year: 2000
+
+- title: "Edge of Tomorrow"
+  director: "Liman"
+  year: 2014
+
+- title: "Three Billboards Outside Ebbing, Missouri"
+  director: "McDonagh"
+  year: 2017
+
 - title: "Good Will Hunting"
   director: "Van Sant"
   year: 1998
 
 - title: "About Time"
-  director: Curtis
+  director: "Curtis"
   year: 2013
 
 - title: "Belfast"
@@ -61,6 +89,10 @@
 - title: "Arrival"
   director: "Villeneuve"
   year: 2016
+
+- title: "Gladiator"
+  director: "Scott"
+  year: 2000
 
 - title: "Blade Runner"
   director: "Scott"

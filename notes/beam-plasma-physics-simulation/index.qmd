@@ -4,6 +4,9 @@ date: 2026-02-21
 date-modified: 2026-02-21
 ---
 
+
+#### Papers
+
 * [*TEAPOT: A thin element accelerator program for optics and tracking*](https://www.osti.gov/servlets/purl/6733081/)
 * [*Noninvariance of Space- and Time-Scale Ranges under a Lorentz Transformation and the Implications for the Study of Relativistic Interactions*](https://link.aps.org/doi/10.1103/PhysRevLett.98.130405)
 * [*Symplectic multiparticle tracking model for self-consistent space-charge simulation*](10.1103/PhysRevAccelBeams.20.014203)
@@ -17,3 +20,15 @@ date-modified: 2026-02-21
 * [*Differentiable self-consistent space-charge simulation for accelerator design*](https://link.aps.org/doi/10.1103/PhysRevAccelBeams.26.024601)
 * [*Two-and-a-half dimensional symplectic space-charge solver*](https://link.aps.org/doi/10.1103/npx1-nclt)
 * [*Grid dependent noise and entropy growth in anisotropic 3d particle-in-cell simulation of high intensity beams*](https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.17.124201)
+
+
+#### Codes
+
+* [PyORBIT](https://github.com/PyORBIT-Collaboration/PyORBIT3)
+* [ImpactX](https://github.com/BLAST-ImpactX/impactx)
+* [Xsuite](https://github.com/xsuite/xsuite)
+* [MADX](https://abpcomputing.web.cern.ch/codes/codes_pages/MadX/)
+* [Bmad](https://github.com/bmad-sim/bmad-ecosystem)
+* [Cheetah](https://github.com/desy-ml/cheetah)
+* [JuTrack](https://github.com/MSU-Beam-Dynamics/JuTrack.jl)
+* [BLonD](https://github.com/blond-admin/BLonD)
