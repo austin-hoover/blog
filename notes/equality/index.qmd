@@ -1,13 +1,14 @@
 ---
 title: "Equality"
 date: 2026-03-20
-date-modified: 2026-03-20
+date-modified: 2026-03-21
 ---
 
+
+#### Videos
 * [Social Equality: Then And Now, Professor Jonathan Wolff](https://www.youtube.com/watch?v=9xL1gyM4f3Q)
 
 #### Queue
-
 * [*Equality*](https://archive.org/details/in.ernet.dli.2015.275419) --- R. H. Tawney (1938)
 * [*A Theory of Justice*](https://www.hup.harvard.edu/file/feeds/PDF/9780674000780_sample.pdf) --- John Rawls (1971)
 * [*The Idea of Equality*](https://www.cambridge.org/core/books/abs/problems-of-the-self/idea-of-equality/7554AB287A3C7B1AD783B8CE4C3392A2) --- Bernard Williams (1973)
