@@ -1,0 +1,83 @@
+---
+title: "Jonathan Wolff on social egalitarianism"
+author: Austin Hoover
+date: 2026-03-21
+categories:
+  - politics
+  - equality
+---
+
+Notes on Jonathan Wolff's lecture, [Social Equality: Then And Now](https://www.youtube.com/watch?v=9xL1gyM4f3Q). 
+
+
+#### Distributive and relational equality
+
+* There are two views of equality: *distributive* and *relational*. 
+* A distributionally equal society is one in which there is some *thing* that is distributed equally among the society's members. 
+* A relationally equal society is one in which people treat each other as equals.
+* Wolff argues that relational equality (social egalitarianism) is a better target than distributive equality. In other words, social class divisions and classism should generally bother us more than wealth inequality.
+
+
+#### Rawls and Nozick
+
+* Nozick was a libertarian (a fringe view in his time). 
+* An intuitive view is that the distribution of health care should follow the distribution of health care needs. Nozick questioned this view. Why shouldn't doctors simply provide their services to the highest bidder? Or replace *doctor* with some other profession like *hairstylist*: why shouldn't the distribution of hair care follow the distribution of hair care needs?
+* “Just as Kant talked about Hume bringing him out of his dogmatic slumbers, Nozick brought a lot of egalitarians out of their dogmatic slumbers.”
+* What is the role of *responsibility* in egalitarian theories? Such theories seem to assume a fixed pot of goods to be distributed; they ignore the *production* of goods.
+* Rawls is known for the difference principle: we should make those worst-off as well-off as possible. The libertarian reply is obvious: not every worst-off case is the same. Consider those who choose not to work: should we subsidize their behavior? Today, nearly everyone agrees that we should not. In this respect, modern opinion seems to be more sympathetic to Nozick than Rawls.
+
+
+#### Egalitarian responses
+
+* Combine a theory of equality with a theory of responsibility. 
+* Dworkin: We must distinguish between the things one chooses and the things outside one's control.
+* How do we distinguish between these two? How do we decide who receives benefits and who does not?
+* Luck egalitarianism: we should subsidize bad brute luck but not bad option luck. 
+* Strangely, Thatcher’s right-wing welfare policies seemed to converge with these sorts of egalitarian theories of equality.
+* There’s something unsatisfactory about these sorts of egalitarian views. They seem to reduce equality to *counting* how many things each person has. Maybe equality has more (or at least something) to do with how people treat each other.
+
+
+#### Tawney, Cole, Laski, and Lewis
+
+* Tawney (1931)
+  * The enemies of equality are snobbery [looking down] and servility [looking up]. Snobbery and servility are caused by privilege and tyranny.
+  * The Religion of Inequality: Arnold (1879) saw thick walls between social classes in England, but not in France.
+  * Equality of Opportunity: Tawney was skeptical of the way equality of opportunity was invoked in public discourse.
+* Cole's socialism
+  * “I want a society in which I shall have no cause to feel shame when I look another man in the face.”
+  * Public celebrations are constant reminders and reinforcements of social classes. Foreshadows Iris Marion Young’s “cultural imperialism” (1990).
+  * People should not be denied the chance to contribute to society. Foreshadows Paul Gomberg’s “contributive justice” (2007).
+* Laski (1926)
+  * Contingent frustration: freedom is not so much about what I *can* do; it is about what I *could* do if I wanted to. Foreshadows Rawls.
+* Lewis (1949)
+  * Presents a simple definition of an equal society: a society in which basic human needs are fulfilled.
+
+
+#### Tawney on responsibility and social assistance
+
+* Until ~1906, there was an economic orthodoxy that if you tried to help the poor, you would just make things worse.
+* Tawney was critical of the idea that “doles” (payments to unemployed people) were a large part of social expenditure. But he also didn't want to subsidize welfare scroungers...
+* So Tawney suggested that we treat unemployment as a social and structural problem rather than an individual problem. (Wolff: On this point, Tawney is much more interesting than some of the contemporary debate.)
+* Contrast Tawney with Dworkin, who considered a static social environment.
+
+
+#### What's changed in 100 years?
+
+Writers like Tawney, Cole, and Laski lived during the rise of the Soviet Union and seemed to think they were on a road toward an equal society, emerging from a period of rampant capitalism and aristocracy before that. No one thinks this today. The consensus is that we're going in the opposite (less equal) direction. This has led to a split between ideal theorists and real-world theorists. Ideal theorists are concerned with building the best theories of equality, while real-world theorists are concerned with identifying the worst cases of inequality and improving from there.
+
+
+#### Q&A session
+
+* What is the definition of relational equality?
+    * That's a difficult question to answer. It's easier to define relational *inequality*. It's difficult to agree what society should look like, but it's often easy to agree what society *shouldn't* look like. So we can make progress by identifying and eliminating the most obvious instances of relational inequality.
+
+* How do we restore equality in society, relational or otherwwise?
+* Relational egalitarians want to go beyond material distribution. But is this possible without a theory of human nature?
+    * Wolff: A passage that inspired me from Tawney: "there are some goods for which to divide is not to take away". Take friendship as an example. Things like this are a step beyond the “counting house” model of equality, but don't seem to require anything magical.
+* How should we motivate people to fight for equality?
+    * Maybe the best way is to just present examples of equality (or inequality) and appeal to people's moral intuition. There are also some very old ideas like the Golden Rule.
+
+
+#### To read
+
+I started a list of books and papers to read on [equality](../../notes/equality), stemming from this lecture.
