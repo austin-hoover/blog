@@ -132,12 +132,12 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/reading-list/index.html",
       "/notes/books/index.html",
       "/notes/videos/index.html",
       "/notes/equality/index.html",
       "/notes/journals/index.html",
       "/notes/wakefield-acceleration/index.html",
-      "/notes/reading-list/index.html",
       "/notes/films/index.html",
       "/notes/space-charge/index.html",
       "/notes/conference-proceedings/index.html",
