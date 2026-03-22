@@ -1,3 +1,11 @@
+- title: "Age of Ambition: Chasing Fortune, Truth, and Faith in the New China"
+  year: 2014
+  author: Osnos
+  categories:
+    - Politics
+    - Society
+    - China
+
 - title: "Small Things Like These"
   year: 2020
   author: Keegan
@@ -45,6 +53,7 @@
   categories:
     - History
     - Geopolitics
+    - China
 
 - title: "Knowledge and Decisions"
   author: "Sowell"
@@ -52,6 +61,7 @@
   categories:
     - Economics
     - Social Science
+    - Society
 
 - title: "Breakneck"
   author: "Wang"
@@ -60,6 +70,7 @@
     - Geopolitics
     - China
     - History
+    - Society
 
 - title: "Numerical Recipes"
   author: "Press"
