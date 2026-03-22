@@ -134,10 +134,10 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/books/index.html",
       "/notes/equality/index.html",
       "/notes/films/index.html",
       "/notes/reading-list/index.html",
-      "/notes/books/index.html",
       "/notes/videos/index.html",
       "/notes/journals/index.html",
       "/notes/wakefield-acceleration/index.html",
