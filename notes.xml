@@ -10,7 +10,32 @@
 <atom:link href="https://austin-hoover.github.io/blog/notes.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Fri, 20 Mar 2026 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 25 Mar 2026 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Beam Loading in RF Cavities</title>
+  <link>https://austin-hoover.github.io/blog/notes/beam-loading/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<ul>
+<li><a href="https://cds.cern.ch/record/302480/files/p415.pdf">Beam Loading</a> — Boussard (1995)</li>
+<li><a href="https://cds.cern.ch/record/2843933/files/CERN-PS-91-33-RF.pdf">Beam Loading in RF Cavities</a> — Garoby (1990)</li>
+<li><a href="https://ieeexplore.ieee.org/document/73037">RF system for high beam intensity acceleration in the CERN PS</a> — Garoby (1989)</li>
+<li><a href="https://www-sciencedirect-com.ornl.idm.oclc.org/science/article/pii/S0168900210001646">A transient model for RF cavity analysis under beam loading</a> — Hasssanzadage (2010)</li>
+<li><a href="https://inspirehep.net/files/1caabb8022e6e7957f83bfc688aad770">Study of the beam-cavity interaction in the CERN PS 10 MHz cavities and investigation of hardware solutions to reduce beam loading</a> — Favia (2017)</li>
+<li><a href="https://proceedings.jacow.org/ipac2016/papers/mopor012.pdf">Study of the beam-cavity interaction in the PS 10 MHz RF system</a> – Favia (2016)</li>
+<li><a href="https://arxiv.org/pdf/2603.20733">Beam loading analysis and control in standing wave cavities</a> — Zheqiao Geng (2026, arxiv)</li>
+</ul>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/beam-loading/</guid>
+  <pubDate>Wed, 25 Mar 2026 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Equality</title>
   <link>https://austin-hoover.github.io/blog/notes/equality/</link>
@@ -1468,7 +1493,17 @@
 
 </tr>
 
-<tr data-index="2" data-listing-title-sort="The Civil War">
+<tr data-index="2" data-listing-title-sort="Meru">
+<td>
+<span class="listing-title">Meru</span>
+</td>
+<td>
+<span class="listing-year">2015</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-title-sort="The Civil War">
 <td>
 <span class="listing-title">The Civil War</span>
 </td>
@@ -1478,7 +1513,7 @@
 
 </tr>
 
-<tr data-index="3" data-listing-title-sort="The American Revolution">
+<tr data-index="4" data-listing-title-sort="The American Revolution">
 <td>
 <span class="listing-title">The American Revolution</span>
 </td>
@@ -1488,7 +1523,7 @@
 
 </tr>
 
-<tr data-index="4" data-listing-title-sort="Planet Earth">
+<tr data-index="5" data-listing-title-sort="Planet Earth">
 <td>
 <span class="listing-title">Planet Earth</span>
 </td>
@@ -3372,350 +3407,6 @@ Year
  ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/phase-space-reconstruction/</guid>
   <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Blogs</title>
-  <link>https://austin-hoover.github.io/blog/notes/blogs/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<div id="listing-sample-listings" class="quarto-listing quarto-listing-container-table">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-sample-listings-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-sample-listings'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-title-sort="Statistical Modeling, Causal Inference, and Social Science">
-<td>
-<a href="https://statmodeling.stat.columbia.edu" class="title listing-title">Statistical Modeling, Causal Inference, and Social Science</a>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-title-sort="Marginal Revolution">
-<td>
-<a href="https://marginalrevolution.com" class="title listing-title">Marginal Revolution</a>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-title-sort="The Splintered Mind">
-<td>
-<a href="http://schwitzsplinters.blogspot.com" class="title listing-title">The Splintered Mind</a>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-title-sort="Shtetl-Optimized">
-<td>
-<a href="https://scottaaronson.blog" class="title listing-title">Shtetl-Optimized</a>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-title-sort="AI: A Guide for Thinking Humans">
-<td>
-<a href="https://aiguide.substack.com" class="title listing-title">AI: A Guide for Thinking Humans</a>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="The Secure Transport of Light">
-<td>
-<a href="https://danwang.co" class="title listing-title">The Secure Transport of Light</a>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="Big iff True">
-<td>
-<a href="https://bigifftrue.substack.com/" class="title listing-title">Big iff True</a>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="Bold Reasoning with Peter Singer">
-<td>
-<a href="https://boldreasoningwithpetersinger.substack.com/" class="title listing-title">Bold Reasoning with Peter Singer</a>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="Danny Yee's Book Reviews">
-<td>
-<a href="https://dannyreviews.com" class="title listing-title">Danny Yee’s Book Reviews</a>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-title-sort="After Babel">
-<td>
-<a href="https://www.afterbabel.com" class="title listing-title">After Babel</a>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-title-sort="Bentham's Bulldog">
-<td>
-<a href="https://benthams.substack.com/" class="title listing-title">Bentham’s Bulldog</a>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-title-sort="Alexander Pruss">
-<td>
-<a href="http://alexanderpruss.blogspot.com" class="title listing-title">Alexander Pruss</a>
-</td>
-
-</tr>
-
-<tr data-index="12" data-listing-title-sort="Edward Feser">
-<td>
-<a href="https://edwardfeser.blogspot.com" class="title listing-title">Edward Feser</a>
-</td>
-
-</tr>
-
-<tr data-index="13" data-listing-title-sort="Notebooks">
-<td>
-<a href="http://bactra.org/notebooks/" class="title listing-title">Notebooks</a>
-</td>
-
-</tr>
-
-<tr data-index="14" data-listing-title-sort="China Talk">
-<td>
-<a href="https://www.chinatalk.media" class="title listing-title">China Talk</a>
-</td>
-
-</tr>
-
-<tr data-index="15" data-listing-title-sort="Going Awol">
-<td>
-<a href="https://wollenblog.substack.com/" class="title listing-title">Going Awol</a>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-title-sort="Scott Hawley">
-<td>
-<a href="https://drscotthawley.github.io/blog/" class="title listing-title">Scott Hawley</a>
-</td>
-
-</tr>
-
-<tr data-index="17" data-listing-title-sort="Condensed Concepts">
-<td>
-<a href="https://condensedconcepts.blogspot.co" class="title listing-title">Condensed Concepts</a>
-</td>
-
-</tr>
-
-<tr data-index="18" data-listing-title-sort="Nanoscale Views">
-<td>
-<a href="http://nanoscale.blogspot.com" class="title listing-title">Nanoscale Views</a>
-</td>
-
-</tr>
-
-<tr data-index="19" data-listing-title-sort="ex-apologist">
-<td>
-<a href="http://exapologist.blogspot.com" class="title listing-title">ex-apologist</a>
-</td>
-
-</tr>
-
-<tr data-index="20" data-listing-title-sort="Fake Nous">
-<td>
-<a href="https://fakenous.substack.com" class="title listing-title">Fake Nous</a>
-</td>
-
-</tr>
-
-<tr data-index="21" data-listing-title-sort="Lil'Log">
-<td>
-<a href="https://lilianweng.github.io" class="title listing-title">Lil’Log</a>
-</td>
-
-</tr>
-
-<tr data-index="22" data-listing-title-sort="Why Philosophy?">
-<td>
-<a href="https://celineleboeuf.substack.com/" class="title listing-title">Why Philosophy?</a>
-</td>
-
-</tr>
-
-<tr data-index="23" data-listing-title-sort="Not Even Wrong">
-<td>
-<a href="https://www.math.columbia.edu/~woit/wordpress/" class="title listing-title">Not Even Wrong</a>
-</td>
-
-</tr>
-
-<tr data-index="24" data-listing-title-sort="Notes From a Data Witch">
-<td>
-<a href="https://blog.djnavarro.net" class="title listing-title">Notes From a Data Witch</a>
-</td>
-
-</tr>
-
-<tr data-index="25" data-listing-title-sort="Of Particular Significance&quot;">
-<td>
-<a href="https://profmattstrassler.com/blog/" class="title listing-title">Of Particular Significance”</a>
-</td>
-
-</tr>
-
-<tr data-index="26" data-listing-title-sort="Physics Matt">
-<td>
-<a href="http://www.physicsmatt.com/blog/)" class="title listing-title">Physics Matt</a>
-</td>
-
-</tr>
-
-<tr data-index="27" data-listing-title-sort="Preposterous Universe">
-<td>
-<a href="https://www.preposterousuniverse.com/blog/" class="title listing-title">Preposterous Universe</a>
-</td>
-
-</tr>
-
-<tr data-index="28" data-listing-title-sort="Asymptotia">
-<td>
-<a href="https://asymptotia.com" class="title listing-title">Asymptotia</a>
-</td>
-
-</tr>
-
-<tr data-index="29" data-listing-title-sort="Commonplace Philosophy">
-<td>
-<a href="https://jaredhenderson.substack.com/" class="title listing-title">Commonplace Philosophy</a>
-</td>
-
-</tr>
-
-<tr data-index="30" data-listing-title-sort="Future Doctrina">
-<td>
-<a href="https://mickryan.substack.com" class="title listing-title">Future Doctrina</a>
-</td>
-
-</tr>
-
-<tr data-index="31" data-listing-title-sort="Gowing Awol">
-<td>
-<a href="https://wollenblog.substack.com/" class="title listing-title">Gowing Awol</a>
-</td>
-
-</tr>
-
-<tr data-index="32" data-listing-title-sort="Greco and Wansley">
-<td>
-<a href="https://grecowansley.substack.com/" class="title listing-title">Greco and Wansley</a>
-</td>
-
-</tr>
-
-<tr data-index="33" data-listing-title-sort="The Grumpy Economist">
-<td>
-<a href="https://www.grumpy-economist.com/" class="title listing-title">The Grumpy Economist</a>
-</td>
-
-</tr>
-
-<tr data-index="34" data-listing-title-sort="Kareem Takes on the News">
-<td>
-<a href="https://kareem.substack.com/" class="title listing-title">Kareem Takes on the News</a>
-</td>
-
-</tr>
-
-<tr data-index="35" data-listing-title-sort="The Motivated Skeptic">
-<td>
-<a href="https://rbnmckenna86.substack.com/" class="title listing-title">The Motivated Skeptic</a>
-</td>
-
-</tr>
-
-<tr data-index="36" data-listing-title-sort="Pens and Poison">
-<td>
-<a href="https://www.pensandpoison.org/" class="title listing-title">Pens and Poison</a>
-</td>
-
-</tr>
-
-<tr data-index="37" data-listing-title-sort="Reflections on What Matters">
-<td>
-<a href="https://jpandrew.substack.com/" class="title listing-title">Reflections on What Matters</a>
-</td>
-
-</tr>
-
-<tr data-index="38" data-listing-title-sort="Sherman Alexie">
-<td>
-<a href="https://shermanalexie.substack.com/" class="title listing-title">Sherman Alexie</a>
-</td>
-
-</tr>
-
-<tr data-index="39" data-listing-title-sort="Wondering Freely">
-<td>
-<a href="https://helendecruz.substack.com/" class="title listing-title">Wondering Freely</a>
-</td>
-
-</tr>
-
-<tr data-index="40" data-listing-title-sort="Rob Nagler">
-<td>
-<a href="https://www.robnagler.com" class="title listing-title">Rob Nagler</a>
-</td>
-
-</tr>
-
-<tr data-index="41" data-listing-title-sort="Kasparov on the Kremlin">
-<td>
-<a href="https://www.thenextmove.org/s/kasparov-on-the-kremlin?utm_source=substack&amp;utm_medium=menu" class="title listing-title">Kasparov on the Kremlin</a>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-
-
-
-
- ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/blogs/</guid>
-  <pubDate>Sat, 10 Jan 2026 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
