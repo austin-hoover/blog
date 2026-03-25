@@ -1,0 +1,13 @@
+---
+title: "Beam Loading in RF Cavities"
+date: 2026-03-25
+date-modified: 2026-03-25
+---
+
+* [Beam Loading](https://cds.cern.ch/record/302480/files/p415.pdf) --- Boussard (1995)
+* [Beam Loading in RF Cavities](https://cds.cern.ch/record/2843933/files/CERN-PS-91-33-RF.pdf) --- Garoby (1990)
+* [RF system for high beam intensity acceleration in the CERN PS](https://ieeexplore.ieee.org/document/73037) --- Garoby (1989)
+* [A transient model for RF cavity analysis under beam loading](https://www-sciencedirect-com.ornl.idm.oclc.org/science/article/pii/S0168900210001646) --- Hasssanzadage (2010)
+* [Study of the beam-cavity interaction in the CERN PS 10 MHz cavities and investigation of hardware solutions to reduce beam loading](https://inspirehep.net/files/1caabb8022e6e7957f83bfc688aad770) --- Favia (2017)
+* [Study of the beam-cavity interaction in the PS 10 MHz RF system](https://proceedings.jacow.org/ipac2016/papers/mopor012.pdf) -- Favia (2016)
+* [Beam loading analysis and control in standing wave cavities](https://arxiv.org/pdf/2603.20733) --- Zheqiao Geng (2026, arxiv)
