@@ -1,0 +1,10 @@
+---
+title: "Nonexistence of six-dimensional KV equilibrium distributions"
+author: Austin Hoover
+categories:
+  - accelerators
+  - space charge
+draft: true
+---
+
+Sacherer's [thesis](https://www.osti.gov/servlets/purl/877342), Appendix A.
