@@ -5,6 +5,28 @@
     - Fiction
     - Classics
 
+- title: "The Gulag Archipelago: An Experiment in Literary Investigation"
+  year: "1973"
+  author: "Solzhenitsyn"
+  categories:
+    - History
+    - Politics
+    - Russia
+
+- title: "A Theory of Justice"
+  year: "1971"
+  author: "Rawls"
+  categories:
+    - Philosophy
+    - Politics
+
+- title: "Anarchy, State, and Utopia"
+  year: 1974
+  author: "Nozick"
+  categories:
+    - Philosophy
+    - Politics
+
 - title: "Anna Karenina"
   year: "1877"
   author: "Tolstoy"
@@ -64,20 +86,6 @@
   categories:
     - Fiction
     - Classics
-
-- title: "A Theory of Justice"
-  year: "1971"
-  author: "Rawls"
-  categories:
-    - Philosophy
-    - Politics
-
-- title: "Anarchy, State, and Utopia"
-  year: 1974
-  author: "Nozick"
-  categories:
-    - Philosophy
-    - Politics
 
 - title: "Taking Morality Seriously: A Defense of Robust Realism"
   year: "2011"
@@ -269,14 +277,6 @@
   categories:
     - Philosophy
     - Politics
-
-- title: "The Gulag Archipelago"
-  year: "1973"
-  author: "Solzhenitsyn"
-  categories:
-    - History
-    - Politics
-    - Russia
 
 - title: "The Old Regime and the Revolution"
   year: "1856"
@@ -600,20 +600,6 @@
   categories:
     - STEM
     - Tech
-
-- title: "The Staff Engineer's Path"
-  year: "2022"
-  author: "Reilly"
-  categories:
-    - Tech
-    - Career
-
-- title: "Writing Science"
-  year: "2011"
-  author: "Schimel"
-  categories:
-    - STEM
-    - Writing
 
 - title: "Beamtimes and Lifetimes"
   year: 1992
