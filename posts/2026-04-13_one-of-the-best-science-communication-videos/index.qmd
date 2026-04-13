@@ -1,0 +1,9 @@
+---
+title: "One of the best science communication videos I've ever seen"
+date: 2026-04-13
+author: Austin Hoover
+categories:
+  - accelerators
+---
+
+{{< video https://www.youtube.com/watch?v=jjiYY1WA2Hw >}}
