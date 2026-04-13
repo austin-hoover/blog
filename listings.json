@@ -81,10 +81,10 @@
   {
     "listing": "/notes.html",
     "items": [
-      "/notes/films/index.html",
       "/notes/reading-list/index.html",
-      "/notes/beam-loading/index.html",
       "/notes/books/index.html",
+      "/notes/films/index.html",
+      "/notes/beam-loading/index.html",
       "/notes/equality/index.html",
       "/notes/videos/index.html",
       "/notes/journals/index.html",
