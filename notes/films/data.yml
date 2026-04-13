@@ -6,6 +6,14 @@
   director: "Linklater"
   year: 2014
 
+- title: "Whiplash"
+  director: "Chazelle"
+  year: 2014
+
+- title: "The Bourne Identity"
+  director: "Liman"
+  year: 2002
+
 - title: "La La Land"
   director: "Chazelle"
   year: 2016
@@ -33,6 +41,10 @@
 - title: "Birdman"
   director: "Iñárritu"
   year: 2014
+
+- title: "Rogue One"
+  director: "Edwards"
+  year: 2016
 
 - title: "Ex Machina"
   director: "Garland"
