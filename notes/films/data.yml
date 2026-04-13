@@ -2,6 +2,18 @@
   director: "Gondry"
   year: 2004
 
+- title: "Boyhood"
+  director: "Linklater"
+  year: 2014
+
+- title: "La La Land"
+  director: "Chazelle"
+  year: 2016
+
+- title: "Persona"
+  director: "Bergman"
+  year: 1966
+
 - title: "Wind River"
   director: "Sheridan"
   year: 2017
@@ -17,6 +29,10 @@
 - title: "1917"
   director: "Mendes"
   year: 2019
+
+- title: "Birdman"
+  director: "Iñárritu"
+  year: 2014
 
 - title: "Ex Machina"
   director: "Garland"
