@@ -1,3 +1,11 @@
+- title: "True Grit"
+  director: "Coen"
+  year: 2010
+
+- title: "No Country for Old Men"
+  director: "Coen"
+  year: 2007
+
 - title: "Eternal Sunshine of the Spotless Mind"
   director: "Gondry"
   year: 2004
@@ -16,6 +24,10 @@
 
 - title: "La La Land"
   director: "Chazelle"
+  year: 2016
+
+- title: "Hell or High Water"
+  director: "Mackenzie"
   year: 2016
 
 - title: "Persona"
