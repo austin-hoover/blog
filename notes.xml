@@ -1447,7 +1447,17 @@
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-title-sort="The Dawn Wall">
+<tr data-index="0" data-listing-title-sort="Our Planet">
+<td>
+<span class="listing-title">Our Planet</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="The Dawn Wall">
 <td>
 <span class="listing-title">The Dawn Wall</span>
 </td>
@@ -1457,7 +1467,7 @@
 
 </tr>
 
-<tr data-index="1" data-listing-title-sort="Free Solo">
+<tr data-index="2" data-listing-title-sort="Free Solo">
 <td>
 <span class="listing-title">Free Solo</span>
 </td>
@@ -1467,7 +1477,7 @@
 
 </tr>
 
-<tr data-index="2" data-listing-title-sort="Meru">
+<tr data-index="3" data-listing-title-sort="Meru">
 <td>
 <span class="listing-title">Meru</span>
 </td>
@@ -1477,7 +1487,17 @@
 
 </tr>
 
-<tr data-index="3" data-listing-title-sort="The Civil War">
+<tr data-index="4" data-listing-title-sort="14 Peaks">
+<td>
+<span class="listing-title">14 Peaks</span>
+</td>
+<td>
+<span class="listing-year">2021</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-title-sort="The Civil War">
 <td>
 <span class="listing-title">The Civil War</span>
 </td>
@@ -1487,7 +1507,7 @@
 
 </tr>
 
-<tr data-index="4" data-listing-title-sort="The American Revolution">
+<tr data-index="6" data-listing-title-sort="The American Revolution">
 <td>
 <span class="listing-title">The American Revolution</span>
 </td>
@@ -1497,7 +1517,7 @@
 
 </tr>
 
-<tr data-index="5" data-listing-title-sort="Planet Earth">
+<tr data-index="7" data-listing-title-sort="Planet Earth">
 <td>
 <span class="listing-title">Planet Earth</span>
 </td>
