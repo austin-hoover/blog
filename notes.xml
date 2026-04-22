@@ -10,7 +10,44 @@
 <atom:link href="https://austin-hoover.github.io/blog/notes.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Wed, 25 Mar 2026 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 22 Apr 2026 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Papers by ORNL Accelerator Physics Group</title>
+  <link>https://austin-hoover.github.io/blog/notes/ornl-ap-papers/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Incomplete list:</p>
+<ol type="1">
+<li><p><a href="https://doi.org/10.1103/bvwq-34jf">Demonstration of a novel phase space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams</a>. N. Evans, A. Hoover. T. Gorlov, V. Morozov. Phys. Rev.&nbsp;Lett. 136, 075002 (2026).</p></li>
+<li><p><a href="https://doi.org/10.1103/zl2h-3v32">N-dimensional maximum-entropy tomography via particle sampling</a>. A. Hoover. Phys. Rev.&nbsp;Accel. Beams 28, L084601 (2025).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevAccelBeams.27.122802">Four-dimensional phase space tomography from one-dimensional measurements of a hadron beam</a>. A. Hoover. Phys. Rev.&nbsp;Accel. Beams 27, 122802 (2024).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevResearch.6.033163">High-dimensional maximum-entropy phase space tomography using normalizing flows</a>. A. Hoover, J.C. Wong. Phys. Rev.&nbsp;Research 6.3, 033163 (2024).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevAccelBeams.26.043501">Experimental demonstration of sequential excitation scheme for H− laser assisted charge exchange</a>. A. Aleksandrov, S. Cousineau, T. Gorlov, Y. Liu, A. Oguz, A. Shish, A. Zhukov M. Kay. Phys. Rev.&nbsp;Accel. Beams 26, 043501 (2023).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevAccelBeams.26.064202">Analysis of a hadron beam in five-dimensional phase space</a>. A. Hoover, K. Ruisard, A. Aleksandrov, A. Zhukov S. Cousineau. Phys. Rev.&nbsp;Accel. Beams 26.6, 064202 (2023).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevAccelBeams.25.042801">4D transverse phase space tomography of an operational hydrogen ion beam via noninvasive 2D measurements using laser wires</a>. J.C. Wong, A. Shishlo, A. Aleksandrov, Y. Liu, C. Long. Phys. Rev.&nbsp;Accel. Beams 25, 042801 (2022).</p></li>
+<li><p><a href="https://arxiv.org/abs/2204.08303">Four-dimensional emittance measurement at the Spallation Neutron Source</a>. A. Hoover, N. Evans. Nuclear Instruments and Methods in Physics Research Section A 1041, 167376 (2022).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevAccelBeams.24.032801">Laser-assisted charge exchange as an atomic yardstick for proton beam energy measurement and phase probe calibration</a>. J.C. Wong, A. Aleksandrov, S. Cousineau, T. Gorlov, Y. Liu, A. Rakhman, A. Shishlo. Phys. Rev.&nbsp;Accel. Beams 24, 032801 (2021).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevAccelBeams.24.014201">Rapid charge redistribution leading to core hollowing in a high-intensity ion beam</a>. K. Ruisard, A. Aleksandrov. Phys. Rev.&nbsp;Accel. Beams 24, 014201 (2021).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevAccelBeams.24.044201">Computation of the matched envelope of the Danilov distribution</a>. A. Hoover, N. Evans, and J. Holmes. Physical Review Accelerators and Beams 24.4, 044201 (2021).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevAccelBeams.23.124201">High dimensional characterization of the longitudinal phase space formed in a radio frequency quadrupole</a>. K. Ruisard, A. Aleksandrov, S. Cousineau, V. Tzoganis, A. Zhukov. Phys. Rev.&nbsp;Accel. Beams 23, 124201 (2020).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevAccelBeams.22.121601">Sequential excitation scheme for laser stripping for a H−beam</a>. T. Gorlov, A. Aleksandrov, S. Cousineau, Y Liu, A. Rakhman, A. Shishlo. Phys. Rev.&nbsp;Accel. Beams 22, 121601 (2019).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevLett.121.064804">First Six Dimensional Phase Space Measurement of an Accelerator Beam</a>. B. Cathey, S. Cousineau, A. Aleksandrov, A. Zhukov. Phys. Rev.&nbsp;Lett. 121, 064804 (2018).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevLett.118.074801">First Demonstration of Laser-Assisted Charge Exchange for Microsecond Duration H− Beams</a>. S. Cousineau, A. Rakhman, M. Kay, A. Aleksandrov, V. Danilov, T. Gorlov, Y. Liu, M. Plum, A. Shishlo, D, Johnson. Phys. Rev.&nbsp;Lett. 118, 074801 (2017).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevAccelBeams.20.120402">High efficiency laser-assisted H− charge exchange for microsecond duration beams</a> S. Cousineau, A. Rakhman, M. Kay, A. Aleksandrov, V Danilov, T. Gorlov, Y. Liu, C. Long, A. Menshov et al. Phys. Rev.&nbsp;Accel. Beams 20, 120402 (2017).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevSTAB.13.084002">Nonlinear accelerator lattices with one and two analytic invariants</a>. V. Danilov, S. Nagaitsev. Phys. Rev.&nbsp;ST Accel. Beams 13, 084002 (2010).</p></li>
+<li><p><a href="https://doi.org/10.1103/PhysRevSTAB.6.094202">Self-consistent time dependent two dimensional and three dimensional space charge distributions with linear force</a>. V. Danilov, S. Cousineau, S. Henderson, J. Holmes. Phys. Rev.&nbsp;ST Accel. Beams 6, 094202 (2003).</p></li>
+</ol>
+
+
+
+ ]]></description>
+  <guid>https://austin-hoover.github.io/blog/notes/ornl-ap-papers/</guid>
+  <pubDate>Wed, 22 Apr 2026 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Beam Loading in RF Cavities</title>
   <link>https://austin-hoover.github.io/blog/notes/beam-loading/</link>
@@ -3383,23 +3420,6 @@ Year
 
  ]]></description>
   <guid>https://austin-hoover.github.io/blog/notes/sampling/</guid>
-  <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Phase Space Reconstruction</title>
-  <link>https://austin-hoover.github.io/blog/notes/phase-space-reconstruction/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Collect references on phase space reconstruction/tomography.</p>
-
-
-
- ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/phase-space-reconstruction/</guid>
   <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
 </item>
 </channel>
