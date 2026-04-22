@@ -1,0 +1,81 @@
+---
+title: "Papers by ORNL Accelerator Physics Group"
+date: 2026-04-22
+date-modified: 2026-04-22
+---
+
+Incomplete list:
+
+1. [Demonstration of a novel phase space painting method in a coupled lattice to mitigate space charge in high-intensity hadron beams](https://doi.org/10.1103/bvwq-34jf).
+N. Evans, A. Hoover. T. Gorlov, V. Morozov.
+Phys. Rev. Lett. 136, 075002 (2026).
+
+1. [N-dimensional maximum-entropy tomography via particle sampling](https://doi.org/10.1103/zl2h-3v32).
+A. Hoover.
+Phys. Rev. Accel. Beams 28, L084601 (2025).
+
+1. [Four-dimensional phase space tomography from one-dimensional measurements of a hadron beam](https://doi.org/10.1103/PhysRevAccelBeams.27.122802).
+A. Hoover.
+Phys. Rev. Accel. Beams 27, 122802 (2024).
+
+1. [High-dimensional maximum-entropy phase space tomography using normalizing flows](https://doi.org/10.1103/PhysRevResearch.6.033163).
+A. Hoover, J.C. Wong.
+Phys. Rev. Research 6.3, 033163 (2024).
+
+1. [Experimental demonstration of sequential excitation scheme for H− laser assisted charge exchange](https://doi.org/10.1103/PhysRevAccelBeams.26.043501).
+A. Aleksandrov, S. Cousineau, T. Gorlov, Y. Liu, A. Oguz, A. Shish, A. Zhukov
+M. Kay.
+Phys. Rev. Accel. Beams 26, 043501 (2023).
+
+1. [Analysis of a hadron beam in five-dimensional phase space](https://doi.org/10.1103/PhysRevAccelBeams.26.064202).
+A. Hoover, K. Ruisard, A. Aleksandrov, A. Zhukov S. Cousineau.
+Phys. Rev. Accel. Beams 26.6, 064202 (2023).
+
+1. [4D transverse phase space tomography of an operational hydrogen ion beam via noninvasive 2D measurements using laser wires](https://doi.org/10.1103/PhysRevAccelBeams.25.042801).
+J.C. Wong, A. Shishlo, A. Aleksandrov, Y. Liu, C. Long.
+Phys. Rev. Accel. Beams 25, 042801 (2022).
+
+1. [Four-dimensional emittance measurement at the Spallation Neutron Source](https://arxiv.org/abs/2204.08303).
+A. Hoover, N. Evans.
+Nuclear Instruments and Methods in Physics Research Section A 1041, 167376 (2022).
+
+1. [Laser-assisted charge exchange as an atomic yardstick for proton beam energy measurement and phase probe calibration](https://doi.org/10.1103/PhysRevAccelBeams.24.032801).
+J.C. Wong, A. Aleksandrov, S. Cousineau, T. Gorlov, Y. Liu, A. Rakhman, A. Shishlo.
+Phys. Rev. Accel. Beams 24, 032801 (2021).
+
+1. [Rapid charge redistribution leading to core hollowing in a high-intensity ion beam](https://doi.org/10.1103/PhysRevAccelBeams.24.014201).
+K. Ruisard, A. Aleksandrov.
+Phys. Rev. Accel. Beams 24, 014201 (2021).
+
+1. [Computation of the matched envelope of the Danilov distribution](https://doi.org/10.1103/PhysRevAccelBeams.24.044201).
+A. Hoover, N. Evans, and J. Holmes.
+Physical Review Accelerators and Beams 24.4, 044201 (2021).
+
+1. [High dimensional characterization of the longitudinal phase space formed in a radio frequency quadrupole](https://doi.org/10.1103/PhysRevAccelBeams.23.124201).
+K. Ruisard, A. Aleksandrov, S. Cousineau, V. Tzoganis, A. Zhukov.
+Phys. Rev. Accel. Beams 23, 124201 (2020).
+
+1. [Sequential excitation scheme for laser stripping for a H−beam](https://doi.org/10.1103/PhysRevAccelBeams.22.121601).
+T. Gorlov, A. Aleksandrov, S. Cousineau, Y Liu, A. Rakhman, A. Shishlo.
+Phys. Rev. Accel. Beams 22, 121601 (2019).
+
+1. [First Six Dimensional Phase Space Measurement of an Accelerator Beam](https://doi.org/10.1103/PhysRevLett.121.064804).
+B. Cathey, S. Cousineau, A. Aleksandrov, A. Zhukov.
+Phys. Rev. Lett. 121, 064804 (2018).
+
+1. [First Demonstration of Laser-Assisted Charge Exchange for Microsecond Duration H− Beams](https://doi.org/10.1103/PhysRevLett.118.074801).
+S. Cousineau, A. Rakhman, M. Kay, A. Aleksandrov, V. Danilov, T. Gorlov, Y. Liu, M. Plum, A. Shishlo, D, Johnson.
+Phys. Rev. Lett. 118, 074801 (2017).
+
+1. [High efficiency laser-assisted H− charge exchange for microsecond duration beams](https://doi.org/10.1103/PhysRevAccelBeams.20.120402)
+S. Cousineau, A. Rakhman, M. Kay, A. Aleksandrov, V Danilov, T. Gorlov, Y. Liu, C. Long, A. Menshov et al.
+Phys. Rev. Accel. Beams 20, 120402 (2017).
+
+1. [Nonlinear accelerator lattices with one and two analytic invariants](https://doi.org/10.1103/PhysRevSTAB.13.084002).
+V. Danilov, S. Nagaitsev.
+Phys. Rev. ST Accel. Beams 13, 084002 (2010).
+
+1. [Self-consistent time dependent two dimensional and three dimensional space charge distributions with linear force](https://doi.org/10.1103/PhysRevSTAB.6.094202).
+V. Danilov, S. Cousineau, S. Henderson, J. Holmes.
+Phys. Rev. ST Accel. Beams 6, 094202 (2003).
+
