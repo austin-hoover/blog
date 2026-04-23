@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Austin Hoover">
-<meta name="dcterms.date" content="2026-04-14">
+<meta name="dcterms.date" content="2026-02-21">
 
-<title>Benchmarking differentiable 2D space charge solver in Cheetah – Austin’s Blog</title>
+<title>Beam and Plasma Physics Simulations – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -44,9 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-aa02473729fbef2081983269e2210a2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-ebe384f772c1b3426687e3b931ab51bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-aa02473729fbef2081983269e2210a2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-208826a45758e6765f5809a95a911cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-2557061e844e1ba9cf1a27f0c6c4ed04.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-208826a45758e6765f5809a95a911cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -280,7 +279,7 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
@@ -306,27 +305,27 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Benchmarking differentiable 2D space charge solver in Cheetah</h1>
+<h1 class="title">Beam and Plasma Physics Simulations</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Austin Hoover </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 14, 2026</p>
+      <p class="date">February 21, 2026</p>
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">February 21, 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -335,7 +334,20 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 </header>
 
 
-<p>Some text</p>
+<ul>
+<li><a href="https://www.osti.gov/servlets/purl/6733081/"><em>TEAPOT: A thin element accelerator program for optics and tracking</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/PhysRevLett.98.130405"><em>Noninvariance of Space- and Time-Scale Ranges under a Lorentz Transformation and the Implications for the Study of Relativistic Interactions</em></a></li>
+<li><a href="10.1103/PhysRevAccelBeams.20.014203"><em>Symplectic multiparticle tracking model for self-consistent space-charge simulation</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/PhysRevAccelBeams.21.054201"><em>Symplectic particle-in-cell model for space-charge beam dynamics simulation</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/bhpv-bcqk"><em>Symplectic machine learning model for fast simulation of space-charge effects</em></a></li>
+<li><a href="https://www.physics.umd.edu/dsat/docs/Book12Nov2019.pdf"><em>Lie Methods for Nonlinear Dynamics with Applications to Accelerator Physics</em></a></li>
+<li><a href="https://arxiv.org/pdf/2006.09080"><em>Direct Vlasov solvers</em></a></li>
+<li><a href="http://arxiv.org/abs/2203.08335"><em>Snowmass21 Accelerator Modeling Community White Paper</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/PhysRevE.106.035208"><em>Quantum-inspired method for solving the Vlasov-Poisson equations</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/PhysRevAccelBeams.26.024601"><em>Differentiable self-consistent space-charge simulation for accelerator design</em></a></li>
+<li><a href="https://link.aps.org/doi/10.1103/npx1-nclt"><em>Two-and-a-half dimensional symplectic space-charge solver</em></a></li>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevSTAB.17.124201"><em>Grid dependent noise and entropy growth in anisotropic 3d particle-in-cell simulation of high intensity beams</em></a></li>
+</ul>
 
 
 
