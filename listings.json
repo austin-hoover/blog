@@ -142,10 +142,10 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/films/index.html",
       "/notes/reading-list/index.html",
       "/notes/ornl-ap-papers/index.html",
       "/notes/books/index.html",
-      "/notes/films/index.html",
       "/notes/beam-loading/index.html",
       "/notes/equality/index.html",
       "/notes/videos/index.html",
