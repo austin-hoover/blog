@@ -142,6 +142,7 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/space-charge/index.html",
       "/notes/conference-proceedings/index.html",
       "/notes/reading-list/index.html",
       "/notes/films/index.html",
@@ -152,7 +153,6 @@
       "/notes/videos/index.html",
       "/notes/journals/index.html",
       "/notes/wakefield-acceleration/index.html",
-      "/notes/space-charge/index.html",
       "/notes/electron-cloud/index.html",
       "/notes/documentaries/index.html",
       "/notes/shows/index.html",
