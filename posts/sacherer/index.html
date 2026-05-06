@@ -1,2 +1,840 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Austin Hoover">
+<meta name="dcterms.date" content="2026-03-29">
+
+<title>Sacherer – Austin’s Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-aa02473729fbef2081983269e2210a2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ebe384f772c1b3426687e3b931ab51bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-aa02473729fbef2081983269e2210a2a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DLC4C8LZFB"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
+</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Austin’s Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notes.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Sacherer</h1>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Austin Hoover </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 29, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<ul>
+<li><a href="http://www.supertopo.com/climbing/thread.php?topic_id=268647&amp;tn=0&amp;mr=0" class="uri">http://www.supertopo.com/climbing/thread.php?topic_id=268647&amp;tn=0&amp;mr=0</a></li>
+<li><a href="https://www.osti.gov/servlets/purl/877342" class="uri">https://www.osti.gov/servlets/purl/877342</a></li>
+<li><a href="https://aip.brightspotcdn.com/PTO.v32.i2.69_1.online.pdf" class="uri">https://aip.brightspotcdn.com/PTO.v32.i2.69_1.online.pdf</a></li>
+<li><a href="https://www.nytimes.com/2001/02/20/science/a-passion-for-physical-realms-minute-and-massive.html?searchResultPosition=1" class="uri">https://www.nytimes.com/2001/02/20/science/a-passion-for-physical-realms-minute-and-massive.html?searchResultPosition=1</a> (paywall)</li>
+<li><a href="https://www.youtube.com/watch?v=6zx4g8rAn5g" class="uri">https://www.youtube.com/watch?v=6zx4g8rAn5g</a></li>
+</ul>
+<p>I found this <a href="http://www.supertopo.com/climbing/thread.php?topic_id=268647&amp;tn=0&amp;mr=0">long thread</a> on Frank Sacherer, an accelerator physicist at LBNL and CERN in the 1960’s and 10’s. Sacherer is well-known in the accelerator physics community for publishing foundational work on space charge, collective effects, and stochastic cooling. But he was also apparently a legend in the free-climbing community for pioneering many different routes in Yosemite on the weekends during his PhD. He died at the age of 38 while climbing in the Swiss Alps, possibly from hypothermia.</p>
+<p>The thread is interesting because at some point Sacherer’s ex-wife joins and sheds light on Sacherer’s personality.</p>
+<hr>
+<blockquote class="blockquote">
+<p>It’s difficult to try to explain Frank to climbers, since I knew him primarily in his intellectual and academic mode. He did severe climbing before I met him and after I departed, but hardly climbed at all during the time we were together. Nor did he want me to climb which was a source of great personal frustration. It’s true that in the spring of 1965, he was told by his thesis advisor that if he took off one more summer to go to Yosemite, he would be dropped from the graduate program. Still, that doesn’t explain why he didn’t even want to do easy rock climbs on the weekends and turned every attempt of mine at climbing with him into a nightmare. Somehow it was all or nothing as far as climbing in the Valley went, although he did not at all mind starting from the beginning with snow and ice climbing when we got to the Alps. There we did do a lot of climbing together on safe classic routes like Mt. Blanc and the Matterhorn and with a minimum of personal friction.</p>
+<p>The other problem in explaining Frank is that physicists live in a different world than the rest of us. While Frank did use physics to figure out crack climbing techniques, (bordering on engineering is probably how he would have referred to it), most of his work was extremely abstract. Like many physicists and mathematicians he was a right brain thinker. The right brain is the center of symbols, strong emotions, and athleticism among other things, the very things at which he excelled. He was able to translate symbols into words however, only with great difficulty. He called people names and obscenities I believe, from lack of a more standard social vocabulary.</p>
+<p>This sounds unbelievable given his intelligence unless you know the world he worked in. Often he would pace back and forth and mutter things like “it’s coming, it’s coming” and couldn’t explain what, except that it had something to do with physics. Weeks later he would begin to put it down in mathematics, but still couldn’t explain it in English. I remember one equation that went on for 30 finely written pages, but it was months before he could begin to formulate it in words. Then when we were in Europe, he would agonize for half a day over a simple one paragraph letter to his parents.</p>
+<p>He was also very shy about telling you what he knew unless he felt very comfortable around you. He was great at explaining physics principles and philosophy without the use of mathematics to me, but resisted the idea of talking about it with anyone else. Physics was by no means his only intellectual interest. His 16 years of Jesuit schooling meant he had a wonderful classical education. When we went to Europe, we spent 10 months living in a Volkswagen bus and touring Europe. We visited every major museum, cathedral, and archaeological site in Greece and western Europe. We bought the Guides Bleus series of guidebooks and read through them word by word as we walked through these sites inch by inch, sculpture by sculpture, painting by painting. It was quite impressive to see him read on sight the original inscriptions in Greek and Latin at places like Thermopylae and Rome and then translate them almost simultaneously.</p>
+<p>The question for all of us who knew him I suppose, is who was the real Frank? Or better yet, why wasn’t he better balanced so that he could enjoy both worlds at the same time without going from one extreme to the other? It is certainly a characteristic of the right brain thought process to focus intensely on a single subject at a time. I also have a few psychological theories concerning his religious and working class background as part of his conflicted view of the world. Still, after living with him for almost seven years, he remains even to me, a kind of enigma.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Pat, my old friend and climbing buddy from the days before I met Frank, thank you for your observations. Frank loved Colorado the two summers we visited there and enjoyed meeting my old friends. Given that all three of us were always intuitive types, yes there was a special rapport.</p>
+<p>One subject often discussed in connection with Frank is religion. I think his 16 years of Catholic education had a big impact, but not in the ways that are generally thought. I never sensed that he worried over dogma or going to church which he never did. He had been through that a decade or more before I knew him. Certainly he never would have been found cursing against God as Roper has postulated in his portrayal of Frank for Camp 4, as Frank never entertained such a narrow and anthropomorphic concept of God. He was well aware of the mystical leanings of many great physicists and the philosophical questions posed by quantum mechanics and astronomy. He also knew a lot about Eastern philosophy and we often discussed the concepts which later appeared in The Tao of Physics.</p>
+<p>Frank also had a rock solid sense of personal ethics from his religious background and a social conscience. Consequently we were both active in anti-Vietnam war activities in Berkeley. Of course every thinking person was involved somehow, though the Catholic Church as a generally conservative force, supported the war in the early days. Frank of course put personal conscience above the church. Luckily, Franks’s research assistantship at the Lawrence Radiation Lab exempted him from the draft.</p>
+<p>One aspect of the 1960’s that Frank did not approve of was the drug taking. While I’m more the experimental type, Frank was dead set against any of it. I think this had to do with personal control issues however, rather than religion. Knowing Frank’s fondness for sweets, some of our friends did take it on themselves to dope some brownies once at a private slide show. I was not told of the scheme and not surprised when Frank ate several. I only caught on as we drove home and he began waxing ecstatically about the beautiful colors of the traffic lights. Much to the disappointment of our well-intentioned friends, getting Frank stoned did nothing to loosen him up. We were both agreed moreover, that this violated his free will, a basic principle of most religions, and the result was, we were very careful after that what we ate at parties.</p>
+<p>The harmful effects of Frank’s Jesuit education were much more subtle. From my point of view, the worst thing he was taught, was the idea that compromise was the deadliest sin of all. As Ed has already noted, physicists like certainty and there is a certainty to climbing as well. Unfortunately when applied to human relationships, the results are not nearly so beneficial nor the right way of doing things so obvious. Most of the important interpersonal issues in life benefit from love, not logic. And for sure, there is more than one ideal way to get things done in the kitchen! Of course that never stopped Frank from trying to supervise even the smallest details.</p>
+<p>The traditional Catholic view of women as either madonnas or whores probably caused our relationship the most damage however, as I never identified with either. This combined with Frank’s view of women’s proper roles based on his working class background, and the fact that he had no sisters, was something we were never able to overcome. In fact, the more I spoiled him with domesticity, the more he resisted my efforts to be a person in my own right. Looking back, I probably should have been more traditional in the sense of resorting to tears and throwing things, rather than trying to use logic on him. Arguing logically with a genius trained by Jesuits is 99% of the time a losing proposition, I can assure you.</p>
+<p>Finally, he seemed to have imbibed a masochistic view of the world based on what the Jesuits taught him. He had the definite sense that one should not enjoy oneself too much as an equal amount of pain awaited, since everything must balance out. Of course, this may just have been his interpretation of what he was taught by the church, plus a good dose of what he knew from solving physics equations. His masochism did however, give him tremendous drive and discipline. He was the first climber to systematically work out at circuit training. I ran the circuit too, when training for specific outings, but only Eric Beck eventually joined him for regular workouts – discipline for its own sake. The discipline I learned from Frank did have a major effect on my own life however, when applied to academia. I owe much of my own subsequent success to his influence, even though he did his best to thwart my efforts along these lines, while we still lived together.</p>
+<p>As for my friend Dick Erb’s comments about Frank saying he would quit climbing if he ever found the perfect woman, all I can say is that if he ever thought it was me, he had a hell of a way of showing it!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>I believe that another source of Frank’s internal conflicts came from the distance he had traveled from his original social background. His mother graduated from high school and his father barely made it out of the 8th grade. His father was a member of the teamster’s union and spent his life delivering baked goods to groceries stores around the Bay Area as did his younger brother. Sociologists tell us that even changing up or down one social class is stressful and can result in cognitive dissonance. How much more so if you are the first in your family to go to university and you end up getting a Ph.D.&nbsp;in theoretical physics, your thesis signed by a Nobel prize winner?</p>
+<p>Frank was not an easy child for working class parents to deal with either. They suffered through many youthful pranks, like his rewiring the front door bell to drive them crazy with ringing and no one there. It took an electrician to figure that one out. Their most serious concerns came however, in the 1950’s, with his home- made rocket building activity. Fearing he would actually get one to launch from their backyard in San Francisco, they worried about liability. Frank’s father then helped him launch his rockets in the forest up on Mt. Davidson in San Francisco, figuring that if he set the woods on fire, they could both run and the city would be responsible! Frank was said to be like his paternal grandfather who was a skilled machinist and inventor of many mechanical gadgets some still used in the wheelhouse of the San Francisco Cable cars.</p>
+<p>Frank’s parents also didn’t want him to climb because of the danger of course, and several times told of their anguish when the hospital in Yosemite phoned them after the 80’ leader fall. They were very happy when he got married and stopped all that. I’m not sure if they had heard the prediction that he would not live to be 30, but were devastated when he was killed as they didn’t even know that he had taken up climbing again. I was shocked for the same reason as I thought having gotten him through age 30 alive, and because of his avowals to never get involved in serious ice climbing, that he was safe.</p>
+<p>Frank’s father also did not want him to be a physicist and preferred him to become an engineer instead. In his father’s eyes, engineers were normal, while he didn’t want his son to grow up “weird like Einstein”. Of course this became a joke between us, and from time to time I teased him that he was becoming just as nutty as that great scientist.</p>
+<p>Frank’s parents were very loving and supportive of both of us. The problem was that they just couldn’t understand us and our life most of the time. Sometimes they were bemused, other times totally mystified. Because of this, I think Frank paid a high price psychologically, for his intellectual and social mobility.</p>
+</blockquote>
+<p>On his death:</p>
+<blockquote class="blockquote">
+<p>I have been thinking about Tom Cochrane’s comments for a couple of days now along with some new information I have received in emails from various people who knew Frank in Europe.</p>
+<p>At one level I am inclined to say that we should not take dramatic statements from Frank at face value. Even though he once told Dick Erb that he hated physics that obviously wasn’t true. Likewise I am skeptical of him being scared to death of climbing.</p>
+<p>On the other hand, all the concern about courage which Tom describes, would fit with Frank’s classical education and his selection of Achilles as his role model, along with the ideal that it was better to go out in a blaze of glory than live a long life of no particular achievement. I simply don’t know because Frank never talked about his climbing career in terms of accomplishment. Occasionally he would relate an entertaining story about someone or something that happened on a particular climb, but I never once heard him speak about why he climbed or his climbing record.</p>
+<p>Whatever Frank did, it was with great intensity, including not climbing. When he quit he never looked back and hated my attempts to have enjoyable afternoons together on the rock. Maybe he did feel that if it wasn’t challenging enough to be scary, it wasn’t worth doing? I always assumed that people climbed because they enjoyed it and can see in retrospect that not understanding each others motives for climbing could have been a large part of our personal dissonance on the rock. I also feel quite sure in retrospect, that finding Jim Baldwin after his fatal fall affected Frank deeply, and probably played a large role in his decision to stop climbing. All those predictions that he would not live to be 30, no doubt became more real to him when someone he knew died.</p>
+<p>During our time together in Europe, Frank did achieve what Tom wished for him – the enjoyment of his skills in the mountains with no drama or struggle. I feel certain that he never mentioned his American climbing career to his European friends, because he didn’t want to be the object of any expectations. Evidently this continued for a few years but changed somehow, with the arrival in CERN of American ice climbers John Randle and Joe Weis. John has told me that Frank was out of shape and depressed about the bourgeois life when he arrived in Geneva, so the desire for good friends from his own culture was part of it, but boredom and lack of challenge also. Once climbing in a new medium, overcoming fear might well have been part of the attraction.</p>
+<p>Frank loathed the cold and suffered greatly from it because he was so thin. The very physical quality that helped him succeed in the Valley crack systems meant that unless constantly moving about, he would sink to the bottom of every body of water we swam in, and he always become chilled before I did. A man more unsuited to overnight alpine bivouacs could not be found. However, he might have decided with perfect Jesuit logic that it was time to endure some suffering for a change, as he had become too soft. He did subscribe to their idea that pleasure and pain in life should even out, that the goal was to be neutral. Once set on the ice climbing path, it seems possible that he waged a new battle - over both discomfort and fear.</p>
+<p>I have recently learned that after John Randle declined to climb the Shroud thinking it too late in the season, Frank told his office mate at CERN that he didn’t want to go either, that he also had a bad feeling about it, but didn’t want to let Joe Weis down. For Joe it was supposed to be his final severe climb as he knew already that his wife was two months’ pregnant. He had promised her that after this one final extreme climb he would only do safe, moderate routes because of the baby. Klara herself had a dream the night before they left, that Joe would be killed and begged him not to go. Their departure was delayed on the approach day because of her many attempts to dissuade them. Still, they went. Joe had checked the weather and it was supposed to hold.</p>
+<p>I look at the photos of the final hours of the climb posted by John, especially the one of Frank in the morning after the snow shelf bivouac, and he looks to me to already be in trouble, in a kind of hypothermic and perhaps hypoglycemic haze. I have also learned that when they were found, Frank was wearing both his and Joe’s parka. Pratt’s comments to Cochrane, “He can’t handle a bivouac…….and can’t climb worth a darn the next day”, come back to haunt. Frank’s preference for minimalism in food and clothing also gives pause for thought.</p>
+<p>We can only stand in awe of a climbing partner like Joe who would give up his own parka in the middle of a snow storm to help his friend, and from this we can also surmise that the situation was already quite desperate. I feel that Frank’s cold intolerance was probably the reason they decided to try to descend quickly via the Hirondelles route rather than go to the top in the midst of snow and lightning and then down the longer Italian descent.</p>
+<p>It seems likely that neither was thinking very clearly as all of their safety gear was in Frank’s pack, including their prussic slings. In the interests of speed they had brought along only one pair. They were off route and according to the Chamonix rescue service, already on their way to a fatal rappel off the north face when Frank fell. Perhaps he passed out first or lightning was a factor. In either case, they died tied together, Frank instantly while wearing two parkas, and Joe in only a thin windbreaker, unable to go up or down, stuck on an icy rope with only one ice axe and no prussics.</p>
+<p>Meanwhile, Frank’s motives for being up on a route unsuited to his preferences and physiology remain obscure. Was it self discipline, the desire to overcome an old fear, or friendship and obligation? We will never know. It’s possible that his second career of extreme climbing had entirely different motivations than his first. He was a complicated man and even to those close to him, remains a mystery.</p>
+</blockquote>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "austin-hoover/blog";
+    script.dataset.repoId = "R_kgDOLpju-A";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOLpju-M4C09wV";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "0";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

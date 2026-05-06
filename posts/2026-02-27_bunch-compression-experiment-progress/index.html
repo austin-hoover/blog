@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-20">
+<meta name="author" content="Austin Hoover">
+<meta name="dcterms.date" content="2026-02-27">
 
-<title>Reading Queue – Austin’s Blog</title>
+<title>Progress on bunch compression experiments: feedback and feedforward – Austin’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,9 +44,12 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-749aa3d075cd7f4837f9b5c6285fffb8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7ca3469a10760b2af240ed1033018773.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-749aa3d075cd7f4837f9b5c6285fffb8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f0e28603281f01d59dd74e99199b23cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-3f5724f0af1f7b68a8c2596a2d91b1c0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-f0e28603281f01d59dd74e99199b23cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -305,27 +309,27 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reading Queue</h1>
-</div>
+<h1 class="title">Progress on bunch compression experiments: feedback and feedforward</h1>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Austin Hoover </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 20, 2026</p>
+      <p class="date">February 27, 2026</p>
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 20, 2026</p>
-    </div>
-  </div>
     
   </div>
   
@@ -334,26 +338,17 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
 </header>
 
 
-<section id="philosophy" class="level4">
-<h4 class="anchored" data-anchor-id="philosophy">Philosophy</h4>
-<ul>
-<li><a href="https://www.amazon.com/Bullshit-Harry-G-Frankfurt/dp/0691122946"><em>On Bullshit</em></a> — Frankfurt (2005)</li>
-<li><a href="https://www.amazon.com/Dialogues-Ethical-Vegetarianism-Michael-Huemer/dp/1138328294"><em>Dialogues on Ethical Vegetarianism</em></a> — Huemer (2019)</li>
-<li><a href="https://www.amazon.com/dp/B005Z5A2JO?tag=oxacglobal-20&amp;linkCode=osi&amp;th=1&amp;psc=1"><em>Taking Morality Seriously: A Defense of Robust Realism</em></a> — Enoch (2011)</li>
-<li><a href="https://www.amazon.com/Ethical-Theory-Paradoxes-Experiments-Philosophy/dp/1032335165"><em>Ethical Theory (Puzzles, Paradoxes, and Thought Experiments in Philosophy)</em></a> — Munoz and Stroud (2024)</li>
-<li><a href="https://www.amazon.com/Metaphysics-Peter-van-Inwagen/dp/0813343569"><em>Metaphysics</em></a> — Van Inwagen (2008)</li>
-<li><a href="https://www.amazon.com/Miracle-Theism-Arguments-Against-Existence/dp/019824682X"><em>The Miracle of Theism: Arguments For and Against the Existence of God</em></a> — Mackie (1982)</li>
-</ul>
-</section>
-<section id="papers" class="level4">
-<h4 class="anchored" data-anchor-id="papers">Papers</h4>
-<ul>
-<li><a href="https://statisticaleconomics.org/wp-content/uploads/2013/03/the_use_of_knowledge_in_society_-_hayek.pdf"><em>The Use of Knowledge in Society</em></a> — Hayek (1945)</li>
-<li><a href="https://web-archive.southampton.ac.uk/cogprints.org/7150/1/10.1.1.83.5248.pdf"><em>Minds, Brains, and Programs</em></a> — Searle (1980)</li>
-</ul>
+<p>The goal of these experiments is to longitudinally compress a full-intensity proton bunch in the SNS ring. The first step is to minimize the growth in energy spread during accumulation, since the final compressed bunch length scales inversely with the initial energy spread. Ideally we’d use a <a href="https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.25.050101">barrier cavity</a>, but we don’t have one at the SNS, so we’re seeing what we can do with the current rf system. We got to try a few approaches last year inbetween a pair of long (three-month) shutdowns.</p>
+<p>The main problem during accumulation is <em>beam loading</em>: the beam induces a voltage in the cavity. The induced voltage exceeds the maximum allowed value after only a few hundred turns of accumulation, so higher beam intensities require offsetting the beam-induced voltage by modifying the cavity drive signal (amplitude and phase) in response to the beam. At the SNS, this is done automatically by a <a href="https://en.wikipedia.org/wiki/Proportional–integral–derivative_controller">feedback control loop</a> which adjusts the drive amplitude and phase until they match the readback values.</p>
+<p>We wanted to see if the feedback system could completely offset the beam-induced voltage. To test this, we set the requested voltage to zero and gradually increased the beam intensity. The figure below shows the measured cavity voltage and phase, with light curves corresponding to a 100-minipulse beam and dark curves to a 900-pulse beam. Note that the curves are offset horizontally because the extraction time is fixed, so to accumulator more turns, we shift things backward.</p>
+<p><a href="images/feedback.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/feedback.png" class="img-fluid"></a></p>
+<p>Each curve shows a similar voltage spike at the beginning of injection, then an asymptotic decrease until extraction. One important result is that the induced voltage never extends beyond 3 kV. The compression ratio is approximately the square root of the voltage ratio before/after compression, so with a 10 kV compression voltage, we could expect a minimum compression ratio of 1.8 at worst. the average voltage is much less than 3 kV, so the maximum actual compression ratio could be much larger.</p>
+<p>I don’t completely understand the shape of voltage and phase curves. After the experiment, we noticed that the injected pulse width (i.e.&nbsp;intensity) was linearly ramped over the first 100 turns of injection, the same period as the initial voltage spike in the figure (the first part of the triangle). So it’s possible the feedback system just doesn’t perform well when the intensity per pulse is changing. I’ll need to simulate the beam-cavity interaction and feedback system to understand this better. But we should be able to correct this in the next experiment by reducing the pulse width ramp time.</p>
+<p>In another experiment, we started to look at <em>feedforward</em> approaches. The idea is to generate a correction waveform based on the entire voltage curve, not on the fly as in the feedback system. We implemented a custom waveform generator and did a quick test. The row in the figure below shows the beam-induced voltage and phase for a low-intensity 100-turn injection. The second row shows a correction signal with the same amplitude but a phase shifted by 180 degrees. The third row shows the beam-induced voltage with the correction signal applied. The signal is mostly damped as we hoped, although there’s a little bit of signal left over.</p>
+<p><a href="images/feedforward.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/feedforward.png" class="img-fluid"></a></p>
+<p>The hope is that these systems can work together to stamp out the beam-induced voltage during high-intensity accumulation. It’s a little complicated when the feedback is included because the feedforward waveform will change the beam dynamics on the subsequent injection cycle, so this suggests an iterative approach. I’m guessing it won’t actually be that difficult since the feedback seems to be doing well on its own, so the feedforward might not need need to make any drastic changes.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -769,7 +764,71 @@ gtag('config', 'G-DLC4C8LZFB', { 'anonymize_ip': true});
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "austin-hoover/blog";
+    script.dataset.repoId = "R_kgDOLpju-A";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOLpju-M4C09wV";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "0";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
