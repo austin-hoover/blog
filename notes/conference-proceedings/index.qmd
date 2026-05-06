@@ -1,8 +1,10 @@
 ---
 title: "Conference Proceedings"
 date: 2026-03-08
-date-modified: 2026-03-08
+date-modified: 2026-05-05
 ---
 
 
 * [HB 2025](https://meow.elettra.eu/83/)
+* [Hb 2023](https://proceedings.jacow.org/hb2023/)
+* [SC Workshop 2022](https://conference.sns.gov/event/335/timetable/#20221024.detailed)
