@@ -49,8 +49,8 @@
   <pubDate>Wed, 22 Apr 2026 04:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Beam Loading in RF Cavities</title>
-  <link>https://austin-hoover.github.io/blog/notes/beam-loading/</link>
+  <title>Beam-Cavity Interaction and Feedback Loops</title>
+  <link>https://austin-hoover.github.io/blog/notes/beam-cavity-interaction/</link>
   <description><![CDATA[ 
 
 
@@ -58,19 +58,20 @@
 
 
 <ul>
-<li><a href="https://cds.cern.ch/record/302480/files/p415.pdf">Beam Loading</a> — Boussard (1995)</li>
-<li><a href="https://cds.cern.ch/record/2843933/files/CERN-PS-91-33-RF.pdf">Beam Loading in RF Cavities</a> — Garoby (1990)</li>
-<li><a href="https://ieeexplore.ieee.org/document/73037">RF system for high beam intensity acceleration in the CERN PS</a> — Garoby (1989)</li>
-<li><a href="https://www-sciencedirect-com.ornl.idm.oclc.org/science/article/pii/S0168900210001646">A transient model for RF cavity analysis under beam loading</a> — Hasssanzadage (2010)</li>
-<li><a href="https://inspirehep.net/files/1caabb8022e6e7957f83bfc688aad770">Study of the beam-cavity interaction in the CERN PS 10 MHz cavities and investigation of hardware solutions to reduce beam loading</a> — Favia (2017)</li>
-<li><a href="https://proceedings.jacow.org/ipac2016/papers/mopor012.pdf">Study of the beam-cavity interaction in the PS 10 MHz RF system</a> – Favia (2016)</li>
+<li><a href="https://journals.aps.org/prab/pdf/10.1103/bxs4-f9nl">Coupling local and global rf feedback loops for macroparticle tracking simulations</a> — Karlsen-Baeck et al.&nbsp;(2026)</li>
 <li><a href="https://arxiv.org/pdf/2603.20733">Beam loading analysis and control in standing wave cavities</a> — Zheqiao Geng (2026, arxiv)</li>
+<li><a href="https://proceedings.jacow.org/ipac2016/papers/mopor012.pdf">Study of the beam-cavity interaction in the PS 10 MHz RF system</a> – Favia (2016)</li>
+<li><a href="https://inspirehep.net/files/1caabb8022e6e7957f83bfc688aad770">Study of the beam-cavity interaction in the CERN PS 10 MHz cavities and investigation of hardware solutions to reduce beam loading</a> — Favia (2017)</li>
+<li><a href="https://www-sciencedirect-com.ornl.idm.oclc.org/science/article/pii/S0168900210001646">A transient model for RF cavity analysis under beam loading</a> — Hasssanzadage (2010)</li>
+<li><a href="https://ieeexplore.ieee.org/document/73037">RF system for high beam intensity acceleration in the CERN PS</a> — Garoby (1989)</li>
+<li><a href="https://cds.cern.ch/record/2843933/files/CERN-PS-91-33-RF.pdf">Beam Loading in RF Cavities</a> — Garoby (1990)</li>
+<li><a href="https://cds.cern.ch/record/302480/files/p415.pdf">Beam Loading</a> — Boussard (1995)</li>
 </ul>
 
 
 
  ]]></description>
-  <guid>https://austin-hoover.github.io/blog/notes/beam-loading/</guid>
+  <guid>https://austin-hoover.github.io/blog/notes/beam-cavity-interaction/</guid>
   <pubDate>Wed, 25 Mar 2026 04:00:00 GMT</pubDate>
 </item>
 <item>
