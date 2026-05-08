@@ -1,7 +1,7 @@
 ---
 title: "Collisionless Relaxation"
 date: 2026-01-31
-date-modified: 2026-02-20
+date-modified: 2026-05-07
 ---
 
 #### Queue
@@ -13,3 +13,4 @@ date-modified: 2026-02-20
 * [*Non-equilibrium Statistical Mechanics of Two-dimensional Vortices*](https://arxiv.org/pdf/1807.05945) --- Pakter and Levin (2018)
 * [*Weak convergence to equilibrium of statistical ensembles in integrable Hamiltonian systems*](https://pubs.aip.org/aip/jmp/article/60/5/052702/234753) --- Mitchell (2019)
 * [*Generalized Entropy Production in Collisionless Plasma Flows and Turbulence*](https://journals.aps.org/prx/pdf/10.1103/PhysRevX.12.031011) --- Zhdankin (2022)
+* [*Experimental observation of violent relaxation*](https://www.nature.com/articles/s42005-024-01684-9) --- Braidotti et al. (2024)
