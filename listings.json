@@ -142,6 +142,7 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/collisionless-relaxation/index.html",
       "/notes/space-charge/index.html",
       "/notes/conference-proceedings/index.html",
       "/notes/reading-list/index.html",
@@ -160,7 +161,6 @@
       "/notes/blogs/index.html",
       "/notes/beam-plasma-physics-simulation/index.html",
       "/notes/nonlinear-dynamics/index.html",
-      "/notes/collisionless-relaxation/index.html",
       "/notes/halo-formation/index.html",
       "/notes/accelerators/index.html",
       "/notes/articles/index.html",
