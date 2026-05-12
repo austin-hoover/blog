@@ -1,7 +1,7 @@
 ---
 title: "Philosophy of Science"
 date: 2026-02-22
-date-modified: 2026-02-24
+date-modified: 2026-05-12
 ---
 
 
@@ -12,7 +12,7 @@ date-modified: 2026-02-24
 * [*Philosophy of Physics: Quantum Theory*](https://press.princeton.edu/books/hardcover/9780691183527/philosophy-of-physics?srsltid=AfmBOooKv1KtEpywYIo2ynkNdN5CmTamagt3Xk6C8WsmdVbywJL-tI8Y) --- Tim Maudlin (2019) 
 * [*The Emergent Multiverse: Quantum Theory according to the Everett Interpretation*](https://www.amazon.com/Emergent-Multiverse-Quantum-according-Interpretation/dp/0198707541) --- David Wallace (2014)
 * [*How the Laws of Physics Lie*](https://www.amazon.com/How-Laws-Physics-Nancy-Cartwright/dp/0198247044) --- Nancy Cartwright (1983)
-* [*Laws of Physics*](https://www.amazon.com/Laws-Physics-Elements-Philosophy/dp/100901272X) --- Eddie Chen (2024)
+* [*Laws of Physics (Elements in the Philosophy of Physics)*](https://www.amazon.com/Laws-Physics-Elements-Philosophy/dp/100901272X) --- Eddie Chen (2024)
 * [*Causation as Folk Science*](https://sites.pitt.edu/~jdnorton/papers/003004.pdf) --- John Norton (2003)
 
 
@@ -29,3 +29,18 @@ date-modified: 2026-02-24
 * [*The Structure of Scientific Revolutions*](https://www.lri.fr/~mbl/Stanford/CS477/papers/Kuhn-SSR-2ndEd.pdf) --- Thomas Kuhni (1962)
 * [*Scientific Revolutions*](https://plato.stanford.edu/entries/scientific-revolutions/) --- Stanford Encyclopedia of Philosophy (2009)
 * [*"The Structure of Scientific Revolutions" and its Significance: An Essay Review of the Fiftieth Anniversary Edition*](https://www.researchgate.net/publication/260138780_The_Structure_of_Scientific_Revolutions_and_its_Significance_An_Essay_Review_of_the_Fiftieth_Anniversary_Edition) --- Alexander Bird (2012)
+
+* *Foundations of Quantum Mechanics* --- Adlam (2021)
+* *The Temporal Asymmetry of Causation* --- Fernandes (2023)
+* *Emergence and Reduction in Physics* --- Palacios (2022)
+* *Global Spacetime Structure* --- Manchak (2020)
+* *The Classical–Quantum Correspondence* --- Feintzeig (2023)
+* *Physics and Computation* --- Duwell (2021)
+* *Epistemology of Experimental Physics* --- Boyd (2021)
+* *Structure and Equivalence* --- Newar (2022)
+* *Idealizations in Physics* --- Shech (2023)
+* *Special Relativity* --- Read (2023)
+* *Philosophy of Particle Physics* --- Williams (2023)
+* *Foundations of Statistical Mechanics* --- Frigg (2024)
+* *From Randomness and Entropy to the Arrow of Time* --- Zuchowski (2024)
+* *Philosophy of Physical Magnitudes* --- Niels (2024)
