@@ -12,6 +12,8 @@
   author: "Prebibaj et al."
   year: 2025
   path: "https://arxiv.org/pdf/2511.18044"
+  categories:
+    - Experiments
 
 - title: "Pulsed Electron Lenses for Space Charge Mitigation"
   author: "Oeftiger and Boine-Frankenheim"

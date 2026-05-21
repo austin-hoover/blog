@@ -19,6 +19,7 @@ listing:
       author: "Author"
       year: "Year"
     page-size: 999
+    categories: true
 ---
 
 To do: start adding category labels.
