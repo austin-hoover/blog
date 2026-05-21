@@ -2332,7 +2332,7 @@ Year
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-title-sort="Space-Charge Effects During Half-Integer Resonance Crossing in the CERN PSB" onclick="href = this.querySelector('a').getAttribute('href');
+<tr data-index="0" data-categories="RXhwZXJpbWVudHM=" data-listing-title-sort="Space-Charge Effects During Half-Integer Resonance Crossing in the CERN PSB" onclick="href = this.querySelector('a').getAttribute('href');
  if (href) { window.location=href ; return false; }">
 <td>
 <a href="https://arxiv.org/pdf/2511.18044" class="title listing-title">Space-Charge Effects During Half-Integer Resonance Crossing in the CERN PSB</a>
