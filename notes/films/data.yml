@@ -1,3 +1,11 @@
+- title: "Anatomy of a Fall"
+  director: "Triet"
+  year: 2023
+
+- title: "The Wonderers"
+  director: "Japy"
+  year: 2025
+
 - title: "Tokyo Story"
   director: "Ozu"
   year: 1953
@@ -45,6 +53,10 @@
 - title: "Hell or High Water"
   director: "Mackenzie"
   year: 2016
+
+- title: "Dheepan"
+  director: "Audiard"
+  year: 2015
 
 - title: "Persona"
   director: "Bergman"
