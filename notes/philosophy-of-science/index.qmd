@@ -1,7 +1,7 @@
 ---
 title: "Philosophy of Science"
 date: 2026-02-22
-date-modified: 2026-05-12
+date-modified: 2026-06-02
 ---
 
 
@@ -29,6 +29,7 @@ date-modified: 2026-05-12
 * [*The Structure of Scientific Revolutions*](https://www.lri.fr/~mbl/Stanford/CS477/papers/Kuhn-SSR-2ndEd.pdf) --- Thomas Kuhni (1962)
 * [*Scientific Revolutions*](https://plato.stanford.edu/entries/scientific-revolutions/) --- Stanford Encyclopedia of Philosophy (2009)
 * [*"The Structure of Scientific Revolutions" and its Significance: An Essay Review of the Fiftieth Anniversary Edition*](https://www.researchgate.net/publication/260138780_The_Structure_of_Scientific_Revolutions_and_its_Significance_An_Essay_Review_of_the_Fiftieth_Anniversary_Edition) --- Alexander Bird (2012)
+* [*Theory and Reality: An Introduction to the Philosophy of Science*](https://www.amazon.com/Theory-Reality-Introduction-Philosophy-Foundations/dp/0226300633) --- Peter Godfrey-Smith (2003)
 
 * *Foundations of Quantum Mechanics* --- Adlam (2021)
 * *The Temporal Asymmetry of Causation* --- Fernandes (2023)
