@@ -30,7 +30,6 @@ date-modified: 2026-06-02
 * [*Scientific Revolutions*](https://plato.stanford.edu/entries/scientific-revolutions/) --- Stanford Encyclopedia of Philosophy (2009)
 * [*"The Structure of Scientific Revolutions" and its Significance: An Essay Review of the Fiftieth Anniversary Edition*](https://www.researchgate.net/publication/260138780_The_Structure_of_Scientific_Revolutions_and_its_Significance_An_Essay_Review_of_the_Fiftieth_Anniversary_Edition) --- Alexander Bird (2012)
 * [*Theory and Reality: An Introduction to the Philosophy of Science*](https://www.amazon.com/Theory-Reality-Introduction-Philosophy-Foundations/dp/0226300633) --- Peter Godfrey-Smith (2003)
-
 * *Foundations of Quantum Mechanics* --- Adlam (2021)
 * *The Temporal Asymmetry of Causation* --- Fernandes (2023)
 * *Emergence and Reduction in Physics* --- Palacios (2022)
