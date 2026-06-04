@@ -1,4 +1,0 @@
----
-title: "IPAC 2026 highlights"
-draft: true
----

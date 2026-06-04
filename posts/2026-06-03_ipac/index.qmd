@@ -1,0 +1,36 @@
+---
+title: "IPAC 2026 talks"
+author: Austin Hoover
+date: 2026-06-03
+categories:
+  - conferences
+  - research
+---
+
+* [CERN: future vision and priorities](https://indico.jacow.org/event/95/contributions/11876/attachments/1246/6496/MOI1M01_talk.pdf) --- Thompson (CERN)
+* [The bright future of synchrotron science](https://indico.jacow.org/event/95/contributions/11877/attachments/1245/6495/IPAC-2026-Chapon-Synchrotron.pdf) --- Chapon (ANL)
+* [AI/ML for Particle Accelerators: A Look Backward and Forward](https://indico.jacow.org/event/95/contributions/11881/attachments/2084/7594/FRI6M02_talk_edited_version.pdf) --- Edelen (SLAC)
+* [Manipulating and diagnosing electron beam with cross-plane coupling in transverse and longitudinal phase spaces](https://indico.jacow.org/event/95/contributions/11896/attachments/1194/7596/WEI5M02_talk_edited_version.pdf) --- Kim (Pohang Accelerator Laboratory)
+* [The detection of the fixed lines in four-dimensional phase space](https://indico.jacow.org/event/95/contributions/12398/attachments/1868/7580/FRO5T01_talk_edited_version.pdf) --- Franchetti (GSI)
+* [Controlled injection and acceleration of 10 GeV-class electron beams in a laser wakefield accelerator](https://indico.jacow.org/event/95/contributions/11891/attachments/1997/7637/WEI3T01_talk_edited_version.pdf) --- Picksley (LBNL)
+* [Accelerator-based lithography and the Induction Storage Ring Light Source](https://indico.jacow.org/event/95/contributions/12172/attachments/2010/7583/WEI8M01_talk_edited_version.pdf) --- Ehrlichman (SLAC)
+* [Approximate Invariant Analysis: An Efficient Framework for Nonlinear Beam Dynamic](https://indico.jacow.org/event/95/contributions/12399/attachments/1196/7592/FRO5T02_talk_edited_version.pdf) --- Li (LBNL)
+* [First acceleration of positive muons: from initial demonstration to high-energy development](https://indico.jacow.org/event/95/contributions/11878/attachments/2008/7585/MOI4M02_talk_edited_version.pdf) --- Otani (KEK)
+* [Commissioning progress of the ESS linear accelerator](https://indico.jacow.org/event/95/contributions/11879/attachments/1217/6487/MOI4M03_talk.pdf) --- Milas (ESS)
+* [Beam Dynamics in the SNS Linac and Beam Test Facility](https://indico.jacow.org/event/95/contributions/12173/attachments/1219/7581/FRI5T01_talk_edited_version.pdf) --- Ruisard (ORNL)
+* [Realization of High-Intensity Beams with Smaller Emittance Without a Transverse Feedback System](https://indico.jacow.org/event/95/contributions/11898/attachments/1207/6386/WEI5M03_talk.pdf) --- Shobuda (J-PARC)
+* [A quarter century of RHIC: performance far beyond design](https://indico.jacow.org/event/95/contributions/11884/attachments/2089/8223/WEI1T01_edited_version.pdf) --- Minty (BNL)
+* [Performance Strategy for the First Years of the EIC Science Program](https://indico.jacow.org/event/95/contributions/12369/attachments/1237/7601/WEO1T02_talk_edited_version.pdf) --- Blednykh (BNL)
+* [Progress Towards a Muon Collider](https://indico.jacow.org/event/95/contributions/12374/attachments/1482/7582/MOO1T03_talk_edited_version.pdf) --- Jurj (IMCC)
+* [The Ghost Collider: An innovative Higgs Factory](https://indico.jacow.org/event/95/contributions/12372/attachments/1209/6450/MOO1T02_talk.pdf) --- Apsimon (Lancaster University)
+* [Project status and R&D efforts for Super Tau-Charm Facility](https://www.ipac26.org/prepress/pdf/MOI1T01.pdf) --- Tang (USTC)
+* [Linear collider studies and prospects](https://indico.jacow.org/event/95/contributions/11909/attachments/1375/7560/MOI1T02_talk_edited_version.pdf) --- Stapnes (University of Oslo)
+* [Obtaining a record luminosity production in the Large Hadron Collider in 2025](https://indico.jacow.org/event/95/contributions/12373/attachments/1195/6438/MOO1T01_talk.pdf) --- Wenninger (CERN)
+* [First direct observation of a wakefield generated with structured light](https://indico.jacow.org/event/95/contributions/11890/attachments/1193/7126/TUI3T02_edited_version.pdf) ---  Liberman (Weizmann Institute of Science)
+* [Particle Accelerator-driven Muon Spectroscopy: An invaluable tool to understand our material world](https://indico.jacow.org/event/95/contributions/11905/attachments/1999/7567/TUI8T01_talk_edited_version.pdf) --- Hillier (STFC)
+* [Mapping global collaboration in accelerator research](https://indico.jacow.org/event/95/contributions/12467/attachments/2048/7998/TUV8002_edited_version.pdf) --- Zamora (University of Lausanne)
+* [Progress and status of HIAF project](https://indico.jacow.org/event/95/contributions/11895/attachments/1215/6408/Status%20and%20progress%20of%20HIAF%20project-Jiancheng%20Yang.pdf) --- Yang (IMP)
+* [First direct observation of a wakefield generated with structured light](https://indico.jacow.org/event/95/contributions/11890/attachments/1193/7126/TUI3T02_edited_version.pdf) ---  Liberman (Weizmann Institute of Science)
+* Achieving a record dynamic range of halo diagnostics with a novel fluorescence wire concept --- Yang
+* [Terahertz techniques in the advanced accelerator landscape](https://indico.jacow.org/event/95/contributions/12385/attachments/1837/8270/THO3T02_edited_version.pdf) --- Hibberd (Daresbury)
+* [Crab cavities for light sources and particle colliders](https://indico.jacow.org/event/95/contributions/11897/attachments/2007/7574/WEI5M01_talk_edited_version.pdf) --- Calaga (CERN)
