@@ -399,28 +399,6 @@ window.Quarto = {
 <li><a href="https://upstream.force11.org/the-preprint-revolution-implications-for-bibliographic-databases/">The preprint revolution</a></li>
 <li><a href="https://www.polygon.com/features/2020/5/27/21265613/runescape-is-helping-venezuelans-survive">Runescape helps Venezuelans survive</a></li>
 <li><a href="https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html">The False Promise of ChatGPT</a></li>
-<li>Journals
-<ul>
-<li><a href="https://pubs.aip.org/aip/cha">Chaos</a></li>
-<li><a href="https://www.nature.com/nphys/">Nature Physics</a></li>
-<li><a href="https://journals.aps.org/prab/">PRAB</a></li>
-<li><a href="https://journals.aps.org/pre/">PRE</a></li>
-<li><a href="https://journals.aps.org/prl/">PRL</a></li>
-<li><a href="https://www.science.org/journal/science">Science</a></li>
-<li><a href="https://mjl.clarivate.com/home">Web of Science Master Journal List</a></li>
-</ul></li>
-<li>Preprint servers
-<ul>
-<li><a href="https://arxiv.org">ArXiv</a></li>
-<li><a href="https://arxiv.org/list/physics.acc-ph/recent">ArXiv (accelerator physics)</a></li>
-<li><a href="https://arxiv.org/list/astro-ph.GA/recent">ArXiv (astrophysics of galaxies)</a></li>
-<li><a href="https://arxiv.org/list/nlin.CD/recent">ArXiv (chaotic dynamics)</a></li>
-<li><a href="https://arxiv.org/list/physics.comp-ph/recent">ArXiv (computational physics)</a></li>
-<li><a href="https://arxiv.org/list/physics.data-an/recent">ArXiv (data analysis, statistics, and probability)</a></li>
-<li><a href="https://arxiv.org/list/physics.hist-ph/recent">ArXiv (history and philosophy of physics)</a></li>
-<li><a href="https://philsci-archive.pitt.edu/cgi/latest_days2?n=30">PhilSci</a></li>
-<li><a href="https://philpeople.org">philpeople.org</a></li>
-</ul></li>
 </ul>
 
 
@@ -518,7 +496,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/blog\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
