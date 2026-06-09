@@ -1,17 +1,16 @@
-- title: "The Gulag Archipelago: An Experiment in Literary Investigation"
-  year: "1973"
-  author: "Solzhenitsyn"
-  categories:
-    - History
-    - Politics
-    - Russia
-
 - title: "A Theory of Justice"
   year: "1971"
   author: "Rawls"
   categories:
     - Philosophy
     - Politics
+
+- title: "Dialogues on Ethical Vegetarianism"
+  year: 2025
+  author: Huemer
+  categories:
+    - Philosophy
+    - Ethics
 
 - title: "Anarchy, State, and Utopia"
   year: 1974
@@ -154,13 +153,6 @@
   categories:
     - Philosophy
     - Politics
-
-- title: "Dialogues on Ethical Vegetarianism"
-  year: 2025
-  author: Huemer
-  categories:
-    - Philosophy
-    - Ethics
 
 - title: "Dialogues on Democracy"
   year: 2024
@@ -398,7 +390,7 @@
     - History
     - Religion
 
-- title: "The Rise and Fall of the EAST"
+- title: "The Rise and Fall of the East"
   year: "2023"
   author: "Huang"
   categories:
