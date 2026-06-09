@@ -146,14 +146,14 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/reading-list/index.html",
+      "/notes/books/index.html",
       "/notes/films/index.html",
       "/notes/philosophy-of-science/index.html",
       "/notes/space-charge/index.html",
-      "/notes/reading-list/index.html",
       "/notes/collisionless-relaxation/index.html",
       "/notes/conference-proceedings/index.html",
       "/notes/ornl-ap-papers/index.html",
-      "/notes/books/index.html",
       "/notes/beam-cavity-interaction/index.html",
       "/notes/equality/index.html",
       "/notes/videos/index.html",
