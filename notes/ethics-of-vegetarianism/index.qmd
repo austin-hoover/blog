@@ -1,0 +1,22 @@
+---
+title: "Ethics of Vegetarianism and Veganism"
+date: 2026-06-13
+date-modified: 2026-06-13
+format:
+  html:
+    css: style.css
+    page-layout: full
+listing:
+  - contents: data.yml
+    type: table
+    sort-ui: true
+    filter-ui: true
+    table-hover: true
+    fields: [title, author, year]
+    field-display-names: 
+      title: "Title"
+      author: "Author"
+      year: "Year"
+    page-size: 999
+    categories: true
+---
