@@ -1,3 +1,43 @@
+- title: "Animal Liberation"
+  author: "Singer"
+  year: 1975
+  path: "https://www.amazon.com/Animal-Liberation-Definitive-Classic-Movement/dp/0061711306"
+
+- title: "Animal Minds"
+  author: "Searle"
+  year: 1984
+  path: "https://christianebailey.com/wp-content/uploads/2012/02/Searle-Animal-Minds.pdf"
+
+- title: "Vegetarianism"
+  author: "Rachels"
+  year: 2011
+  path: "https://philpapers.org/archive/RACV.pdf"
+
+- title: "Pains and pain sensations"
+  author: "Nelkin"
+  year: 1986
+  path: "https://www.jstor.org/stable/pdf/2026571.pdf?casa_token=jA--ulLXOOQAAAAA:Mh2kF3GodoSfCnIH-5f0BL_c8TZUmiu1tI-sRzbkbJTas5Jq-NujK-i6Qzm39FwPGEXTg-OknWZ26p-7qT7Nip4qSOwTozFLQHLtKhRpYQ-_iJeDLn14"
+
+- title: "Animal Pain"
+  author: "Allen"
+  year: 2004
+  path: "https://www.jstor.org/stable/pdf/3506216.pdf?casa_token=UHjK8BSdFlYAAAAA:tWlqAICgd9MHDWIJ2D0dj1fC-dvB1Fsr7Iqq-cohlQfb5lw079KxGn-3P38eVe5s-aOc27Ccz8_3Y8sFG55H7yunMZencdwBy85zPQ4lJrzFJHYY6Unq"
+
+- title: "Brute experience"
+  author: "Carruthers"
+  year: 1989
+  path: "https://www.jstor.org/stable/pdf/2027110.pdf?casa_token=EBUygMAYwO0AAAAA:3P0UUnOlUgkMCiZhUiaXeKtyDBfRFs_DI3guVgR0npxacUoay7I4M8FA7M1DbTwjBdTfs4ZYL7Av3QbnF6VR67iqHdbYW9aZy2tKuUj_YcI4Ozy78QDY"
+
+- title: "The Emotional Lives of Animals"
+  author: "bekoff"
+  year: 2008
+  path: "https://www.amazon.com/Emotional-Lives-Animals-revised-Scientist/dp/1608689190"
+
+- title: "Taking animals seriously: mental life and moral status"
+  author: "DeGrazia"
+  year: 1996
+  path: "https://www.amazon.com/s?k=9780521567602&i=stripbooks&linkCode=qs"
+  
 - title: "Comparing lives and epistemic limitations: A critique of regan's lifeboat from an unprivileged position"
   author: "Abbate"
   year: 2015
@@ -12,11 +52,6 @@
   author: "Carruthers"
   year: 1992
   path: "https://web.archive.org/web/20170517013406id_/http://www.filosofia.unimi.it:80/~zucchi/NuoviFile/TheAnimalsIssue.pdf"
-
-- title: "Taking animals seriously: mental life and moral status"
-  author: "DeGrazia"
-  year: 1996
-  path: "https://www.amazon.com/s?k=9780521567602&i=stripbooks&linkCode=qs"
 
 - title: "Are we smart enough to know how smart animals are?"
   author: "Waal"
@@ -63,11 +98,6 @@
   year: 2018
   path: "https://api.taylorfrancis.com/content/books/mono/download?identifierName=doi&identifierValue=10.4324/9781315755113&type=googlepdf"
 
-- title: "Animal Liberation"
-  author: "Singer"
-  year: 1975
-  path: "https://www.amazon.com/Animal-Liberation-Definitive-Classic-Movement/dp/0061711306"
-
 - title: "The New Chimpanzee: A Twenty-First-Century Portrait of Our Closest Kin"
   author: "Stanford"
   year: 2018
@@ -113,50 +143,20 @@
   year: 2015
   path: "https://r.jordan.im/download/ethics/Politico-Moral%20Apathy%20and%20Omnivore%27s%20Akrasia.pdf"
 
-- title: "Animal Pain"
-  author: "Allen"
-  year: 2004
-  path: "https://www.jstor.org/stable/pdf/3506216.pdf?casa_token=UHjK8BSdFlYAAAAA:tWlqAICgd9MHDWIJ2D0dj1fC-dvB1Fsr7Iqq-cohlQfb5lw079KxGn-3P38eVe5s-aOc27Ccz8_3Y8sFG55H7yunMZencdwBy85zPQ4lJrzFJHYY6Unq"
-
-- title: "The Emotional Lives of Animals"
-  author: "bekoff"
-  year: 2008
-  path: "https://www.amazon.com/Emotional-Lives-Animals-revised-Scientist/dp/1608689190"
-
-- title: "Brute experience"
-  author: "Carruthers"
-  year: 1989
-  path: "https://www.jstor.org/stable/pdf/2027110.pdf?casa_token=EBUygMAYwO0AAAAA:3P0UUnOlUgkMCiZhUiaXeKtyDBfRFs_DI3guVgR0npxacUoay7I4M8FA7M1DbTwjBdTfs4ZYL7Av3QbnF6VR67iqHdbYW9aZy2tKuUj_YcI4Ozy78QDY"
-
 - title: "Why we love dogs, eat pigs, and wear cows: An introduction to carnism"
   author: "Joy"
   year: 2009
   path: "https://d1wqtxts1xzle7.cloudfront.net/5447422/NatalieGilbert_CriticalReview_Joy2010-libre.pdf?1390841582=&response-content-disposition=inline%3B+filename%3DCritical_Review_Why_we_Love_Dogs_Eat_Pig.pdf&Expires=1781381904&Signature=ZAwiynY0lq4v5cCf6HoGhH7PzI1YIx-NaP0rLVRjevCZiiA-L7bbRRmiwYaor89KVnpgSuf-skJ6AzlxNGDOXmrrK5IiEvQoWSvtVw23cM0t-Tc1rIjFsw4qfdF8GHsROJgLF0Ey~~1nRQFuMiqjJ09QTqCNoAGEEZ6azgEHRNQtQ~c~45-v3XVtKK3u5yJqYyY1KFKmd0HaQTzwn1ow3ArzSExyKNuiyj~J~52DAdQsBJlVBCu01BX5wHomRQg4Hf4e1qqHkHJa9zp5kdgZgp~rEFZ6TB36UMp1nDxQk4TehXFcSd~Y8A3KlPmE6NlnUpE-GOp-jlChqOd4ZwSxHA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA"
-
-- title: "Pains and pain sensations"
-  author: "Nelkin"
-  year: 1986
-  path: "https://www.jstor.org/stable/pdf/2026571.pdf?casa_token=jA--ulLXOOQAAAAA:Mh2kF3GodoSfCnIH-5f0BL_c8TZUmiu1tI-sRzbkbJTas5Jq-NujK-i6Qzm39FwPGEXTg-OknWZ26p-7qT7Nip4qSOwTozFLQHLtKhRpYQ-_iJeDLn14"
 
 - title: "Empathy: Philosophical and psychological perspectives"
   author: "Coplan and Goldie"
   year: 2011
   path: "https://www.amazon.com/Empathy-Philosophical-Psychological-Perspectives-Coplan/dp/0198706421"
 
-- title: "Vegetarianism"
-  author: "Rachels"
-  year: 2011
-  path: "https://philpapers.org/archive/RACV.pdf"
-
 - title: "The Unheeded Cry: Animal Consciousness, Animal Pain and Science"
   author: "Rollin"
   year: 1998
   path: "https://www.amazon.com/Unheeded-Cry-Consciousness-Science-Bioethics/dp/0192861042"
-
-- title: "Animal Minds"
-  author: "Searle"
-  year: 1984
-  path: "https://christianebailey.com/wp-content/uploads/2012/02/Searle-Animal-Minds.pdf"
 
 - title: "Veganism, (Almost) Harm-Free Animal Flesh, and Nonmaleficence: Navigating dietary ethics in an unjust world"
   author: "Abbate"

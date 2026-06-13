@@ -9,9 +9,9 @@ format:
 listing:
   - contents: data.yml
     type: table
-    sort-ui: true
-    filter-ui: true
-    table-hover: true
+    sort-ui: false
+    filter-ui: false
+    table-hover: false
     fields: [title, author, year]
     field-display-names: 
       title: "Title"
@@ -20,3 +20,5 @@ listing:
     page-size: 999
     categories: true
 ---
+
+References from Heumer's *Dialogues on Ethical Vegetarianism*:
