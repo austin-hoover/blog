@@ -18,7 +18,7 @@ listing:
       author: "Author"
       year: "Year"
     page-size: 999
-    categories: true
+    categories: false
 ---
 
 References from Heumer's *Dialogues on Ethical Vegetarianism*:

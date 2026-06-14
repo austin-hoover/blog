@@ -1,7 +1,7 @@
 ---
 title: "*Arguing About Gods*"
 date: 2021-06-12
-author: Austin Hoover
+date-modified: 2021-06-12
 categories:
   - theism
   - arguments

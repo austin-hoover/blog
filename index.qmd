@@ -1,13 +1,18 @@
 ---
 listing:
     contents: posts
-    sort: "date desc"
     type: table
-    fields: [title, date]
+    fields: [title, date-modified]
+    field-display-names:
+      title: "Title"
+      date-modified: "Date"
     date-format: YYYY‑MM‑DD
     table-hover: true
     categories: true
     page-size: 999
     sort-ui: true
     filter-ui: true
+    sort: 
+      - date-modified desc
+      - date desc
 ---

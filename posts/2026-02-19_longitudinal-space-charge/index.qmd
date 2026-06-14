@@ -1,7 +1,7 @@
 ---
 title: "Longitudinal space charge forces in long bunches"
-author: Austin Hoover
 date: 2026-02-19
+date-modified: 2026-02-19
 categories:
   - accelerators
   - space charge

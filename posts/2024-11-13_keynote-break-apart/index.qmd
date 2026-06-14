@@ -3,6 +3,7 @@ title: "Break apart images in Keynote"
 categories: misc
 toc: false
 date: 2024-11-13
+date-modified: 2024-11-13
 ---
 
 In Keynote, you can break png images into parts:

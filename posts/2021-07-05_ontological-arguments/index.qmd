@@ -1,7 +1,7 @@
 ---
 title: "*Arguing About Gods*: ontological arguments"
-author: Austin Hoover
 date: 2021-07-05
+date-modified: 2021-07-05
 categories: 
   - theism
   - arguments

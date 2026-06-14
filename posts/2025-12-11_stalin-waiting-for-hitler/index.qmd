@@ -1,7 +1,7 @@
 ---
 title: "*Stalin: Waiting for Hitler, 1929–1941*"
-author: Austin Hoover
 date: 2025-12-11
+date-modified: 2025-12-11
 categories:
   - books
   - history

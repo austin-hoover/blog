@@ -1,7 +1,7 @@
 ---
 title: "Reconstructing the 4D phase space density of a high-power proton beam from 1D measurements in the SNS ring"
 date: 2024-06-10
-author: Austin Hoover
+date-modified: 2024-06-10
 categories:
   - papers
   - entropy

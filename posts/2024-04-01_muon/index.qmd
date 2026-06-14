@@ -1,7 +1,7 @@
 ---
 title: Princeton Muon Collider Workshop
 date: 2024-04-01
-author: Austin Hoover
+date-modified: 2024-04-01
 categories:
   - conferences
 bibliography: references.bib

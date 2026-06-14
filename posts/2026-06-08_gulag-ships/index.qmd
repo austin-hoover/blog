@@ -1,7 +1,7 @@
 ---
 title: "The Ships of the Archipelago"
-author: Austin Hoover
 date: 2026-06-08
+date-modified: 2026-06-08
 categories:
   - books
   - history

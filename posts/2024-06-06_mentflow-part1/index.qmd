@@ -1,7 +1,7 @@
 ---
 title: "Maximum-entropy phase space tomography using normalizing flows (part 1)"
 date: 2024-06-06
-author: Austin Hoover
+date-modified: 2024-06-06
 categories:
   - papers
   - entropy

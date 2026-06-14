@@ -1,7 +1,7 @@
 ---
 title: "Exact solutions for 2N-dimensional phase space reconstruction from N-dimensional projections"
-author: Austin Hoover
 date: 2025-06-08
+date-modified: 2025-06-08
 bibliography: bibliography.bib
 csl: aps.csl
 toc: false

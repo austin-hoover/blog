@@ -1,7 +1,7 @@
 ---
 title: "Maximum entropy for sparse CT"
-author: Austin Hoover
 date: 2025-04-28
+date-modified: 2025-04-28
 toc: false
 categories:
   - tomography

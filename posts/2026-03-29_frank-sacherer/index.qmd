@@ -1,7 +1,7 @@
 ---
 title: "Frank Sacherer: physicist and climber"
-author: Austin Hoover
 date: 2026-03-29
+date-modified: 2026-03-29
 categories:
   - people
 ---

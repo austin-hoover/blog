@@ -1,7 +1,7 @@
 ---
 title: "IPAC 2026 talks"
-author: Austin Hoover
 date: 2026-06-03
+date-modified: 2026-06-03
 categories:
   - conferences
   - research

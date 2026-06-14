@@ -1,7 +1,7 @@
 ---
 title: "Maximum Entropy and Bayesian Inference"
 date: 2024-09-29
-author: Austin Hoover
+date-modified: 2024-09-29
 categories:
   - entropy
   - bayesian

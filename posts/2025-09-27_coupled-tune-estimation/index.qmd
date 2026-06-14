@@ -1,7 +1,7 @@
 ---
 title: "Single-turn tune estimation in coupled systems"
-author: Austin Hoover
 date: 2025-09-27
+date-modified: 2025-09-27
 bibliography: references.bib
 csl: ./aps.csl
 categories:

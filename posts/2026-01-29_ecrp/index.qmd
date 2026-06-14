@@ -1,7 +1,7 @@
 ---
 title: "2025 ECRP abstracts"
-author: Austin Hoover
 date: 2026-01-29
+date-modified: 2026-01-29
 toc: false
 ---
 
