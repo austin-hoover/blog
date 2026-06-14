@@ -1,16 +1,25 @@
+  - title: "The Gulag Archipelago: An Experiment in Literary Investigation (Volume 2)"
+  year: "1973"
+  author: "Solzhenitsyn"
+  categories:
+    - History
+    - Politics
+    - Russia
+
+  - title: "The Gulag Archipelago: An Experiment in Literary Investigation (Volume 3)"
+  year: "1973"
+  author: "Solzhenitsyn"
+  categories:
+    - History
+    - Politics
+    - Russia
+
 - title: "A Theory of Justice"
   year: "1971"
   author: "Rawls"
   categories:
     - Philosophy
     - Politics
-
-- title: "Dialogues on Ethical Vegetarianism"
-  year: 2025
-  author: Huemer
-  categories:
-    - Philosophy
-    - Ethics
 
 - title: "Anarchy, State, and Utopia"
   year: 1974
