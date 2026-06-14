@@ -80,4 +80,4 @@ Writers like Tawney, Cole, and Laski lived during the rise of the Soviet Union a
 
 #### To read
 
-I started a list of books and papers to read on [equality](../../notes/equality), stemming from this lecture.
+I started a list of books and papers to read on [equality](../equality), stemming from this lecture.
