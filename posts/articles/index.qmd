@@ -2,6 +2,8 @@
 title: "Articles"
 date: 2026-02-01
 date-modified: 2026-02-01
+categories:
+  - notes
 ---
 
 * [David Stove: Living Retired](https://web.maths.unsw.edu.au/~jim/retired.html)

@@ -2,6 +2,8 @@
 title: "Documentaries"
 date: 2026-02-28
 date-modified: 2026-02-28
+categories:
+  - notes
 format:
   html:
     css: style.css

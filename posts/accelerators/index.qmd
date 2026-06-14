@@ -2,6 +2,8 @@
 title: "Particle Accelerators"
 date: 2026-02-08
 date-modified: 2026-02-08
+categories:
+  - notes
 ---
 
 Eventually turn into a database of particle accelerators since 1930, with links to papers or websites.

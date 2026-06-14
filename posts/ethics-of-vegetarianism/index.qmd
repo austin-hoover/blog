@@ -2,6 +2,8 @@
 title: "Ethics of Vegetarianism and Veganism"
 date: 2026-06-13
 date-modified: 2026-06-13
+categories:
+  - notes
 format:
   html:
     css: style.css

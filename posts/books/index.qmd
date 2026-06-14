@@ -2,6 +2,8 @@
 title: Books
 date: 2026-01-01
 date-modified: 2026-06-08
+categories:
+  - notes
 listing:
   contents:
     - "data.yml"

@@ -2,6 +2,8 @@
 title: "Beam and Plasma Physics Simulations"
 date: 2026-02-21
 date-modified: 2026-02-21
+categories:
+  - notes
 ---
 
 

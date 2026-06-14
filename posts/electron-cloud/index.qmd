@@ -3,6 +3,8 @@ title: "Electron Cloud Instability"
 date: 2026-03-05
 date-modified: 2026-03-05
 page-layout: full
+categories:
+  - notes
 ---
 
 * [*Linearized method for the study of transverse instabilities driven by electron cloud*](https://journals.aps.org/prab/pdf/10.1103/PhysRevAccelBeams.23.081002) --- Iadarola et al. (2020)

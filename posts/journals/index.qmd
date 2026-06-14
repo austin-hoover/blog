@@ -2,6 +2,8 @@
 title: "Journals and Preprint Servers"
 date: 2026-02-08
 date-modified: 2026-03-18
+categories:
+  - notes
 ---
 
 * [PRAB](https://journals.aps.org/prab/)

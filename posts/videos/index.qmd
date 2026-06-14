@@ -2,6 +2,8 @@
 title: "Videos"
 date: 2026-03-20
 date-modified: 2026-03-20
+categories:
+  - notes
 ---
 
 * [Stephen Kotkin: Strategic Costs of US Global Success](https://www.youtube.com/watch?v=f6lYTZ7qcyY)

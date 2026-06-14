@@ -2,6 +2,8 @@
 title: "Films"
 date: 2026-01-01
 date-modified: 2026-06-02
+categories:
+  - notes
 listing:
   fields: [title, director, year]
   field-display-names:
