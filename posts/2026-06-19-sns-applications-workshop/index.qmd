@@ -1,0 +1,12 @@
+---
+title: "Workshop on new science and applications at the SNS"
+date: 2026-06-19
+date-modified: 2026-06-19
+categories:
+  - conferences
+---
+
+
+Lots of interesting slides [here](https://conference.sns.gov/event/559/page/4025-presentations).
+
+*"This workshop is a critical step in establishing opportunities for new science and applications at the SNS that are made possible by the SNS power upgrade and the track record of the successful power ramp up leading to the present 2 MW operations. The facility will be capable of up to 3 MW in a few years, enough beam power to support the SNS, the STS and other potential missions. At the Workshop we will overview scientific and application opportunities for fundamental physics, material science, fusion and nuclear energy, isotopes, and national security. Discussion among stakeholders and facility staff and leadership will help us identify the most promising opportunities and inform future development plans."*
