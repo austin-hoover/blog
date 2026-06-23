@@ -1,34 +1,6 @@
 [
   {
-    "listing": "/posts/halo-formation/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/ethics-of-vegetarianism/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/philosophy/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/space-charge/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/reading-list/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/blogs/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/films/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/books/index.html",
+    "listing": "/posts/shows/index.html",
     "items": []
   },
   {
@@ -36,12 +8,41 @@
     "items": []
   },
   {
-    "listing": "/posts/shows/index.html",
+    "listing": "/posts/books/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/films/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/blogs/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/reading-list/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/space-charge/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/philosophy/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/ethics-of-vegetarianism/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/halo-formation/index.html",
     "items": []
   },
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2026-06-22-gulag-and-the-next-day/index.html",
       "/posts/2026-06-19-sns-applications-workshop/index.html",
       "/posts/ethics-of-vegetarianism/index.html",
       "/posts/2026-06-08-gulag-ships/index.html",
