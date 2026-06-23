@@ -1,5 +1,5 @@
 ---
-title: Reading List
+title: Reading list
 date: 2026-03-05
 date-modified: 2026-06-08
 categories:

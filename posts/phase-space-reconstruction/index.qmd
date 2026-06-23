@@ -1,5 +1,5 @@
 ---
-title: "Phase Space Reconstruction"
+title: "Phase space reconstruction"
 date: 2026-01-31
 date-modified: 2026-01-31
 categories:

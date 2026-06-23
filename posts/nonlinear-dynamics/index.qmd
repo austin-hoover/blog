@@ -1,5 +1,5 @@
 ---
-title: "Nonlinear Dynamics"
+title: "Nonlinear dynamics"
 date: 2026-02-21
 date-modified: 2026-02-21
 categories:

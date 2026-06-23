@@ -1,5 +1,5 @@
 ---
-title: "The Ships of the Archipelago"
+title: "Solzhenitsyn: The ships of the Archipelago"
 date: 2026-06-08
 date-modified: 2026-06-08
 categories:

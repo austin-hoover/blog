@@ -1,5 +1,5 @@
 ---
-title: "Conference Proceedings"
+title: "Conference proceedings"
 date: 2026-03-08
 date-modified: 2026-05-05
 categories:

@@ -1,5 +1,5 @@
 ---
-title: "Electron Cloud Instability"
+title: "Electron cloud instabilities"
 date: 2026-03-05
 date-modified: 2026-03-05
 page-layout: full

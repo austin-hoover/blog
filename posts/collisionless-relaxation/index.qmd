@@ -1,5 +1,5 @@
 ---
-title: "Collisionless Relaxation"
+title: "Collisionless relaxation"
 date: 2026-01-31
 date-modified: 2026-05-07
 categories:

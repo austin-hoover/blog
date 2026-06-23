@@ -1,5 +1,5 @@
 ---
-title: "Research Tools"
+title: "Research tools"
 date: 2026-01-01
 date-modified: 2026-01-01
 categories:
