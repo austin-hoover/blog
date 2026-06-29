@@ -1,13 +1,5 @@
 [
   {
-    "listing": "/posts/shows/index.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/documentaries/index.html",
-    "items": []
-  },
-  {
     "listing": "/posts/books/index.html",
     "items": []
   },
@@ -32,7 +24,15 @@
     "items": []
   },
   {
-    "listing": "/posts/ethics-of-vegetarianism/index.html",
+    "listing": "/posts/dialogues-on-ethical-vegetarianism/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/documentaries/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/shows/index.html",
     "items": []
   },
   {
@@ -44,7 +44,7 @@
     "items": [
       "/posts/2026-06-22-gulag-and-the-next-day/index.html",
       "/posts/2026-06-19-sns-applications-workshop/index.html",
-      "/posts/ethics-of-vegetarianism/index.html",
+      "/posts/dialogues-on-ethical-vegetarianism/index.html",
       "/posts/2026-06-08-gulag-ships/index.html",
       "/posts/reading-list/index.html",
       "/posts/books/index.html",
