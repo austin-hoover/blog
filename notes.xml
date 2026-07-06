@@ -622,7 +622,6 @@ Year
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/dialogues-on-ethical-vegetarianism/</guid>
   <pubDate>Sat, 13 Jun 2026 04:00:00 GMT</pubDate>
 </item>
@@ -660,7 +659,6 @@ Year
 
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/ornl-ap-papers/</guid>
   <pubDate>Wed, 22 Apr 2026 04:00:00 GMT</pubDate>
 </item>
@@ -687,7 +685,6 @@ Year
 
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/beam-cavity-interaction/</guid>
   <pubDate>Wed, 25 Mar 2026 04:00:00 GMT</pubDate>
 </item>
@@ -725,7 +722,6 @@ Year
 </section>
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/equality/</guid>
   <pubDate>Fri, 20 Mar 2026 04:00:00 GMT</pubDate>
 </item>
@@ -748,7 +744,6 @@ Year
 
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/videos/</guid>
   <pubDate>Fri, 20 Mar 2026 04:00:00 GMT</pubDate>
 </item>
@@ -774,7 +769,6 @@ Year
 </section>
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/wakefield-acceleration/</guid>
   <pubDate>Wed, 18 Mar 2026 04:00:00 GMT</pubDate>
 </item>
@@ -796,7 +790,6 @@ Year
 
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/conference-proceedings/</guid>
   <pubDate>Sun, 08 Mar 2026 05:00:00 GMT</pubDate>
 </item>
@@ -2069,7 +2062,6 @@ Year
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/reading-list/</guid>
   <pubDate>Thu, 05 Mar 2026 05:00:00 GMT</pubDate>
 </item>
@@ -2096,7 +2088,6 @@ Year
 
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/electron-cloud/</guid>
   <pubDate>Thu, 05 Mar 2026 05:00:00 GMT</pubDate>
 </item>
@@ -2233,7 +2224,6 @@ Year
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/documentaries/</guid>
   <pubDate>Sat, 28 Feb 2026 05:00:00 GMT</pubDate>
 </item>
@@ -2286,22 +2276,22 @@ Year
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-title-sort="Portlandia">
+<tr data-index="0" data-listing-title-sort="The Ricky Gervais Show">
+<td>
+<span class="listing-title">The Ricky Gervais Show</span>
+</td>
+<td>
+<span class="listing-year">2010</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-title-sort="Portlandia">
 <td>
 <span class="listing-title">Portlandia</span>
 </td>
 <td>
 <span class="listing-year">2011</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-title-sort="The Americans">
-<td>
-<span class="listing-title">The Americans</span>
-</td>
-<td>
-<span class="listing-year">2013</span>
 </td>
 
 </tr>
@@ -2510,7 +2500,6 @@ Year
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/shows/</guid>
   <pubDate>Sat, 28 Feb 2026 05:00:00 GMT</pubDate>
 </item>
@@ -2571,7 +2560,6 @@ Year
 </section>
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/philosophy-of-science/</guid>
   <pubDate>Sun, 22 Feb 2026 05:00:00 GMT</pubDate>
 </item>
@@ -2619,7 +2607,6 @@ Year
 </section>
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/beam-plasma-physics-simulation/</guid>
   <pubDate>Sat, 21 Feb 2026 05:00:00 GMT</pubDate>
 </item>
@@ -2639,7 +2626,6 @@ Year
 
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/nonlinear-dynamics/</guid>
   <pubDate>Sat, 21 Feb 2026 05:00:00 GMT</pubDate>
 </item>
@@ -2745,7 +2731,6 @@ Year
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">A. W. Chao, <em>Physics of Collective Beam Instabilities in High Energy Accelerators</em>, Wiley Series in Beam Physics and Accelerator Technology (1993).</div>
 </div>
 </div></section></div> ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/chao-wake-fields/</guid>
   <pubDate>Fri, 20 Feb 2026 05:00:00 GMT</pubDate>
 </item>
@@ -2784,7 +2769,6 @@ Year
 
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/journals/</guid>
   <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
 </item>
@@ -2821,7 +2805,6 @@ Year
 
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/accelerators/</guid>
   <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
 </item>
@@ -3003,7 +2986,6 @@ Year
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/halo-formation/</guid>
   <pubDate>Tue, 03 Feb 2026 05:00:00 GMT</pubDate>
 </item>
@@ -3030,7 +3012,6 @@ Year
 
 
  ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/articles/</guid>
   <pubDate>Sun, 01 Feb 2026 05:00:00 GMT</pubDate>
 </item>
@@ -4243,7 +4224,6 @@ Year
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div> ]]></description>
-  <category>notes</category>
   <guid>https://austin-hoover.github.io/blog/notes/space-charge/</guid>
   <pubDate>Sat, 31 Jan 2026 05:00:00 GMT</pubDate>
 </item>
