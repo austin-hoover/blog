@@ -2,8 +2,6 @@
 title: "Philosophy"
 date: 2024-01-01
 date-modified: 2024-01-01
-categories:
-  - notes
 format:
   html:
     css: style.css
@@ -21,4 +19,4 @@ listing:
     page-size: 99999999
 ---
 
-Mostly philosophy of religion right now. Eventually split into separate notes.
+Random philosophy papers; mostly philosophy of religion right now. Eventually split into separate notes.

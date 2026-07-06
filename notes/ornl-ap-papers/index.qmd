@@ -2,8 +2,6 @@
 title: "Papers by ORNL Accelerator Physics Group"
 date: 2026-04-22
 date-modified: 2026-04-22
-categories:
-  - notes
 ---
 
 Incomplete list:

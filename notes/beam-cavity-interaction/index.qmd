@@ -2,8 +2,6 @@
 title: "Beam-cavity interactions and feedback loops"
 date: 2026-03-25
 date-modified: 2026-03-25
-categories:
-  - notes
 ---
 
 * [Coupling local and global rf feedback loops for macroparticle tracking simulations](https://journals.aps.org/prab/pdf/10.1103/bxs4-f9nl) --- Karlsen-Baeck et al. (2026)

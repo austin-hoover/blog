@@ -2,8 +2,6 @@
 title: "Equality"
 date: 2026-03-20
 date-modified: 2026-03-21
-categories:
-  - notes
 ---
 
 
