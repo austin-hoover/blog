@@ -1,7 +1,6 @@
 ---
 title: "Applying 6D MENT to data" 
 date: 2025-03-20
-date-modified: 2025-03-20
 toc: false
 categories:
   - papers

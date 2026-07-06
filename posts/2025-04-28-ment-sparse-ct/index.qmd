@@ -1,7 +1,6 @@
 ---
 title: "Maximum entropy for sparse CT"
 date: 2025-04-28
-date-modified: 2025-04-28
 toc: false
 categories:
   - tomography

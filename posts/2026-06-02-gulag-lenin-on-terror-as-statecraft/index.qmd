@@ -1,7 +1,6 @@
 ---
 title: "Solzhenitsyn: Lenin on terror as state policy"
 date: 2026-06-02
-date-modified: 2026-06-02
 categories:
   - books
   - history

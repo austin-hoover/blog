@@ -1,7 +1,6 @@
 ---
 title: "*Arguing About Gods*: fine-tuning arguments"
 date: 2023-07-10
-date-modified: 2023-07-10
 categories: 
   - arguments
   - theism

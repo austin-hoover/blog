@@ -1,7 +1,6 @@
 ---
 title: "Inaugural US Muon Collider Collaboration meeting"
 date: 2024-08-12
-date-modified: 2024-08-12
 categories:
   - conferences
   - accelerators

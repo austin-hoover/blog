@@ -1,7 +1,6 @@
 ---
 title: "The impact of phase space correlations on the beam dynamics in linear accelerators"
 date: 2024-10-13
-date-modified: 2024-10-13
 categories:
   - research
   - papers

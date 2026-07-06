@@ -1,7 +1,6 @@
 ---
 title: "Why maximize entropy?"
 date: 2024-05-16
-date-modified: 2024-05-16
 categories:
   - entropy
   - probability

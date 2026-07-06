@@ -1,7 +1,6 @@
 ---
 title: "Phase space spirals"
 date: 2024-12-27
-date-modified: 2024-12-27
 categories:
   - research
   - halo

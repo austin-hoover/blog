@@ -1,7 +1,6 @@
 ---
 title: "*The Sense of Style*"
 date: 2024-11-10
-date-modified: 2024-11-10
 toc: false
 categories:
   - books

@@ -1,7 +1,6 @@
 ---
 title: "*Arguing About Gods*: Leibnizian cosmological arguments"
 date: 2022-03-22
-date-modified: 2022-03-22
 categories: 
   - theism
   - arguments

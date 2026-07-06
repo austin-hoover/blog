@@ -1,11 +1,9 @@
 ---
 title: "*Arguing About Gods*"
 date: 2021-06-12
-date-modified: 2021-06-12
 categories:
   - theism
   - arguments
-image: arguing.jpg
 bibliography: references.bib
 csl: american-physics-society.csl
 ---

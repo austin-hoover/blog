@@ -1,7 +1,6 @@
 ---
 title: "Progress on bunch compression experiments: feedback and feedforward"
 date: 2026-02-27
-date-modified: 2026-02-27
 categories:
   - research
 ---

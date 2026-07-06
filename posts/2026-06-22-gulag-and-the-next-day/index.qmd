@@ -1,7 +1,6 @@
 ---
 title: "Solzhenitsyn: And the next day"
 date: 2026-06-22
-date-modified: 2026-06-22
 categories:
   - books
   - history

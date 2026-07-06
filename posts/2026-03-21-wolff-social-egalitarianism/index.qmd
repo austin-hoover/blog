@@ -1,7 +1,6 @@
 ---
 title: "Jonathan Wolff on social egalitarianism"
 date: 2026-03-21
-date-modified: 2026-03-21
 categories:
   - politics
   - equality

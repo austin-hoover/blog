@@ -1,7 +1,6 @@
 ---
 title: "Space charge resonances and instabilities"
 date: 2021-07-01
-date-modified: 2021-07-01
 categories: 
   - space charge
 format:

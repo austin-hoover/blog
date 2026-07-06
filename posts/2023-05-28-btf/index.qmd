@@ -1,7 +1,6 @@
 ---
 title: "Five-dimensional phase space measurements"
 date: 2023-05-28
-date-modified: 2023-05-28
 categories: 
   - research
   - papers

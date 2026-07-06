@@ -1,7 +1,6 @@
 ---
 title: "A 2700-page book on Lie methods in accelerator physics"
 date: 2025-06-02
-date-modified: 2025-06-02
 categories:
   - dynamics
   - books

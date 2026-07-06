@@ -1,7 +1,6 @@
 ---
 title: "*Arguing About Gods*: biological design arguments"
 date: 2023-07-09
-date-modified: 2023-07-09
 categories: 
   - arguments
   - theism

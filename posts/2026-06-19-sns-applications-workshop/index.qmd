@@ -1,7 +1,6 @@
 ---
 title: "Workshop on new science and applications at the SNS"
 date: 2026-06-19
-date-modified: 2026-06-19
 categories:
   - conferences
 ---

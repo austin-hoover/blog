@@ -1,7 +1,6 @@
 ---
 title: "Maximum Entropy and Bayesian Inference"
 date: 2024-09-29
-date-modified: 2024-09-29
 categories:
   - entropy
   - bayesian

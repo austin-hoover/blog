@@ -1,7 +1,6 @@
 ---
 title: "*Stalin: Paradoxes of Power*"
 date: 2025-12-07
-date-modified: 2025-12-07
 categories:
   - books
   - history

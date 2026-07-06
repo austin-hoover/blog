@@ -1,7 +1,6 @@
 ---
 title: "Eigenpainting: a method to mitigate space charge in high-intensity hadron beams"
 date: 2026-01-30
-date-modified: 2026-01-30
 bibliography: references.bib
 csl: ./aps.csl
 categories:

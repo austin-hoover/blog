@@ -1,7 +1,6 @@
 ---
 title: "IPAC 2026 talks"
 date: 2026-06-03
-date-modified: 2026-06-03
 categories:
   - conferences
   - research

@@ -1,7 +1,6 @@
 ---
 title: "2025 ECRP abstracts"
 date: 2026-01-29
-date-modified: 2026-01-29
 toc: false
 ---
 

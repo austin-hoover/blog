@@ -1,7 +1,6 @@
 ---
 title: "*Arguing About Gods*: Kalam cosmological arguments"
 date: 2021-09-15
-date-modified: 2021-09-15
 categories: 
   - theism
   - arguments

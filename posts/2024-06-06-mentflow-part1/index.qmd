@@ -1,7 +1,6 @@
 ---
 title: "Maximum-entropy phase space tomography using normalizing flows (part 1)"
 date: 2024-06-06
-date-modified: 2024-06-06
 categories:
   - papers
   - entropy

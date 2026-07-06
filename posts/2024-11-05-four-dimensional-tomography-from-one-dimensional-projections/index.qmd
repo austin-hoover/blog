@@ -1,7 +1,6 @@
 ---
 title: "Four-dimensional phase space tomography from one-dimensional measurements of a hadron beam"
 date: 2024-11-05
-date-modified: 2024-11-05
 categories:
   - tomography
   - sns

@@ -1,7 +1,6 @@
 ---
 title: "Gerald Minerbo"
 date: 2025-04-27
-date-modified: 2025-04-27
 toc: false
 ---
 

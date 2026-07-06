@@ -1,7 +1,6 @@
 ---
 title: "Cross-validation as uncertainty quantification"
 date: 2025-03-21
-date-modified: 2025-03-21
 toc: false
 categories:
   - uncertainty

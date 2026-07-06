@@ -1,7 +1,6 @@
 ---
 title: "*Eichmann in Jerusalem: A Report on the Banality of Evil*"
 date: 2025-03-30
-date-modified: 2025-03-30
 toc: false
 categories:
   - books

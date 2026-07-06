@@ -1,7 +1,6 @@
 ---
 title: "An attempt to reconstruct the phase space density of a hollow beam"
 date: 2026-02-01
-date-modified: 2026-02-01
 toc: false
 categories:
   - tomography
