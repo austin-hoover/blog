@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/2026-07-21-pcm/index.html",
       "/posts/2026-06-22-gulag-and-the-next-day/index.html",
       "/posts/2026-06-19-sns-applications-workshop/index.html",
       "/posts/2026-06-08-gulag-ships/index.html",
@@ -90,6 +91,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2026-07-21-pcm/index.html",
       "/posts/2026-06-22-gulag-and-the-next-day/index.html",
       "/posts/2026-06-19-sns-applications-workshop/index.html",
       "/posts/2026-06-08-gulag-ships/index.html",
@@ -154,6 +156,7 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/halo-formation/index.html",
       "/notes/films/index.html",
       "/notes/dialogues-on-ethical-vegetarianism/index.html",
       "/notes/reading-list/index.html",
@@ -175,7 +178,6 @@
       "/notes/blogs/index.html",
       "/notes/beam-plasma-physics-simulation/index.html",
       "/notes/nonlinear-dynamics/index.html",
-      "/notes/halo-formation/index.html",
       "/notes/accelerators/index.html",
       "/notes/articles/index.html",
       "/notes/sampling/index.html",
