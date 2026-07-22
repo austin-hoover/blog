@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/2026-07-22-pcm-pic-benchmark/index.html",
       "/posts/2026-07-21-pcm/index.html",
       "/posts/2026-06-22-gulag-and-the-next-day/index.html",
       "/posts/2026-06-19-sns-applications-workshop/index.html",
@@ -91,6 +92,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2026-07-22-pcm-pic-benchmark/index.html",
       "/posts/2026-07-21-pcm/index.html",
       "/posts/2026-06-22-gulag-and-the-next-day/index.html",
       "/posts/2026-06-19-sns-applications-workshop/index.html",
