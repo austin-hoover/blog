@@ -21,7 +21,7 @@ format:
     respect-user-color-scheme: true
     
     grid:
-        body-width: 576px
+        body-width: 590px
     mainfont: "Times"
     fontsize: 16px
     linestretch: 1.2
