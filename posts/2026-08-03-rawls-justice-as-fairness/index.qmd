@@ -1,0 +1,32 @@
+---
+title: "Justice as fairness and utilitarianism"
+author: Austin Hoover
+date: 2026-08-03
+categories:
+  - equality
+  - utilitarianism
+  - books
+---
+
+From Rawls, *A Theory of Justice*, Chapter 1:
+
+*“Justice is the first virtue of social institutions, as truth is of systems of thought."* [3]
+
+*“My aim is to present a conception of justice which generalizes and carries to a higher level of abstraction the familiar theory of the social contract as found, say, in Locke, Rousseau, and Kant. In order to do this we are not to think of the original contract as one to enter a particular society or to set up a particular form of government. Rather the guiding idea is that the principles of justice for the basic structure of society are the object of the original agreement. They are the principles that free and rational persons concerned  to further their own interests would accept in an initial position of equality as defining the fundamental terms of their association. These principles are to regulate all further agreements; they specify the kinds of social cooperation that can be entered into and the forms of government that can be established. This way of regarding the principles of justice I shall call *justice as fairness*."* [10]
+
+*“The main idea [of utilitarianism] is that society is rightly ordered, and therefore must, when its major institutions are arranged so as to achieve the greatest net balance of satisfaction summed over all the individuals belonging to it."* [20]
+
+*"The two main concepts of ethics are those of the right and the good; the concept of a morally worthy person is, I believe, derived from them. The structure of an ethical theory is, then, largely determined by how it defines and connects these two basic notions. Now it seems that the simplest way of relating them is taken by teleological theories: the good is defined independently from the right, and the right is defined as that which maximizes the good."* [23] 
+
+*"The most natural way of arriving at utilitarianism is to adopt for society as a whole the principle of rational choice for one man. [...] It is this spectator who is conceived as carrying out the required organization of the desires of all persons into one coherent system of desire; it is by this construction that many persons are fused into one. [...] Utilitarianism does not take seriously the distinction between persons."* [24] 
+
+*“While the contract doctrine accepts our convictions about the priority of justice as on the whole sound, utilitarianism seeks to account for them as a socially useful illusion."* [25]
+
+*"In utilitarianism the satisfaction of any desire has some value in itself which must be taken into account in deciding what is right. In calculating the greatest balance of satisfaction it does not matter, except indirectly, what the desires are for."* [27]
+
+*"In justice as fairness, on the other hand, persons accept in advance a principle of equal liberty and they do this without a knowledge of their more particular ends. They implicitly agree, therefore, to conform their conceptions of their good to what the principles of justice require, or at least not to press claims which directly violate them. An individual who finds that he enjoys seeing others in positions of lesser liberty understands that he has no claim whatever to this enjoyment. The pleasure he takes in others' deprivations is wrong in itself: it is a satisfaction which requires the violation of a principle to which he would agree in the original position. The principles of right, and so of justice, put limits on which satisfactions have value, they impose restrictions on what are reasonable conceptions of one's good. In drawing up plans and in deciding on aspirations men are to take these constraints into account. Hence in justice as fairness one does not take men's propensities and inclinations as given, whatever they are, and then seek the best way to fulfill them. Rather, their desires and aspirations are restricted from the outset by the principles of justice which specify the boundaries that men's systems of ends must respect. We can express this by saying that in justice as fairness the concept of right is prior to that of the good. A just social system defines the scope within which individuals must develop their aims, and it provides a framework of rights and opportunities and the means of satisfaction within and by the use of which these ends may be equitably pursued. The priority of justice is accounted for, in part, by holding that the interests requiring the violation of justice have no value. Having no merit in the first place, they cannot override its claims."* [28]
+
+*“This priority of the right over the good in justice as fairness turns out to be a central feature of the conception."* [28]
+
+*"Implicit in the contrasts between classical utilitarianism and justice as fairness is a difference in the underlying conceptions of society. In the one we think of a well-ordered society as a scheme of cooperation for reciprocal advantage regulated by principles which persons would choose in an initial situation that is fair, in the other as the efficient administration of social resources to maximize the satisfaction of the system of desire constructed by the impartial spectator from the many individual systems of desires accepted as given. The comparison with classical utilitarianism in its more natural derivation brings out this contrast."* [29-30]
+
