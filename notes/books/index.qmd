@@ -1,7 +1,7 @@
 ---
 title: Books
 date: 2026-01-01
-date-modified: 2026-07-26
+date-modified: 2026-08-23
 listing:
   contents:
     - "data.yml"
