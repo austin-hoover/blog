@@ -1,0 +1,17 @@
+---
+title: "LINAC 2026 talks"
+author: Austin Hoover
+date: 2026-08-24
+categories:
+  - conferences
+  - research
+---
+
+* [Present Status and Future Plans for Linear Accelerators in Korea](https://indico.jacow.org/event/117/contributions/15304/attachments/2509/8977/MO1A001_talk.pdf) --- Chung (IBS, Korea)
+* [Updates on the worldwide efforts for transmutation of spent nuclear fuel with accelerator driven systems](https://indico.jacow.org/event/117/contributions/15305/attachments/2511/8981/MO1A002-Bruce_Yee-Rendon.pdf) --- Yee-Rendon (J-PARC)
+* [High-dimensional beam tomography with PolariX: Experimental results from DESY and PSI](https://indico.jacow.org/event/117/contributions/15307/attachments/2504/8967/MO2A001-Sonja_Jaster-Merz.pdf) --- Jaster-Merz (DESY)
+* [Beam Commissioning of the ESS Accelerator: Results and Challenges](https://indico.jacow.org/event/117/contributions/15402/attachments/2512/8983/MO2A002-Sofia_Johannesson.pdf) --- Johannesson (ESS)
+* [4D phase space tomography from 1D measurements](https://indico.jacow.org/event/117/contributions/15382/attachments/2514/8986/MO1P001-Austin_Hoover.pdf) --- Hoover (ORNL)
+* [Systematic Mitigation of Intra-Beam Stripping and Distributed Beam Loss in High-Intensity H⁻ Linacs: Experimental and Operational Experience at J-PARC](https://indico.jacow.org/event/117/contributions/15404/attachments/2521/8998/MO1P003-Yong_Liu.pdf) --- Liu (KEK/J-PARC)
+* [Post-Mortem Insights into the SNS RFQ01: Implications and Paths Forward for High Beam Power Operation](https://indico.jacow.org/event/117/contributions/15413/attachments/2532/9018/WE1A001-Haitao_Ren.pdf) --- Ren (ORNL)
+* [Experimental generation of petawatt power electron beams via laser heater shaping at FACET-II](https://indico.jacow.org/event/117/contributions/15390/attachments/2569/9221/TH1P002-Claudio_Emma.pdf) --- Emma (SLAC)
