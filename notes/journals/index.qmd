@@ -1,12 +1,14 @@
 ---
 title: "Journals and Preprint Servers"
 date: 2026-02-08
-date-modified: 2026-03-18
+date-modified: 2026-09-03
 ---
 
 * [PRAB](https://journals.aps.org/prab/)
 * [PRE](https://journals.aps.org/pre/)
 * [PRL](https://journals.aps.org/prl/)
+* [PRX](https://journals.aps.org/prx/)
+* [PRX Intelligence](https://journals.aps.org/prxintelligence/)
 * [Nature Physics](https://www.nature.com/nphys/)
 * [Science](https://www.science.org/journal/science)
 * [Chaos](https://pubs.aip.org/aip/cha)
