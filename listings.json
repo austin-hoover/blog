@@ -162,6 +162,7 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/journals/index.html",
       "/notes/books/index.html",
       "/notes/reading-list/index.html",
       "/notes/halo-formation/index.html",
@@ -175,7 +176,6 @@
       "/notes/beam-cavity-interaction/index.html",
       "/notes/equality/index.html",
       "/notes/videos/index.html",
-      "/notes/journals/index.html",
       "/notes/wakefield-acceleration/index.html",
       "/notes/chao-wake-fields/index.html",
       "/notes/electron-cloud/index.html",
