@@ -162,6 +162,7 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/space-charge/index.html",
       "/notes/journals/index.html",
       "/notes/books/index.html",
       "/notes/reading-list/index.html",
@@ -169,7 +170,6 @@
       "/notes/films/index.html",
       "/notes/dialogues-on-ethical-vegetarianism/index.html",
       "/notes/philosophy-of-science/index.html",
-      "/notes/space-charge/index.html",
       "/notes/collisionless-relaxation/index.html",
       "/notes/conference-proceedings/index.html",
       "/notes/ornl-ap-papers/index.html",
