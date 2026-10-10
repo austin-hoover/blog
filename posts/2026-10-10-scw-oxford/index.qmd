@@ -1,0 +1,8 @@
+---
+title: "Space Charge Workshop 2026 at Oxford"
+author: Austin Hoover
+date: 2026-10-10
+categories:
+  - conferences
+  - research
+---
