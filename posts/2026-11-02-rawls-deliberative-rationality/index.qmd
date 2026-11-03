@@ -1,0 +1,17 @@
+---
+title: "Deliberative rationality"
+author: Austin Hoover
+date: 2026-11-02
+categories:
+  - rationality
+  - good
+  - books
+---
+
+From Rawls, *A Theory of Justice*, Chapter IV (Goodness as Rationality):
+
+
+*"At this point I introduce the notion of deliberative rationality following an idea of Sidgwick’s. He characterizes a person’s future good on the whole as what he would no desire and seek if the consequences of all the various courses of conduct open to him were, at the present point of time, accurately foreseen by him and adequately realized in imagination. An individuals’ good is the hypothetical composition of impulsive forces that results from deliberative reflection meeting certain conditions. Adjusting Sidgwick’s notion to the choice of plans, we can say that the rational plan for a person is the one (among those consistent with the counting principles and other principles of rational choice once these are established) which he would choose with deliberative rationality. It is the plan that would be decided upon as the outcome of careful reflection in which the agent reviewed, in the light of all the relevant facts, what it would be like to carry out these plans and thereby ascertained the course of action that would best realize his more fundamental desires."* [366]
+
+*"Putting these reflections together, we have the guiding principle that a rational individual is always to act so that he need never blame himself no matter how his plans finally work out. Viewing himself as one continuing being over time, he can say that at each moment of his life he has done what the balance of reasons required, or at least permitted. Therefore any risks he assumes must be worthwhile, so that should the worst happen that he had any reason to foresee, he can still affirm that what he did was above criticism. He does not regret his choice, at least not in the sense that he later believes that at the time it would have been more rational to have done otherwise. This principle will not certainly prevent us from taking steps that lead to misadventure. Nothing can protect us from the ambiguities and limitations of our knowledge., or guarantee that we find the best alternative open to us. Acting with deliberative rationality can only ensure that our conduct is above reproach, and that we are responsible to ourselves as one person over time. Wek should indeed be surprised if someone said that he did not care about how he will view his present actions later any more than he cares about the affairs of other people (which is not much, let us suppose). One who rejects equally the claims of his future self and the interests of others is not only irresponsible with respect to them but in regard to his own person as well. He does not see himself as one enduring individual."* [370-371]
+
