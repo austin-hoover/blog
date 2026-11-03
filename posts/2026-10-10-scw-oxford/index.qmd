@@ -6,3 +6,13 @@ categories:
   - conferences
   - research
 ---
+
+
+It was a very engaging onference hosted by the Oxford physics department. Here are all the [talks](https://indico.global/event/15713/timetable/#all.detailed). 
+
+A lot of the discussion focused on the relationship between instabilities and space charge, which is not yet fully understood. For example Adrian Oeftiger gave a nice summary [here](https://indico.global/event/15713/contributions/165937/attachments/77085/149758/Oeftiger.pdf). 
+
+The highlight was definitely the talk by [Ingo Hofmann](https://indico.global/event/15713/contributions/165940/attachments/76792/149819/Keynote-Oxford-final-2.pdf), who helped start the field of space charge physics.
+
+I gave two talks, one about our work on [bunch compression](https://indico.global/event/15713/contributions/162546/) another about our work on [phase space painting](https://indico.global/event/15713/contributions/162570/). I got some useful feedback and several new ideas about where to go with this work.
+ 
