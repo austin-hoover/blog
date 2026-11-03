@@ -2,6 +2,8 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/2026-11-02-rawls-deliberative-rationality/index.html",
+      "/posts/2026-10-10-scw-oxford/index.html",
       "/posts/2026-08-24-linac26/index.html",
       "/posts/2026-08-03-rawls-justice-as-fairness/index.html",
       "/posts/2026-07-22-pcm-pic-benchmark/index.html",
@@ -94,6 +96,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2026-11-02-rawls-deliberative-rationality/index.html",
+      "/posts/2026-10-10-scw-oxford/index.html",
       "/posts/2026-08-24-linac26/index.html",
       "/posts/2026-08-03-rawls-justice-as-fairness/index.html",
       "/posts/2026-07-22-pcm-pic-benchmark/index.html",
@@ -162,13 +166,13 @@
   {
     "listing": "/notes.html",
     "items": [
+      "/notes/films/index.html",
       "/notes/videos/index.html",
       "/notes/space-charge/index.html",
       "/notes/journals/index.html",
       "/notes/books/index.html",
       "/notes/reading-list/index.html",
       "/notes/halo-formation/index.html",
-      "/notes/films/index.html",
       "/notes/dialogues-on-ethical-vegetarianism/index.html",
       "/notes/philosophy-of-science/index.html",
       "/notes/collisionless-relaxation/index.html",
