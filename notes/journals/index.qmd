@@ -1,5 +1,5 @@
 ---
-title: "Journals and Preprint Servers"
+title: "Journals and preprint servers"
 date: 2026-02-08
 date-modified: 2026-09-03
 ---

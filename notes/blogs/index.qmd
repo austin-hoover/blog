@@ -1,7 +1,7 @@
 ---
 title: "Blogs"
 date: 2026-01-10
-date-modified: 2026-02-23
+date-modified: 2026-11-01
 listing:
   id: sample-listings
   sort: false
@@ -11,17 +11,17 @@ listing:
   filter-ui: true
   max-items: 99999999
   page-size: 99999999
-  contents: 
+  contents:
     - title: "Statistical Modeling, Causal Inference, and Social Science"
       path: "https://statmodeling.stat.columbia.edu"
-    - title: "Marginal Revolution"
-      path: "https://marginalrevolution.com"
-    - title: "The Splintered Mind"
-      path: "http://schwitzsplinters.blogspot.com"
     - title: "Shtetl-Optimized"
       path: "https://scottaaronson.blog"
+    - title: "The Splintered Mind"
+      path: "http://schwitzsplinters.blogspot.com"
     - title: "AI: A Guide for Thinking Humans"
       path: "https://aiguide.substack.com"
+    - title: "Marginal Revolution"
+      path: "https://marginalrevolution.com"
     - title: "The Secure Transport of Light"
       path: "https://danwang.co"
     - title: "Big iff True"
@@ -47,7 +47,7 @@ listing:
     - title: "Scott Hawley"
       path: "https://drscotthawley.github.io/blog/"
     - title: "Condensed Concepts"
-      path: "https://condensedconcepts.blogspot.co"
+      path: "https://condensedconcepts.blogspot.com"
     - title: "Nanoscale Views"
       path: "http://nanoscale.blogspot.com"
     - title: "ex-apologist"
@@ -62,10 +62,10 @@ listing:
       path: "https://www.math.columbia.edu/~woit/wordpress/"
     - title: "Notes From a Data Witch"
       path: "https://blog.djnavarro.net"
-    - title: Of Particular Significance"
+    - title: "Of Particular Significance"
       path: "https://profmattstrassler.com/blog/"
     - title: "Physics Matt"
-      path: "http://www.physicsmatt.com/blog/)"
+      path: "http://www.physicsmatt.com/blog/"
     - title: "Preposterous Universe"
       path: "https://www.preposterousuniverse.com/blog/"
     - title: "Asymptotia"
@@ -74,14 +74,10 @@ listing:
       path: "https://jaredhenderson.substack.com/"
     - title: "Future Doctrina"
       path: "https://mickryan.substack.com"
-    - title: "Gowing Awol"
-      path: "https://wollenblog.substack.com/"
     - title: "Greco and Wansley"
       path: "https://grecowansley.substack.com/"
     - title: "The Grumpy Economist"
       path: "https://www.grumpy-economist.com/"
-    - title: "Kareem Takes on the News"
-      path: "https://kareem.substack.com/"
     - title: "The Motivated Skeptic"
       path: "https://rbnmckenna86.substack.com/"
     - title: "Pens and Poison"
@@ -95,8 +91,31 @@ listing:
     - title: "Rob Nagler"
       path: "https://www.robnagler.com"
     - title: "Kasparov on the Kremlin"
-      path: "https://www.thenextmove.org/s/kasparov-on-the-kremlin?utm_source=substack&utm_medium=menu"
-
+      path: "https://www.thenextmove.org/s/kasparov-on-the-kremlin"
+    - title: "@jasmine's substack"
+      path: "https://jasmi.news"
+    - title: "The Argument"
+      path: "https://www.theargumentmag.com"
+    - title: "Astral Codex Ten"
+      path: "https://www.astralcodexten.com"
+    - title: "Bonnie Kristian"
+      path: "https://bonniekristian.substack.com"
+    - title: "Both/And"
+      path: "https://willmacaskill.substack.com"
+    - title: "Don’t Worry About the Vase"
+      path: "https://thezvi.substack.comhttps://thezvi.substack.com"
+    - title: "Good Thoughts"
+      path: "https://www.goodthoughts.blog"
+    - title: "Open Questions"
+      path: "https://openquestionsblog.substack.com/archive"
+    - title: "Observing Japan"
+      path: "https://observingjapan.substack.com"
+    - title: "Paper Tiger by Julian Gewirtz"
+      path: "https://substack.com/@juliangewirtz"
+    - title: "Persuasion"
+      path: "https://www.persuasion.community"
+    - title: "Terence Tao"
+      path: "https://terrytao.wordpress.com"
 ---
 
 ::: {#sample-listings}
