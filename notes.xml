@@ -856,20 +856,7 @@ Year
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="SGlzdG9yeSUyQ1BvbGl0aWNzJTJDUnVzc2lh" data-listing-title-sort="The Gulag Archipelago: An Experiment in Literary Investigation (Volume 3)">
-<td>
-<span class="listing-title">The Gulag Archipelago: An Experiment in Literary Investigation (Volume 3)</span>
-</td>
-<td>
-<span class="listing-author">Solzhenitsyn</span>
-</td>
-<td>
-<span class="listing-year">1973</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Anarchy, State, and Utopia">
+<tr data-index="0" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Anarchy, State, and Utopia">
 <td>
 <span class="listing-title">Anarchy, State, and Utopia</span>
 </td>
@@ -878,6 +865,19 @@ Year
 </td>
 <td>
 <span class="listing-year">1974</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="U2NpZW5jZSUyQ1BoaWxvc29waHk=" data-listing-title-sort="The Structure of Scientific Revolutions">
+<td>
+<span class="listing-title">The Structure of Scientific Revolutions</span>
+</td>
+<td>
+<span class="listing-author">Kuhn</span>
+</td>
+<td>
+<span class="listing-year">1962</span>
 </td>
 
 </tr>
@@ -934,15 +934,15 @@ Year
 
 </tr>
 
-<tr data-index="6" data-categories="RmljdGlvbg==" data-listing-title-sort="The School of Night">
+<tr data-index="6" data-categories="UG9saXRpY3MlMkNIaXN0b3J5JTJDJTJDJTVCb2JqZWN0JTIwT2JqZWN0JTVE" data-listing-title-sort="China's Global Strategy under Xi Jinping">
 <td>
-<span class="listing-title">The School of Night</span>
+<span class="listing-title">China’s Global Strategy under Xi Jinping</span>
 </td>
 <td>
-<span class="listing-author">Knausgard</span>
+<span class="listing-author">Cheung</span>
 </td>
 <td>
-<span class="listing-year">2023</span>
+<span class="listing-year">2026</span>
 </td>
 
 </tr>
@@ -999,20 +999,7 @@ Year
 
 </tr>
 
-<tr data-index="11" data-categories="SGlzdG9yeQ==" data-listing-title-sort="The Coldest Winter: America and the Korean War">
-<td>
-<span class="listing-title">The Coldest Winter: America and the Korean War</span>
-</td>
-<td>
-<span class="listing-author">Halberstam</span>
-</td>
-<td>
-<span class="listing-year">2007</span>
-</td>
-
-</tr>
-
-<tr data-index="12" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="Ulysses">
+<tr data-index="11" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="Ulysses">
 <td>
 <span class="listing-title">Ulysses</span>
 </td>
@@ -1025,7 +1012,7 @@ Year
 
 </tr>
 
-<tr data-index="13" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="Dubliners">
+<tr data-index="12" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="Dubliners">
 <td>
 <span class="listing-title">Dubliners</span>
 </td>
@@ -1038,7 +1025,7 @@ Year
 
 </tr>
 
-<tr data-index="14" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Taking Morality Seriously: A Defense of Robust Realism">
+<tr data-index="13" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Taking Morality Seriously: A Defense of Robust Realism">
 <td>
 <span class="listing-title">Taking Morality Seriously: A Defense of Robust Realism</span>
 </td>
@@ -1051,7 +1038,7 @@ Year
 
 </tr>
 
-<tr data-index="15" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Moral Realism: A Defense">
+<tr data-index="14" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Moral Realism: A Defense">
 <td>
 <span class="listing-title">Moral Realism: A Defense</span>
 </td>
@@ -1064,7 +1051,7 @@ Year
 
 </tr>
 
-<tr data-index="16" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Ethical Theory: 50 Puzzles, Paradoxes, and Thought Experiments">
+<tr data-index="15" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Ethical Theory: 50 Puzzles, Paradoxes, and Thought Experiments">
 <td>
 <span class="listing-title">Ethical Theory: 50 Puzzles, Paradoxes, and Thought Experiments</span>
 </td>
@@ -1077,7 +1064,7 @@ Year
 
 </tr>
 
-<tr data-index="17" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Dialogues on Minds, Machines, and AI">
+<tr data-index="16" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Dialogues on Minds, Machines, and AI">
 <td>
 <span class="listing-title">Dialogues on Minds, Machines, and AI</span>
 </td>
@@ -1090,7 +1077,7 @@ Year
 
 </tr>
 
-<tr data-index="18" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Dialogues on the Meaning of Life">
+<tr data-index="17" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Dialogues on the Meaning of Life">
 <td>
 <span class="listing-title">Dialogues on the Meaning of Life</span>
 </td>
@@ -1103,7 +1090,7 @@ Year
 
 </tr>
 
-<tr data-index="19" data-categories="UGhpbG9zb3BoeSUyQ0ZyZWUlMjBXaWxs" data-listing-title-sort="Dialogues on Free Will">
+<tr data-index="18" data-categories="UGhpbG9zb3BoeSUyQ0ZyZWUlMjBXaWxs" data-listing-title-sort="Dialogues on Free Will">
 <td>
 <span class="listing-title">Dialogues on Free Will</span>
 </td>
@@ -1116,7 +1103,7 @@ Year
 
 </tr>
 
-<tr data-index="20" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Immigration and the Open Society">
+<tr data-index="19" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Immigration and the Open Society">
 <td>
 <span class="listing-title">Dialogues on Immigration and the Open Society</span>
 </td>
@@ -1129,7 +1116,7 @@ Year
 
 </tr>
 
-<tr data-index="21" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Democracy">
+<tr data-index="20" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Democracy">
 <td>
 <span class="listing-title">Dialogues on Democracy</span>
 </td>
@@ -1142,7 +1129,7 @@ Year
 
 </tr>
 
-<tr data-index="22" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Dialogues on Human Enhancement">
+<tr data-index="21" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Dialogues on Human Enhancement">
 <td>
 <span class="listing-title">Dialogues on Human Enhancement</span>
 </td>
@@ -1155,7 +1142,7 @@ Year
 
 </tr>
 
-<tr data-index="23" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Gun Control">
+<tr data-index="22" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Gun Control">
 <td>
 <span class="listing-title">Dialogues on Gun Control</span>
 </td>
@@ -1168,7 +1155,7 @@ Year
 
 </tr>
 
-<tr data-index="24" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Climate Justice">
+<tr data-index="23" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Dialogues on Climate Justice">
 <td>
 <span class="listing-title">Dialogues on Climate Justice</span>
 </td>
@@ -1181,7 +1168,7 @@ Year
 
 </tr>
 
-<tr data-index="25" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Dialogues on the Ethics of Abortion">
+<tr data-index="24" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Dialogues on the Ethics of Abortion">
 <td>
 <span class="listing-title">Dialogues on the Ethics of Abortion</span>
 </td>
@@ -1194,7 +1181,7 @@ Year
 
 </tr>
 
-<tr data-index="26" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Animal Rights: Current Debates and New Directions">
+<tr data-index="25" data-categories="UGhpbG9zb3BoeSUyQ0V0aGljcw==" data-listing-title-sort="Animal Rights: Current Debates and New Directions">
 <td>
 <span class="listing-title">Animal Rights: Current Debates and New Directions</span>
 </td>
@@ -1207,7 +1194,7 @@ Year
 
 </tr>
 
-<tr data-index="27" data-categories="UGhpbG9zb3BoeSUyQ01ldGFwaHlzaWNz" data-listing-title-sort="Metaphysics">
+<tr data-index="26" data-categories="UGhpbG9zb3BoeSUyQ01ldGFwaHlzaWNz" data-listing-title-sort="Metaphysics">
 <td>
 <span class="listing-title">Metaphysics</span>
 </td>
@@ -1220,7 +1207,7 @@ Year
 
 </tr>
 
-<tr data-index="28" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="On Bullshit">
+<tr data-index="27" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="On Bullshit">
 <td>
 <span class="listing-title">On Bullshit</span>
 </td>
@@ -1233,7 +1220,7 @@ Year
 
 </tr>
 
-<tr data-index="29" data-categories="UGhpbG9zb3BoeSUyQ1NvY2lvbG9neQ==" data-listing-title-sort="Crowds and Power">
+<tr data-index="28" data-categories="UGhpbG9zb3BoeSUyQ1NvY2lvbG9neQ==" data-listing-title-sort="Crowds and Power">
 <td>
 <span class="listing-title">Crowds and Power</span>
 </td>
@@ -1246,7 +1233,7 @@ Year
 
 </tr>
 
-<tr data-index="30" data-categories="UGhpbG9zb3BoeSUyQ1JlbGlnaW9u" data-listing-title-sort="The Miracle of Theism">
+<tr data-index="29" data-categories="UGhpbG9zb3BoeSUyQ1JlbGlnaW9u" data-listing-title-sort="The Miracle of Theism">
 <td>
 <span class="listing-title">The Miracle of Theism</span>
 </td>
@@ -1259,7 +1246,7 @@ Year
 
 </tr>
 
-<tr data-index="31" data-categories="UGhpbG9zb3BoeSUyQ1JlbGlnaW9u" data-listing-title-sort="The Coherence of Theism">
+<tr data-index="30" data-categories="UGhpbG9zb3BoeSUyQ1JlbGlnaW9u" data-listing-title-sort="The Coherence of Theism">
 <td>
 <span class="listing-title">The Coherence of Theism</span>
 </td>
@@ -1272,7 +1259,7 @@ Year
 
 </tr>
 
-<tr data-index="32" data-categories="UGhpbG9zb3BoeSUyQ01ldGFwaHlzaWNz" data-listing-title-sort="An Essay on Free Will">
+<tr data-index="31" data-categories="UGhpbG9zb3BoeSUyQ01ldGFwaHlzaWNz" data-listing-title-sort="An Essay on Free Will">
 <td>
 <span class="listing-title">An Essay on Free Will</span>
 </td>
@@ -1285,7 +1272,7 @@ Year
 
 </tr>
 
-<tr data-index="33" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Freedom, Responsibility, and Value">
+<tr data-index="32" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Freedom, Responsibility, and Value">
 <td>
 <span class="listing-title">Freedom, Responsibility, and Value</span>
 </td>
@@ -1298,7 +1285,7 @@ Year
 
 </tr>
 
-<tr data-index="34" data-categories="UGhpbG9zb3BoeSUyQ1NURU0=" data-listing-title-sort="The Scientific Image">
+<tr data-index="33" data-categories="UGhpbG9zb3BoeSUyQ1NURU0=" data-listing-title-sort="The Scientific Image">
 <td>
 <span class="listing-title">The Scientific Image</span>
 </td>
@@ -1311,7 +1298,7 @@ Year
 
 </tr>
 
-<tr data-index="35" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Emergent Properties">
+<tr data-index="34" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Emergent Properties">
 <td>
 <span class="listing-title">Emergent Properties</span>
 </td>
@@ -1324,7 +1311,7 @@ Year
 
 </tr>
 
-<tr data-index="36" data-categories="UGhpbG9zb3BoeSUyQ1BzeWNob2xvZ3k=" data-listing-title-sort="What Would You Do Alone in a Cage with Nothing but Cocaine?">
+<tr data-index="35" data-categories="UGhpbG9zb3BoeSUyQ1BzeWNob2xvZ3k=" data-listing-title-sort="What Would You Do Alone in a Cage with Nothing but Cocaine?">
 <td>
 <span class="listing-title">What Would You Do Alone in a Cage with Nothing but Cocaine?</span>
 </td>
@@ -1337,7 +1324,7 @@ Year
 
 </tr>
 
-<tr data-index="37" data-categories="UGhpbG9zb3BoeSUyQ01pbmQ=" data-listing-title-sort="Mind as Metaphor: A Defence of Mental Fictionalism">
+<tr data-index="36" data-categories="UGhpbG9zb3BoeSUyQ01pbmQ=" data-listing-title-sort="Mind as Metaphor: A Defence of Mental Fictionalism">
 <td>
 <span class="listing-title">Mind as Metaphor: A Defence of Mental Fictionalism</span>
 </td>
@@ -1350,7 +1337,7 @@ Year
 
 </tr>
 
-<tr data-index="38" data-categories="UGhpbG9zb3BoeSUyQ1JlbGlnaW9u" data-listing-title-sort="Can God Be Free?">
+<tr data-index="37" data-categories="UGhpbG9zb3BoeSUyQ1JlbGlnaW9u" data-listing-title-sort="Can God Be Free?">
 <td>
 <span class="listing-title">Can God Be Free?</span>
 </td>
@@ -1363,20 +1350,7 @@ Year
 
 </tr>
 
-<tr data-index="39" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Western Philosophy">
-<td>
-<span class="listing-title">Western Philosophy</span>
-</td>
-<td>
-<span class="listing-author">Cottingham</span>
-</td>
-<td>
-<span class="listing-year">1996</span>
-</td>
-
-</tr>
-
-<tr data-index="40" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="The Prince">
+<tr data-index="38" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="The Prince">
 <td>
 <span class="listing-title">The Prince</span>
 </td>
@@ -1389,7 +1363,7 @@ Year
 
 </tr>
 
-<tr data-index="41" data-categories="SGlzdG9yeSUyQ1BvbGl0aWNz" data-listing-title-sort="The Old Regime and the Revolution">
+<tr data-index="39" data-categories="SGlzdG9yeSUyQ1BvbGl0aWNz" data-listing-title-sort="The Old Regime and the Revolution">
 <td>
 <span class="listing-title">The Old Regime and the Revolution</span>
 </td>
@@ -1402,7 +1376,7 @@ Year
 
 </tr>
 
-<tr data-index="42" data-categories="SGlzdG9yeSUyQ01pbGl0YXJ5" data-listing-title-sort="Twilight of the Gods">
+<tr data-index="40" data-categories="SGlzdG9yeSUyQ01pbGl0YXJ5" data-listing-title-sort="Twilight of the Gods">
 <td>
 <span class="listing-title">Twilight of the Gods</span>
 </td>
@@ -1415,7 +1389,7 @@ Year
 
 </tr>
 
-<tr data-index="43" data-categories="SGlzdG9yeSUyQ01pbGl0YXJ5" data-listing-title-sort="Pacific Crucible">
+<tr data-index="41" data-categories="SGlzdG9yeSUyQ01pbGl0YXJ5" data-listing-title-sort="Pacific Crucible">
 <td>
 <span class="listing-title">Pacific Crucible</span>
 </td>
@@ -1428,7 +1402,7 @@ Year
 
 </tr>
 
-<tr data-index="44" data-categories="SGlzdG9yeSUyQ01pbGl0YXJ5" data-listing-title-sort="The Conquering Tide">
+<tr data-index="42" data-categories="SGlzdG9yeSUyQ01pbGl0YXJ5" data-listing-title-sort="The Conquering Tide">
 <td>
 <span class="listing-title">The Conquering Tide</span>
 </td>
@@ -1441,20 +1415,7 @@ Year
 
 </tr>
 
-<tr data-index="45" data-categories="SGlzdG9yeQ==" data-listing-title-sort="A Shameful Act">
-<td>
-<span class="listing-title">A Shameful Act</span>
-</td>
-<td>
-<span class="listing-author">Akçam</span>
-</td>
-<td>
-<span class="listing-year">2006</span>
-</td>
-
-</tr>
-
-<tr data-index="46" data-categories="SGlzdG9yeQ==" data-listing-title-sort="Undaunted Courage">
+<tr data-index="43" data-categories="SGlzdG9yeQ==" data-listing-title-sort="Undaunted Courage">
 <td>
 <span class="listing-title">Undaunted Courage</span>
 </td>
@@ -1467,7 +1428,7 @@ Year
 
 </tr>
 
-<tr data-index="47" data-categories="SGlzdG9yeSUyQ1BvbGl0aWNz" data-listing-title-sort="The Revolutionists">
+<tr data-index="44" data-categories="SGlzdG9yeSUyQ1BvbGl0aWNz" data-listing-title-sort="The Revolutionists">
 <td>
 <span class="listing-title">The Revolutionists</span>
 </td>
@@ -1475,12 +1436,38 @@ Year
 <span class="listing-author">Burke</span>
 </td>
 <td>
-<span class="listing-year">1790</span>
+<span class="listing-year">2025</span>
 </td>
 
 </tr>
 
-<tr data-index="48" data-categories="SGlzdG9yeSUyQ1NvY2lvbG9neQ==" data-listing-title-sort="Slavery and Social Death">
+<tr data-index="45" data-categories="SGlzdG9yeSUyQ01pbGl0YXJ5" data-listing-title-sort="The Coldest Winter: America and the Korean War">
+<td>
+<span class="listing-title">The Coldest Winter: America and the Korean War</span>
+</td>
+<td>
+<span class="listing-author">Halberstam</span>
+</td>
+<td>
+<span class="listing-year">2007</span>
+</td>
+
+</tr>
+
+<tr data-index="46" data-categories="UGhpbG9zb3BoeQ==" data-listing-title-sort="Western Philosophy: An Anthology">
+<td>
+<span class="listing-title">Western Philosophy: An Anthology</span>
+</td>
+<td>
+<span class="listing-author">Cottingham</span>
+</td>
+<td>
+<span class="listing-year">1996</span>
+</td>
+
+</tr>
+
+<tr data-index="47" data-categories="SGlzdG9yeSUyQ1NvY2lvbG9neQ==" data-listing-title-sort="Slavery and Social Death">
 <td>
 <span class="listing-title">Slavery and Social Death</span>
 </td>
@@ -1493,7 +1480,7 @@ Year
 
 </tr>
 
-<tr data-index="49" data-categories="SGlzdG9yeQ==" data-listing-title-sort="The Internal Enemy">
+<tr data-index="48" data-categories="SGlzdG9yeQ==" data-listing-title-sort="The Internal Enemy">
 <td>
 <span class="listing-title">The Internal Enemy</span>
 </td>
@@ -1506,7 +1493,7 @@ Year
 
 </tr>
 
-<tr data-index="50" data-categories="SGlzdG9yeQ==" data-listing-title-sort="Slavery and Freedom on the Middle Ground">
+<tr data-index="49" data-categories="SGlzdG9yeQ==" data-listing-title-sort="Slavery and Freedom on the Middle Ground">
 <td>
 <span class="listing-title">Slavery and Freedom on the Middle Ground</span>
 </td>
@@ -1519,7 +1506,7 @@ Year
 
 </tr>
 
-<tr data-index="51" data-categories="SGlzdG9yeSUyQ0Jpb2dyYXBoeQ==" data-listing-title-sort="Abraham Lincoln: A Life">
+<tr data-index="50" data-categories="SGlzdG9yeSUyQ0Jpb2dyYXBoeQ==" data-listing-title-sort="Abraham Lincoln: A Life">
 <td>
 <span class="listing-title">Abraham Lincoln: A Life</span>
 </td>
@@ -1532,7 +1519,7 @@ Year
 
 </tr>
 
-<tr data-index="52" data-categories="SGlzdG9yeQ==" data-listing-title-sort="William Cooper’s Town">
+<tr data-index="51" data-categories="SGlzdG9yeQ==" data-listing-title-sort="William Cooper’s Town">
 <td>
 <span class="listing-title">William Cooper’s Town</span>
 </td>
@@ -1545,7 +1532,7 @@ Year
 
 </tr>
 
-<tr data-index="53" data-categories="SGlzdG9yeSUyQ0Jpb2dyYXBoeQ==" data-listing-title-sort="Washington: A Life">
+<tr data-index="52" data-categories="SGlzdG9yeSUyQ0Jpb2dyYXBoeQ==" data-listing-title-sort="Washington: A Life">
 <td>
 <span class="listing-title">Washington: A Life</span>
 </td>
@@ -1558,7 +1545,7 @@ Year
 
 </tr>
 
-<tr data-index="54" data-categories="SGlzdG9yeSUyQ1NURU0=" data-listing-title-sort="1491: New Revelations of the Americas Before Columbus">
+<tr data-index="53" data-categories="SGlzdG9yeSUyQ1NURU0=" data-listing-title-sort="1491: New Revelations of the Americas Before Columbus">
 <td>
 <span class="listing-title">1491: New Revelations of the Americas Before Columbus</span>
 </td>
@@ -1571,22 +1558,9 @@ Year
 
 </tr>
 
-<tr data-index="55" data-categories="SGlzdG9yeSUyQ1JlbGlnaW9u" data-listing-title-sort="Dominion">
+<tr data-index="54" data-categories="Q2hpbmElMkNIaXN0b3J5JTJDUG9saXRpY3M=" data-listing-title-sort="The Rise and Fall of the EAST">
 <td>
-<span class="listing-title">Dominion</span>
-</td>
-<td>
-<span class="listing-author">Holland</span>
-</td>
-<td>
-<span class="listing-year">2019</span>
-</td>
-
-</tr>
-
-<tr data-index="56" data-categories="UG9saXRpY3MlMkNDaGluYQ==" data-listing-title-sort="The Rise and Fall of the East">
-<td>
-<span class="listing-title">The Rise and Fall of the East</span>
+<span class="listing-title">The Rise and Fall of the EAST</span>
 </td>
 <td>
 <span class="listing-author">Huang</span>
@@ -1597,7 +1571,7 @@ Year
 
 </tr>
 
-<tr data-index="57" data-categories="UG9saXRpY3MlMkNDaGluYQ==" data-listing-title-sort="Wealth and Power">
+<tr data-index="55" data-categories="UG9saXRpY3MlMkNDaGluYQ==" data-listing-title-sort="Wealth and Power">
 <td>
 <span class="listing-title">Wealth and Power</span>
 </td>
@@ -1610,7 +1584,7 @@ Year
 
 </tr>
 
-<tr data-index="58" data-categories="UG9saXRpY3MlMkNDaGluYQ==" data-listing-title-sort="Democracy in China">
+<tr data-index="56" data-categories="UG9saXRpY3MlMkNDaGluYQ==" data-listing-title-sort="Democracy in China">
 <td>
 <span class="listing-title">Democracy in China</span>
 </td>
@@ -1623,7 +1597,7 @@ Year
 
 </tr>
 
-<tr data-index="59" data-categories="U29jaW9sb2d5JTJDUG9saXRpY3M=" data-listing-title-sort="Power and Powerlessness">
+<tr data-index="57" data-categories="U29jaW9sb2d5JTJDUG9saXRpY3M=" data-listing-title-sort="Power and Powerlessness">
 <td>
 <span class="listing-title">Power and Powerlessness</span>
 </td>
@@ -1636,7 +1610,7 @@ Year
 
 </tr>
 
-<tr data-index="60" data-categories="SGlzdG9yeSUyQ0lyZWxhbmQ=" data-listing-title-sort="Say Nothing">
+<tr data-index="58" data-categories="SGlzdG9yeSUyQ0lyZWxhbmQ=" data-listing-title-sort="Say Nothing">
 <td>
 <span class="listing-title">Say Nothing</span>
 </td>
@@ -1649,7 +1623,7 @@ Year
 
 </tr>
 
-<tr data-index="61" data-categories="SGlzdG9yeSUyQ1dXSUk=" data-listing-title-sort="In the Sewers of Lvov">
+<tr data-index="59" data-categories="SGlzdG9yeSUyQ1dXSUk=" data-listing-title-sort="In the Sewers of Lvov">
 <td>
 <span class="listing-title">In the Sewers of Lvov</span>
 </td>
@@ -1662,7 +1636,7 @@ Year
 
 </tr>
 
-<tr data-index="62" data-categories="SGlzdG9yeSUyQ01lbW9pciUyQ1dhcg==" data-listing-title-sort="With the Old Breed">
+<tr data-index="60" data-categories="SGlzdG9yeSUyQ01lbW9pciUyQ1dhcg==" data-listing-title-sort="With the Old Breed">
 <td>
 <span class="listing-title">With the Old Breed</span>
 </td>
@@ -1675,7 +1649,20 @@ Year
 
 </tr>
 
-<tr data-index="63" data-categories="SGlzdG9yeSUyQ0Jpb2dyYXBoeSUyQ1NvdXRoJTIwQWZyaWNh" data-listing-title-sort="Winnie and Nelson">
+<tr data-index="61" data-categories="SGlzdG9yeSUyQ1BvbGl0aWNzJTJDUnVzc2lh" data-listing-title-sort="The Gulag Archipelago: An Experiment in Literary Investigation (Volume 3)">
+<td>
+<span class="listing-title">The Gulag Archipelago: An Experiment in Literary Investigation (Volume 3)</span>
+</td>
+<td>
+<span class="listing-author">Solzhenitsyn</span>
+</td>
+<td>
+<span class="listing-year">1973</span>
+</td>
+
+</tr>
+
+<tr data-index="62" data-categories="SGlzdG9yeSUyQ0Jpb2dyYXBoeSUyQ1NvdXRoJTIwQWZyaWNh" data-listing-title-sort="Winnie and Nelson">
 <td>
 <span class="listing-title">Winnie and Nelson</span>
 </td>
@@ -1688,7 +1675,7 @@ Year
 
 </tr>
 
-<tr data-index="64" data-categories="UG9saXRpY3MlMkNIaXN0b3J5" data-listing-title-sort="Common Sense">
+<tr data-index="63" data-categories="UG9saXRpY3MlMkNIaXN0b3J5" data-listing-title-sort="Common Sense">
 <td>
 <span class="listing-title">Common Sense</span>
 </td>
@@ -1701,7 +1688,7 @@ Year
 
 </tr>
 
-<tr data-index="65" data-categories="RWNvbm9taWNz" data-listing-title-sort="The Fiscal Theory of the Price Level">
+<tr data-index="64" data-categories="RWNvbm9taWNz" data-listing-title-sort="The Fiscal Theory of the Price Level">
 <td>
 <span class="listing-title">The Fiscal Theory of the Price Level</span>
 </td>
@@ -1714,7 +1701,7 @@ Year
 
 </tr>
 
-<tr data-index="66" data-categories="RWNvbm9taWNzJTJDU29jaW9sb2d5" data-listing-title-sort="Micromotives and Macrobehavior">
+<tr data-index="65" data-categories="RWNvbm9taWNzJTJDU29jaW9sb2d5" data-listing-title-sort="Micromotives and Macrobehavior">
 <td>
 <span class="listing-title">Micromotives and Macrobehavior</span>
 </td>
@@ -1727,7 +1714,7 @@ Year
 
 </tr>
 
-<tr data-index="67" data-categories="RWNvbm9taWNzJTJDUG9saXRpY3M=" data-listing-title-sort="Free to Choose">
+<tr data-index="66" data-categories="RWNvbm9taWNzJTJDUG9saXRpY3M=" data-listing-title-sort="Free to Choose">
 <td>
 <span class="listing-title">Free to Choose</span>
 </td>
@@ -1740,7 +1727,7 @@ Year
 
 </tr>
 
-<tr data-index="68" data-categories="UG9saXRpY3MlMkNFY29ub21pY3M=" data-listing-title-sort="The Communist Manifesto">
+<tr data-index="67" data-categories="UG9saXRpY3MlMkNFY29ub21pY3M=" data-listing-title-sort="The Communist Manifesto">
 <td>
 <span class="listing-title">The Communist Manifesto</span>
 </td>
@@ -1753,7 +1740,7 @@ Year
 
 </tr>
 
-<tr data-index="69" data-categories="UG9saXRpY3M=" data-listing-title-sort="What Is To Be Done?">
+<tr data-index="68" data-categories="UG9saXRpY3M=" data-listing-title-sort="What Is To Be Done?">
 <td>
 <span class="listing-title">What Is To Be Done?</span>
 </td>
@@ -1766,12 +1753,25 @@ Year
 
 </tr>
 
-<tr data-index="70" data-categories="RWNvbm9taWNzJTJDUG9saXRpY3M=" data-listing-title-sort="Socialism: The Failed Idea that Never Dies">
+<tr data-index="69" data-categories="RWNvbm9taWNzJTJDUG9saXRpY3M=" data-listing-title-sort="Socialism: The Failed Idea that Never Dies">
 <td>
 <span class="listing-title">Socialism: The Failed Idea that Never Dies</span>
 </td>
 <td>
 <span class="listing-author">Niemietz</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="70" data-categories="UG9saXRpY3MlMkNFY29ub21pY3M=" data-listing-title-sort="The Blueprint: How Socialism Can Work in the Real World">
+<td>
+<span class="listing-title">The Blueprint: How Socialism Can Work in the Real World</span>
+</td>
+<td>
+<span class="listing-author">Sunkara</span>
 </td>
 <td>
 <span class="listing-year">2019</span>
@@ -1922,7 +1922,20 @@ Year
 
 </tr>
 
-<tr data-index="82" data-categories="U1RFTQ==" data-listing-title-sort="Data-Driven Science and Engineering">
+<tr data-index="82" data-categories="SGlzdG9yeSUyQ1JlbGlnaW9u" data-listing-title-sort="Dominion">
+<td>
+<span class="listing-title">Dominion</span>
+</td>
+<td>
+<span class="listing-author">Holland</span>
+</td>
+<td>
+<span class="listing-year">2019</span>
+</td>
+
+</tr>
+
+<tr data-index="83" data-categories="U1RFTQ==" data-listing-title-sort="Data-Driven Science and Engineering">
 <td>
 <span class="listing-title">Data-Driven Science and Engineering</span>
 </td>
@@ -1935,7 +1948,7 @@ Year
 
 </tr>
 
-<tr data-index="83" data-categories="U1RFTSUyQ01hdGg=" data-listing-title-sort="Averaging Methods in Nonlinear Dynamics Systems">
+<tr data-index="84" data-categories="U1RFTSUyQ01hdGg=" data-listing-title-sort="Averaging Methods in Nonlinear Dynamics Systems">
 <td>
 <span class="listing-title">Averaging Methods in Nonlinear Dynamics Systems</span>
 </td>
@@ -1948,7 +1961,7 @@ Year
 
 </tr>
 
-<tr data-index="84" data-categories="U1RFTSUyQ01hdGg=" data-listing-title-sort="Mathematical Methods of Classical Mechanics">
+<tr data-index="85" data-categories="U1RFTSUyQ01hdGg=" data-listing-title-sort="Mathematical Methods of Classical Mechanics">
 <td>
 <span class="listing-title">Mathematical Methods of Classical Mechanics</span>
 </td>
@@ -1961,7 +1974,7 @@ Year
 
 </tr>
 
-<tr data-index="85" data-categories="U1RFTSUyQ1BoeXNpY3M=" data-listing-title-sort="Classical Dynamics: A Contemporary Approach">
+<tr data-index="86" data-categories="U1RFTSUyQ1BoeXNpY3M=" data-listing-title-sort="Classical Dynamics: A Contemporary Approach">
 <td>
 <span class="listing-title">Classical Dynamics: A Contemporary Approach</span>
 </td>
@@ -1974,7 +1987,7 @@ Year
 
 </tr>
 
-<tr data-index="86" data-categories="U1RFTSUyQ1BoeXNpY3M=" data-listing-title-sort="Regular and Chaotic Dynamics">
+<tr data-index="87" data-categories="U1RFTSUyQ1BoeXNpY3M=" data-listing-title-sort="Regular and Chaotic Dynamics">
 <td>
 <span class="listing-title">Regular and Chaotic Dynamics</span>
 </td>
@@ -1987,7 +2000,7 @@ Year
 
 </tr>
 
-<tr data-index="87" data-categories="U1RFTSUyQ1RlY2g=" data-listing-title-sort="Nanostructures and Nanotechnology">
+<tr data-index="88" data-categories="U1RFTSUyQ1RlY2g=" data-listing-title-sort="Nanostructures and Nanotechnology">
 <td>
 <span class="listing-title">Nanostructures and Nanotechnology</span>
 </td>
@@ -2000,7 +2013,7 @@ Year
 
 </tr>
 
-<tr data-index="88" data-categories="U2NpZW5jZQ==" data-listing-title-sort="Beamtimes and Lifetimes">
+<tr data-index="89" data-categories="U2NpZW5jZQ==" data-listing-title-sort="Beamtimes and Lifetimes">
 <td>
 <span class="listing-title">Beamtimes and Lifetimes</span>
 </td>
@@ -2013,7 +2026,7 @@ Year
 
 </tr>
 
-<tr data-index="89" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Justice and the Politics of Difference">
+<tr data-index="90" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="Justice and the Politics of Difference">
 <td>
 <span class="listing-title">Justice and the Politics of Difference</span>
 </td>
@@ -2022,6 +2035,123 @@ Year
 </td>
 <td>
 <span class="listing-year">1990</span>
+</td>
+
+</tr>
+
+<tr data-index="91" data-categories="UGhpbG9zb3BoeSUyQ1BvbGl0aWNz" data-listing-title-sort="On Liberty">
+<td>
+<span class="listing-title">On Liberty</span>
+</td>
+<td>
+<span class="listing-author">Mill</span>
+</td>
+<td>
+<span class="listing-year">1859</span>
+</td>
+
+</tr>
+
+<tr data-index="92" data-categories="UGhpbG9zb3BoeSUyQ1NjaWVuY2UlMkNQaHlzaWNz" data-listing-title-sort="Causation in Physics">
+<td>
+<span class="listing-title">Causation in Physics</span>
+</td>
+<td>
+<span class="listing-author">Weaver</span>
+</td>
+<td>
+<span class="listing-year">2025</span>
+</td>
+
+</tr>
+
+<tr data-index="93" data-categories="U1RFTSUyQ1BoeXNpY3M=" data-listing-title-sort="An Introduction to Quantum Field Theory">
+<td>
+<span class="listing-title">An Introduction to Quantum Field Theory</span>
+</td>
+<td>
+<span class="listing-author">Peskin</span>
+</td>
+<td>
+<span class="listing-year">1995</span>
+</td>
+
+</tr>
+
+<tr data-index="94" data-categories="UGhpbG9zb3BoeSUyQ1JlbGlnaW9u" data-listing-title-sort="Divine Hiddenness and Human Reason">
+<td>
+<span class="listing-title">Divine Hiddenness and Human Reason</span>
+</td>
+<td>
+<span class="listing-author">Schellenberg</span>
+</td>
+<td>
+<span class="listing-year">1993</span>
+</td>
+
+</tr>
+
+<tr data-index="95" data-categories="RmljdGlvbiUyQ0NsYXNzaWNz" data-listing-title-sort="The Picture of Dorian Gray">
+<td>
+<span class="listing-title">The Picture of Dorian Gray</span>
+</td>
+<td>
+<span class="listing-author">Wilde</span>
+</td>
+<td>
+<span class="listing-year">1890</span>
+</td>
+
+</tr>
+
+<tr data-index="96" data-categories="UHN5Y2hvbG9neSUyQ1NjaWVuY2U=" data-listing-title-sort="The Essential Child">
+<td>
+<span class="listing-title">The Essential Child</span>
+</td>
+<td>
+<span class="listing-author">Gelman</span>
+</td>
+<td>
+<span class="listing-year">2003</span>
+</td>
+
+</tr>
+
+<tr data-index="97" data-categories="U1RFTSUyQ1BoeXNpY3M=" data-listing-title-sort="Non-Equilibrium Thermodynamics">
+<td>
+<span class="listing-title">Non-Equilibrium Thermodynamics</span>
+</td>
+<td>
+<span class="listing-author">Groot</span>
+</td>
+<td>
+<span class="listing-year">1984</span>
+</td>
+
+</tr>
+
+<tr data-index="98" data-categories="RmljdGlvbiUyQ0hpc3RvcmljYWwlMjBGaWN0aW9u" data-listing-title-sort="Pachinko">
+<td>
+<span class="listing-title">Pachinko</span>
+</td>
+<td>
+<span class="listing-author">Lee</span>
+</td>
+<td>
+<span class="listing-year">2017</span>
+</td>
+
+</tr>
+
+<tr data-index="99" data-categories="UHN5Y2hvbG9neSUyQ1RlY2hub2xvZ3k=" data-listing-title-sort="The Digital Delusion">
+<td>
+<span class="listing-title">The Digital Delusion</span>
+</td>
+<td>
+<span class="listing-author">Horvath</span>
+</td>
+<td>
+<span class="listing-year">2026</span>
 </td>
 
 </tr>
@@ -2703,7 +2833,7 @@ Year
   <pubDate>Fri, 20 Feb 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Journals and Preprint Servers</title>
+  <title>Journals and preprint servers</title>
   <link>https://austin-hoover.github.io/blog/notes/journals/</link>
   <description><![CDATA[ 
 
@@ -2743,7 +2873,7 @@ Year
   <pubDate>Sun, 08 Feb 2026 05:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Particle Accelerators</title>
+  <title>Particle accelerators</title>
   <link>https://austin-hoover.github.io/blog/notes/accelerators/</link>
   <description><![CDATA[ 
 
