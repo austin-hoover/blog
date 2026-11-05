@@ -1,17 +1,16 @@
-- title: "The Gulag Archipelago: An Experiment in Literary Investigation (Volume 3)"
-  year: "1973"
-  author: "Solzhenitsyn"
-  categories:
-    - History
-    - Politics
-    - Russia
-
 - title: "Anarchy, State, and Utopia"
-  year: 1974
+  year: "1974"
   author: "Nozick"
   categories:
     - Philosophy
     - Politics
+
+- title: "The Structure of Scientific Revolutions"
+  year: "1962"
+  author: "Kuhn"
+  categories:
+    - Science
+    - Philosophy
 
 - title: "Anna Karenina"
   year: "1877"
@@ -21,7 +20,7 @@
     - Classics
 
 - title: "Les Misérables"
-  year: 1862
+  year: "1862"
   author: "Hugo"
   categories:
     - Fiction
@@ -40,6 +39,13 @@
     - History
     - Mexico
 
+- title: "China's Global Strategy under Xi Jinping"
+  author: "Cheung"
+  year: "2026"
+  categories:
+    - Politics
+    - History
+    -
 - title: "The School of Night"
   year: "2023"
   author: "Knausgard"
@@ -67,17 +73,11 @@
     - Fiction
 
 - title: "The Temporal Asymmetry of Causation"
-  year: 2023
+  year: "2023"
   author: "Fernandes"
   categories:
     - Philosophy
     - Science
-
-- title: "The Coldest Winter: America and the Korean War"
-  year: 2007
-  author: "Halberstam"
-  categories:
-    - History
 
 - title: "Ulysses"
   year: "1922"
@@ -264,12 +264,6 @@
     - Philosophy
     - Religion
 
-- title: "Western Philosophy"
-  year: "1996"
-  author: "Cottingham"
-  categories:
-    - Philosophy
-
 - title: "The Prince"
   year: "1532"
   author: "Machiavelli"
@@ -305,12 +299,6 @@
     - History
     - Military
 
-- title: "A Shameful Act"
-  year: "2006"
-  author: "Akçam"
-  categories:
-    - History
-
 - title: "Undaunted Courage"
   year: "1996"
   author: "Ambrose"
@@ -318,11 +306,24 @@
     - History
 
 - title: "The Revolutionists"
-  year: "1790"
+  year: "2025"
   author: "Burke"
   categories:
     - History
     - Politics
+
+- title: "The Coldest Winter: America and the Korean War"
+  year: "2007"
+  author: "Halberstam"
+  categories:
+    - History
+    - Military
+
+- title: "Western Philosophy: An Anthology"
+  year: "1996"
+  author: "Cottingham"
+  categories:
+    - Philosophy
 
 - title: "Slavery and Social Death"
   year: "1982"
@@ -370,19 +371,13 @@
     - History
     - STEM
 
-- title: "Dominion"
-  year: "2019"
-  author: "Holland"
-  categories:
-    - History
-    - Religion
-
-- title: "The Rise and Fall of the East"
+- title: "The Rise and Fall of the EAST"
   year: "2023"
   author: "Huang"
   categories:
-    - Politics
     - China
+    - History
+    - Politics
 
 - title: "Wealth and Power"
   year: "2013"
@@ -426,6 +421,14 @@
     - History
     - Memoir
     - War
+
+- title: "The Gulag Archipelago: An Experiment in Literary Investigation (Volume 3)"
+  year: "1973"
+  author: "Solzhenitsyn"
+  categories:
+    - History
+    - Politics
+    - Russia
 
 - title: "Winnie and Nelson"
   year: "2023"
@@ -481,6 +484,13 @@
   categories:
     - Economics
     - Politics
+
+- title: "The Blueprint: How Socialism Can Work in the Real World"
+  year: "2019"
+  author: "Sunkara"
+  categories:
+    - Politics
+    - Economics
 
 - title: "The Rise and Triumph of the Modern Self"
   year: "2020"
@@ -559,6 +569,13 @@
     - STEM
     - Biology
 
+- title: "Dominion"
+  year: "2019"
+  author: "Holland"
+  categories:
+    - History
+    - Religion
+
 - title: "Data-Driven Science and Engineering"
   year: "2019"
   author: "Brunton"
@@ -612,3 +629,67 @@
   categories:
     - Philosophy
     - Politics
+
+- title: "On Liberty"
+  year: "1859"
+  author: "Mill"
+  categories:
+    - Philosophy
+    - Politics
+
+- title: "Causation in Physics"
+  author: "Weaver"
+  year: "2025"
+  categories:
+    - Philosophy
+    - Science
+    - Physics
+
+- title: "An Introduction to Quantum Field Theory"
+  year: "1995"
+  author: "Peskin"
+  categories:
+    - STEM
+    - Physics
+
+- title: "Divine Hiddenness and Human Reason"
+  year: "1993"
+  author: "Schellenberg"
+  categories:
+    - Philosophy
+    - Religion
+
+- title: "The Picture of Dorian Gray"
+  year: "1890"
+  author: "Wilde"
+  categories:
+    - Fiction
+    - Classics
+
+- title: "The Essential Child"
+  author: "Gelman"
+  year: "2003"
+  categories:
+    - Psychology
+    - Science
+
+- title: "Non-Equilibrium Thermodynamics"
+  author: "Groot"
+  year: "1984"
+  categories:
+    - STEM
+    - Physics
+
+- title: "Pachinko"
+  year: "2017"
+  author: "Lee"
+  categories:
+    - Fiction
+    - Historical Fiction
+
+- title: "The Digital Delusion"
+  author: "Horvath"
+  year: "2026"
+  categories:
+    - Psychology
+    - Technology
