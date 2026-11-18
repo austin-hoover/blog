@@ -168,6 +168,7 @@
     "items": [
       "/notes/reading-list/index.html",
       "/notes/books/index.html",
+      "/notes/websites/index.html",
       "/notes/films/index.html",
       "/notes/blogs/index.html",
       "/notes/videos/index.html",
@@ -193,7 +194,6 @@
       "/notes/sampling/index.html",
       "/notes/phase-space-reconstruction/index.html",
       "/notes/research-tools/index.html",
-      "/notes/websites/index.html",
       "/notes/people/index.html",
       "/notes/philosophy/index.html"
     ]
