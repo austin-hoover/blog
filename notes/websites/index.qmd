@@ -1,7 +1,7 @@
 ---
 title: "Websites"
 date: 2025-01-01
-date-modified: 2025-02-28
+date-modified: 2026-11-17
 ---
 
 * [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu)
@@ -18,3 +18,4 @@ date-modified: 2025-02-28
 * [Probability theory as extended logic](https://bayes.wustl.edu)
 * [Structured Procrastination](https://www.structuredprocrastination.com)
 * [US Muon Collider Collaboration](https://www.muoncollider.us)
+* [Top500](https://top500.org)
