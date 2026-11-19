@@ -166,8 +166,8 @@
   {
     "listing": "/notes.html",
     "items": [
-      "/notes/reading-list/index.html",
       "/notes/books/index.html",
+      "/notes/reading-list/index.html",
       "/notes/websites/index.html",
       "/notes/films/index.html",
       "/notes/blogs/index.html",
