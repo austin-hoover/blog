@@ -1,7 +1,7 @@
 ---
 title: "Videos"
 date: 2026-03-20
-date-modified: 2026-11-22
+date-modified: 2026-11-25
 ---
 
 * [M83 Live on KEXP](https://www.youtube.com/watch?v=UHNVQ2PHTr4)
@@ -13,5 +13,6 @@ date-modified: 2026-11-22
 * [The Moral Foundations of Politics with Ian Shapiro - 1. Information and Housekeeping](https://youtu.be/s6MOA_Y3MKE?si=QnjouEjmGLnitKgr)
 * [The Moral Foundations of Politics with Ian Shapiro - 2. Introductory Lecture](https://youtu.be/u3-naV8kF2g?si=wFs8Ok54B_RPebFe)
 * [The Moral Foundations of Politics with Ian Shapiro - 3. Natural Law Roots of the Social Contract Tradition](https://youtu.be/fS16-tI5Zxk?si=uPC2ODVwkkn4-IcC)
+* [The Moral Foundations of Politics with Ian Shapiro - 4. Origins of Classical Utilitarianism](https://youtu.be/U0iS4Ax3LXc?si=zMZozFKFgsnVZVMd)
 * [The Moral Foundations of Politics with Ian Shapiro - 16. The Rawlsian Social Contract](https://youtu.be/6uV3p9bMD4I?si=J9zjn19_mnC8xhBU)
 * [The Moral Foundations of Politics with Ian Shapiro - 17. Distributive Justice and the Welfare State](https://youtu.be/s3urPwTmTnI?si=Yh1NahKG9_etNOo9)
