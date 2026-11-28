@@ -1,0 +1,8 @@
+---
+title: "Chess"
+date: 2026-11-23
+date-modified: 2026-11-23
+---
+
+* *Winning Chess Openings* --- Y. Seirawan (1998)
+* *Winning Chess Brilliancies* --- Y. Seirawan (1995)
