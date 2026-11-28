@@ -5,6 +5,28 @@
     - Science
     - Philosophy
 
+- title: "The Rise and Fall of the EAST"
+  year: "2023"
+  author: "Huang"
+  categories:
+    - China
+    - History
+    - Politics
+
+- title: "The Essential Child"
+  author: "Gelman"
+  year: "2003"
+  categories:
+    - Psychology
+    - Science
+
+- title: "Divine Hiddenness and Human Reason"
+  year: "1993"
+  author: "Schellenberg"
+  categories:
+    - Philosophy
+    - Religion
+
 - title: "Anna Karenina"
   year: "1877"
   author: "Tolstoy"
@@ -24,6 +46,13 @@
   author: "Roth"
   categories:
     - Fiction
+
+- title: "On Liberty"
+  year: "1859"
+  author: "Mill"
+  categories:
+    - Philosophy
+    - Politics
 
 - title: "Mexico: A 500-Year History"
   year: 2025
@@ -230,6 +259,14 @@
     - Philosophy
     - STEM
 
+- title: "Winnie and Nelson"
+  year: "2023"
+  author: "Steinberg"
+  categories:
+    - History
+    - Biography
+    - South Africa
+
 - title: "Emergent Properties"
   year: "2010"
   author: "O’Connor"
@@ -364,14 +401,6 @@
     - History
     - STEM
 
-- title: "The Rise and Fall of the EAST"
-  year: "2023"
-  author: "Huang"
-  categories:
-    - China
-    - History
-    - Politics
-
 - title: "Wealth and Power"
   year: "2013"
   author: "Schell"
@@ -423,13 +452,11 @@
     - Politics
     - Russia
 
-- title: "Winnie and Nelson"
-  year: "2023"
-  author: "Steinberg"
+- title: "Tinker, Tailor, Soldier, Spy"
+  author: "Carré"
+  year: "1974"
   categories:
-    - History
-    - Biography
-    - South Africa
+    - Fiction
 
 - title: "Common Sense"
   year: "1776"
@@ -457,6 +484,13 @@
   categories:
     - Economics
     - Politics
+
+- title: "Gravitation"
+  year: "1973"
+  author: "Misner"
+  categories:
+    - STEM
+    - Physics
 
 - title: "The Communist Manifesto"
   year: "1848"
@@ -526,27 +560,6 @@
   categories:
     - Economics
     - Tech
-
-- title: "Winning Chess Openings"
-  year: "1999"
-  author: "Seirawan"
-  categories:
-    - Hobbies
-    - Chess
-
-- title: "Winning Chess Brilliancies"
-  year: "2003"
-  author: "Seirawan"
-  categories:
-    - Hobbies
-    - Chess
-
-- title: "Gravitation"
-  year: "1973"
-  author: "Misner"
-  categories:
-    - STEM
-    - Physics
 
 - title: "On the Origin of Species"
   year: "1859"
@@ -623,13 +636,6 @@
     - Philosophy
     - Politics
 
-- title: "On Liberty"
-  year: "1859"
-  author: "Mill"
-  categories:
-    - Philosophy
-    - Politics
-
 - title: "Causation in Physics"
   author: "Weaver"
   year: "2025"
@@ -645,26 +651,12 @@
     - STEM
     - Physics
 
-- title: "Divine Hiddenness and Human Reason"
-  year: "1993"
-  author: "Schellenberg"
-  categories:
-    - Philosophy
-    - Religion
-
 - title: "The Picture of Dorian Gray"
   year: "1890"
   author: "Wilde"
   categories:
     - Fiction
     - Classics
-
-- title: "The Essential Child"
-  author: "Gelman"
-  year: "2003"
-  categories:
-    - Psychology
-    - Science
 
 - title: "Non-Equilibrium Thermodynamics"
   author: "Groot"
@@ -686,3 +678,17 @@
   categories:
     - Psychology
     - Technology
+
+- title: "Winning Chess Openings"
+  year: "1999"
+  author: "Seirawan"
+  categories:
+    - Hobbies
+    - Chess
+
+- title: "Winning Chess Brilliancies"
+  year: "2003"
+  author: "Seirawan"
+  categories:
+    - Hobbies
+    - Chess
